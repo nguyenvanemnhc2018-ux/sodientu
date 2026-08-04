@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chữ Người Tử Tù - Bài Học Tương Tác Ngữ Văn 10</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- MathJax Config & Script -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    .sq-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      background-color: #0f172a;
+      color: #ffffff;
+      font-weight: 800;
+      border-radius: 4px;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+    .circle-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background-color: #d97706;
+      color: #ffffff;
+      font-weight: 700;
+      border-radius: 9999px;
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+    }
+    .quiz-option:hover {
+      background-color: #f8fafc;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans leading-relaxed py-8 px-4">
+
+  <div class="max-w-5xl mx-auto space-y-6">
+
+    <!-- HEADER BLOCK -->
+    <header class="rounded-[12px] shadow-md overflow-hidden bg-slate-900 border border-slate-700">
+      <div class="bg-slate-900 px-6 py-3 text-xs md:text-sm font-semibold tracking-wider uppercase text-amber-400 text-center">
+        CHƯƠNG TRÌNH NGỮ VĂN 10 — VĂN BẢN 5 (BỘ SÁCH KẾT NỐI TRÍ THỨC)
+      </div>
+      <div class="h-[1px] bg-amber-500/30"></div>
+      <div class="bg-amber-500 text-slate-900 py-6 px-6 text-center font-extrabold text-2xl md:text-3xl tracking-wide uppercase">
+        CHỮ NGƯỜI TỬ TÙ
+        <div class="text-sm md:text-base font-semibold text-slate-900 lowercase italic mt-1 font-normal">
+          (Tác phẩm xuất sắc trong tập "Vang bóng một thời" — Nguyễn Tuân)
+        </div>
+      </div>
+    </header>
+
+    <!-- INTRO BOX -->
+    <section class="bg-white rounded-[12px] p-6 shadow-md border border-slate-200 space-y-3">
+      <h2 class="text-lg font-bold text-slate-900 flex items-center">
+        <span class="text-2xl mr-2">📌</span> Lời Dẫn Bài Học
+      </h2>
+      <p class="italic text-slate-700 leading-relaxed bg-amber-50/60 p-4 rounded-lg border-l-4 border-amber-600">
+        "Chữ người tử tù" (nguyên tác "Giòng chữ cuối cùng", in lần đầu trên tạp chí Tao Đàn năm 1939) là một trong những truyện ngắn xuất sắc nhất của Nguyễn Tuân. Tác phẩm đã khắc hoạ thành công hình tượng Huấn Cao — một người anh hùng nghĩa khí, tài hoa và hiên ngang, cùng cuộc gặp gỡ tri kỷ "xưa nay chưa từng có" với viên quan quản ngục nơi chốn ngục tăm tối.
+      </p>
+    </section>
+
+    <!-- SECTION 1: CÂU HỎI VÀ HƯỚNG DẪN GIẢI SGK -->
+    <section class="bg-white rounded-[12px] p-6 shadow-md border border-slate-200 space-y-6">
+      
+      <div class="flex items-center text-xl md:text-2xl font-bold text-slate-900 border-b pb-3 border-slate-200">
+        <span class="sq-num">I</span> HƯỚNG DẪN TRẢ LỜI CÂU HỎI TRONG BÀI HỌC (SGK TRANG 27)
+      </div>
+
+      <!-- QUESTION 1 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-slate-900 text-base">
+            Câu 1: Xác định tình huống truyện trong "Chữ người tử tù".
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-1')" 
+            class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem hướng dẫn giải
+          </button>
+        </div>
+        <div id="sgk-ans-1" class="hidden pt-2 text-sm text-slate-800 border-t border-slate-300 text-justify space-y-2">
+          <p><strong>Gợi ý trả lời:</strong></p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li><strong>Mối quan hệ trớ trêu, éo le trên phương diện xã hội:</strong> Huấn Cao là tên giặc phản nghịch, kẻ chống lại triều đình bị án tử hình; Quản ngục là kẻ đại diện cho trật tự triều đình, cai quản nhà tù. Về thế trị an, họ đứng ở hai cực đối lập hoàn toàn.</li>
+            <li><strong>Mối quan hệ tri âm, tri kỷ trên phương diện nghệ thuật và đạo đức:</strong> Huấn Cao là người nghệ sĩ tài hoa (viết chữ đẹp nổi tiếng), giàu khí tiết; Quản ngục lại là người biết quý trọng cái đẹp, khao khao sở hữu chữ ông Huấn ("biết giá người, biết trọng người ngay").</li>
+            <li><strong>Ý nghĩa tình huống:</strong> Tình huống kịch tính này làm nổi bật vẻ đẹp khí phách của Huấn Cao và tấm lòng "biệt nhãn liên tài" của Quản ngục, đồng thời khẳng định sự chiến thắng của Cái Đẹp và Thiên Lương trong chốn tàn nhẫn.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-slate-900 text-base">
+            Câu 2: Lời kể về nhân vật quản ngục (phần 1) là của ai? Lời kể ấy tác động đến cách nhìn của bạn về nhân vật này như thế nào?
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-2')" 
+            class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem hướng dẫn giải
+          </button>
+        </div>
+        <div id="sgk-ans-2" class="hidden pt-2 text-sm text-slate-800 border-t border-slate-300 text-justify space-y-2">
+          <p><strong>Gợi ý trả lời:</strong></p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li>Lời kể thuộc về <strong>người kể chuyện ngôi thứ ba (toàn biết)</strong>. Tác giả nhập vai để soi chiếu vào nội tâm nhân vật.</li>
+            <li><strong>Tác động đến người đọc:</strong> Lời kể miêu tả Quản ngục giữa không gian tà âm tàn nhẫn nhưng lại có tâm hồn thanh cao, suy nghĩ tư lự, chu đáo ("một thanh âm trong trẻo chen vào giữa một bản đàn mà nhạc luật đều hỗn loạn xô bồ"). Nhờ đó, người đọc không coi y là kẻ cai trị tàn bạo thông thường mà dành thiện cảm, trân trọng một nhân cách "chọn nhầm nghề".</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-slate-900 text-base">
+            Câu 3: Sự kiện nào đã tạo nên bước chuyển trong thái độ của Huấn Cao với quản ngục? Sau sự kiện ấy, mối quan hệ của họ đã thay đổi như thế nào?
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-3')" 
+            class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem hướng dẫn giải
+          </button>
+        </div>
+        <div id="sgk-ans-3" class="hidden pt-2 text-sm text-slate-800 border-t border-slate-300 text-justify space-y-2">
+          <p><strong>Gợi ý trả lời:</strong></p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li><strong>Sự kiện bước ngoặt:</strong> Thầy thơ lại đấm cửa buồng giam, hớt hơ hớt hải kể cho Huấn Cao nghe nỗi lòng, tấm chân tình cùng sở nguyện xin chữ cao quý của quản ngục trước giờ Huấn Cao bị giải vào kinh thụ án tử hình.</li>
+            <li><strong>Bước chuyển thái độ:</strong> Từ chỗ xua đuổi khinh bạc ("Ngươi hỏi ta muốn gì? Ta chỉ muốn có một điều. Là nhà ngươi đừng đặt chân vào đây"), Huấn Cao vô cùng cảm động: "Ta cảm cái tấm lòng biệt nhãn liên tài của các ngươi. Nào ta có biết đâu một người như thầy quản đây mà lại có những sở thích cao quý như vậy...".</li>
+            <li><strong>Mối quan hệ thay đổi:</strong> Xóa bỏ hoàn toàn ranh giới giữa Tử tù và Quản ngục, trở thành hai tâm hồn tri kỷ tôn kính lẫn nhau.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- QUESTION 4 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-slate-900 text-base">
+            Câu 4: Nhân vật Huấn Cao được khắc hoạ qua những chi tiết tiêu biểu nào? Khái quát đặc điểm tính cách Huấn Cao.
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-4')" 
+            class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem hướng dẫn giải
+          </button>
+        </div>
+        <div id="sgk-ans-4" class="hidden pt-2 text-sm text-slate-800 border-t border-slate-300 text-justify space-y-2">
+          <p><strong>Chi tiết khắc họa:</strong></p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li><em>Tài năng:</em> Có tài bẻ khóa vượt ngục; tài viết chữ rất nhanh và rất đẹp (chữ vuông vắn, là "một vật báu trên đời").</li>
+            <li><em>Khí phách hiên ngang:</em> Thản nhiên rẩy gông đánh "thuỳnh" xuống đá tảng; ung dung nhận rượu thịt; coi khinh cái chết và cường quyền.</li>
+            <li><em>Thiên lương trong sáng:</em> "Nhất sinh không vì vàng ngọc hay quyền thế mà phải ép mình viết câu đối bao giờ"; biết trân trọng tấm lòng yêu cái đẹp của quản ngục.</li>
+          </ul>
+          <p class="font-semibold text-amber-900 pt-1">➡️ Khái quát: Huấn Cao là hình tượng kết tinh của Tài hoa - Khí phách - Thiên lương, vẻ đẹp hoàn mỹ mang tinh thần trượng nghĩa của kẻ sĩ Việt Nam.</p>
+        </div>
+      </div>
+
+      <!-- QUESTION 5 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-slate-900 text-base">
+            Câu 5: Chỉ ra các yếu tố khiến cảnh cho chữ trở thành một cảnh tượng "xưa nay chưa từng có". Phân tích ý nghĩa cảnh tượng đó.
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-5')" 
+            class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem hướng dẫn giải
+          </button>
+        </div>
+        <div id="sgk-ans-5" class="hidden pt-2 text-sm text-slate-800 border-t border-slate-300 text-justify space-y-2">
+          <p><strong>Cảnh tượng "xưa nay chưa từng có" vì:</strong></p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li><strong>Không gian:</strong> Việc cho chữ — một nghệ thuật thanh cao — không diễn ra ở thư phòng sang trọng mà diễn ra nơi buồng tối chật hẹp, ẩm ướt, hôi hám phân chuột phân gián.</li>
+            <li><strong>Thời gian:</strong> Đêm khuya đằng đẵng, mốc thời gian trước ngày kẻ sĩ bị đưa đi chém đầu.</li>
+            <li><strong>Trật tự thế năng đảo ngược:</strong> Người tù mang gông, xiềng xích đứng đĩnh đạc ban chữ và phán bảo khuyên dạy; viên Quản ngục khúm núm cất tiền kẽm, Thơ lại run run bưng chậu mực.</li>
+          </ul>
+          <p><strong>Ý nghĩa:</strong> Khẳng định sự chiến thắng tuyệt đối của Cái Đẹp, Cái Thiện và Khí Tiết trước Cái Ác và sự tăm tối. Nghệ thuật chân chính có sức mạnh cứu rỗi và cảm hóa con người.</p>
+        </div>
+      </div>
+
+      <!-- QUESTION 6 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-slate-900 text-base">
+            Câu 6: Thông điệp tác giả gửi gắm qua câu chuyện xin chữ và cho chữ.
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-6')" 
+            class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem hướng dẫn giải
+          </button>
+        </div>
+        <div id="sgk-ans-6" class="hidden pt-2 text-sm text-slate-800 border-t border-slate-300 text-justify space-y-2">
+          <p><strong>Gợi ý thông điệp:</strong></p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li>Cái đẹp và thiên lương không thể tồn tại chung với cái xấu, cái ác ("Ở đây lẫn lộn... thầy hãy thoát khỏi cái nghề này đi đã").</li>
+            <li>Nghệ thuật chân chính xuất phát từ tấm lòng trong sáng, không thể mua bằng tiền bạc hay quyền lực.</li>
+            <li>Thể hiện niềm tin vững chắc của Nguyễn Tuân vào sự bất tử của các giá trị văn hóa dân tộc và nhân cách cao quý.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- QUESTION 7: COMPARISON WITH NGO TU VAN -->
+      <div class="bg-amber-50 border border-amber-300 rounded-lg p-4 space-y-3">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-amber-950 text-base">
+            Câu 7: Nêu và nhận xét điểm chung giữa hai nhân vật Ngô Tử Văn (Tản Viên từ phán sự lục - Nguyễn Dữ) và Huấn Cao (Chữ người tử tù - Nguyễn Tuân).
+          </h3>
+          <button 
+            onclick="toggleAnswer('sgk-ans-7')" 
+            class="px-3 py-1 bg-amber-700 hover:bg-amber-800 text-white text-xs font-semibold rounded transition shadow-sm shrink-0 ml-2"
+          >
+            Xem so sánh chi tiết
+          </button>
+        </div>
+        <div id="sgk-ans-7" class="hidden pt-2 text-sm text-slate-800 border-t border-amber-200 text-justify space-y-3">
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs md:text-sm text-left border-collapse border border-slate-300 bg-white">
+              <thead class="bg-slate-200 text-slate-900 font-bold text-center">
+                <tr>
+                  <th class="p-2 border border-slate-300 w-1/4">Tiêu chí so sánh</th>
+                  <th class="p-2 border border-slate-300 w-3/8">Ngô Tử Văn (Nguyễn Dữ)</th>
+                  <th class="p-2 border border-slate-300 w-3/8">Huấn Cao (Nguyễn Tuân)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2 border border-slate-300 font-semibold text-center">Phẩm chất cốt lõi</td>
+                  <td class="p-2 border border-slate-300">Khảng khái, dũng cảm, kiên quyết trừ gian diệt tà, bảo vệ chính nghĩa.</td>
+                  <td class="p-2 border border-slate-300">Tài hoa bậc thầy, khí phách hiên ngang, giữ vững thiên lương trong sáng.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2 border border-slate-300 font-semibold text-center">Thái độ trước gian tà / cường quyền</td>
+                  <td class="p-2 border border-slate-300">Không run sợ trước hồn ma tướng giặc và cảnh ngục Cửu U; trực tiếp đấu tụng tại Minh Ty.</td>
+                  <td class="p-2 border border-slate-300">Không sợ cái chết, coi thường uy quyền triều đình phong kiến và thủ đoạn tàn bạo.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2 border border-slate-300 font-semibold text-center">Mục đích sống</td>
+                  <td class="p-2 border border-slate-300">Đấu tranh cho công lý, đem lại bình yên cho nhân dân.</td>
+                  <td class="p-2 border border-slate-300">Hoài bão tung hoành, giữ gìn cái đẹp và cái thiện trong thiên hạ.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs text-amber-900 italic">
+            <strong>Nhận xét chung:</strong> Cả hai nhân vật đều là biểu tượng rực rỡ cho khí tiết Kẻ Sĩ Việt Nam qua các thời kỳ lịch sử (văn học trung đại và lãng mạn hiện đại), luôn kiên cường, bất khuất, lấy Đạo đức - Chính nghĩa làm kim chỉ nam.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 2: KẾT NỐI ĐỌC - VIẾT & BÀI TẬP QUY ĐỔI ƯỚC LỆ -->
+    <section class="bg-white rounded-[12px] p-6 shadow-md border border-slate-200 space-y-6">
+      
+      <div class="flex items-center text-xl md:text-2xl font-bold text-slate-900 border-b pb-3 border-slate-200">
+        <span class="sq-num">II</span> KẾT NỐI ĐỌC - VIẾT & BÀI TẬP LIÊN MÔN
+      </div>
+
+      <!-- PARAGRAPH ANALYSIS -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-5 space-y-3">
+        <h3 class="font-bold text-slate-900 text-base">
+          ✍️ Đoạn văn mẫu (khoảng 150 chữ): Phân tích nghệ thuật đối lập tương phản trong cảnh cho chữ
+        </h3>
+        <div class="bg-white p-4 rounded border border-slate-300 text-sm text-slate-800 text-justify leading-relaxed">
+          Trong tác phẩm <em>"Chữ người tử tù"</em>, Nguyễn Tuân đã sử dụng thành công nghệ thuật đối lập tương phản (chiaroscuro) để khắc họa cảnh cho chữ "xưa nay chưa từng có". Sự tương phản thể hiện trước hết giữa không gian buồng giam ẩm ướt, tăm tối, hôi hám phân chuột phân gián với ánh sáng đỏ rực của bó đuốc tẩm dầu và màu trắng tinh khôi của tấm lụa bạch. Không chỉ vậy, tác giả còn tạo nên sự đảo ngược trật tự thế năng đầy kịch tính: người tù cổ đeo gông, chân vướng xiềng lại là người uy nghi, thản nhiên vung bút truyền dạy hoài bão; trong khi viên quản ngục và thầy thơ lại — những kẻ nắm quyền sinh sát — lại khúm núm, run run bưng chậu mực. Chính thủ pháp tương phản sắc nét này đã tôn vinh sự chiến thắng vĩnh cửu của Cái Đẹp và Thiên Lương trước Cái Ác và Cái Tối.
+        </div>
+      </div>
+
+      <!-- MATH PROBLEM 1 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-5 space-y-3">
+        <h3 class="font-bold text-slate-900 text-base">
+          📐 Bài tập quy đổi ước lệ 1: Áp lực vật lý của chiếc gông gỗ lim
+        </h3>
+        <p class="text-sm text-slate-700 text-justify">
+          Trong tác phẩm, 6 tử tù phải mang chung chiếc gông gỗ lim dài $L = 8 \text{ thước}$. Biết $1 \text{ thước cổ} \approx 0.33 \text{ m}$. Tổng khối lượng chiếc gông nặng $M = 7.5 \text{ tạ} = 750 \text{ kg}$.
+        </p>
+        <p class="text-sm text-slate-800 font-semibold">
+          1) Tính chiều dài thực tế chiếc gông ($m$).<br>
+          2) Giả sử lực nén phân bố đều, tính khối lượng trung bình $m_{TB}$ mà mỗi người tù phải mang trên vai:
+          $$ m_{TB} = \frac{M}{6} $$
+        </p>
+        <button 
+          onclick="toggleAnswer('math-ans-1')" 
+          class="px-4 py-1 bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold rounded transition"
+        >
+          Xem lời giải chi tiết
+        </button>
+        <div id="math-ans-1" class="hidden pt-3 border-t border-slate-300 text-sm text-slate-800 space-y-1">
+          <p><strong>Lời giải:</strong></p>
+          <p>1) Chiều dài chiếc gông: $L = 8 \times 0.33 = 2.64 \text{ (m)}$.</p>
+          <p>2) Trọng lượng trung bình đè lên vai mỗi người tù:</p>
+          $$ m_{TB} = \frac{750}{6} = 125 \text{ (kg)} $$
+          <p class="text-xs text-slate-600 italic">Chi tiết này làm nổi bật hoàn cảnh đày đọa khắc nghiệt và sức mạnh thể chất, khí phách kiên cường của Huấn Cao khi dễ dàng thúc gông đánh "thuỳnh" xuống đá tảng.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 3: GAMESHOW TRẮC NGHIỆM TƯƠNG TÁC -->
+    <section class="bg-white rounded-[12px] p-6 shadow-md border border-slate-200 space-y-6">
+      
+      <div class="bg-gradient-to-r from-slate-900 via-amber-900 to-slate-900 text-white p-5 rounded-lg flex flex-col md:flex-row justify-between items-center shadow-lg">
+        <div>
+          <h2 class="text-2xl font-extrabold tracking-wider flex items-center">
+            <span class="text-amber-400 text-3xl mr-2">🏆</span> GAMESHOW: THỬ THÁCH TRẮC NGHIỆM
+          </h2>
+          <p class="text-xs text-slate-300 mt-1">10 câu hỏi kiểm tra toàn diện tác phẩm "Chữ người tử tù"</p>
+        </div>
+        <div id="quiz-status-badge" class="mt-3 md:mt-0 bg-amber-400 text-slate-900 px-4 py-2 rounded-full font-bold text-sm">
+          Chưa nộp bài
+        </div>
+      </div>
+
+      <form id="quizForm" class="space-y-6">
+        
+        <!-- QUESTION 1 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-1">
+          <p class="font-bold text-slate-800">Câu 1 (Nhận biết): Truyện ngắn "Chữ người tử tù" ban đầu có nhan đề là gì?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q1" value="A" class="form-radio text-amber-600">
+              <span>A. Bức trung đường cuối cùng</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q1" value="B" class="form-radio text-amber-600">
+              <span>B. Giòng chữ cuối cùng</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q1" value="C" class="form-radio text-amber-600">
+              <span>C. Cảnh cho chữ chốn để lao</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q1" value="D" class="form-radio text-amber-600">
+              <span>D. Vang bóng một thời</span>
+            </label>
+          </div>
+          <div id="explain-1" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-2">
+          <p class="font-bold text-slate-800">Câu 2 (Nhận biết): Nhân vật Huấn Cao được xây dựng dựa trên hình mẫu lịch sử nào?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q2" value="A" class="form-radio text-amber-600">
+              <span>A. Nguyễn Trãi</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q2" value="B" class="form-radio text-amber-600">
+              <span>B. Cao Bá Quát</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q2" value="C" class="form-radio text-amber-600">
+              <span>C. Nguyễn Bỉnh Khiêm</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q2" value="D" class="form-radio text-amber-600">
+              <span>D. Phan Bội Châu</span>
+            </label>
+          </div>
+          <div id="explain-2" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-3">
+          <p class="font-bold text-slate-800">Câu 3 (Thông hiểu): Tại sao viên quản ngục lại biệt đãi Huấn Cao trong suốt nửa tháng ở nhà giam?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q3" value="A" class="form-radio text-amber-600">
+              <span>A. Vì sợ Huấn Cao nổi loạn vượt ngục</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q3" value="B" class="form-radio text-amber-600">
+              <span>B. Vì muốn dò hỏi bí mật quốc gia của bọn phản nghịch</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q3" value="C" class="form-radio text-amber-600">
+              <span>C. Vì kính trọng người có nghĩa khí, tài năng và khao khao xin chữ Huấn Cao</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q3" value="D" class="form-radio text-amber-600">
+              <span>D. Vì Huấn Cao đã đút lót tiền bạc cho quản ngục</span>
+            </label>
+          </div>
+          <div id="explain-3" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-4">
+          <p class="font-bold text-slate-800">Câu 4 (Nhận biết): Trong đời mình, trước khi cho chữ Quản ngục, Huấn Cao mới viết bao nhiêu bộ chữ cho bạn thân?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q4" value="A" class="form-radio text-amber-600">
+              <span>A. Hai bộ tứ bình và một bức trung đường</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q4" value="B" class="form-radio text-amber-600">
+              <span>B. Một bộ tứ bình và hai bức trung đường</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q4" value="C" class="form-radio text-amber-600">
+              <span>C. Ba đôi câu đối</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q4" value="D" class="form-radio text-amber-600">
+              <span>D. Rất nhiều không đếm được</span>
+            </label>
+          </div>
+          <div id="explain-4" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-5">
+          <p class="font-bold text-slate-800">Câu 5 (Thông hiểu): Chi tiết Huấn Cao thản nhiên nhận rượu thịt biểu hiện phẩm chất nào?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q5" value="A" class="form-radio text-amber-600">
+              <span>A. Sự tham ăn và thỏa mãn cá nhân</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q5" value="B" class="form-radio text-amber-600">
+              <span>B. Phong thái ung dung, tự tại, xem nhẹ cái chết và nghịch cảnh</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q5" value="C" class="form-radio text-amber-600">
+              <span>C. Thái độ nịnh hót quản ngục</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q5" value="D" class="form-radio text-amber-600">
+              <span>D. Sự ngây thơ không biết mình sắp bị chém</span>
+            </label>
+          </div>
+          <div id="explain-5" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-6">
+          <p class="font-bold text-slate-800">Câu 6 (Thông hiểu): Lời khuyên cuối cùng của Huấn Cao dành cho Quản ngục là gì?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q6" value="A" class="form-radio text-amber-600">
+              <span>A. Hãy đi xin chữ của những người khác</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q6" value="B" class="form-radio text-amber-600">
+              <span>B. Khuyên quản ngục nên thay đổi chốn ở, thoát khỏi nghề cai ngục rồi hãy nghĩ đến chơi chữ</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q6" value="C" class="form-radio text-amber-600">
+              <span>C. Khuyên quản ngục đi theo đường lối phản nghịch</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q6" value="D" class="form-radio text-amber-600">
+              <span>D. Khuyên quản ngục thăng quan tiến chức</span>
+            </label>
+          </div>
+          <div id="explain-6" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-7">
+          <p class="font-bold text-slate-800">Câu 7 (Thông hiểu): Thái độ của Quản ngục sau khi nhận lời khuyên của Huấn Cao?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q7" value="A" class="form-radio text-amber-600">
+              <span>A. Tức giận vì bị xúc phạm</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q7" value="B" class="form-radio text-amber-600">
+              <span>B. Cảm động vái người tù một vái và nghẹn ngào: "Kẻ mê muội này xin bái lĩnh"</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q7" value="C" class="form-radio text-amber-600">
+              <span>C. Lặng lẽ bỏ đi không nói gì</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q7" value="D" class="form-radio text-amber-600">
+              <span>D. Ra lệnh nhốt Huấn Cao kỹ hơn</span>
+            </label>
+          </div>
+          <div id="explain-7" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-8">
+          <p class="font-bold text-slate-800">Câu 8 (Vận dụng): Bút pháp chủ đạo của Nguyễn Tuân trong việc dựng cảnh cho chữ là gì?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q8" value="A" class="form-radio text-amber-600">
+              <span>A. Bút pháp tả thực tỉ mỉ hiện thực chủ nghĩa</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q8" value="B" class="form-radio text-amber-600">
+              <span>B. Bút pháp đối lập tương phản lãng mạn kết hợp chất điện ảnh</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q8" value="C" class="form-radio text-amber-600">
+              <span>C. Bút pháp huyễn ảo kỳ bí</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q8" value="D" class="form-radio text-amber-600">
+              <span>D. Bút pháp hài hước châm biếm</span>
+            </label>
+          </div>
+          <div id="explain-8" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-9">
+          <p class="font-bold text-slate-800">Câu 9 (Vận dụng): Điểm tương đồng nổi bật nhất giữa Huấn Cao và Ngô Tử Văn là gì?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q9" value="A" class="form-radio text-amber-600">
+              <span>A. Đều là những quan lại đương triều</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q9" value="B" class="form-radio text-amber-600">
+              <span>B. Đều có khả năng phép thuật biến hóa</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q9" value="C" class="form-radio text-amber-600">
+              <span>C. Đều mang khí tiết khảng khái, hiên ngang, bảo vệ chính nghĩa và không khuất phục trước gian tà</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q9" value="D" class="form-radio text-amber-600">
+              <span>D. Đều làm Phán sự đền Tản Viên</span>
+            </label>
+          </div>
+          <div id="explain-9" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2" id="q-box-10">
+          <p class="font-bold text-slate-800">Câu 10 (Nhận biết): Tập truyện ngắn "Vang bóng một thời" của Nguyễn Tuân được xuất bản năm nào?</p>
+          <div class="space-y-1 text-sm pl-2">
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q10" value="A" class="form-radio text-amber-600">
+              <span>A. 1939</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q10" value="B" class="form-radio text-amber-600">
+              <span>B. 1940</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q10" value="C" class="form-radio text-amber-600">
+              <span>C. 1945</span>
+            </label>
+            <label class="flex items-center space-x-2 p-2 rounded cursor-pointer quiz-option">
+              <input type="radio" name="q10" value="D" class="form-radio text-amber-600">
+              <span>D. 1960</span>
+            </label>
+          </div>
+          <div id="explain-10" class="hidden text-xs mt-2 p-2 rounded"></div>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="text-center pt-4">
+          <button 
+            type="button" 
+            onclick="checkQuiz()" 
+            class="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-lg rounded-xl shadow-md transition transform active:scale-95"
+          >
+            NỘP BÀI GAME SHOW
+          </button>
+        </div>
+
+      </form>
+
+      <!-- RESULT BOX -->
+      <div id="quizResultBox" class="hidden p-4 bg-amber-50 border border-amber-300 rounded-lg text-center space-y-2">
+        <h3 class="text-xl font-bold text-amber-900" id="quizScoreText"></h3>
+        <p class="text-sm text-amber-800" id="quizFeedbackText"></p>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 border-t border-slate-300 text-slate-600 text-sm font-semibold">
+      Chương trình GDPT 2018 — Ngữ văn 10 (Bộ sách Kết nối tri thức)
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function toggleAnswer(elementId) {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.classList.toggle('hidden');
+      }
+    }
+
+    function checkQuiz() {
+      const answers = {
+        q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "A",
+        q5: "B",
+        q6: "B",
+        q7: "B",
+        q8: "B",
+        q9: "C",
+        q10: "B"
+      };
+
+      const explanations = {
+        q1: "Đúng! Truyện in lần đầu trên tạp chí Tao Đàn với nhan đề 'Giòng chữ cuối cùng'.",
+        q2: "Đúng! Huấn Cao được Nguyễn Tuân xây dựng dựa trên hình mẫu danh nhân Cao Bá Quát.",
+        q3: "Đúng! Quản ngục là người trân trọng khí tiết và vô cùng khao khát sở hữu chữ ông Huấn.",
+        q4: "Đúng! Huấn Cao từng nói ông mới viết hai bộ tứ bình và một bức trung đường cho bạn thân.",
+        q5: "Đúng! Phong thái thản nhiên cho thấy tư thế ung dung, xem nhẹ nghịch cảnh của Huấn Cao.",
+        q6: "Đúng! Huấn Cao khuyên quản ngục về quê rời bỏ nghề cai ngục để giữ vững thiên lương.",
+        q7: "Đúng! Quản ngục vái người tù một vái và nghẹn ngào xưng 'Kẻ mê muội này xin bái lĩnh'.",
+        q8: "Đúng! Bút pháp tương phản lãng mạn giữa ánh sáng và bóng tối tạo nên độ kịch tính xuất sắc.",
+        q9: "Đúng! Cả hai đều là tấm gương khí tiết khảng khái, đấu tranh cho chính nghĩa của kẻ sĩ.",
+        q10: "Đúng! Tập truyện ngắn 'Vang bóng một thời' được xuất bản chính thức vào năm 1940."
+      };
+
+      let score = 0;
+      let total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const qName = 'q' + i;
+        const selected = document.querySelector(`input[name="${qName}"]:checked`);
+        const qBox = document.getElementById(`q-box-${i}`);
+        const explainBox = document.getElementById(`explain-${i}`);
+
+        if (selected) {
+          if (selected.value === answers[qName]) {
+            score++;
+            qBox.classList.remove('bg-slate-50', 'bg-red-50');
+            qBox.classList.add('bg-amber-50', 'border-amber-300');
+            explainBox.className = "text-xs mt-2 p-2 rounded bg-amber-100 text-amber-900 block";
+            explainBox.innerHTML = `<strong>Chính xác!</strong> ${explanations[qName]}`;
+          } else {
+            qBox.classList.remove('bg-slate-50', 'bg-amber-50');
+            qBox.classList.add('bg-red-50', 'border-red-300');
+            explainBox.className = "text-xs mt-2 p-2 rounded bg-red-100 text-red-900 block";
+            explainBox.innerHTML = `<strong>Chưa đúng!</strong> Đáp án đúng là <strong>${answers[qName]}</strong>. ${explanations[qName]}`;
+          }
+        } else {
+          qBox.classList.remove('bg-slate-50', 'bg-amber-50');
+          qBox.classList.add('bg-red-50', 'border-red-300');
+          explainBox.className = "text-xs mt-2 p-2 rounded bg-red-100 text-red-900 block";
+          explainBox.innerHTML = `<strong>Chưa chọn!</strong> Đáp án đúng là <strong>${answers[qName]}</strong>. ${explanations[qName]}`;
+        }
+      }
+
+      const scoreBadge = document.getElementById('quiz-status-badge');
+      scoreBadge.innerHTML = `Kết quả: ${score}/${total} Câu`;
+
+      const resultBox = document.getElementById('quizResultBox');
+      const scoreText = document.getElementById('quizScoreText');
+      const feedbackText = document.getElementById('quizFeedbackText');
+
+      resultBox.classList.remove('hidden');
+      scoreText.innerHTML = `🎯 Bạn đạt ${score}/${total} điểm (${score * 10}%)`;
+
+      if (score === 10) {
+        feedbackText.innerText = "Xuất sắc! Bạn đã nắm vững toàn bộ kiến thức tác phẩm Chữ người tử tù!";
+      } else if (score >= 7) {
+        feedbackText.innerText = "Kết quả rất tốt! Hãy xem lại các câu trả lời chưa chính xác để ôn tập thêm.";
+      } else {
+        feedbackText.innerText = "Bạn hãy đọc lại văn bản và xem chi tiết hướng dẫn giải để củng cố kiến thức nhé!";
+      }
+
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
