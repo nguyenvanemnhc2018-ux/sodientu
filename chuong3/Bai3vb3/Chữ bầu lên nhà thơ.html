@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chữ bầu lên nhà thơ - Bài học Ngữ văn</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        /* Custom Accent Styles */
+        .btn-primary {
+            background-color: #33FF33;
+            color: #1a202c;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #2be02b;
+            transform: translateY(-1px);
+        }
+        .bg-primary-accent {
+            background-color: #33FF33;
+        }
+        .border-primary-accent {
+            border-color: #33FF33;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Thẻ div chủ bao bọc nội dung -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- Header: Chương và Tên bài chung 1 khung bo tròn 12px -->
+        <header class="bg-white rounded-[12px] shadow-md border-2 border-slate-200 overflow-hidden">
+            <div class="bg-cyan-600 text-white p-4 text-center">
+                <span class="text-lg md:text-xl font-bold tracking-wide uppercase">Chương : Vẻ đẹp của thơ ca</span>
+            </div>
+            <hr class="border-t border-cyan-700 opacity-30 my-0" />
+            <div class="bg-cyan-500 text-slate-900 p-6 text-center">
+                <h1 class="text-2xl md:text-4xl font-extrabold tracking-wider uppercase">
+                    CHỮ BẦU LÊN NHÀ THƠ
+                </h1>
+                <p class="mt-2 text-sm md:text-base font-semibold text-slate-800">(Trích - Lê Đạt)</p>
+            </div>
+        </header>
+
+        <!-- Intro Box: Lời dẫn đóng khung viền đen mỏng, nền trắng -->
+        <section class="bg-white border border-black rounded-[12px] p-5 shadow-sm">
+            <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                <span class="text-xl">💬</span> Lời dẫn nhập / Chuẩn bị đọc:
+            </h3>
+            <ul class="list-disc list-inside italic text-slate-700 leading-relaxed space-y-2">
+                <li>
+                    Trong hình dung của bạn, nhà thơ phải là người thế nào? Bạn có cho rằng việc làm thơ gắn liền với những phút cao hứng, "bốc đồng"?
+                </li>
+                <li>
+                    Bạn nhớ hoặc thích định nghĩa nào về thơ, nhà thơ hay công việc làm thơ?
+                </li>
+            </ul>
+        </section>
+
+        <!-- KHUNG LƯU Ý ĐẶC BIỆT -->
+        <section class="bg-amber-50 border-l-4 border-amber-500 rounded-[12px] p-5 shadow-sm space-y-2">
+            <h4 class="font-bold text-amber-900 text-lg flex items-center gap-2">
+                <span>📌</span> Lưu ý
+            </h4>
+            <p class="text-amber-800 leading-relaxed">
+                Quan điểm cốt lõi của tác giả Lê Đạt: <span class="font-bold">"Chữ bầu lên nhà thơ"</span>. Thơ ca không phải là sản phẩm của những phút bốc đồng hay năng khiếu thiên phú sẵn có, mà là kết quả của quá trình lao động nghệ thuật kiên trì, lầm lũi và cúc cung tận tụy với ngôn từ.
+            </p>
+        </section>
+
+        <!-- MỤC I: GIỚI THIỆU CHUNG -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 space-y-4">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-900 border-b-4 border-slate-800 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white text-base font-bold rounded-none mr-3 shadow">I</span>
+                GIỚI THIỆU CHUNG
+            </h2>
+
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-7 h-7 bg-[#33FF33] text-slate-900 text-sm font-bold rounded-full mr-2">1</span>
+                        Tác giả Lê Đạt
+                    </h3>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 leading-relaxed space-y-2">
+                        <p>• <strong>Lê Đạt</strong> (1929 – 2008), tên khai sinh là Đào Công Đạt, quê ở tỉnh Bắc Giang.</p>
+                        <p>• Ông là một nhà thơ luôn có ý thức tìm tòi, đổi mới, cách tân thơ ca và tự nhận mình là một <span class="font-semibold text-emerald-800">"phu chữ"</span> (người lao động chữ nghĩa).</p>
+                        <p>• Năm 2006, ông được tặng Giải thưởng Nhà nước về Văn học nghệ thuật.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-7 h-7 bg-[#33FF33] text-slate-900 text-sm font-bold rounded-full mr-2">2</span>
+                        Tác phẩm & Thể loại Tiểu luận
+                    </h3>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 leading-relaxed space-y-2">
+                        <p>• <strong>Xuất xứ:</strong> Bài tiểu luận in lần đầu trên báo <em>Văn nghệ</em> (1994), sau đó được đưa vào tập <em>Đối thoại với đời & thơ</em> (2011).</p>
+                        <p>• <strong>Thể loại:</strong> Tiểu luận văn học (nghị luận về bản chất thơ ca và con đường sáng tạo nghệ thuật).</p>
+                    </div>
+                </div>
+
+                <!-- Khung chứa hình ảnh h1.png -->
+                <div class="border-2 border-dashed border-slate-300 rounded-lg p-4 text-center bg-slate-50">
+                    <img src="h1.png" alt="Chân dung nhà thơ Lê Đạt" class="max-w-full h-auto mx-auto rounded-md shadow" onerror="this.src='https://placehold.co/700x350/e2e8f0/334155?text=Hinh+minh+hoa+h1.png+-+Nha+tho+Le+Dat'">
+                    <p class="text-xs text-slate-500 mt-2 italic">Hình 1: Nhà thơ Lê Đạt – Người "phu chữ" suốt đời tìm tòi cách tân nghệ thuật</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC II: ĐỌC - HIỂU NỘI DUNG VĂN BẢN -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-900 border-b-4 border-slate-800 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white text-base font-bold rounded-none mr-3 shadow">II</span>
+                NỘI DUNG BÀI HỌC VÀ LẬP LUẬN
+            </h2>
+
+            <!-- Con số 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-[#33FF33] text-slate-900 text-sm font-bold rounded-full mr-2">1</span>
+                    Quan niệm về chữ và ngôn ngữ thơ ca
+                </h3>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-slate-800 space-y-2">
+                    <p class="font-bold text-emerald-900">Mô hình phân biệt Thơ và Văn xuôi:</p>
+                    <p class="italic text-base">
+                        \( \text{Văn xuôi} \rightarrow \text{"Ý tại ngôn tại"} \) <br>
+                        \( \text{Thơ ca} \rightarrow \text{"Ý tại ngôn ngoại"} \ (\text{Đa nghĩa, gợi cảm}) \)
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 pl-2 text-sm">
+                        <li>Thơ làm bằng <strong>CHỮ</strong>, nhưng không ở "nghĩa tiêu dùng" hay "nghĩa tự vị" (nghĩa từ điển).</li>
+                        <li>Chữ trong thơ nằm ở <strong>diện mạo, âm lượng, độ vang vọng</strong> và <strong>sức gợi cảm</strong>.</li>
+                        <li>Chữ trong thơ có <span class="font-semibold">"hóa trị"</span> đặc biệt – khả năng liên kết và gợi liên tưởng phong phú.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Con số 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-[#33FF33] text-slate-900 text-sm font-bold rounded-full mr-2">2</span>
+                    Phản bác quan niệm "bốc đồng" & Tôn vinh "Lao động chữ nghĩa"
+                </h3>
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+                    <div class="border-l-4 border-red-500 pl-3">
+                        <p class="font-bold text-red-900">Phản bác quan niệm sai lầm:</p>
+                        <p class="text-sm">Tác giả ghét định kiến cho rằng thơ chỉ là những phút bốc đồng, năng khiếu thiên phú, "trời cho". Vì những cơn bốc đồng thường ngắn ngủi, "trời cho thì trời lại lấy đi".</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-3">
+                        <p class="font-bold text-green-900">Tôn vinh nhà thơ chân chính:</p>
+                        <p class="text-sm">Lê Đạt ưa những nhà thơ <em>"một nắng hai sương, lầm lũi, lực điền trên cánh đồng giấy, đổi bát mồ hôi lấy từng hạt chữ"</em>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Con số 3 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-[#33FF33] text-slate-900 text-sm font-bold rounded-full mr-2">3</span>
+                    Quy luật "Chữ bầu lên nhà thơ" và trách nhiệm sáng tạo
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-slate-800 space-y-2">
+                    <p class="font-bold text-blue-900">Định luật ứng cử thơ ca:</p>
+                    <p class="italic">
+                        "Không có chức nhà thơ suốt đời. Mỗi lần làm một bài thơ, nhà thơ lại phải ứng cử trong một cuộc bầu khắc nghiệt của cử tri chữ."
+                    </p>
+                    <p class="text-sm">
+                        \( \text{Nội lực của chữ} \rightarrow \text{Mức độ trẻ/già của nhà thơ} \)
+                    </p>
+                    <p class="text-sm">
+                        Nhà thơ phải biến <strong>ngôn ngữ công cộng</strong> thành <strong>ngôn ngữ đặc sản độc nhất</strong>, làm phong phú cho tiếng mẹ đẻ như một lão bộc trung thành.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Khung chứa hình ảnh h2.png -->
+            <div class="border-2 border-dashed border-slate-300 rounded-lg p-4 text-center bg-slate-50">
+                <img src="h2.png" alt="Lao động chữ nghĩa của nhà thơ" class="max-w-full h-auto mx-auto rounded-md shadow" onerror="this.src='https://placehold.co/700x350/e2e8f0/334155?text=Hinh+minh+hoa+h2.png+-+Canh+dong+giay+va+lao+dong+chu'">
+                <p class="text-xs text-slate-500 mt-2 italic">Hình 2: Lao động miệt mài "lực điền trên cánh đồng giấy" để chắt lọc từng hạt chữ</p>
+            </div>
+        </section>
+
+        <!-- MỤC III: CÂU HỎI VÀ BÀI TẬP SGK -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-900 border-b-4 border-slate-800 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white text-base font-bold rounded-none mr-3 shadow">III</span>
+                HƯỚNG DẪN TRẢ LỜI CÂU HỎI TRONG BÀI
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Câu 1 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-semibold text-slate-800">
+                        <span class="text-blue-700 font-bold">Câu 1:</span> Vấn đề chính được bàn luận trong văn bản này là gì?
+                    </p>
+                    <button onclick="toggleAnswer('ans1')" class="btn-primary px-4 py-2 rounded-md shadow-sm text-sm">
+                        👁️ Xem lời giải
+                    </button>
+                    <div id="ans1" class="hidden bg-emerald-100 border border-emerald-300 text-emerald-900 p-4 rounded-md mt-2 text-sm leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong><br>
+                        Vấn đề chính của văn bản là <strong>mối quan hệ giữa chữ nghĩa và nhà thơ</strong>, bản chất của lao động sáng tạo thơ ca: Thơ là sự gia công chữ nghĩa kiên trì, chính chữ nghĩa bầu chọn nên danh xưng và vị thế của nhà thơ chứ không phải nhờ năng khiếu hay cảm hứng bốc đồng.
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-semibold text-slate-800">
+                        <span class="text-blue-700 font-bold">Câu 2:</span> Hãy tìm trong văn bản một câu có thể nêu bật được ý cốt lõi trong quan niệm về thơ của tác giả.
+                    </p>
+                    <button onclick="toggleAnswer('ans2')" class="btn-primary px-4 py-2 rounded-md shadow-sm text-sm">
+                        👁️ Xem lời giải
+                    </button>
+                    <div id="ans2" class="hidden bg-emerald-100 border border-emerald-300 text-emerald-900 p-4 rounded-md mt-2 text-sm leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong><br>
+                        Câu nêu bật ý cốt lõi: <em>"Không có chức nhà thơ suốt đời. Mỗi lần làm một bài thơ, nhà thơ lại phải ứng cử trong một cuộc bầu khắc nghiệt của cử tri chữ."</em> (hoặc câu nhan đề: <em>"Chữ bầu lên nhà thơ"</em>).
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-semibold text-slate-800">
+                        <span class="text-blue-700 font-bold">Câu 3:</span> Ở phần 2, tác giả đã tranh luận với hai quan niệm phổ biến nào?
+                    </p>
+                    <button onclick="toggleAnswer('ans3')" class="btn-primary px-4 py-2 rounded-md shadow-sm text-sm">
+                        👁️ Xem lời giải
+                    </button>
+                    <div id="ans3" class="hidden bg-emerald-100 border border-emerald-300 text-emerald-900 p-4 rounded-md mt-2 text-sm leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong><br>
+                        1. <em>Quan niệm 1:</em> Thơ gắn liền với những phút cao hứng bốc đồng, làm thơ không cần nỗ lực cố gắng.<br>
+                        2. <em>Quan niệm 2:</em> Thơ là vấn đề của năng khiếu đặc biệt (thiên phú), xa lạ với lao động lầm lũi và nỗ lực trau dồi học vấn.<br>
+                        Tác giả dùng lý lẽ sắc bén và dẫn chứng thực tế (Trời cho thì trời lại lấy đi; Các nhà thơ lớn như Lý Bạch, Goethe, Tagore dù tóc bạc vẫn gặt hái mùa thơ dậy thì nhờ nội lực của chữ) để bác bỏ hai quan niệm sai lầm này.
+                    </div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-semibold text-slate-800">
+                        <span class="text-blue-700 font-bold">Câu 4:</span> Tác giả không trực tiếp định nghĩa khái niệm "chữ". Dựa vào "ý tại ngôn ngoại", hãy thử định nghĩa khái niệm này.
+                    </p>
+                    <button onclick="toggleAnswer('ans4')" class="btn-primary px-4 py-2 rounded-md shadow-sm text-sm">
+                        👁️ Xem lời giải
+                    </button>
+                    <div id="ans4" class="hidden bg-emerald-100 border border-emerald-300 text-emerald-900 p-4 rounded-md mt-2 text-sm leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong><br>
+                        "Chữ" trong quan niệm của Lê Đạt không chỉ là vỏ âm thanh hay từ ngữ nằm yên trong từ điển (nghĩa tự vị/nghĩa tiêu dùng). "Chữ" trong thơ là <strong>chữ được tổ chức, nhào nặn qua lao động nghệ thuật</strong>, mang diện mạo, âm lượng, sức gợi cảm, độ vang vọng và khả năng liên tưởng đa dạng ("hóa trị") trong chỉnh thể tác phẩm.
+                    </div>
+                </div>
+
+                <!-- Mục có biểu tượng ? -->
+                <div class="bg-[#edf2f7] border-l-4 border-amber-500 p-4 rounded-r-lg space-y-3">
+                    <p class="font-semibold text-slate-800 flex items-center gap-2">
+                        <span class="text-xl">❓</span> <strong>Mục hỏi đáp (?):</strong> "Nghĩa tiêu dùng" và "nghĩa tự vị" khác gì với "diện mạo, âm lượng, sức gợi cảm" của chữ?
+                    </p>
+                    <button onclick="toggleAnswer('ansQ')" class="btn-primary px-4 py-2 rounded-md shadow-sm text-sm">
+                        👁️ Xem câu trả lời
+                    </button>
+                    <div id="ansQ" class="hidden bg-emerald-100 border border-emerald-300 text-emerald-900 p-4 rounded-md mt-2 text-sm leading-relaxed">
+                        <strong>Trả lời:</strong><br>
+                        - <i>Nghĩa tiêu dùng / nghĩa tự vị:</i> Nghĩa cố định, đơn nghĩa, mang tính thông tin thực dụng trao đổi hằng ngày.<br>
+                        - <i>Diện mạo, âm lượng, sức gợi cảm:</i> Tầng nghĩa nghệ thuật, thẩm mỹ, gợi lên âm thanh, hình ảnh, cảm xúc và các liên tưởng sâu xa khi chữ đứng trong tương quan bài thơ.
+                    </div>
+                </div>
+
+                <!-- Mục hoạt động (bàn tay 🖐️) -->
+                <div class="bg-[#edf2f7] border-l-4 border-purple-600 p-4 rounded-r-lg space-y-3">
+                    <p class="font-semibold text-slate-800 flex items-center gap-2">
+                        <span class="text-xl">🖐️</span> <strong>Hoạt động nêu vấn đề:</strong> Thảo luận về câu nói của Picasso được Lê Đạt dẫn lại: "Người ta cần rất nhiều thời gian để trở nên trẻ".
+                    </p>
+                    <button onclick="toggleAnswer('ansAct')" class="btn-primary px-4 py-2 rounded-md shadow-sm text-sm">
+                        👁️ Xem hướng giải quyết
+                    </button>
+                    <div id="ansAct" class="hidden bg-emerald-100 border border-emerald-300 text-emerald-900 p-4 rounded-md mt-2 text-sm leading-relaxed">
+                        <strong>Hướng giải quyết:</strong><br>
+                        1. Lời nói nghịch lý nhưng sâu sắc: "Trẻ" ở đây không phải độ tuổi sinh học mà là sự tươi mới, sức sống và sự độc đáo trong sáng tạo.<br>
+                        2. Để duy trì được sự "trẻ" trong nghệ thuật, nhà thơ phải mất rất nhiều thời gian rèn luyện, trải nghiệm và tích lũy "nội lực của chữ".<br>
+                        3. Bài học: Sự đổi mới và sức sống nghệ thuật bền vững đòi hỏi quá trình lao động bền bỉ chứ không thể bốc đồng chốc chốc.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC EM CÓ BIẾT -->
+        <section class="bg-indigo-50 border border-indigo-200 rounded-[12px] p-5 shadow-sm space-y-2">
+            <h4 class="font-bold text-indigo-900 text-lg flex items-center gap-2">
+                <span>💡</span> em có biết
+            </h4>
+            <div class="text-indigo-950 leading-relaxed text-sm space-y-2">
+                <p>
+                    Nhà thơ Lê Đạt tự nhận mình là một <strong>"phu chữ"</strong>. Ông từng dành nhiều tuần, thậm chí nhiều tháng chỉ để đắn đo chọn lựa một từ hay sắp xếp một trật tự câu thơ. Quan niệm của ông chịu ảnh hưởng sâu sắc bởi trường phái hình thức và tượng trưng thế giới, tiêu biểu như Valéry hay Jabès.
+                </p>
+            </div>
+        </section>
+
+        <!-- MỤC EM CÓ THỂ -->
+        <section class="bg-teal-50 border border-teal-200 rounded-[12px] p-5 shadow-sm space-y-2">
+            <h4 class="font-bold text-teal-900 text-lg flex items-center gap-2">
+                <span>✍️</span> em có thể
+            </h4>
+            <div class="text-teal-950 leading-relaxed text-sm space-y-2">
+                <p>
+                    <strong>Kết nối đọc - viết:</strong> Viết một đoạn văn (khoảng 150 chữ) nêu suy nghĩ của bạn về một nhận định mà bạn thấy tâm đắc nhất trong văn bản <em>"Chữ bầu lên nhà thơ"</em> của Lê Đạt.
+                </p>
+            </div>
+        </section>
+
+        <!-- MỤC BÀI TẬP TRẮC NGHIỆM CỦNG CỐ: GAMESHOW "AI LÀ TRIỆU PHÚ" -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <div class="bg-slate-900 text-white p-4 rounded-lg flex flex-col sm:flex-row justify-between items-center gap-2">
+                <h2 class="text-xl font-bold uppercase tracking-wider text-[#33FF33] flex items-center gap-2">
+                    <span>🏆</span> GAMESHOW: AI LÀ TRIỆU PHÚ
+                </h2>
+                <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-slate-300">10 Câu hỏi trắc nghiệm</span>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                <!-- Câu 1 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 1: Tác giả của bài tiểu luận "Chữ bầu lên nhà thơ" là ai?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="A"> A. Chế Lan Viên
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="B"> B. Lê Đạt
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="C"> C. Xuân Diệu
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="D"> D. Nguyễn Tuân
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 2: Lê Đạt tự nhận danh xưng nào để nói về công việc làm thơ của mình?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="A"> A. Thi tiên
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="B"> B. Phu chữ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="C"> C. Khách thơ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="D"> D. Thi thánh
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 3: Theo Lê Đạt, khác với văn xuôi ("ý tại ngôn tại"), thơ ca chủ yếu dựa vào đặc điểm nào?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="A"> A. Ý tại ngôn tại
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="B"> B. Ý tại ngôn ngoại
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="C"> C. Ngôn vô ý
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="D"> D. Ý vô ngôn
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 4: Tác giả phê phán quan niệm nào sau đây về sáng tạo thơ ca?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="A"> A. Thơ đòi hỏi lao động chữ nghĩa kiên trì
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="B"> B. Thơ là sản phẩm của những phút bốc đồng, năng khiếu thiên phú sẵn có
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="C"> C. Thơ cần sự sáng tạo ngôn ngữ độc đáo
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="D"> D. Nhà thơ phải biến ngôn ngữ công cộng thành ngôn ngữ đặc sản
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 5 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 5: Tác giả thể hiện sự ưa thích đối với kiểu nhà thơ nào?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="A"> A. Những nhà thơ thần đồng, sống bằng vốn trời cho
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="B"> B. Những nhà thơ làm thơ nhờ may rủi
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="C"> C. Những nhà thơ một nắng hai sương, lầm lũi lực điền trên cánh đồng giấy
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="D"> D. Những nhà thơ chỉ trông chờ vào nguồn cảm hứng bất chợt
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 6 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 6: Luận điểm "Chữ bầu lên nhà thơ" được Lê Đạt ủng hộ từ nhà thơ nước nào?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q6" value="A"> A. Nhà thơ Pháp Ét-mông Gia-bét (Edmond Jabès)
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q6" value="B"> B. Nhà thơ Đức Goethe
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q6" value="C"> C. Nhà thơ Ấn Độ Tagore
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q6" value="D"> D. Nhà thơ Nga Tolstoy
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 7 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 7: Theo bài viết, sự trẻ hay già của nhà thơ được quyết định bởi yếu tố nào?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q7" value="A"> A. Tuổi trời (tuổi tác sinh học)
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q7" value="B"> B. Nội lực của chữ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q7" value="C"> C. Số lượng bài thơ đã xuất bản
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q7" value="D"> D. Danh xưng do xã hội phong tặng
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 8 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 8: Lê Đạt so sánh vai trò của nhà thơ đối với ngôn ngữ dân tộc như thế nào?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q8" value="A"> A. Như một vị vua cai trị ngôn ngữ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q8" value="B"> B. Như một lão bộc trung thành của ngôn ngữ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q8" value="C"> C. Như một người vay mượn ngôn từ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q8" value="D"> D. Như một người thợ thủ công bình thường
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 9 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 9: Bằng chứng về Victor Hugo trong bài viết nhằm làm sáng tỏ điều gì?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q9" value="A"> A. Victor Hugo không phải là một nhà thơ giỏi
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q9" value="B"> B. Ngay cả đại thiên tài cũng có những lúc không được chữ "tái cử" vào vị trí nhà thơ
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q9" value="C"> C. Victor Hugo làm thơ chỉ bằng cảm hứng bốc đồng
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q9" value="D"> D. Victor Hugo không tôn trọng cử tri chữ
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 10 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <p class="font-semibold text-slate-800">Câu 10: Giữa chữ trong thơ và văn xuôi theo Pôn Va-lê-ri (Paul Valéry) giống và khác nhau ở điểm nào?</p>
+                    <div class="mt-2 space-y-1 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q10" value="A"> A. Giống nhau về hoá trị, khác nhau về hình thức
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q10" value="B"> B. Giống nhau về hình thức nhưng khác nhau về hoá trị
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q10" value="C"> C. Giống nhau hoàn toàn về cả hình thức và hóa trị
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-slate-100">
+                            <input type="radio" name="q10" value="D"> D. Khác nhau hoàn toàn không có điểm chung
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Nút Nộp Bài -->
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-900 text-white hover:bg-slate-800 px-8 py-3 rounded-md font-bold text-lg shadow-md transition transform active:scale-95">
+                        NỘP BÀI
+                    </button>
+                </div>
+            </form>
+
+            <!-- Kết quả Quiz -->
+            <div id="quizResult" class="hidden p-5 rounded-lg border text-base font-semibold space-y-3"></div>
+        </section>
+
+        <!-- MỤC 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN / PHÂN TÍCH -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-900 border-b-4 border-slate-800 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white text-base font-bold rounded-none mr-3 shadow">IV</span>
+               
