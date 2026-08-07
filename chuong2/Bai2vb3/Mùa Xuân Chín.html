@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÙA XUÂN CHÍN - Vẻ đẹp của thơ ca</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for Math & Formulas (Without Polyfill as requested) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .btn-primary {
+            background-color: #33FF33;
+            color: #1a202c;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #10b981;
+        }
+        .btn-primary:hover {
+            background-color: #28e028;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .square-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            border: 2px solid #1a202c;
+            background-color: #ffffff;
+            font-weight: bold;
+            color: #1a202c;
+            margin-right: 0.5rem;
+            border-radius: 0px;
+            flex-shrink: 0;
+        }
+        .circle-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid #0284c7;
+            border-radius: 9999px;
+            background-color: #ffffff;
+            font-weight: bold;
+            color: #0284c7;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        .section-header {
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 1.35rem;
+            color: #0f172a;
+            border-bottom: 4px solid #0f172a;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+        }
+        .question-box {
+            background-color: #edf2f7;
+            border-left: 5px solid #1e3a8a;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-bottom: 0.75rem;
+        }
+        .answer-box {
+            background-color: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .millionaire-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #ffffff;
+            border: 2px solid #f59e0b;
+        }
+        .option-btn {
+            background-color: #1e293b;
+            border: 1px solid #475569;
+            color: #f8fafc;
+            transition: all 0.2s;
+        }
+        .option-btn:hover {
+            background-color: #334155;
+            border-color: #33FF33;
+        }
+    </style>
+</head>
+<body class="p-3 md:p-6">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER FRAME: Single frame containing Chapter & Lesson Title with divider line -->
+        <header class="bg-white border-2 border-slate-800 rounded-[12px] shadow-md overflow-hidden text-center">
+            <!-- Chapter Banner (Cyan background style) -->
+            <div class="bg-cyan-600 text-white font-bold py-3 text-lg md:text-xl tracking-wide uppercase">
+                CHƯƠNG: VẺ ĐẸP CỦA THƠ CA
+            </div>
+            <!-- Thin Divider Line -->
+            <hr class="border-t border-slate-300">
+            <!-- Lesson Title Banner -->
+            <div class="bg-cyan-50 p-6">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 uppercase tracking-wider mb-1">
+                    MÙA XUÂN CHÍN
+                </h1>
+                <p class="text-lg font-medium text-slate-600 italic">- Hàn Mặc Tử -</p>
+            </div>
+        </header>
+
+        <!-- LỜI DẪN / INTRO BOX -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md border border-slate-800">
+            <div class="flex items-start space-x-3">
+                <div class="text-emerald-600 text-2xl pt-1">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="space-y-3 w-full">
+                    <h2 class="font-bold text-slate-800 text-lg uppercase tracking-wide border-b pb-1">Lời dẫn khởi động</h2>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        • Trong ký ức của bạn, thiên nhiên mùa xuân miền quê thường hiện lên với những hình ảnh, màu sắc và âm thanh đặc trưng nào?
+                    </p>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        • Khi một vẻ đẹp tươi tắn nhất đạt đến độ "chín" viên mãn, nó gợi cho bạn cảm xúc hân hoan hay nỗi niềm lo lắng về sự trôi chảy của thời gian? Hãy chia sẻ cảm nhận ấy.
+                    </p>
+                    <button onclick="toggleAnswer('intro-guide')" class="btn-primary px-4 py-2 rounded-lg text-sm shadow hover:shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb"></i> Xem gợi ý định hướng
+                    </button>
+                    <div id="intro-guide" class="answer-box text-slate-800 text-sm leading-relaxed">
+                        <p class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-check-circle"></i> Gợi ý trả lời:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>Hình ảnh mùa xuân:</strong> Ánh nắng ấm áp, làn khói mơ màng, thảm cỏ xanh tít tắp, mái nhà tranh rợp bóng nắng, tiếng hát trong trẻo của các cô gái làng quê.</li>
+                            <li><strong>Cảm nhận về "sự chín":</strong> Trạng thái "chín" biểu hiện đỉnh cao trọn vẹn nhất của sắc xuân, vừa dạt dào sức sống say đắm, vừa ẩn chứa sự phai tàn, mong manh ngắn ngủi của thời gian và kiếp người.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- I. TRI THỨC NGỮ VĂN -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="square-num">I</span> TRI THỨC NGỮ VĂN
+            </h2>
+            
+            <div class="space-y-5">
+                <!-- 1. Thơ mới và ngôn ngữ thơ trữ tình hiện đại -->
+                <div>
+                    <h3 class="font-bold text-slate-800 text-lg flex items-center mb-3">
+                        <span class="circle-num">1</span> Thơ mới và sự giải phóng cảm xúc
+                    </h3>
+                    
+                    <div class="bg-cyan-50 border border-cyan-200 rounded-lg p-4 space-y-3">
+                        <p class="text-slate-800">
+                            <strong>Phong trào Thơ mới (1932 - 1945):</strong> Cuộc cách mạng nghệ thuật trong thơ ca Việt Nam, phá bỏ những quy tắc gò bó chặt chẽ của thơ Đường luật cổ điển để giải phóng "cái tôi" cá nhân đầy sinh động.
+                        </p>
+                        <p class="text-slate-800">
+                            <strong>Đặc trưng ngôn từ & Nhạc điệu:</strong> Ngôn ngữ giàu hình ảnh, sức gợi, sử dụng linh hoạt các giác quan (thính giác, thị giác, xúc giác), tạo dựng sự giao thoa cảm giác vô cùng tinh tế.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Thể thơ 7 chữ và nghệ thuật cấu tứ -->
+                <div>
+                    <h3 class="font-bold text-slate-800 text-lg flex items-center mb-3">
+                        <span class="circle-num">2</span> Thể thơ 7 chữ hiện đại & Cấu tứ
+                    </h3>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg space-y-2 text-slate-800">
+                        <p><strong>• Cấu tứ trong thơ:</strong> Là mô hình tổ chức cảm xúc, hình ảnh và mạch liên tưởng của nhà thơ để thể hiện trọn vẹn chủ đề bài thơ.</p>
+                        <p><strong>• Nhịp và Vần:</strong> Linh hoạt, không gò bó theo luật bằng trắc cổ điển. Thường phối hợp vần lưng, vần chân, nhịp \(3/4\) hoặc \(2/2/3\) uyển chuyển như dòng chảy tâm trạng.</p>
+                        <p><strong>• Biểu tượng & Ngôn từ:</strong> Khai thác các kết hợp từ lạ, giàu tính ẩn dụ (như <em>"làn nắng uốn"</em>, <em>"mùa xuân chín"</em>, <em>"tiếng hát lơ thơ"</em>).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- II. TÁC GIẢ VÀ TÁC PHẨM -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="square-num">II</span> TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                <!-- Image Placeholder h1.png -->
+                <div class="md:col-span-1 text-center bg-slate-50 p-3 rounded-lg border border-slate-200">
+                    <img src="h1.png" alt="Chân dung nhà thơ Hàn Mặc Tử" class="w-full h-auto rounded shadow-sm mx-auto object-cover max-h-72" onerror="this.src='https://placehold.co/300x400/1e293b/ffffff?text=Chan+dung+Han+Mac+Tu+(h1.png)'">
+                    <p class="text-xs text-slate-500 italic mt-2">Nhà thơ Hàn Mặc Tử (1912 – 1940)</p>
+                </div>
+
+                <!-- Text Content -->
+                <div class="md:col-span-2 space-y-4">
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg flex items-center mb-2">
+                            <span class="circle-num">1</span> Tác giả Hàn Mặc Tử
+                        </h3>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-slate-800 space-y-2">
+                            <p>• <strong>Hàn Mặc Tử (1912 - 1940)</strong>, tên thật là Nguyễn Trọng Trí, sinh tại Đồng Hới, Quảng Bình.</p>
+                            <p>• Là một trong những nhà thơ tài hoa, độc đáo và có sức sáng tạo dồi dào bậc nhất của <strong>Phong trào Thơ mới</strong>.</p>
+                            <p>• Thế giới thơ ông vô cùng phong phú, vừa huyền bí, kì dị, điên loạn, vừa trong trẻo, tha thiết tình yêu đời, yêu cuộc sống trần thế.</p>
+                            <p>• <strong>Tác phẩm chính:</strong> <em>Gái quê</em> (1936), <em>Thơ Điên</em> (Đau thương), <em>Xuân như ý</em>, <em>Thượng thanh khí</em>...</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg flex items-center mb-2">
+                            <span class="circle-num">2</span> Tác phẩm "Mùa xuân chín"
+                        </h3>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-slate-800 space-y-2">
+                            <p>• <strong>Xuất xứ:</strong> In trong tập <em>Đau thương</em> (1938) - tập thơ nổi tiếng nhất của Hàn Mặc Tử.</p>
+                            <p>• <strong>Chủ đề:</strong> Bức tranh thiên nhiên mùa xuân láng mịn, tràn đầy sức sống và hoài niệm hoang hoắt của nhà thơ về con người và cuộc đời.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- III. ĐỌC - HIỂU VĂN BẢN -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="square-num">III</span> ĐỌC - HIỂU VĂN BẢN
+            </h2>
+
+            <!-- Image Placeholder h2.png -->
+            <div class="mb-6 bg-slate-50 p-4 rounded-lg border border-slate-200 text-center">
+                <img src="h2.png" alt="Cảnh thiên nhiên mùa xuân chín thôn quê" class="mx-auto h-auto max-h-80 rounded shadow" onerror="this.src='https://placehold.co/600x300/10b981/ffffff?text=Minh+hoa+Mua+xuan+chin+(h2.png)'">
+                <p class="text-xs text-slate-500 italic mt-2">Bức tranh mùa xuân đồng quê tươi thắm tràn đầy sức sống</p>
+            </div>
+
+            <!-- Poem Text Box -->
+            <div class="bg-emerald-50/60 p-6 rounded-lg border border-emerald-200 mb-6 max-w-2xl mx-auto shadow-inner">
+                <h3 class="font-bold text-emerald-900 text-center text-xl border-b border-emerald-300 pb-2 mb-4 uppercase tracking-wider">
+                    <i class="fa-solid fa-feather-pointed mr-2"></i> MÙA XUÂN CHÍN
+                </h3>
+                
+                <div class="font-serif text-slate-800 leading-relaxed text-base md:text-lg space-y-4 text-center">
+                    <p>
+                        Trong làn nắng uốn khói mơ tan,<br>
+                        Đôi mái nhà tranh lợp sương gòn.<br>
+                        Sột soạt gió trêu tà áo sóng...<br>
+                        Trên giàn thiên lý. Bóng xuân sang.
+                    </p>
+                    <p>
+                        Sóng cỏ xanh tươi gợn tới trời.<br>
+                        Bao nhiêu cô giặt ở bến xô?<br>
+                        Ngày mai trong đám xuân xanh ấy,<br>
+                        Có kẻ theo chồng bỏ cuộc chơi...
+                    </p>
+                    <p>
+                        Thúng thắng buổi chiều trên vai dốc,<br>
+                        Mắt người giếng nước ngọt ngào sao!<br>
+                        Tiếng hát lơ thơ đằng sau núi,<br>
+                        Nhắp nhổm ngập ngừng như muốn gào.
+                    </p>
+                    <p>
+                        Khách xa gặp lúc mùa xuân chín,<br>
+                        Lòng trí băn khoăn giục giã hoài:<br>
+                        "Cảnh trí nghìn năm còn giữ nét,<br>
+                        Người đi năm ấy có về ai?"
+                    </p>
+                </div>
+            </div>
+
+            <!-- MỤC HOẠT ĐỘNG & NÊU VẤN ĐỀ TRONG KHI ĐỌC (Biểu tượng ?) -->
+            <div class="mt-6 space-y-4">
+                <h3 class="font-bold text-slate-800 text-lg uppercase tracking-wide border-b pb-1 text-cyan-800">
+                    <i class="fa-solid fa-circle-question mr-1"></i> Câu hỏi trong khi đọc (Cột bên phải văn bản)
+                </h3>
+
+                <!-- Question 1 -->
+                <div class="question-box">
+                    <p class="font-semibold text-slate-800">
+                        <span class="bg-cyan-700 text-white text-xs px-2 py-0.5 rounded font-bold mr-2">? 1</span>
+                        Hãy chú ý những từ ngữ chỉ màu sắc, hình ảnh, âm thanh và chuyển động trong khổ thơ thứ nhất.
+                    </p>
+                    <button onclick="toggleAnswer('read-q1')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                    </button>
+                    <div id="read-q1" class="answer-box text-sm text-slate-800">
+                        <p>• <strong>Màu sắc, hình ảnh:</strong> "làn nắng uốn", "khói mơ tan", "mái nhà tranh", "sương gòn", "giàn thiên lý".</p>
+                        <p>• <strong>Âm thanh, cảm giác:</strong> "sột soạt" (tượng thanh) gió trêu tà áo.</p>
+                        <p>• <strong>Chuyển động:</strong> "uốn", "tan", "trêu", "sang" - cảnh vật mùa xuân đang cựa mình nhẹ nhàng, tinh tế và dạt dào tình tứ.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-box">
+                    <p class="font-semibold text-slate-800">
+                        <span class="bg-cyan-700 text-white text-xs px-2 py-0.5 rounded font-bold mr-2">? 2</span>
+                        Hình ảnh "sóng cỏ xanh tươi gợn tới trời" và "xuân xanh" gợi lên điều gì?
+                    </p>
+                    <button onclick="toggleAnswer('read-q2')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                    </button>
+                    <div id="read-q2" class="answer-box text-sm text-slate-800 space-y-2">
+                        <p>• "Sóng cỏ xanh tươi gợn tới trời": Không gian mùa xuân trải rộng bao la, thảm cỏ xanh mướt dâng trào sức sống như những làn sóng dạt dào tận chân trời.</p>
+                        <p>• "Xuân xanh": Ẩn dụ chuyển đổi cảm giác chỉ tuổi trẻ, thời thanh xuân tươi đẹp rực rỡ nhất của con người.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-box">
+                    <p class="font-semibold text-slate-800">
+                        <span class="bg-cyan-700 text-white text-xs px-2 py-0.5 rounded font-bold mr-2">? 3</span>
+                        Tâm trạng của "Khách xa" ở khổ thơ cuối được bộc lộ qua từ ngữ và câu hỏi nào?
+                    </p>
+                    <button onclick="toggleAnswer('read-q3')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                    </button>
+                    <div id="read-q3" class="answer-box text-sm text-slate-800">
+                        <p>• Từ ngữ: "băn khoăn", "giục giã hoài".</p>
+                        <p>• Câu hỏi tu辞: <em>"Người đi năm ấy có về ai?"</em></p>
+                        <p>• Bộc lộ tâm trạng bâng khuâng, tiếc nuối hoài niệm về con người và cuộc sống, cảm thấy bối rối trước sự đổi thay trôi chảy của kiếp nhân sinh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IV. TRẢ LỜI CÂU HỎI -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md space-y-4">
+            <h2 class="section-header">
+                <span class="square-num">IV</span> TRẢ LỜI CÂU HỎI (SAU KHI ĐỌC)
+            </h2>
+
+            <!-- Question Item 1 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 1: Nhan đề "Mùa xuân chín" được hiểu như thế nào? Nhan đề đó gợi mở cho bạn suy ngẫm gì về cảnh vật và con người?</p>
+                <button onclick="toggleAnswer('ans-q1')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q1" class="answer-box text-sm space-y-1">
+                    <p>• <strong>Ý nghĩa nhan đề:</strong> "Chín" vốn dùng chỉ độ chín của trái cây, được Hàn Mặc Tử dùng ẩn dụ cho mùa xuân. "Mùa xuân chín" là mùa xuân đạt tới độ căng tràn, vẹn tròn, tươi thắm nhất của màu sắc, sức sống và hương vị.</p>
+                    <p>• <strong>Suy ngẫm:</strong> Cảnh vật và con người khi ở độ "chín" thì rực rỡ nhất, nhưng cũng báo hiệu sự chuyển giao, tan biến trôi qua đầy tiếc nuối.</p>
+                </div>
+            </div>
+
+            <!-- Question Item 2 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 2: Mạch cảm xúc của bài thơ được phát triển như thế nào từ khổ đầu đến khổ cuối?</p>
+                <button onclick="toggleAnswer('ans-q2')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q2" class="answer-box text-sm space-y-1">
+                    <p>• <strong>Khổ 1 & 2:</strong> Say đắm, hân hoan trước cảnh sắc mùa xuân rực rỡ, tình tứ nơi thôn quê.</p>
+                    <p>• <strong>Khổ 3:</strong> Chuyển sang hoang hoắt, bâng khuâng khi nghe tiếng hát vắng lặng đằng sau núi.</p>
+                    <p>• <strong>Khổ 4:</strong> Xót xa, hoài niệm trước sự trôi chảy của thời gian và số phận con người qua lời ngóng trông của "Khách xa".</p>
+                </div>
+            </div>
+
+            <!-- Question Item 3 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 3: Phân tích nét độc đáo trong các kết hợp từ và ẩn dụ chuyển đổi cảm giác ("làn nắng uốn", "sóng cỏ", "tiếng hát lơ thơ", "mùa xuân chín").</p>
+                <button onclick="toggleAnswer('ans-q3')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q3" class="answer-box text-sm space-y-1">
+                    <p>• <strong>"Làn nắng uốn":</strong> Thị giác kết hợp hình khối mềm mại như dải lụa.</p>
+                    <p>• <strong>"Tiếng hát lơ thơ":</strong> Thính giác kết hợp cảm giác thưa thớt, mỏng manh của không gian.</p>
+                    <p>• <strong>"Mùa xuân chín":</strong> Trừu tượng hóa thời gian thành vật thể hữu hình có hương vị, màu sắc căng tràn.</p>
+                </div>
+            </div>
+
+            <!-- Question Item 4 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 4: Hình ảnh con người xuất hiện trong bài thơ mang những vẻ đẹp gì? Nhận xét về mối quan hệ giữa con người và thiên nhiên.</p>
+                <button onclick="toggleAnswer('ans-q4')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q4" class="answer-box text-sm space-y-1">
+                    <p>• Con người hiện lên với vẻ đẹp trẻ trung, duyên dáng (các cô gái giặt áo, ánh mắt trong như giếng nước, tiếng hát tình tứ).</p>
+                    <p>• Mối quan hệ hòa hợp: Thiên nhiên làm nền tôn vinh vẻ đẹp con người; ngược lại, sức sống của con người khiến bức tranh xuân thêm sống động.</p>
+                </div>
+            </div>
+
+            <!-- Question Item 5 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 5: Nhạc điệu bài thơ được tạo nên bởi yếu tố nào (vần, nhịp, từ ngữ tượng thanh)?</p>
+                <button onclick="toggleAnswer('ans-q5')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q5" class="answer-box text-sm space-y-1">
+                    <p>• Vần chân kết hợp vần lưng uyển chuyển (tan - gòn - sang; trời - xôi; hoài - ai).</p>
+                    <p>• Nhịp thơ 7 chữ ngắt linh hoạt \(4/3\), \(2/2/3\) tạo âm điệu da diết, khắc khoải.</p>
+                    <p>• Các từ láy tượng thanh, tượng hình: "sột soạt", "thúng thắng", "nhắp nhổm", "lơ thơ".</p>
+                </div>
+            </div>
+
+            <!-- Question Item 6 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 6: Đánh giá vị trí của Hàn Mặc Tử trong Phong trào Thơ mới qua bài thơ Mùa xuân chín.</p>
+                <button onclick="toggleAnswer('ans-q6')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q6" class="answer-box text-sm space-y-1">
+                    <p>Bài thơ thể hiện phong cách độc đáo của Hàn Mặc Tử: sự hòa quyện giữa thi cảm lãng mạn tinh khôi và nỗi đau xót hoài hoài về cuộc đời, khẳng định sức sáng tạo phi thường của một ngôi sao sáng trên thi đàn Thơ mới.</p>
+                </div>
+            </div>
+
+            <!-- Question Item 7 -->
+            <div class="question-box">
+                <p class="font-bold text-slate-800">Câu 7: Thông điệp tình yêu cuộc sống và sự trân trọng tuổi trẻ được thể hiện như thế nào trong bài thơ?</p>
+                <button onclick="toggleAnswer('ans-q7')" class="btn-primary mt-2 px-3 py-1.5 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-eye"></i> Xem lời giải chi tiết
+                </button>
+                <div id="ans-q7" class="answer-box text-sm space-y-1">
+                    <p>Dù ẩn chứa sự ngậm ngùi tiếc nuối, bài thơ vẫn bộc lộ khát khao gắn bó mãnh liệt với trần thế, nhắc nhở mỗi người trân trọng từng khoảnh khắc tươi đẹp của tuổi trẻ và tình yêu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- V. KẾT NỐI ĐỌC - VIẾT -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md border border-cyan-300">
+            <h2 class="section-header">
+                <span class="square-num">V</span> KẾT NỐI ĐỌC - VIẾT
+            </h2>
+
+            <div class="space-y-3">
+                <p class="font-medium text-slate-800">
+                    <strong>Đề bài:</strong> Viết đoạn văn (khoảng 150 chữ) cảm nhận về nghệ thuật ẩn dụ chuyển đổi cảm giác trong bài thơ "Mùa xuân chín" của Hàn Mặc Tử.
+                </p>
+
+                <button onclick="toggleAnswer('write-connect')" class="btn-primary px-4 py-2 rounded-lg text-sm shadow flex items-center gap-2">
+                    <i class="fa-solid fa-pen-to-square"></i> Xem đoạn văn mẫu tham khảo
+                </button>
+
+                <div id="write-connect" class="answer-box border-emerald-300 text-slate-800 text-sm leading-relaxed space-y-2">
+                    <p class="font-bold text-emerald-900 border-b pb-1">Đoạn văn tham khảo (~150 chữ):</p>
+                    <p class="font-serif italic pl-3 border-l-4 border-emerald-500">
+                        Trong bài thơ "Mùa xuân chín", Hàn Mặc Tử đã thể hiện tài năng nghệ thuật xuất sắc qua việc sử dụng độc đáo nghệ thuật ẩn dụ chuyển đổi cảm giác. Tác giả không miêu tả mùa xuân bằng những đại lượng vô hình, mà cụ thể hóa thời gian thành một thực thể "chín" - tràn đầy hương sắc, thị giác và vị giác. Khái niệm "làn nắng uốn" biến ánh nắng mặt trời thành một dải lụa mềm mại có hình khối chuyển động. Đặc biệt, "tiếng hát lơ thơ" là sự kết hợp tài tình giữa thính giác và thị giác, biến âm thanh tiếng hát thành những sợi tơ thưa thớt, mỏng manh vương vấn đằng sau núi. Nhờ sự giao thoa cảm giác tinh tế này, bức tranh mùa xuân của Hàn Mặc Tử vừa đậm đà sức sống trần thế, vừa thấm đượm nỗi niềm say đắm và bâng khuâng xót xa trước bước đi trôi chảy của thời gian.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LƯU Ý & EM CÓ BIẾT / EM CÓ THỂ BOXES -->
+        <section class="space-y-4">
+            <!-- Em có biết -->
+            <div class="bg-indigo-50 border-2 border-indigo-300 rounded-[12px] p-5 shadow-sm">
+                <h3 class="font-bold text-indigo-900 text-lg flex items-center mb-2">
+                    <i class="fa-solid fa-graduation-cap mr-2 text-indigo-700"></i> em có biết
+                </h3>
+                <p class="text-indigo-950 text-sm leading-relaxed">
+                    Hàn Mặc Tử sáng tác bài thơ "Mùa xuân chín" khi ông đang phải chống chịu với căn bệnh hiểm nghèo trong cô đơn tại xóm Tấn Chánh (Quy Nhơn). Bức tranh xuân tràn đầy sức sống và ánh sáng tươi tắn chính là khát vọng sống mãnh liệt, là tiếng lòng tha thiết muốn bám chặt lấy trần thế tươi đẹp của nhà thơ.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-teal-50 border-2 border-teal-300 rounded-[12px] p-5 shadow-sm">
+                <h3 class="font-bold text-teal-900 text-lg flex items-center mb-2">
+                    <i class="fa-solid fa-star mr-2 text-teal-700"></i> em có thể
+                </h3>
+                <p class="text-teal-950 text-sm leading-relaxed">
+                    Phân tích được sự kết hợp giữa vần, nhịp, hình ảnh và nghệ thuật chuyển đổi cảm giác trong một bài thơ hiện đại; đồng thời biết so sánh hình ảnh mùa xuân trong Thơ mới với hình ảnh mùa xuân trong thơ ca cổ điển.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border-2 border-rose-300 rounded-[12px] p-5 shadow-sm">
+                <h3 class="font-bold text-rose-900 text-lg flex items-center mb-2">
+                    <i class="fa-solid fa-triangle-exclamation mr-2 text-rose-700"></i> lưu ý
+                </h3>
+                <p class="text-rose-950 text-sm leading-relaxed">
+                    Khi đọc thơ Hàn Mặc Tử, cần tránh cách hiểu đơn điệu, xuôi chiều. "Mùa xuân chín" vừa mang vẻ đẹp đắm say tươi mát, vừa chứa đựng nỗi sầu phai tàn, tiếc nuối hoài niệm. Đừng bỏ qua mối liên hệ giữa nhịp điệu bài thơ và trạng thái cảm xúc cuồn cuộn của nhà thơ.
+                </p>
+            </div>
+        </section>
+
+        <!-- GAMESHOW: AI LÀ TRIỆU PHÚ (10 CÂU TRẮC NGHIỆM) -->
+        <section class="millionaire-card rounded-[12px] p-6 shadow-xl relative overflow-hidden">
+            <!-- Header Game Show -->
+            <div class="text-center border-b border-amber-500/40 pb-4 mb-6">
+                <span class="bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-widest">
+                    GAMESHOW CỦNG CỐ
+                </span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-amber-400 mt-2 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-trophy"></i> AI LÀ TRIỆU PHÚ KIẾN THỨC
+                </h2>
+                <p class="text-slate-300 text-sm mt-1">10 Câu hỏi trắc nghiệm mức độ Nhận biết - Thông hiểu - Vận dụng thấp</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                
+                <!-- Câu 1 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 1 (Nhận biết): Tác giả bài thơ "Mùa xuân chín" là ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="A" class="mr-2 accent-emerald-400"> A. Xuân Diệu
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="B" class="mr-2 accent-emerald-400"> B. Hàn Mặc Tử
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="C" class="mr-2 accent-emerald-400"> C. Huy Cận
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="D" class="mr-2 accent-emerald-400"> D. Chế Lan Viên
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 2 (Nhận biết): Bài thơ "Mùa xuân chín" được in trong tập thơ nào của Hàn Mặc Tử?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="A" class="mr-2 accent-emerald-400"> A. Gái quê
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="B" class="mr-2 accent-emerald-400"> B. Xuân như ý
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="C" class="mr-2 accent-emerald-400"> C. Đau thương (Thơ Điên)
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="D" class="mr-2 accent-emerald-400"> D. Thượng thanh khí
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 3 (Nhận biết): Bài thơ "Mùa xuân chín" chủ yếu viết theo thể thơ mấy chữ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="A" class="mr-2 accent-emerald-400"> A. Thơ 5 chữ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="B" class="mr-2 accent-emerald-400"> B. Thơ 7 chữ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="C" class="mr-2 accent-emerald-400"> C. Thơ Lục bát
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="D" class="mr-2 accent-emerald-400"> D. Thơ Tự do
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 4 (Thông hiểu): Biện pháp tu từ nổi bật trong cụm từ "làn nắng uốn" là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="A" class="mr-2 accent-emerald-400"> A. So sánh
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="B" class="mr-2 accent-emerald-400"> B. Ẩn dụ chuyển đổi cảm giác
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="C" class="mr-2 accent-emerald-400"> C. Nói giảm nói tránh
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="D" class="mr-2 accent-emerald-400"> D. Liệt kê
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 5 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 5 (Thông hiểu): Cụm từ "xuân xanh" trong câu "Ngày mai trong đám xuân xanh ấy" mang nghĩa ẩn dụ cho điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="A" class="mr-2 accent-emerald-400"> A. Màu xanh của cỏ cây
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="B" class="mr-2 accent-emerald-400"> B. Tuổi trẻ, thời thanh xuân của con người
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="C" class="mr-2 accent-emerald-400"> C. Bầu trời ngày xuân
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="D" class="mr-2 accent-emerald-400"> D. Mùa xuân đang đến
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 6 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 6 (Thông hiểu): Từ tượng thanh nào tả âm thanh gió lay động tà áo trong khổ thơ thứ nhất?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="A" class="mr-2 accent-emerald-400"> A. Xào xạc
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="B" class="mr-2 accent-emerald-400"> B. Sột soạt
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="C" class="mr-2 accent-emerald-400"> C. Lao xao
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="D" class="mr-2 accent-emerald-400"> D. Rì rầm
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 7 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 7 (Vận dụng thấp): Lời hò reo/câu hỏi kết bài "Người đi năm ấy có về ai?" bộc lộ thái độ cảm xúc gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="A" class="mr-2 accent-emerald-400"> A. Nỗi hoài niệm, ngậm ngùi về con người và sự trôi chảy của thời gian
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="B" class="mr-2 accent-emerald-400"> B. Niềm vui sướng tràn ngập khi gặp lại người cũ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="C" class="mr-2 accent-emerald-400"> C. Sự tức giận vì chờ đợi quá lâu
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="D" class="mr-2 accent-emerald-400"> D. Thái độ thờ ơ không quan tâm
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 8 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 8 (Nhận biết): Hàn Mặc Tử là nhà thơ tiêu biểu của phong trào văn học nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="A" class="mr-2 accent-emerald-400"> A. Văn học trung đại
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="B" class="mr-2 accent-emerald-400"> B. Phong trào Thơ mới (1932 - 1945)
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="C" class="mr-2 accent-emerald-400"> C. Thơ ca kháng chiến chống Pháp
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="D" class="mr-2 accent-emerald-400"> D. Văn học hiện đại sau 1975
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 9 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 9 (Thông hiểu): Yếu tố nào sau đây không tham gia tạo nên nhạc điệu da diết của bài thơ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="A" class="mr-2 accent-emerald-400"> A. Sự phối hợp vần lưng và vần chân linh hoạt
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="B" class="mr-2 accent-emerald-400"> B. Sử dụng các từ láy giàu tính tạo hình và biểu cảm
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="C" class="mr-2 accent-emerald-400"> C. Luật niêm phong nghiêm ngặt theo thơ thất ngôn bát cú
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="D" class="mr-2 accent-emerald-400"> D. Khai thác sự hòa phối bằng trắc uyển chuyển
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 10 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 text-base mb-3">Câu 10 (Vận dụng thấp): Điểm gặp nhau giữa thơ lãng mạn Thơ mới và bài thơ "Mùa xuân chín" là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="A" class="mr-2 accent-emerald-400"> A. Thể hiện cái tôi cá nhân tha thiết yêu đời nhưng cũng đong đầy nỗi sầu tha hương
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="B" class="mr-2 accent-emerald-400"> B. Đả kích gay gắt chế độ phong kiến cũ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="C" class="mr-2 accent-emerald-400"> C. Sử dụng toàn bộ điển tích điển cố hán học
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="D" class="mr-2 accent-emerald-400"> D. Tập trung miêu tả cuộc sống chiến đấu ở chiến trường
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Nút nộp bài -->
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-900 text-[#33FF33] hover:bg-slate-800 font-bold px-8 py-3 rounded-full text-base border-2 border-[#33FF33] shadow-lg transition-all">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> NỘP BÀI KIỂM TRA
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Container -->
+            <div id="quizResult" class="mt-6 hidden bg-slate-900 border border-slate-700 p-5 rounded-lg"></div>
+        </section>
+
+        <!-- PHẦN BÀI TẬP TỰ LUẬN TÍNH TOÁN / VẬN DỤNG CÓ LỜI GIẢI CHI TIẾT -->
+        <section class="bg-white rounded-[12px] p-6 shadow-md space-y-5">
+            <h2 class="section-header">
+                <span class="square-num">VI</span> BÀI TẬP TỰ LUẬN VẬN DỤNG & PHÂN TÍCH
+            </h2>
+
+            <p class="text-xs text-slate-500 italic mb-2">* Bố trí trong khung màu sáng nhẹ, không chia cột theo đúng yêu cầu thiết kế.</p>
+
+            <!-- Essay 1 -->
+            <div class="bg-amber-50/60 border border-amber-200 p-5 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-900 text-base">
+                    Bài tập 1: Phân tích sự chuyển biến từ sắc xuân sang tình xuân trong bức tranh "Mùa xuân chín".
+                </h3>
+                <button onclick="toggleAnswer('essay-1')" class="btn-primary px-4 py-2 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-file-lines"></i> Xem lời giải chi tiết
+                </button>
+                <div id="essay-1" class="answer-box text-sm leading-relaxed space-y-2">
+                    <p class="font-bold text-emerald-900">Lời giải chi tiết:</p>
+                    <p>• <strong>Sắc xuân (Khổ 1 & 2):</strong> Hiện lên qua màu sắc rực rỡ (ánh nắng, khói mơ, sương gòn, mái nhà tranh, thảm cỏ xanh tươi kéo dài đến chân trời). Cảnh vật tràn đầy nhựa sống, tươi thắm sinh động.</p>
+                    <p>• <strong>Tình xuân (Khổ 3 & 4):</strong> Xuất hiện qua hình ảnh con người (cô gái giặt áo, nụ cười trong như giếng nước, tiếng hát lơ thơ ngập ngừng). Mùa xuân không còn dừng lại ở ngoại cảnh mà thấm sâu vào tâm hồn, dạt dào tình đắm say nhưng ẩn chứa nỗi phai tàn, ngậm ngùi của kiếp người.</p>
+                </div>
+            </div>
+
+            <!-- Essay 2 -->
+            <div class="bg-amber-50/60 border border-amber-200 p-5 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-900 text-base">
+                   
+
+            <!-- Essay 3 -->
+            <div class="bg-amber-50/60 border border-amber-200 p-5 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-900 text-base">
+                    Bàitập 2: Cảm nhận giá trị tư tưởng nhân đạo qua câu hỏi tu từ ở cuối bài thơ: "Người đi năm ấy có về ai?".
+                </h3>
+                <button onclick="toggleAnswer('essay-3')" class="btn-primary px-4 py-2 rounded text-xs shadow flex items-center gap-1">
+                    <i class="fa-solid fa-heart"></i> Xem lời giải chi tiết
+                </button>
+                <div id="essay-3" class="answer-box text-sm leading-relaxed space-y-2">
+                    <p class="font-bold text-emerald-900">Lời giải chi tiết:</p>
+                    <p>• Câu hỏi tu từ vang lên như một lời hụt hẫng ngơ ngác giữa mùa xuân chín rực rỡ. Cảnh trí thiên nhiên ngàn năm vẫn giữ nét đẹp thanh tân, nhưng con người thì chịu sự tàn phá khắc nghiệt của thời gian và hoàn cảnh.</p>
+                    <p>• "Người đi năm ấy" gợi bóng dáng người xưa, tuổi trẻ trôi qua không bao giờ trở lại.</p>
+                    <p>• <strong>Giá trị nhân đạo:</strong> Thể hiện tấm lòng xót thương sâu sắc cho kiếp nhân sinh mong manh, ẩn chứa tiếng lòng khao khát hạnh phúc, thèm khát tình người và sự gắn bó bền chặt với cuộc đời của Hàn Mặc Tử.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER MANDATORY -->
+        <footer class="bg-slate-800 text-slate-300 text-center p-4 rounded-[12px] shadow font-medium text-sm">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Function to toggle answer visibility
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.style.display === "block") {
+                    element.style.display = "none";
+                } else {
+                    element.style.display = "block";
+                }
+            }
+        }
+
+        // Quiz checking function
+        function checkQuiz() {
+            const answers = {
+                q1: "B",
+                q2: "C",
+                q3: "B",
+                q4: "B",
+                q5: "B",
+                q6: "B",
+                q7: "A",
+                q8: "B",
+                q9: "C",
+                q10: "A"
+            };
+
+            const explanations = {
+                q1: "Bài thơ Mùa xuân chín là kiệt tác của nhà thơ Hàn Mặc Tử.",
+                q2: "Bài thơ thuộc tập Đau thương (Thơ Điên) sáng tác năm 1938.",
+                q3: "Bài thơ được sáng tác theo thể thơ 7 chữ hiện đại.",
+                q4: "Làn nắng uốn là ẩn dụ chuyển đổi cảm giác từ thị giác sang hình khối linh hoạt.",
+                q5: "Xuân xanh là hình ảnh ẩn dụ chỉ tuổi trẻ, thời thanh xuân tươi đẹp.",
+                q6: "Từ tượng thanh sột soạt mô phỏng tiếng gió lay áo.",
+                q7: "Câu hỏi tu từ bộc lộ nỗi hoài niệm ngậm ngùi về thời gian và kiếp người.",
+                q8: "Hàn Mặc Tử là đỉnh cao tiêu biểu của Phong trào Thơ mới (1932 - 1945).",
+                q9: "Thơ mới không tuân thủ luật niêm phong gò bó của thất ngôn bát cú Đường luật.",
+                q10: "Thơ mới bộc lộ cái tôi tha thiết yêu đời nhưng cũng chứa đựng nỗi sầu thế sự."
+            };
+
+            let score = 0;
+            let total = 10;
+            let resultHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const correct = answers[qName];
+
+                if (selected && selected.value === correct) {
+                    score++;
+                    resultHTML += `<p class="text-emerald-400 font-semibold mb-1"><i class="fa-solid fa-check-circle"></i> Câu ${i}: Đúng! (${explanations[qName]})</p>`;
+                } else {
+                    const userVal = selected ? selected.value : "Chưa chọn";
+                    resultHTML += `<p class="text-rose-400 font-semibold mb-1"><i class="fa-solid fa-times-circle"></i> Câu ${i}: Sai! Bạn chọn [${userVal}] - Đáp án đúng là [${correct}] (${explanations[qName]})</p>`;
+                }
+            }
+
+            const resultContainer = document.getElementById("quizResult");
+            resultContainer.classList.remove("hidden");
+
+            let headerText = "";
+            if (score === total) {
+                headerText = `<div class="text-emerald-400 text-xl font-bold mb-3 border-b border-emerald-500/30 pb-2">
+                    <i class="fa-solid fa-crown text-amber-400 mr-2"></i> XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ KIẾN THỨC! (${score}/${total} ĐIỂM)
+                </div>`;
+            } else {
+                headerText = `<div class="text-amber-400 text-xl font-bold mb-3 border-b border-amber-500/30 pb-2">
+                    <i class="fa-solid fa-chart-bar mr-2"></i> KẾT QUẢ CỦA BẠN: ${score}/${total} ĐIỂM
+                </div>`;
+            }
+
+            resultContainer.innerHTML = headerText + `<div class="text-sm space-y-1 mt-3">${resultHTML}</div>`;
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
