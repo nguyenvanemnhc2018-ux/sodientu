@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương: Tích trò sân khấu dân gian - Huyện đường</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- MathJax Setup without polyfill script -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 4px;
+        }
+
+        /* Primary Accent Theme (#33FF33) */
+        .bg-primary { background-color: #33FF33; }
+        .hover\:bg-primary-dark:hover { background-color: #28d628; }
+        .text-primary-dark { color: #15803d; }
+        .border-primary { border-color: #33FF33; }
+
+        /* Custom badges */
+        .num-square {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            background-color: #0891b2; /* cyan-600 */
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 0.25rem; /* Square */
+            margin-right: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .num-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #2563eb; /* blue-600 */
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 9999px; /* Circle */
+            margin-right: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        /* Section Titles */
+        .section-title {
+            border-bottom: 4px solid #1e293b;
+        }
+
+        /* Gameshow Millionaire Styling */
+        .millionaire-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 3px solid #f59e0b;
+        }
+        .millionaire-option {
+            background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+            border: 2px solid #64748b;
+            transition: all 0.2s ease-in-out;
+        }
+        .millionaire-option:hover {
+            background: linear-gradient(90deg, #d97706 0%, #b45309 100%);
+            border-color: #fef08a;
+            color: white;
+        }
+        .millionaire-option.selected {
+            background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+            border-color: #60a5fa;
+            color: white;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Thẻ div chủ bao bọc toàn bộ nội dung -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK: 2 khối cyan trong 1 khung bo tròn 12px / 2xl có đường kẻ mảnh -->
+        <header class="bg-cyan-500 rounded-2xl shadow-lg overflow-hidden border border-cyan-600 text-white">
+            <div class="p-4 text-center text-lg md:text-xl font-medium bg-cyan-600 tracking-wide">
+                <i class="fa-solid fa-masks-theater mr-2"></i>CHƯƠNG: TÍCH TRÒ SÂN KHẤU DÂN GIAN
+            </div>
+            <div class="border-t border-cyan-300 opacity-60"></div>
+            <div class="p-6 text-center text-2xl md:text-4xl font-extrabold uppercase bg-cyan-500 tracking-wider text-yellow-300 drop-shadow">
+                HUYỆN ĐƯỜNG
+                <div class="text-sm md:text-base font-normal text-cyan-100 normal-case mt-1">(Trích tuồng <em>Nghêu, Sò, Ốc, Hến</em>)</div>
+            </div>
+        </header>
+
+        <!-- INTRO BOX (LỜI DẪN): Khung viền đen mỏng, nền trắng, chứa câu hỏi dẫn nhập in nghiêng -->
+        <div class="bg-white border border-black rounded-xl p-6 shadow-md italic text-gray-700 space-y-3 leading-relaxed">
+            <div class="flex items-start gap-3">
+                <i class="fa-solid fa-quote-left text-2xl text-cyan-600 flex-shrink-0 mt-1"></i>
+                <div class="space-y-2">
+                    <p class="font-medium text-gray-800">
+                        • Bạn đã xem biểu diễn tuồng bao giờ chưa? Bạn nghĩ sao khi loại nghệ thuật sân khấu truyền thống này đang gặp khó khăn trên con đường đến với khán giả hiện đại?
+                    </p>
+                    <p class="font-medium text-gray-800">
+                        • Hãy tìm xem trên internet toàn bộ hoặc từng trích đoạn của vỏ tuồng này.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC I: TÓM TẮT CỐT TRUYỆN VÀ BỐI CẢNH ĐOẠN TRÍCH -->
+        <section class="bg-white rounded-xl p-6 shadow-md space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-gray-900 section-title pb-2 flex items-center">
+                <span class="num-square">I</span> TÓM TẮT CỐT TRUYỆN VÀ BỐI CẢNH ĐOẠN TRÍCH
+            </h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="num-circle">1</span>
+                    <h3 class="text-xl font-bold text-gray-800">Cốt truyện vở tuồng Nghêu, Sò, Ốc, Hến</h3>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 leading-relaxed text-gray-800 text-justify">
+                    <p>
+                        Một đêm nọ, <strong>Ốc</strong> (kẻ chuyên nghề "đào ngạch") hợp tác với <strong>Nghêu</strong> (thầy bói) đột nhập nhà <strong>Trùm Sò</strong> (địa chủ) để ăn trộm. Nghêu bị bắt quả tang còn Ốc chạy thoát được. Đồ trộm được Ốc đem bán cho <strong>Thị Hến</strong> (một người góa chồng buôn bán).
+                    </p>
+                    <p>
+                        Trùm Sò và Lý trưởng dẫn người đến bắt quả tang. Lý trưởng lợi dụng chuyến này gạ gẫm Thị Hến nhưng không thành. Việc không thành, tất cả dắt nhau lên huyện đường thưa kiện.
+                    </p>
+                    <p>
+                        Tại đây, Ốc bị phạt quỳ, Nghêu và Lý trưởng bị đánh đòn; riêng Trùm Sò phải tốn tiền hối lộ cho Tri huyện. Nhờ nhan sắc, Thị Hến không những không bị hạch tội mà còn được Tri huyện và Đề lại "chiếu cố", hẹn hò. Cả Tri huyện, Đề lại, Lý trưởng rơi vào bẫy của Thị Hến khi chạm mặt nhau tại nhà cô và bị đánh ghen một trận tơi bời.
+                    </p>
+                </div>
+
+                <!-- CÂU HỎI ? BỐI CẢNH -->
+                <div class="bg-blue-50 p-4 rounded-xl border-l-4 border-blue-600 space-y-2 shadow-sm">
+                    <div class="font-bold text-blue-900 flex items-center">
+                        <i class="fa-solid fa-circle-question text-blue-600 mr-2"></i>
+                        Câu hỏi tìm hiểu bối cảnh
+                    </div>
+                    <p class="text-sm text-gray-700">Đoạn trích "Huyện đường" tái hiện lại thời điểm nào trong toàn bộ vụ án?</p>
+                    <button onclick="toggleAnswer('q_boicanh')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded shadow transition">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem câu trả lời
+                    </button>
+                    <div id="q_boicanh" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-xs rounded border border-emerald-200 leading-relaxed">
+                        <strong>Trả lời:</strong> Đoạn trích kể lại cảnh làm việc nơi huyện đường, vào thời điểm diễn ra cuộc kiện tụng giữa các nhân vật liên quan đến vụ trộm đồ nhà Trùm Sò và việc buôn bán đồ ăn trộm của Thị Hến.
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 pt-2">
+                    <span class="num-circle">2</span>
+                    <h3 class="text-xl font-bold text-gray-800">Vị trí trích đoạn trong tác phẩm</h3>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 leading-relaxed text-gray-800 text-justify">
+                    <p>
+                        Văn bản <em>Nghêu, Sò, Ốc, Hến</em> do Hoàng Châu Ký chỉnh lý (1957) gồm có tất cả ba hồi. Đoạn trích <strong>"Huyện đường"</strong> thuộc Cảnh 1 của Hồi thứ II, thể hiện cảnh Tri huyện và Đề lại bàn bạc với nhau về cách nhũng nhiễu, hạch sách người kêu kiện để moi tiền hối lộ.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KHUNG HÌNH MINH HỌA H1 -->
+        <div class="bg-white p-4 rounded-xl shadow-md text-center border border-gray-200">
+            <div class="max-w-md mx-auto overflow-hidden rounded-lg border border-dashed border-gray-400 p-2 bg-gray-50">
+                <img src="h1.png" alt="Cảnh sân khấu Tuồng Huyện đường" class="w-full h-auto object-cover rounded mx-auto" onerror="this.src='https://placehold.co/600x350/e2e8f0/475569?text=Tranh+minh+h%E1%BB%8Da+H1.png+(Huy%E1%BB%87n+%C4%91%C6%B0%E1%BB%9Dng)';">
+            </div>
+            <p class="text-xs text-gray-500 mt-2 font-medium">Hình 1: Tranh minh họa "Huyện đường" (1963) của Nguyễn Đức Nùng (File: h1.png)</p>
+        </div>
+
+        <!-- MỤC II: NGHỆ THUẬT SÂN KHẤU VÀ LỜI TỰ GIỚI THIỆU NHÂN VẬT -->
+        <section class="bg-white rounded-xl p-6 shadow-md space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-gray-900 section-title pb-2 flex items-center">
+                <span class="num-square">II</span> NGHỆ THUẬT SÂN KHẤU VÀ LỜI TỰ GIỚI THIỆU NHÂN VẬT
+            </h2>
+
+            <div class="space-y-4 border-b border-gray-200 pb-6">
+                <div class="flex items-center gap-2">
+                    <span class="num-circle">1</span>
+                    <h3 class="text-xl font-bold text-gray-800">Chỉ dẫn bài trí nơi Huyện đường</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="md:col-span-2 bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 text-gray-800 leading-relaxed text-justify">
+                        <p>
+                            <strong>Bàn giấy của Tri huyện:</strong> Trên tường chính giữa có bức hoành phi đề hai chữ <em>"Huyện đường"</em>. Hai bên có hai câu đối. Bền cạnh câu đối phía trái có cửa vào nhà trong.
+                        </p>
+                        <p>
+                            Một chiếc bàn to để chính giữa làm bàn giấy của tri huyện, trên bàn có ống bút, nghiên mực, điếu điếu. Bên trái, bàn giấy của đề lại để ngoảnh mặt ra khán giả phía phải của sân khấu, trên bàn cũng có nghiên bút và một chồng đơn từ.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <!-- MỤC HOẠT ĐỘNG: CHỈ DẪN SÂN KHẤU -->
+                        <div class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-600 space-y-2 shadow-sm">
+                            <div class="font-bold text-indigo-900 flex items-center">
+                                <i class="fa-solid fa-hand-pointer text-indigo-600 mr-2"></i>
+                                Hoạt động: Phân tích chỉ dẫn sân khấu
+                            </div>
+                            <p class="text-sm text-gray-700">Các chi tiết chỉ dẫn bài trí sân khấu nơi huyện đường có vai trò gì?</p>
+                            <button onclick="toggleAnswer('act_sankhau')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded shadow transition">
+                                <i class="fa-solid fa-eye mr-1"></i>Xem hướng giải quyết
+                            </button>
+                            <div id="act_sankhau" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-xs rounded border border-emerald-200 leading-relaxed">
+                                <strong>Hướng giải quyết:</strong> Đây là những chỉ dẫn thiết yếu giúp đạo diễn và diễn viên tái hiện không gian uy nghiêm mang tính biểu tượng của chốn công đường phong kiến, đồng thời chuẩn bị tâm lý cho khán giả trước sự tương phản giữa vẻ trang nghiêm bề ngoài và bản chất thối nát bên trong.
+                            </div>
+                        </div>
+
+                        <!-- KHUNG HÌNH H2 -->
+                        <div class="bg-white p-3 rounded-lg border border-gray-300 text-center">
+                            <img src="h2.png" alt="Nhân vật Tri huyện trong Tuồng" class="w-full h-auto object-cover rounded mx-auto" onerror="this.src='https://placehold.co/400x250/e2e8f0/475569?text=H%C3%ACnh+h2.png';">
+                            <span class="text-[11px] text-gray-500">Nhân vật Tri huyện & Đề lại (h2.png)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NÓI LỐI VÀ BẢN CHẤT TRI HUYỆN -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="num-circle">2</span>
+                    <h3 class="text-xl font-bold text-gray-800">Lời tự giới thiệu (Nói lối) của Tri huyện</h3>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 leading-relaxed text-gray-800 text-justify">
+                    <!-- ĐÓNG KHUNG NÓI LỐI TRI HUYỆN -->
+                    <div class="bg-cyan-50/80 p-4 rounded-xl border-l-4 border-cyan-600 text-slate-800 italic space-y-1 font-mono text-sm">
+                        <p><strong>TRI HUYỆN (Nói lối):</strong></p>
+                        <p>"Quyền trọng trấn nha môn / Bản chức xưng tri huyện</p>
+                        <p>Đình chung đà đủ miếng / Hoa nguyệt cũng quen mùi</p>
+                        <p>Lấy của cậy ngọn roi / Làm quan nhờ lỗ khẩu</p>
+                        <p>Sự lý thường phân ẩu / Được thua tự đồng tiền</p>
+                        <p>Dân xã nếu không kiêng / Bỏ xuống lao giam kỹ."</p>
+                    </div>
+
+                    <p>
+                        <strong>Phân tích bản chất:</strong> Lời xưng danh công khai phơi bày bản chất tham lam, tàn bạo, dâm dật và xem thường pháp luật của Tri huyện. Y thừa nhận trắng trợn việc xử án <em>"được thua tự đồng tiền"</em>, bẻ cong lý lẽ nhờ <em>"lỗ khẩu"</em> (miệng lưỡi) và dùng quyền lực bắt bớ dân lành.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC III: BẢN CHẤT NHŨNG NHIỄU VÀ BỘ MẶT QUAN LẠI THỜI PHONG KIẾN -->
+        <section class="bg-white rounded-xl p-6 shadow-md space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-gray-900 section-title pb-2 flex items-center">
+                <span class="num-square">III</span> BẢN CHẤT NHŨNG NHIỄU VÀ BỘ MẶT QUAN LẠI THỜI PHONG KIẾN
+            </h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="num-circle">1</span>
+                    <h3 class="text-xl font-bold text-gray-800">Sự hô ứng "ăn ý" giữa Tri huyện và Đề lại</h3>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 leading-relaxed text-gray-800 text-justify">
+                    <p>
+                        Tri huyện và Đề lại không hề giữ ý hay giấu giếm thủ đoạn trước mặt nhau. Họ phối hợp vô cùng ăn ý: Tri huyện chủ trương ngâm vụ án <em>"cứ để đu đưa như vậy đã"</em> để vắt cạn tiền của kẻ giàu (Trùm Sò); Đề lại nhanh chóng phụ họa <em>"Vâng, ta cứ bảo là để tra cứu đã"</em>.
+                    </p>
+                    <p>
+                        Đối với những kẻ "đầu trọc" nghèo khổ (Ốc, Nghêu, Lý trưởng), chúng xử phạt chớp giật để lấy uy và trừng giới. Đối với Thị Hến, Tri huyện trì hoãn để vừa đòi hối lộ vừa gièm pha tán tỉnh.
+                    </p>
+                </div>
+
+                <!-- BẢNG SO SÁNH CÁCH XỬ LÝ CÁC ĐỐI TƯỢNG VỤ ÁN -->
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th>Đối tượng</th>
+                                <th>Thành phần / Hoàn cảnh</th>
+                                <th>Thủ đoạn & Phương án xử lý của Huyện đường</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-cyan-900">Ốc & Nghêu</td>
+                                <td>Bần nông, trộm cắp, thầy bói dỏm ("kẻ trọc đầu")</td>
+                                <td>Ốc 5 năm tù; Nghêu phạt 50 trượng (xử nhanh lấy uy)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-cyan-900">Lý trưởng</td>
+                                <td>Cương vị chức dịch địa phương ăn lót tay</td>
+                                <td>Phạt trừng giới 50 quan tiền</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-cyan-900">Trùm Sò</td>
+                                <td>Địa chủ giàu có ("kẻ có tóc")</td>
+                                <td>Ngâm án, trì hoãn để ép hối lộ "ấy" thật nhiều tiền</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-cyan-900">Thị Hến</td>
+                                <td>Góa phụ xinh đẹp, buôn bán hàng trộm</td>
+                                <td>Tạm thời cho về, dùng uy ép hối lộ và lợi dụng sắc đẹp</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex items-center gap-2 pt-2">
+                    <span class="num-circle">2</span>
+                    <h3 class="text-xl font-bold text-gray-800">Thủ đoạn bóc lột của Lính lệ & Thái độ người dân đối với chốn cửa quan</h3>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 leading-relaxed text-gray-800 text-justify">
+                    <p>
+                        Không chỉ cấp thượng quan, tay sai lính lệ nơi huyện đường cũng tranh thủ hoạnh xẹ, vòi vĩnh: <em>"Hôm nay quan bận lắm, tôi bẩm mãi quan mới chịu xử vụ này đấy"</em>. Điều này buộc Lý trưởng và Trùm Sò phải lập tức "hậu tạ".
+                    </p>
+                    <p>
+                        <strong>Thái độ người dân xưa:</strong> Xem chốn cửa quan là nơi bất công, ma quỷ, nhũng nhiễu. Lời người xưa truyền tụng <em>"Vào cửa quan như vào hang hùm"</em>, <em>"Nắm kẻ có tóc chứ ai nắm kẻ trọc đầu"</em> đã được kịch bản lột tả chân thực.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC IV: CÁC KHUNG ĐẶC BIỆT (EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý) -->
+        <section class="bg-white rounded-xl p-6 shadow-md space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-gray-900 section-title pb-2 flex items-center">
+                <span class="num-square">IV</span> BỔ SUNG KIẾN THỨC VĂN HÓA & NGHỆ THUẬT TUỒNG
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- KHUNG: EM CÓ BIẾT -->
+                <div class="bg-amber-100/70 border border-amber-300 p-5 rounded-xl space-y-2 shadow-sm">
+                    <h3 class="text-lg font-bold text-amber-900 flex items-center">
+                        <i class="fa-solid fa-lightbulb text-amber-600 mr-2"></i>em có biết
+                    </h3>
+                    <p class="text-sm text-gray-800 leading-relaxed text-justify">
+                        <em>Nghêu, Sò, Ốc, Hến</em> thuộc thể loại <strong>Tuồng đồ</strong> (tuồng hài) - dòng tuồng dân gian không tuân theo các chuẩn mực nghiêm ngặt của tuồng pho (tuồng hoàng cung). Tuồng đồ lấy đề tài từ đời sống thường nhật, sử dụng ngôn ngữ bình dân hóm hỉnh để châm biếm thói hư nết xấu của quan lại phong kiến.
+                    </p>
+                </div>
+
+                <!-- KHUNG: EM CÓ THỂ -->
+                <div class="bg-teal-100/70 border border-teal-300 p-5 rounded-xl space-y-2 shadow-sm">
+                    <h3 class="text-lg font-bold text-teal-900 flex items-center">
+                        <i class="fa-solid fa-masks-theater text-teal-600 mr-2"></i>em có thể
+                    </h3>
+                    <p class="text-sm text-gray-800 leading-relaxed text-justify">
+                        Thử phân vai cùng nhóm bạn đóng lại trích đoạn "Huyện đường". Chú ý thể hiện điệu bộ vuốt râu, mắt liếc dọc nheo ngang, nụ cười đắc thắng trơ trẽn của Tri huyện và cử chỉ khúm núm nhưng ma ranh của Đề lại!
+                    </p>
+                </div>
+
+                <!-- KHUNG: LƯU Ý -->
+                <div class="bg-rose-100/70 border border-rose-300 p-5 rounded-xl space-y-2 shadow-sm">
+                    <h3 class="text-lg font-bold text-rose-900 flex items-center">
+                        <i class="fa-solid fa-triangle-exclamation text-rose-600 mr-2"></i>LƯU Ý
+                    </h3>
+                    <p class="text-sm text-gray-800 leading-relaxed text-justify">
+                        Khi đọc hiểu kịch bản tuồng, cần phân biệt rõ lời thoại nhân vật (nói lối, xưng danh, đối thoại) với các lời chỉ dẫn sân khấu (in nghiêng, để trong ngoặc đơn) nhằm hình dung đầy đủ hành động kịch.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC V: TRẢ LỜI CÂU HỎI TRONG SGK (CÂU 1 -> 6 & KẾT NỐI ĐỌC VIẾT) -->
+        <section class="bg-white rounded-xl p-6 shadow-md space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-gray-900 section-title pb-2 flex items-center">
+                <span class="num-square">V</span> TRẢ LỜI CÂU HỎI BÀI HỌC (SGK TRANG 136)
+            </h2>
+
+            <div class="space-y-4">
+                <!-- CÂU 1 -->
+                <div class="bg-slate-50 border-l-4 border-cyan-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-gray-800">Câu 1: Tóm tắt các sự việc trong đoạn trích.</p>
+                    <button onclick="toggleAnswer('sgk1')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                    </button>
+                    <div id="sgk1" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong> Các sự việc chính: (1) Tri huyện xưng danh (nói lối) bộc lộ bản chất làm quan tham nhũng, xử án vì tiền; (2) Tri huyện và Đề lại bàn bạc cách ngâm vụ án Trùm Sò - Thị Hến để moi tiền hối lộ; (3) Thống nhất mức án cho Ốc, Nghêu, Lý trưởng; (4) Lính lệ đòi vụ kiện vào hầu và tranh thủ nhũng nhiễu, đòi tiền "hậu tạ" từ các bên thưa kiện.
+                    </div>
+                </div>
+
+                <!-- CÂU 2 -->
+                <div class="bg-slate-50 border-l-4 border-cyan-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-gray-800">Câu 2: Liệt kê những lời thoại cho thấy sự tương đồng về bản chất, thủ đoạn giữa các nhân vật ở huyện đường, từ tri huyện đến đề lại và lính lệ.</p>
+                    <button onclick="toggleAnswer('sgk2')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                    </button>
+                    <div id="sgk2" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><em>Tri huyện:</em> "Tôi thì tôi nghĩ cứ để đu đưa như vậy đã. Thằng Sò này giàu lắm, chúng mình có thể 'ấy' được."</li>
+                            <li><em>Đề lại:</em> "Vâng, ta cứ bảo là để tra cứu đã... Bẩm quan xử thật sâu sắc..."</li>
+                            <li><em>Lính lệ A:</em> "Nhắc lại ông Trùm, anh xã và chị Hến biết rằng hôm nay quan bận lắm, tôi bẩm mãi quan mới chịu xử vụ này đấy."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CÂU 3 -->
+                <div class="bg-slate-50 border-l-4 border-cyan-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-gray-800">Câu 3: Đoạn trích cho thấy tri huyện và đề lại không cần phải giữ ý với nhau. Vì sao vậy? Phân tích sự hô ứng nhịp nhàng trong lời thoại giữa hai nhân vật.</p>
+                    <button onclick="toggleAnswer('sgk3')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                    </button>
+                    <div id="sgk3" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong> Tri huyện và Đề lại không cần giữ ý vì họ cùng chung bản chất tham lam, cùng một giuộc cá cừu, đã quá hiểu nhau và hợp tác ăn chia nhiều lần. Sự hô ứng nhịp nhàng thể hiện qua việc Tri huyện vừa xướng ý định ngâm án, Đề lại lập tức tung hứng, gợi ý lý do "tra cứu" hợp lý hóa thủ đoạn.
+                    </div>
+                </div>
+
+                <!-- CÂU 4 -->
+                <div class="bg-slate-50 border-l-4 border-cyan-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-gray-800">Câu 4: Qua theo dõi cảnh tuồng Huyện đường, bạn hiểu như thế nào về thái độ và cách nhìn nhận của người dân xưa đối với chốn "cửa quan"?</p>
+                    <button onclick="toggleAnswer('sgk4')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                    </button>
+                    <div id="sgk4" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong> Người dân xưa xem chốn cửa quan là nơi chứa chấp sự giả dối, tham nhũng và áp bóc. Họ nhìn nhận bộ máy quan lại phong kiến bằng thái độ mỉa mai, khinh bỉ, căm ghét sâu sắc nhưng cũng đầy bất lực trước sự hoạnh xẹ của bọn cầm quyền.
+                    </div>
+                </div>
+
+                <!-- CÂU 5 -->
+                <div class="bg-slate-50 border-l-4 border-cyan-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-gray-800">Câu 5: Lời tự giới thiệu (qua hình thức nói lối) của nhân vật tri huyện đã giúp người xem, người đọc hiểu được điều gì về con người ông ta? Hãy so sánh lời tự giới thiệu đó của một nhân vật cụ thể trong tuồng với những lời tự giới thiệu thường gặp trong đời sống để rút ra nhận xét cần thiết.</p>
+                    <button onclick="toggleAnswer('sgk5')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                    </button>
+                    <div id="sgk5" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong> Lời xưng danh lột tả trần trụi bản chất tham hối hận, bẻ cong lý pháp của Tri huyện. So sánh: Trong đời sống, lời tự giới thiệu thường nêu ưu điểm, sự khiêm tốn hoặc vị trí lịch sự; còn trong tuồng truyền thống, nhân vật tự xưng danh công khai bản chất xấu xa/tốt đẹp nhằm định hướng thẩm mỹ lập tức cho người xem.
+                    </div>
+                </div>
+
+                <!-- CÂU 6 -->
+                <div class="bg-slate-50 border-l-4 border-cyan-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-gray-800">Câu 6: Nếu được tham gia dựng lại cảnh Huyện đường trên sân khấu, bạn sẽ lưu ý điều gì về diễn xuất của diễn viên? Vì sao?</p>
+                    <button onclick="toggleAnswer('sgk6')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                    </button>
+                    <div id="sgk6" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong> Cần lưu ý:
+                        1. Diễn viên đóng Tri huyện phải thể hiện được điệu bộ khệnh khạng, ánh mắt gian hờn, nụ cười khoái trá trắng trợn;
+                        2. Đề lại cần diễn điệu bộ khúm núm nhưng ma ranh;
+                        3. Nhịp điệu thoại hô ứng ăn ý.
+                        <em>Lý do:</em> Nghệ thuật tuồng mang tính ước lệ, cách điệu cao, hành động cơ thể và giọng nói là công cụ chính lột tả bản chất nhân vật.
+                    </div>
+                </div>
+
+                <!-- KẾT NỐI ĐỌC VIẾT -->
+                <div class="bg-purple-50 border-l-4 border-purple-700 p-4 rounded-r-xl shadow-sm space-y-2">
+                    <p class="font-bold text-purple-900"><i class="fa-solid fa-pen-nib mr-2"></i>Kết nối đọc – viết: Viết đoạn văn (khoảng 150 chữ) trình bày suy nghĩ về tiếng cười châm biếm của tác giả dân gian thể hiện qua đoạn trích.</p>
+                    <button onclick="toggleAnswer('docViet')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-3 py-1.5 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem đoạn văn mẫu
+                    </button>
+                    <div id="docViet" class="hidden mt-2 p-3 bg-emerald-50 text-emerald-900 text-sm rounded border border-emerald-200 leading-relaxed">
+                        <strong>Đoạn văn tham khảo:</strong> Tiếng cười châm biếm trong trích đoạn "Huyện đường" là một đòn đả kích đanh thép mà tác giả dân gian nhắm vào bộ máy quan lại phong kiến mục thối. Bằng nghệ thuật xây dựng nhân vật sắc sảo qua điệu nói lối tự xưng danh và ngôn ngữ thoại hô ứng trần trụi, kịch bản đã lột trần bộ mặt của Tri huyện, Đề lại cho đến Lính lệ. Những kẻ đại diện cho công lý nơi chốn "cửa quan" hiện lên không phải để bảo vệ dân lành mà chỉ chăm chăm "đúp ăn", nhũng nhiễu và đục nước béo cò. Tiếng cười ấy không dừng lại ở mức giải trí hóm hỉnh mà mang tính chiến đấu sâu sắc, phơi bày thực trạng "được thua tự đồng tiền", đồng thời thể hiện thái độ khinh bỉ, sự bất bình và tinh thần phản kháng mạnh mẽ của nhân dân lao động đối với tầng lớp trị xảo quyệt thời xưa.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC VI: GAMESHOW TRẮC NGHIỆM "AI LÀ TRIỆU PHÚ" (10 CÂU) -->
+        <section class="millionaire-box rounded-2xl p-6 shadow-2xl text-white space-y-6">
+            <div class="text-center space-y-2 border-b border-amber-500/50 pb-4">
+                <div class="inline-block bg-amber-500 text-slate-900 font-black px-4 py-1 rounded-full text-xs uppercase tracking-widest">
+                    Gameshow Củng Cố Kiến Thức
+                </div>
+                <h2 class="text-3xl font-extrabold text-amber-400 tracking-wide flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-trophy"></i> AI LÀ TRIỆU PHÚ: BÀI HỌC HUYỆN ĐƯỜNG
+                </h2>
+                <p class="text-xs text-amber-200">Vượt qua 10 câu hỏi để chinh phục kiến thức tác phẩm Tuồng đồ dân gian!</p>
+            </div>
+
+            <!-- DANH SÁCH 10 CÂU HỎI TRẮC NGHIỆM -->
+            <div id="quizContainer" class="space-y-6">
+                <!-- Dynamic Content built by JavaScript -->
+            </div>
+
+            <!-- NÚT NỘP BÀI -->
+            <div class="text-center pt-4">
+                <button onclick="checkQuiz()" class="bg-primary hover:bg-primary-dark text-black font-extrabold text-lg px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105 border-2 border-white">
+                    <i class="fa-solid fa-paper-plane mr-2"></i>NỘP BÀI
+                </button>
+            </div>
+
+            <!-- HIỂN THỊ KẾT QUẢ -->
+            <div id="quizResult" class="hidden p-6 rounded-xl text-center space-y-4 bg-slate-800 border-2 border-amber-400">
+                <div id="quizScoreText" class="text-2xl font-bold"></div>
+                <div id="quizFeedback" class="text-sm leading-relaxed text-left space-y-3"></div>
+            </div>
+        </section>
+
+        <!-- MỤC VII: 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN & VẬN DỤNG NGHỆ THUẬT -->
+        <section class="bg-white rounded-xl p-6 shadow-md space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-gray-900 section-title pb-2 flex items-center">
+                <span class="num-square">VII</span> BÀI TẬP TỰ LUẬN VẬN DỤNG & TÍNH TOÁN NGHỆ THUẬT
+            </h2>
+
+            <!-- KHUNG MÀU SÁNG NHỆ, KHÔNG CHIA CỘT -->
+            <div class="space-y-6">
+                <!-- BÀI TẬP TỰ LUẬN 1 -->
+                <div class="bg-slate-100 p-5 rounded-xl border border-slate-300 space-y-3">
+                    <h3 class="font-bold text-gray-800 text-base">
+                        Bài 1: Phân tích ý nghĩa châm biếm của câu nói "Nắm kẻ có tóc chứ ai nắm kẻ trọc đầu" trong bối cảnh ứng xử của Tri huyện nơi Huyện đường.
+                    </h3>
+                    <p class="text-sm text-gray-600">Yêu cầu: Chỉ ra đối tượng "có tóc" và "trọc đầu" cùng mục đích vụ lợi của quan lại.</p>
+                    <button onclick="toggleAnswer('essay1')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-4 py-2 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải chi tiết
+                    </button>
+                    <div id="essay1" class="hidden p-4 bg-white rounded-lg border border-slate-300 text-sm leading-relaxed space-y-2 text-gray-800">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>1. <em>Định nghĩa đối tượng:</em> "Kẻ trọc đầu" chỉ những dân nghèo như Ốc, Nghêu không có tài sản để vắt óc hối lộ; "kẻ có tóc" chỉ địa chủ giàu có như Trùm Sò hoặc phụ nữ có nhan sắc như Thị Hến.</p>
+                        <p>2. <em>Bản chất châm biếm:</em> Tri huyện dùng thành ngữ dân gian để hợp lý hóa hành vi tham nhũng trơ trẽn. Quan lại không phân xử theo lẽ phải hay pháp luật mà dựa trên tiềm lực kinh tế của đương sự để vắt chanh bỏ vỏ.</p>
+                    </div>
+                </div>
+
+                <!-- BÀI TẬP TỰ LUẬN 2 -->
+                <div class="bg-slate-100 p-5 rounded-xl border border-slate-300 space-y-3">
+                    <h3 class="font-bold text-gray-800 text-base">
+                        Bài 2 (Tính toán thời lượng biểu diễn & Hiệu suất sân khấu): Một đêm diễn vở tuồng "Nghêu, Sò, Ốc, Hến" trọn vẹn kéo dài tổng cộng \( T = 120 \) phút gồm 3 hồi chính.
+                    </h3>
+                    <p class="text-sm text-gray-600">
+                        Biết trích đoạn "Huyện đường" nằm ở Hồi II chiếm tỷ lệ thời lượng \( k = 20\% \) toàn bộ đêm diễn. Giữa các cảnh diễn có thời gian chuyển cảnh dọn đạo cụ tổng cộng là \( t_{chuyen} = 15 \) phút. Hãy tính thời lượng biểu diễn thực tế \( t_{huyen\_duong} \) của cảnh Huyện đường và hiệu suất thời gian biểu diễn nghệ thuật \( H \) của đêm diễn.
+                    </p>
+                    <button onclick="toggleAnswer('essay2')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-4 py-2 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải chi tiết
+                    </button>
+                    <div id="essay2" class="hidden p-4 bg-white rounded-lg border border-slate-300 text-sm leading-relaxed space-y-2 text-gray-800">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>• Thời lượng biểu diễn của trích đoạn Huyện đường là: \( t_{huyen\_duong} = T \times k = 120 \times 20\% = 24 \) phút.</p>
+                        <p>• Tổng thời gian diễn viên biểu diễn thực tế trên sân khấu là: \( T_{dien} = T - t_{chuyen} = 120 - 15 = 105 \) phút.</p>
+                        <p>• Tỷ lệ hiệu suất thời gian biểu diễn nghệ thuật đạt: \( H = \frac{T_{dien}}{T} \times 100\% = \frac{105}{120} \times 100\% = 87.5\% \).</p>
+                    </div>
+                </div>
+
+                <!-- BÀI TẬP TỰ LUẬN 3 -->
+                <div class="bg-slate-100 p-5 rounded-xl border border-slate-300 space-y-3">
+                    <h3 class="font-bold text-gray-800 text-base">
+                        Bài 3: Đề xuất 3 giải pháp đổi mới phương thức tiếp cận nghệ thuật Tuồng cổ truyền cho học sinh THPT trong thời đại công nghệ số.
+                    </h3>
+                    <p class="text-sm text-gray-600">Nêu giải pháp về kịch bản, phương tiện truyền thông và hoạt động ngoại khóa.</p>
+                    <button onclick="toggleAnswer('essay3')" class="bg-primary hover:bg-primary-dark text-black font-semibold text-xs px-4 py-2 rounded transition shadow">
+                        <i class="fa-solid fa-eye mr-1"></i>Xem lời giải chi tiết
+                    </button>
+                    <div id="essay3" class="hidden p-4 bg-white rounded-lg border border-slate-300 text-sm leading-relaxed space-y-2 text-gray-800">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>1. <em>Sáng tạo nội dung:</em> Việt hóa kịch bản Tuồng bằng phụ đề hiện đại, tóm tắt diễn biến dưới dạng comic/infographic ngắn gọn dễ hiểu.</p>
+                        <p>2. <em>Truyền thông đa kênh:</em> Tận dụng nền tảng video ngắn (TikTok, Facebook Reels) quay hậu trường hóa trang, hướng dẫn các điệu nói lối hoặc múa bộ Tuồng.</p>
+                        <p>3. <em>Trải nghiệm thực tế:</em> Tổ chức CLB Kịch nghệ trường học cho học sinh nhập vai, hóa trang nhân vật Tuồng đồ để gia tăng tính tương tác.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER BẮT BUỘC -->
+        <footer class="bg-slate-800 text-slate-300 text-center py-4 rounded-xl text-sm font-medium shadow">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hàm ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Dữ liệu 10 câu hỏi Gameshow Ai là triệu phú
+        const quizData = [
+            {
+                q: "Câu 1: Đoạn trích 'Huyện đường' thuộc thể loại sân khấu dân gian nào?",
+                options: ["A. Chèo cổ", "B. Tuồng đồ (Tuồng hài)", "C. Cải lương", "D. Hát xẩm"],
+                correct: 1,
+                explain: "Nghêu, Sò, Ốc, Hến là tác phẩm tiêu biểu thuộc thể loại Tuồng đồ (tuồng hài dân gian)."
+            },
+            {
+                q: "Câu 2: Bức hoành phi treo chính giữa bàn giấy Tri huyện đề hai chữ gì?",
+                options: ["A. Công đường", "B. Huyện đường", "C. Minh kính", "D. Chấn nha"],
+                correct: 1,
+                explain: "Theo chỉ dẫn sân khấu: Trên tường chính giữa là bức hoành phi đề hai chữ 'Huyện đường'."
+            },
+            {
+                q: "Câu 3: Tri huyện thể hiện quan điểm xử án của mình như thế nào trong lời nói lối?",
+                options: ["A. Công bằng chí công vô tư", "B. Được thua tự đồng tiền", "C. Nghiêm trị kẻ có quyền", "D. Thương xóm làng nghèo khổ"],
+                correct: 1,
+                explain: "Tri huyện thừa nhận trắng trợn: 'Sự lý thường phân ẩu / Được thua tự đồng tiền'."
+            },
+            {
+                q: "Câu 4: Thái độ của Tri huyện đối với vụ kiện của Trùm Sò là gì?",
+                options: ["A. Xử phạt ngay 50 trượng", "B. Cứ để đu đưa như vậy đã để hạch hòi tiền", "C. Bác đơn không xử", "D. Trả lại toàn bộ đồ bị trộm"],
+                correct: 1,
+                explain: "Tri huyện bảo Đề lại: 'Tôi thì tôi nghĩ cứ để đu đưa như vậy đã. Thằng Sò này giàu lắm, chúng mình có thể ấy được'."
+            },
+            {
+                q: "Câu 5: Nhân vật nào bị Tri huyện quyết định xử phạt 5 năm tù?",
+                options: ["A. Nghêu", "B. Trùm Sò", "C. Ốc", "D. Lý trưởng"],
+                correct: 2,
+                explain: "Tri huyện tuyên án: 'Xử Ốc năm năm tù, Nghêu phạt đòn năm chục trượng'."
+            },
+            {
+                q: "Câu 6: Lời thoại 'Nắm kẻ có tóc chứ ai nắm kẻ trọc đầu' dùng để chỉ đối tượng nào?",
+                options: ["A. Ưu tiên đục nước béo cò kẻ giàu có (Trùm Sò)", "B. Bắt giam thầy chùa", "C. Tha cho kẻ nghèo", "D. Xử ép Thị Hến"],
+                correct: 0,
+                explain: "Kẻ 'có tóc' là kẻ có tài sản (Trùm Sò) để bọn quan lại hạch sách moi tiền hối lộ."
+            },
+            {
+                q: "Câu 7: Lính lệ A có hành vi gì trước khi đưa các bên thưa kiện vào gặp Tri huyện?",
+                options: ["A. Nhắc nhở giữ trật tự", "B. Vòi vĩnh, gợi ý tiền 'hậu tạ'", "C. Đuổi Trùm Sò về", "D. Đánh đòn Thị Hến"],
+                correct: 1,
+                explain: "Lính lệ A bảo: 'hôm nay quan bận lắm, tôi bẩm mãi quan mới chịu xử...', khiến Trùm Sò phải xin 'hậu tạ'."
+            },
+            {
+                q: "Câu 8: Nghệ thuật xưng danh (nói lối) trong Tuồng có tác dụng gì?",
+                options: ["A. Giấu giếm bản chất nhân vật", "B. Công khai bộc lộ ngay tính cách, bản chất nhân vật cho khán giả", "C. Kéo dài thời gian biểu diễn", "D. Báo hiệu kết thúc vở tuồng"],
+                correct: 1,
+                explain: "Xưng danh giúp định hình ngay lập tức bản chất nhân vật (tốt/xấu) cho khán giả nắm bắt."
+            },
+            {
+                q: "Câu 9: Bố cục vở tuồng 'Nghêu, Sò, Ốc, Hến' do Hoàng Châu Ký chỉnh lý gồm mấy hồi?",
+                options: ["A. 2 hồi", "B. 3 hồi", "C. 4 hồi", "D. 5 hồi"],
+                correct: 1,
+                explain: "Văn bản do Hoàng Châu Ký chỉnh lý (1957) gồm tất cả ba hồi."
+            },
+            {
+                q: "Câu 10: Ý nghĩa chính của tiếng cười châm biếm trong đoạn trích 'Huyện đường' là gì?",
+                options: ["A. Ca ngợi sự nghiêm minh của quan lại", "B. Lật tẩy bộ mặt tham nhũng, giả dối của bộ máy cai trị phong kiến", "C. Khuyên dân chúng nên đi kiện nhiều hơn", "D. Bào chữa cho hành vi ăn trộm của Ốc"],
+                correct: 1,
+                explain: "Đoạn trích đả kích, vạch trần bản chất nhũng nhiễu, tham bẩn của quan lại phong kiến từ Tri huyện đến Lính lệ."
+            }
+        ];
+
+        let userAnswers = new Array(quizData.length).fill(null);
+
+        // Render Quiz Items
+        function renderQuiz() {
+            const container = document.getElementById('quizContainer');
+            container.innerHTML = '';
+
+            quizData.forEach((q, idx) => {
+                const qEl = document.createElement('div');
+                qEl.className = 'bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3';
+
+                let optionsHtml = '';
+                q.options.forEach((opt, optIdx) => {
+                    optionsHtml += `
+                        <button onclick="selectOption(${idx}, ${optIdx})" id="opt_${idx}_${optIdx}" 
+                            class="millionaire-option text-left w-full p-3 rounded-lg text-sm font-medium text-slate-200">
+                            ${opt}
+                        </button>
+                    `;
+                });
+
+                qEl.innerHTML = `
+                    <div class="font-bold text-amber-300 text-base flex items-start gap-2">
+                        <span class="bg-amber-500 text-black px-2 py-0.5 rounded text-xs mt-0.5 font-black">${idx + 1}</span>
+                        <span>${q.q}</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                        ${optionsHtml}
+                    </div>
+                `;
+                container.appendChild(qEl);
+            });
+        }
+
+        // Handle Option Select
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`opt_${qIdx}_${i}`);
+                if (btn) {
+                    if (i === optIdx) {
+                        btn.classList.add('selected');
+                    } else {
+                        btn.classList.remove('selected');
+                    }
+                }
+            }
+        }
+
+        // Check Quiz Logic
+        function checkQuiz() {
+            let score = 0;
+            let feedbackHtml = '';
+
+            quizData.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+                if (isCorrect) score++;
+
+                feedbackHtml += `
+                    <div class="p-3 rounded-lg border ${isCorrect ? 'bg-emerald-950/60 border-emerald-500 text-emerald-200' : 'bg-rose-950/60 border-rose-500 text-rose-200'}">
+                        <p class="font-bold">${idx + 1}. ${q.q}</p>
+                        <p class="text-xs mt-1">
+                            Đáp án bạn chọn: <strong>${userAns !== null ? q.options[userAns] : 'Chưa chọn'}</strong> - 
+                            ${isCorrect ? '<span class="text-green-400 font-bold">CHÍNH XÁC!</span>' : `<span class="text-red-400 font-bold">SAI!</span> (Đáp án đúng: ${q.options[q.correct]})`}
+                        </p>
+                        <p class="text-xs italic text-gray-300 mt-1">💡 Hướng dẫn giải: ${q.explain}</p>
+                    </div>
+                `;
+            });
+
+            const resultBox = document.getElementById('quizResult');
+            const scoreText = document.getElementById('quizScoreText');
+            const feedbackBox = document.getElementById('quizFeedback');
+
+            resultBox.classList.remove('hidden');
+
+            if (score === quizData.length) {
+                scoreText.className = "text-2xl font-bold text-emerald-400";
+                scoreText.innerHTML = `<i class="fa-solid fa-crown mr-2"></i>XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA ${score}/${quizData.length}!`;
+            } else {
+                scoreText.className = "text-2xl font-bold text-amber-400";
+                scoreText.innerHTML = `BẠN ĐẠT ${score}/${quizData.length} ĐIỂM. HÃY ĐỌC KỸ HƯỚNG DẪN GIẢI CHI TIẾT BÊN ĐƯỚI:`;
+            }
+
+            feedbackBox.innerHTML = feedbackHtml;
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // On Window Load
+        window.onload = function() {
+            renderQuiz();
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        };
+    </script>
+</body>
+</html>
