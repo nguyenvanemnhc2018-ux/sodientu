@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Bản 1: Vợ Nhặt - Kim Lân</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        /* Hình vuông cho số La Mã */
+        .roman-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #1e3a8a; /* Xanh dương đậm */
+            background-color: #ffffff;
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-right: 8px;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        /* Hình tròn cho số Ả Rập */
+        .arabic-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background-color: #ffffff;
+            color: #000;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Section Header Underline */
+        .section-header {
+            border-bottom: 4px solid #1e3a8a;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Primary Button Color #33FF33 */
+        .btn-primary {
+            background-color: #33FF33;
+            color: #000;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            border: 1px solid #22cc22;
+        }
+        .btn-primary:hover {
+            background-color: #2be62b;
+            transform: translateY(-1px);
+        }
+
+        /* Smooth slide toggle transition for answers */
+        .answer-box {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        .answer-box.show {
+            max-height: 2000px; /* Arbitrary large number */
+            opacity: 1;
+            padding: 16px;
+            margin-top: 12px;
+        }
+
+        /* Gameshow styling */
+        .gameshow-container {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .gameshow-option {
+            background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+            border: 2px solid #33FF33;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .gameshow-option:hover {
+            transform: scale(1.02);
+        }
+        .gameshow-option input {
+            margin-right: 10px;
+            accent-color: #33FF33;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6">
+
+<div class="max-w-5xl mx-auto space-y-6">
+
+    <!-- Header Box -->
+    <div class="bg-white rounded-[12px] shadow-lg overflow-hidden border border-gray-200">
+        <!-- Khối trên màu cyan -->
+        <div class="bg-cyan-500 p-4 text-center">
+            <h1 class="text-white font-bold text-xl sm:text-2xl">CHƯƠNG: CÂU CHUYỆN VÀ ĐIỂM NHÌN TRONG TRUYỆN KỂ</h1>
+        </div>
+        <!-- Đường kẻ mảnh -->
+        <div class="h-[1px] bg-gray-300 w-full"></div>
+        <!-- Khối dưới màu #33FF33 -->
+        <div class="bg-[#33FF33] p-4 text-center">
+            <h2 class="text-black font-extrabold text-2xl sm:text-3xl uppercase tracking-wide">VĂN BẢN 1: VỢ NHẶT (Trích)</h2>
+            <p class="font-semibold mt-1">- Kim Lân -</p>
+        </div>
+    </div>
+
+    <!-- Lời dẫn -->
+    <div class="bg-white border border-black p-5 shadow-sm">
+        <p class="italic text-gray-700 text-lg text-justify leading-relaxed">
+            Bạn biết gì về nạn đói năm Ất Dậu (1945) xảy ra ở Việt Nam? Theo bạn, có phải lúc nào nghịch cảnh trong đời sống (như nạn đói, thiên tai, chiến tranh, dịch bệnh,...) cũng chỉ đẩy con người vào tình thế bi quan, tuyệt vọng hay không? Vì sao?
+        </p>
+    </div>
+
+    <!-- MỤC I -->
+    <div class="bg-white rounded-[12px] shadow-md p-6">
+        <h3 class="section-header">
+            <span class="roman-box">I</span> NỘI DUNG TÓM TẮT TÁC PHẨM
+        </h3>
+        
+        <!-- Định nghĩa / Tóm tắt đóng khung có màu nền -->
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 rounded-r">
+            <p class="font-semibold text-yellow-800 mb-2">Tóm tắt nội dung chính:</p>
+            <p class="text-justify leading-relaxed">
+                Giữa bối cảnh nạn đói năm 1945 thê thảm, người chết như ngả rạ, Tràng - một gã trai nghèo, xấu xí, sống ở xóm ngụ cư bỗng nhiên "nhặt" được vợ chỉ nhờ mấy bát bánh đúc và vài câu đùa tầm phơ tầm phào. Việc Tràng có vợ khiến cả xóm ngụ cư ngạc nhiên, bà cụ Tứ (mẹ Tràng) vừa xót xa vừa mừng tủi. Buổi sáng đầu tiên sau ngày có vợ, không khí gia đình Tràng thay đổi hẳn, ấm áp và chan chứa hi vọng. Bữa cơm ngày đói đón dâu mới thảm hại với nồi "chè khoán" (cháo cám) đắng chát, nhưng kết thúc truyện là tiếng trống thúc thuế dồn dập và hình ảnh lá cờ đỏ sao vàng bay phấp phới trong tâm trí Tràng, báo hiệu một sự đổi đời.
+            </p>
+        </div>
+
+        <!-- Trình tự câu chuyện 1, 2, 3... -->
+        <div class="space-y-6">
+            <div>
+                <h4 class="font-bold text-lg mb-2 flex items-center">
+                    <span class="arabic-circle">1</span> Cảnh Tràng đưa vợ về xóm ngụ cư
+                </h4>
+                <p class="text-justify mb-3">
+                    Xóm ngụ cư tăm tối, đói khát bỗng xôn xao, lạ lùng khi thấy Tràng dẫn một người đàn bà lạ về. Khuôn mặt Tràng phớn phở, tự đắc. Người đàn bà thì e thẹn, rón rén. Sự xuất hiện của họ thổi một luồng gió tươi mát vào cuộc sống tăm tối của những người dân nơi đây.
+                </p>
+                <!-- Câu hỏi trong bài (Dấu ?) -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r mt-3">
+                    <div class="flex items-start justify-between">
+                        <p class="font-semibold text-blue-900 flex-1">
+                            <span class="text-xl mr-2">❓</span> 
+                            Người dân trong xóm nghĩ và bàn luận gì khi thấy Tràng dẫn một người phụ nữ lạ về nhà?
+                        </p>
+                        <button class="btn-primary ml-4 whitespace-nowrap" onclick="toggleAnswer('q_xomngucu')">Xem lời giải</button>
+                    </div>
+                    <div id="q_xomngucu" class="answer-box bg-green-100 border border-green-300 rounded">
+                        <p class="text-green-900">
+                            <strong>Gợi ý:</strong> Người dân ngạc nhiên, đứng ở ngưỡng cửa bàn tán. Họ phỏng đoán (người nhà quê bà cụ Tứ? Vợ anh cu Tràng?). Họ cảm thấy vừa có nét vui lây ("khuôn mặt hốc hác bỗng dưng rạng rỡ"), vừa lo lắng, ái ngại cho Tràng ("Giời đất này còn rước cái của nợ đời về. Biết có nuôi nổi nhau...").
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-2 flex items-center">
+                    <span class="arabic-circle">2</span> Hoàn cảnh hai người gặp nhau
+                </h4>
+                <p class="text-justify mb-3">
+                    Họ gặp nhau 2 lần. Lần đầu Tràng hò đùa kéo xe thóc. Lần hai, người đàn bà gầy sọp, rách rưới bám lấy lời đùa của Tràng để được ăn. Sau khi ăn 4 bát bánh đúc, nghe Tràng rủ "có về với tớ thì ra khuân hàng", thị đồng ý theo về thật. Tràng ban đầu "chợn" (lo sợ), nhưng rồi tặc lưỡi "Chậc, kệ!".
+                </p>
+                <!-- Hoạt động / Vấn đề (Bàn tay) -->
+                <div class="bg-gray-100 border-l-4 border-orange-500 p-4 rounded-r mt-3">
+                    <div class="flex items-start justify-between">
+                        <p class="font-semibold text-gray-800 flex-1">
+                            <span class="text-xl mr-2">✍️ (Hoạt động)</span> 
+                            Việc Tràng chấp nhận hành động "theo về" của một người phụ nữ xa lạ thể hiện nét tính cách gì của nhân vật?
+                        </p>
+                        <button class="btn-primary ml-4 whitespace-nowrap" onclick="toggleAnswer('a_trangchapnhan')">Xem hướng giải quyết</button>
+                    </div>
+                    <div id="a_trangchapnhan" class="answer-box bg-orange-50 border border-orange-200 rounded">
+                        <p class="text-gray-800">
+                            <strong>Hướng giải quyết:</strong> Thể hiện sự liều lĩnh ("Chậc, kệ!"), nhưng sâu xa hơn là bản tính khao khát hạnh phúc gia đình, tấm lòng nhân hậu, đùm bọc người cùng cảnh ngộ trong cơn đói khát. Tràng không coi rẻ thị mà cư xử rất trân trọng (mua thúng, đánh bữa no nê).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-2 flex items-center">
+                    <span class="arabic-circle">3</span> Cuộc gặp gỡ giữa bà cụ Tứ và nàng dâu mới
+                </h4>
+                <p class="text-justify mb-3">
+                    Bà cụ Tứ ngạc nhiên tột độ, không hiểu chuyện gì xảy ra. Khi hiểu ra, bà "cúi đầu nín lặng", lòng dâng lên bao nỗi xót xa, thương cảm, lo âu và cuối cùng là mừng lòng chấp nhận: "Ừ, thôi thì các con đã phải duyên phải kiếp với nhau, u cũng mừng lòng...".
+                </p>
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r mt-3">
+                    <div class="flex items-start justify-between">
+                        <p class="font-semibold text-blue-900 flex-1">
+                            <span class="text-xl mr-2">❓</span> 
+                            Tình cảm của bà cụ Tứ dành cho con dâu mới được thể hiện qua giọng điệu và từ ngữ nào?
+                        </p>
+                        <button class="btn-primary ml-4 whitespace-nowrap" onclick="toggleAnswer('q_bacutu')">Xem lời giải</button>
+                    </div>
+                    <div id="q_bacutu" class="answer-box bg-green-100 border border-green-300 rounded">
+                        <p class="text-green-900">
+                            <strong>Gợi ý:</strong> Giọng điệu từ tốn, nhẹ nhàng, hạ thấp giọng thân mật ("nhẹ nhàng nói với nàng dâu mới", "từ tốn tiếp lời", "hạ thấp giọng xuống thân mật"). Từ ngữ chan chứa tình thương: "con ngồi xuống đây", "Nó bây giờ là dâu là con trong nhà rồi", "u thương quá". Thể hiện tấm lòng bao dung, nhân hậu của người mẹ nghèo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-lg mb-2 flex items-center">
+                    <span class="arabic-circle">4</span> Buổi sáng hôm sau và bữa cơm ngày đói
+                </h4>
+                <p class="text-justify mb-3">
+                    Cảnh vật thay đổi quang quẻ. Vợ hiền thục, mẹ tươi tỉnh. Bữa cơm đón dâu thảm hại có món "chè khoán" (cháo cám) đắng chát nhưng mọi người cố nuốt để tránh làm nhau buồn. Tiếng trống thúc thuế vang lên, truyện khép lại bằng hình ảnh đám người đói và lá cờ đỏ bay phấp phới trong óc Tràng.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MỤC II -->
+    <div class="bg-white rounded-[12px] shadow-md p-6">
+        <h3 class="section-header">
+            <span class="roman-box">II</span> VỀ TÁC GIẢ VÀ TÁC PHẨM
+        </h3>
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <div class="w-full md:w-1/3 flex flex-col items-center">
+                <!-- Chuyển đổi ảnh Kim Lân sang Base64 (Ảnh placeholder chân dung mô phỏng) -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADIAQMAAAAwS4omAAAAA1BMVEWAgICQdD0xAAAANklEQVR42u3BAQEAAACAkP6v7ggKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G4MpwABx6w2eAAAAABJRU5ErkJggg==" 
+                     alt="Tác giả Kim Lân" 
+                     class="w-full h-auto max-w-[200px] border-4 border-gray-300 shadow-md object-cover rounded-md"
+                     onerror="this.src='https://placehold.co/150x200/cccccc/333333?text=Kim+Lan'">
+                <p class="text-sm italic mt-2 text-gray-600">Kim Lân (1920 - 2007)</p>
+            </div>
+            <div class="w-full md:w-2/3">
+                <p class="text-justify mb-4">
+                    <strong>Kim Lân</strong> (1920 – 2007) tên khai sinh là Nguyễn Văn Tài, quê ở huyện Từ Sơn, tỉnh Bắc Ninh. Ông bắt đầu sáng tác từ trước 1945, tập trung vào mảng đề tài người nông dân và nông thôn Bắc Bộ. Di sản văn học của Kim Lân không đồ sộ nhưng ông được ghi nhận như một tác giả truyện ngắn xuất sắc.
+                </p>
+                <!-- Em có biết Box -->
+                <div class="bg-blue-50 border border-blue-400 p-4 rounded-[8px] mb-4 shadow-sm">
+                    <h4 class="font-bold text-blue-800 mb-2 border-b border-blue-200 pb-1">💡 Em có biết</h4>
+                    <p class="text-justify text-sm">
+                        Truyện ngắn <em>Vợ nhặt</em> viết về nạn đói năm Ất Dậu (1945). Tiền thân của truyện ngắn này là tiểu thuyết <em>Xóm ngụ cư</em> mà Kim Lân viết ngay sau Cách mạng tháng Tám, nhưng bị thất lạc bản thảo. Tác giả đã dựa vào cốt truyện đó để viết lại thành tác phẩm xuất sắc này.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MỤC III -->
+    <div class="bg-white rounded-[12px] shadow-md p-6">
+        <h3 class="section-header">
+            <span class="roman-box">III</span> TRẢ LỜI CÂU HỎI CUỐI BÀI
+        </h3>
+        <div class="space-y-4">
+            <!-- Câu 1 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <p class="font-semibold text-gray-800">
+                        1. Nhan đề "Vợ nhặt" có quan hệ như thế nào với nội dung câu chuyện?
+                    </p>
+                    <button class="btn-primary whitespace-nowrap" onclick="toggleAnswer('cau1')">Xem lời giải</button>
+                </div>
+                <div id="cau1" class="answer-box bg-green-100 border border-green-300 rounded">
+                    <p class="text-green-900 text-justify">
+                        <strong>Trả lời:</strong> Nhan đề thâu tóm được tình huống truyện độc đáo. "Nhặt" thường dùng cho đồ vật rẻ rúng rơi vãi. Người ta hỏi vợ, cưới vợ, còn Tràng lại "nhặt" được vợ dễ dàng như nhặt cọng rơm, cọng rác ngoài đường. Nhan đề vừa xót xa cho thân phận con người rẻ rúng trong nạn đói, vừa làm nổi bật khát vọng sống, khát vọng hạnh phúc của họ.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Câu 2 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <p class="font-semibold text-gray-800">
+                        2. Xác định tình huống truyện và nêu ý nghĩa của nó.
+                    </p>
+                    <button class="btn-primary whitespace-nowrap" onclick="toggleAnswer('cau2')">Xem lời giải</button>
+                </div>
+                <div id="cau2" class="answer-box bg-green-100 border border-green-300 rounded">
+                    <p class="text-green-900 text-justify">
+                        <strong>Trả lời:</strong> 
+                        <br>- <em>Tình huống:</em> Tràng, một thanh niên nghèo, xấu xí, sống ở xóm ngụ cư, đang giữa lúc đói khát nhất, cái chết đe dọa (người chết như ngả rạ) lại bất ngờ "nhặt" được vợ chỉ qua vài câu đùa.
+                        <br>- <em>Ý nghĩa:</em> Tình huống éo le (vừa bi vừa hài, vừa buồn vừa vui) giúp bộc lộ sâu sắc vẻ đẹp tâm hồn các nhân vật: sự khao khát tổ ấm, tình thương giai cấp và niềm tin mãnh liệt vào sự sống.
+                    </p>
+                </div>
+            </div>
+
+             <!-- Câu 7 -->
+             <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <p class="font-semibold text-gray-800">
+                        7. Có thể xem truyện ngắn Vợ nhặt là một câu chuyện cổ tích trong nạn đói hay không?
+                    </p>
+                    <button class="btn-primary whitespace-nowrap" onclick="toggleAnswer('cau7')">Xem lời giải</button>
+                </div>
+                <div id="cau7" class="answer-box bg-green-100 border border-green-300 rounded">
+                    <p class="text-green-900 text-justify">
+                        <strong>Trả lời:</strong> Hoàn toàn có thể. Giống như cổ tích, nhân vật chính là người nghèo khổ, xấu xí, hèn mọn (Tràng) bỗng nhiên có được hạnh phúc (có vợ). Hơn nữa, kết thúc truyện mở ra hướng đi tươi sáng (cờ đỏ sao vàng) mang dáng dấp của sự "đổi đời" mầu nhiệm do Cách mạng mang lại, thể hiện niềm tin vào cái thiện, sự sống chiến thắng cái chết.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MỤC IV -->
+    <div class="bg-white rounded-[12px] shadow-md p-6">
+        <h3 class="section-header">
+            <span class="roman-box">IV</span> KẾT NỐI ĐỌC - VIẾT
+        </h3>
+        <p class="italic mb-4 text-gray-600">Viết đoạn văn (khoảng 150 chữ) trình bày suy nghĩ của bạn về một thông điệp có ý nghĩa với bản thân được rút ra từ truyện ngắn Vợ nhặt.</p>
+        
+        <!-- Em có thể Box -->
+        <div class="bg-green-50 border border-green-400 p-4 rounded-[8px] shadow-sm mb-4">
+            <h4 class="font-bold text-green-800 mb-2 border-b border-green-200 pb-1">✨ Em có thể</h4>
+            <p class="text-justify text-sm">
+                Áp dụng kiến thức Toán học vào phân tích cấu trúc: Hãy tưởng tượng tâm trạng của Tràng như một phương trình phản ứng thuận nghịch. Giữa sự Sống và cái Chết, áp lực của nạn đói đẩy chiều phản ứng về sự tuyệt vọng, nhưng Tình Yêu Thương lại đóng vai trò xúc tác kéo cân bằng về phía hi vọng: \( \text{Tuyệt vọng} \xrightleftharpoons[\text{Nạn đói}]{\text{Tình thương}} \text{Hi vọng} \)
+            </p>
+        </div>
+
+        <button class="btn-primary w-full mt-2" onclick="toggleAnswer('doanvan')">Xem bài tham khảo</button>
+        <div id="doanvan" class="answer-box bg-gray-50 border border-gray-300 rounded">
+            <p class="text-justify">
+                Truyện ngắn "Vợ nhặt" của Kim Lân để lại trong em thông điệp sâu sắc về sức mạnh của tình người và niềm khát khao sống trong nghịch cảnh. Giữa thảm cảnh nạn đói năm 1945, khi ranh giới giữa sự sống và cái chết vô cùng mong manh, những con người nghèo khổ như Tràng, bà cụ Tứ và người vợ nhặt không hề buông xuôi. Trái lại, họ đùm bọc, nương tựa vào nhau bằng tình thương chân chất. Chi tiết bát cháo cám đắng chát nhưng được ăn trong không khí đầm ấm đã chứng minh rằng: hoàn cảnh dẫu bi đát đến đâu cũng không thể bóp nghẹt được ánh sáng của tình người. Từ đó, em nhận ra trong cuộc sống hiện đại, dù đối mặt với những thử thách lớn lao, chỉ cần con người giữ được lòng nhân ái và niềm tin vào tương lai, chúng ta sẽ vượt qua mọi bóng tối để hướng về ánh sáng.
+            </p>
+        </div>
+    </div>
+
+    <!-- MỤC V -->
+    <div class="bg-white rounded-[12px] shadow-md p-6">
+        <h3 class="section-header">
+            <span class="roman-box">V</span> GAMESHOW TRẮC NGHIỆM: AI LÀ TRIỆU PHÚ
+        </h3>
+        <p class="mb-4 font-semibold text-gray-700">10 câu hỏi củng cố mức độ biết, hiểu, vận dụng thấp.</p>
+        
+        <div class="gameshow-container" id="quiz-form">
+            <!-- Câu hỏi được render qua JS hoặc HTML trực tiếp -->
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 1: Tác giả của truyện ngắn "Vợ nhặt" là ai?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q1" value="A"> A. Nam Cao</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q1" value="B"> B. Kim Lân</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q1" value="C"> C. Ngô Tất Tố</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q1" value="D"> D. Thạch Lam</label></div>
+                </div>
+                <!-- Q2 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 2: Tác phẩm phản ánh sự kiện lịch sử đau thương nào của dân tộc?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q2" value="A"> A. Nạn đói năm 1945</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q2" value="B"> B. Chiến tranh biên giới</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q2" value="C"> C. Khởi nghĩa Nam Kỳ</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q2" value="D"> D. Lũ lụt đồng bằng sông Hồng</label></div>
+                </div>
+                <!-- Q3 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 3: Nghề nghiệp của nhân vật Tràng là gì?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q3" value="A"> A. Thợ mộc</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q3" value="B"> B. Kéo xe bò</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q3" value="C"> C. Làm ruộng</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q3" value="D"> D. Buôn bán nhỏ</label></div>
+                </div>
+                <!-- Q4 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 4: Tràng đã đãi người đàn bà (vợ nhặt) ăn món gì ở chợ tỉnh?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q4" value="A"> A. 4 bát phở bò</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q4" value="B"> B. 4 bát bánh đúc</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q4" value="C"> C. 4 bát cháo hành</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q4" value="D"> D. 4 củ khoai lang</label></div>
+                </div>
+                <!-- Q5 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 5: Thái độ của bọn trẻ con xóm ngụ cư khi thấy Tràng dẫn vợ về?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q5" value="A"> A. Ném đá xua đuổi</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q5" value="B"> B. Chạy ra đón, gào lên trêu chọc "Chông vợ hài"</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q5" value="C"> C. Sợ hãi núp vào xó tường</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q5" value="D"> D. Bỏ chạy về nhà mách người lớn</label></div>
+                </div>
+                <!-- Q6 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 6: Bà cụ Tứ đã đãi con dâu mới món gì vào sáng hôm sau?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q6" value="A"> A. Cơm trắng cá kho</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q6" value="B"> B. Cháo hoa</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q6" value="C"> C. Cháo cám (chè khoán)</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q6" value="D"> D. Bánh đúc</label></div>
+                </div>
+                <!-- Q7 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 7: Chi tiết "nồi chè khoán" mang ý nghĩa gì?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q7" value="A"> A. Sự giàu có của bà cụ Tứ</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q7" value="B"> B. Tình thương vô bờ bến và nỗi xót xa của người mẹ nghèo</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q7" value="C"> C. Sự lừa dối của bà cụ đối với nàng dâu</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q7" value="D"> D. Sở thích ăn uống thời kì đói kém</label></div>
+                </div>
+                <!-- Q8 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 8: Ở cuối tác phẩm, Tràng nghe thấy tiếng gì và hình ảnh gì hiện lên trong óc?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q8" value="A"> A. Tiếng súng / Hình ảnh bộ đội</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q8" value="B"> B. Tiếng chuông chùa / Hình ảnh đức Phật</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q8" value="C"> C. Tiếng khóc / Hình ảnh người chết đói</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q8" value="D"> D. Tiếng trống thúc thuế / Hình ảnh lá cờ đỏ sao vàng</label></div>
+                </div>
+                <!-- Q9 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 9: Từ "chao chát, chỏng lỏn" dùng để miêu tả ai?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q9" value="A"> A. Bà cụ Tứ</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q9" value="B"> B. Những cô gái đẩy xe bò</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q9" value="C"> C. Người vợ nhặt lúc mới gặp ở ngoài tỉnh</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q9" value="D"> D. Bọn trẻ con xóm ngụ cư</label></div>
+                </div>
+                <!-- Q10 -->
+                <div>
+                    <p class="font-bold text-lg text-yellow-400">Câu 10: Điểm nhìn trần thuật chủ yếu trong văn bản được đặt vào ai?</p>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q10" value="A"> A. Chuyển đổi linh hoạt giữa Tràng, bà cụ Tứ và điểm nhìn tác giả</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q10" value="B"> B. Chỉ tập trung vào người vợ nhặt</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q10" value="C"> C. Chỉ tập trung vào bà cụ Tứ</label></div>
+                    <div class="gameshow-option"><label class="block w-full cursor-pointer"><input type="radio" name="q10" value="D"> D. Người dân xóm ngụ cư</label></div>
+                </div>
+
+                <button class="bg-[#1e3a8a] text-white font-bold py-3 px-8 rounded-[8px] border-2 border-[#33FF33] hover:bg-[#2c5364] transition w-full uppercase text-xl shadow-[0_0_15px_rgba(51,255,51,0.5)]" onclick="checkQuiz()">NỘP BÀI</button>
+                
+                <div id="quiz-result" class="hidden mt-6 bg-white text-black p-4 rounded-[8px]">
+                    <h4 class="font-bold text-xl mb-2" id="score-text"></h4>
+                    <div id="quiz-details" class="space-y-2 text-sm"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MỤC VI -->
+    <div class="bg-white rounded-[12px] shadow-md p-6">
+        <h3 class="section-header">
+            <span class="roman-box">VI</span> BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH
+        </h3>
+        
+        <div class="space-y-6">
+            <!-- Tự luận 1 -->
+            <div class="border border-gray-300 rounded p-4">
+                <p class="font-bold mb-2 text-blue-900">Bài 1: Phân tích xác suất hi vọng</p>
+                <p class="mb-3">Giả sử tỷ lệ người sống sót qua nạn đói ở xóm ngụ cư là 20%. Sự xuất hiện của người vợ nhặt đem lại "sinh khí", làm tăng cơ hội sống sót của gia đình Tràng lên gấp 2.5 lần. Hãy tính xác suất sống sót mới của gia đình Tràng và nêu ý nghĩa văn học của con số này.</p>
+                <button class="btn-primary" onclick="toggleAnswer('tl1')">Xem lời giải chi tiết</button>
+                <div id="tl1" class="answer-box bg-green-50 border border-green-200">
+                    <p><strong>Giải:</strong></p>
+                    <p>Xác suất sống sót ban đầu: \( P_0 = 20\% = 0.2 \)</p>
+                    <p>Xác suất sống sót mới: \( P_1 = P_0 \times 2.5 = 0.2 \times 2.5 = 0.5 = 50\% \)</p>
+                    <p><strong>Ý nghĩa văn học:</strong> Mặc dù toán học chỉ ra xác suất chỉ là 50% (50/50 sống hoặc chết), nhưng về mặt tinh thần, sức mạnh của tình yêu thương gia đình đã nâng đỡ niềm tin của họ. Sự hiện diện của mầm sống mới (gia đình) chính là động lực để vươn lên mốc 100% trong ý chí bám trụ với cuộc đời của nhân vật.</p>
+                </div>
+            </div>
+
+            <!-- Tự luận 2 -->
+            <div class="border border-gray-300 rounded p-4">
+                <p class="font-bold mb-2 text-blue-900">Bài 2: Tính lượng calories (Vận dụng thực tế lịch sử)</p>
+                <p class="mb-3">Một người trưởng thành cần khoảng \(2000 \text{ kcal}\)/ngày để duy trì hoạt động. Trong bữa ăn đầu tiên, người vợ nhặt ăn 4 bát bánh đúc (khoảng \(150 \text{ kcal}\)/bát). Bữa sáng hôm sau, mỗi người chỉ được ăn lưng bát cháo cám (khoảng \(50 \text{ kcal}\)). Tính tổng năng lượng thị nạp vào trong 2 bữa và so sánh với nhu cầu cơ bản, từ đó làm rõ cái đói khủng khiếp trong tác phẩm.</p>
+                <button class="btn-primary" onclick="toggleAnswer('tl2')">Xem lời giải chi tiết</button>
+                <div id="tl2" class="answer-box bg-green-50 border border-green-200">
+                    <p><strong>Giải:</strong></p>
+                    <p>Năng lượng từ 4 bát bánh đúc: \( E_1 = 4 \times 150 = 600 \text{ kcal} \)</p>
+                    <p>Năng lượng từ lưng bát cháo cám: \( E_2 = 50 \text{ kcal} \)</p>
+                    <p>Tổng năng lượng 2 bữa: \( E = E_1 + E_2 = 650 \text{ kcal} \)</p>
+                    <p>Tỉ lệ so với nhu cầu 1 ngày: \( \frac{650}{2000} \times 100\% = 32.5\% \)</p>
+                    <p><strong>Phân tích:</strong> Lượng thức ăn thị nạp vào kể cả khi "được bao" và bữa tiệc gia đình chỉ đáp ứng được chưa tới 1/3 nhu cầu cơ bản của con người. Phép tính khô khan này tô đậm thêm chi tiết nghệ thuật: Cái đói rình rập, bào mòn thể xác, nhưng qua đó càng làm ngời sáng ý chí kiên cường và tình người ấm áp (bà cụ Tứ cố khen cháo cám ngon) của những mảnh đời dưới đáy xã hội.</p>
+                </div>
+            </div>
+
+            <!-- Tự luận 3 -->
+            <div class="border border-gray-300 rounded p-4">
+                <p class="font-bold mb-2 text-blue-900">Bài 3: Sơ đồ hóa diễn biến tâm lí (Hệ trục tọa độ)</p>
+                <p class="mb-3">Hãy vẽ tưởng tượng (hoặc miêu tả bằng văn bản) đồ thị hàm số biểu diễn trạng thái tâm lí của nhân vật Tràng theo trục thời gian \(t\) (từ lúc kéo xe bò đến sáng hôm sau). Trục tung \(y\) biểu thị mức độ hạnh phúc/tuyệt vọng.</p>
+                <button class="btn-primary" onclick="toggleAnswer('tl3')">Xem lời giải chi tiết</button>
+                <div id="tl3" class="answer-box bg-green-50 border border-green-200">
+                    <p><strong>Giải:</strong></p>
+                    <p>Nếu coi \(y = 0\) là mức tâm lí bình thường, \(y < 0\) là buồn bã/sợ hãi, \(y > 0\) là hạnh phúc:</p>
+                    <ul class="list-disc ml-5 mb-2">
+                        <li>Tại \(t_0\) (Kéo xe bò hằng ngày): \(y\) xấp xỉ \( -1 \) (mệt mỏi, u ám).</li>
+                        <li>Tại \(t_1\) (Gặp thị lần 2, đùa và thị đồng ý theo): \(y\) vọt lên \( +2 \) (thích ý, vênh vang).</li>
+                        <li>Tại \(t_2\) (Trên đường về, nghĩ đến cái đói): \(y\) tụt xuống \( -2 \) ("chợn", lo sợ).</li>
+                        <li>Tại \(t_3\) (Tặc lưỡi "Chậc, kệ"): \(y\) quay về \( 0 \) (chấp nhận liều lĩnh).</li>
+                        <li>Tại \(t_4\) (Sáng hôm sau, thấy nhà cửa quang quẻ): Đồ thị đạt đỉnh \(y = +5\) (hạnh phúc tột độ, thấy mình "nên người").</li>
+                    </ul>
+                    <p><strong>Kết luận:</strong> Đồ thị là một đường gấp khúc biến thiên mạnh, thể hiện tâm lí phức tạp nhưng tựu trung là đồ thị có xu hướng đi lên vững chắc ở giai đoạn cuối, minh chứng cho sức mạnh cải tạo tâm hồn kì diệu của tình yêu thương gia đình.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-8 pb-8 text-gray-500 font-semibold uppercase text-sm">
+        Chương trình GDPT 2018 - Bộ sách thống nhất
+    </div>
+
+</div>
+
+<script>
+    // Hàm Toggle cho các nút Xem Lời Giải
+    function toggleAnswer(id) {
+        const element = document.getElementById(id);
+        if(element.classList.contains('show')) {
+            element.classList.remove('show');
+        } else {
+            element.classList.add('show');
+        }
+    }
+
+    // Logic kiểm tra trắc nghiệm
+    const correctAnswers = {
+        q1: 'B', q2: 'A', q3: 'B', q4: 'B', q5: 'B', 
+        q6: 'C', q7: 'B', q8: 'D', q9: 'C', q10: 'A'
+    };
+
+    const explanations = {
+        q1: 'Tác giả "Vợ nhặt" là Kim Lân.',
+        q2: 'Tác phẩm bối cảnh nạn đói năm Ất Dậu 1945.',
+        q3: 'Tràng làm nghề đẩy xe bò thuê.',
+        q4: 'Thị ăn liền một chặp 4 bát bánh đúc.',
+        q5: 'Bọn trẻ gào lên "Chông vợ hài".',
+        q6: 'Bà đãi con dâu món cháo cám mà bà gọi đùa là "chè khoán".',
+        q7: 'Cháo cám đắng chát nhưng chứa đựng tình thương xót xa của mẹ.',
+        q8: 'Tiếng trống thúc thuế và hình ảnh lá cờ đỏ Việt Minh.',
+        q9: 'Lúc ở tỉnh thị cong cớn, chao chát, khác hẳn lúc về nhà.',
+        q10: 'Tác giả trần thuật linh hoạt, luân chuyển điểm nhìn giữa các nhân vật để bộc lộ nội tâm đa chiều.'
+    };
+
+    function checkQuiz() {
+        let score = 0;
+        let detailsHTML = '';
+        let allCorrect = true;
+
+        for (let i = 1; i <= 10; i++) {
+            const qName = 'q' + i;
+            const selected = document.querySelector(`input[name="${qName}"]:checked`);
+            const correctAns = correctAnswers[qName];
+            
+            if (selected) {
+                if (selected.value === correctAns) {
+                    score++;
+                    detailsHTML += `<p class="text-green-600"><strong>Câu ${i}: Đúng!</strong> ${explanations[qName]}</p>`;
+                } else {
+                    allCorrect = false;
+                    detailsHTML += `<p class="text-red-500"><strong>Câu ${i}: Sai.</strong> Đáp án đúng là ${correctAns}. ${explanations[qName]}</p>`;
+                }
+            } else {
+                allCorrect = false;
+                detailsHTML += `<p class="text-red-500"><strong>Câu ${i}: Chưa chọn đáp án.</strong> Đáp án đúng là ${correctAns}.</p>`;
+            }
+        }
+
+        const resultBox = document.getElementById('quiz-result');
+        const scoreText = document.getElementById('score-text');
+        const detailsBox = document.getElementById('quiz-details');
+
+        resultBox.classList.remove('hidden');
+        detailsBox.innerHTML = detailsHTML;
+
+        if (allCorrect) {
+            scoreText.textContent = `Tuyệt vời! Bạn đã trả lời đúng ${score}/10 câu. Bạn đích thị là triệu phú kiến thức!`;
+            scoreText.className = "font-bold text-xl mb-4 text-green-600";
+        } else {
+            scoreText.textContent = `Bạn trả lời đúng ${score}/10 câu. Hãy xem lại hướng dẫn chi tiết bên dưới nhé!`;
+            scoreText.className = "font-bold text-xl mb-4 text-red-600";
+        }
+    }
+</script>
+
+</body>
+</html>
