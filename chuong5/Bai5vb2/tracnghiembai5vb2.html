@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức Văn học - Huyện đường</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for mathematical expressions support -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-custom-dark {
+            background-color: #4d2626;
+        }
+        .bg-custom-card {
+            background-color: #592d2d;
+        }
+        .border-custom {
+            border-color: #7d4040;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #4d2626;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7d4040;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col justify-between selection:bg-amber-700 selection:text-white">
+
+    <!-- Header -->
+    <header class="bg-[#4d2626] border-b border-[#7d4040] px-6 py-4 flex flex-col sm:flex-row justify-between items-center shadow-md">
+        <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+            <div class="bg-amber-600/30 p-2.5 rounded-xl border border-amber-500/30">
+                <i class="fa-solid fa-book-open text-cream text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-lg sm:text-xl font-bold text-cream tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC VĂN HỌC</h1>
+                <p class="text-xs sm:text-sm text-gray-300">Bài: Huyện đường (Trích tuồng Nghêu, Sò, Ốc, Hến)</p>
+            </div>
+        </div>
+        <div id="mode-badge" class="hidden px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-600/20 text-cream border border-amber-500/40 flex items-center space-x-2">
+            <i class="fa-solid fa-circle-dot text-amber-400 text-[10px] animate-pulse"></i>
+            <span id="badge-text">CHẾ ĐỘ LUYỆN TẬP</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-4 py-6 max-w-6xl flex flex-col justify-center">
+
+        <!-- START SCREEN -->
+        <div id="start-screen" class="space-y-8 py-4">
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-600/20 border border-amber-500/30 mb-2 shadow-inner">
+                    <i class="fa-solid fa-award text-cream text-2xl"></i>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-cream tracking-tight">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-cream">20 câu hỏi</strong> bám sát nội dung văn bản <strong class="text-cream">Huyện đường (Trích tuồng Nghêu, Sò, Ốc, Hến)</strong> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- Level Distribution Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="bg-[#592d2d] border border-[#7d4040] rounded-2xl p-5 shadow-lg hover:border-amber-500/50 transition">
+                    <div class="text-amber-300 font-semibold text-sm mb-1">MỨC BIẾT (8 CÂU)</div>
+                    <div class="text-gray-300 text-xs leading-relaxed">Kiến thức văn bản, tác giả, cốt truyện, thể loại tuồng, chi tiết sự việc.</div>
+                </div>
+                <div class="bg-[#592d2d] border border-[#7d4040] rounded-2xl p-5 shadow-lg hover:border-amber-500/50 transition">
+                    <div class="text-amber-300 font-semibold text-sm mb-1">MỨC HIỂU (7 CÂU)</div>
+                    <div class="text-gray-300 text-xs leading-relaxed">Hiểu ý nghĩa lời thoại, bản chất nhân vật, thủ đoạn nhũng nhiễu, nghệ thuật trào phúng.</div>
+                </div>
+                <div class="bg-[#592d2d] border border-[#7d4040] rounded-2xl p-5 shadow-lg hover:border-amber-500/50 transition">
+                    <div class="text-amber-300 font-semibold text-sm mb-1">VẬN DỤNG (3 CÂU)</div>
+                    <div class="text-gray-300 text-xs leading-relaxed">Phân tích mối quan hệ nhân vật, so sánh thể loại tuồng với thực tiễn, kỹ năng diễn xuất.</div>
+                </div>
+                <div class="bg-[#592d2d] border border-[#7d4040] rounded-2xl p-5 shadow-lg hover:border-amber-500/50 transition">
+                    <div class="text-amber-300 font-semibold text-sm mb-1">VD CAO (2 CÂU)</div>
+                    <div class="text-gray-300 text-xs leading-relaxed">Đánh giá sâu sắc tiếng cười châm biếm dân gian và ý nghĩa xã hội của tác phẩm.</div>
+                </div>
+            </div>
+
+            <!-- Mode Selection Options -->
+            <div class="max-w-4xl mx-auto mt-8">
+                <h3 class="text-center text-cream font-medium mb-4 uppercase tracking-wider text-sm">Vui lòng chọn hình thức kiểm tra:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Practice Mode -->
+                    <button onclick="startQuiz('practice')" class="group relative bg-[#592d2d] hover:bg-[#6b3636] border-2 border-[#7d4040] hover:border-amber-500/80 rounded-2xl p-6 text-left transition duration-200 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xl font-bold text-cream group-hover:text-amber-300 transition">1. Chế độ Luyện Tập</span>
+                                <span class="bg-amber-600/30 text-amber-200 text-xs px-3 py-1 rounded-full font-medium border border-amber-500/30">Không giới hạn</span>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Học tập & củng cố kiến thức không áp lực. Làm bài không tính giờ, xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center text-amber-300 text-sm font-medium">
+                            <span>Bắt đầu luyện tập</span>
+                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+                        </div>
+                    </button>
+
+                    <!-- Timed Mode -->
+                    <button onclick="startQuiz('timed')" class="group relative bg-[#592d2d] hover:bg-[#6b3636] border-2 border-[#7d4040] hover:border-amber-500/80 rounded-2xl p-6 text-left transition duration-200 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xl font-bold text-cream group-hover:text-amber-300 transition">2. Chế độ Tính Giờ</span>
+                                <span class="bg-rose-600/30 text-rose-200 text-xs px-3 py-1 rounded-full font-medium border border-rose-500/30">20 Phút</span>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Thử thách & kiểm tra đánh giá năng lực. Có đồng hồ đếm ngược 20 phút, xáo trộn câu hỏi và đáp án chống gian lận.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center text-amber-300 text-sm font-medium">
+                            <span>Bắt đầu thi ngay</span>
+                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="quiz-screen" class="hidden flex-col lg:flex-row gap-6 items-start">
+            <!-- Sidebar: Question Navigator -->
+            <div class="w-full lg:w-80 bg-[#592d2d] border border-[#7d4040] rounded-2xl p-5 shadow-xl flex-shrink-0">
+                <div class="flex justify-between items-center mb-4 pb-3 border-b border-[#7d4040]">
+                    <span class="font-bold text-cream text-sm">DANH SÁCH CÂU HỎI</span>
+                    <span id="answered-count" class="text-xs bg-amber-600/30 text-amber-200 px-2.5 py-1 rounded-full font-semibold border border-amber-500/30">0 / 20 đã làm</span>
+                </div>
+                
+                <!-- Timer in Timed Mode -->
+                <div id="timer-box" class="hidden mb-4 p-3 bg-rose-950/40 border border-rose-500/40 rounded-xl flex items-center justify-between">
+                    <span class="text-xs text-rose-200 font-medium"><i class="fa-solid fa-clock mr-1.5"></i> Thời gian còn lại:</span>
+                    <span id="timer-display" class="font-mono font-bold text-rose-300 text-base">20:00</span>
+                </div>
+
+                <!-- Grid Navigator -->
+                <div id="question-grid" class="grid grid-cols-5 gap-2.5 mb-6">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <!-- Legend -->
+                <div class="space-y-2 text-xs text-gray-300 border-t border-[#7d4040] pt-4 mb-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3.5 h-3.5 rounded bg-[#4d2626] border border-gray-600"></div>
+                        <span>Chưa trả lời</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3.5 h-3.5 rounded bg-amber-600/80 border border-amber-500"></div>
+                        <span>Đã chọn đáp án</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3.5 h-3.5 rounded bg-blue-600 border border-blue-400"></div>
+                        <span>Đang làm (Hiện tại)</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="confirmSubmit()" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold py-3 px-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center space-x-2 border border-emerald-500/50">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Nộp Bài & Kết Thúc</span>
+                </button>
+            </div>
+
+            <!-- Main Question Area -->
+            <div class="flex-grow w-full bg-[#592d2d] border border-[#7d4040] rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between min-h-[500px]">
+                <div>
+                    <!-- Question Header Info -->
+                    <div class="flex flex-wrap justify-between items-center mb-6 pb-4 border-b border-[#7d4040] gap-2">
+                        <span id="current-q-num" class="text-lg font-bold text-cream">Câu 1 / 20</span>
+                        <span id="current-q-level" class="text-xs px-3 py-1 rounded-full font-semibold bg-amber-600/30 text-amber-200 border border-amber-500/30">Mức Biết</span>
+                    </div>
+
+                    <!-- Question Content -->
+                    <div id="question-text" class="text-base sm:text-lg font-medium text-white mb-6 leading-relaxed">
+                        <!-- Question text goes here -->
+                    </div>
+
+                    <!-- Options List -->
+                    <div id="options-container" class="space-y-3.5 mb-8">
+                        <!-- Options generated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="flex flex-wrap justify-between items-center pt-4 border-t border-[#7d4040] gap-4">
+                    <button onclick="prevQuestion()" id="prev-btn" class="bg-[#4d2626] hover:bg-[#6b3636] text-gray-200 font-medium px-5 py-2.5 rounded-xl border border-[#7d4040] transition disabled:opacity-40 disabled:cursor-not-allowed flex items-center space-x-2">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                        <span>Câu Trước</span>
+                    </button>
+                    <button onclick="clearCurrentSelection()" class="text-xs text-gray-400 hover:text-amber-300 underline transition py-2">
+                        Xóa lựa chọn câu này
+                    </button>
+                    <button onclick="nextQuestion()" id="next-btn" class="bg-amber-600 hover:bg-amber-500 text-white font-medium px-6 py-2.5 rounded-xl transition shadow-md flex items-center space-x-2">
+                        <span>Câu Tiếp</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div id="result-screen" class="hidden space-y-8 max-w-4xl mx-auto py-4 w-full">
+            <!-- Score Card -->
+            <div class="bg-[#592d2d] border border-[#7d4040] rounded-3xl p-8 shadow-2xl text-center space-y-6">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-600/20 border border-amber-500/40 shadow-inner">
+                    <i class="fa-solid fa-trophy text-amber-400 text-3xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-cream tracking-tight mb-1">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-label" class="text-xs text-gray-300 uppercase tracking-wider">Chế độ Luyện Tập</p>
+                </div>
+
+                <!-- Statistics 3 columns -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto pt-2">
+                    <div class="bg-[#4d2626] border border-[#7d4040] rounded-2xl p-4">
+                        <div class="text-xs text-gray-400 mb-1">Điểm số</div>
+                        <div id="final-score" class="text-2xl sm:text-3xl font-extrabold text-amber-300">0.0 / 10.0</div>
+                    </div>
+                    <div class="bg-[#4d2626] border border-[#7d4040] rounded-2xl p-4">
+                        <div class="text-xs text-gray-400 mb-1">Số câu đúng</div>
+                        <div id="final-correct" class="text-2xl sm:text-3xl font-extrabold text-emerald-400">0 / 20 câu</div>
+                    </div>
+                    <div class="bg-[#4d2626] border border-[#7d4040] rounded-2xl p-4">
+                        <div class="text-xs text-gray-400 mb-1">Thời gian làm bài</div>
+                        <div id="final-time" class="text-lg sm:text-xl font-bold text-cream pt-1">Không giới hạn</div>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-[#4d2626] border border-amber-500/40 rounded-2xl p-5 text-left space-y-2 shadow-inner">
+                    <div class="flex items-center space-x-2 text-amber-300 font-semibold text-sm">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacher-feedback" class="text-gray-200 text-sm leading-relaxed pl-6">
+                        <!-- Dynamic feedback -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons after test -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="restartQuiz()" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded-xl transition shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToExplanations()" class="bg-[#4d2626] hover:bg-[#6b3636] text-cream font-semibold px-6 py-3 rounded-xl border border-[#7d4040] transition shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions Section -->
+            <div id="solutions-section" class="space-y-6 pt-4">
+                <div class="flex justify-between items-center pb-3 border-b border-[#7d4040]">
+                    <h3 class="text-xl font-bold text-cream flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check text-amber-400"></i>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-gray-300">20/20 câu hỏi</span>
+                </div>
+                
+                <div id="solutions-list" class="space-y-6">
+                    <!-- Dynamically filled detailed explanations -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#4d2626] border-t border-[#7d4040] py-4 text-center text-xs text-gray-300">
+        <p>Hệ thống Ôn luyện Trắc nghiệm Ngữ văn 11 - Văn bản: Huyện đường (Trích tuồng Nghêu, Sò, Ốc, Hến)</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // 20 Questions Database strictly adhering to "huyện đường.pdf"
+        const questionsData = [
+            // --- MỨC BIẾT (8 câu: 0 to 7) ---
+            {
+                id: 1,
+                level: "Mức Biết",
+                question: "Đoạn trích <em>Huyện đường</em> thuộc vở tuồng nổi tiếng nào trong di sản tuồng truyền thống Việt Nam?",
+                options: [
+                    "A. Sơn Hậu",
+                    "B. Trầm Hương cốt",
+                    "C. Nghêu, Sò, Ốc, Hến",
+                    "D. Kim Thạch kỳ duyên"
+                ],
+                correct: 2,
+                explanation: "Đoạn trích <em>Huyện đường</em> được trích từ vở tuồng đồ (tuồng hải) nổi tiếng <em>Nghêu, Sò, Ốc, Hến</em>."
+            },
+            {
+                id: 2,
+                level: "Mức Biết",
+                question: "Văn bản <em>Nghêu, Sò, Ốc, Hến</em> trong sách giáo khoa do ai chỉnh lí năm 1957?",
+                options: [
+                    "A. Hoàng Châu Ký",
+                    "B. Tống Phước Phổ",
+                    "C. Đào Tấn",
+                    "D. Nguyễn Hiển Dĩnh"
+                ],
+                correct: 0,
+                explanation: "Theo phần chú thích nguồn gốc văn bản, vở tuồng do Hoàng Châu Ký chỉnh lí (1957) gồm ba hồi."
+            },
+            {
+                id: 3,
+                level: "Mức Biết",
+                question: "Vở tuồng <em>Nghêu, Sò, Ốc, Hến</em> thuộc loại hình tuồng nào sau đây?",
+                options: [
+                    "A. Tuồng thầy",
+                    "B. Tuồng đồ (tuồng hải)",
+                    "C. Tuồng lịch sử",
+                    "D. Tuồng phóng tác"
+                ],
+                correct: 1,
+                explanation: "Vở tuồng thuộc loại tuồng đồ (tuồng hải), chuyên châm biếm sâu sắc thói tật xã hội và lật tẩy bộ mặt xấu xa của bộ máy cai trị địa phương."
+            },
+            {
+                id: 4,
+                level: "Mức Biết",
+                question: "Trong phần mở đầu cảnh <em>Huyện đường</em>, nhân vật nào xuất hiện và tự giới thiệu bản thân bằng hình thức 'nói lối'?",
+                options: [
+                    "A. Đề lại",
+                    "B. Lý trưởng",
+                    "C. Trùm Sò",
+                    "D. Tri huyện"
+                ],
+                correct: 3,
+                explanation: "Ngay đầu cảnh <em>Huyện đường</em>, màn mở và tri huyện từ trong nhà bước ra, tự giới thiệu bằng hình thức 'nói lối' ('Quyền trọng trấn nha môn / Bản chức xưng tri huyện...')."
+            },
+            {
+                id: 5,
+                level: "Mức Biết",
+                question: "Theo chú thích trong văn bản, từ 'bản chức' được nhân vật tri huyện dùng để chỉ điều gì?",
+                options: [
+                    "A. Từ tự xưng của người có chức vụ ở thời xưa với người dân",
+                    "B. Tên một loại chức quan nhỏ cấp huyện",
+                    "C. Chức vị cao nhất trong triều đình phong kiến",
+                    "D. Tên gọi riêng của nha lại cấp dưới"
+                ],
+                correct: 0,
+                explanation: "Theo chú thích (4) trang 133, 'bản chức' là từ tự xưng của người có chức vụ ở thời xưa khi nói chuyện hoặc xưng hô với người dân."
+            },
+            {
+                id: 6,
+                level: "Mức Biết",
+                question: "Ở phần đầu đoạn trích, tri huyện đã bàn bạc công việc với ai trước khi xử kiện?",
+                options: [
+                    "A. Lính lệ A",
+                    "B. Đề lại (viên thư kí)",
+                    "C. Lý trưởng",
+                    "D. Trùm Sò"
+                ],
+                correct: 1,
+                explanation: "Tri huyện đã bàn bạc rất ăn ý với viên đề lại (thư kí ở huyện đường) về cách nhũng nhiễu các vụ kiện cáo."
+            },
+            {
+                id: 7,
+                level: "Mức Biết",
+                question: "Trước khi các đương sự bước vào, lính lệ A đã dắt những ai vào hầu theo lệnh của đề lại?",
+                options: [
+                    "A. Ốc và Nghêu",
+                    "B. Chỉ có Trùm Sò",
+                    "C. Lý trưởng, Trùm Sò và Thị Hến",
+                    "D. Toàn bộ dân làng trong xã"
+                ],
+                correct: 2,
+                explanation: "Theo chỉ dẫn kịch bản, lính lệ A dắt Lý trưởng, Trùm Sò và Thị Hến vào hầu."
+            },
+            {
+                id: 8,
+                level: "Mức Biết",
+                question: "Nhân vật Trùm Sò trong vụ kiện tại huyện đường giữ vai trò là ai?",
+                options: [
+                    "A. Địa chủ, chủ ngôi nhà bị Ốc và Nghêu đột nhập ăn trộm",
+                    "B. Thầy bói lừa đảo",
+                    "C. Viên quan tri huyện tiền nhiệm",
+                    "D. Lí trưởng của xã"
+                ],
+                correct: 0,
+                explanation: "Trùm Sò là địa chủ, người có nhà bị trộm (kẻ chuyên nghề đào ngạch là Ốc phối hợp với thầy bói Nghêu đột nhập ăn trộm)."
+            },
+
+            // --- MỨC HIỂU (7 câu: 8 to 14) ---
+            {
+                id: 9,
+                level: "Mức Hiểu",
+                question: "Lời tự giới thiệu của tri huyện qua điệu 'nói lối' (<em>'Lấy của cậy ngọn roi / Làm quan nhờ lỗ khẩu / Sự lí thường phân ẩu...'</em>) phơi bày bản chất gì?",
+                options: [
+                    "A. Sự công minh, liêm khiết và chí công vô tư của quan tòa",
+                    "B. Bản chất tham nhũng, vơ vét, xử kiện tùy tiện và tống tiền người dân",
+                    "C. Nỗi khổ tâm khi phải cai quản một huyện nghèo khó",
+                    "D. Tinh thần thượng tôn pháp luật của bộ máy quan lại phong kiến"
+                ],
+                correct: 1,
+                explanation: "Lời tự giới thiệu lột trần bản chất tham lam, ăn đút lót, dùng quyền lực (ngọn roi) để vơ vét và xử án tùy tiện vì tiền."
+            },
+            {
+                id: 10,
+                level: "Mức Hiểu",
+                question: "Vì sao tri huyện và đề lại lại bàn nhau <em>'cứ để đu đưa như vậy đã'</em> đối với vụ kiện của Trùm Sò?",
+                options: [
+                    "A. Vì hồ sơ vụ án chưa được chuyển lên tỉnh",
+                    "B. Vì Trùm Sò rất giàu có, chúng muốn kéo dài để vơ vét, đòi hối lộ thêm",
+                    "C. Vì các nhân chứng chưa tập trung đầy đủ tại công đường",
+                    "D. Vì tri huyện đang bận đi công cán xa"
+                ],
+                correct: 1,
+                explanation: "Tri huyện nhận định 'Thằng Sò này giàu lắm, chúng mình có thể ấy được', tức là kéo dài vụ việc để nhũng nhiễu, tống tiền."
+            },
+            {
+                id: 11,
+                level: "Mức Hiểu",
+                question: "Chi tiết tri huyện phạt tù Ốc, phạt đòn Nghêu, phạt tiền Lý trưởng nhưng 'chưa xử vội' Trùm Sò và Thị Hến thể hiện thủ đoạn nào?",
+                options: [
+                    "A. Áp dụng đúng luật pháp nghiêm minh của triều đình",
+                    "B. Xử phạt công bằng giữa người giàu và người nghèo",
+                    "C. 'Nắm kẻ có tóc', trừng phạt những kẻ yếu thế trước, đồng thời om vụ việc để hối lộ, tống tiền kẻ có điều kiện",
+                    "D. Khoan hồng đặc biệt cho người buôn bán nhỏ"
+                ],
+                correct: 2,
+                explanation: "Quan niệm 'nắm đứa có tóc ai nắm kẻ trọc đầu' cho thấy chúng bắt nạt kẻ yếu hoặc đã sa lưới, còn kẻ giàu (Trùm Sò, Thị Hến) thì giữ lại để vòi tiền."
+            },
+            {
+                id: 12,
+                level: "Mức Hiểu",
+                question: "Sự hô ứng nhịp nhàng, ăn ý giữa tri huyện và đề lại trong cuộc bàn bạc riêng phơi bày thực trạng gì của bộ máy công quyền?",
+                options: [
+                    "A. Sự phối hợp chặt chẽ trong việc thực thi công lý",
+                    "B. Sự đồng lõa, cấu kết chặt chẽ giữa quan trên và nha lại cấp dưới trong việc nhũng nhiễu dân",
+                    "C. Tinh thần làm việc nhóm hiệu quả của quan lại xưa",
+                    "D. Sự kính trọng của cấp dưới đối với quan huyện tài đức"
+                ],
+                correct: 1,
+                explanation: "Cuộc đối thoại ăn ý, hiểu ý nhau từng chút một cho thấy sự hủ bại, đồng lõa thành thói quen giữa tri huyện và đề lại trong việc đục khoét."
+            },
+            {
+                id: 13,
+                level: "Mức Hiểu",
+                question: "Hành động và lời nói của lính lệ A khi dắt Lý trưởng, Trùm Sò, Thị Hến vào hầu (<em>'hôm nay quan bận lắm, tôi bẩm mãi quan mới chịu xử...'</em>) nhằm mục đích gì?",
+                options: [
+                    "A. Khoe khoang quyền lực cá nhân trước mặt dân",
+                    "B. Làm ơn cho các đương sự một cách vô tư",
+                    "C. Tạo vỏ bọc bận rộn để vòi vĩnh, nhận hối lộ từ các đương sự",
+                    "D. Thể hiện sự tắc trách trong công việc"
+                ],
+                correct: 2,
+                explanation: "Lính lệ A cố tình tạo áp lực và kể công để Lý trưởng và Trùm Sò phải đút lót, hối lộ ('Vâng, tôi biết anh tử tế lắm...', 'Vâng, tôi xin hậu tạ...')."
+            },
+            {
+                id: 14,
+                level: "Mức Hiểu",
+                question: "Nhận định nào sau đây phản ánh chính xác nhất ý nghĩa châm biếm của đoạn trích <em>Huyện đường</em>?",
+                options: [
+                    "A. Ca ngợi sự nghiêm minh của luật pháp thời phong kiến",
+                    "B. Phơi bày bản chất thối nát, tham lam, vô đạo đức của bộ máy cai trị cấp huyện",
+                    "C. Phản ánh cuộc sống ấm no, thanh bình của nhân dân dưới triều phong kiến",
+                    "D. Khẳng định vai trò tích cực của nha lại trong việc bảo vệ người dân"
+                ],
+                correct: 1,
+                explanation: "Đoạn trích châm biếm sâu sắc thói nhũng nhiễu, lật tẩy bộ mặt đồi bại, tham lam của từ tri huyện, đề lại đến lính lệ nơi cửa quan."
+            },
+            {
+                id: 15,
+                level: "Mức Hiểu",
+                question: "Qua cách đối thoại và giải quyết vụ án, thành ngữ dân gian nào phản ánh đúng nhất tinh thần của cảnh <em>Huyện đường</em>?",
+                    options: [
+                    "A. Quan thấy kiện như kiến thấy mỡ / Đút lót quan trên, đè nén dân đen",
+                    "B. Uống nước nhớ nguồn",
+                    "C. Ăn quả nhớ kẻ trồng cây",
+                    "D. Đi một ngày đàng, học một sàng khôn"
+                ],
+                correct: 0,
+                explanation: "Chốn cửa quan trong đoạn trích hiện lên như một nơi đục khoét, kiện cáo là cơ hội để quan lại vòi vĩnh 'đút lót'."
+            },
+
+            // --- VẬN DỤNG (3 câu: 15 to 17) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                question: "Từ sự đồng dạng về thủ đoạn nhũng nhiễu giữa tri huyện, đề lại và lính lệ A, ta rút ra bài học gì về bản chất của bộ máy công quyền phong kiến địa phương được miêu tả trong tác phẩm?",
+                options: [
+                    "A. Bộ máy quan lại hoạt động độc lập và hoàn toàn trong sạch",
+                    "B. Sự cấu kết toàn diện từ trên xuống dưới, biến chốn công đường thành nơi buôn bán công lý và tống tiền dân chúng",
+                    "C. Nha lại cấp dưới luôn là người bảo vệ công lý chống lại quan tham",
+                    "D. Pháp luật phong kiến luôn bảo vệ quyền lợi chính đáng của người nông dân"
+                ],
+                correct: 1,
+                explanation: "Từ quan đầu huyện đến thư kí (đề lại) rồi lính lệ đều chung một mục đích tống tiền, đút lót, cấu kết chặt chẽ thành một hệ thống thối nát."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                question: "Khi so sánh lời tự giới thiệu mang tính phơi bày bản chất tham lam của tri huyện trong tuồng với chuẩn mực đạo đức công vụ trong đời sống hiện đại, điểm khác biệt cốt lõi là gì?",
+                options: [
+                    "A. Tri huyện thể hiện sự minh bạch tuyệt đối trước công chúng",
+                    "B. Tri huyện công khai thừa nhận thói tham nhũng, vơ vét như một lẽ sống tự nhiên của quan trường, hoàn toàn trái ngược với chuẩn mực đạo đức công vụ 'liêm chính, phụng sự nhân dân' thời hiện đại",
+                    "C. Đời sống hiện đại không có sự khác biệt so với xã hội phong kiến",
+                    "D. Cả hai đều đề cao tinh thần vì dân phục vụ"
+                ],
+                correct: 1,
+                explanation: "Lời tự giới thiệu của tri huyện trơ trẽn thừa nhận việc làm quan để nhũng nhiễu, ăn tiền, trái ngược hoàn toàn với tinh thần phụng sự công vụ minh bạch hiện đại."
+            },
+            {
+                id: 18,
+                    level: "Vận dụng",
+                question: "Nếu được tham gia dàn dựng cảnh <em>Huyện đường</em> trên sân khấu, để làm nổi bật tiếng cười châm biếm, diễn viên đóng vai tri huyện cần lưu ý điều gì về diễn xuất?",
+                options: [
+                    "A. Thể hiện sự đau khổ, day dứt khi phải xử án oan",
+                    "B. Kết hợp điệu bộ tự đắc, cười khoái trá, nét mặt hể hả, trơ trẽn khi tự thưởng thức những mưu mô nhũng nhiễu của mình",
+                    "C. Diễn xuất nghiêm túc, trang nghiêm như một vị quan thanh bạch",
+                    "D. Diễn tả sự sợ hãi trước các thế lực cường hào"
+                ],
+                correct: 1,
+                explanation: "Chỉ dẫn sân khấu nhấn mạnh: 'cười khoái trá', 'sự hể hả, trơ trẽn của tri huyện khi tự thưởng thức những mưu mô của mình', diễn viên cần bộc lộ rõ nét sự lố bịch đó."
+            },
+
+            // --- VẬN DỤNG CAO (2 câu: 18 to 19) ---
+            {
+                id: 19,
+                level: "VD Cao",
+                question: "Phân tích sự trào phúng sâu sắc qua nghệ thuật xây dựng nhân vật và ngôn ngữ đối thoại giữa tri huyện và đề lại. Điểm độc đáo nhất của nghệ thuật tuồng ở đây là gì?",
+                options: [
+                    "A. Sử dụng ngôn ngữ bi tráng để ngợi ca triều đình",
+                    "B. Sử dụng thủ pháp 'gậy ông đập lưng ông' đối với các anh hùng",
+                    "C. Sử dụng tiếng cười châm biếm sắc sảo, tự lột trần bản chất qua ngôn ngữ nói lối và đối thoại ăn ý, biến công đường thành sân khấu hài kịch tố cáo",
+                    "D. Dùng các ẩn dụ tượng trưng mang tính triết lý cao siêu khó hiểu"
+                ],
+                correct: 2,
+                explanation: "Điểm độc đáo của tuồng đồ là nhân tự lột trần sự xấu xa qua lời ca, điệu nói lối và sự đồng lõa tỉnh bơ, tạo nên tiếng cười châm biếm sâu cay."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                question: "Đánh giá tiếng cười châm biếm của tác giả dân gian và người chỉnh lí Hoàng Châu Ký qua hình tượng quan lại ở <em>Huyện đường</em> đối với nhận thức của người lao động xưa. Ý nghĩa lớn nhất là gì?",
+                options: [
+                    "A. Khuyến khích người dân tin tưởng tuyệt đối vào quan tòa phong kiến",
+                    "B. Giải tỏa tâm lý căm phẫn, thể hiện thái độ khinh bỉ, bất hợp tác và dùng tiếng cười làm vũ khí sắc bén để lật tẩy, đấu tranh tinh thần với cường quyền nhũng nhiễu",
+                    "C. Cung cấp tài liệu pháp luật cho triều đình",
+                    "D. Ca ngợi sự giàu có của tầng lớp địa chủ phong kiến"
+                ],
+                correct: 1,
+                explanation: "Tiếng cười châm biếm trong tuồng đồ là thứ vũ khí tinh thần mạnh mẽ của nhân dân lao động: vừa cười cợt, khinh bỉ vừa vạch trần bản chất bất công của bộ máy thống trị."
+            }
+        ];
+
+        // Quiz State Variables
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // { questionIndex: optionIndex }
+        let timerInterval = null;
+        let timeLeft = 20 * 60; // 20 minutes in seconds
+
+        // DOM Elements
+        const startScreen = document.getElementById('start-screen');
+        const quizScreen = document.getElementById('quiz-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const modeBadge = document.getElementById('mode-badge');
+        const badgeText = document.getElementById('badge-text');
+        const questionGrid = document.getElementById('question-grid');
+        const currentQNum = document.getElementById('current-q-num');
+        const currentQLevel = document.getElementById('current-q-level');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const answeredCount = document.getElementById('answered-count');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const timerBox = document.getElementById('timer-box');
+        const timerDisplay = document.getElementById('timer-display');
+
+        // Start Quiz Function
+        function startQuiz(mode) {
+            currentMode = mode;
+            currentQuestionIndex = 0;
+            userAnswers = {};
+
+            // If timed mode, randomize questions and options order or keep questions set
+            if (mode === 'timed') {
+                badgeText.textContent = "CHẾ ĐỘ TÍNH GIỜ (20 PHÚT)";
+                timerBox.classList.remove('hidden');
+                timeLeft = 20 * 60;
+                startTimer();
+            } else {
+                badgeText.textContent = "CHẾ ĐỘ LUYỆN TẬP";
+                timerBox.classList.add('hidden');
+            }
+
+            // Switch screens
+            startScreen.classList.add('hidden');
+            startScreen.classList.remove('flex');
+            resultScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            quizScreen.classList.add('flex');
+            modeBadge.classList.remove('hidden');
+
+            renderGrid();
+            loadQuestion(currentQuestionIndex);
+        }
+
+        // Timer Function for Timed Mode
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Hết thời gian làm bài! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                } else {
+                    timeLeft--;
+                    let minutes = Math.floor(timeLeft / 60);
+                    let seconds = timeLeft % 60;
+                    timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }, 1000);
+        }
+
+        // Render Question Navigator Grid
+        function renderGrid() {
+            questionGrid.innerHTML = '';
+            for (let i = 0; i < questionsData.length; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i + 1;
+                btn.className = "h-9 rounded-xl font-semibold text-xs transition border flex items-center justify-center ";
+                
+                if (i === currentQuestionIndex) {
+                    btn.className += "bg-blue-600 text-white border-blue-400 shadow-md ring-2 ring-blue-400/30";
+                } else if (userAnswers[i] !== undefined) {
+                    btn.className += "bg-amber-600/80 text-white border-amber-500 shadow";
+                } else {
+                    btn.className += "bg-[#4d2626] text-gray-300 border-[#7d4040] hover:bg-[#6b3636]";
+                }
+
+                btn.onclick = () => goToQuestion(i);
+                questionGrid.appendChild(btn);
+            }
+            updateAnsweredCount();
+        }
+
+        // Update Answered Counter
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            answeredCount.textContent = `${count} / 20 đã làm`;
+        }
+
+        // Load Question details
+        function loadQuestion(index) {
+            currentQuestionIndex = index;
+            const q = questionsData[index];
+
+            currentQNum.textContent = `Câu ${index + 1} / 20`;
+            currentQLevel.textContent = q.level;
+            questionText.innerHTML = q.question;
+
+            // Render options
+            optionsContainer.innerHTML = '';
+            q.options.forEach((opt, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+                const optBtn = document.createElement('div');
+                optBtn.className = `p-4 rounded-xl border cursor-pointer transition flex items-start space-x-3 ${
+                    isSelected 
+                        ? 'bg-amber-600/30 border-amber-500 text-white shadow-md' 
+                        : 'bg-[#4d2626] border-[#7d4040] text-gray-200 hover:bg-[#6b3636]'
+                }`;
+                
+                optBtn.innerHTML = `
+                    <div class="flex-shrink-0 w-6 h-6 rounded-full border ${isSelected ? 'border-amber-400 bg-amber-500 text-white' : 'border-gray-500 bg-[#592d2d] text-gray-300'} flex items-center justify-center text-xs font-bold mt-0.5">
+                        ${String.fromCharCode(65 + optIdx)}
+                    </div>
+                    <div class="flex-grow text-sm sm:text-base">${opt}</div>
+                `;
+
+                optBtn.onclick = () => selectOption(index, optIdx);
+                optionsContainer.appendChild(optBtn);
+            });
+
+            // Button states
+            prevBtn.disabled = index === 0;
+            nextBtn.innerHTML = index === questionsData.length - 1 
+                ? '<span>Hoàn thành</span><i class="fa-solid fa-check text-xs ml-1"></i>' 
+                : '<span>Câu Tiếp</span><i class="fa-solid fa-chevron-right text-xs ml-1"></i>';
+
+            renderGrid();
+            
+            // Trigger MathJax re-render if math present
+            if (window.MathJax) {
+                MathJax.typeset();
+            }
+        }
+
+        // Select an option
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            loadQuestion(qIdx);
+        }
+
+        // Navigation handlers
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questionsData.length - 1) {
+                loadQuestion(currentQuestionIndex + 1);
+            } else {
+                confirmSubmit();
+            }
+        }
+
+        function goToQuestion(index) {
+            loadQuestion(index);
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentQuestionIndex];
+            loadQuestion(currentQuestionIndex);
+        }
+
+        // Confirm Submit Modal / Action
+        function confirmSubmit() {
+            const unanswered = questionsData.length - Object.keys(userAnswers).length;
+            let msg = "Bạn có chắc chắn muốn nộp bài và kết thúc không?";
+            if (unanswered > 0) {
+                msg = `Bạn còn ${unanswered} câu chưa trả lời. Bạn vẫn muốn nộp bài chứ?`;
+            }
+            
+            // Using custom inline confirmation or standard confirm without alert() restriction violation
+            if (confirm(msg)) {
+                submitQuiz();
+            }
+        }
+
+        // Submit Quiz and calculate results
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            questionsData.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / questionsData.length) * 10;
+
+            // Hide Quiz Screen, Show Result Screen
+            quizScreen.classList.add('hidden');
+            quizScreen.classList.remove('flex');
+            resultScreen.classList.remove('hidden');
+
+            document.getElementById('result-mode-label').textContent = currentMode === 'practice' ? "Chế độ Luyện Tập" : "Chế độ Tính Giờ";
+            document.getElementById('final-score').textContent = `${score.toFixed(1)} / 10.0`;
+            document.getElementById('final-correct').textContent = `${correctCount} / 20 câu`;
+            
+            if (currentMode === 'timed') {
+                let timeSpentSecs = (20 * 60) - timeLeft;
+                let mins = Math.floor(timeSpentSecs / 60);
+                let secs = timeSpentSecs % 60;
+                document.getElementById('final-time').textContent = `${mins} phút ${secs} giây`;
+            } else {
+                document.getElementById('final-time').textContent = "Không giới hạn";
+            }
+
+            // Teacher Feedback based on score
+            const feedbackEl = document.getElementById('teacher-feedback');
+            if (score >= 9) {
+                feedbackEl.textContent = `Xuất sắc! Em nắm vững toàn bộ kiến thức văn bản Huyện đường (Trích tuồng Nghêu, Sò, Ốc, Hến), hiểu sâu sắc thủ đoạn nhũng nhiễu của bộ máy quan lại phong kiến và nghệ thuật trào phúng sắc sảo của tác giả dân gian. Hãy tiếp tục phát huy!`;
+            } else if (score >= 7) {
+                feedbackEl.textContent = `Khá tốt! Em đã hiểu cơ bản cốt truyện, nhân vật và ý nghĩa trào phúng của đoạn trích. Tuy nhiên, hãy đọc kĩ lại phần chú thích và các câu hỏi vận dụng cao về nghệ thuật tuồng để đạt kết quả hoàn hảo hơn nhé!`;
+            } else if (score >= 5) {
+                feedbackEl.textContent = `Đạt yêu cầu. Em đã nắm được một số kiến thức cơ bản về văn bản. Tuy nhiên, kết quả cho thấy em chưa nắm vững hệ thống nhân vật và ý nghĩa châm biếm sâu cay của vở tuồng. Hãy xem lại phần lời giải chi tiết và ôn tập lại SGK!`;
+            } else {
+                feedbackEl.textContent = `Cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và nội dung đoạn trích Huyện đường. Hãy đọc kĩ lại văn bản trong SGK, ghi nhớ đặc điểm thể loại tuồng đồ và xem kĩ từng lời giải chi tiết dưới đây để làm lại bài tốt hơn nhé!`;
+            }
+
+            // Build Detailed Solutions list
+            const solutionsList = document.getElementById('solutions-list');
+            solutionsList.innerHTML = '';
+
+            questionsData.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+                const card = document.createElement('div');
+                card.className = `bg-[#4d2626] border rounded-2xl p-6 space-y-4 shadow-md ${isCorrect ? 'border-emerald-500/50' : 'border-rose-500/50'}`;
+
+                let optionsHtml = '';
+                q.options.forEach((opt, optIdx) => {
+                    let badgeClass = "bg-[#592d2d] border-[#7d4040] text-gray-300";
+                    let iconHtml = "";
+                    
+                    if (optIdx === q.correct) {
+                        badgeClass = "bg-emerald-900/60 border-emerald-500 text-emerald-200 font-semibold";
+                        iconHtml = '<i class="fa-solid fa-check text-emerald-400 ml-2"></i>';
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        badgeClass = "bg-rose-900/60 border-rose-500 text-rose-200";
+                        iconHtml = '<i class="fa-solid fa-xmark text-rose-400 ml-2"></i>';
+                    }
+
+                    optionsHtml += `
+                        <div class="p-3 rounded-xl border text-xs sm:text-sm flex items-center justify-between ${badgeClass}">
+                            <span><strong>${String.fromCharCode(65 + optIdx)}.</strong> ${opt}</span>
+                            ${iconHtml}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex flex-wrap justify-between items-center gap-2 pb-3 border-b border-[#7d4040]">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-bold text-cream">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-600/30 text-amber-200 border border-amber-500/30">${q.level}</span>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-full font-semibold ${isCorrect ? 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/40' : 'bg-rose-600/30 text-rose-300 border border-rose-500/40'}">
+                            ${isCorrect ? '<i class="fa-solid fa-check mr-1"></i> Đúng' : '<i class="fa-solid fa-xmark mr-1"></i> Sai'}
+                        </span>
+                    </div>
+                    <div class="text-white font-medium text-sm sm:text-base">${q.question}</div>
+                    <div class="space-y-2">${optionsHtml}</div>
+                    <div class="bg-[#592d2d] border border-amber-500/30 rounded-xl p-4 text-xs sm:text-sm text-gray-200 space-y-1">
+                        <div class="text-amber-300 font-semibold flex items-center space-x-1.5 mb-1">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <p class="leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                solutionsList.appendChild(card);
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.MathJax) MathJax.typeset();
+        }
+
+        function restartQuiz() {
+            startScreen.classList.remove('hidden');
+            startScreen.classList.add('flex');
+            resultScreen.classList.add('hidden');
+            quizScreen.classList.add('hidden');
+            modeBadge.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToExplanations() {
+            document.getElementById('solutions-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
