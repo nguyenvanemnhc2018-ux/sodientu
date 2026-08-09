@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài học: Con đường mùa đông - Pu-skin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .square-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .circle-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .accent-btn {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .accent-btn:hover {
+            background-color: #2ee62e;
+            transform: translateY(-1px);
+        }
+        .section-header {
+            border-bottom: 3px solid #1e293b;
+            padding-bottom: 6px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER SECTION -->
+        <header class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+            <!-- Khối 1: Tên Chương (Màu 1: #1e3a8a) -->
+            <div style="background-color: #1e3a8a;" class="px-6 py-4 text-white text-center">
+                <h2 class="text-lg md:text-xl font-bold tracking-wide uppercase">Chương: Cấu Tứ Và Hình Ảnh Trong Thơ Trữ Tình</h2>
+            </div>
+            <!-- Đường kẻ mảnh phân cách -->
+            <div class="h-0.5 bg-gray-300"></div>
+            <!-- Khối 2: Tên Bài (Màu 2: #0284c7) -->
+            <div style="background-color: #0284c7;" class="px-6 py-5 text-white text-center">
+                <h1 class="text-2xl md:text-3xl font-extrabold tracking-wider uppercase">VĂN BẢN 3: CON ĐƯỜNG MÙA ĐÔNG (A. S. PU-SKIN)</h1>
+            </div>
+        </header>
+
+        <!-- INTRO BOX (LỜI DẪN KHỞI ĐỘNG) -->
+        <section class="bg-white border border-black rounded-xl p-5 shadow-sm space-y-2">
+            <h3 class="text-base font-bold uppercase tracking-wider text-gray-700">Lời Dẫn Khởi Động</h3>
+            <p class="italic text-gray-700 leading-relaxed">
+                "Hãy hình dung những trở ngại tinh thần mà một người độc hành trên đường lạnh vắng có thể phải đối diện. Theo bạn, để vượt qua những trở ngại đó, người ta có thể làm gì?"
+            </p>
+        </section>
+
+        <!-- MAIN CONTENT CONTAINER -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6 border border-gray-100">
+            <!-- SECTION I HEADER -->
+            <h2 class="text-xl md:text-2xl font-extrabold uppercase text-gray-900 section-header flex items-center">
+                <span class="square-num">I</span> TÌM HIỂU CHUNG (TIỂU DẪN)
+            </h2>
+
+            <!-- 1. Tác giả -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="circle-num">1</span> Tác giả A-lếch-xan-đrơ Xéc-ghê-ê-vích Pu-skin (1799 – 1837)
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                    <div class="md:col-span-2 space-y-2">
+                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+                            <p class="font-semibold text-blue-950">Vị trí & Đóng góp lịch sử:</p>
+                            <p class="text-gray-700">Pu-skin là nhà thơ vĩ đại, được tôn vinh là <strong>"Mặt trời của thi ca Nga"</strong>, người đặt nền móng cho văn học hiện thực Nga thế kỉ XIX. Ông được Đốt-xtôi-ép-xki đánh giá là người duy nhất nói tiếng nói "toàn nhân loại".</p>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+                            <p class="font-semibold text-blue-950">Phong cách nghệ thuật:</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Ngôn từ chính xác, giản dị, trong sáng và vô cùng hàm súc.</li>
+                                <li>Thiên nhiên và hình tượng trong thơ không chỉ biểu đạt tâm trạng mà còn chở chở sự vận động ý thức, hướng tới sự cân bằng, hài hòa.</li>
+                                <li>Tràn ngập tinh thần nhân văn cao cả, vừa trần thế vừa có sức lay động sâu sắc.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+                            <p class="font-semibold text-blue-950">Di sản tác phẩm:</p>
+                            <p class="text-gray-700">Để lại di sản đồ sộ ở nhiều thể loại, tiêu biểu với hơn 800 bài thơ trữ tình, các tiểu thuyết bằng thơ (<em>Ơ-gen-ni Ô-nê-ghin</em>), trường ca, kịch...</p>
+                        </div>
+                    </div>
+                    <!-- Khung ảnh tác giả h1.png -->
+                    <div class="flex flex-col items-center justify-center p-3 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
+                        <img src="h1.png" alt="Chân dung nhà thơ A. S. Pu-skin" class="max-h-56 object-cover rounded shadow mb-2" onerror="this.src='https://placehold.co/200x260/1e3a8a/ffffff?text=Hình+H1+(h1.png)';">
+                        <span class="text-xs text-gray-500 italic text-center">Hình 1: Chân dung Pu-skin (Tranh của O. Kip-ren-xki, 1827) (h1.png)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Tác phẩm -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="circle-num">2</span> Tác phẩm "Con đường mùa đông"
+                </h3>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg space-y-2">
+                    <p><strong>Hoàn cảnh sáng tác:</strong> Sáng tác vào cuối năm 1826, sau thất bại của cuộc khởi nghĩa các nhà quý tộc tiến bộ (Tháng 12/1825) và trong thời gian nhà thơ bị chính quyền Nga hoàng lưu đày ở phương Bắc.</p>
+                    <p><strong>Cảm hứng chủ đạo:</strong> Sự hòa quyện giữa nỗi buồn riêng nơi đày ải, nỗi buồn chung của nhân dân với ý chí, khát vọng vượt qua gian khó để tìm lại cảm giác ấm áp, bình yên.</p>
+                    <p><strong>Thể loại & Dịch giả:</strong> Thơ trữ tình (thể thơ 4 câu nhịp điệu đều đặn), bản dịch thơ nổi tiếng của dịch giả <strong>Thúy Toàn</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION II - READING COMPREHENSION -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6 border border-gray-100">
+            <h2 class="text-xl md:text-2xl font-extrabold uppercase text-gray-900 section-header flex items-center">
+                <span class="square-num">II</span> ĐỌC - HIỂU VĂN BẢN (CẤU TỨ VÀ HÌNH ẢNH)
+            </h2>
+
+            <!-- HOẠT ĐỘNG KHÁM PHÁ VĂN BẢN & CÁC CÂU HỎI TRONG KHI ĐỌC -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="circle-num">1</span> Các câu hỏi gợi mở trong khi đọc (Biểu tượng ?)
+                </h3>
+
+                <!-- Question Box 1 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-lg space-y-2">
+                    <p class="font-semibold text-gray-800">❓ Câu 1 (Trang 62): Lưu ý: Mỗi hình ảnh, âm thanh trong bài thơ vừa nhấn mạnh nỗi buồn, vừa thể hiện hoạt động không trở ngại.</p>
+                    <button onclick="toggleAnswer('q_read_1')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem trả lời</button>
+                    <div id="q_read_1" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950 space-y-1">
+                        <p><strong>Trả lời:</strong> Âm thanh "nhạc ngựa đều đều buồn tẻ", "tiếng lục lạc", hình ảnh "sương mù gợn sóng", "mảnh trăng mờ" thể hiện không gian quạnh hiu. Nhưng đồng thời, chiếc xe tam mã vẫn lao nhanh, kim đồng hồ vẫn quay, khẳng định sự vận động liên tục không ngừng nghỉ của con người trên hành trình vượt qua chướng ngại.</p>
+                    </div>
+                </div>
+
+                <!-- Question Box 2 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-lg space-y-2">
+                    <p class="font-semibold text-gray-800">❓ Câu 2 (Trang 62): Giữa ngoại cảnh và những hình ảnh xuất hiện trong tâm tưởng có sự tương phản như thế nào?</p>
+                    <button onclick="toggleAnswer('q_read_2')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem trả lời</button>
+                    <div id="q_read_2" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950 space-y-1">
+                        <p><strong>Trả lời:</strong> Sự tương phản gay gắt giữa <strong>Ngoại cảnh thực tại</strong> (lạnh giá, tuyết trắng, rừng bao la, âm thanh đơn điệu, cô độc) và <strong>Tâm tưởng tương lai</strong> (mái ấm lò sưởi đỏ, gương mặt em yêu Nhi-na, sự gần gũi ấm áp không chia rẽ).</p>
+                    </div>
+                </div>
+
+                <!-- Question Box 3 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-lg space-y-2">
+                    <p class="font-semibold text-gray-800">❓ Câu 3 (Trang 63): Lời than "Ôi buồn đau, ôi cô lẻ..." kết nối tâm tưởng nhân vật trữ tình với ai? Ở đâu?</p>
+                    <button onclick="toggleAnswer('q_read_3')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem trả lời</button>
+                    <div id="q_read_3" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950 space-y-1">
+                        <p><strong>Trả lời:</strong> Lời than ấy kết nối tâm hồn nhân vật trữ tình với người yêu (Nhi-na) ở chốn quê nhà ấm áp - nơi có lò sưởi đỏ và tình yêu thương đang chờ đón ông vào ngày mai.</p>
+                    </div>
+                </div>
+
+                <!-- Question Box 4 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-lg space-y-2">
+                    <p class="font-semibold text-gray-800">❓ Câu 4 (Trang 63): Những hình tượng thơ đã xuất hiện trong bài được điểm lại như thế nào?</p>
+                    <button onclick="toggleAnswer('q_read_4')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem trả lời</button>
+                    <div id="q_read_4" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950 space-y-1">
+                        <p><strong>Trả lời:</strong> Ở khổ cuối, các hình tượng được tái hiện tổng hợp: "đường xa vắng", "bác xà ích lặng im", "nhạc ngựa buông xa thẳm", "sương mờ che lấp ánh trăng nghiêng" $\rightarrow$ Khép lại bài thơ bằng một vòng cung kết nối giữa ngoại cảnh thực tại và tâm trạng ưu tư.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BẢNG PHÂN TÍCH CẤU TỨ & HÌNH ẢNH CON ĐƯỜNG MÙA ĐÔNG -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="circle-num">2</span> Bảng Phân Tích Cấu Tứ Song Hành (Thực tại Tâm tưởng)
+                </h3>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-[#cbd5e0] text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-[#e2e8f0] text-gray-800">
+                                <th class="border border-[#cbd5e0] p-3 font-bold text-center">Các khổ thơ</th>
+                                <th class="border border-[#cbd5e0] p-3 font-bold text-center">Hình ảnh & Âm thanh chủ đạo</th>
+                                <th class="border border-[#cbd5e0] p-3 font-bold text-center">Cấu Tứ & Vận Động Tâm Trạng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50 text-center">Khổ 1 - 3</td>
+                                <td class="border border-[#cbd5e0] p-3">Sương mù, trăng mờ, đồng u buồn, nhạc ngựa đều đều, bài ca xà ích (mặt vui / mặt buồn).</td>
+                                <td class="border border-[#cbd5e0] p-3">Cấu tứ ngoại cảnh: Nỗi buồn dâng trào giữa thiên nhiên Nga tuyết trắng rộng lớn và mênh mông.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50 text-center">Khổ 4</td>
+                                <td class="border border-[#cbd5e0] p-3">Không mái lều, không ánh lửa, tuyết trắng, rừng bao la, cột sọc chỉ đường sừng sững.</td>
+                                <td class="border border-[#cbd5e0] p-3">Cấu tứ chuyển biến: Đỉnh điểm cô độc nhưng cột mốc chỉ đường khẳng định sự tiến lên liên tục.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50 text-center">Khổ 5 - 6</td>
+                                <td class="border border-[#cbd5e0] p-3">Hình bóng Nhi-na, lò lửa đỏ, kim đồng hồ tích tắc, đêm sum họp.</td>
+                                <td class="border border-[#cbd5e0] p-3">Cấu tứ tâm tưởng: Điểm tựa tinh thần vượt thoát thực tại; khát vọng tình yêu và sự bình yên.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50 text-center">Khổ 7</td>
+                                <td class="border border-[#cbd5e0] p-3">Đường xa vắng, bác xà ích thiu thiu, nhạc ngựa buông xa, trăng nghiêng mờ sương.</td>
+                                <td class="border border-[#cbd5e0] p-3">Cấu tứ tổng hợp: Trở lại thực tại nhưng với tâm thế tĩnh lặng, kiên định hơn.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- HOẠT ĐỘNG TRẢ LỜI CÂU HỎI SAU KHI ĐỌC (SGK TRANG 64) -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="circle-num">3</span> Trả lời câu hỏi cuối bài học (Trang 64)
+                </h3>
+
+                <!-- Question 1 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 1: Nhan đề bài thơ "Con đường mùa đông" gợi cho bạn những liên tưởng gì?</p>
+                    <button onclick="toggleAnswer('sgk_1')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_1" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- <strong>Nghĩa thực:</strong> Con đường tuyết bao phủ rợn ngợp của thiên nhiên nước Nga vào mùa đông giá lạnh mà nhà thơ đang vượt qua trên chiếc xe tam mã.</p>
+                        <p>- <strong>Nghĩa biểu tượng:</strong> Tượng trưng cho chặng đường đời đầy trắc trở, đày ải, cô đơn của chính tác giả cũng như vận mệnh gian bân của đất nước Nga trong thời kì chuyên chế.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 2: Mâu thuẫn giữa nỗi buồn với ý thức vận động vượt qua trở ngại qua các hình ảnh và âm thanh?</p>
+                    <button onclick="toggleAnswer('sgk_2')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_2" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- <strong>Hình ảnh & âm thanh buồn:</strong> "Trăng mờ ảo", "tiếng nhạc ngựa đều đều buồn tẻ", "rừng bao la", "sương mờ". Chúng gợi sự cô đơn, tĩnh lặng.</p>
+                        <p>- <strong>Ý thức vận động:</strong> Xe vẫn lao nhanh, "cột cây số sừng sững", "kim đồng hồ kêu tích tắc xoay đủ vòng". Vận động vật lý và sự trôi chảy của thời gian khẳng định con người không dừng lại mà đang chủ động tiến về đích.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 3: Xác định những hình ảnh, hoạt động tương phản trong khổ 4 và sự thay đổi của nhân vật trữ tình?</p>
+                    <button onclick="toggleAnswer('sgk_3')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_3" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- <strong>Hình ảnh tương phản:</strong> "Không một mái lều, ánh lửa" (sự vắng bóng sự sống) $\xrightleftharpoons$ "Tuyết trắng và rừng bao la" cùng "những cột dài cây số sừng sững chào ta".</p>
+                        <p>- <strong>Sự thay đổi:</strong> Nhân vật trữ tình không hoàn toàn gục ngã trong u buồn mà tìm thấy sự đồng hành độc đáo từ những "cột cây số" - biểu tượng cho cột mốc đo đếm hành trình tiến gần về đích.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 4: Không gian, thời gian tâm tưởng ở khổ 5 - 6 và những điều nhân vật trữ tình tận hưởng?</p>
+                    <button onclick="toggleAnswer('sgk_4')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_4" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- <strong>Thời gian - không gian tâm tưởng:</strong> "Ngày mai", "bên lò lửa đỏ", trong căn phòng ấm áp bên người yêu Nhi-na.</p>
+                        <p>- <strong>Trải nghiệm tâm tưởng:</strong> Được "ngắm em mãi không thôi", lắng nghe tiếng kim đồng hồ xoay nhịp nhàng, xua tan lũ người tẻ ngắt $\rightarrow$ Đây chính là liều thuốc tinh thần tiếp thêm sức mạnh để nhà thơ chịu đựng và vượt qua cái lạnh lùng thực tại.</p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 5: Ý nghĩa các hình tượng "xe tam mã", "bài ca xà ích", "mái lều, ánh lửa", "Nhi-na"?</p>
+                    <button onclick="toggleAnswer('sgk_5')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_5" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- <strong>Xe tam mã:</strong> Biểu tượng cho tâm hồn và sức sống mãnh liệt của đất nước Nga.</p>
+                        <p>- <strong>Bài ca xà ích:</strong> Biểu hiện tâm hồn Nga (vừa vui tươi trẩy hội vừa đượm buồn tâm tình).</p>
+                        <p>- <strong>Mái lều, ánh lửa, Nhi-na:</strong> Điểm tựa ước mơ về sự ấm áp, bình yên, tình yêu thương nhân bản.</p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 6: Nhận xét về các hình tượng được điểm lại ở khổ cuối và suy nghĩ về việc lấy lại bình yên?</p>
+                    <button onclick="toggleAnswer('sgk_6')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_6" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- Khổ cuối nhắc lại: "đường xa vắng", "bác xà ích lặng im", "nhạc ngựa", "trăng nghiêng". Nhịp thơ quay về với thực tại nhưng tâm hồn đã trở nên điềm tĩnh, ấm áp hơn nhờ điểm tựa tâm tưởng.</p>
+                        <p>- <strong>Bài học cuộc sống:</strong> Muốn lấy lại cảm giác bình yên trên "con đường mùa đông" của cuộc đời, con người cần có niềm tin, hướng về tình yêu thương, gia đình và những mục đích cao đẹp ở tương lai.</p>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-gray-800">Câu 7: Nhận xét về cấu tứ bài thơ và liên hệ bài thơ khác?</p>
+                    <button onclick="toggleAnswer('sgk_7')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải</button>
+                    <div id="sgk_7" class="hidden mt-3 bg-emerald-50 border border-emerald-300 p-3 rounded text-emerald-950">
+                        <p>- <strong>Cấu tứ:</strong> Cấu tứ dịch chuyển từ thực tại lạnh giá $\rightarrow$ tâm tưởng ấm áp $\rightarrow$ trở lại thực tại với niềm tin. Đó là cấu tứ vận động hóa giải nỗi buồn.</p>
+                        <p>- <strong>Liên hệ:</strong> Có cấu tứ tương đồng với bài thơ <em>"Nhớ đồng"</em> (Tố Hữu) - từ thực tại tù đày cô đơn $\rightarrow$ nhớ về cảnh đồng quê và lý tưởng $\rightarrow$ tiếp thêm sức mạnh chiến đấu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOẠT ĐỘNG KẾT NỐI ĐỌC - VIẾT (BÀN TAY) -->
+            <div class="bg-indigo-50 border-2 border-indigo-200 rounded-xl p-5 space-y-3">
+                <h3 class="text-lg font-bold text-indigo-900 flex items-center">
+                    🖐️ HOẠT ĐỘNG KẾT NỐI ĐỌC - VIẾT
+                </h3>
+                <p class="text-gray-800 italic">"Viết đoạn văn (khoảng 150 chữ) về một hình ảnh mang ý nghĩa tượng trưng mà bạn cho là đặc sắc nhất trong bài thơ Con đường mùa đông."</p>
+                <button onclick="toggleAnswer('writing_act')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem hướng dẫn & Đoạn văn mẫu</button>
+                <div id="writing_act" class="hidden bg-white p-4 rounded-lg border border-indigo-200 text-gray-800 leading-relaxed space-y-2">
+                    <p class="font-semibold text-indigo-900">Đoạn văn tham khảo (Về hình ảnh "Tiếng nhạc ngựa đều đều"):</p>
+                    <p class="text-justify">
+                        Trong bài thơ "Con đường mùa đông" của Pu-skin, hình ảnh âm thanh "tiếng nhạc ngựa đều đều" là một biểu tượng vô cùng đặc sắc. Âm thanh ấy vang lên giữa không gian tuyết trắng bao la, không chỉ đo đếm bước đi miên man của thời gian mà còn xoáy sâu vào nỗi cô đơn, tịch mịch của người độc hành trên đường đày ải. Điệu nhạc "khắc khắc hoài vọng" ấy tưởng chừng làm tăng thêm sự buồn tẻ, nhưng mặt khác, nó lại là nhịp đập bền bỉ của sự sống, khẳng định chiếc xe tam mã vẫn đang không ngừng lao về phía trước. Tiếng nhạc ngựa kết nối hiện thực lạnh giá với hành trình tâm tưởng hướng tới mái ấm lò sưởi đỏ và hình bóng người yêu Nhi-na. Qua đó, Pu-skin đã biến một âm thanh đời thường thành biểu tượng cho nghị lực vươn lên, hóa giải nỗi buồn để vươn tới cái đẹp và sự bình yên trong tâm hồn.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIAL BOXES SECTION -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Em có biết -->
+            <div class="bg-purple-50 border border-purple-300 rounded-xl p-4 shadow-sm space-y-2">
+                <h4 class="font-bold text-purple-900 text-base flex items-center">💡 Em có biết?</h4>
+                <p class="text-sm text-purple-950 leading-relaxed">
+                    Hình ảnh <strong>"Xe tam mã" (Troika)</strong> kéo ba con ngựa chạy nước đại là một biểu tượng độc đáo của văn hóa truyền thống Nga. Khi xe chạy nhanh, người ngồi trên xe cảm thấy như bay lên, thể hiện tinh thần tự do và tâm hồn phóng khoáng của nhân dân Nga.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-teal-50 border border-teal-300 rounded-xl p-4 shadow-sm space-y-2">
+                <h4 class="font-bold text-teal-900 text-base flex items-center">🎯 Em có thể</h4>
+                <p class="text-sm text-teal-950 leading-relaxed">
+                    So sánh phương pháp miêu tả thiên nhiên và chuyển biến tâm trạng trong thơ Pu-skin với phong trào Thơ mới Việt Nam (1932 - 1945) để hiểu rõ hơn về tính chất lãng mạn phương Tây và lãng mạn Việt Nam.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border border-rose-300 rounded-xl p-4 shadow-sm space-y-2">
+                <h4 class="font-bold text-rose-900 text-base flex items-center">⚠️ Lưu ý</h4>
+                <p class="text-sm text-rose-950 leading-relaxed">
+                    Nỗi buồn trong thơ Pu-skin không bao giờ dẫn đến sự bi lụy, bế tắc tuyệt vọng. Đó là <strong>"nỗi buồn trong sáng"</strong>, chứa đựng sức mạnh tinh thần to lớn giúp con người vượt qua mọi nghịch cảnh thời đại.
+                </p>
+            </div>
+        </section>
+
+        <!-- QUIZ GAMESHOW "AI LÀ TRIỆU PHÚ" (10 CÂU TRẮC NGHIỆM) -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6 border border-gray-100">
+            <div class="bg-slate-900 text-white p-4 rounded-xl flex items-center justify-between">
+                <div>
+                    <h2 class="text-xl font-bold text-yellow-400 uppercase">🏆 GAMESHOW: AI LÀ TRIỆU PHÚ</h2>
+                    <p class="text-xs text-gray-300">10 câu hỏi trắc nghiệm củng cố kiến thức văn bản Pu-skin (Nhận biết, Thông hiểu, Vận dụng)</p>
+                </div>
+                <span class="text-2xl">💰</span>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 1 (Biết): Nhà thơ A. S. Pu-skin được tôn vinh với danh hiệu cao quý nào trong văn học Nga?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q1" value="A"> A. Ngôi sao phương Bắc</label>
+                        <label class="block"><input type="radio" name="q1" value="B"> B. Mặt trời của thi ca Nga</label>
+                        <label class="block"><input type="radio" name="q1" value="C"> C. Cây bút đại ngàn</label>
+                        <label class="block"><input type="radio" name="q1" value="D"> D. Thi sĩ của nhân dân</label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 2 (Biết): Bài thơ "Con đường mùa đông" được sáng tác vào thời gian nào?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q2" value="A"> A. Cuối năm 1826</label>
+                        <label class="block"><input type="radio" name="q2" value="B"> B. Mùa thu năm 1820</label>
+                        <label class="block"><input type="radio" name="q2" value="C"> C. Mùa xuân năm 1837</label>
+                        <label class="block"><input type="radio" name="q2" value="D"> D. Mùa hè năm 1825</label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 3 (Biết): Phương tiện di chuyển nào xuất hiện trong bài thơ và là biểu tượng văn hóa Nga?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q3" value="A"> A. Xe trượt tuyết tuần lộc</label>
+                        <label class="block"><input type="radio" name="q3" value="B"> B. Thuyền buồm trên sông</label>
+                        <label class="block"><input type="radio" name="q3" value="C"> C. Xe tam mã (Troika)</label>
+                        <label class="block"><input type="radio" name="q3" value="D"> D. Xe ngựa đơn</label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 4 (Hiểu): Nhân vật nữ được gọi tên trong tâm tưởng của nhà thơ là ai?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q4" value="A"> A. Na-ta-sha</label>
+                        <label class="block"><input type="radio" name="q4" value="B"> B. Nhi-na</label>
+                        <label class="block"><input type="radio" name="q4" value="C"> C. Anna</label>
+                        <label class="block"><input type="radio" name="q4" value="D"> D. Tát-ti-a-na</label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 5 (Hiểu): Âm thanh nào xuyên suốt bài thơ vừa gợi sự cô đơn buồn tẻ vừa thể hiện nhịp vận động không ngừng?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q5" value="A"> A. Tiếng gió hú trong rừng tuyết</label>
+                        <label class="block"><input type="radio" name="q5" value="B"> B. Tiếng nhạc ngựa / lục lạc đều đều</label>
+                        <label class="block"><input type="radio" name="q5" value="C"> C. Tiếng bước chân trên tuyết</label>
+                        <label class="block"><input type="radio" name="q5" value="D"> D. Tiếng còi tàu từ xa</label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 6 (Hiểu): Nét tương phản cốt lõi trong cấu tứ của bài thơ là gì?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q6" value="A"> A. Ngoại cảnh mùa đông lạnh giá, cô đơn với tâm tưởng ấm áp, tràn đầy hy vọng</label>
+                        <label class="block"><input type="radio" name="q6" value="B"> B. Giữa người xà ích hát ca và nhà thơ đang giận dữ</label>
+                        <label class="block"><input type="radio" name="q6" value="C"> C. Giữa ánh trăng sáng rực và bóng tối mịt mù</label>
+                        <label class="block"><input type="radio" name="q6" value="D"> D. Giữa mùa đông và mùa hè</label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 7 (Hiểu): Hình ảnh "những cột dài cây số / sừng sững chào ta" ở khổ 4 có ý nghĩa gì?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q7" value="A"> A. Tạo ra sự đe dọa đối với người đi đường</label>
+                        <label class="block"><input type="radio" name="q7" value="B"> B. Là vật cản khiến xe ngựa không thể di chuyển</label>
+                        <label class="block"><input type="radio" name="q7" value="C"> C. Đo đếm khoảng cách đơn độc nhưng là điểm tựa khẳng định hành trình đang tiến về đích</label>
+                        <label class="block"><input type="radio" name="q7" value="D"> D. Biểu tượng cho sự giàu có của chủ trang trại</label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 8 (Vận dụng): Dịch giả của bản dịch thơ "Con đường mùa đông" trong sách giáo khoa là ai?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q8" value="A"> A. Thúy Toàn</label>
+                        <label class="block"><input type="radio" name="q8" value="B"> B. Xuân Diệu</label>
+                        <label class="block"><input type="radio" name="q8" value="C"> C. Huy Cận</label>
+                        <label class="block"><input type="radio" name="q8" value="D"> D. Tố Hữu</label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-800">Câu 9 (Vận dụng): Giá trị nhân văn sâu sắc nhất thể hiện qua bài thơ là gì?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q9" value="A"> A. Nỗi buồn không làm con người gục ngã mà kích thích khát vọng hướng tới ánh sáng và tình yêu</label>
+                        <label class="block"><input type="radio" name="q9" value="B"> B. Khuyên con người không nên đi du lịch vào mùa đông</label>
+                        <label class="block"><input type="radio" name="q9" value="C"> C. Ca ngợi sự giàu có của giới quý tộc Nga</label>
+                        <label class="block"><input type="radio" name="q9" value="D"> D. Phê phán thái độ phục vụ của người xà ích</label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 space-y-2">
+                    <p class="font-bold text-gray-1000">Câu 10 (Vận dụng): Đặc điểm nổi bật của ngôn từ thơ Pu-skin được thể hiện qua bài thơ này?</p>
+                    <div class="space-y-1 text-sm text-gray-700">
+                        <label class="block"><input type="radio" name="q10" value="A"> A. Giản dị, chính xác, trong sáng, hàm súc và giàu tính tượng trưng</label>
+                        <label class="block"><input type="radio" name="q10" value="B"> B. Cầu kỳ, hoa mỹ và dùng nhiều thuật ngữ khoa học</label>
+                        <label class="block"><input type="radio" name="q10" value="C"> C. Khó hiểu, ma mị và rắc rối</label>
+                        <label class="block"><input type="radio" name="q10" value="D"> D. Hoàn toàn là khẩu ngữ dân gian thô ráp</label>
+                    </div>
+                </div>
+
+                <!-- Nút nộp bài -->
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-900 text-white font-bold px-8 py-3 rounded-lg hover:bg-slate-800 shadow-md">
+                        NỘP BÀI KẾT QUẢ
+                    </button>
+                </div>
+            </form>
+
+            <!-- Khung hiển thị kết quả -->
+            <div id="quizResult" class="hidden p-5 rounded-lg border text-base font-semibold space-y-3"></div>
+        </section>
+
+        <!-- BÀI TẬP TỰ LUẬN TÍNH TOÁN / PHÂN TÍCH -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6 border border-gray-100">
+            <h2 class="text-xl md:text-2xl font-extrabold uppercase text-gray-900 section-header flex items-center">
+                <span class="square-num">III</span> BÀI TẬP TỰ LUẬN & THỰC HÀNH CỦNG CỐ
+            </h2>
+
+            <!-- Essay Question 1 -->
+            <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg space-y-3">
+                <p class="font-bold text-gray-800">Bài 1: Phân tích sự chuyển biến tâm trạng của nhân vật trữ tình từ cảnh thực (khổ 1-4) sang không gian tâm tưởng (khổ 5-6) và trở lại thực tại (khổ 7).</p>
+                <button onclick="toggleAnswer('essay_1')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải chi tiết</button>
+                <div id="essay_1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded text-emerald-950 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>- <strong>Giai đoạn 1 (Khổ 1-4):</strong> Tâm trạng ngập tràn sự u buồn, cô đơn rợn ngợp giữa thiên nhiên mùa đông lạnh giá của nước Nga. Những hình ảnh như trăng mờ, rừng bao la và nhạc ngựa đơn điệu đè nặng lên cảm xúc.</p>
+                    <p>- <strong>Giai đoạn 2 (Khổ 5-6):</strong> Tâm trạng bừng sáng nhờ sức mạnh của hoài niệm và khát vọng. Nhân vật trữ tình vượt thoát thực tại để hướng về mái ấm lò sưởi đỏ và hình bóng em yêu Nhi-na.</p>
+                    <p>- <strong>Giai đoạn 3 (Khổ 7):</strong> Quay trở lại thực tại "đường xa vắng", nhưng giờ đây tâm hồn không còn tuyệt vọng mà đã lấy lại được sự bình tĩnh, tĩnh lặng và kiên định.</p>
+                </div>
+            </div>
+
+            <!-- Essay Question 2 -->
+            <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg space-y-3">
+                <p class="font-bold text-gray-800">Bài 2: Tính toán chỉ số tần suất xuất hiện của các từ ngữ chỉ sắc thái u buồn, cô đơn trong bài thơ (bản dịch) và nhận xét nhịp điệu cảm xúc.</p>
+                <button onclick="toggleAnswer('essay_2')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải chi tiết</button>
+                <div id="essay_2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded text-emerald-950 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>- Thống kê từ ngữ chỉ u buồn & cô đơn: <em>mờ ảo (1), buồn (2), vắng vẻ (1), buồn tẻ (1), khắc khắc hoài vọng/khắc khoải (1), đìu hiu (1), không một (1), buồn đau (1), cô lẻ (1), sầu (1)</em>.</p>
+                    <p>- Tổng số từ chỉ sắc thái u buồn: khoảng 11 từ trên tổng số 112 từ của bài thơ dịch (chiếm tỉ lệ xấp xỉ \(9.8\%\)).</p>
+                    <p>- Nhận xét: Mặc dù tần suất từ u buồn khá cao ở phần đầu, sự xuất hiện của các từ ngữ ấm áp ở khổ 5-6 ("lửa đỏ", "bên nhau") đã tạo nên sự cân bằng, hóa giải sắc thái cô đơn triệt để.</p>
+                </div>
+            </div>
+
+            <!-- Essay Question 3 -->
+            <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg space-y-3">
+                <p class="font-bold text-gray-800">Bài 3: So sánh biểu tượng "con đường" trong "Con đường mùa đông" (Pu-skin) và "Tràng giang" (Huy Cận) để làm rõ sự khác biệt trong cấu tứ.</p>
+                <button onclick="toggleAnswer('essay_3')" class="accent-btn px-4 py-1.5 rounded text-sm shadow">Xem lời giải chi tiết</button>
+                <div id="essay_3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded text-emerald-950 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>- <strong>Trong "Con đường mùa đông" (Pu-skin):</strong> Con đường vừa là thực tại đày ải, vừa là hành trình vận động tiến lên. Cấu tứ thơ là sự hóa giải nỗi buồn qua niềm tin và khát vọng yêu thương.</p>
+                    <p>- <strong>Trong "Tràng giang" (Huy Cận):</strong> "Con đường" sông nước là không gian chia ly, bơ vơ không điểm tựa ("không cầu", "không đò"). Cấu tứ xoáy sâu vào sự tương phản giữa kiếp người nhỏ bé và vũ trụ vĩnh hằng.</p>
+                    <p>- Kết luận: Pu-skin thể hiện tinh thần lãng mạn tích cực vươn lên vượt nghịch cảnh, còn Huy Cận thể hiện cái "tôi" lãng mạn Thơ mới ngập tràn nỗi sầu nhân thế trước thời cuộc.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-6 border-t border-gray-300 text-gray-600 font-semibold text-sm">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hàm ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Đáp án trắc nghiệm chuẩn Pu-skin
+        const correctAnswers = {
+            q1: "B",
+            q2: "A",
+            q3: "C",
+            q4: "B",
+            q5: "B",
+            q6: "A",
+            q7: "C",
+            q8: "A",
+            q9: "A",
+            q10: "A"
+        };
+
+        const explanations = {
+            q1: "Pu-skin được nhà phê bình Bê-lin-ski và nhân dân Nga tôn vinh là 'Mặt trời của thi ca Nga'.",
+            q2: "Bài thơ sáng tác vào cuối năm 1826 trên đường bị đày ải ở phương Bắc.",
+            q3: "Xe tam mã (Troika) là kiểu xe kéo ba ngựa độc đáo, tượng trưng cho tâm hồn nước Nga.",
+            q4: "Nhi-na là người yêu thương được nhà thơ gọi tên trong tâm tưởng.",
+            q5: "Tiếng nhạc ngựa / lục lạc vừa đo đếm thời gian vừa thể hiện sự vận động tiến lên không ngừng.",
+            q6: "Cấu tứ dựa trên sự tương phản giữa ngoại cảnh lạnh giá và tâm tưởng ấm áp.",
+            q7: "Cột cây số là điểm tựa khẳng định con người đang tiến dần về phía trước.",
+            q8: "Bản dịch thơ nổi tiếng trong SGK là của dịch giả Thúy Toàn.",
+            q9: "Nỗi buồn trong thơ Pu-skin là nỗi buồn trong sáng, kích thích khát vọng sống và yêu.",
+            q10: "Thơ Pu-skin nổi tiếng với ngôn từ giản dị, trong sáng, hàm súc và giàu tính tượng trưng."
+        };
+
+        // Hàm kiểm tra trắc nghiệm
+        function checkQuiz() {
+            let score = 0;
+            const total = 10;
+            let resultHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : null;
+                const correctAns = correctAnswers[qName];
+
+                if (userAns === correctAns) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            resultDiv.classList.remove('hidden');
+
+            if (score === total) {
+                resultDiv.className = "p-5 rounded-lg border border-emerald-400 bg-emerald-50 text-emerald-900 space-y-3";
+                resultHTML += `<p class="text-xl font-extrabold text-emerald-600">🎉 XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA: ${score}/${total} CÂU!</p>`;
+            } else {
+                resultDiv.className = "p-5 rounded-lg border border-rose-400 bg-rose-50 text-rose-900 space-y-3";
+                resultHTML += `<p class="text-xl font-extrabold text-rose-600">KẾT QUẢ: BẠN ĐẠT ${score}/${total} CÂU ĐÚNG.</p>`;
+            }
+
+            resultHTML += `<h4 class="font-bold text-gray-800 text-lg border-b border-gray-300 pb-2">HƯỚNG DẪN GIẢI CHI TIẾT TỪNG CÂU:</h4>`;
+            resultHTML += `<ol class="list-decimal list-inside space-y-2 text-sm text-gray-800">`;
+
+            for (let i = 1; i <= total; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : "Chưa chọn";
+                const correctAns = correctAnswers[qName];
+                const isCorrect = (userAns === correctAns);
+
+                resultHTML += `<li class="p-2 rounded ${isCorrect ? 'bg-emerald-100' : 'bg-rose-100'}">`;
+                resultHTML += `<strong>Câu ${i}:</strong> Đáp án chọn: <span class="font-bold">${userAns}</span> | Đáp án đúng: <span class="font-bold text-emerald-700">${correctAns}</span><br>`;
+                resultHTML += `<span class="italic text-gray-700">➜ ${explanations[qName]}</span>`;
+                resultHTML += `</li>`;
+            }
+
+            resultHTML += `</ol>`;
+            resultDiv.innerHTML = resultHTML;
+
+            // Re-render MathJax nếu có công thức trong kết quả
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+    </script>
+</body>
+</html>
