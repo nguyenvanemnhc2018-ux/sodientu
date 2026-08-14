@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Một Đời Như Kẻ Tìm Đường</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        /* Style for Roman numeral boxes */
+        .roman-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            border: 2px solid #1e293b;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        /* Style for Arabic number circles */
+        .number-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: #037860;
+            color: #ffffff;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        /* Custom section title underline */
+        .section-header {
+            border-bottom: 4px solid #1e3a8a;
+            padding-bottom: 0.5rem;
+        }
+        /* Gameshow Millionaire Styles */
+        .millionaire-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 2px solid #f59e0b;
+        }
+        .option-btn {
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid #3b82f6;
+            transition: all 0.2s ease;
+        }
+        .option-btn:hover {
+            background: #2563eb;
+            color: white;
+            border-color: #60a5fa;
+        }
+        .option-btn.selected {
+            background: #d97706 !important;
+            border-color: #fbbf24 !important;
+            color: white !important;
+        }
+        .option-btn.correct {
+            background: #15803d !important;
+            border-color: #4ade80 !important;
+            color: white !important;
+        }
+        .option-btn.wrong {
+            background: #b91c1c !important;
+            border-color: #f87171 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="py-8 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <header class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+            <!-- Top Block: Chapter Name (Color 1: #3e3a8a) -->
+            <div style="background-color: #3e3a8a;" class="text-white px-6 py-4 text-lg font-semibold tracking-wide">
+                Chương: Hành trang cuộc sống
+            </div>
+            <!-- Thin Divider Line -->
+            <div class="h-0.5 bg-gray-300"></div>
+            <!-- Bottom Block: Lesson Name (Color 2: #037860) -->
+            <div style="background-color: #037860;" class="text-white px-6 py-6 text-center text-2xl sm:text-3xl font-extrabold uppercase tracking-wider">
+                Bài 9: MỘT ĐỜI NHƯ KẺ TÌM ĐƯỜNG (Trích)
+                <div class="text-sm font-normal normal-case mt-1 text-emerald-100">- Phan Văn Trường -</div>
+            </div>
+        </header>
+
+        <!-- INTRO BOX (Lời dẫn) -->
+        <section class="bg-white border border-black rounded-xl p-6 shadow-md italic text-gray-700 leading-relaxed text-center sm:text-left">
+            <div class="flex items-start space-x-3">
+                <span class="text-3xl text-amber-500 font-serif">“</span>
+                <div>
+                    <p class="font-medium text-gray-800">
+                        Mỗi lựa chọn của chúng ta ngày hôm nay có ảnh hưởng như thế nào tới cuộc sống của chúng ta trong tương lai? Làm thế nào để đưa ra những lựa chọn đúng trong cuộc đời?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION I: TỔNG QUAN TÁC GIẢ & TÁC PHẨM -->
+        <section class="bg-white rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+            <h2 class="text-xl sm:text-2xl font-bold uppercase text-gray-900 section-header flex items-center">
+                <span class="roman-box">I</span> TỔNG QUAN TÁC GIẢ & TÁC PHẨM
+            </h2>
+
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold flex items-center text-gray-800">
+                    <span class="number-circle">1</span> Tác giả Phan Văn Trường
+                </h3>
+                <div class="bg-slate-50 border border-slate-300 rounded-lg p-5 leading-relaxed space-y-2">
+                    <p><strong>Năm sinh:</strong> 1946 tại tỉnh Hải Dương.</p>
+                    <p><strong>Sự nghiệp:</strong> Ông từng là lãnh đạo cao cấp của nhiều tập đoàn hàng đầu thế giới, cố vấn thương trực của Chính phủ Pháp về thương mại quốc tế. Hai lần được Tổng thống Pháp phong tước Hiệp sĩ. Năm 2009, ông được Chủ tịch nước Việt Nam trao tặng Kỷ niệm chương <em>Vì sự nghiệp giáo dục</em>.</p>
+                    <p><strong>Tác phẩm tiêu biểu:</strong> <em>Một đời thương thuyết</em> (2014), <em>Một đời quản trị</em> (2017), <em>Một đời như kẻ tìm đường</em> (2019).</p>
+                </div>
+
+                <h3 class="text-lg font-semibold flex items-center text-gray-800 pt-2">
+                    <span class="number-circle">2</span> Tác phẩm "Một đời như kẻ tìm đường"
+                </h3>
+                <div class="bg-slate-50 border border-slate-300 rounded-lg p-5 leading-relaxed space-y-2">
+                    <p><strong>Xuất xứ:</strong> Trích từ cuốn sách cùng tên của tác giả Phan Văn Trường (NXB Trẻ, TP. Hồ Chí Minh, 2020).</p>
+                    <p><strong>Nội dung tổng quát:</strong> Cuốn sách là sự đúc kết những trải nghiệm phong phú của một người đã đi khắp thế giới, kinh qua nhiều vị trí nghề nghiệp, am hiểu văn hóa Phương Đông và Phương Tây, gửi gắm thông điệp tha thiết đến thế hệ trẻ Việt Nam.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION II: NỘI DUNG TÓM TẮT BÀI HỌC -->
+        <section class="bg-white rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+            <h2 class="text-xl sm:text-2xl font-bold uppercase text-gray-900 section-header flex items-center">
+                <span class="roman-box">II</span> NỘI DUNG TÓM TẮT BÀI HỌC
+            </h2>
+
+            <!-- Sub section 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-gray-800">
+                    <span class="number-circle">1</span> Những lựa chọn đầu đời và các khúc quanh
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 space-y-3">
+                    <p class="leading-relaxed">
+                        Năm 14 tuổi, tác giả đối mặt với lựa chọn chương trình học cổ điển (tiếng La-tinh, Hy Lạp) hay hiện đại. Dưới sự tư vấn của cha mẹ và bạn bè, tác giả đã chọn chương trình ngôn ngữ hiện đại.
+                    </p>
+                    <div class="p-4 bg-white border-l-4 border-blue-600 rounded shadow-sm italic text-gray-700">
+                        "Trong cuộc thương thuyết với cha mẹ, đề tài chọn nghề cũng xuất hiện đột ngột... Cuối cùng hai người đã hướng ý thích của tôi vào lộ trình công chức, một hướng đi quá an toàn..."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image placeholder 1 -->
+            <div class="my-6 text-center">
+                <div class="inline-block p-2 bg-gray-100 border-2 border-dashed border-gray-400 rounded-lg max-w-lg w-full">
+                    <img src="h1.png" alt="Minh họa Lựa chọn cuộc đời" class="max-h-64 mx-auto object-contain rounded mb-2" onError="this.onerror=null; this.src='https://via.placeholder.com/600x300?text=Khung+H%C3%ACnh+Minh+H%E1%BB%8Da+h1.png';">
+                    <span class="text-xs text-gray-500 italic block">Hình 1: Sơ đồ minh họa các khúc quanh và lựa chọn trong cuộc đời (h1.png)</span>
+                </div>
+            </div>
+
+            <!-- Sub section 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-gray-800">
+                    <span class="number-circle">2</span> Hành trình trải nghiệm và sự đa dạng nghề nghiệp
+                </h3>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5 space-y-3">
+                    <p class="leading-relaxed">
+                        Dù tốt nghiệp kỹ sư nhưng tác giả chưa bao giờ mơ làm kỹ sư hay có quyền lực. Số phận đã đưa tác giả trải qua hàng loạt vị trí khác nhau:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-800">
+                        <li>Kỹ sư cầu đường, tư vấn kinh tế, dạy kinh tế đại học.</li>
+                        <li>Chuyên gia quy hoạch vùng và chỉnh trang lãnh thổ.</li>
+                        <li>Buôn bán nhà máy điện, lãnh đạo doanh nghiệp đường sắt, metro.</li>
+                        <li>Chủ trì tập đoàn lọc nước và phân phối nước sạch.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sub section 3 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-gray-800">
+                    <span class="number-circle">3</span> Triết lý cốt lõi về Hạnh phúc và Thành công
+                </h3>
+                <!-- Formulated Box -->
+                <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-5 shadow-sm space-y-3">
+                    <h4 class="font-bold text-amber-900 uppercase text-sm tracking-wide">📌 Phát biểu / Định luật đúc kết từ tác phẩm:</h4>
+                    <p class="text-gray-800 leading-relaxed font-medium">
+                        \( \text{Thành công} \xrightleftharpoons \text{Hạnh phúc} \) không phụ thuộc vào con đường chúng ta đi, mà nằm ở <strong>tâm trạng tự tại</strong>, ở những <strong>giá trị tích cực mà chúng ta gieo trao</strong> cho xã hội ngay trên từng nẻo đường đã qua.
+                    </p>
+                    <div class="bg-white p-4 rounded-lg border border-amber-200 text-sm text-gray-700 space-y-2">
+                        <p>✓ Hạnh phúc nhỏ: Nằm trên từng bước đi, sự trải nghiệm, tự chấp nhận và tinh thần tích cực.</p>
+                        <p>✓ Hạnh phúc bền vững: Là hạnh phúc lấy gốc từ sự cống hiến, vị tha và tạo ra giá trị cho cộng đồng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION III: CÂU HỎI ĐỌC HIỂU (QUESTION / ANSWER BOXES) -->
+        <section class="bg-white rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+            <h2 class="text-xl sm:text-2xl font-bold uppercase text-gray-900 section-header flex items-center">
+                <span class="roman-box">III</span> CÂU HỎI ĐỌC HIỂU & LỜI GIẢI
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="space-y-2">
+                    <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg font-semibold text-gray-800">
+                        ❓ Câu 1: Theo bạn, mục đích của bài viết này là gì?
+                    </div>
+                    <button onclick="toggleAnswer('qa1')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="qa1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-gray-800 mt-2 leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong> Mục đích của bài viết là chia sẻ những trải nghiệm thực tế từ cuộc đời tác giả, từ đó đúc kết những bài học sâu sắc về sự lựa chọn, thành công và hạnh phúc để truyền cảm hứng, định hướng cho thế hệ trẻ.
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="space-y-2">
+                    <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg font-semibold text-gray-800">
+                        ❓ Câu 2: Xác định quan điểm chính của tác giả trong bài viết này. Quan điểm ấy đã được triển khai qua hệ thống lý lẽ và bằng chứng như thế nào?
+                    </div>
+                    <button onclick="toggleAnswer('qa2')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="qa2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-gray-800 mt-2 leading-relaxed space-y-2">
+                        <p><strong>Quan điểm chính:</strong> Cuộc đời là một hành trình dài tìm đường; thành công và hạnh phúc không nằm ở vị trí hay con đường ta chọn mà ở tâm trạng tự tại và những giá trị ta cống hiến cho xã hội.</p>
+                        <p><strong>Hệ thống lý lẽ & bằng chứng:</strong></p>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li><em>Lý lẽ 1:</em> Cuộc đời luôn bắt ta đưa ra nhiều lựa chọn và bị đẩy vào những lộ trình không báo trước. (Bằng chứng: Các lựa chọn năm 14 tuổi, việc đi học Kỹ sư tại Pháp).</li>
+                            <li><em>Lý lẽ 2:</em> Con đường nào cũng có thể thành công nếu ta tâm huyết. (Bằng chứng: Tác giả làm hàng loạt nghề trái ngành nhưng đều đạt thành tựu cao).</li>
+                            <li><em>Lý lẽ 3:</em> Hạnh phúc đích thực là sự cống hiến và yêu thương. (Bằng chứng: Sự thanh thản khi làm tròn trách nhiệm với xã hội).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="space-y-2">
+                    <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg font-semibold text-gray-800">
+                        ❓ Câu 3: Chỉ ra các yếu tố tự sự, biểu cảm và phân tích tác dụng của chúng trong văn bản.
+                    </div>
+                    <button onclick="toggleAnswer('qa3')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="qa3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-gray-800 mt-2 leading-relaxed space-y-2">
+                        <p><strong>Yếu tố tự sự:</strong> Tác giả kể lại những cột mốc cá nhân (năm 14 tuổi, sang Pháp, quá trình chuyển đổi các công việc...). <em>Tác dụng:</em> Tạo sự chân thực, sinh động, làm nền tảng vững chắc cho các nhận định nghị luận.</p>
+                        <p><strong>Yếu tố biểu cảm:</strong> Sự băn khoăn, cảm xúc hoài niệm, thái độ chân thành, nhiệt huyết khi nhắn nhủ. <em>Tác dụng:</em> Tăng sức lay động lòng người, giúp bài viết không bị khô khô khan mà giàu chất trữ tình triết lý.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="space-y-2">
+                    <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg font-semibold text-gray-800">
+                        ❓ Câu 4: Nhan đề là "Một đời như kẻ tìm đường". Nhưng trong bài viết tác giả lại nói: "Cả cuộc đời tìm đường để rồi tới lúc xế chiều tôi mới khám phá ra chẳng có đường để tìm...". Liệu tác giả có tự mâu thuẫn hay không?
+                    </div>
+                    <button onclick="toggleAnswer('qa4')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="qa4" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-gray-800 mt-2 leading-relaxed">
+                        <strong>Lời giải:</strong> Tác giả <em>không hề mâu thuẫn</em>. "Chẳng có đường để tìm" nghĩa là không có một con đường vạch sẵn nào bảo đảm tuyệt đối cho thành công hay hạnh phúc. Con đường chính là do chính chúng ta đi và tự tạo ra. Nhận thức này nâng tầm nhan đề từ việc đi tìm một đáp án có sẵn sang việc chủ động sống và kiến tạo giá trị bản thân.
+                    </div>
+                </div>
+
+                <!-- Question 5 & 6 -->
+                <div class="space-y-2">
+                    <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg font-semibold text-gray-800">
+                        ❓ Câu 5 & 6: Luận điểm tâm đắc nhất và suy nghĩ của bạn về những lựa chọn trong cuộc sống?
+                    </div>
+                    <button onclick="toggleAnswer('qa5')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="qa5" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-gray-800 mt-2 leading-relaxed">
+                        <strong>Hướng dẫn trả lời:</strong> Học sinh liên hệ bản thân. Luận điểm tâm đắc thường là: "Đi đường nào rồi cũng có thể thành công, chọn lối nào rồi cũng có khả năng đạt hạnh phúc". Điều quan trọng là thái độ đón nhận, nỗ lực hết mình và cống hiến cho cộng đồng.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION IV: HOẠT ĐỘNG & NÊU VẤN ĐỀ (HAND ICON) -->
+        <section class="bg-white rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+            <h2 class="text-xl sm:text-2xl font-bold uppercase text-gray-900 section-header flex items-center">
+                <span class="roman-box">IV</span> HOẠT ĐỘNG KẾT NỐI ĐỌC - VIẾT ✋
+            </h2>
+
+            <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-6 space-y-4">
+                <div class="flex items-center space-x-2 text-indigo-900 font-bold text-lg">
+                    <span>✍️ Đề bài nêu vấn đề:</span>
+                </div>
+                <p class="text-gray-800 leading-relaxed italic">
+                    "Theo bạn, thành công và hạnh phúc phụ thuộc vào lựa chọn của chúng ta hay vào những may rủi ngẫu nhiên trong cuộc đời? Viết đoạn văn (khoảng 150 chữ) thể hiện quan điểm của bạn về vấn đề này."
+                </p>
+                <button onclick="toggleAnswer('act1')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-5 py-2.5 rounded-lg shadow hover:opacity-90 transition flex items-center space-x-2">
+                    <span>💡 Xem hướng giải quyết & Đoạn văn tham khảo</span>
+                </button>
+
+                <div id="act1" class="hidden bg-white border border-indigo-300 p-5 rounded-lg text-gray-800 leading-relaxed space-y-3 mt-3">
+                    <h4 class="font-bold text-indigo-800">Gợi ý dàn ý & Đoạn văn mẫu (150 chữ):</h4>
+                    <p class="text-sm text-gray-700">
+                        Thành công và hạnh phúc trong cuộc sống là kết quả của sự tương tác giữa lựa chọn chủ quan và yếu tố may rủi khách quan, nhưng lựa chọn của bản thân luôn đóng vai trò quyết định. Những yếu tố ngẫu nhiên hay may rủi chỉ là những biến số bất ngờ trên hành trình. Chính thái độ đón nhận, năng lực thích ứng và những quyết định kiên trì mới định hình nên giá trị thực sự của mỗi người. Giống như chia sẻ của Phan Văn Trường trong <em>Một đời như kẻ tìm đường</em>, dù hoàn cảnh đẩy ta vào những khúc quanh không dự tính, tâm trạng tự tại và tinh thần cống hiến hết mình sẽ biến mọi con đường thành con đường dẫn tới hạnh phúc. May mắn chỉ mỉm cười với những ai không ngừng cố gắng và làm chủ các lựa chọn của chính mình.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION V: MỤC ĐẶC BIỆT ("EM CÓ BIẾT", "EM CÓ THỂ", "LƯU Ý") -->
+        <section class="bg-white rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+            <h2 class="text-xl sm:text-2xl font-bold uppercase text-gray-900 section-header flex items-center">
+                <span class="roman-box">V</span> GHI NHỚ MỞ RỘNG
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Em có biết -->
+                <div class="bg-purple-50 border-2 border-purple-300 rounded-xl p-5 space-y-2">
+                    <div class="font-bold text-purple-900 text-lg flex items-center space-x-2">
+                        <span>💡 Em có biết</span>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Tác giả Phan Văn Trường là một trong số rất ít người Việt Nam được Tổng thống Pháp trao tặng Huân chương Bắc đẩu bội tinh (Légion d'honneur) - huân chương cao quý nhất của Nhà nước Pháp.
+                    </p>
+                </div>
+
+                <!-- Em có thể -->
+                <div class="bg-teal-50 border-2 border-teal-300 rounded-xl p-5 space-y-2">
+                    <div class="font-bold text-teal-900 text-lg flex items-center space-x-2">
+                        <span>🚀 Em có thể</span>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Tự lập cho mình một "Bản đồ lựa chọn cá nhân" khi đứng trước các quyết định quan trọng: Phân tích ưu/nhược điểm, xác định tâm thế sẵn sàng thích ứng trước mọi khúc quanh không dự báo.
+                    </p>
+                </div>
+
+                <!-- Lưu ý -->
+                <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-5 space-y-2">
+                    <div class="font-bold text-amber-900 text-lg flex items-center space-x-2">
+                        <span>⚠️ Lưu ý</span>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Khi đọc văn bản nghị luận mang tính hồi ký - tự truyện, cần chú ý mối liên hệ giữa các bằng chứng thực tế từ cuộc đời tác giả với lý lẽ triết lý mà tác giả muốn gửi gắm.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VI: GAMESHOW "AI LÀ TRIỆU PHÚ" & BÀI TẬP TỰ LUẬN -->
+        <section class="bg-white rounded-xl shadow-md p-6 sm:p-8 space-y-8">
+            <h2 class="text-xl sm:text-2xl font-bold uppercase text-gray-900 section-header flex items-center">
+                <span class="roman-box">VI</span> CỦNG CỐ & BÀI TẬP ĐÁNH GIÁ
+            </h2>
+
+            <!-- GAMESHOW AI LÀ TRIỆU PHÚ CONTAINER -->
+            <div class="millionaire-box rounded-2xl p-6 sm:p-8 text-white space-y-6 shadow-2xl">
+                <div class="text-center space-y-2">
+                    <span class="bg-amber-500 text-black font-extrabold px-4 py-1 rounded-full text-xs uppercase tracking-widest">Gameshow Trắc Nghiệm</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-amber-400 uppercase tracking-wider">💰 AI LÀ TRIỆU PHÚ 💰</h3>
+                    <p class="text-xs text-slate-300">Trả lời đúng 10 câu hỏi để chinh phục đỉnh cao tri thức văn học!</p>
+                </div>
+
+                <!-- Quiz Questions Form -->
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Questions will be rendered here dynamically via JS or HTML structured -->
+                    <!-- Q1 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="A">
+                        <p class="font-bold text-amber-300 text-lg">Câu 1: Tác giả của văn bản "Một đời như kẻ tìm đường" là ai?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 0)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Phan Văn Trường</button>
+                            <button type="button" onclick="selectOption(this, 0)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Nguyễn Hiến Lê</button>
+                            <button type="button" onclick="selectOption(this, 0)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Hoàng Xuân Hãn</button>
+                            <button type="button" onclick="selectOption(this, 0)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Đặng Thai Mai</button>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="B">
+                        <p class="font-bold text-amber-300 text-lg">Câu 2: Năm 14 tuổi, tác giả phải lựa chọn giữa hai chương trình học nào?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 1)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Toán học và Văn học</button>
+                            <button type="button" onclick="selectOption(this, 1)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Cổ điển (La-tinh, Hy Lạp) và Hiện đại</button>
+                            <button type="button" onclick="selectOption(this, 1)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Tự nhiên và Xã hội</button>
+                            <button type="button" onclick="selectOption(this, 1)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Hội họa và Âm nhạc</button>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="C">
+                        <p class="font-bold text-amber-300 text-lg">Câu 3: Cha mẹ tác giả mong muốn hướng ông theo lộ trình nghề nghiệp nào?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 2)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Doanh nhân</button>
+                            <button type="button" onclick="selectOption(this, 2)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Bác sĩ chuyên khoa</button>
+                            <button type="button" onclick="selectOption(this, 2)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Lộ trình công chức an toàn</button>
+                            <button type="button" onclick="selectOption(this, 2)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Nhạc sĩ nổi tiếng</button>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="D">
+                        <p class="font-bold text-amber-300 text-lg">Câu 4: Ngôn ngữ cổ điển nào được coi là trung tâm trong chương trình cổ điển thời bấy giờ?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 3)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Tiếng Phạn</button>
+                            <button type="button" onclick="selectOption(this, 3)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Tiếng Bồ Đào Nha</button>
+                            <button type="button" onclick="selectOption(this, 3)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Tiếng Đức</button>
+                            <button type="button" onclick="selectOption(this, 3)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Tiếng La-tinh và tiếng Hy Lạp</button>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="A">
+                        <p class="font-bold text-amber-300 text-lg">Câu 5: Tác giả ví cuộc đời mỗi người giống như hình ảnh nào?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 4)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Một con đường với hàng ngàn khúc quanh</button>
+                            <button type="button" onclick="selectOption(this, 4)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Một dòng sông tĩnh lặng</button>
+                            <button type="button" onclick="selectOption(this, 4)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Một ngọn núi cao không đỉnh</button>
+                            <button type="button" onclick="selectOption(this, 4)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Một bàn cờ cố định</button>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="C">
+                        <p class="font-bold text-amber-300 text-lg">Câu 6: Theo tác giả, hạnh phúc bền vững gốc rễ bắt nguồn từ đâu?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 5)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Quyền lực tối cao</button>
+                            <button type="button" onclick="selectOption(this, 5)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Sự giàu có tài sản</button>
+                            <button type="button" onclick="selectOption(this, 5)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Sự trải nghiệm, tự chấp nhận và cống hiến cho xã hội</button>
+                            <button type="button" onclick="selectOption(this, 5)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. May mắn ngẫu nhiên</button>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="B">
+                        <p class="font-bold text-amber-300 text-lg">Câu 7: Cuốn sách "Một đời như kẻ tìm đường" xuất bản năm nào?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 6)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. 2014</button>
+                            <button type="button" onclick="selectOption(this, 6)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. 2019</button>
+                            <button type="button" onclick="selectOption(this, 6)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. 2017</button>
+                            <button type="button" onclick="selectOption(this, 6)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. 2022</button>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="A">
+                        <p class="font-bold text-amber-300 text-lg">Câu 8: Phương thức biểu đạt chính của văn bản là gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 7)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Nghị luận</button>
+                            <button type="button" onclick="selectOption(this, 7)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Biểu cảm</button>
+                            <button type="button" onclick="selectOption(this, 7)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Tự sự</button>
+                            <button type="button" onclick="selectOption(this, 7)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Thuyết minh</button>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="D">
+                        <p class="font-bold text-amber-300 text-lg">Câu 9: Tác giả được Tổng thống Pháp trao tặng danh hiệu cao quý nào?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 8)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Giải thưởng Nobel</button>
+                            <button type="button" onclick="selectOption(this, 8)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Huân chương Viện sĩ</button>
+                            <button type="button" onclick="selectOption(this, 8)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Danh hiệu Đại sứ</button>
+                            <button type="button" onclick="selectOption(this, 8)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Hiệp sĩ Huân chương Bắc đẩu bội tinh</button>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="quiz-card bg-slate-900/80 border border-slate-700 rounded-xl p-5 space-y-4" data-correct="C">
+                        <p class="font-bold text-amber-300 text-lg">Câu 10: Điểm đặc biệt trong phong cách văn nghị luận của Phan Văn Trường ở bài viết này là gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectOption(this, 9)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">A. Đầy tính đe dọa, giáo điều</button>
+                            <button type="button" onclick="selectOption(this, 9)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">B. Trái ngược hoàn toàn với thực tế</button>
+                            <button type="button" onclick="selectOption(this, 9)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">C. Kết hợp chặt chẽ giữa trải nghiệm cá nhân và triết lý thâm thúy</button>
+                            <button type="button" onclick="selectOption(this, 9)" class="option-btn text-left p-3 rounded-lg text-sm font-medium">D. Chỉ tập trung vào số liệu thống kê</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center pt-4">
+                    <button onclick="checkQuiz()" class="bg-blue-900 hover:bg-blue-800 text-amber-300 font-extrabold text-lg px-8 py-3 rounded-xl shadow-lg border-2 border-amber-400 transition transform hover:scale-105">
+                        NỘP BÀI KHÁM PHÁ KẾT QUẢ
+                    </button>
+                </div>
+
+                <!-- Result Display Area -->
+                <div id="quiz-result" class="hidden bg-slate-800 border-2 border-amber-400 p-6 rounded-xl space-y-4">
+                    <!-- Dynamic Result Inserted Here -->
+                </div>
+            </div>
+
+            <!-- BÀI TẬP TỰ LUẬN TÍNH TOÁN / TƯ DUY -->
+            <div class="space-y-6 pt-6">
+                <h3 class="text-xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">
+                    📝 BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH CHUYÊN SÂU
+                </h3>
+
+                <!-- Essay 1 -->
+                <div class="bg-slate-50 border border-slate-300 rounded-xl p-5 space-y-3">
+                    <div class="font-semibold text-gray-800">
+                        Bài 1 (Tư duy xác suất lựa chọn): Một học sinh đứng trước 3 ngành học đại học A, B, C. Giả sử xác suất thành công ở mỗi ngành phụ thuộc vào mức độ kiên trì phấn đấu \( P(T) \) theo công thức: \( P(T) = 0.4 + 0.5 \times k \) (với \( k \in [0, 1] \) là chỉ số kiên trì). Tính xác suất thành công khi học sinh đạt mức độ kiên trì tối đa (\( k = 1 \)) và rút ra nhận xét liên hệ với văn bản.
+                    </div>
+                    <button onclick="toggleAnswer('essay1')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="essay1" class="hidden bg-white border border-slate-300 p-4 rounded-lg text-gray-800 mt-2 space-y-2">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>Thay \( k = 1 \) vào công thức: \( P(T) = 0.4 + 0.5 \times (1) = 0.9 \) (tương đương 90%).</p>
+                        <p><strong>Nhận xét:</strong> Dù xuất phát điểm hay cơ hội ban đầu chỉ là 40% (\( k = 0 \)), sự nỗ lực kiên trì của bản thân có thể nâng khả năng thành công lên tới 90%. Điều này hoàn toàn trùng khớp với khẳng định của Phan Văn Trường: Con đường không quyết định tất cả, chính sự cố gắng tận tụy trên con đường đó mới làm nên thành công.</p>
+                    </div>
+                </div>
+
+                <!-- Essay 2 -->
+                <div class="bg-slate-50 border border-slate-300 rounded-xl p-5 space-y-3">
+                    <div class="font-semibold text-gray-800">
+                        Bài 2 (Phân tích lập luận): Hãy lập bảng so sánh hai khái niệm "Hạnh phúc nhỏ" và "Hạnh phúc bền vững" được tác giả nhắc tới trong bài học.
+                    </div>
+                    <button onclick="toggleAnswer('essay2')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="essay2" class="hidden bg-white border border-slate-300 p-4 rounded-lg text-gray-800 mt-2 overflow-x-auto">
+                        <table class="w-full text-left border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-gray-200">
+                                    <th class="border border-gray-300 p-3">Tiêu chí</th>
+                                    <th class="border border-gray-300 p-3">Hạnh phúc nhỏ</th>
+                                    <th class="border border-gray-300 p-3">Hạnh phúc bền vững</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-medium">Nguồn gốc</td>
+                                    <td class="border border-gray-300 p-3">Trải nghiệm cá nhân trên từng bước đi.</td>
+                                    <td class="border border-gray-300 p-3">Sự vị tha, cống hiến giá trị cho cộng đồng.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-medium">Biểu hiện</td>
+                                    <td class="border border-gray-300 p-3">Sự chấp nhận hoàn cảnh, giữ tâm thái tích cực.</td>
+                                    <td class="border border-gray-300 p-3">Tạo ra thành quả tốt đẹp cho mọi người xung quanh.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Essay 3 -->
+                <div class="bg-slate-50 border border-slate-300 rounded-xl p-5 space-y-3">
+                    <div class="font-semibold text-gray-800">
+                        Bài 3 (Vận dụng thực tiễn): Phân tích thông điệp tác giả gửi gắm qua câu nói "Cứ cho đi thì mới thấy được thư thái định tìm".
+                    </div>
+                    <button onclick="toggleAnswer('essay3')" style="background-color: #33FF33;" class="text-gray-900 font-bold px-4 py-2 rounded-lg text-sm shadow hover:opacity-90 transition">
+                        Xem lời giải
+                    </button>
+                    <div id="essay3" class="hidden bg-white border border-slate-300 p-4 rounded-lg text-gray-800 mt-2 space-y-2 leading-relaxed">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>Cho đi ở đây bao gồm tri thức, công sức, sự sẻ chia và tâm huyết nghề nghiệp. Khi con người thoát khỏi sự vị kỷ cá nhân, cống hiến hết mình cho xã hội, tâm trí sẽ giải phóng khỏi những nỗi lo sợ được - mất. Đó chính là trạng thái "thư thái" - bình yên nội tâm vững chắc nhất mà mỗi người tìm kiếm trong suốt cuộc đời.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-gray-600 text-sm py-6 border-t border-gray-300 font-medium">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Toggle Answer Function
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Selected options tracker for quiz
+        const userAnswers = {};
+
+        function selectOption(btnElement, questionIndex) {
+            // Get all buttons in the same question card
+            const card = btnElement.closest('.quiz-card');
+            const buttons = card.querySelectorAll('.option-btn');
+            
+            // Remove selected class from all
+            buttons.forEach(b => b.classList.remove('selected'));
+            
+            // Add selected class to clicked button
+            btnElement.classList.add('selected');
+            
+            // Save answer letter (A, B, C, D based on text prefix)
+            const text = btnElement.innerText.trim();
+            const letter = text.charAt(0);
+            userAnswers[questionIndex] = {
+                letter: letter,
+                element: btnElement
+            };
+        }
+
+        // Check Quiz Function
+        function checkQuiz() {
+            const cards = document.querySelectorAll('.quiz-card');
+            let score = 0;
+            const total = cards.length;
+
+            const explanations = [
+                "Câu 1: Tác giả tác phẩm là GS. Phan Văn Trường.",
+                "Câu 2: Năm 14 tuổi ông đứng trước lựa chọn chương trình cổ điển và hiện đại.",
+                "Câu 3: Cha mẹ muốn ông đi theo lộ trình công chức an toàn.",
+                "Câu 4: Chương trình cổ điển tập trung vào tiếng La-tinh và tiếng Hy Lạp.",
+                "Câu 5: Tác giả ví cuộc đời như một con đường với hàng ngàn khúc quanh.",
+                "Câu 6: Hạnh phúc bền vững bắt nguồn từ sự cống hiến và giá trị trao đi.",
+                "Câu 7: Cuốn sách 'Một đời như kẻ tìm đường' xuất bản năm 2019.",
+                "Câu 8: Phương thức biểu đạt chính là Nghị luận.",
+                "Câu 9: Ông được trao tặng Huân chương Bắc đẩu bội tinh danh giá của Pháp.",
+                "Câu 10: Sức hấp dẫn nằm ở sự kết hợp giữa trải nghiệm phong phú và triết lý thâm thúy."
+            ];
+
+            let explanationHTML = '<h4 class="text-xl font-bold mb-3">HƯỚNG DẪN GIẢI CHI TIẾT TỪNG CÂU:</h4><ul class="space-y-2 text-sm">';
+
+            cards.forEach((card, index) => {
+                const correct = card.getAttribute('data-correct');
+                const buttons = card.querySelectorAll('.option-btn');
+                const userChoice = userAnswers[index];
+
+                buttons.forEach(b => {
+                    const letter = b.innerText.trim().charAt(0);
+                    if (letter === correct) {
+                        b.classList.add('correct');
+                    } else if (userChoice && userChoice.letter === letter && letter !== correct) {
+                        b.classList.add('wrong');
+                    }
+                });
+
+                if (userChoice && userChoice.letter === correct) {
+                    score++;
+                    explanationHTML += `<li class="text-emerald-400">✓ <strong>Câu ${index + 1}:</strong> Đúng! (${explanations[index]})</li>`;
+                } else {
+                    explanationHTML += `<li class="text-rose-400">✗ <strong>Câu ${index + 1}:</strong> Chưa chính xác. Đáp án đúng là <strong>${correct}</strong>. (${explanations[index]})</li>`;
+                }
+            });
+
+            explanationHTML += '</ul>';
+
+            const resultContainer = document.getElementById('quiz-result');
+            resultContainer.classList.remove('hidden');
+
+            const isPerfect = score === total;
+            const scoreTextClass = isPerfect ? 'text-emerald-400' : 'text-amber-400';
+
+            resultContainer.innerHTML = `
+                <div class="text-center space-y-2 border-b border-slate-700 pb-4">
+                    <div class="text-3xl font-extrabold ${scoreTextClass}">
+                        ${isPerfect ? '🎉 XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ TRI THỨC!' : '👍 KẾT QUẢ CỦA BẠN'}
+                    </div>
+                    <div class="text-xl font-semibold text-slate-200">
+                        Điểm số: <span class="${scoreTextClass}">${score} / ${total}</span> câu đúng
+                    </div>
+                </div>
+                <div class="pt-2">
+                    ${explanationHTML}
+                </div>
+            `;
+
+            // Scroll smoothly to results
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

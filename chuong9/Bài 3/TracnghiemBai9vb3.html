@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức Văn học - Một đời như kẻ tìm đường</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Configuration & Script -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-cream {
+            background-color: #FFFDD0;
+        }
+        .border-cream {
+            border-color: #FFFDD0;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 253, 208, 0.3);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 253, 208, 0.5);
+        }
+        .glass-panel {
+            background: rgba(20, 10, 10, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 253, 208, 0.15);
+        }
+        .glass-card {
+            background: rgba(35, 18, 18, 0.85);
+            border: 1px solid rgba(255, 253, 208, 0.12);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 253, 208, 0.3);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="glass-panel sticky top-0 z-50 px-4 py-3 shadow-lg border-b border-amber-900/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="p-2.5 bg-amber-500/20 text-amber-300 rounded-xl border border-amber-500/30">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-cream tracking-wide uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs sm:text-sm text-amber-200/80 font-medium">
+                        Bài: MỘT ĐỜI NHƯ KẺ TÌM ĐƯỜNG <span class="text-xs opacity-75">(Phan Văn Trường - Ngữ văn)</span>
+                    </p>
+                </div>
+            </div>
+            <!-- Dynamic Mode Indicator Badge -->
+            <div id="top-mode-badge" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-950/60 text-amber-200 border border-amber-700/50 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span id="top-mode-text">Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 flex flex-col justify-center">
+
+        <!-- SCREEN 1: START & MODE SELECTION -->
+        <section id="screen-start" class="space-y-8 my-auto py-4">
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <div class="inline-flex items-center justify-center p-3 bg-amber-500/20 rounded-full border border-amber-400/30 text-amber-300 mb-2">
+                    <i class="fa-solid fa-circle-check text-2xl"></i>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-cream uppercase tracking-wide">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-bold text-amber-300">20 câu hỏi</span> bám sát nội dung bài học <span class="italic font-semibold text-cream">"Một đời như kẻ tìm đường"</span> với \(4\) mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 THINKING LEVEL CARDS GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-blue-500 hover:scale-[1.02] transition-transform">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold px-2.5 py-1 bg-blue-500/20 text-blue-300 rounded-md uppercase">Mức Biết (8 câu)</span>
+                        <i class="fa-solid fa-eye text-blue-400 text-lg"></i>
+                    </div>
+                    <p class="text-xs text-gray-300 mt-2 leading-relaxed">
+                        Kiểm tra kiến thức cơ bản có trong bài học: tác giả, hoàn cảnh, chi tiết quan trọng.
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-emerald-500 hover:scale-[1.02] transition-transform">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold px-2.5 py-1 bg-emerald-500/20 text-emerald-300 rounded-md uppercase">Mức Hiểu (7 câu)</span>
+                        <i class="fa-solid fa-brain text-emerald-400 text-lg"></i>
+                    </div>
+                    <p class="text-xs text-gray-300 mt-2 leading-relaxed">
+                        Giải đáp các vấn đề nội dung, nghệ thuật, ý nghĩa ẩn dụ và tư tưởng tác phẩm.
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-amber-500 hover:scale-[1.02] transition-transform">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold px-2.5 py-1 bg-amber-500/20 text-amber-300 rounded-md uppercase">Vận Dụng (3 câu)</span>
+                        <i class="fa-solid fa-gears text-amber-400 text-lg"></i>
+                    </div>
+                    <p class="text-xs text-gray-300 mt-2 leading-relaxed">
+                        Phối hợp kiến thức rèn tư duy phân tích tác phẩm và liên hệ thực tiễn cuộc sống.
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-purple-500 hover:scale-[1.02] transition-transform">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold px-2.5 py-1 bg-purple-500/20 text-purple-300 rounded-md uppercase">VD Cao (2 câu)</span>
+                        <i class="fa-solid fa-diagram-project text-purple-400 text-lg"></i>
+                    </div>
+                    <p class="text-xs text-gray-300 mt-2 leading-relaxed">
+                        Giải quyết các yếu tố nghệ thuật phức tạp, đánh giá chiều sâu tư tưởng triết lý.
+                    </p>
+                </div>
+            </div>
+
+            <!-- MODE SELECTION BOX -->
+            <div class="space-y-4 pt-4">
+                <h3 class="text-center text-sm font-semibold text-amber-200 uppercase tracking-widest">
+                    Vui lòng chọn hình thức kiểm tra:
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Option 1: Practice Mode -->
+                    <div onclick="startQuiz('practice')" class="glass-card p-6 rounded-2xl cursor-pointer border border-amber-500/30 hover:border-amber-400 hover:bg-amber-900/30 transition-all flex flex-col justify-between group shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors">
+                                    1. Chế độ Luyện Tập
+                                </h4>
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full border border-blue-500/30">
+                                    Không giới hạn
+                                </span>
+                            </div>
+                            <p class="text-xs text-amber-100/70 font-medium">
+                                Học tập & củng cố kiến thức không áp lực
+                            </p>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-amber-300 text-sm font-semibold">
+                            <span>Bắt đầu Luyện tập</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Timed Test Mode -->
+                    <div onclick="startQuiz('timed')" class="glass-card p-6 rounded-2xl cursor-pointer border border-amber-500/30 hover:border-amber-400 hover:bg-amber-900/30 transition-all flex flex-col justify-between group shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors">
+                                    2. Chế độ Tính Giờ
+                                </h4>
+                                <span class="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-semibold rounded-full border border-amber-500/30">
+                                    20 Phút
+                                </span>
+                            </div>
+                            <p class="text-xs text-amber-100/70 font-medium">
+                                Thử thách & kiểm tra đánh giá năng lực
+                            </p>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Có đồng hồ đếm ngược \(20\) phút. Trật tự câu hỏi và đáp án được xáo trộn ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-amber-300 text-sm font-semibold">
+                            <span>Bắt đầu Tính giờ</span>
+                            <i class="fa-solid fa-stopwatch group-hover:translate-x-2 transition-transform"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: QUIZ DOING INTERFACE -->
+        <section id="screen-quiz" class="hidden grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- LEFT SIDEBAR: QUESTION NAVIGATION MATRIX -->
+            <div class="lg:col-span-4 glass-panel p-5 rounded-2xl space-y-5">
+                <div class="flex justify-between items-center pb-3 border-b border-amber-900/40">
+                    <div>
+                        <h3 class="text-xs font-bold text-amber-300 tracking-wider uppercase">DANH SÁCH CÂU HỎI</h3>
+                        <p id="progress-text" class="text-sm font-semibold text-cream mt-0.5">0 / 20 đã làm</p>
+                    </div>
+                    <!-- Timer Box (Visible in timed mode) -->
+                    <div id="timer-container" class="hidden px-3 py-1.5 bg-amber-950 border border-amber-500/50 rounded-xl text-center">
+                        <span class="text-[10px] text-amber-400 block uppercase font-bold">Thời gian</span>
+                        <span id="timer-display" class="text-base font-mono font-bold text-amber-300">20:00</span>
+                    </div>
+                </div>
+
+                <!-- 20 Question Grid Buttons -->
+                <div id="question-grid" class="grid grid-cols-5 gap-2.5">
+                    <!-- Dynamically generated 1-20 buttons -->
+                </div>
+
+                <!-- Legend -->
+                <div class="pt-3 border-t border-amber-900/40 space-y-2 text-xs">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded bg-slate-800 border border-slate-600 inline-block"></span>
+                        <span class="text-gray-300">Chưa trả lời</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded bg-amber-600 border border-amber-400 inline-block"></span>
+                        <span class="text-gray-300">Đã chọn đáp án</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded bg-blue-600 border border-blue-400 inline-block"></span>
+                        <span class="text-gray-300">Đang làm (Hiện tại)</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="confirmSubmit()" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Nộp Bài & Kết Thúc</span>
+                </button>
+            </div>
+
+            <!-- RIGHT MAIN PANEL: QUESTION CONTENT & OPTIONS -->
+            <div class="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-2xl space-y-6">
+                <!-- Question Header -->
+                <div class="flex flex-wrap justify-between items-center gap-3 pb-4 border-b border-amber-900/40">
+                    <div class="flex items-center gap-3">
+                        <span id="current-question-num" class="text-2xl font-black text-cream">Câu 1 / 20</span>
+                        <span id="current-question-level" class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold rounded-md border border-blue-500/30 uppercase">
+                            Mức Biết
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Question Text -->
+                <div id="question-text" class="text-base sm:text-lg font-medium text-white leading-relaxed space-y-2">
+                    <!-- Question text content injected here -->
+                </div>
+
+                <!-- Answer Options (A, B, C, D) -->
+                <div id="options-container" class="space-y-3 pt-2">
+                    <!-- Option cards injected here -->
+                </div>
+
+                <!-- Footer Navigation Buttons -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-6 border-t border-amber-900/40">
+                    <button id="btn-prev" onclick="navigateQuestion(-1)" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-gray-200 text-sm font-semibold rounded-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fa-solid fa-chevron-left mr-1.5"></i> Câu Trước
+                    </button>
+                    
+                    <button onclick="clearCurrentSelection()" class="text-xs text-amber-200/70 hover:text-amber-200 underline font-medium">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="btn-next" onclick="navigateQuestion(1)" class="px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold rounded-xl transition-all shadow-md">
+                        Câu Tiếp <i class="fa-solid fa-chevron-right ml-1.5"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: TEST RESULTS & EXPLANATIONS -->
+        <section id="screen-result" class="hidden space-y-8 py-4">
+            <!-- Trophy & Overall Summary Card -->
+            <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto text-center space-y-6 shadow-2xl relative overflow-hidden">
+                <div class="w-20 h-20 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto text-4xl border border-amber-400/30">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-cream uppercase">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-subtitle" class="text-sm font-medium text-amber-200/80 mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+                    <div class="glass-card p-4 rounded-xl border border-amber-500/20">
+                        <span class="text-xs text-gray-300 uppercase font-semibold">Điểm số</span>
+                        <p id="res-score" class="text-3xl font-black text-amber-300 mt-1">0.0 <span class="text-sm font-normal text-gray-400">/ 10.0</span></p>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-amber-500/20">
+                        <span class="text-xs text-gray-300 uppercase font-semibold">Số câu đúng</span>
+                        <p id="res-correct" class="text-3xl font-black text-emerald-400 mt-1">0 <span class="text-sm font-normal text-gray-400">/ 20 câu</span></p>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-amber-500/20">
+                        <span class="text-xs text-gray-300 uppercase font-semibold">Thời gian làm bài</span>
+                        <p id="res-time" class="text-2xl font-bold text-cream mt-1">Không giới hạn</p>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="glass-card p-5 rounded-xl border border-amber-500/30 text-left max-w-3xl mx-auto space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots text-base"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacher-comment" class="text-sm text-amber-100/90 leading-relaxed italic pl-6">
+                        <!-- Dynamic Teacher Feedback -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="resetApp()" class="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition-all flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToExplanations()" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-cream font-semibold rounded-xl transition-all flex items-center gap-2 border border-amber-500/20">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Answer & Solution Section -->
+            <div id="explanations-section" class="max-w-4xl mx-auto space-y-6 pt-4">
+                <div class="flex justify-between items-center pb-2 border-b border-amber-900/40">
+                    <h3 class="text-xl font-bold text-cream uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-amber-400"></i>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-amber-200/70">20/20 câu hỏi</span>
+                </div>
+
+                <div id="explanations-list" class="space-y-6">
+                    <!-- Detailed solutions generated here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="glass-panel py-4 text-center text-xs text-amber-200/60 border-t border-amber-900/30 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© Bộ câu hỏi kiểm tra Ngữ văn THPT — Tác phẩm: <span class="italic font-semibold text-amber-100">Một đời như kẻ tìm đường (Phan Văn Trường)</span></p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // ORIGINAL 20 QUESTIONS BASED STRICTLY ON THE PROVIDED DOCUMENT
+        const ORIGINAL_QUESTIONS = [
+            // LEVEL 1: BIẾT (8 CÂU)
+            {
+                id: 1,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Tác giả Phan Văn Trường sinh năm bao nhiêu và quê ở đâu?",
+                options: [
+                    "Sinh năm 1946, quê ở tỉnh Hải Dương",
+                    "Sinh năm 1945, quê ở Hà Nội",
+                    "Sinh năm 1950, quê ở tỉnh Nam Định",
+                    "Sinh năm 1946, quê ở thành phố Hồ Chí Minh"
+                ],
+                correct: 0,
+                explanation: "Theo phần giới thiệu tác giả ở trang 4: 'Phan Văn Trường sinh năm 1946, quê ở tỉnh Hải Dương'."
+            },
+            {
+                id: 2,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Năm 14 tuổi, tác giả đứng trước hai lựa chọn chương trình học nào do nhà trường gửi thư thông báo?",
+                options: [
+                    "Chương trình Chuyên toán và Chương trình Ngữ văn",
+                    "Chương trình Cổ điển và Chương trình Hiện đại",
+                    "Chương trình Kinh tế và Chương trình Kỹ thuật",
+                    "Chương trình Tiếng Anh và Chương trình Tiếng Pháp"
+                ],
+                correct: 1,
+                explanation: "Văn bản ghi rõ: 'chọn một trong hai ngoại ngữ, và nhất là chọn giữa hai chương trình học – cổ điển hay hiện đại'."
+            },
+            {
+                id: 3,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Trong chương trình học cổ điển, môn học nào được nhà trường và hiệu trưởng đặt làm trọng tâm?",
+                options: [
+                    "Tiếng Anh và tiếng Pháp hiện đại",
+                    "Tiếng La-tinh và tiếng Hy Lạp cổ",
+                    "Triết học hiện đại và Lịch sử thế giới",
+                    "Tiếng Đức và tiếng Bồ Đào Nha"
+                ],
+                correct: 1,
+                explanation: "Trang 1 ghi: 'Còn về chương trình cổ điển thì nghe khá lạ tai, vì sẽ đặt trọng tâm vào tiếng La-tinh, tiếng Hy Lạp cổ'."
+            },
+            {
+                id: 4,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Hai ca sĩ nhạc Mỹ nào được ba người bạn thân rủ tác giả nghe thời thiếu niên?",
+                options: [
+                    "Xô-cơ-rát và Pla-tông",
+                    "En-vít-xơ Prét-xlơ (Elvis Presley) và Pôn An-ka (Paul Anka)",
+                    "Michael Jackson và Beatles",
+                    "Phan Văn Trường và các nghệ sĩ Pháp"
+                ],
+                correct: 1,
+                explanation: "Trang 1 ghi: 'nghe nhạc Mỹ của En-vít-xơ Prét-xlơ (Elvis Presley) và Pôn An-ka (Paul Anka)'."
+            },
+            {
+                id: 5,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Trong cuộc thương thuyết với cha mẹ về chọn nghề, cha và mẹ tác giả lần lượt yêu thích ngành nghề nào?",
+                options: [
+                    "Cha thích kĩ sư, mẹ thích luật sư",
+                    "Cha thích ngành kiến trúc, mẹ thích nghề bác sĩ",
+                    "Cha thích công chức, mẹ thích kinh tế",
+                    "Cha thích nhà văn, mẹ thích nhà giáo"
+                ],
+                correct: 1,
+                explanation: "Trang 2 nêu rõ: 'Cha tôi thì thích ngành kiến trúc. Mẹ tôi thì thích nghề bác sĩ'."
+            },
+            {
+                id: 6,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Tác giả Phan Văn Trường sang Pháp năm bao nhiêu tuổi?",
+                options: [
+                    "14 tuổi",
+                    "15 tuổi",
+                    "17 tuổi",
+                    "20 tuổi"
+                ],
+                correct: 2,
+                explanation: "Trang 2 ghi: 'Tôi sang Pháp năm mười bảy tuổi, chẳng chọn đi, mà cũng chẳng chọn Pháp'."
+            },
+            {
+                id: 7,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Tác giả tốt nghiệp đại học với bằng cấp chuyên môn nào?",
+                options: [
+                    "Bác sĩ đa khoa",
+                    "Kỹ sư cầu đường",
+                    "Cử nhân Kinh tế học",
+                    "Chuyên gia Ngôn ngữ học"
+                ],
+                correct: 1,
+                explanation: "Trang 2 ghi: 'Tôi tốt nghiệp kỹ sư...' và 'tuy tôi là kỹ sư cầu đường, nhưng chưa bao giờ tôi thiết kế cầu hay xây dựng một con đường nào'."
+            },
+            {
+                id: 8,
+                level: "Mức Biết",
+                levelCode: "biet",
+                question: "Cuốn sách 'Một đời như kẻ tìm đường' của tác giả Phan Văn Trường được xuất bản năm nào?",
+                options: [
+                    "Năm 2014",
+                    "Năm 2017",
+                    "Năm 2019",
+                    "Năm 2020"
+                ],
+                correct: 2,
+                explanation: "Trang 4 liệt kê: Các cuốn sách xuất bản: 'Một đời thương thuyết' (2014), 'Một đời quản trị' (2017), 'Một đời như kẻ tìm đường' (2019)."
+            },
+
+            // LEVEL 2: HIỂU (7 CÂU)
+            {
+                id: 9,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Yếu tố trực tiếp nào làm trái tim tác giả thời thiếu niên 'nghiêng hẳn sang phía hiện đại'?",
+                options: [
+                    "Sự ép buộc gay gắt từ phía thầy hiệu trưởng nhà trường",
+                    "Cảm giác chói tai với chữ 'cổ' cùng sức ảnh hưởng nhẹ nhõm, trẻ trung từ âm nhạc Mỹ qua ba người bạn thân",
+                    "Mong muốn kiếm được nhiều tiền ngay sau khi ra trường",
+                    "Sự định hướng cứng nhắc từ cha mẹ"
+                ],
+                correct: 1,
+                explanation: "Văn bản ghi: 'Tôi thì không hiểu sao cứ nghe chữ cổ thì lại thấy chói tai... Chỉ có chút ngôn ngữ có thể thôi đã làm trái tim của tôi nghiêng hẳn sang phía hiện đại'."
+            },
+            {
+                id: 10,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Vì sao cha mẹ tác giả lại hướng ý thích của con vào lộ trình 'công chức'?",
+                options: [
+                    "Mẹ nghĩ con trai sẽ an toàn không xa rời vòng tay, cha nghĩ con sẽ tham gia nhiều hoạt động xã hội",
+                    "Vì gia đình tác giả có truyền thống làm công chức từ nhiều đời",
+                    "Vì học ngành công chức được miễn hoàn toàn học phí",
+                    "Vì công chức là nghề duy nhất được coi trọng ở Pháp thời đó"
+                ],
+                correct: 0,
+                explanation: "Trang 2 giải thích: 'một hướng đi quá an toàn... mẹ tôi bởi vì bà nghĩ như thế thì con trai bà sẽ không bao giờ ra khỏi vòng tay mình. Còn đối với cha tôi, chữ công chức có lẽ còn hàm nghĩa con trai ông sẽ tham gia vào các hoạt động xã hội'."
+            },
+            {
+                id: 11,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Hình ảnh so sánh 'người khiếm thị lại phải đi trong cảnh sương mù' ở trang 3 nhằm diễn tả điều gì?",
+                options: [
+                    "Căn bệnh thị lực trầm trọng của tác giả khi về già",
+                    "Cảm giác mơ hồ, vô định, phải mò mẫm tự tìm hướng đi giữa những khúc quanh cuộc đời",
+                    "Sự thiếu hụt kiến thức khoa học chuyên sâu của người cầm quyền",
+                    "Khó khăn về thời tiết khắc nghiệt ở các nước phương Tây"
+                ],
+                correct: 1,
+                explanation: "Tác giả ví hành trình lựa chọn và tìm đường sống giống như bước đi mò mẫm trong sương mù, không biết trước tương lai nhưng vẫn bắt buộc phải bước tiếp."
+            },
+            {
+                id: 12,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Theo đúc kết triết lý của tác giả, thành công và hạnh phúc thực sự phụ thuộc vào điều gì?",
+                options: [
+                    "Phụ thuộc vào tên tuổi con đường và ngành nghề mà chúng ta đã lựa chọn ban đầu",
+                    "Phụ thuộc vào địa vị quyền lực và khối tài sản tích lũy được",
+                    "Phụ thuộc vào tâm trạng tự tại của chúng ta và những giá trị ta gieo trên nẻo đường đã đi qua",
+                    "Phụ thuộc hoàn toàn vào sự may mắn ngẫu nhiên của số phận"
+                ],
+                correct: 2,
+                explanation: "Trang 3 ghi rõ: 'vì hạnh phúc và thành công không tùy thuộc vào con đường chúng ta đi, mà vào tâm trạng tự tại của chúng ta, cũng như vào những giá trị mà chúng ta gieo ngay trên những nẻo đường đã đi qua'."
+            },
+            {
+                id: 13,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Thông điệp cốt lõi của câu kết văn bản: 'Cứ cho đi thì mới thấy được thứ mình đi tìm' là gì?",
+                options: [
+                    "Hạnh phúc và giá trị đích thực của bản thân chỉ đạt được khi biết cống hiến, trao tặng trọn vẹn cho xã hội",
+                    "Cho đi tài sản vật chất sẽ nhận lại số tiền lớn hơn trong tương lai",
+                    "Nên tặng hết tài sản cho người khác để không phải làm việc",
+                    "Muốn tìm được đồ vật thất lạc thì phải đem cho đi"
+                ],
+                correct: 0,
+                explanation: "Tác giả khẳng định việc phụng sự, tạo giá trị cho xã hội và yêu thương chân thành chính là cách duy nhất để tìm thấy chính mình và sự an tâm."
+            },
+            {
+                id: 14,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Tác dụng nổi bật của sự kết hợp giữa phương thức tự sự và nghị luận/trữ tình trong văn bản là gì?",
+                options: [
+                    "Tạo nên một câu chuyện viễn tưởng li kỳ thu hút người đọc trẻ tuổi",
+                    "Dùng trải nghiệm đời thực chân xác làm điểm tựa sinh động để rút ra những chiêm nghiệm triết lý sâu sắc, giàu sức thuyết phục",
+                    "Biến tác phẩm thành một cuốn kịch bản phim truyền hình dài tập",
+                    "Biến văn bản thành một bài báo khoa học khô khan"
+                ],
+                correct: 1,
+                explanation: "Tự sự giúp kể lại hành trình cuộc đời sinh động, từ đó chất trữ tình và nghị luận giúp nâng tầm các sự kiện cá nhân thành bài học triết lý nhân sinh chung."
+            },
+            {
+                id: 15,
+                level: "Mức Hiểu",
+                levelCode: "hieu",
+                question: "Vì sao tác giả nhận định: 'Cả cuộc đời tìm đường để rồi mãi tới lúc xế chiều mới khám phá ra chẳng có đường để tìm'?",
+                options: [
+                    "Vì tác giả vô cùng hối hận về những lựa chọn sai lầm trong quá khứ",
+                    "Vì đường đời không phải là một vạch đích có sẵn, mà chính thái độ dấn thân, cống hiến và trải nghiệm mới tạo nên con đường",
+                    "Vì trên thực tế không có ngành nghề nào tồn tại",
+                    "Vì tác giả muốn khuyên thế hệ trẻ không cần phải cố gắng học tập nữa"
+                ],
+                correct: 1,
+                explanation: "Tác giả nhận ra bản chất cuộc đời là một hành trình vô tận. Không có 'con đường chuẩn duy nhất' chờ sẵn, mà sự trải nghiệm và giá trị tạo ra mới chính là con đường."
+            },
+
+            // LEVEL 3: VẬN DỤNG (3 CÂU)
+            {
+                id: 16,
+                level: "Vận Dụng",
+                levelCode: "vandung",
+                question: "Từ thực tế tác giả đảm nhiệm thành công nhiều lĩnh vực chưa từng học qua (kinh tế, giao thông, lọc nước, điện lực...), bài học quan trọng nhất cho thanh niên hiện đại là gì?",
+                options: [
+                    "Chỉ nên trung thành với một ngành nghề cố định và từ chối mọi cơ hội mới",
+                    "Tinh thần tự học, khả năng thích ứng linh hoạt, thái độ dấn thân và trách nhiệm tạo giá trị mới là chìa khóa quyết định thành công",
+                    "Không cần học hành ở nhà trường mà chỉ cần chờ đợi vận may",
+                    "Nên thường xuyên thay đổi công việc liên tục mỗi tháng"
+                ],
+                correct: 1,
+                explanation: "Ví dụ sống động của tác giả chứng minh bằng cấp ban đầu chỉ là điểm khởi đầu; năng lực tự học, thích ứng và tinh thần tận hiến mới giúp con người vượt qua mọi thử thách."
+            },
+            {
+                id: 17,
+                level: "Vận Dụng",
+                levelCode: "vandung",
+                question: "Khi đối mặt với sự định hướng nghề nghiệp từ cha mẹ (như trường hợp tác giả), góc nhìn ứng xử phù hợp nhất của học sinh là gì?",
+                options: [
+                    "Tôn trọng, lắng nghe góc nhìn yêu thương của cha mẹ nhưng đồng thời chủ động rèn luyện bản lĩnh, nỗ lực thích ứng và kiến tạo giá trị riêng",
+                    "Phản đối gay gắt và cắt đứt liên lạc với gia đình để tự do tuyệt đối",
+                    "Tuân theo hoàn toàn thụ động mà không cần có ý kiến hay nỗ lực cá nhân",
+                    "Bỏ mặc cuộc đời mình cho số phận tự quyết định"
+                ],
+                correct: 0,
+                explanation: "Tác giả tiếp nhận sự hướng dẫn an toàn của cha mẹ nhưng trong mọi hoàn cảnh sau đó, ông đều nỗ lực dấn thân, linh hoạt thích ứng để hoàn thành xuất sắc nhiệm vụ."
+            },
+            {
+                id: 18,
+                level: "Vận Dụng",
+                levelCode: "vandung",
+                question: "Cách hiểu đúng đắn nhất về cụm từ 'sự tự chấp nhận' trong câu văn: 'hạnh phúc bền vững là thứ hạnh phúc lấy gốc từ sự trải nghiệm, từ sự tự chấp nhận' là gì?",
+                options: [
+                    "Thái độ đầu hàng, chịu đựng tiêu cực trước thất bại và dừng lại không cố gắng",
+                    "Sự bình tâm đón nhận bản thân, chấp nhận cả những khúc quanh hay biến cố không như ý để tiếp tục bước tiếp với tinh thần tích cực",
+                    "Bắt buộc những người xung quanh phải thỏa mãn mọi yêu cầu của mình",
+                    "Sự tự mãn với thành quả đạt được mà không học hỏi thêm"
+                ],
+                correct: 1,
+                explanation: "'Tự chấp nhận' không phải là buông xuôi, mà là sự hòa giải với hoàn cảnh và bản thân, không oán trách số phận mà lấy đó làm điểm tựa để bước tiếp."
+            },
+
+            // LEVEL 4: VẬN DỤNG CAO (2 CÂU)
+            {
+                id: 19,
+                level: "VD Cao",
+                levelCode: "vdcao",
+                question: "Phân tích mối quan hệ giữa nhan đề 'Một đời như kẻ tìm đường' và đúc kết ở cuối tác phẩm: Liệu có sự mâu thuẫn giữa hành động 'tìm đường' và kết luận 'chẳng có đường để tìm'?",
+                options: [
+                    "Có mâu thuẫn gay gắt, thể hiện tư duy chưa nhất quán của tác giả",
+                    "Không mâu thuẫn: 'Tìm đường' đại diện cho hành trình dấn thân, khát vọng trải nghiệm; còn 'chẳng có đường để tìm' là nhận thức triết lý cao nhất: đường đời không định sẵn, giá trị nằm ngay trong chính hành trình gieo mầm hạnh phúc",
+                    "Mâu thuẫn vì tác giả phủ nhận hoàn toàn ý nghĩa của giai đoạn thanh xuân",
+                    "Không mâu thuẫn vì đây chỉ là một thủ pháp chơi chữ gây chú ý thuần túy"
+                ],
+                correct: 1,
+                explanation: "Đây là điểm sáng triết lý mang tính biện chứng: Bằng sự dấn thân tìm đường suốt cả đời, tác giả mới ngộ ra nhận thức cao nhất là không có con đường vạch sẵn, mà chính sự cống hiến và trải nghiệm tạo nên bản thể con đường."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                levelCode: "vdcao",
+                question: "Nghệ thuật lập luận và giọng điệu trần thuật nào tạo nên sức lay động và thuyết phục sâu sắc nhất của bài viết đối với độc giả trẻ?",
+                options: [
+                    "Giọng điệu răn dạy, mệnh lệnh áp đặt chuẩn mực đạo đức cứng nhắc",
+                    "Sự kết hợp giữa tầm vóc trải nghiệm phong phú của một trí thức toàn cầu với giọng điệu chân thành, khiêm tốn, tự ngẫm và tinh thần tận hiến vì cộng đồng",
+                    "Sử dụng dày đặc các thuật ngữ kỹ thuật chuyên ngành gây choợp ngợp",
+                    "Chỉ tập trung trích dẫn các triết gia Hy Lạp cổ đại để áp đặt tư tưởng"
+                ],
+                correct: 1,
+                explanation: "Sức thuyết phục của Phan Văn Trường đến từ sự khiêm nhường ('khiêm tốn, mẫu mực'), trải nghiệm thật ở quy mô thế giới và tâm huyết trao truyền cho thế hệ trẻ bằng thái độ chân thành."
+            }
+        ];
+
+        // APP STATE VARIABLES
+        let currentQuestions = [];
+        let userAnswers = {};
+        let currentQuestionIndex = 0;
+        let activeMode = 'practice'; // 'practice' or 'timed'
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let timeElapsed = 0;
+
+        // Shuffle Array Helper (Fisher-Yates)
+        function shuffleArray(array) {
+            let arr = JSON.parse(JSON.stringify(array));
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Start Quiz Function
+        function startQuiz(mode) {
+            activeMode = mode;
+            userAnswers = {};
+            currentQuestionIndex = 0;
+            timeElapsed = 0;
+            
+            if (mode === 'timed') {
+                // Shuffle questions and options for Timed mode to ensure authenticity
+                currentQuestions = shuffleArray(ORIGINAL_QUESTIONS).map(q => {
+                    let indices = [0, 1, 2, 3];
+                    let shuffledIndices = shuffleArray(indices);
+                    let shuffledOptions = shuffledIndices.map(idx => q.options[idx]);
+                    let newCorrect = shuffledIndices.indexOf(q.correct);
+                    return {
+                        ...q,
+                        options: shuffledOptions,
+                        correct: newCorrect
+                    };
+                });
+                
+                timeRemaining = 20 * 60;
+                document.getElementById('timer-container').classList.remove('hidden');
+                document.getElementById('top-mode-text').innerText = "Chế độ TÍNH GIỜ (20 phút)";
+                startTimer();
+            } else {
+                // Practice mode: use original structured order
+                currentQuestions = JSON.parse(JSON.stringify(ORIGINAL_QUESTIONS));
+                document.getElementById('timer-container').classList.add('hidden');
+                document.getElementById('top-mode-text').innerText = "Chế độ LUYỆN TẬP";
+            }
+
+            // UI Screen Switching
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            document.getElementById('screen-quiz').classList.add('grid');
+
+            renderQuestionGrid();
+            loadQuestion(0);
+        }
+
+        // Timer Logic
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                timeElapsed++;
+                updateTimerDisplay();
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Thời gian làm bài đã hết! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            let m = Math.floor(timeRemaining / 60);
+            let s = timeRemaining % 60;
+            let displayStr = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+            document.getElementById('timer-display').innerText = displayStr;
+        }
+
+        // Render Question Navigation Grid (1 - 20)
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('question-grid');
+            gridContainer.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.onclick = () => loadQuestion(idx);
+                btn.className = `h-10 text-xs font-bold rounded-xl border transition-all flex items-center justify-center ${getGridBtnStyle(idx)}`;
+                btn.innerText = idx + 1;
+                gridContainer.appendChild(btn);
+            });
+
+            updateProgressText();
+        }
+
+        function getGridBtnStyle(idx) {
+            if (idx === currentQuestionIndex) {
+                return "bg-blue-600 text-white border-blue-400 shadow-lg scale-105 ring-2 ring-blue-400/50";
+            }
+            if (userAnswers[idx] !== undefined) {
+                return "bg-amber-600 text-cream border-amber-400";
+            }
+            return "bg-slate-800/80 hover:bg-slate-700 text-gray-300 border-slate-700";
+        }
+
+        function updateProgressText() {
+            let count = Object.keys(userAnswers).length;
+            document.getElementById('progress-text').innerText = `${count} / 20 đã làm`;
+        }
+
+        // Load Question Content
+        function loadQuestion(index) {
+            currentQuestionIndex = index;
+            const q = currentQuestions[index];
+
+            document.getElementById('current-question-num').innerText = `Câu ${index + 1} / 20`;
+            
+            // Level badge styling
+            const levelBadge = document.getElementById('current-question-level');
+            levelBadge.innerText = q.level;
+            if (q.levelCode === 'biet') {
+                levelBadge.className = "px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold rounded-md border border-blue-500/30 uppercase";
+            } else if (q.levelCode === 'hieu') {
+                levelBadge.className = "px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-bold rounded-md border border-emerald-500/30 uppercase";
+            } else if (q.levelCode === 'vandung') {
+                levelBadge.className = "px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded-md border border-amber-500/30 uppercase";
+            } else {
+                levelBadge.className = "px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded-md border border-purple-500/30 uppercase";
+            }
+
+            document.getElementById('question-text').innerHTML = q.question;
+
+            // Render Options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+                const optCard = document.createElement('div');
+                optCard.onclick = () => selectOption(index, optIdx);
+                optCard.className = `p-4 rounded-xl border cursor-pointer transition-all flex items-start gap-3.5 ${
+                    isSelected 
+                    ? 'bg-amber-900/50 border-amber-400 text-cream shadow-md' 
+                    : 'bg-slate-900/60 hover:bg-slate-800/80 border-slate-700/60 text-gray-200'
+                }`;
+
+                optCard.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
+                        isSelected ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-gray-400 border border-slate-600'
+                    }">
+                        ${optionLabels[optIdx]}
+                    </div>
+                    <div class="text-sm sm:text-base font-normal leading-relaxed pt-0.5">
+                        ${optText}
+                    </div>
+                `;
+                optionsContainer.appendChild(optCard);
+            });
+
+            // Update Navigation Buttons
+            document.getElementById('btn-prev').disabled = (index === 0);
+            document.getElementById('btn-next').disabled = (index === currentQuestions.length - 1);
+
+            // Refresh Question Grid styles
+            renderQuestionGrid();
+
+            // MathJax re-render if math formulas exist
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            loadQuestion(qIdx);
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentQuestionIndex];
+            loadQuestion(currentQuestionIndex);
+        }
+
+        function navigateQuestion(direction) {
+            let newIndex = currentQuestionIndex + direction;
+            if (newIndex >= 0 && newIndex < currentQuestions.length) {
+                loadQuestion(newIndex);
+            }
+        }
+
+        function confirmSubmit() {
+            let unanswered = currentQuestions.length - Object.keys(userAnswers).length;
+            let msg = unanswered > 0 
+                ? `Bạn còn ${unanswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài không?`
+                : "Bạn có chắc chắn muốn nộp bài kiểm tra ngay bây giờ?";
+            
+            if (window.confirm(msg)) {
+                submitQuiz();
+            }
+        }
+
+        // Submit Quiz and Render Results Screen
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            let score = (correctCount / currentQuestions.length) * 10;
+            let scoreFormatted = score.toFixed(1);
+
+            // Populate Summary Display
+            document.getElementById('res-score').innerHTML = `${scoreFormatted} <span class="text-sm font-normal text-gray-400">/ 10.0</span>`;
+            document.getElementById('res-correct').innerHTML = `${correctCount} <span class="text-sm font-normal text-gray-400">/ 20 câu</span>`;
+            
+            if (activeMode === 'timed') {
+                let m = Math.floor(timeElapsed / 60);
+                let s = timeElapsed % 60;
+                document.getElementById('res-time').innerText = `${m} phút ${s} giây`;
+                document.getElementById('result-mode-subtitle').innerText = "Chế độ TÍNH GIỜ";
+            } else {
+                document.getElementById('res-time').innerText = "Không giới hạn";
+                document.getElementById('result-mode-subtitle').innerText = "Chế độ LUYỆN TẬP";
+            }
+
+            // Teacher Evaluation Comment
+            let comment = "";
+            if (score >= 9.0) {
+                comment = "Xuất sắc! Em nắm rất vững toàn bộ nội dung lý thuyết, các chi tiết nghệ thuật và thấu hiểu sâu sắc triết lý nhân sinh của tác giả Phan Văn Trường. Hãy tiếp tục phát huy tư duy sắc bén này nhé!";
+            } else if (score >= 7.0) {
+                comment = "Kết quả rất tốt! Em đã nắm vững lượng kiến thức cơ bản và phần lớn câu hỏi đọc hiểu. Cần đào sâu hơn ở các câu vận dụng cao để đạt điểm tuyệt đối trong các kỳ thi chính thức.";
+            } else if (score >= 5.0) {
+                comment = "Kết quả Khá. Em đã trả lời đúng các câu hỏi mức độ Biết và Hiểu cơ bản. Tuy nhiên em cần đọc kỹ lại văn bản 'Một đời như kẻ tìm đường' trong SGK để hiểu sâu hơn về ý nghĩa các khúc quanh cuộc đời.";
+            } else {
+                comment = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và các chi tiết trong bài học. Hãy xem kỹ đáp án & lời giải chi tiết bên dưới, sau đó ôn lại văn bản để làm lại bài test nhé!";
+            }
+            document.getElementById('teacher-comment').innerText = comment;
+
+            // Render Explanations List
+            renderExplanations();
+
+            // Switch Screen
+            document.getElementById('screen-quiz').classList.remove('grid');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Detailed Explanations
+        function renderExplanations() {
+            const listContainer = document.getElementById('explanations-list');
+            listContainer.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+
+            currentQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+                const isUnanswered = userAns === undefined;
+
+                let statusBadge = "";
+                let cardBorder = "";
+                if (isCorrect) {
+                    statusBadge = `<span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-bold rounded-md border border-emerald-500/30 flex items-center gap-1"><i class="fa-solid fa-check"></i> Đúng</span>`;
+                    cardBorder = "border-emerald-500/40";
+                } else if (isUnanswered) {
+                    statusBadge = `<span class="px-3 py-1 bg-gray-500/20 text-gray-300 text-xs font-bold rounded-md border border-gray-500/30 flex items-center gap-1"><i class="fa-solid fa-minus"></i> Bỏ trống</span>`;
+                    cardBorder = "border-gray-500/40";
+                } else {
+                    statusBadge = `<span class="px-3 py-1 bg-rose-500/20 text-rose-300 text-xs font-bold rounded-md border border-rose-500/30 flex items-center gap-1"><i class="fa-solid fa-xmark"></i> Sai</span>`;
+                    cardBorder = "border-rose-500/40";
+                }
+
+                const item = document.createElement('div');
+                item.className = `glass-panel p-5 sm:p-6 rounded-2xl space-y-4 border ${cardBorder}`;
+
+                let optionsHtml = q.options.map((optText, optIdx) => {
+                    let optStyle = "bg-slate-900/50 border-slate-700/50 text-gray-300";
+                    let iconTag = "";
+
+                    if (optIdx === q.correct) {
+                        optStyle = "bg-emerald-950/80 border-emerald-500/80 text-emerald-200 font-semibold";
+                        iconTag = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    } else if (optIdx === userAns && !isCorrect) {
+                        optStyle = "bg-rose-950/80 border-rose-500/80 text-rose-200 line-through";
+                        iconTag = `<i class="fa-solid fa-circle-xmark text-rose-400 ml-auto"></i>`;
+                    }
+
+                    return `
+                        <div class="p-3 rounded-xl border text-sm flex items-center gap-3 ${optStyle}">
+                            <span class="w-6 h-6 rounded flex items-center justify-center font-bold text-xs bg-slate-800 shrink-0">
+                                ${optionLabels[optIdx]}
+                            </span>
+                            <span>${optText}</span>
+                            ${iconTag}
+                        </div>
+                    `;
+                }).join('');
+
+                item.innerHTML = `
+                    <div class="flex flex-wrap justify-between items-center gap-2 pb-3 border-b border-amber-900/40">
+                        <div class="flex items-center gap-2">
+                            <span class="font-black text-amber-300 text-base">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 bg-slate-800 text-gray-300 rounded font-medium">${q.level}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <div class="text-sm sm:text-base font-semibold text-white leading-relaxed">
+                        ${q.question}
+                    </div>
+
+                    <div class="space-y-2 pt-1">
+                        ${optionsHtml}
+                    </div>
+
+                    <div class="p-4 bg-amber-950/40 border border-amber-500/20 rounded-xl text-xs sm:text-sm text-amber-100/90 leading-relaxed space-y-1">
+                        <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb"></i> Lời giải chi tiết:
+                        </div>
+                        <p class="pl-5">${q.explanation}</p>
+                    </div>
+                `;
+
+                listContainer.appendChild(item);
+            });
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function scrollToExplanations() {
+            document.getElementById('explanations-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetApp() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('grid');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            document.getElementById('top-mode-text').innerText = "Chưa chọn chế độ";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

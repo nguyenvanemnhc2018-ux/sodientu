@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Về Chính Chúng Ta</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Configuration and CDN -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-card-dark {
+            background-color: #211212;
+        }
+        .bg-card-header {
+            background-color: #170b0b;
+        }
+        .border-custom {
+            border-color: #4a2424;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #211212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4a2424;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col min-h-screen custom-scrollbar">
+
+    <!-- HEADER BAR -->
+    <header class="bg-card-header border-b border-custom px-4 py-3 flex flex-wrap items-center justify-between shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-amber-600 text-white p-2 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-book-open text-xl"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-lg md:text-xl text-cream tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                <p class="text-xs md:text-sm text-amber-200/80">Bài: VỀ CHÍNH CHÚNG TA <span class="text-gray-300">(Các-lô Rô-ve-li - Trích 7 bài học hay nhất về vật lí)</span></p>
+            </div>
+        </div>
+        <div class="mt-2 md:mt-0 flex items-center space-x-3">
+            <span id="headerModeBadge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-amber-300 border border-amber-500/30">
+                <i class="fa-solid fa-circle text-[8px] mr-1.5 text-amber-400"></i> Chưa chọn chế độ
+            </span>
+            <div id="headerTimer" class="hidden text-amber-400 font-mono font-bold text-lg bg-black/40 px-3 py-1 rounded-lg border border-amber-500/30">
+                <i class="fa-regular fa-clock mr-1"></i> <span id="timerDisplay">20:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow p-3 md:p-6 max-w-7xl w-full mx-auto flex flex-col justify-center">
+
+        <!-- VIEW 1: START SCREEN (BẮT ĐẦU LÀM) -->
+        <section id="startView" class="space-y-6 my-auto">
+            <div class="text-center space-y-3">
+                <div class="inline-flex p-3 bg-amber-500/10 rounded-full text-amber-400 mb-1 border border-amber-500/20">
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-cream uppercase tracking-wider">Bài Kiểm Tra Trắc Nghiệm Khách Quan</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-300">20 câu hỏi</strong> bám sát nội dung bài học <strong class="text-cream">"Về chính chúng ta"</strong> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- LEVEL SUMMARY CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="bg-card-dark p-4 rounded-xl border border-custom hover:border-amber-500/50 transition duration-200">
+                    <div class="text-blue-400 font-bold text-sm tracking-wide uppercase mb-1">Mức Biết (8 CÂU)</div>
+                    <p class="text-xs text-gray-300">Kiểm tra kiến thức trực tiếp về tác giả, tác phẩm, chi tiết văn bản và thuật ngữ cơ bản.</p>
+                </div>
+                <div class="bg-card-dark p-4 rounded-xl border border-custom hover:border-amber-500/50 transition duration-200">
+                    <div class="text-green-400 font-bold text-sm tracking-wide uppercase mb-1">Mức Hiểu (7 CÂU)</div>
+                    <p class="text-xs text-gray-300">Giải thích ý nghĩa nội dung, biện pháp nghệ thuật, lập luận và dẫn chứng trong bài.</p>
+                </div>
+                <div class="bg-card-dark p-4 rounded-xl border border-custom hover:border-amber-500/50 transition duration-200">
+                    <div class="text-amber-400 font-bold text-sm tracking-wide uppercase mb-1">Vận Dụng (3 CÂU)</div>
+                    <p class="text-xs text-gray-300">Phân tích tác phẩm, liên kết tri thức nhiều phần, rèn luyện tư duy phản biện khoa học.</p>
+                </div>
+                <div class="bg-card-dark p-4 rounded-xl border border-custom hover:border-amber-500/50 transition duration-200">
+                    <div class="text-rose-400 font-bold text-sm tracking-wide uppercase mb-1">VD Cao (2 CÂU)</div>
+                    <p class="text-xs text-gray-300">Đánh giá tư tưởng triết học, giải quyết các yếu tố nghệ thuật phức tạp và bài học nhân sinh.</p>
+                </div>
+            </div>
+
+            <!-- MODE SELECTION -->
+            <div class="max-w-4xl mx-auto pt-4 border-t border-custom/60">
+                <h3 class="text-center text-xs md:text-sm font-semibold tracking-wider text-amber-200 uppercase mb-4">Vui lòng chọn hình thức kiểm tra:</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Practice Mode -->
+                    <div onclick="startQuiz('practice')" class="bg-card-dark hover:bg-amber-950/30 border border-custom hover:border-amber-500 p-6 rounded-2xl cursor-pointer transition transform hover:-translate-y-1 shadow-lg flex flex-col justify-between group">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition">1. Chế độ Luyện Tập</h4>
+                                <span class="bg-blue-900/60 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-500/30">Không giới hạn</span>
+                            </div>
+                            <p class="text-xs text-amber-200/70 font-medium">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <button class="mt-6 w-full py-2.5 bg-amber-600/30 group-hover:bg-amber-600 text-cream font-semibold rounded-xl text-sm border border-amber-500/40 transition">
+                            Bắt Đầu Luyện Tập <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- Timed Mode -->
+                    <div onclick="startQuiz('timed')" class="bg-card-dark hover:bg-amber-950/30 border border-custom hover:border-amber-500 p-6 rounded-2xl cursor-pointer transition transform hover:-translate-y-1 shadow-lg flex flex-col justify-between group">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition">2. Chế độ Tính Giờ</h4>
+                                <span class="bg-amber-900/60 text-amber-300 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-500/30">20 Phút</span>
+                            </div>
+                            <p class="text-xs text-amber-200/70 font-medium">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <button class="mt-6 w-full py-2.5 bg-amber-600 group-hover:bg-amber-500 text-cream font-semibold rounded-xl text-sm transition shadow-md">
+                            Bắt Đầu Tính Giờ <i class="fa-solid fa-play ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: QUIZ TAKING SCREEN (ĐANG LÀM) -->
+        <section id="quizView" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- LEFT SIDEBAR: QUESTION GRID -->
+            <div class="lg:col-span-4 bg-card-dark p-5 rounded-2xl border border-custom space-y-5 shadow-xl">
+                <div class="flex items-center justify-between pb-3 border-b border-custom">
+                    <h3 class="font-bold text-sm text-cream tracking-wide uppercase">Danh Sách Câu Hỏi</h3>
+                    <span class="text-xs font-medium px-2.5 py-1 bg-black/40 text-amber-300 rounded-md border border-amber-500/30">
+                        <span id="answeredCount">0</span> / 20 đã làm
+                    </span>
+                </div>
+
+                <!-- 20 Grid Buttons -->
+                <div id="questionGrid" class="grid grid-cols-5 gap-2.5">
+                    <!-- Generated via JS -->
+                </div>
+
+                <!-- Legend -->
+                <div class="pt-3 border-t border-custom space-y-2 text-xs text-gray-300">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3.5 h-3.5 bg-gray-800 border border-custom rounded"></span>
+                        <span>Chưa trả lời</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3.5 h-3.5 bg-amber-600 rounded"></span>
+                        <span>Đã chọn đáp án</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3.5 h-3.5 bg-blue-600 border border-blue-300 rounded"></span>
+                        <span>Đang làm (Hiện tại)</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="confirmSubmit()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center space-x-2 text-sm mt-4">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Nộp Bài & Kết Thúc</span>
+                </button>
+            </div>
+
+            <!-- RIGHT PANEL: CURRENT QUESTION -->
+            <div class="lg:col-span-8 bg-card-dark p-6 rounded-2xl border border-custom space-y-6 shadow-xl min-h-[480px] flex flex-col justify-between">
+                
+                <div class="space-y-4">
+                    <!-- Question Header Info -->
+                    <div class="flex items-center justify-between pb-3 border-b border-custom">
+                        <span id="currentQuestionTitle" class="text-lg font-bold text-cream">Câu 1 / 20</span>
+                        <span id="currentQuestionLevel" class="text-xs px-3 py-1 rounded-full font-semibold bg-blue-900/60 text-blue-300 border border-blue-500/30">
+                            Mức Biết
+                        </span>
+                    </div>
+
+                    <!-- Question Text -->
+                    <div id="questionText" class="text-base md:text-lg text-white font-medium leading-relaxed pt-2">
+                        <!-- Content via JS -->
+                    </div>
+
+                    <!-- Options List -->
+                    <div id="optionsList" class="space-y-3 pt-3">
+                        <!-- Options via JS -->
+                    </div>
+                </div>
+
+                <!-- Question Navigation Footer -->
+                <div class="pt-4 border-t border-custom flex flex-wrap items-center justify-between gap-3">
+                    <button onclick="prevQuestion()" id="prevBtn" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-cream text-sm font-medium rounded-xl transition border border-custom flex items-center space-x-1">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                        <span>Câu Trước</span>
+                    </button>
+
+                    <button onclick="clearCurrentChoice()" class="text-xs text-amber-200/70 hover:text-amber-300 underline font-medium">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button onclick="nextQuestion()" id="nextBtn" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-cream text-sm font-bold rounded-xl transition flex items-center space-x-1 shadow-md">
+                        <span>Câu Tiếp</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: RESULT SCREEN (KẾT THÚC) -->
+        <section id="resultView" class="hidden space-y-8 my-auto max-w-5xl mx-auto w-full">
+            
+            <!-- Result Summary Card -->
+            <div class="bg-card-dark p-6 md:p-8 rounded-2xl border border-custom text-center space-y-6 shadow-2xl">
+                <div class="inline-flex p-4 bg-amber-500/10 text-amber-400 rounded-full border border-amber-500/30">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-cream uppercase tracking-wide">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeLabel" class="text-xs text-amber-200/80 mt-1 uppercase font-semibold">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- 3 Metric Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                    <div class="bg-black/30 p-4 rounded-xl border border-custom">
+                        <div class="text-xs text-gray-400 uppercase font-medium">Điểm số</div>
+                        <div class="text-2xl md:text-3xl font-black text-amber-400 mt-1" id="scoreDisplay">0.0 <span class="text-xs font-normal text-gray-400">/ 10.0</span></div>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-xl border border-custom">
+                        <div class="text-xs text-gray-400 uppercase font-medium">Số câu đúng</div>
+                        <div class="text-2xl md:text-3xl font-black text-emerald-400 mt-1" id="correctCountDisplay">0 <span class="text-xs font-normal text-gray-400">/ 20 câu</span></div>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-xl border border-custom">
+                        <div class="text-xs text-gray-400 uppercase font-medium">Thời gian làm bài</div>
+                        <div class="text-xl md:text-2xl font-bold text-cream mt-2" id="timeSpentDisplay">Không giới hạn</div>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-amber-950/20 border border-amber-500/30 p-5 rounded-xl text-left max-w-3xl mx-auto">
+                    <div class="flex items-center space-x-2 text-amber-400 font-bold text-sm mb-2">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedback" class="text-xs md:text-sm text-gray-200 leading-relaxed">
+                        --
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="restartQuiz()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-cream font-bold text-sm rounded-xl transition shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#detailedSolutions" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-cream font-semibold text-sm rounded-xl transition border border-custom flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DETAILED SOLUTIONS LIST -->
+            <div id="detailedSolutions" class="space-y-6 pt-4">
+                <div class="flex items-center justify-between border-b border-custom pb-3">
+                    <h3 class="text-lg font-bold text-cream flex items-center space-x-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-gray-300 font-mono">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutionsList" class="space-y-6">
+                    <!-- Solution Cards Generated via JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-card-header border-t border-custom py-3 text-center text-xs text-amber-200/60">
+        Bộ câu hỏi ôn luyện chuẩn hóa Văn học | Tác phẩm: <strong class="text-cream">Về chính chúng ta</strong> - Các-lô Rô-ve-li
+    </footer>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        // ORIGINAL 20 QUESTIONS DATA strictly from "Về chính chúng ta" PDF content
+        const rawQuestions = [
+            // --- MỨC BIẾT (8 CÂU) ---
+            {
+                id: 1,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Tác giả của văn bản \\(\\text{Về chính chúng ta}\\) là ai?",
+                options: [
+                    "Các-lô Rô-ve-li (Carlo Rovelli)",
+                    "Nguyễn Nguyên Hy",
+                    "An-phơ-rét Nô-ben",
+                    "An-bert Ăng-đơ-xơn"
+                ],
+                correct: 0,
+                explanation: "Văn bản do nhà vật lý lý thuyết người Ý Các-lô Rô-ve-li (Carlo Rovelli) sáng tác, được dịch bởi Nguyễn Nguyên Hy."
+            },
+            {
+                id: 2,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Văn bản \\(\\text{Về chính chúng ta}\\) được trích từ cuốn sách nào?",
+                options: [
+                    "\\(7\\) bài học hay nhất về vật lí",
+                    "Trật tự thời gian",
+                    "Vũ trụ trong lòng bàn tay",
+                    "Nguồn gốc các loài"
+                ],
+                correct: 0,
+                explanation: "Văn bản trích từ tập sách nổi tiếng '\\(7\\) bài học hay nhất về vật lí' (xuất bản lần đầu năm 2014) của Carlo Rovelli."
+            },
+            {
+                id: 3,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Theo phần giới thiệu tác giả trong văn bản, Các-lô Rô-ve-li là nhà nghiên cứu chuyên sâu về lĩnh vực nào?",
+                options: [
+                    "Lực hấp dẫn lượng tử, lịch sử và triết học khoa học",
+                    "Vật lý hạt nhân cao cấp và thiên văn học thực nghiệm",
+                    "Hóa học hữu cơ và công nghệ sinh học di truyền",
+                    "Toán học thuần túy và trí tuệ nhân tạo"
+                ],
+                correct: 0,
+                explanation: "SGK phần giới thiệu tác giả nêu rõ ông tập trung nghiên cứu vào lĩnh vực lực hấp dẫn lượng tử, lịch sử và khoa học triết học."
+            },
+            {
+                id: 4,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Trong đoạn văn mở đầu, tác giả khẳng định con người trước hết là những \\(\\text{“chủ thể”}\\) làm nhiệm vụ gì đối với thế giới?",
+                options: [
+                    "Biết quan sát thế giới, sáng lập tập thể các bức tranh về thực tại",
+                    "Thống trị và chinh phục toàn bộ giới tự nhiên",
+                    "Đứng ngoài thế giới để đánh giá và phán xét",
+                    "Tạo ra các nguyên tử và hạt mới cho vũ trụ"
+                ],
+                correct: 0,
+                explanation: "Văn bản ghi rõ: '\\(\\text{Chúng ta}\\) - con người, trước hết là những chủ thể biết quan sát thế giới này, những nhà sáng lập tập thể của bức tranh về thực tại...'"
+            },
+            {
+                id: 5,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Ai là dịch giả chuyển ngữ văn bản \\(\\text{Về chính chúng ta}\\) sang tiếng Việt trong SGK?",
+                options: [
+                    "Nguyễn Nguyên Hy",
+                    "Phạm Vĩnh Cư",
+                    "Nguyễn Văn Trọng",
+                    "Trần Đình Sử"
+                ],
+                correct: 0,
+                explanation: "Dưới chân văn bản ghi rõ: '(Các-lô Rô-ve-li, Nguyễn Nguyên Hy dịch, \\(7\\) bài học hay nhất về vật lí, NXB Thế giới)'."
+            },
+            {
+                id: 6,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Theo văn bản, thông tin chứa trong phân tử \\(\\text{DNA}\\) trong tế bào của chúng ta là gì?",
+                options: [
+                    "Tất cả thông tin về mã di truyền của chúng ta",
+                    "Thông tin về các trận bão sắp diễn ra trong tự nhiên",
+                    "Thông tin về màu sắc của các thiên hà xa xôi",
+                    "Tất cả tri thức của nhân loại từ trước đến nay"
+                ],
+                correct: 0,
+                explanation: "Văn bản nêu: '...rồi \\(\\text{DNA}\\) trong tế bào chúng ta chứa tất cả thông tin về mã di truyền của chúng ta'."
+            },
+            {
+                id: 7,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Ở đoạn kết bài, tác giả ví von ranh giới giữa tri thức con người đã biết và chưa biết bằng hình ảnh nào?",
+                options: [
+                    "Bờ bờ của những gì đã biết tiếp giáp với đại dương mênh mông những gì chưa biết",
+                    "Ngọn núi cao sừng sững giữa bầu trời đêm thăm thẳm",
+                    "Một giọt nước nhỏ bé rơi vào lòng biển cả bao la",
+                    "Một ngọn đuốc sáng rực soi chiếu bóng tối vô tận"
+                ],
+                correct: 0,
+                explanation: "Trích văn bản: 'Tại đây, bên bờ của những gì chúng ta đã biết, tiếp giáp với cái đại dương mênh mông những gì chưa biết, rực sáng lên vầng hào quang của sự huyền bí...'"
+            },
+            {
+                id: 8,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Tác phẩm \\(\\text{7 bài học hay nhất về vật lí}\\) được dịch sang bao nhiêu ngôn ngữ trên thế giới?",
+                options: [
+                    "\\(41\\) thứ tiếng",
+                    "\\(25\\) thứ tiếng",
+                    "\\(50\\) thứ tiếng",
+                    "\\(100\\) thứ tiếng"
+                ],
+                correct: 0,
+                explanation: "SGK cho biết cuốn sách xuất bản lần đầu năm 2014, đã được dịch sang 41 thứ tiếng và bán hàng triệu bản trên thế giới."
+            },
+
+            // --- MỨC HIỂU (7 CÂU) ---
+            {
+                id: 9,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Theo tác giả, quan niệm cho rằng \\(\\text{“con người là người quan sát đứng ngoài cuộc”}\\) đối với tự nhiên là một quan niệm như thế nào?",
+                options: [
+                    "Sai lầm, vì con người nằm trong tự nhiên và là một bộ phận hữu cơ của thế giới",
+                    "Chính xác hoàn toàn, vì con người có trí tuệ vượt trội loài vật",
+                    "Đúng trong khoa học cổ điển nhưng sai trong khoa học hiện đại",
+                    "Cần thiết để đảm bảo tính khách quan trong nghiên cứu khoa học"
+                ],
+                correct: 0,
+                explanation: "Tác giả khẳng định con người không phải người đứng ngoài cuộc mà 'là một bộ phận hữu cơ của thế giới mà ta cảm nhận được', con người nằm trong lòng thế giới."
+            },
+            {
+                id: 10,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Việc tác giả lặp lại cụm từ \\(\\text{“Chúng ta...”}\\) ở nhiều đoạn văn nhằm mục đích chính gì?",
+                options: [
+                    "Nhấn mạnh mối quan hệ khăng khít, sự đồng nhất và vị trí thuộc về tự nhiên của con người",
+                    "Tạo nhịp điệu dồn dập cho bài viết nghị luận khoa học",
+                    "Bộc lộ sự tự hào cá nhân của tác giả về tri thức vật lý",
+                    "Thể hiện sự phân biệt rõ ràng giữa con người và muôn loài"
+                ],
+                correct: 0,
+                explanation: "Biện pháp điệp từ/điệp ngữ 'Chúng ta' giúp nhấn mạnh tính đồng nhất, gắn kết hữu cơ không thể tách rời giữa con người và vũ trụ."
+            },
+            {
+                id: 11,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Ý nghĩa sâu sắc của câu văn \\(\\text{“Tự nhiên là nhà của chúng ta, và sống trong tự nhiên nghĩa là chúng ta đang ở nhà của mình”}\\) là gì?",
+                options: [
+                    "Khẳng định con người thuộc về tự nhiên, tìm thấy sự hòa hợp và an yên trong môi trường tự nhiên",
+                    "Khuyên con người nên bỏ thành thị về sống ở vùng nông thôn tự nhiên",
+                    "Cho rằng con người có quyền sở hữu và cải tạo tự nhiên theo ý muốn",
+                    "Nhắc nhở con người xây dựng nhà cửa thân thiện với môi trường"
+                ],
+                correct: 0,
+                explanation: "Trích đoạn giải thích mối quan hệ tự nhiên: con người không phải sinh vật xa lạ bị ném vào vũ trụ mà tự nhiên chính là ngôi nhà gốc rễ chung."
+            },
+            {
+                id: 12,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Tác giả nêu các ví dụ như \\(\\text{“giọt mưa chứa thông tin về đám mây”}\\), \\(\\text{“tia sáng chứa thông tin về màu sắc”}\\) nhằm làm sáng tỏ luận điểm nào?",
+                options: [
+                    "Tri thức của con người chung quy đều phản ánh thế giới và trao đổi thông tin tự nhiên",
+                    "Hiện tượng thời tiết trong tự nhiên vô cùng phức tạp",
+                    "Vật lý học chỉ nghiên cứu những hiện tượng mưa và ánh sáng",
+                    "Mọi vật thể trong tự nhiên đều có ý thức như con người"
+                ],
+                correct: 0,
+                explanation: "Tác giả dùng các dẫn chứng vật lý để chứng minh rằng trao đổi thông tin là đặc tính nội tại của vật chất, và tri thức con người cũng là hình thức phản ánh thế giới."
+            },
+            {
+                id: 13,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Dưới góc nhìn của bài viết, các giá trị đạo đức, giọt nước mắt, nụ cười, tình yêu thương của con người có nguồn gốc từ đâu?",
+                options: [
+                    "Là một phần của chính tự nhiên, được hình thành qua quá trình tiến hóa lâu dài",
+                    "Là những yếu tố siêu nhiên độc lập không liên quan đến vật lý hay sinh học",
+                    "Do con người tự sáng tạo ra hoàn toàn tách rời với thế giới động vật",
+                    "Là những ảo giác tâm lý không có giá trị thực tế"
+                ],
+                correct: 0,
+                explanation: "Văn bản nêu: 'Các giá trị đạo đức của chúng ta, cảm xúc... cũng mang tính hiệu thực không kém vì là một phần của tự nhiên... được quyết định bởi sự tiến hóa'."
+            },
+            {
+                id: 14,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Đoạn văn mở đầu bằng chuỗi câu hỏi dồn dập có tác dụng nghệ thuật và lập luận như thế nào?",
+                options: [
+                    "Khơi gợi suy tư, cuốn hút người đọc cùng trăn trở về vị trí của con người trong vũ trụ rộng lớn",
+                    "Thể hiện sự bế tắc và bất lực của khoa học trước các câu hỏi triết học",
+                    "Thử thách trình độ hiểu biết của người đọc về vật lý lượng tử",
+                    "Bác bỏ hoàn toàn các thành tựu của vật lý học hiện đại"
+                ],
+                correct: 0,
+                explanation: "Một loạt câu hỏi nghi vấn mở đầu tạo không khí đối thoại, khơi gợi trí tò mò và mở ra hướng tìm kiếm câu trả lời về bản thể con người."
+            },
+            {
+                id: 15,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Thuật ngữ \\(\\text{“chủ thể”}\\) trong văn bản được giải thích ở phần chú thích trang là gì?",
+                options: [
+                    "Con người với tư cách là sinh vật có ý thức và ý chí, trong mối quan hệ đối lập với khách thể",
+                    "Người đứng đầu điều hành một công trình nghiên cứu khoa học",
+                    "Đối tượng bị tác động bởi các lực vật lý trong tự nhiên",
+                    "Bản chất vật chất chưa được khám phá của các hạt cơ bản"
+                ],
+                correct: 0,
+                explanation: "SGK chú thích chân trang: 'Chủ thể: con người với tư cách là một sinh vật có ý thức và ý chí, trong mối quan hệ đối lập với thế giới bên ngoài (gọi là khách thể)'."
+            },
+
+            // --- MỨC VẬN DỤNG (3 CÂU) ---
+            {
+                id: 16,
+                level: "Vận Dụng",
+                levelCode: "apply",
+                question: "Sự kết hợp giữa tri thức Vật lý hiện đại với tư tưởng Triết học và chất văn chương trong văn bản mang lại hiệu quả gì?",
+                options: [
+                    "Giúp lý thuyết khoa học trở nên giàu giá trị nhân văn, mềm mại và sâu sắc về nhận thức con người",
+                    "Làm cho văn bản mất đi tính chính xác và tính tin cậy của bài báo khoa học",
+                    "Biến bài viết thành một tác phẩm tiểu thuyết hư cấu hoang đường",
+                    "Gây khó hiểu cho người đọc không chuyên về ngành vật lý"
+                ],
+                correct: 0,
+                explanation: "Sự kết hợp liên ngành giữa khoa học tự nhiên, triết học và văn chương giúp bài nghị luận vừa chính xác vừa chan chứa cảm xúc, khơi gợi góc nhìn nhân văn sâu sắc."
+            },
+            {
+                id: 17,
+                level: "Vận Dụng",
+                levelCode: "apply",
+                question: "Từ cách tác giả đặt mối quan hệ giữa \\(\\text{“tri thức đã biết”}\\) và \\(\\text{“đại dương chưa biết”}\\), người học rút ra được bài học thái độ nào?",
+                options: [
+                    "Luôn giữ thái độ khiêm tốn trước tri thức nhân loại và không ngừng khao khát học hỏi",
+                    "Tự tin khẳng định con người đã hiểu biết trọn vẹn toàn bộ vũ trụ",
+                    "Hoài nghi và phủ nhận mọi giá trị tri thức khoa học hiện có",
+                    "Ngừng nghiên cứu vì những điều chưa biết là quá bao la"
+                ],
+                correct: 0,
+                explanation: "Nhận thức được sự hữu hạn của tri thức đã biết so với sự vô hạn của vũ trụ giúp con người giữ tinh thần khiêm tốn khoa học và động lực tiếp tục khám phá."
+            },
+            {
+                id: 18,
+                level: "Vận Dụng",
+                levelCode: "apply",
+                question: "Nhận định nào sau đây tổng hợp đầy đủ và chính xác nhất luận điểm trung tâm của tác giả về vị trí con người?",
+                options: [
+                    "Con người vừa là chủ thể nhận thức có ý thức, vừa là một phần hữu cơ nhỏ bé nhưng sinh động và kết nối chặt chẽ của tự nhiên",
+                    "Con người là sinh vật đặc biệt duy nhất đứng ngoài mọi quy luật vận động của thế giới vật chất",
+                    "Con người chỉ là tập hợp ngẫu nhiên của các hạt cơ bản mà không có giá trị tinh thần nào",
+                    "Con người là trung tâm duy nhất và có quyền cai trị tất cả sinh thể khác trong vũ trụ"
+                ],
+                correct: 0,
+                explanation: "Luận điểm xuyên suốt văn bản khẳng định vị trí kép của con người: vừa nhận thức thế giới (chủ thể) vừa thuộc về thế giới (bộ phận hữu cơ)."
+            },
+
+            // --- MỨC VẬN DỤNG CAO (2 CÂU) ---
+            {
+                id: 19,
+                level: "VD Cao",
+                levelCode: "high_apply",
+                question: "Sự soi chiếu của Vật lý lượng tử và Sinh học tiến hóa trong bài văn đã làm thay đổi quan niệm truyền thống về ranh giới giữa Khoa học và Tự nhiên ra sao?",
+                options: [
+                    "Xóa bỏ sự đối lập khiên cưỡng: khẳng định tinh thần, cảm xúc con người cũng chính là hiện thực tự nhiên rực rỡ và kỳ diệu",
+                    "Chứng minh rằng khoa học tự nhiên hoàn toàn có thể thay thế triết học và nghệ thuật",
+                    "Khẳng định vật lý học là ngành khoa học duy nhất có khả năng giải thích nguồn gốc vũ trụ",
+                    "Tách rời hoàn toàn thế giới tinh thần của con người khỏi thế giới vật chất khách quan"
+                ],
+                correct: 0,
+                explanation: "Bài viết xóa bỏ định kiến khoa học khô khan, cho thấy chính khoa học hiện đại giúp ta nhận ra vẻ đẹp kỳ diệu và sự thống nhất giữa vật chất, cảm xúc và tư duy con người."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                levelCode: "high_apply",
+                question: "Từ thông điệp \\(\\text{“Sống trong tự nhiên nghĩa là chúng ta đang ở nhà của mình”}\\), trách nhiệm lớn nhất của con người hiện đại là gì?",
+                options: [
+                    "Trân trọng, bảo vệ tự nhiên như bảo vệ ngôi nhà chung, phát triển tri thức theo hướng hòa hợp chứ không tàn phá",
+                    "Khai thác tối đa tài nguyên thiên nhiên để phục vụ sự phát triển kinh tế nhanh chóng",
+                    "Rời bỏ Trái Đất để tìm kiếm ngôi nhà mới ngoài không gian vũ trụ",
+                    "Sử dụng công nghệ hiện đại để kiểm soát và thay đổi hoàn toàn quy luật tự nhiên"
+                ],
+                correct: 0,
+                explanation: "Khi coi tự nhiên là nhà, trách nhiệm tối cao của con người là bảo vệ, nâng niu hành tinh, phát triển khoa học gắn liền với ý thức sinh thái bền vững."
+            }
+        ];
+
+        // STATE VARIABLES
+        let currentMode = null; // 'practice' or 'timed'
+        let activeQuestions = [];
+        let currentIndex = 0;
+        let userAnswers = {}; // questionIndex -> selectedOptionIndex
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let timeSpentSeconds = 0;
+
+        // SHUFFLE HELPER
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentIndex = 0;
+            timeRemaining = 20 * 60;
+            timeSpentSeconds = 0;
+
+            // Prepare questions list
+            if (mode === 'timed') {
+                // In Timed mode: Shuffle question order AND option order
+                let shuffled = shuffleArray(rawQuestions);
+                activeQuestions = shuffled.map(q => {
+                    // Create pairs of [optionText, originalIndex]
+                    let optPairs = q.options.map((opt, idx) => ({ text: opt, originalIdx: idx }));
+                    let shuffledOpts = shuffleArray(optPairs);
+                    return {
+                        ...q,
+                        displayOptions: shuffledOpts.map(p => p.text),
+                        // Map new option index to original option index
+                        correctDisplayIdx: shuffledOpts.findIndex(p => p.originalIdx === q.correct),
+                        originalQuestion: q
+                    };
+                });
+            } else {
+                // Practice mode: Standard order
+                activeQuestions = rawQuestions.map(q => ({
+                    ...q,
+                    displayOptions: [...q.options],
+                    correctDisplayIdx: q.correct,
+                    originalQuestion: q
+                }));
+            }
+
+            // Update UI elements for Header
+            const modeBadge = document.getElementById('headerModeBadge');
+            const timerBox = document.getElementById('headerTimer');
+
+            if (mode === 'practice') {
+                modeBadge.innerHTML = `<i class="fa-solid fa-graduation-cap mr-1 text-blue-400"></i> Chế độ LUYỆN TẬP`;
+                modeBadge.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-500/30";
+                timerBox.classList.add('hidden');
+            } else {
+                modeBadge.innerHTML = `<i class="fa-solid fa-stopwatch mr-1 text-amber-400"></i> Chế độ TÍNH GIỜ`;
+                modeBadge.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-950 text-amber-300 border border-amber-500/30";
+                timerBox.classList.remove('hidden');
+                startTimer();
+            }
+
+            // Switch View
+            document.getElementById('startView').classList.add('hidden');
+            document.getElementById('resultView').classList.add('hidden');
+            document.getElementById('quizView').classList.remove('hidden');
+
+            renderQuestionGrid();
+            renderCurrentQuestion();
+
+            // Typeset MathJax
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // TIMER FUNCTION
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                timeSpentSeconds++;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút làm bài! Hệ thống sẽ tự động nộp bài của bạn.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const formatted = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').textContent = formatted;
+        }
+
+        // RENDER QUESTION GRID (LEFT SIDEBAR)
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('questionGrid');
+            gridContainer.innerHTML = '';
+
+            activeQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.className = getGridBtnClass(idx);
+                btn.textContent = idx + 1;
+                btn.onclick = () => goToQuestion(idx);
+                gridContainer.appendChild(btn);
+            });
+
+            // Update answered count badge
+            const answeredNum = Object.keys(userAnswers).length;
+            document.getElementById('answeredCount').textContent = answeredNum;
+        }
+
+        function getGridBtnClass(idx) {
+            const isCurrent = idx === currentIndex;
+            const isAnswered = userAnswers.hasOwnProperty(idx);
+
+            let base = "w-full aspect-square flex items-center justify-center font-bold text-sm rounded-xl transition cursor-pointer border ";
+
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white border-blue-300 ring-2 ring-blue-400 shadow-md";
+            } else if (isAnswered) {
+                return base + "bg-amber-600 text-white border-amber-500 hover:bg-amber-500";
+            } else {
+                return base + "bg-gray-800 text-gray-300 border-custom hover:bg-gray-700 hover:text-white";
+            }
+        }
+
+        // RENDER CURRENT QUESTION
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentIndex];
+
+            // Header info
+            document.getElementById('currentQuestionTitle').textContent = `Câu ${currentIndex + 1} / 20`;
+            
+            const levelBadge = document.getElementById('currentQuestionLevel');
+            levelBadge.textContent = q.level;
+            
+            if (q.levelCode === 'know') {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold bg-blue-900/60 text-blue-300 border border-blue-500/30";
+            } else if (q.levelCode === 'understand') {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold bg-emerald-900/60 text-emerald-300 border border-emerald-500/30";
+            } else if (q.levelCode === 'apply') {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold bg-amber-900/60 text-amber-300 border border-amber-500/30";
+            } else {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold bg-rose-900/60 text-rose-300 border border-rose-500/30";
+            }
+
+            // Question text
+            document.getElementById('questionText').innerHTML = q.question;
+
+            // Options List
+            const optionsContainer = document.getElementById('optionsList');
+            optionsContainer.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            const selectedOpt = userAnswers[currentIndex];
+
+            q.displayOptions.forEach((optText, optIdx) => {
+                const optCard = document.createElement('div');
+                const isSelected = selectedOpt === optIdx;
+
+                let cardStyle = "flex items-start p-4 rounded-xl border transition cursor-pointer space-x-3 ";
+                if (isSelected) {
+                    cardStyle += "bg-amber-950/40 border-amber-500 text-cream shadow-md ring-1 ring-amber-500";
+                } else {
+                    cardStyle += "bg-black/20 border-custom hover:border-amber-500/50 hover:bg-black/30 text-gray-200";
+                }
+
+                optCard.className = cardStyle;
+                optCard.onclick = () => selectOption(optIdx);
+
+                optCard.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${isSelected ? 'bg-amber-500 text-black' : 'bg-gray-800 text-amber-300 border border-custom'}">
+                        ${prefixes[optIdx]}
+                    </div>
+                    <div class="text-sm md:text-base pt-0.5 leading-snug">
+                        ${optText}
+                    </div>
+                `;
+
+                optionsContainer.appendChild(optCard);
+            });
+
+            // Navigation Buttons State
+            document.getElementById('prevBtn').disabled = currentIndex === 0;
+            document.getElementById('prevBtn').style.opacity = currentIndex === 0 ? "0.4" : "1";
+
+            const nextBtn = document.getElementById('nextBtn');
+            if (currentIndex === activeQuestions.length - 1) {
+                nextBtn.innerHTML = `<span>Nộp Bài</span> <i class="fa-solid fa-check text-xs"></i>`;
+            } else {
+                nextBtn.innerHTML = `<span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right text-xs"></i>`;
+            }
+
+            renderQuestionGrid();
+
+            // Re-render MathJax formula
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // INTERACTIONS
+        function selectOption(optIdx) {
+            userAnswers[currentIndex] = optIdx;
+            renderCurrentQuestion();
+        }
+
+        function clearCurrentChoice() {
+            delete userAnswers[currentIndex];
+            renderCurrentQuestion();
+        }
+
+        function goToQuestion(idx) {
+            currentIndex = idx;
+            renderCurrentQuestion();
+        }
+
+        function prevQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderCurrentQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentIndex < activeQuestions.length - 1) {
+                currentIndex++;
+                renderCurrentQuestion();
+            } else {
+                confirmSubmit();
+            }
+        }
+
+        function confirmSubmit() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const remaining = 20 - answeredCount;
+
+            let message = "Bạn có chắc chắn muốn nộp bài kiểm tra ngay bây giờ?";
+            if (remaining > 0) {
+                message = `Bạn vẫn còn ${remaining} câu hỏi chưa trả lời! Bạn có chắc chắn muốn nộp bài không?`;
+            }
+
+            if (window.confirm(message)) {
+                submitQuiz();
+            }
+        }
+
+        // SUBMIT AND EVALUATE
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            activeQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correctDisplayIdx) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / 20) * 10;
+            const scoreFormatted = score.toFixed(1);
+
+            // Time spent text
+            let timeSpentText = "Không giới hạn";
+            if (currentMode === 'timed') {
+                const mins = Math.floor(timeSpentSeconds / 60);
+                const secs = timeSpentSeconds % 60;
+                timeSpentText = `${mins} phút ${secs} giây`;
+            }
+
+            // Teacher Feedback
+            let feedback = "";
+            if (score >= 9.0) {
+                feedback = "Xuất sắc! Em đã nắm vững toàn bộ kiến thức tác phẩm 'Về chính chúng ta', thể hiện khả năng cảm thụ văn học sâu sắc, tư duy phản biện khoa học tuyệt vời và khả năng liên hệ thực tiễn cao!";
+            } else if (score >= 7.0) {
+                feedback = "Kết quả rất tốt! Em đã hiểu rõ nội dung chính, hệ thống luận điểm và các yếu tố nghệ thuật của bài viết. Hãy rèn luyện thêm một số câu hỏi vận dụng cao để đạt điểm tối đa nhé!";
+            } else if (score >= 5.0) {
+                feedback = "Khá tốt! Em đã đạt mức độ trung bình khá. Tuy nhiên, em cần đọc kỹ lại đoạn trích trong SGK, chú ý các chi tiết phân tích mối quan hệ giữa con người và tự nhiên để làm tốt hơn.";
+            } else {
+                feedback = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và các thông tin trong bài 'Về chính chúng ta'. Hãy đọc lại văn bản SGK, xem kỹ lời giải chi tiết bên dưới để ôn tập lại nhé!";
+            }
+
+            // Update Result UI
+            document.getElementById('resultModeLabel').textContent = currentMode === 'practice' ? 'Chế độ LUYỆN TẬP' : 'Chế độ TÍNH GIỜ';
+            document.getElementById('scoreDisplay').innerHTML = `${scoreFormatted} <span class="text-xs font-normal text-gray-400">/ 10.0</span>`;
+            document.getElementById('correctCountDisplay').innerHTML = `${correctCount} <span class="text-xs font-normal text-gray-400">/ 20 câu</span>`;
+            document.getElementById('timeSpentDisplay').textContent = timeSpentText;
+            document.getElementById('teacherFeedback').textContent = feedback;
+
+            // Generate Solutions List
+            renderSolutionsList();
+
+            // Switch Views
+            document.getElementById('quizView').classList.add('hidden');
+            document.getElementById('resultView').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // RENDER DETAILED SOLUTIONS
+        function renderSolutionsList() {
+            const container = document.getElementById('solutionsList');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            activeQuestions.forEach((q, idx) => {
+                const userSelected = userAnswers[idx];
+                const isCorrect = userSelected === q.correctDisplayIdx;
+
+                const card = document.createElement('div');
+                card.className = "bg-card-dark p-5 md:p-6 rounded-2xl border border-custom space-y-4 shadow-lg";
+
+                let statusBadge = isCorrect 
+                    ? `<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-900/60 text-emerald-300 border border-emerald-500/30"><i class="fa-solid fa-check mr-1"></i> Đúng</span>`
+                    : `<span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-900/60 text-rose-300 border border-rose-500/30"><i class="fa-solid fa-xmark mr-1"></i> ${userSelected !== undefined ? 'Sai' : 'Chưa trả lời'}</span>`;
+
+                let optionsHtml = q.displayOptions.map((optText, optIdx) => {
+                    let optionStyle = "p-3 rounded-xl border flex items-start space-x-3 text-sm ";
+                    
+                    if (optIdx === q.correctDisplayIdx) {
+                        // Correct option
+                        optionStyle += "bg-emerald-950/40 border-emerald-500 text-emerald-200 font-medium";
+                    } else if (optIdx === userSelected && !isCorrect) {
+                        // Wrong user choice
+                        optionStyle += "bg-rose-950/40 border-rose-500 text-rose-200 line-through opacity-80";
+                    } else {
+                        optionStyle += "bg-black/20 border-custom text-gray-400";
+                    }
+
+                    return `
+                        <div class="${optionStyle}">
+                            <span class="font-bold shrink-0">${prefixes[optIdx]}.</span>
+                            <span>${optText}</span>
+                        </div>
+                    `;
+                }).join('');
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between pb-2 border-b border-custom">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-bold text-cream">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded bg-gray-800 text-amber-300 border border-custom">${q.level}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <div class="text-base font-medium text-white">
+                        ${q.question}
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        ${optionsHtml}
+                    </div>
+
+                    <div class="bg-amber-950/20 border border-amber-500/30 p-4 rounded-xl text-xs md:text-sm text-amber-100 space-y-1">
+                        <strong class="text-amber-300 font-semibold block"><i class="fa-solid fa-lightbulb mr-1"></i> Lời giải chi tiết:</strong>
+                        <p class="leading-relaxed opacity-90">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // RESTART QUIZ
+        function restartQuiz() {
+            document.getElementById('resultView').classList.add('hidden');
+            document.getElementById('quizView').classList.add('hidden');
+            document.getElementById('startView').classList.remove('hidden');
+
+            const modeBadge = document.getElementById('headerModeBadge');
+            modeBadge.innerHTML = `<i class="fa-solid fa-circle text-[8px] mr-1.5 text-amber-400"></i> Chưa chọn chế độ`;
+            modeBadge.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-amber-300 border border-amber-500/30";
+
+            document.getElementById('headerTimer').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
