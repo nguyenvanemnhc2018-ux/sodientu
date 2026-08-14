@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương: Thế giới đa dạng của thông tin - Sự sống và cái chết</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Library with Chemistry Support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .main-container {
+            max-width: 64rem; /* max-w-5xl */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .square-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        .circle-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #037859;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+        }
+        .section-title {
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #0f172a;
+            border-bottom: 4px solid #1e3a8a;
+            padding-bottom: 0.35rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+        }
+        .primary-btn {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .primary-btn:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+        }
+        .quiz-option-label {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .quiz-option-label:hover {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="main-container space-y-6">
+
+        <!-- Header Block -->
+        <div class="rounded-[12px] overflow-hidden shadow-md text-white border border-slate-200">
+            <!-- Chapter Header (Color 1) -->
+            <div style="background-color: #3e3a8a;" class="p-4 text-center font-bold text-lg md:text-xl tracking-wide uppercase">
+                CHƯƠNG: THẾ GIỚI ĐA DẠNG CỦA THÔNG TIN
+            </div>
+            <!-- Thin Divider Line -->
+            <div class="h-[1px] bg-white/30"></div>
+            <!-- Lesson Header (Color 2) -->
+            <div style="background-color: #037859;" class="p-6 text-center">
+                <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight uppercase">VĂN BẢN 1: SỰ SỐNG VÀ CÁI CHẾT</h1>
+                <p class="text-sm md:text-base italic mt-2 opacity-90">(Trích <em>Từ điển yêu thích bầu trời và các vì sao</em> - Trịnh Xuân Thuận)</p>
+            </div>
+        </div>
+
+        <!-- Intro Box -->
+        <div class="bg-white rounded-[12px] p-5 border border-black shadow-md">
+            <div class="flex items-start space-x-3">
+                <span class="text-2xl">💡</span>
+                <p class="italic text-gray-700 text-base md:text-lg leading-relaxed">
+                    "Khi quan sát những biểu hiện cụ thể của sự sống trên Trái Đất, điều gì đã khiến bạn suy nghĩ, băn khoăn hoặc tò mò?"
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION I -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-title">
+                <span class="square-number">I</span> TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <!-- Item 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold flex items-center text-slate-800">
+                    <span class="circle-number">1</span> Tác giả Trịnh Xuân Thuận
+                </h3>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg space-y-2 text-slate-700">
+                    <p>• <strong>Năm sinh:</strong> 1948 tại Hà Nội, là nhà vật lý học thiên văn người Mỹ gốc Việt, giáo sư Đại học Virginia (Hoa Kỳ).</p>
+                    <p>• <strong>Phong cách sáng tác:</strong> Viết các tác phẩm khoa học bằng tiếng Pháp với văn phong tinh tế, giàu chất thơ và tràn đầy cảm xúc nhân văn, giúp các vấn đề khoa học vũ trụ trở nên gần gũi với công chúng.</p>
+                    <p>• <strong>Tác phẩm tiêu biểu:</strong> <em>Số phận của vũ trụ – Bích Băng và sau đó</em> (1992), <em>Hỗn độn và hài hoà</em> (1998), <em>Những con đường của ánh sáng</em> (2007), <em>Vũ trụ và hoa sen</em> (2011)...</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold flex items-center text-slate-800">
+                    <span class="circle-number">2</span> Tác phẩm "Từ điển yêu thích bầu trời và các vì sao" & Văn bản
+                </h3>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-slate-700 space-y-2">
+                    <p>• <strong>Xuất xứ:</strong> Trích từ cuốn <em>Từ điển yêu thích bầu trời và các vì sao</em> (NXB Tri thức, Hà Nội, 2017).</p>
+                    <p>• <strong>Thể loại:</strong> Văn bản thông tin tổng hợp (kết hợp các yếu tố tự sự, miêu tả, biểu cảm và nghị luận).</p>
+                </div>
+            </div>
+
+            <!-- Image Frame Placeholder 1 -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h1.png" alt="Chân dung tác giả Trịnh Xuân Thuận và sách" class="max-w-full h-auto mx-auto rounded shadow-sm mb-2" onerror="this.src='https://placehold.co/600x300/3e3a8a/ffffff?text=H%C3%ACnh+1:+T%C3%A1c+gi%E1%BA%A3+Tr%E1%BB%8Bnh+Xu%C3%A2n+Thu%E1%BA%ADn'">
+                <p class="text-xs text-gray-500 italic">Hình 1: Tác giả Trịnh Xuân Thuận và tác phẩm Từ điển yêu thích bầu trời và các vì sao</p>
+            </div>
+        </div>
+
+        <!-- SECTION II -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-title">
+                <span class="square-number">II</span> ĐỌC - HIỂU VĂN BẢN
+            </h2>
+
+            <!-- Side Prompt Question 1 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-3">
+                <div class="font-semibold text-blue-950 flex items-center">
+                    <span class="mr-2">❓</span> Câu hỏi dọc đường 1: Dự đoán nội dung cụ thể sẽ được triển khai trong bài viết qua nhan đề và đoạn 1?
+                </div>
+                <button onclick="toggleAnswer('ans1')" class="primary-btn text-xs uppercase tracking-wider">Xem trả lời</button>
+                <div id="ans1" class="hidden bg-emerald-50 border border-emerald-200 p-3 rounded text-slate-800 text-sm mt-2">
+                    <strong>Trả lời:</strong> Nhan đề "Sự sống và cái chết" gợi ra mối quan hệ song hành, đối lập nhưng thống nhất trong tự nhiên. Đoạn 1 sẽ triển khai lịch sử sự sống trên Trái Đất theo hai hướng: <em>hướng dọc</em> (sự phức tạp hóa theo thời gian) và <em>hướng ngang</em> (sự đa dạng loài phong phú).
+                </div>
+            </div>
+
+            <!-- Item 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold flex items-center text-slate-800">
+                    <span class="circle-number">1</span> Tiến trình phát triển của sự sống trên Trái Đất
+                </h3>
+                
+                <!-- Definition / Key takeaway box -->
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg text-slate-800 space-y-2">
+                    <p class="font-bold text-amber-900">📌 Định luật phát triển của sự sống:</p>
+                    <p>Lịch sử sự sống trên Trái Đất diễn ra đồng thời theo <strong>2 hướng chính</strong>:</p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li><strong>Hướng dọc:</strong> Thể hiện bằng sự phức tạp hóa ngày càng tăng theo tuổi Trái Đất (từ vi khuẩn đơn bào đến con người phức tạp).</li>
+                        <li><strong>Hướng ngang:</strong> Thể hiện bởi sự đa dạng kinh ngạc của sự sống và sự đa dạng hóa ngày càng lớn của các loài theo thời gian.</li>
+                    </ul>
+                </div>
+
+                <!-- Side Prompt Question 2 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-3 my-3">
+                    <div class="font-semibold text-blue-950 flex items-center">
+                        <span class="mr-2">❓</span> Câu hỏi dọc đường 2: Việc tác giả tưởng tượng ra một chuyến "du hành" ngược thời gian có ý nghĩa gì?
+                    </div>
+                    <button onclick="toggleAnswer('ans2')" class="primary-btn text-xs uppercase tracking-wider">Xem trả lời</button>
+                    <div id="ans2" class="hidden bg-emerald-50 border border-emerald-200 p-3 rounded text-slate-800 text-sm mt-2">
+                        <strong>Trả lời:</strong> Chuyến "du hành ngược thời gian" giúp sinh động hóa bức tranh tiến hóa của Trái Đất qua các mốc: 3 tỷ năm trước (vi khuẩn cổ), 500 triệu năm trước (bọ ba thủy, tảo, rêu), 140 triệu năm trước (hoa, bướm, chim, khủng long). Cách diễn đạt tưởng tượng giúp văn bản thông tin hấp dẫn, trực quan và giàu tính văn chương.
+                    </div>
+                </div>
+
+                <!-- Image Frame Placeholder 2 -->
+                <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                    <img src="h2.png" alt="Sơ đồ lịch sử tiến hóa của sự sống trên Trái Đất" class="max-w-full h-auto mx-auto rounded shadow-sm mb-2" onerror="this.src='https://placehold.co/600x300/037859/ffffff?text=H%C3%ACnh+2:+S%C6%A1+%C4%91%E1%BB%93+ti%E1%BA%BFn+h%C3%B3a+s%E1%BB%B1+s%E1%BB%91ng'">
+                    <p class="text-xs text-gray-500 italic">Hình 2: Sơ đồ dòng thời gian tiến hóa sự sống từ đơn bào đến đa bào</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold flex items-center text-slate-800">
+                    <span class="circle-number">2</span> Mối quan hệ giữa sự sống, đấu tranh sinh tồn và cái chết
+                </h3>
+
+                <!-- Side Prompt Question 3 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-3">
+                    <div class="font-semibold text-blue-950 flex items-center">
+                        <span class="mr-2">❓</span> Câu hỏi dọc đường 3: Chú ý những thuật ngữ chuyên ngành sinh học được sử dụng trong các đoạn 3, 4 và tác dụng của chúng?
+                    </div>
+                    <button onclick="toggleAnswer('ans3')" class="primary-btn text-xs uppercase tracking-wider">Xem trả lời</button>
+                    <div id="ans3" class="hidden bg-emerald-50 border border-emerald-200 p-3 rounded text-slate-800 text-sm mt-2">
+                        <strong>Trả lời:</strong> 
+                        Các thuật ngữ: <em>vi khuẩn, động vật nguyên sinh, động vật đa bào, tuyệt chủng, kỉ Péc-mi (Permi), tiểu hành tinh, ô sinh thái, chọn lọc tự nhiên</em>.<br>
+                        <strong>Tác dụng:</strong> Đảm bảo tính chính xác, khách quan, khoa học của văn bản thông tin, nâng cao độ tin cậy tri thức.
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg text-slate-800 space-y-2">
+                    <p class="font-bold text-blue-900">💡 Quy luật Sinh tồn & Sự Tuyệt chủng:</p>
+                    <p>• <strong>Tuyệt chủng là một phần của tiến hóa:</strong> Sự xuất hiện của các dạng động vật mới không đồng nghĩa với đào thải hoàn toàn loài cũ, nhưng khi môi trường biến đổi lớn, sự tuyệt chủng xảy ra (Ví dụ: bọ ba thủy tuyệt chủng cuối kỉ Péc-mi; khủng long tuyệt chủng do va chạm tiểu hành tinh cách đây 65 triệu năm).</p>
+                    <p>• <strong>Vai trò của Cái Chết:</strong> Cái chết giải phóng các "ô sinh thái", nhường không gian và tài nguyên cho các loài mới nhanh chóng chiếm giữ và phát triển. Cái chết cho phép sự sống tiến lên và tự hoàn thiện.</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold flex items-center text-slate-800">
+                    <span class="circle-number">3</span> Sự khác biệt giữa sinh vật và vật vô sinh
+                </h3>
+
+                <!-- Side Prompt Question 4 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-3">
+                    <div class="font-semibold text-blue-950 flex items-center">
+                        <span class="mr-2">❓</span> Câu hỏi dọc đường 4: Sự khác nhau giữa các vật vô sinh và các sinh vật là gì?
+                    </div>
+                    <button onclick="toggleAnswer('ans4')" class="primary-btn text-xs uppercase tracking-wider">Xem trả lời</button>
+                    <div id="ans4" class="hidden bg-emerald-50 border border-emerald-200 p-3 rounded text-slate-800 text-sm mt-2">
+                        <strong>Trả lời:</strong> Vật vô sinh (như hạt ánh sáng, nguyên tử) giữ nguyên đặc tính từ sau vụ nổ Big Bang và không cần đấu tranh sinh tồn hay tuân theo chọn lọc tự nhiên. Trong khi đó, sinh vật sống phải liên tục đấu tranh với cái chết, tuyệt chủng và sự đe dọa từ môi trường để sáng tạo và thích nghi.
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="overflow-x-auto my-4">
+                    <table class="w-full text-sm text-center border-collapse border border-[#cbd5e0]">
+                        <thead>
+                            <tr class="bg-[#e2e8f0] text-slate-800 font-bold">
+                                <th class="border border-[#cbd5e0] p-3 w-1/2">Vật vô sinh</th>
+                                <th class="border border-[#cbd5e0] p-3 w-1/2">Sinh vật sống</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-700">
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3">Không cần đấu tranh sinh tồn.</td>
+                                <td class="border border-[#cbd5e0] p-3">Phải đấu tranh liên tục để sinh tồn.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3">Không bị đe dọa bởi sự tuyệt chủng.</td>
+                                <td class="border border-[#cbd5e0] p-3">Luôn đối mặt với nguy cơ tuyệt chủng và cái chết.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3">Không tuân theo quy luật chọn lọc tự nhiên.</td>
+                                <td class="border border-[#cbd5e0] p-3">Tuân theo quy luật chọn lọc tự nhiên nghiêm ngặt.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3">Đặc điểm cơ bản giữ nguyên qua hàng tỷ năm.</td>
+                                <td class="border border-[#cbd5e0] p-3">Bật dậy bằng sức sáng tạo, tiến hóa và tự hoàn thiện.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-title">
+                <span class="square-number">III</span> NGHỆ THUẬT VÀ THÔNG ĐIỆP
+            </h2>
+
+            <!-- Activity Box (Hand Icon) -->
+            <div class="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-3">
+                <div class="font-bold text-indigo-950 flex items-center text-base">
+                    <span class="mr-2">🖐</span> Hoạt động thảo luận: Phân tích sự kết hợp giữa tri thức khoa học và yếu tố biểu cảm văn học trong bài viết
+                </div>
+                <button onclick="toggleAnswer('act1')" class="primary-btn text-xs uppercase tracking-wider">Xem hướng giải quyết</button>
+                <div id="act1" class="hidden bg-white border border-indigo-200 p-3 rounded text-slate-800 text-sm mt-2">
+                    <strong>Hướng giải quyết:</strong> Tác giả không dùng số liệu khô khan mà lồng ghép chuyến du hành tưởng tượng, hình ảnh nhân hóa ("đón tiếp bạn", "tiếng vi vu của ong", "tiếng chim hót ru"), giúp văn bản đạt được sự giao thoa hài hòa giữa Tri thức Khoa học chính xác và Tâm hồn Nghệ thuật tinh tế.
+                </div>
+            </div>
+
+            <!-- Em có biết Box -->
+            <div class="bg-sky-50 border border-sky-300 p-4 rounded-lg space-y-2">
+                <h4 class="font-bold text-sky-900 text-md flex items-center">
+                    <span class="mr-2">📘</span> EM CÓ BIẾT?
+                </h4>
+                <p class="text-sky-950 text-sm leading-relaxed">
+                    Kỉ Péc-mi (Permi) kéo dài từ khoảng 299 đến 251 triệu năm trước. Đợt tuyệt chủng cuối kỉ Péc-mi được coi là thảm họa tuyệt chủng lớn nhất lịch sử Trái Đất, xóa sổ tới 96% số loài sinh vật biển và 70% số loài sinh vật trên đất liền lúc bấy giờ!
+                </p>
+            </div>
+
+            <!-- Em có thể Box -->
+            <div class="bg-emerald-50 border border-emerald-300 p-4 rounded-lg space-y-2">
+                <h4 class="font-bold text-emerald-900 text-md flex items-center">
+                    <span class="mr-2">🌱</span> EM CÓ THỂ
+                </h4>
+                <p class="text-emerald-950 text-sm leading-relaxed">
+                    Tự vẽ một sơ đồ tư duy hoặc mốc thời gian thể hiện các bước phát triển quan trọng của sự sống trên Trái Đất, sau đó trình bày trước lớp góc nhìn cá nhân về trách nhiệm bảo vệ sự đa dạng sinh học của con người hiện đại.
+                </p>
+            </div>
+
+            <!-- Lưu ý Box -->
+            <div class="bg-amber-50 border border-amber-300 p-4 rounded-lg space-y-2">
+                <h4 class="font-bold text-amber-900 text-md flex items-center">
+                    <span class="mr-2">⚠️</span> LƯU Ý
+                </h4>
+                <p class="text-amber-950 text-sm leading-relaxed">
+                    Trong các văn bản thông tin tổng hợp, yếu tố tự sự và biểu cảm chỉ đóng vai trò hỗ trợ truyền tải. Mục tiêu cốt lõi vẫn là cung cấp tri thức chính xác, trung thực về quy luật của vũ trụ và tự nhiên.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION IV: QUIZ GAMESHOW "AI LÀ TRIỆU PHÚ" -->
+        <div class="bg-slate-900 rounded-[12px] p-6 shadow-2xl text-white border-2 border-yellow-500 space-y-6">
+            <div class="text-center space-y-2 border-b border-slate-700 pb-4">
+                <span class="bg-yellow-500 text-slate-950 text-xs font-black uppercase px-3 py-1 rounded-full">Gameshow Củng Cố</span>
+                <h2 class="text-2xl md:text-3xl font-black text-yellow-400 tracking-wider">💰 AI LÀ TRIỆU PHÚ 💰</h2>
+                <p class="text-slate-300 text-sm">Chinh phục 10 câu hỏi để trở thành triệu phú tri thức GDPT 2018!</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                
+                <!-- Q1 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 1 (Level 1)</span>
+                        <span>Mức thưởng: 200.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Tác giả Trịnh Xuân Thuận là một nhà nghiên cứu thuộc lĩnh vực nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q1" value="A" class="mr-2"> A. Sinh học phân tử</label>
+                        <label class="quiz-option-label"><input type="radio" name="q1" value="B" class="mr-2"> B. Vật lý học thiên văn</label>
+                        <label class="quiz-option-label"><input type="radio" name="q1" value="C" class="mr-2"> C. Hóa học địa chất</label>
+                        <label class="quiz-option-label"><input type="radio" name="q1" value="D" class="mr-2"> D. Khoa học môi trường</label>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 2 (Level 2)</span>
+                        <span>Mức thưởng: 500.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Lịch sử sự sống trên Trái Đất diễn ra đồng thời theo hai hướng nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q2" value="A" class="mr-2"> A. Hướng dọc và hướng ngang</label>
+                        <label class="quiz-option-label"><input type="radio" name="q2" value="B" class="mr-2"> B. Hướng chéo và hướng thẳng</label>
+                        <label class="quiz-option-label"><input type="radio" name="q2" value="C" class="mr-2"> C. Hướng tâm và hướng ly tâm</label>
+                        <label class="quiz-option-label"><input type="radio" name="q2" value="D" class="mr-2"> D. Hướng chủ quan và hướng khách quan</label>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 3 (Level 3)</span>
+                        <span>Mức thưởng: 1.000.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Nếu quay ngược thời gian 3 tỷ năm trước, chúng ta sẽ bắt gặp dạng sinh vật nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q3" value="A" class="mr-2"> A. Khủng long ăn thịt</label>
+                        <label class="quiz-option-label"><input type="radio" name="q3" value="B" class="mr-2"> B. Bọ ba thủy và cúc đá</label>
+                        <label class="quiz-option-label"><input type="radio" name="q3" value="C" class="mr-2"> C. Vi khuẩn và vi khuẩn cổ</label>
+                        <label class="quiz-option-label"><input type="radio" name="q3" value="D" class="mr-2"> D. Các loài động vật có vú nhỏ</label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 4 (Level 4)</span>
+                        <span>Mức thưởng: 2.000.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Chủng loài nào đã bị tuyệt chủng hoàn toàn vào cuối kỉ Péc-mi (Permi)?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q4" value="A" class="mr-2"> A. Khủng long bạo chúa</label>
+                        <label class="quiz-option-label"><input type="radio" name="q4" value="B" class="mr-2"> B. Bọ ba thủy</label>
+                        <label class="quiz-option-label"><input type="radio" name="q4" value="C" class="mr-2"> C. Chim đại bàng</label>
+                        <label class="quiz-option-label"><input type="radio" name="q4" value="D" class="mr-2"> D. Rắn biển</label>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 5 (Level 5)</span>
+                        <span>Mức thưởng: 5.000.000 VNĐ (Mốc an toàn 1)</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Thảm họa tiểu hành tinh đâm vào Trái Đất cách đây bao nhiêu năm đã kết liễu loài khủng long?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q5" value="A" class="mr-2"> A. 65 triệu năm</label>
+                        <label class="quiz-option-label"><input type="radio" name="q5" value="B" class="mr-2"> B. 140 triệu năm</label>
+                        <label class="quiz-option-label"><input type="radio" name="q5" value="C" class="mr-2"> C. 500 triệu năm</label>
+                        <label class="quiz-option-label"><input type="radio" name="q5" value="D" class="mr-2"> D. 3 tỷ năm</label>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 6 (Level 6)</span>
+                        <span>Mức thưởng: 10.000.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Theo văn bản, cái chết có vai trò gì trong sự tiến hóa của tự nhiên?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q6" value="A" class="mr-2"> A. Triệt hạ hoàn toàn mọi dấu vết sự sống</label>
+                        <label class="quiz-option-label"><input type="radio" name="q6" value="B" class="mr-2"> B. Giải phóng ô sinh thái cho các loài mới phát triển</label>
+                        <label class="quiz-option-label"><input type="radio" name="q6" value="C" class="mr-2"> C. Ngăn chặn sự đa dạng hóa sinh học</label>
+                        <label class="quiz-option-label"><input type="radio" name="q6" value="D" class="mr-2"> D. Giúp vật vô sinh phát triển thành sinh vật</label>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 7 (Level 7)</span>
+                        <span>Mức thưởng: 20.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Điểm khác biệt căn bản giữa sinh vật sống và vật vô sinh là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q7" value="A" class="mr-2"> A. Vật vô sinh phải đấu tranh sinh tồn nghiêm ngặt</label>
+                        <label class="quiz-option-label"><input type="radio" name="q7" value="B" class="mr-2"> B. Sinh vật sống không chịu tác động của môi trường</label>
+                        <label class="quiz-option-label"><input type="radio" name="q7" value="C" class="mr-2"> C. Sinh vật sống phải đấu tranh sinh tồn & chịu chọn lọc tự nhiên</label>
+                        <label class="quiz-option-label"><input type="radio" name="q7" value="D" class="mr-2"> D. Vật vô sinh liên tục tiến hóa tạo ra loài mới</label>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 8 (Level 8)</span>
+                        <span>Mức thưởng: 30.000.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Vụ nổ nào được nhắc tới như cột mốc khởi thủy tạo nên các hạt ánh sáng đầu tiên cách đây 13,7 tỷ năm?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q8" value="A" class="mr-2"> A. Vụ nổ Siêu tân星 (Supernova)</label>
+                        <label class="quiz-option-label"><input type="radio" name="q8" value="B" class="mr-2"> B. Vụ nổ Big Bang (Đại bùng nổ)</label>
+                        <label class="quiz-option-label"><input type="radio" name="q8" value="C" class="mr-2"> C. Vụ nổ Péc-mi</label>
+                        <label class="quiz-option-label"><input type="radio" name="q8" value="D" class="mr-2"> D. Vụ nổ nhiệt hạt nhân</label>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 9 (Level 9)</span>
+                        <span>Mức thưởng: 50.000.000 VNĐ</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Phương thức biểu đạt chính của văn bản "Sự sống và cái chết" là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q9" value="A" class="mr-2"> A. Thuyết minh / Thuyết minh thông tin</label>
+                        <label class="quiz-option-label"><input type="radio" name="q9" value="B" class="mr-2"> B. Biểu cảm trữ tình</label>
+                        <label class="quiz-option-label"><input type="radio" name="q9" value="C" class="mr-2"> C. Tự sự viễn tưởng</label>
+                        <label class="quiz-option-label"><input type="radio" name="q9" value="D" class="mr-2"> D. Hành chính công vụ</label>
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <div class="flex justify-between text-xs text-yellow-400 font-bold">
+                        <span>CÂU HỎI 10 (Level 10)</span>
+                        <span>Mức thưởng: 85.000.000 VNĐ (MỐC TRIỆU PHÚ)</span>
+                    </div>
+                    <p class="font-semibold text-slate-100">Thái độ của tác giả Trịnh Xuân Thuận khi bàn về sự sống và cái chết trong tự nhiên là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-200">
+                        <label class="quiz-option-label"><input type="radio" name="q10" value="A" class="mr-2"> A. Bi quan, lo sợ trước cái chết</label>
+                        <label class="quiz-option-label"><input type="radio" name="q10" value="B" class="mr-2"> B. Khách quan, tràn đầy ngợi ca sức sáng tạo của sự sống</label>
+                        <label class="quiz-option-label"><input type="radio" name="q10" value="C" class="mr-2"> C. Thờ ơ, coi thường quy luật tự nhiên</label>
+                        <label class="quiz-option-label"><input type="radio" name="q10" value="D" class="mr-2"> D. Phủ nhận vai trò của khoa học hiện đại</label>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-950 hover:bg-black text-yellow-400 border border-yellow-500 font-extrabold text-lg px-8 py-3 rounded-full transition transform hover:scale-105 shadow-lg">
+                        NỘP BÀI KẾT QUẢ 🏆
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Output Box -->
+            <div id="quizResult" class="hidden p-4 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 space-y-4"></div>
+        </div>
+
+        <!-- SECTION V: ESSAY & CALCULATIONS -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-title">
+                <span class="square-number">V</span> BÀI TẬP TỰ LUẬN TÍNH TOÁN CỦNG CỐ
+            </h2>
+
+            <!-- Essay 1 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-bold text-slate-800">Bài  (Phân tích thông điệp triết học - Nghị luận):</p>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                    Từ văn bản "Sự sống và cái chết", anh/chị hãy viết một đoạn văn ngắn (khoảng 150-200 chữ) suy nghĩ về câu nói: <em>"Cái chết cho phép sự sống tiến lên"</em>.
+                </p>
+                <button onclick="toggleAnswer('essay3')" class="primary-btn text-xs uppercase tracking-wider">Xem lời giải chi tiết</button>
+                <div id="essay3" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded text-slate-800 text-sm mt-2 space-y-2">
+                    <p class="font-bold text-emerald-900">Gợi ý đoạn văn mẫu:</p>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        "Khái niệm 'cái chết' thường gợi ra cảm giác mất mát, đau thương, nhưng dưới góc nhìn khoa học và triết học của Trịnh Xuân Thuận, cái chết lại là một mắt xích thiết yếu cho tiến trình phát triển tự nhiên. Tác giả đã khẳng định: 'Cái chết cho phép sự sống tiến lên'. Thật vậy, nếu các sinh vật cổ xưa không tuyệt chủng hay qua đi, Trái Đất sẽ không đủ nguồn sống và 'ô sinh thái' để đón nhận các dạng sống mới phức tạp, hoàn thiện hơn. Sự ra đi của khủng long đã mở đường cho kỷ nguyên phát triển bùng nổ của động vật có vú và con người. Cái chết loại bỏ cái cũ đã lỗi thời, nhường chỗ cho cái mới sáng tạo và thích nghi tốt hơn. Nhận thức được quy luật này giúp chúng ta biết trân trọng từng khoảnh khắc được sống, có trách nhiệm cống hiến giá trị cho đời và học cách nhìn nhận quy luật sinh - tử của vũ trụ với thái độ thanh thản, bao dung."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center py-6 text-sm text-slate-500 font-semibold border-t border-slate-300">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </div>
+
+    </div>
+
+    <!-- JavaScript Logic Code -->
+    <script>
+        // Toggle Answer Visibility Function
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Check Quiz Logic Function
+        function checkQuiz() {
+            const correctAnswers = {
+                q1: "B",
+                q2: "A",
+                q3: "C",
+                q4: "B",
+                q5: "A",
+                q6: "B",
+                q7: "C",
+                q8: "B",
+                q9: "A",
+                q10: "B"
+            };
+
+            const explanations = {
+                q1: "Trịnh Xuân Thuận là giáo sư, nhà vật lý học thiên văn nổi tiếng.",
+                q2: "Lịch sử sự sống diễn ra đồng thời theo hướng dọc (phức tạp hóa) và hướng ngang (đa dạng hóa).",
+                q3: "Cách đây 3 tỷ năm chỉ có các dạng vi khuẩn và vi khuẩn cổ đơn bào.",
+                q4: "Bọ ba thủy bị tuyệt chủng hoàn toàn vào cuối kỉ Péc-mi.",
+                q5: "Thảm họa tiểu hành tinh diễn ra cách đây khoảng 65 triệu năm.",
+                q6: "Cái chết giúp giải phóng ô sinh thái cho các loài sinh vật mới phát triển.",
+                q7: "Sinh vật sống phải liên tục đấu tranh sinh tồn và chịu quy luật chọn lọc tự nhiên.",
+                q8: "Vụ nổ Big Bang cách đây 13,7 tỷ năm khởi đầu cho vũ trụ.",
+                q9: "Đây là văn bản thông tin / thuyết minh tri thức khoa học.",
+                q10: "Tác giả nhìn nhận khách quan, ngợi ca sức sáng tạo của sự sống."
+            };
+
+            const prizeList = [
+                "200.000 VNĐ", "500.000 VNĐ", "1.000.000 VNĐ", "2.000.000 VNĐ", 
+                "5.000.000 VNĐ", "10.000.000 VNĐ", "20.000.000 VNĐ", "30.000.000 VNĐ", 
+                "50.000.000 VNĐ", "85.000.000 VNĐ"
+            ];
+
+            let score = 0;
+            let detailHTML = "";
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : "Chưa chọn";
+                const isCorrect = (userAns === correctAnswers[qName]);
+
+                if (isCorrect) {
+                    score++;
+                    detailHTML += `<p class="text-emerald-400"><strong>Câu ${i}:</strong> ĐÚNG ✅ (Đáp án: ${correctAnswers[qName]}) - ${explanations[qName]}</p>`;
+                } else {
+                    detailHTML += `<p class="text-rose-400"><strong>Câu ${i}:</strong> SAI ❌ (Đã chọn: ${userAns} | Đáp án đúng: ${correctAnswers[qName]}) - ${explanations[qName]}</p>`;
+                }
+            }
+
+            const resultDiv = document.getElementById("quizResult");
+            resultDiv.classList.remove("hidden");
+
+            const currentPrize = score > 0 ? prizeList[score - 1] : "0 VNĐ";
+
+            if (score === 10) {
+                resultDiv.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <h3 class="text-2xl font-black text-emerald-400 uppercase">🎉 XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ! 🎉</h3>
+                        <p class="text-lg">Số câu đúng: <span class="font-bold text-yellow-400">10/10</span> | Tiền thưởng: <span class="font-bold text-yellow-400">${currentPrize}</span></p>
+                    </div>
+                    <hr class="border-slate-700 my-3">
+                    <div class="space-y-2 text-sm">${detailHTML}</div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <h3 class="text-2xl font-black text-amber-400 uppercase">KẾT QUẢ CỦNG CỐ</h3>
+                        <p class="text-lg">Số câu đúng: <span class="font-bold text-yellow-400">${score}/10</span> | Mức tiền thưởng đạt được: <span class="font-bold text-yellow-400">${currentPrize}</span></p>
+                    </div>
+                    <hr class="border-slate-700 my-3">
+                    <div class="space-y-2 text-sm">${detailHTML}</div>
+                `;
+            }
+
+            // Smooth scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
