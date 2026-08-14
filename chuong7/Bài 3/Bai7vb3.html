@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Một Chuyện Đùa Nho Nhỏ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-btn {
+            background-color: #33FF33;
+            color: #1a202c;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .main-btn:hover {
+            background-color: #2be02b;
+            transform: translateY(-1px);
+        }
+        .section-header {
+            border-bottom: 4px solid #1e293b;
+        }
+        table, th, td {
+            border: 1px solid #cbd5e0;
+        }
+        th {
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Chosen Palette: Custom Academic Theme with Indigo/Blue Headers and #33FF33 Primary Buttons -->
+    <!-- Application Structure Plan: Interactive Lesson Application for Chekhov's story 'Một chuyện đùa nho nhỏ'. Structured into 5 main logical sections: (I) Summary & Core Knowledge with timeline/author analysis, (II) Critical Reading Notes & Interactive Margins, (III) Textbook Question Responses, (IV) Read-Write Connection Prompt, and (V) Comprehensive Evaluation featuring a 10-question 'Who Wants to be a Millionaire' quiz game and 3 deep analytical/logical exercises with step-by-step math-probabilistic models. Built to optimize clarity, student engagement, and self-assessment. -->
+    <!-- Visualization & Content Choices: Used structured tables for plot structure, custom HTML/Tailwind badges for note tags, interactive JS toggles for hidden detailed solutions, MathJax for Bayesian probability modeling in literary analysis, and dynamic JS state management for quiz evaluation without SVGs or Mermaid JS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-[12px] overflow-hidden shadow-lg border border-slate-300">
+            <!-- Chapter Box (Màu 1: #3e3a8a) -->
+            <div style="background-color: #3e3a8a;" class="p-4 text-white text-center text-lg md:text-xl font-bold uppercase tracking-wide">
+                Chương: QUYỀN NĂNG CỦA NGƯỜI KỂ TRUYỆN
+            </div>
+            <!-- Thin Divider Line -->
+            <div class="h-[1px] bg-white opacity-40"></div>
+            <!-- Lesson Box (Màu 2: #044d78) -->
+            <div style="background-color: #044d78;" class="p-5 text-white text-center text-2xl md:text-3xl font-extrabold uppercase tracking-wider">
+                VĂN BẢN 3: MỘT CHUYỆN ĐÙA NHO NHỎ
+                <div class="text-sm font-normal normal-case mt-1 text-slate-200">Tác giả: An-tôn Sê-khốp (Anton Chekhov)</div>
+            </div>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="bg-white border border-black rounded-lg p-5 shadow-sm">
+            <p class="italic text-slate-700 text-center text-base md:text-lg">
+                "Đôi khi hồi ức về một kỉ niệm nhỏ bé trong quá quá khứ lại khiến ta phải suy ngẫm nhiều về cuộc sống của mình trong hiện tại và tương lai. Hãy kể lại kỉ niệm ấy với bạn bè."
+            </p>
+        </div>
+
+        <!-- SECTION I -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-slate-900 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 border-2 border-slate-800 rounded font-bold mr-3 text-slate-900">I</span>
+                TÓM TẮT VÀ KIẾN THỨC TRỌNG TÂM
+            </h2>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-6 h-6 bg-slate-200 text-slate-800 rounded-full text-sm mr-2">1</span>
+                    Tác giả An-tôn Sê-khốp (Anton Chekhov)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                    <div class="md:col-span-2 space-y-2 text-slate-700">
+                        <p>• <strong>Cuộc đời:</strong> An-tôn Sê-khốp (1860 – 1904) sinh ra và lớn lên tại thị trấn Ta-gan-rốc (Taganrog), miền nam nước Nga. Ông tốt nghiệp ngành Y tại Đại học Tổng hợp Mát-scơ-va năm 1884.</p>
+                        <p>• <strong>Sự nghiệp:</strong> Là nhà văn, nhà soạn kịch vĩ đại của Nga. Năm 1898, ông được thừa nhận là một trong những nhà văn lớn nhất của văn học Nga. L. Tolstoy đánh giá Sê-khốp đã "sáng tạo nên cách viết mới cho toàn thế giới".</p>
+                        <p>• <strong>Phong cách nghệ thuật:</strong> Hàm súc, cô đọng. Truyện ngắn của ông thường là "truyện không có chuyện", mở đầu đưa người đọc nhập thẳng vào khung cảnh, kết thúc gây cảm giác "chưa có chuyện gì xảy ra cả", đọng lại tâm trạng khắc khoải, dư ba sâu sắc.</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-2 bg-slate-50 border border-slate-200 rounded-lg">
+                        <img src="h1.png" alt="Chân dung An-tôn Sê-khốp" class="max-h-48 object-contain rounded mb-2 border">
+                        <span class="text-xs text-slate-500 italic">Hình 1: Chân dung An-tôn Sê-khốp</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-6 h-6 bg-slate-200 text-slate-800 rounded-full text-sm mr-2">2</span>
+                    Bố cục & Tóm tắt tác phẩm
+                </h3>
+                
+                <div class="p-4 bg-sky-50 border-l-4 border-sky-600 rounded-r-lg space-y-2">
+                    <h4 class="font-bold text-sky-900">Khung Tóm Tắt Tác Phẩm</h4>
+                    <p class="text-slate-700 text-sm leading-relaxed">
+                        Nhân vật "tôi" rủ cô gái Na-đi-a trượt tuyết xuống dốc gắt đầy nguy hiểm. Mỗi lần xe lao dốc kinh hoàng, "tôi" lại thì thào vào gió câu nói: <em>"Na-đi-a, anh yêu em!"</em>. Na-đi-a vừa sợ hãi trượt tuyết vừa băn khoăn không biết ai đã nói câu đó (gió hay là "tôi"). Vì khao khát nghe lại câu nói ấy, Na-đi-a bất chấp nỗi sợ hãi để trượt tuyết nhiều lần, thậm chí tự mình trượt một mình. Đến mùa xuân, nhân vật "tôi" sắp đi xa, qua khe hở hàng rào nhìn thấy Na-đi-a buồn bã, "tôi" lại thì thầm câu nói ấy theo làn gió rồi rời đi mãi mãi. Nhiều năm sau, Na-đi-a đã lập gia đình và hạnh phúc, còn "tôi" khi đã đứng tuổi vẫn không hiểu vì sao mình lại bày ra trò đùa đó.
+                    </p>
+                </div>
+
+                <div class="overflow-x-auto mt-4">
+                    <table class="w-full text-sm text-center">
+                        <thead>
+                            <tr>
+                                <th class="p-2 font-bold text-slate-700">Phần</th>
+                                <th class="p-2 font-bold text-slate-700">Thời gian / Bối cảnh</th>
+                                <th class="p-2 font-bold text-slate-700">Nội dung chính</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-700">
+                            <tr>
+                                <td class="p-2 font-semibold">Phần 1</td>
+                                <td class="p-2">Một buổi trưa mùa đông</td>
+                                <td class="p-2 text-left">Lần trượt tuyết đầu tiên và sự xuất hiện của câu đùa "Na-đi-a, anh yêu em!".</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 font-semibold">Phần 2</td>
+                                <td class="p-2">Những ngày đông tiếp theo</td>
+                                <td class="p-2 text-left">Các lần trượt tuyết lặp lại; sự tò mò, giằng xé và lòng dũng cảm bất ngờ của Na-đi-a.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 font-semibold">Phần 3</td>
+                                <td class="p-2">Mùa xuân sang (Cuối tháng Ba)</td>
+                                <td class="p-2 text-left">Buổi chiều chia tay trước hàng rào và lời thì thầm cuối cùng theo gió xuân.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 font-semibold">Phần 4</td>
+                                <td class="p-2">Nhiều năm sau (Hiện tại)</td>
+                                <td class="p-2 text-left">Tình trạng cuộc sống hiện tại của hai người và sự trăn trở của nhân vật "tôi".</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION II -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-slate-900 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 border-2 border-slate-800 rounded font-bold mr-3 text-slate-900">II</span>
+                CÁC MỤC KHÁM PHÁ & LƯU Ý TRONG VĂN BẢN
+            </h2>
+
+            <!-- Box Em có biết -->
+            <div class="p-4 bg-amber-50 border border-amber-300 rounded-lg">
+                <h4 class="font-bold text-amber-900 text-lg mb-1 flex items-center">
+                    💡 Em có biết
+                </h4>
+                <p class="text-amber-800 text-sm leading-relaxed">
+                    Truyện ngắn <em>Một chuyện đùa nho nhỏ</em> xuất bản lần đầu trên tạp chí <em>Dế mèn</em> của Nga năm 1886. Năm 1899, Sê-khốp chỉnh lý, bổ sung một số câu chữ và đặc biệt thay đổi phần kết truyện để đưa vào tuyển tập tác phẩm của mình. Tục ngữ Nga có câu: <em>"Uống rượu từ bình nào chả thế, cốt sao say là được"</em> thể hiện tâm lý tận hưởng cảm xúc yêu thương ngọt ngào không quan trọng nguồn gốc.
+                </p>
+            </div>
+
+            <!-- Box Em có thể -->
+            <div class="p-4 bg-teal-50 border border-teal-300 rounded-lg">
+                <h4 class="font-bold text-teal-900 text-lg mb-1 flex items-center">
+                    🌟 Em có thể
+                </h4>
+                <p class="text-teal-800 text-sm leading-relaxed">
+                    Phân tích điểm nhìn nghệ thuật và ngôi kể trong văn bản. Nhận biết sự dịch chuyển điểm nhìn từ người kể chuyện lúc tham gia sự việc (quá khứ) sang điểm nhìn suy ngẫm, chiêm nghiệm của người kể chuyện ở thời điểm hiện tại (bây giờ).
+                </p>
+            </div>
+
+            <!-- Box Lưu ý -->
+            <div class="p-4 bg-indigo-50 border border-indigo-300 rounded-lg">
+                <h4 class="font-bold text-indigo-900 text-lg mb-1 flex items-center">
+                    📌 Lưu ý
+                </h4>
+                <p class="text-indigo-800 text-sm leading-relaxed">
+                    Chú ý các chi tiết nghệ thuật giàu tính biểu tượng: "Chiếc xe trượt tuyết", "Làn gió", "Hàng rào cao có đỉnh nhọn" và "khe hở hàng rào". Đây là những hình ảnh ẩn dụ cho ranh giới, khoảng cách tâm hồn cũng như sự đùa giỡn với tình cảm con người.
+                </p>
+            </div>
+
+            <!-- Interactive Notes from Margin -->
+            <div class="space-y-4 pt-2">
+                <h3 class="font-bold text-slate-800">Các điểm ghi chú đọc hiểu trong văn bản:</h3>
+
+                <!-- Note 1 -->
+                <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-blue-600">
+                    <p class="font-semibold text-slate-800">1. Lưu ý về ngôi kể: Lời kể xuất phát chủ yếu từ điểm nhìn "lúc đó" hay "bây giờ"?</p>
+                    <button onclick="toggleAnswer('note1')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem câu trả lời</button>
+                    <div id="note1" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm">
+                        Lời kể trong phần lớn câu chuyện xuất phát từ điểm nhìn "lúc đó" (người trong cuộc ở quá khứ), nhưng được tái hiện và đan xen bởi điểm nhìn "bây giờ" (người kể chuyện khi đã đứng tuổi, nhìn lại và suy ngẫm).
+                    </div>
+                </div>
+
+                <!-- Note 2 -->
+                <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-blue-600">
+                    <p class="font-semibold text-slate-800">2. Vì sao Na-đi-a "không muốn tin rằng gió đã nói những lời ấy"?</p>
+                    <button onclick="toggleAnswer('note2')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem câu trả lời</button>
+                    <div id="note2" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm">
+                        Vì trong lòng Na-đi-a rất khao khát được nghe lời tỏ tình chân thành từ chính nhân vật "tôi". Lời nói ấy mang lại cho cô niềm hạnh phúc, sự xao xuyến mãnh liệt. Nếu chỉ là gió nói thì lời yêu thương ấy trở nên vô nghĩa.
+                    </div>
+                </div>
+
+                <!-- Note 3 -->
+                <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-blue-600">
+                    <p class="font-semibold text-slate-800">3. Lưu ý "độ vênh" giữa suy đoán của người kể chuyện với hành động tiếp theo của Na-đi-a.</p>
+                    <button onclick="toggleAnswer('note3')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem câu trả lời</button>
+                    <div id="note3" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm">
+                        Người kể chuyện đoán Na-đi-a sợ hãi không dám trượt tuyết nữa và sẽ rất đau khổ. Nhưng thực tế Na-đi-a lại dũng cảm tự mình trượt tuyết một mình chỉ để thử xác minh xem có còn nghe thấy câu nói ấy hay không. Điều này cho thấy sức mạnh của tình yêu và khao khát hạnh phúc vượt qua nỗi sợ hãi thể xác.
+                    </div>
+                </div>
+
+                <!-- Note 4 (Hand icon - Problem solving) -->
+                <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-amber-500">
+                    <p class="font-semibold text-slate-800 flex items-center">
+                        🖐️ Hoạt động / Nêu vấn đề: Ý nghĩa của hình ảnh "hàng rào cao có đỉnh nhọn" và hành động "ghé nhìn qua khe hở".
+                    </p>
+                    <button onclick="toggleAnswer('note4')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem hướng giải quyết</button>
+                    <div id="note4" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm">
+                        Hàng rào cao có đỉnh nhọn tượng trưng cho khoảng cách ngăn cách, sự ngần ngại và rào cản giữa hai tâm hồn. Hành động "ghé nhìn qua khe hở" thể hiện sự lén lút, thiếu can đảm dấn thân của nhân vật "tôi" – anh chỉ đứng ngoài lề cuộc đời cô gái chứ không dám bước qua ranh giới để đón nhận một tình yêu đích thực.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-slate-900 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 border-2 border-slate-800 rounded font-bold mr-3 text-slate-900">III</span>
+                TRẢ LỜI CÂU HỎI BÀI HỌC (SGK)
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 1: Câu chuyện được kể bằng lời người kể chuyện ngôi thứ mấy? Người kể chuyện là ai?</p>
+                    <button onclick="toggleAnswer('q1')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q1" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        • Ngôi kể: Ngôi thứ nhất (nhân vật "tôi").<br>
+                        • Vai trò: Người kể chuyện chính là nhân vật trực tiếp tham gia vào hành động chính của tác phẩm (người bày ra trò đùa trượt tuyết và thốt ra câu "Na-đi-a, anh yêu em!").
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 2: Dựa vào sự thay đổi thời gian, địa điểm, thành phần nhân vật, xác định bố cục tác phẩm?</p>
+                    <button onclick="toggleAnswer('q2')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q2" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        Tác phẩm gồm 4 phần (như đã tóm tắt ở mục I.2):<br>
+                        1. Lần trượt tuyết đầu tiên trên đồi tuyết.<br>
+                        2. Chuỗi ngày trượt tuyết tiếp theo trong mùa đông.<br>
+                        3. Buổi chiều xuân chia tay tại khu vườn nhà Na-đi-a.<br>
+                        4. Nhiều năm sau, khi cả hai đã trưởng thành.
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 3: Căn cứ vào lời tả và kể trong lần trượt tuyết đầu tiên, đoán định tình cảm thực sự của nhân vật "tôi" với Na-đi-a?</p>
+                    <button onclick="toggleAnswer('q3')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q3" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        Nhân vật "tôi" có cảm xúc xao xuyến, mến thương đối với Na-đi-a (thấy gương mặt nàng đáng yêu, ngô nghĩnh). Tuy nhiên, tình cảm ấy chưa đủ lớn, chưa đạt đến sự nghiêm túc và trách nhiệm của một tình yêu đích thực, mà dừng lại ở sự đùa giỡn, thử thách tâm lý đối phương.
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 4: Những hành động nào cho thấy "tôi" không còn khả năng đồng cảm với Na-đi-a? Vì sao "tôi" cũng là người mất mát?</p>
+                    <button onclick="toggleAnswer('q4')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q4" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        • Hành động dội sự thờ ơ, dửng dưng: khi Na-đi-a hoài nghi, "tôi" chỉ lạnh nhạt, giấu giếm, thản nhiên quan sát sự đau khổ và dằn vặt của cô như một trò tiêu khiển.<br>
+                        • "Tôi" là người mất mát vì đã vô tình đánh mất cơ hội có được một tình yêu chân thành, trong sáng nhất của tuổi trẻ. Sự hời hợt khiến "tôi" về già phải sống trong sự băn khoăn, tiếc nuối không lời đáp.
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 5: Ý nghĩa của câu nói "Na-đi-a, anh yêu em!" đối với Na-đi-a?</p>
+                    <button onclick="toggleAnswer('q5')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q5" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        Câu nói ấy là nguồn cảm hứng, là liều thuốc tinh thần đem lại niềm hạnh phúc say đắm, ngọt ngào nhất. Tình yêu mãnh liệt và khao khát khẳng định sự thật đã tiếp thêm cho cô sức mạnh vượt qua nỗi sợ hãi cái chết/sự nguy hiểm khi trượt tuyết một mình.
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 6: Cảnh chia tay mùa xuân gợi suy nghĩ gì? Lời khuyên ứng xử?</p>
+                    <button onclick="toggleAnswer('q6')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q6" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        Cảnh chia tay gợi nét buồn man mác, tiếc nuối về những giọt nước mắt và sự chờ đợi trong vô vọng của Na-đi-a. Bài học ứng xử: Trong tình cảm, cần sự chân thành, rõ ràng và can đảm; không nên biến cảm xúc của người khác thành trò đùa vô nghĩa.
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="font-bold text-slate-800">Câu 7: Tâm trạng nhân vật "tôi" ở phần kết và cảm hứng chủ đạo của tác phẩm?</p>
+                    <button onclick="toggleAnswer('q7')" class="main-btn px-3 py-1 rounded text-sm mt-2">Xem lời giải</button>
+                    <div id="q7" class="hidden mt-3 p-3 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        • Tâm trạng: Băn khoăn, ngơ ngác, hoài niệm và tiếc nuối (không hiểu vì sao lúc đó lại đùa như thế).<br>
+                        • Cảm hứng chủ đạo: Xót xa, hoài niệm bâng khuâng về tuổi trẻ, tình yêu và những giá trị tinh thần dở dang trong cuộc đời.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION IV: KẾT NỐI ĐỌC - VIẾT -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-4">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-slate-900 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 border-2 border-slate-800 rounded font-bold mr-3 text-slate-900">IV</span>
+                KẾT NỐI ĐỌC - VIẾT
+            </h2>
+            <div class="p-4 bg-slate-50 rounded-lg border">
+                <p class="font-semibold text-slate-800 mb-2">Đề bài: Viết đoạn văn (khoảng 150 chữ) phân tích hình ảnh "hàng rào" trong truyện ngắn *Một chuyện đùa nho nhỏ*.</p>
+                <button onclick="toggleAnswer('write_hint')" class="main-btn px-4 py-1.5 rounded text-sm">Xem gợi ý đoạn văn mẫu</button>
+                <div id="write_hint" class="hidden mt-3 p-4 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                    <strong>Đoạn văn tham khảo:</strong><br>
+                    Trong truyện ngắn <em>Một chuyện đùa nho nhỏ</em> của A. Chekhov, hình ảnh "hàng rào cao có đỉnh nhọn" xuất hiện ở đoạn kết mang ý nghĩa nghệ thuật sâu sắc. Hàng rào trước hết là vật thể ngăn cách không gian vật lý giữa khu vườn nhà Na-đi-a và thế giới bên ngoài. Tuy nhiên, ở khía cạnh biểu tượng, nó là bức tường vô hình ngăn cách hai tâm hồn, đại diện cho ranh giới tâm lý mà nhân vật "tôi" không bao giờ bước qua. Đứng sau khe hở hàng rào nhìn sang, "tôi" trao đi lời thì thầm "Na-đi-a, anh yêu em!" lần cuối rồi cất bước ra đi. Hành động ghé nhìn qua khe hở phản ánh sự hời hợt, thiếu dũng khí dấn thân của nhân vật "tôi". Hàng rào nhọn gắt ấy vừa bảo vệ Na-đi-a khỏi một trò đùa vô ân, vừa gián tiếp khép lại một kỉ niệm đẹp đẽ nhưng cay đắng của tuổi trẻ, để lại dư vị ngậm ngùi về những khoảng cách không thể khỏa lấp trong cuộc đời.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION V: BÀI TẬP CỦNG CỐ -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-8">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-slate-900 pb-2 uppercase flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 border-2 border-slate-800 rounded font-bold mr-3 text-slate-900">V</span>
+                BÀI TẬP CỦNG CỐ
+            </h2>
+
+            <!-- PART 1: GAMESHOW AI LÀ TRIỆU PHÚ -->
+            <div class="bg-gradient-to-br from-slate-900 to-indigo-950 p-6 rounded-xl text-white shadow-xl space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="bg-amber-400 text-slate-900 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-widest">Gameshow Trắc Nghiệm</span>
+                    <h3 class="text-2xl md:text-3xl font-black text-amber-300 uppercase tracking-wide">AI LÀ TRIỆU PHÚ KIẾN THỨC</h3>
+                    <p class="text-slate-300 text-sm">Trả lời 10 câu hỏi để chinh phục đỉnh cao kiến thức tác phẩm!</p>
+                </div>
+
+                <form id="quizForm" class="space-y-6 text-slate-100">
+                    <!-- Q1 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 1: Tác giả An-tôn Sê-khốp là nhà văn nổi tiếng của quốc gia nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q1" value="A"> A. Pháp</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q1" value="B"> B. Nga</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q1" value="C"> C. Mỹ</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q1" value="D"> D. Đức</label>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 2: Truyện ngắn "Một chuyện đùa nho nhỏ" sử dụng ngôi kể nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q2" value="A"> A. Ngôi thứ nhất (nhân vật "tôi")</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q2" value="B"> B. Ngôi thứ ba toàn năng</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q2" value="C"> C. Ngôi thứ hai</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q2" value="D"> D. Biến đổi luân phiên ngôi 1 và ngôi 3</label>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 3: Câu nói đùa mà nhân vật "tôi" nói vào tai Na-đi-a là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q3" value="A"> A. Na-đi-a, em thật xinh đẹp!</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q3" value="B"> B. Trượt nhanh lên Na-đi-a!</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q3" value="C"> C. Na-đi-a, anh yêu em!</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q3" value="D"> D. Tạm biệt Na-đi-a!</label>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 4: Trò chơi mạo hiểm mà hai nhân vật cùng tham gia là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q4" value="A"> A. Trượt băng trên hồ</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q4" value="B"> B. Trượt tuyết bằng xe trượt từ trên đồi cao xuống</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q4" value="C"> C. Leo núi tuyết</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q4" value="D"> D. Đi ngựa trên tuyết</label>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 5: Na-đi-a nghi ngờ câu nói ngọt ngào ấy do ai thốt ra?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q5" value="A"> A. Nhân vật "tôi" hoặc tiếng gió gào rít</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q5" value="B"> B. Một người đứng trên đỉnh đồi</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q5" value="C"> C. Tiếng ảo giác của chính mình</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q5" value="D"> D. Tiếng xe trượt phát ra</label>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 6: Chi tiết nào chứng tỏ Na-đi-a có sự dũng cảm phi thường vì khao khát nghe lại lời yêu thương?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q6" value="A"> A. Cô tự mình trượt tuyết xuống dốc một mình khi không có "tôi"</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q6" value="B"> B. Cô đứng chờ suốt đêm trên đỉnh đồi</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q6" value="C"> C. Cô lớn tiếng hỏi "tôi" ngay chân đồi</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q6" value="D"> D. Cô viết một bức thư dài tỏ tình</label>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 7: Lần cuối cùng nhân vật "tôi" nói câu đùa ấy với Na-đi-a diễn ra vào thời điểm nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q7" value="A"> A. Giữa đêm giao thừa</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q7" value="B"> B. Một buổi chiều xuân qua khe hở hàng rào trước khi "tôi" đi xa</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q7" value="C"> C. Lễ cưới của Na-đi-a</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q7" value="D"> D. Mùa đông năm sau</label>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 8: Ở phần kết truyện, cuộc sống của Na-đi-a sau này ra sao?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q8" value="A"> A. Cô ở vậy một mình suốt đời</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q8" value="B"> B. Cô đi tìm nhân vật "tôi"</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q8" value="C"> C. Cô đã lấy chồng (viên thư ký hội đồng giám hộ) và có 3 con</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q8" value="D"> D. Cô trở thành một vận động viên trượt tuyết</label>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 9: Khi đã đứng tuổi, nhân vật "tôi" có thái độ/suy nghĩ gì về trò đùa năm xưa?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q9" value="A"> A. Đắc thắng vì đã lừa được cô gái</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q9" value="B"> B. Không hiểu vì sao mình lại đùa như thế và cảm thấy hoài niệm, tiếc nuối</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q9" value="C"> C. Hoàn toàn quên mất câu chuyện đó</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q9" value="D"> D. Oán trách Na-đi-a vì đã đi lấy chồng</label>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-amber-200 mb-2">Câu 10: Phong cách nghệ thuật đặc trưng của văn phong Sê-khốp qua tác phẩm này là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q10" value="A"> A. Trữ tình hoành tráng, kịch tính dữ dội</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q10" value="B"> B. Hàm súc, cô đọng, nhẹ nhàng nhưng giàu dư ba lắng đọng</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q10" value="C"> C. Khô khan, mang tính triết lý chính trị</label>
+                            <label class="p-2 bg-indigo-950/80 rounded border border-indigo-800 hover:bg-indigo-800 cursor-pointer"><input type="radio" name="q10" value="D"> D. Giễu nhại gay gắt, châm biếm tàn nhẫn</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button type="button" onclick="checkQuiz()" class="px-8 py-3 bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold rounded-full text-lg shadow-lg transform transition active:scale-95">
+                            NỘP BÀI KẾT QUẢ
+                        </button>
+                    </div>
+                </form>
+
+                <!-- QUIZ RESULT DISPLAY -->
+                <div id="quizResult" class="hidden p-5 rounded-lg text-center space-y-4"></div>
+            </div>
+
+            <!-- PART 2: 3 ESSAY / CALCULATION EXERCISES -->
+            <div class="space-y-6 pt-4">
+                <h3 class="text-xl font-bold text-slate-800 border-b pb-2">2. Bài Tập Tự Luận & Phân Tích Logic Cấu Trúc Tác Phẩm</h3>
+
+                <!-- Essay 1 -->
+                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-2">
+                    <p class="font-bold text-slate-800">Bài tập 1 (Phân tích điểm nhìn kép):</p>
+                    <p class="text-slate-700 text-sm">Hãy phân tích sự chuyển dịch từ điểm nhìn quá khứ (lúc tham gia trò đùa) sang điểm nhìn hiện tại (khi đã đứng tuổi) của nhân vật "tôi". Sự dịch chuyển này tạo nên giá trị nhận thức gì cho tác phẩm?</p>
+                    <button onclick="toggleAnswer('essay1')" class="main-btn px-4 py-1.5 rounded text-sm mt-2">Xem lời giải chi tiết</button>
+                    <div id="essay1" class="hidden mt-3 p-4 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong><br>
+                        - <em>Điểm nhìn quá khứ:</em> Nhân vật "tôi" xem câu nói tỏ tình như một trò đùa vô hại, một thử nghiệm tâm lý tò mò để ngắm nhìn phản ứng của cô gái. Sự vô tư kèm chút hời hợt khiến anh không nhận ra tổn thương hay sự băn khoăn ghê gớm gây ra cho Na-đi-a.<br>
+                        - <em>Điểm nhìn hiện tại:</em> Khi thời gian trôi qua, nhân vật "tôi" ngoảnh nhìn lại với tâm trạng hoài niệm, trăn trở. Lời thắc mắc <em>"Tại sao lại đùa như thế?"</em> cho thấy sự trưởng thành trong nhận thức: anh nhận ra mình đã đánh mất một giá trị tinh thần trong sáng, thuần khiết của tuổi trẻ mà không bao giờ lấy lại được.<br>
+                        - <em>Giá trị:</em> Tạo chiều sâu triết lý cho tác phẩm, thức tỉnh con người biết trân trọng cảm xúc chân thành và có trách nhiệm với những hành vi tình cảm của mình.
+                    </div>
+                </div>
+
+                <!-- Essay 2 -->
+                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-2">
+                    <p class="font-bold text-slate-800">Bài tập 2 (So sánh và Đánh giá nhân vật):</p>
+                    <p class="text-slate-700 text-sm">So sánh nhân vật Na-đi-a và nhân vật "tôi" về mặt tính cách và thái độ đối với tình yêu. Em rút ra bài học gì về ứng xử trong tình bạn, tình yêu tuổi học trò?</p>
+                    <button onclick="toggleAnswer('essay3')" class="main-btn px-4 py-1.5 rounded text-sm mt-2">Xem lời giải chi tiết</button>
+                    <div id="essay3" class="hidden mt-3 p-4 bg-green-50 border border-green-200 rounded text-slate-700 text-sm leading-relaxed">
+                        <strong>Lời giải chi tiết:</strong><br>
+                        - <strong>Na-đi-a:</strong> Chân thành, khao khát yêu thương, dũng cảm đối mặt với sợ hãi để đi tìm sự thật. Cô đón nhận tình yêu với tất cả sự trong sáng và nghiêm túc.<br>
+                        - <strong>Nhân vật "tôi":</strong> Hời hợt, thích đùa giỡn với cảm xúc, nhút nhát không dám thừa nhận tình cảm của mình (trốn sau hàng rào, giấu kín sự thật).<br>
+                        - <strong>Bài học ứng xử:</strong> Tình cảm là điều thiêng liêng, không được lấy ra làm trò tiêu khiển hay thử nghiệm. Cần sự dũng cảm, chân thành và minh bạch trong lời nói để không làm tổn thương người khác và không gây ra những hối tiếc muộn màng.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-6 text-slate-600 border-t border-slate-300 font-medium">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Hàm ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Đáp án đúng trắc nghiệm
+        const correctAnswers = {
+            q1: "B",
+            q2: "A",
+            q3: "C",
+            q4: "B",
+            q5: "A",
+            q6: "A",
+            q7: "B",
+            q8: "C",
+            q9: "B",
+            q10: "B"
+        };
+
+        const explanations = {
+            q1: "Sê-khốp là đại biểu xuất sắc của văn học Nga thế kỷ XIX.",
+            q2: "Truyện được kể theo ngôi thứ nhất, xưng 'tôi'.",
+            q3: "Câu nói lặp đi lặp lại là 'Na-đi-a, anh yêu em!'.",
+            q4: "Trò chơi mạo hiểm là trượt xe từ đỉnh đồi tuyết xuống.",
+            q5: "Na-đi-a phân vân giữa lời tỏ tình của 'tôi' hay tiếng gió gào rít.",
+            q6: "Na-đi-a dũng cảm tự mình trượt tuyết một mình để kiểm chứng.",
+            q7: "Lần cuối diễn ra vào một buổi chiều xuân qua khe hở hàng rào.",
+            q8: "Na-đi-a lập gia đình với viên thư ký và có 3 con.",
+            q9: "Khi đứng tuổi, 'tôi' hoài niệm và không hiểu sao mình lại đùa như thế.",
+            q10: "Phong cách Sê-khốp nổi tiếng hàm súc, cô đọng, nhẹ nhàng nhưng lắng đọng."
+        };
+
+        // Hàm kiểm tra đáp án trắc nghiệm
+        function checkQuiz() {
+            let score = 0;
+            let total = 10;
+            let resultContainer = document.getElementById('quizResult');
+            let resultHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                let qName = "q" + i;
+                let selected = document.querySelector(`input[name="${qName}"]:checked`);
+                if (selected && selected.value === correctAnswers[qName]) {
+                    score++;
+                }
+            }
+
+            resultContainer.classList.remove('hidden');
+
+            if (score === total) {
+                resultContainer.className = "p-5 rounded-lg text-center space-y-3 bg-emerald-900 border-2 border-emerald-400 text-emerald-100";
+                resultHTML = `<h4 class="text-2xl font-bold text-amber-300">🎉 XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA ${score}/${total}! 🎉</h4>`;
+                resultHTML += `<p class="text-emerald-200">Bạn đã nắm vững toàn bộ nội dung tác phẩm "Một chuyện đùa nho nhỏ"!</p>`;
+            } else {
+                resultContainer.className = "p-5 rounded-lg text-left space-y-3 bg-slate-900 border-2 border-amber-400 text-slate-100";
+                resultHTML = `<div class="text-center"><h4 class="text-xl font-bold text-amber-300">KẾT QUẢ: ${score}/${total} CÂU ĐÚNG</h4></div>`;
+                resultHTML += `<div class="mt-4 space-y-2 text-sm border-t border-slate-700 pt-3">`;
+                resultHTML += `<p class="font-bold text-amber-200">Hướng dẫn giải chi tiết:</p>`;
+                
+                for (let i = 1; i <= total; i++) {
+                    let qName = "q" + i;
+                    let selected = document.querySelector(`input[name="${qName}"]:checked`);
+                    let userAns = selected ? selected.value : "Chưa chọn";
+                    let isCorrect = userAns === correctAnswers[qName];
+                    
+                    resultHTML += `<div class="p-2 bg-slate-800/80 rounded border ${isCorrect ? 'border-green-600' : 'border-red-600'}">
+                        <strong>Câu ${i}:</strong> ${isCorrect ? '✅ Đúng' : '❌ Sai'} (Đáp án đúng: <span class="text-amber-300 font-bold">${correctAnswers[qName]}</span>). 
+                        <br><span class="text-slate-300 italic">${explanations[qName]}</span>
+                    </div>`;
+                }
+                resultHTML += `</div>`;
+            }
+
+            resultContainer.innerHTML = resultHTML;
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Dưới Bóng Hoàng Lan - Thạch Lam</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Library with Chemistry Support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            color: #1f2937;
+        }
+
+        .btn-primary-accent {
+            background-color: #33FF33;
+            color: #064e3b;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .btn-primary-accent:hover {
+            background-color: #2be02b;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(51, 255, 51, 0.4);
+        }
+
+        .sq-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .circle-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #037857;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 9999px;
+            margin-right: 0.6rem;
+            flex-shrink: 0;
+        }
+
+        .section-header {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f172a;
+            border-bottom: 4px solid #1e293b;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Millionaire Game Styles */
+        .millionaire-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 1rem;
+            color: #ffffff;
+        }
+
+        .option-btn {
+            background: #1e293b;
+            border: 2px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover {
+            background: #334155;
+            border-color: #33FF33;
+        }
+
+        .option-btn.selected {
+            background: #065f46;
+            border-color: #33FF33;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="p-3 md:p-6">
+
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-[12px] overflow-hidden shadow-lg border border-gray-200">
+            <!-- Program / Chapter Header (Color 1: #3e3a8a) -->
+            <div style="background-color: #3e3a8a;" class="px-6 py-4 text-white font-bold text-lg md:text-xl flex items-center gap-3">
+                <i class="fa-solid font-bold fa-book-open text-[#33FF33]"></i>
+                <span>CHƯƠNG: QUYỀN NĂNG CỦA NGƯỜI KỂ CHUYỆN</span>
+            </div>
+            
+            <div class="border-t border-white/20"></div>
+
+            <!-- Lesson Title Header (Color 2: #037857) -->
+            <div style="background-color: #037857;" class="px-6 py-6 text-center text-white">
+                <h1 class="text-2xl md:text-4xl font-extrabold uppercase tracking-wide">
+                    BÀI 7 - VĂN BẢN 2: DƯỚI BÓNG HOÀNG LAN
+                </h1>
+                <p class="mt-2 text-emerald-100 font-medium italic text-base md:text-lg">Tác giả: Thạch Lam</p>
+            </div>
+        </div>
+
+        <!-- INTRO BOX (Khung Lời Dẫn) -->
+        <div class="bg-white border-2 border-black p-5 rounded-[12px] shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-slate-800 font-bold text-lg border-b pb-2">
+                <i class="fa-solid fa-compass text-amber-600"></i>
+                <span>CÂU HỎI MỞ ĐẦU & DẪN NHẬP</span>
+            </div>
+            <ul class="space-y-2 italic text-gray-700 leading-relaxed pl-2">
+                <li class="flex items-start gap-2">
+                    <span class="text-emerald-600 font-bold">•</span>
+                    <span>Với cảnh vật xung quanh và với những người thân yêu, kỷ niệm nào mỗi khi nhớ lại, bạn thấy thật ấm áp, dễ chịu? Nếu được yêu cầu kể lại, bạn sẽ kể như thế nào?</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-emerald-600 font-bold">•</span>
+                    <span>Đã bao giờ bạn có nhu cầu được sống chậm lại để cảm nhận sâu sắc hơn ý nghĩa của những điều vốn rất bình dị hằng ngày?</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SECTION I: KIẾN THỨC CHUNG -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-5">
+            <h2 class="section-header text-xl md:text-2xl">
+                <span class="sq-number">I</span> TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Tác giả -->
+                <div class="bg-slate-50 border-l-4 border-slate-700 p-4 rounded-r-lg space-y-2">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2 text-lg">
+                        <span class="circle-number">1</span> Tác giả Thạch Lam (1910 - 1942)
+                    </h3>
+                    <ul class="text-sm space-y-1 text-gray-700 pl-4 list-disc">
+                        <li><strong>Tên khai sinh:</strong> Nguyễn Tường Vinh (sau đổi thành Nguyễn Tường Lân).</li>
+                        <li><strong>Quê quán:</strong> Hà Nội, tuổi thơ gắn bó với huyện Cẩm Giàng, tỉnh Hải Dương.</li>
+                        <li><strong>Sự nghiệp:</strong> Thành viên chủ chốt của nhóm <em>Tự lực văn đoàn</em>.</li>
+                        <li><strong>Phong cách nghệ thuật:</strong> Truyện ngắn không có cốt truyện phức tạp, văn phong trong sáng, giàu chất thơ, tinh tế và đong đầy tình cảm trắc ẩn với con người bình dị.</li>
+                    </ul>
+                </div>
+
+                <!-- Tác phẩm -->
+                <div class="bg-emerald-50 border-l-4 border-emerald-700 p-4 rounded-r-lg space-y-2">
+                    <h3 class="font-bold text-emerald-900 flex items-center gap-2 text-lg">
+                        <span class="circle-number">2</span> Tác phẩm "Dưới bóng hoàng lan"
+                    </h3>
+                    <ul class="text-sm space-y-1 text-gray-700 pl-4 list-disc">
+                        <li><strong>Thể loại:</strong> Truyện ngắn tâm tình, giàu chất thơ.</li>
+                        <li><strong>Xuất xứ:</strong> In trong tập truyện <em>Nắng trong vườn</em> (1938).</li>
+                        <li><strong>Ngôi kể:</strong> Ngôi thứ ba (người kể chuyện giấu mặt, điểm nhìn hạn định gắn liền với nhân vật Thanh).</li>
+                        <li><strong>Chủ đề:</strong> Tình cảm gia đình sâu nặng, tình yêu đầu đời ngập ngừng e ấp và vẻ đẹp bình yên của không gian quê hương.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Khung hình minh họa h1.png -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h1.png" alt="Hình 1: Khung cảnh ngôi nhà cổ dưới bóng hoàng lan" class="mx-auto max-h-64 object-contain rounded shadow" onerror="this.src='https://placehold.co/600x300/e2e8f0/1e293b?text=h1.png+-+K%C6%B0%C6%A1ng+C%E1%BA%A3nh+Ngh%C3 me+Nh%C3%A0+V%C3%A0+C%C3%A2y+Ho%C3%A0ng+Lan'">
+                <p class="text-xs text-gray-500 mt-2 italic">Hình 1: Không gian yên bình ngôi nhà cổ của bà và cây hoàng lan rợp bóng (đường dẫn sẵn: h1.png)</p>
+            </div>
+        </div>
+
+        <!-- SECTION II: NỘI DUNG BÀI HỌC VÀ TÓM TẮT TÂM TRẠNG -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl">
+                <span class="sq-number">II</span> NỘI DUNG TÓM TẮT VÀ TÂM TRẠNG NHÂN VẬT
+            </h2>
+
+            <!-- Mục 1: Cảnh Thanh trở về nhà -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-gray-800 text-lg flex items-center">
+                    <span class="circle-number">1</span> Cảm nhận không gian thân thuộc khi Thanh trở về
+                </h3>
+                <div class="p-4 bg-sky-50 border border-sky-200 rounded-lg text-sm text-sky-950 space-y-2">
+                    <p><strong>Bối cảnh:</strong> Thanh mồ côi cha mẹ, đi làm ở tỉnh xa, dịp này nghỉ việc trở về thăm bà nội.</p>
+                    <p><strong>Cảm xúc:</strong> Khi bước qua cánh cửa gỗ hẹp, đi trên con đường gạch Bát Tràng rêu phủ, Thanh thấy như trút bỏ mọi sự ồn ào vội vã nơi phố thị. Mọi thứ trong nhà vẫn "y nguyên như ngày chàng đi xửa đi xưa".</p>
+                </div>
+            </div>
+
+            <!-- Mục 2: Cuộc gặp gỡ với Bà -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-gray-800 text-lg flex items-center">
+                    <span class="circle-number">2</span> Tình bà cháu ấm áp và bình yên
+                </h3>
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-950 space-y-2">
+                    <p><strong>Hình ảnh người bà:</strong> Tóc bạc phơ, chống gậy trúc, nhai trầu hiền từ. Bà luôn chăm chút cho Thanh từng chút một: phẩy chiếc quạt trần, lo nấu canh rau cải, giục ăn cơm ngủ nghỉ.</p>
+                    <p><strong>Định nghĩa/Tính chất tình cảm:</strong> Tình bà cháu là chỗ dựa tinh thần vững chắc, nơi che chở dịu dàng cho Thanh trước những biến động của cuộc đời.</p>
+                </div>
+            </div>
+
+            <!-- Khung hình h2.png -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h2.png" alt="Hình 2: Thanh gặp lại cô hàng xóm tên Nga dưới bóng hoàng lan" class="mx-auto max-h-64 object-contain rounded shadow" onerror="this.src='https://placehold.co/600x300/edf2f7/037857?text=h2.png+-+Thanh+v%C3%A0+Nga+d%C6%B0%E1%BB%9Bi+b%C3%B3ng+ho%C3%A0ng+lan'">
+                <p class="text-xs text-gray-500 mt-2 italic">Hình 2: Cuộc trò chuyện tình tứ nhẹ nhàng giữa Thanh và Nga (đường dẫn sẵn: h2.png)</p>
+            </div>
+
+            <!-- Mục 3: Hình ảnh Nga và tình cảm lứa đôi -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-gray-800 text-lg flex items-center">
+                    <span class="circle-number">3</span> Cây hoàng lan và mối tình đầu e ấp với Nga
+                </h3>
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-sm text-emerald-950 space-y-2">
+                    <p><strong>Cây hoàng lan:</strong> Cây cao vút, cành lá rủ xuống, tỏa hương thơm ngát dịu nhẹ. Đây là chứng nhân cho tuổi thơ chung bước của Thanh và Nga.</p>
+                    <p><strong>Cảm xúc tình yêu:</strong> Tình cảm giữa Thanh và Nga không sôi nổi mãnh liệt mà e ấp, kín đáo qua ánh mắt, nụ cười, cái nắm tay nhẹ nhàng dịu ngọt đêm trăng.</p>
+                </div>
+            </div>
+
+            <!-- HOẠT ĐỘNG / NÊU VẤN ĐỀ (BÀN TAY) -->
+            <div class="p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg space-y-3">
+                <div class="flex items-center gap-2 font-bold text-orange-900">
+                    <span class="text-xl">🖐️</span> HOẠT ĐỘNG TRẢI NGHIỆM: PHÂN TÍCH ĐIỂM NHÌN VÀ TÂM TRẠNG
+                </div>
+                <p class="text-sm text-gray-700">Hãy tìm những chi tiết mô tả tâm trạng của Thanh khi đứng dưới cây hoàng lan và phân tích vai trò của điểm nhìn ngôi thứ ba trong việc diễn tả tâm trạng ấy.</p>
+                <button onclick="toggleAnswer('act-1')" class="btn-primary-accent px-4 py-2 rounded text-sm shadow">
+                    Xem hướng giải quyết <i class="fa-solid fa-chevron-down ml-1"></i>
+                </button>
+                <div id="act-1" class="hidden p-3 bg-white border border-orange-200 rounded text-sm text-gray-800">
+                    <strong>Hướng giải quyết:</strong> Tác giả chọn điểm nhìn từ nhân vật Thanh (điểm nhìn hạn định). Mặc dù là ngôi thứ ba nhưng người kể chuyện nhập vai hoàn toàn vào thế giới nội tâm của Thanh. Mọi cảnh vật (con đường, căn nhà, cây hoàng lan, người bà, Nga) đều khúc xạ qua lăng kính cảm xúc ấm áp, dịu êm của nhân vật.
+                </div>
+            </div>
+
+            <!-- MỤC DẤU HỎI ? -->
+            <div class="p-4 bg-edf2f7 bg-slate-100 border-l-4 border-blue-800 rounded-r-lg space-y-3">
+                <div class="flex items-center gap-2 font-bold text-blue-900">
+                    <span class="text-xl">❓</span> HỎI NHANH: TẠI SAO THANH LẠI THẤY TÂM HỒN "RỘNG MỞ VÀ NHẸ NHÕM"?
+                </div>
+                <p class="text-sm text-gray-700">Nguyên nhân cốt lõi nào khiến Thanh cảm thấy thanh thản ngay khi trở về không gian ngôi nhà cũ?</p>
+                <button onclick="toggleAnswer('q-1')" class="btn-primary-accent px-4 py-2 rounded text-sm shadow">
+                    Xem trả lời <i class="fa-solid fa-chevron-down ml-1"></i>
+                </button>
+                <div id="q-1" class="hidden p-3 bg-emerald-50 border border-emerald-300 rounded text-sm text-emerald-950">
+                    <strong>Trả lời:</strong> Vì ngôi nhà có tình thương yêu vô bờ của bà, có thiên nhiên tươi mát, tĩnh lặng và những kỷ niệm tuổi thơ êm đềm, hoàn toàn đối lập với cuộc sống bon chen, mệt mỏi ở đô thị.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III: BẢNG TỔNG KẾT NGHỆ THUẬT & NỘI DUNG -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-4">
+            <h2 class="section-header text-xl md:text-2xl">
+                <span class="sq-number">III</span> BẢNG TỔNG KẾT NGHỆ THUẬT VÀ NỘI DUNG
+            </h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-center border-collapse border border-[#cbd5e0] text-sm">
+                    <thead>
+                        <tr class="bg-[#e2e8f0] text-slate-800 font-bold">
+                            <th class="border border-[#cbd5e0] p-3 w-1/2">GIÁ TRỊ NGHỆ THUẬT</th>
+                            <th class="border border-[#cbd5e0] p-3 w-1/2">GIÁ TRỊ NỘI DUNG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-[#cbd5e0] p-3 text-left space-y-1 align-top">
+                                <p>• Cốt truyện đơn giản, nhẹ nhàng, như một bài thơ văn xuôi.</p>
+                                <p>• Miêu tả diễn biến tâm trạng vô cùng tinh tế, sâu sắc.</p>
+                                <p>• Ngôn ngữ trong sáng, giàu hình ảnh và nhịp điệu êm ả.</p>
+                                <p>• Kết hợp nhuần nhuyễn giữa câu chuyện và cảm xúc trữ tình.</p>
+                            </td>
+                            <td class="border border-[#cbd5e0] p-3 text-left space-y-1 align-top">
+                                <p>• Ca ngợi tình bà cháu mộc mạc, thiêng liêng và tình yêu đầu đời trong sáng.</p>
+                                <p>• Khắc họa vẻ đẹp của làng quê Việt Nam thanh bình, yên ả.</p>
+                                <p>• Nhắn gửi thông điệp về sự trân trọng những giá trị bình dị, yêu thương gia đình.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION IV: HƯỚNG DẪN TRẢ LỜI CÂU HỎI BÀI HỌC SGK -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-5">
+            <h2 class="section-header text-xl md:text-2xl">
+                <span class="sq-number">IV</span> CÂU HỎI ĐỌC - HIỂU VĂN BẢN (SGK)
+            </h2>
+
+            <!-- Question Item 1 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-slate-900 text-sm md:text-base">
+                    Câu 1: Câu chuyện được kể bằng lời của người kể chuyện ngôi thứ mấy? Ngôi kể ấy có nhất quán từ đầu đến cuối câu chuyện không?
+                </p>
+                <button onclick="toggleAnswer('sgk-1')" class="btn-primary-accent px-3 py-1.5 rounded text-xs md:text-sm">
+                    Xem lời giải <i class="fa-solid fa-eye ml-1"></i>
+                </button>
+                <div id="sgk-1" class="hidden mt-2 p-3 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800">
+                    <strong>Giải chi tiết:</strong> Câu chuyện được kể bằng lời của người kể chuyện <strong>ngôi thứ ba</strong>. Ngôi kể này hoàn toàn nhất quán từ đầu đến cuối tác phẩm, giúp người đọc quan sát toàn cảnh nhưng đồng thời thấu hiểu trọn vẹn cảm xúc của nhân vật chính (Thanh).
+                </div>
+            </div>
+
+            <!-- Question Item 2 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-slate-900 text-sm md:text-base">
+                    Câu 2: Hình ảnh thiên nhiên, con người, cảnh sinh hoạt... hiện ra qua đôi mắt của nhân vật nào? Việc chọn điểm nhìn như vậy có ý nghĩa gì?
+                </p>
+                <button onclick="toggleAnswer('sgk-2')" class="btn-primary-accent px-3 py-1.5 rounded text-xs md:text-sm">
+                    Xem lời giải <i class="fa-solid fa-eye ml-1"></i>
+                </button>
+                <div id="sgk-2" class="hidden mt-2 p-3 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800">
+                    <strong>Giải chi tiết:</strong> Mọi hình ảnh thiên nhiên, con người, không gian đều hiện ra qua đôi mắt và cảm nhận của <strong>nhân vật Thanh</strong>. Việc chọn điểm nhìn này giúp câu chuyện mang đậm chất trữ tình, biểu cảm sâu sắc tâm trạng hoài niệm, bình yên của một đứa con đi xa trở về.
+                </div>
+            </div>
+
+            <!-- Question Item 3 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-slate-900 text-sm md:text-base">
+                    Câu 3: Lời đối thoại giữa bà và Thanh trong phần đầu xoay quanh chuyện gì? Tình cảm của các nhân vật bộc lộ như thế nào?
+                </p>
+                <button onclick="toggleAnswer('sgk-3')" class="btn-primary-accent px-3 py-1.5 rounded text-xs md:text-sm">
+                    Xem lời giải <i class="fa-solid fa-eye ml-1"></i>
+                </button>
+                <div id="sgk-3" class="hidden mt-2 p-3 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800">
+                    <strong>Giải chi tiết:</strong> Cuộc đối thoại xoay quanh những điều thường nhật: việc Thanh đi đường mệt không, việc ăn cơm, nghỉ ngơi, chuẩn bị chỗ nằm. Lời nói giản dị thể hiện tình thương bao la của người bà dành cho cháu và sự kính yêu, ngoan ngoãn của Thanh đối với bà.
+                </div>
+            </div>
+
+            <!-- Question Item 4 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-slate-900 text-sm md:text-base">
+                    Câu 4: Phân tích những biểu hiện tình cảm giữa Nga và Thanh trong tác phẩm.
+                </p>
+                <button onclick="toggleAnswer('sgk-4')" class="btn-primary-accent px-3 py-1.5 rounded text-xs md:text-sm">
+                    Xem lời giải <i class="fa-solid fa-eye ml-1"></i>
+                </button>
+                <div id="sgk-4" class="hidden mt-2 p-3 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800">
+                    <strong>Giải chi tiết:</strong> Tình cảm giữa Nga và Thanh vừa là tình bạn thanh mai trúc mã, vừa là tình yêu đôi lứa e ấp:
+                    <ul class="list-disc pl-5 mt-1 space-y-1">
+                        <li>Nga thường xuyên sang thăm bà, giúp đỡ công việc nhà.</li>
+                        <li>Cả hai dạo chơi dưới bóng hoàng lan, nhặt hoa rơi.</li>
+                        <li>Cái nắm tay dịu dàng, e ấp đêm trăng trước khi Thanh lại lên đường.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question Item 5 -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-slate-900 text-sm md:text-base">
+                    Câu 8: Nhận định của nhà thơ Thế Lữ: Tác phẩm của Thạch Lam "nhân từ như một lời yên ủi". Hãy phân tích ý kiến này qua truyện ngắn "Dưới bóng hoàng lan".
+                </p>
+                <button onclick="toggleAnswer('sgk-8')" class="btn-primary-accent px-3 py-1.5 rounded text-xs md:text-sm">
+                    Xem lời giải <i class="fa-solid fa-eye ml-1"></i>
+                </button>
+                <div id="sgk-8" class="hidden mt-2 p-3 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800">
+                    <strong>Giải chi tiết:</strong> Truyện ngắn không có xung đột gay gắt, kịch tính mà êm đềm như một khúc ca. Tác phẩm xoa dịu những nhọc nhằn, ồn ào của cuộc sống đô thị, xoa dịu tâm hồn con người bằng sự ấm áp của gia đình và mối tình thanh tao.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION V: CÁC MỤC ĐẶC BIỆT (EM CÓ BIẾT / EM CÓ THỂ / LƯU Ý) -->
+        <div class="grid md:grid-cols-3 gap-4">
+            <!-- Em có biết -->
+            <div class="bg-violet-50 border-2 border-violet-300 p-4 rounded-[12px] shadow-sm space-y-2">
+                <h3 class="font-bold text-violet-900 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-violet-600"></i> em có biết
+                </h3>
+                <p class="text-xs text-violet-950 leading-relaxed">
+                    Cây Hoàng lan (còn gọi là Ngọc lan tây, Cananga odorata) là loại cây thân gỗ cho hoa có hương thơm quyến rũ, nhẹ nhàng. Trong văn học, hoa hoàng lan thường tượng trưng cho vẻ đẹp kín đáo, hoài niệm và trong sáng của tình yêu đầu đời.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-teal-50 border-2 border-teal-300 p-4 rounded-[12px] shadow-sm space-y-2">
+                <h3 class="font-bold text-teal-900 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-teal-600"></i> em có thể
+                </h3>
+                <p class="text-xs text-teal-950 leading-relaxed">
+                    Vận dụng kĩ thuật phân tích điểm nhìn ngôi thứ ba hạn định để viết một đoạn văn ngắn mô tả không gian gia đình thân thương của chính mình trong một buổi chiều bình yên.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border-2 border-rose-300 p-4 rounded-[12px] shadow-sm space-y-2">
+                <h3 class="font-bold text-rose-900 flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> lưu ý
+                </h3>
+                <p class="text-xs text-rose-950 leading-relaxed">
+                    Khi đọc truyện ngắn Thạch Lam, không nên tìm kiếm sự kịch tính hay biến cố dữ dội mà cần tập trung cảm nhận chất trữ tình, giọng văn nhẹ nhàng và thế giới nội tâm tinh tế của nhân vật.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION VI: GAMESHOW "AI LÀ TRIỆU PHÚ" - 10 CÂU TRẮC NGHIỆM -->
+        <div class="millionaire-card p-6 shadow-xl space-y-6">
+            <div class="text-center space-y-2 border-b border-slate-700 pb-4">
+                <span class="bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">GAMESHOW CỦNG CỐ</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-amber-400 tracking-wide">
+                    🏆 AI LÀ TRIỆU PHÚ KẾT NỐI TRI THỨC
+                </h2>
+                <p class="text-slate-300 text-sm">Trả lời 10 câu hỏi để chinh phục đỉnh cao tri thức văn bản "Dưới bóng hoàng lan"</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 1: Tác giả của truyện ngắn "Dưới bóng hoàng lan" là ai?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q1" value="A" class="accent-emerald-500"> A. Nam Cao
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q1" value="B" class="accent-emerald-500"> B. Thạch Lam
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q1" value="C" class="accent-emerald-500"> C. Vũ Trọng Phụng
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q1" value="D" class="accent-emerald-500"> D. Ngô Tất Tố
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 2: Truyện ngắn "Dưới bóng hoàng lan" được in trong tập truyện nào?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q2" value="A" class="accent-emerald-500"> A. Gió đầu mùa
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q2" value="B" class="accent-emerald-500"> B. Nắng trong vườn
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q2" value="C" class="accent-emerald-500"> C. Sợi tóc
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q2" value="D" class="accent-emerald-500"> D. Hà Nội 36 phố phường
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 3: Truyện được kể theo ngôi thứ mấy?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q3" value="A" class="accent-emerald-500"> A. Ngôi thứ nhất
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q3" value="B" class="accent-emerald-500"> B. Ngôi thứ hai
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q3" value="C" class="accent-emerald-500"> C. Ngôi thứ ba
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q3" value="D" class="accent-emerald-500"> D. Kết hợp ngôi thứ nhất và thứ hai
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 4: Điểm nhìn trần thuật trong tác phẩm chủ yếu gắn liền với nhân vật nào?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q4" value="A" class="accent-emerald-500"> A. Người bà
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q4" value="B" class="accent-emerald-500"> B. Nga
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q4" value="C" class="accent-emerald-500"> C. Thanh
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q4" value="D" class="accent-emerald-500"> D. Bác Nhân
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 5: Hoàn cảnh gia đình của Thanh được giới thiệu như thế nào?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q5" value="A" class="accent-emerald-500"> A. Giàu có, sống cùng cha mẹ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q5" value="B" class="accent-emerald-500"> B. Mồ côi cha mẹ, sống từ nhỏ với bà
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q5" value="C" class="accent-emerald-500"> C. Sống một mình ở nước ngoài
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q5" value="D" class="accent-emerald-500"> D. Con một trong gia đình quan lại
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 6: Chi tiết con đường gạch Bát Tràng rêu phủ gợi lên không gian như thế nào?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q6" value="A" class="accent-emerald-500"> A. Hiện đại, sang trọng
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q6" value="B" class="accent-emerald-500"> B. Cổ kính, tĩnh lặng, thân thuộc
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q6" value="C" class="accent-emerald-500"> C. Hoang vắng, đáng sợ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q6" value="D" class="accent-emerald-500"> D. Ôn ào, tấp nập
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 7: Tình cảm giữa Thanh và Nga được miêu tả ra sao?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q7" value="A" class="accent-emerald-500"> A. Mãnh liệt, dữ dội
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q7" value="B" class="accent-emerald-500"> B. Nhẹ nhàng, e ấp, kín đáo
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q7" value="C" class="accent-emerald-500"> C. Lạnh nhạt, xa cách
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q7" value="D" class="accent-emerald-500"> D. Kịch tính và đầy mâu thuẫn
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 8: Cây hoàng lan xuất hiện trong tác phẩm mang ý nghĩa tượng trưng gì?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q8" value="A" class="accent-emerald-500"> A. Tượng trưng cho sự giàu sang
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q8" value="B" class="accent-emerald-500"> B. Tượng trưng cho kỷ niệm tuổi thơ và tình yêu trong sáng
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q8" value="C" class="accent-emerald-500"> C. Tượng trưng cho sự chia ly đau khổ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q8" value="D" class="accent-emerald-500"> D. Tượng trưng cho sức mạnh quyền lực
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 9: Đâu là đặc trưng phong cách nghệ thuật nổi bật của Thạch Lam?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q9" value="A" class="accent-emerald-500"> A. Truyện ngắn không cốt truyện, đậm chất thơ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q9" value="B" class="accent-emerald-500"> B. Truyện trinh thám li kỳ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q9" value="C" class="accent-emerald-500"> C. Khắc họa mâu thuẫn giai cấp căng thẳng
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q9" value="D" class="accent-emerald-500"> D. Sử dụng nhiều yếu tố kì ảo
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700 space-y-3">
+                    <p class="font-bold text-amber-300">Câu 10: Theo Thế Lữ, tác phẩm của Thạch Lam có đặc điểm gì đặc biệt?</p>
+                    <div class="grid md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q10" value="A" class="accent-emerald-500"> A. "Đầy sự phẫn nộ và đấu tranh"
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q10" value="B" class="accent-emerald-500"> B. "Nhân từ như một lời yên ủi"
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q10" value="C" class="accent-emerald-500"> C. "Hào hùng như một khúc ca trận"
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="q10" value="D" class="accent-emerald-500"> D. "Sắc sảo như một lưỡi dao"
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="bg-[#33FF33] hover:bg-emerald-400 text-slate-950 font-black px-8 py-3 rounded-full text-lg shadow-lg uppercase transition-transform transform hover:scale-105">
+                        NỘP BÀI KIỂM TRA
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Output -->
+            <div id="quizResult" class="hidden mt-6 p-5 rounded-lg border text-center space-y-3 bg-slate-900"></div>
+        </div>
+
+        <!-- SECTION VII: BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH CHUYÊN SÂU -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl">
+                <span class="sq-number">VII</span> BÀI TẬP TỰ LUẬN VẬN DỤNG
+            </h2>
+
+            <!-- Essay Exercise 1 -->
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-800 text-base">
+                    Bài 1 (Phân tích văn học): Phân tích ý nghĩa hình tượng "Cây hoàng lan" trong tác phẩm.
+                </h3>
+                <button onclick="toggleAnswer('essay-1')" class="btn-primary-accent px-4 py-2 rounded text-sm shadow">
+                    Xem lời giải chi tiết <i class="fa-solid fa-chevron-down ml-1"></i>
+                </button>
+                <div id="essay-1" class="hidden p-4 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>Hình tượng "Cây hoàng lan" giữ vai trò trung tâm trong cấu trúc nghệ thuật của tác phẩm:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Về mặt không gian:</strong> Cây hoàng lan tỏa bóng mát xua tan cái nắng gay gắt bên ngoài, tạo nên không gian bình yên, dịu mát của quê nhà.</li>
+                        <li><strong>Về mặt thời gian:</strong> Cây lớn lên theo năm tháng, chứng kiến tuổi thơ của Thanh, tình yêu đầu đời với Nga và sự chờ đợi thủy chung của người bà.</li>
+                        <li><strong>Về mặt biểu tượng:</strong> Hoa hoàng lan thơm ngát là biểu tượng cho tình yêu trong sáng, tình cảm gia đình bền chặt và vẻ đẹp vĩnh hằng của quê hương.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Essay Exercise 2 -->
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-800 text-base">
+                    Bài 2 (So sánh văn học): So sánh tâm trạng của nhân vật Thanh khi trở về nhà và khi phải chia tay lên đường đi làm.
+                </h3>
+                <button onclick="toggleAnswer('essay-2')" class="btn-primary-accent px-4 py-2 rounded text-sm shadow">
+                    Xem lời giải chi tiết <i class="fa-solid fa-chevron-down ml-1"></i>
+                </button>
+                <div id="essay-2" class="hidden p-4 bg-emerald-50 border border-emerald-300 rounded text-sm text-gray-800 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Khi trở về:</strong> Mệt mỏi, nóng bực từ đô thị, nhưng ngay khi bước vào nhà thì cảm thấy lòng thư thái, rộng mở, thong thả và tìm lại sự bình yên tuyệt đối.</li>
+                        <li><strong>Khi ra đi:</strong> Lòng nửa buồn nửa vui, nhưng đong đầy hi vọng và sự an tâm vì biết rằng ngôi nhà, người bà và Nga vẫn luôn ở đó chờ đợi mình trở về.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Essay Exercise 3 -->
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-800 text-base">
+                    
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle Answer Function
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Check Quiz Function
+        function checkQuiz() {
+            const correctAnswers = {
+                q1: "B",
+                q2: "B",
+                q3: "C",
+                q4: "C",
+                q5: "B",
+                q6: "B",
+                q7: "B",
+                q8: "B",
+                q9: "A",
+                q10: "B"
+            };
+
+            const explanations = {
+                q1: "Thạch Lam là tác giả của truyện ngắn 'Dưới bóng hoàng lan'.",
+                q2: "Tác phẩm được in trong tập 'Nắng trong vườn' (1938).",
+                q3: "Truyện kể theo ngôi thứ ba (người kể chuyện giấu mặt).",
+                q4: "Điểm nhìn trần thuật qua đôi mắt và cảm nhận của Thanh.",
+                q5: "Thanh mồ côi cha mẹ từ nhỏ, sống cùng người bà nội hiền từ.",
+                q6: "Gợi không gian cổ kính, tĩnh lặng và bình yên của ngôi nhà cổ.",
+                q7: "Tình cảm giữa Nga và Thanh e ấp, kín đáo, dịu nhẹ.",
+                q8: "Cây hoàng lan tượng trưng cho kỷ niệm tuổi thơ và tình yêu trong sáng.",
+                q9: "Đặc trưng Thạch Lam là truyện ngắn không cốt truyện kịch tính, đậm chất thơ.",
+                q10: "Thế Lữ nhận xét tác phẩm của Thạch Lam 'nhân từ như một lời yên ủi'."
+            };
+
+            let score = 0;
+            const total = 10;
+            let resultHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : null;
+
+                if (userAns === correctAnswers[qName]) {
+                    score++;
+                }
+            }
+
+            const isPerfect = (score === total);
+            const scoreColorClass = isPerfect ? "text-emerald-400 border-emerald-500" : "text-rose-400 border-rose-500";
+
+            resultHTML += `<div class="p-4 border-2 rounded-lg ${scoreColorClass}">`;
+            resultHTML += `<h3 class="text-xl font-bold uppercase mb-2">KẾT QUẢ CỦA BẠN: ${score}/${total} CÂU ĐÚNG</h3>`;
+            
+            if (isPerfect) {
+                resultHTML += `<p class="text-emerald-300 font-semibold">🎉 XIN CHÚC MỪNG! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ TRI THỨC VĂN BẢN DƯỚI BÓNG HOÀNG LAN!</p>`;
+            } else {
+                resultHTML += `<p class="text-rose-300 font-semibold">Bạn đạt ${score * 10}% số điểm. Hãy xem kỹ hướng dẫn giải chi tiết bên dưới để hoàn thiện kiến thức nhé!</p>`;
+            }
+            resultHTML += `</div>`;
+
+            resultHTML += `<div class="mt-4 text-left text-xs md:text-sm space-y-2 border-t border-slate-700 pt-4">`;
+            resultHTML += `<h4 class="font-bold text-amber-400 uppercase">HƯỚNG DẪN GIẢI CHI TIẾT TỪNG CÂU:</h4>`;
+            
+            for (let i = 1; i <= total; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : "Chưa chọn";
+                const correct = correctAnswers[qName];
+                const isCorrect = (userAns === correct);
+
+                resultHTML += `<div class="p-2 rounded ${isCorrect ? 'bg-emerald-950/60 border border-emerald-700' : 'bg-rose-950/60 border border-rose-700'}">`;
+                resultHTML += `<span class="font-bold">Câu ${i}:</span> Đáp án đúng: <strong class="text-amber-300">${correct}</strong> | Bạn chọn: <span class="${isCorrect ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${userAns}</span><br>`;
+                resultHTML += `<span class="text-slate-300">💡 Giải thích: ${explanations[qName]}</span>`;
+                resultHTML += `</div>`;
+            }
+            resultHTML += `</div>`;
+
+            const resDiv = document.getElementById("quizResult");
+            resDiv.innerHTML = resultHTML;
+            resDiv.classList.remove("hidden");
+            resDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
