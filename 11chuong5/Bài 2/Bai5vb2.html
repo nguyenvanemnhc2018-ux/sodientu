@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài học: Vĩnh biệt Cửu Trùng Đài</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Library with Chemistry Support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .square-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #3e3a8a;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        .circle-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            background-color: #037858;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+            font-size: 0.875rem;
+        }
+        .section-header {
+            font-weight: 800;
+            color: #1a202c;
+            border-bottom: 3px solid #1a202c;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .primary-btn {
+            background-color: #037858;
+            color: white;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+        }
+        .primary-btn:hover {
+            background-color: #025941;
+            transform: translateY(-1px);
+        }
+        .millionaire-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 2px solid #f59e0b;
+        }
+        .option-btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s;
+        }
+        .option-btn:hover {
+            background-color: rgba(245, 158, 11, 0.2);
+            border-color: #f59e0b;
+        }
+        .option-btn.selected {
+            background-color: #f59e0b;
+            color: #000;
+            font-weight: bold;
+        }
+        .option-btn.correct {
+            background-color: #10b981 !important;
+            color: white !important;
+        }
+        .option-btn.wrong {
+            background-color: #ef4444 !important;
+            color: white !important;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 8px 12px;
+        }
+        th {
+            background-color: #e2e8f0;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+<!-- Chosen Palette: Deep Indigo (#3e3a8a) & Emerald Green (#037858) -->
+<!-- Application Structure Plan: Micro-learning structured SPA designed for high clarity and interactivity. Breaks down the play "Vĩnh biệt Cửu Trùng Đài" into thematic study units (Author/Work, Plot line-up, Key Conflicts, Textbook Questions, Interactive Discussions, Extensions, and Assessment). Rationale: Literature tragedy analysis requires progressive structural understanding combined with interactive self-assessment tools. -->
+<!-- Visualization & Content Choices: Summary tables for character scene breakdown, interactive toggles for detailed textbook answers, gameshow style MCQs for high student engagement, MathJax TeX formatted formulas for multi-disciplinary social impact modeling. NO SVG graphics used. NO Mermaid JS used. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+<div class="max-w-5xl mx-auto space-y-6">
+
+    <!-- Header Block (Combined Chapter & Lesson Title) -->
+    <div class="rounded-[12px] overflow-hidden shadow-lg border border-slate-200">
+        <!-- Color 1 Block: Chapter Title -->
+        <div style="background-color: #3e3a8a;" class="text-white p-4 text-center font-semibold text-lg md:text-xl tracking-wide uppercase">
+            CHƯƠNG: NHÂN VẬT VÀ XUNG ĐỘT TRONG BI KỊCH
+        </div>
+        <!-- Thin Separator -->
+        <div class="h-[2px] bg-white/20"></div>
+        <!-- Color 2 Block: Lesson Title -->
+        <div style="background-color: #037858;" class="text-white p-6 text-center">
+            <h1 class="text-2xl md:text-4xl font-extrabold uppercase tracking-wider">VĨNH BIỆT CỬU TRÙNG ĐÀI</h1>
+            <p class="text-sm md:text-base mt-2 font-medium opacity-90">(Trích tác phẩm "Vũ Như Tô" – Nguyễn Huy Tưởng)</p>
+        </div>
+    </div>
+
+    <!-- Intro Box (Lời dẫn) -->
+    <div class="bg-white border border-black p-5 rounded-lg shadow-sm">
+        <p class="italic text-slate-800 text-center md:text-lg font-serif">
+            "Phải chăng giá trị của nghệ thuật là ở chỗ nó có ích cho đời sống?"
+        </p>
+    </div>
+
+    <!-- Section I -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-4">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">I</span> TỔNG QUAN TÁC GIẢ VÀ TÁC PHẨM
+        </h2>
+
+        <div class="space-y-4">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="border-2 border-dashed border-gray-300 p-2 text-center rounded-lg bg-gray-50">
+                        <img src="h1.png" alt="Chân dung tác giả Nguyễn Huy Tưởng" class="max-w-full h-auto rounded mx-auto" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'w-48 h-56 bg-gray-200 flex items-center justify-center text-gray-500 font-medium text-sm rounded\'>[Hình h1.png: Tác giả Nguyễn Huy Tưởng]</div>';">
+                        <span class="text-xs text-gray-500 mt-1 block">Hình 1: Tác giả Nguyễn Huy Tưởng (1912 - 1960)</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 space-y-3">
+                    <h3 class="text-lg font-bold flex items-center">
+                        <span class="circle-badge">1</span> Tác giả Nguyễn Huy Tưởng
+                    </h3>
+                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-900 space-y-2">
+                        <p>• <strong>Nguyễn Huy Tưởng (1912 – 1960)</strong>, quê tại làng Dục Tú, huyện Từ Sơn, tỉnh Bắc Ninh (nay thuộc xã Dục Tú, huyện Đông Anh, Hà Nội).</p>
+                        <p>• Là nhà văn, nhà viết kịch nổi tiếng chuyên khai thác chủ đề lịch sử dân tộc với góc nhìn sâu sắc, giàu tinh thần dân tộc và trăn trở về sứ mệnh nghệ thuật.</p>
+                        <p>• Tác phẩm tiêu biểu: <em>Đêm hội Long Trì</em> (tiểu thuyết, 1942), <em>Vũ Như Tô</em> (kịch lịch sử, 1943), <em>An Tư</em> (tiểu thuyết, 1944), <em>Bắc Sơn</em> (kịch, 1946)...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-2">
+                <h3 class="text-lg font-bold flex items-center">
+                    <span class="circle-badge">2</span> Vở kịch "Vũ Như Tô" và vị trí đoạn trích
+                </h3>
+                <div class="mt-3 bg-slate-50 p-4 rounded-lg border-l-4 border-emerald-700 space-y-2">
+                    <p>• <strong>Thể loại:</strong> Bi kịch lịch sử gồm 5 hồi, viết năm 1941, xuất bản năm 1942.</p>
+                    <p>• <strong>Bối cảnh lịch sử:</strong> Sự kiện có thật ở Thăng Long đầu thế kỷ XVI (thời Lê Tương Dực).</p>
+                    <p>• <strong>Tóm tắt cốt truyện:</strong> Vũ Như Tô – một kiến trúc sư tài ba, nhân hậu, bị vua bạo ngược Lê Tương Dực bắt xây Cửu Trùng Đài. Ban đầu ông kiên quyết từ chối, nhưng nhờ Đan Thiềm thuyết phục tận dụng tiền bạc của vua để dựng một công trình vĩ đại cho đất nước, ông đã đồng ý. Việc xây đài làm hao tổn tiền của, sức người, khiến nhân dân lầm than. Phe phản loạn do Trịnh Duy Sản cầm đầu nổi dậy, giết vua, đốt Cửu Trùng Đài và bắt Vũ Như Tô ra pháp trường.</p>
+                    <p>• <strong>Vị trí đoạn trích:</strong> Nằm ở <strong>Hồi V (Một cung cấm)</strong> – hồi cuối cùng của bi kịch, thể hiện đỉnh điểm của xung đột và kết cục đau thương.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section II -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-4">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">II</span> TÓM TẮT DIỄN BIẾN ĐOẠN TRÍCH (CÁC LỚP KỊCH)
+        </h2>
+
+        <div class="space-y-4">
+            <h3 class="text-lg font-bold flex items-center">
+                <span class="circle-badge">1</span> Tiến trình 9 Lớp kịch trong Hồi V
+            </h3>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-center">
+                    <thead>
+                        <tr>
+                            <th class="w-20">Lớp kịch</th>
+                            <th class="w-48">Nhân vật xuất hiện</th>
+                            <th>Sự kiện chính & Diễn biến</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp I</td>
+                            <td>Vũ Như Tô, Đan Thiềm</td>
+                            <td class="text-left">Đan Thiềm hốt hoảng báo tin loạn đến nơi, giục Vũ Như Tô trốn. Vũ Như Tô thản nhiên vì tin mình không có tội.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp II</td>
+                            <td>Thêm Nguyễn Vũ</td>
+                            <td class="text-left">Nguyễn Vũ xộc xệch chạy vào, hỏi tin tức hoàng thượng. Đan Thiềm tiếp tục khuyên trốn trong tiếng quân reo dồn dập.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp III</td>
+                            <td>Thêm Lê Trung Mại</td>
+                            <td class="text-left">Lê Trung Mại báo tin Trịnh Duy Sản làm phản, vua Lê Tương Dực bị đâm chết khi chạy loạn. Nguyễn Vũ tự sát.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp IV</td>
+                            <td>Thêm Tên Nội Giám</td>
+                            <td class="text-left">Nội giám báo tin triều đình rối loạn, An Hoà Hầu kéo quân đốt phá kinh thành, thợ xây theo quân phản loạn.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp V</td>
+                            <td>Vũ Như Tô, Đan Thiềm</td>
+                            <td class="text-left">Vũ Như Tô vẫn ngơ ngác không tin thợ xây phản mình. Đan Thiềm tuyệt vọng, nguyện ở lại cùng chịu chết.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp VI</td>
+                            <td>Kim Phượng, Cung nữ</td>
+                            <td class="text-left">Kim Phượng và các cung nữ hoảng loạn tìm đường trốn khi cửa điện bị phá. Đan Thiềm nhận ra đây là đường cùng.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp VII</td>
+                            <td>Ngô Hạch, Quân khởi loạn</td>
+                            <td class="text-left">Quân loạn xông vào, Ngô Hạch hống hách bắt giữ Đan Thiềm và Vũ Như Tô. Đan Thiềm van xin tha cho Vũ Như Tô nhưng vô hiệu.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp VIII</td>
+                            <td>Vũ Như Tô, Ngô Hạch, Quân sĩ</td>
+                            <td class="text-left">Vũ Như Tô đòi gặp An Hoà Hầu để phân trần hoài bão xây Cửu Trùng Đài nhưng bị quân sĩ xỉa xói, sỉ nhục là gian bọ.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="font-bold">Lớp IX</td>
+                            <td>Thêm Lũ Quân, Mọi người</td>
+                            <td class="text-left">Quân sĩ báo tin Cửu Trùng Đài bị đốt cháy thành tro tàn. Vũ Như Tô bừng tỉnh, đau đớn gào khóc và chấp nhận ra pháp trường.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Minh hoạ sơ đồ -->
+            <div class="my-4 p-4 border border-gray-200 rounded-lg text-center bg-gray-50">
+                <img src="h2.png" alt="Sơ đồ diễn biến xung đột Hồi V" class="max-w-full h-auto mx-auto rounded" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'w-full h-32 bg-gray-200 flex items-center justify-center text-gray-500 font-medium text-sm rounded\'>[Hình h2.png: Sơ đồ diễn biến xung đột kịch tăng cấp từ Lớp I đến Lớp IX]</div>';">
+                <span class="text-xs text-gray-500 mt-2 block">Hình 2: Sơ đồ sự tăng cấp của xung đột kịch</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section III -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-4">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">III</span> PHÂN TÍCH XUNG ĐỘT VÀ NHÂN VẬT TRONG BI KỊCH
+        </h2>
+
+        <div class="space-y-4">
+            <h3 class="text-lg font-bold flex items-center">
+                <span class="circle-badge">1</span> Xung đột kịch trung tâm
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200 shadow-sm space-y-2">
+                    <h4 class="font-bold text-indigo-900 border-b border-indigo-300 pb-1">Mâu thuẫn 1: Quyền lợi nhân dân vs Lối sống xa hoa của phe thống trị</h4>
+                    <p class="text-sm">• Nhân dân lao động, thợ xây chịu sưu cao thuế nặng, lao dịch cực khổ, chết vì tai nạn và bệnh tật.</p>
+                    <p class="text-sm">• Hôn quân Lê Tương Dực ăn chơi trác táng, phung phí ngân khố để xây đài xa hoa.</p>
+                    <p class="text-sm">➜ <strong>Kết cục:</strong> Khởi nghĩa bùng nổ, vua bị giết, triều đình sụp đổ.</p>
+                </div>
+
+                <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-200 shadow-sm space-y-2">
+                    <h4 class="font-bold text-emerald-900 border-b border-emerald-300 pb-1">Mâu thuẫn 2: Đam mê nghệ thuật thuần túy vs Thực tế đời sống nhân dân</h4>
+                    <p class="text-sm">• <strong>Vũ Như Tô:</strong> Khát vọng sáng tạo công trình nghệ thuật vĩ đại "bền như trăng sao", "thách thức với các công trình Trung Hoa".</p>
+                    <p class="text-sm">• <strong>Quần chúng:</strong> Nghệ thuật đó được xây bằng xương máu, mồ hôi và sự đói khổ của nhân dân.</p>
+                    <p class="text-sm">➜ <strong>Bi kịch:</strong> Nghệ thuật hoành tráng trở thành kẻ thù trong mắt nhân dân.</p>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-bold flex items-center pt-2">
+                <span class="circle-badge">2</span> Nhân vật Vũ Như Tô – KTS thiên tài sa vào bi kịch
+            </h3>
+            <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-900 space-y-2">
+                <p>• <strong>Bản chất:</strong> Là thiên tài nghệ thuật, có tâm huyết lớn, sống thanh cao, không hám danh lợi cá nhân.</p>
+                <p>• <strong>Ảo tưởng bi kịch:</strong> Nhầm tưởng có thể mượn uy quyền và tiền bạc của bạo chúa Lê Tương Dực để thực hiện hoài bão nghệ thuật cho dân tộc.</p>
+                <p>• <strong>Thái độ trước biến cố:</strong> Ngơ ngác, không tin mình có tội (<em>"Tôi làm gì nên tội?", "Tôi xây Cửu Trùng Đài có phải đâu để hại nước?"</em>).</p>
+                <p>• <strong>Sự bừng tỉnh muộn màng:</strong> Chỉ khi thấy Cửu Trùng Đài cháy thành tro tàn, ông mới cay đắng nhận ra sự sụp đổ hoàn toàn của mộng lớn (<em>"Ôi mộng lớn! Ôi Đan Thiềm! Ôi Cửu Trùng Đài!"</em>).</p>
+            </div>
+
+            <h3 class="text-lg font-bold flex items-center pt-2">
+                <span class="circle-badge">3</span> Nhân vật Đan Thiềm – Tri kỷ nghệ thuật
+            </h3>
+            <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-emerald-700 space-y-2">
+                <p>• <strong>Người "bệnh nghệ":</strong> Thấu hiểu, trân trọng tài năng hiếm có của Vũ Như Tô, coi Vũ Như Tô là "báu vật quốc gia".</p>
+                <p>• <strong>Tỉnh táo trước thực tại:</strong> Khác với sự ảo tưởng của Vũ Như Tô, Đan Thiềm sớm nhận ra nguy cơ biến cố và liên tục giục Vũ Như Tô bỏ trốn.</p>
+                <p>• <strong>Sẵn sàng hy sinh:</strong> Quỳ lạy van xin quân phản loạn tha cho Vũ Như Tô, nhận hết mọi tội lỗi về mình.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section IV: Interactive Questions (Gỡ vướng & Đọc hiểu) -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-4">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">IV</span> HƯỚNG DẪN TRẢ LỜI CÂU HỎI TRONG BÀI HỌC
+        </h2>
+
+        <p class="text-sm text-gray-600">Nhấn vào nút <strong>"Xem lời giải / Hướng dẫn"</strong> để hiển thị đáp án chi tiết cho các câu hỏi nghiên cứu văn bản.</p>
+
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <div class="p-4 rounded-lg border-l-4 border-blue-800" style="background-color: #edf2f7;">
+                <p class="font-bold text-slate-900">Câu 1 (Trang 10): Tóm tắt các sự kiện chính trong đoạn trích. Bạn có nhận xét gì về diễn biến của các sự kiện?</p>
+                <button onclick="toggleAnswer('ans1')" class="primary-btn mt-3 px-4 py-1.5 rounded text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans1" class="hidden mt-3 p-4 bg-emerald-50 text-slate-800 rounded border border-emerald-200 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• <strong>Tóm tắt:</strong> Đan Thiềm báo tin loạn lạc và giục Vũ Như Tô trốn (Lớp I-II). Lê Trung Mại và Nội giám báo tin vua bị giết, kinh thành bị đốt (Lớp III-IV). Quân khởi loạn do Ngô Hạch dẫn đầu xông vào bắt Đan Thiềm và Vũ Như Tô (Lớp VI-VII). Vũ Như Tô đòi gặp An Hoà Hầu để phân trần nhưng bị sỉ nhục (Lớp VIII). Cửu Trùng Đài bị đốt, Vũ Như Tô bừng tỉnh đau đớn và bị dẫn ra pháp trường (Lớp IX).</p>
+                    <p>• <strong>Nhận xét:</strong> Nhịp điệu kịch diễn ra dồn dập, nhanh, gắt gao. Càng về sau không khí càng hỗn loạn, mâu thuẫn đẩy lên đỉnh điểm không thể dung hòa, dẫn đến kết cục thảm khốc mau lẹ.</p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="p-4 rounded-lg border-l-4 border-blue-800" style="background-color: #edf2f7;">
+                <p class="font-bold text-slate-900">Câu 2 (Trang 10): Tình huống kịch được miêu tả trong đoạn trích là gì? Trước tình huống đó, mỗi nhân vật đã có phản ứng như thế nào?</p>
+                <button onclick="toggleAnswer('ans2')" class="primary-btn mt-3 px-4 py-1.5 rounded text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans2" class="hidden mt-3 p-4 bg-emerald-50 text-slate-800 rounded border border-emerald-200 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• <strong>Tình huống kịch:</strong> Cuộc nổi dậy của quân lính và nhân dân bùng nổ, triều đình bạo ngược bị sụp đổ, công trình Cửu Trùng Đài bị đe dọa phá hủy.</p>
+                    <p>• <strong>Phản ứng của các nhân vật:</strong></p>
+                    <p>- <em>Vũ Như Tô:</em> Ngơ ngác, tin tưởng vào sự quang minh chính đại của mình, không chịu trốn, vẫn nuôi hy vọng hoàn thành Cửu Trùng Đài.</p>
+                    <p>- <em>Đan Thiềm:</em> Sợ hãi cho tính mạng của Vũ Như Tô, van xin ông trốn, sẵn sàng thế mạng để bảo vệ "báu vật đất nước".</p>
+                    <p>- <em>Lê Tương Dực & quan lại:</em> Hoảng loạn, tháo chạy, bị giết hoặc tự sát (Nguyễn Vũ).</p>
+                    <p>- <em>Ngô Hạch & Quân khởi loạn:</em> Hung hãn, căm thù, coi Cửu Trùng Đài là nguồn gốc lầm than và Vũ Như Tô là gian bọ.</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="p-4 rounded-lg border-l-4 border-blue-800" style="background-color: #edf2f7;">
+                <p class="font-bold text-slate-900">Câu 3 (Trang 10): Xung đột chính trong đoạn trích là gì? Xung đột đó được triển khai như thế nào qua các lớp kịch?</p>
+                <button onclick="toggleAnswer('ans3')" class="primary-btn mt-3 px-4 py-1.5 rounded text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans3" class="hidden mt-3 p-4 bg-emerald-50 text-slate-800 rounded border border-emerald-200 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• Xung đột giữa <strong>Khát vọng nghệ thuật cao siêu, đắt đỏ</strong> và <strong>Quyền sống, lợi ích thiết thân của nhân dân lao động</strong>.</p>
+                    <p>• <strong>Triển khai:</strong> Ban đầu là tin đồn biến cố nguy cấp (Lớp I-II) ➔ Xung đột nổ ra trực tiếp khi phe phản loạn chiếm ưu thế (Lớp III-V) ➔ Đỉnh điểm là sự giáp mặt giữa phe khởi loạn và Vũ Như Tô, kết thúc bằng việc Cửu Trùng Đài bị đốt cháy (Lớp VI-IX).</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="p-4 rounded-lg border-l-4 border-blue-800" style="background-color: #edf2f7;">
+                <p class="font-bold text-slate-900">Câu 4 (Trang 10): Phân tích diễn biến tâm trạng của Vũ Như Tô được thể hiện trong đoạn trích.</p>
+                <button onclick="toggleAnswer('ans4')" class="primary-btn mt-3 px-4 py-1.5 rounded text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans4" class="hidden mt-3 p-4 bg-emerald-50 text-slate-800 rounded border border-emerald-200 space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• <strong>Giai đoạn 1 (Lớp I - V):</strong> Bình tĩnh, thản nhiên, đinh ninh mình "không làm gì nên tội", tin vào sự danh chính ngôn thuận của hoài bão nghệ thuật.</p>
+                    <p>• <strong>Giai đoạn 2 (Lớp VII - VIII):</strong> Căng thẳng, băn khoăn khi bị bắt nhưng vẫn ngạo nghễ, đòi phân trần với An Hoà Hầu.</p>
+                    <p>• <strong>Giai đoạn 3 (Lớp IX):</strong> Bàng hoàng, vỡ mộng đau đớn tuyệt vọng khi thấy Cửu Trùng Đài cháy. Ông thốt lên tiếng khóc vĩnh biệt mộng lớn và thản nhiên bước ra pháp trường.</p>
+                </div>
+            </div>
+
+            <!-- Question 5-7 Collapse -->
+            <div class="p-4 rounded-lg border-l-4 border-blue-800" style="background-color: #edf2f7;">
+                <p class="font-bold text-slate-900">Câu 5, 6, 7 (Trang 10): Ý nghĩa hình tượng Cửu Trùng Đài & Mối quan hệ giữa nghệ thuật và cuộc sống</p>
+                <button onclick="toggleAnswer('ans567')" class="primary-btn mt-3 px-4 py-1.5 rounded text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans567" class="hidden mt-3 p-4 bg-emerald-50 text-slate-800 rounded border border-emerald-200 space-y-2">
+                    <p>• <strong>Ý nghĩa Cửu Trùng Đài:</strong> Biểu tượng cho vẻ đẹp kiệt tác nghệ thuật đỉnh cao, đồng thời là biểu tượng cho sự tổn thất xương máu, mồ hôi của nhân dân.</p>
+                    <p>• <strong>Bài học về Nghệ thuật & Cuộc sống:</strong> Nghệ thuật không thể tách rời thực tế đời sống; nghệ thuật chân chính phải vị nhân sinh, không thể được xây dựng trên sự đau khổ và mồ hôi nước mắt của nhân dân.</p>
+                    <p>• <strong>Lời đề tựa của tác giả:</strong> Thể hiện sự cảm thông, băn khoăn và trăn trở sâu sắc của Nguyễn Huy Tưởng đối với bi kịch người nghệ sĩ có tài nhưng tách rời đời sống.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section V: Hoạt động & Dấu ? -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-4">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">V</span> HOẠT ĐỘNG VÀ THẢO LUẬN VẤN ĐỀ
+        </h2>
+
+        <div class="space-y-4">
+            <!-- Activity Hand Icon -->
+            <div class="border border-amber-300 bg-amber-50 p-4 rounded-lg space-y-2">
+                <div class="flex items-center space-x-2 font-bold text-amber-900">
+                    <span class="text-2xl">✋</span>
+                    <span>Hoạt động thảo luận nhóm (Trang 10): "Tính đúng - sai trong hành động của Vũ Như Tô"</span>
+                </div>
+                <p class="text-sm text-slate-700">Hãy thảo luận: Vũ Như Tô là người có tội hay có công? Vì sao nhân dân lại căm ghét ông?</p>
+                <button onclick="toggleAnswer('act1')" class="primary-btn px-3 py-1 rounded text-xs">
+                    Xem hướng giải quyết
+                </button>
+                <div id="act1" class="hidden mt-2 p-3 bg-white rounded border border-amber-200 text-sm space-y-1">
+                    <p><strong>Hướng giải quyết:</strong></p>
+                    <p>- <strong>Mặt có công/đáng thương:</strong> Ông là người nghệ sĩ chân chính, yêu cái đẹp, có hoài bão làm rạng danh đất nước bằng công trình kiến trúc vĩ đại.</p>
+                    <p>- <strong>Mặt có tội/đáng trách:</strong> Ông mù quáng, xa rời thực tế, vô tình trở thành tay sai cho bạo chúa, vắt cạn sức lực và máu xương của nhân dân lao động trong lúc đất nước đói kém.</p>
+                </div>
+            </div>
+
+            <!-- Question Mark Icon -->
+            <div class="border border-sky-300 bg-sky-50 p-4 rounded-lg space-y-2">
+                <div class="flex items-center space-x-2 font-bold text-sky-900">
+                    <span class="text-2xl">❓</span>
+                    <span>Dấu hỏi phát hiện: "Tại sao Đan Thiềm lại được gọi là người mắc bệnh nghệ?"</span>
+                </div>
+                <button onclick="toggleAnswer('qmark1')" class="primary-btn px-3 py-1 rounded text-xs">
+                    Xem câu trả lời
+                </button>
+                <div id="qmark1" class="hidden mt-2 p-3 bg-white rounded border border-sky-200 text-sm space-y-1">
+                    <p><strong>Câu trả lời:</strong> Đan Thiềm mê đắm cái đẹp và cái tài nghệ thuật đến mức quên cả tính mạng bản thân. Bà tôn thờ tài năng của Vũ Như Tô, sẵn sàng quỳ lạy van xin và chết thay để bảo vệ "báu vật của đất nước".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section VI: Em có biết, Em có thể, Lưu ý -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-4">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">VI</span> THÔNG TIN MỞ RỘNG VÀ LƯU Ý
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Em có biết -->
+            <div class="bg-purple-50 border-t-4 border-purple-600 p-4 rounded-lg shadow-sm space-y-2">
+                <h3 class="font-bold text-purple-900 uppercase text-sm tracking-wider">EM CÓ BIẾT</h3>
+                <p class="text-xs text-purple-950 leading-relaxed">
+                    Theo lịch sử, Lê Tương Dực cho xây Cửu Trùng Đài (còn gọi là Bách Trượng Đài) vào năm 1512. Tác phẩm kịch <em>Vũ Như Tô</em> của Nguyễn Huy Tưởng được đánh giá là một trong những kiệt tác bi kịch hay nhất của sân khấu kịch nói Việt Nam hiện đại.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-teal-50 border-t-4 border-teal-600 p-4 rounded-lg shadow-sm space-y-2">
+                <h3 class="font-bold text-teal-900 uppercase text-sm tracking-wider">EM CÓ THỂ</h3>
+                <p class="text-xs text-teal-950 leading-relaxed">
+                    Viết một đoạn văn nghị luận xã hội (khoảng 150 chữ) bày tỏ suy nghĩ về mối quan hệ giữa hoài bão cá nhân và lợi ích cộng đồng trong xã hội hiện đại ngày nay.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border-t-4 border-rose-600 p-4 rounded-lg shadow-sm space-y-2">
+                <h3 class="font-bold text-rose-900 uppercase text-sm tracking-wider">LƯU Ý</h3>
+                <p class="text-xs text-rose-950 leading-relaxed">
+                    Khi phân tích nhân vật bi kịch như Vũ Như Tô, tránh đánh giá một cách phiến diện một chiều (chỉ kết tội hoặc chỉ ca ngợi), cần thấy rõ tính hai mặt và tính bi kịch lịch sử trong khát vọng của nhân vật.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section VII: Bài tập củng cố -->
+    <div class="bg-white p-6 rounded-[12px] shadow-md space-y-6">
+        <h2 class="section-header text-xl md:text-2xl">
+            <span class="square-badge">VII</span> BÀI TẬP CỦNG CỐ
+        </h2>
+
+        <!-- Part 1: Gameshow Ai là triệu phú -->
+        <div class="millionaire-box p-6 rounded-xl text-white space-y-6">
+            <div class="text-center border-b border-amber-500/40 pb-4">
+                <span class="bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">GAMESHOW</span>
+                <h3 class="text-2xl font-black text-amber-400 mt-1 uppercase tracking-wide">AI LÀ TRIỆU PHÚ KHIẾN THỨC</h3>
+                <p class="text-xs text-slate-300">Trả lời 10 câu hỏi trắc nghiệm để kiểm tra kiến thức bài học!</p>
+            </div>
+
+            <div id="quiz-container" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="quiz-item space-y-3" data-correct="A">
+                    <p class="font-bold text-amber-300">Câu 1: Tác giả của vở kịch "Vũ Như Tô" là ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(1, 'A')" id="q1-A" class="option-btn p-3 rounded text-left">A. Nguyễn Huy Tưởng</button>
+                        <button onclick="selectOption(1, 'B')" id="q1-B" class="option-btn p-3 rounded text-left">B. Nam Cao</button>
+                        <button onclick="selectOption(1, 'C')" id="q1-C" class="option-btn p-3 rounded text-left">C. Luân Hoán</button>
+                        <button onclick="selectOption(1, 'D')" id="q1-D" class="option-btn p-3 rounded text-left">D. Xuân Trình</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-item space-y-3" data-correct="C">
+                    <p class="font-bold text-amber-300">Câu 2: Đoạn trích "Vĩnh biệt Cửu Trùng Đài" thuộc hồi mấy của vở kịch?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(2, 'A')" id="q2-A" class="option-btn p-3 rounded text-left">A. Hồi I</button>
+                        <button onclick="selectOption(2, 'B')" id="q2-B" class="option-btn p-3 rounded text-left">B. Hồi III</button>
+                        <button onclick="selectOption(2, 'C')" id="q2-C" class="option-btn p-3 rounded text-left">C. Hồi V</button>
+                        <button onclick="selectOption(2, 'D')" id="q2-D" class="option-btn p-3 rounded text-left">D. Hồi IV</button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-item space-y-3" data-correct="B">
+                    <p class="font-bold text-amber-300">Câu 3: Nhân vật Vũ Như Tô làm nghề gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(3, 'A')" id="q3-A" class="option-btn p-3 rounded text-left">A. Tướng quân</button>
+                        <button onclick="selectOption(3, 'B')" id="q3-B" class="option-btn p-3 rounded text-left">B. Kiến trúc sư / Thợ cả</button>
+                        <button onclick="selectOption(3, 'C')" id="q3-C" class="option-btn p-3 rounded text-left">C. Quan Thái y</button>
+                        <button onclick="selectOption(3, 'D')" id="q3-D" class="option-btn p-3 rounded text-left">D. Thương gia</button>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-item space-y-3" data-correct="D">
+                    <p class="font-bold text-amber-300">Câu 4: Ai là người đã thuyết phục Vũ Như Tô nhận xây Cửu Trùng Đài?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(4, 'A')" id="q4-A" class="option-btn p-3 rounded text-left">A. Lê Tương Dực</button>
+                        <button onclick="selectOption(4, 'B')" id="q4-B" class="option-btn p-3 rounded text-left">B. Trịnh Duy Sản</button>
+                        <button onclick="selectOption(4, 'C')" id="q4-C" class="option-btn p-3 rounded text-left">C. Ngô Hạch</button>
+                        <button onclick="selectOption(4, 'D')" id="q4-D" class="option-btn p-3 rounded text-left">D. Đan Thiềm</button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-item space-y-3" data-correct="A">
+                    <p class="font-bold text-amber-300">Câu 5: Nguyên nhân trực tiếp khiến nhân dân và thợ xây căm giận Vũ Như Tô là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(5, 'A')" id="q5-A" class="option-btn p-3 rounded text-left">A. Việc xây Cửu Trùng Đài làm hao tốn tiền của, sức người, gây nhiều tai nạn</button>
+                        <button onclick="selectOption(5, 'B')" id="q5-B" class="option-btn p-3 rounded text-left">B. Vũ Như Tô gian tham ô tiền xây dựng</button>
+                        <button onclick="selectOption(5, 'C')" id="q5-C" class="option-btn p-3 rounded text-left">C. Vũ Như Tô đầu hàng quân giặc</button>
+                        <button onclick="selectOption(5, 'D')" id="q5-D" class="option-btn p-3 rounded text-left">D. Vũ Như Tô xúi giục vua bóc lột dân</button>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="quiz-item space-y-3" data-correct="C">
+                    <p class="font-bold text-amber-300">Câu 6: Thái độ của Vũ Như Tô khi Đan Thiềm khuyên ông bỏ trốn là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(6, 'A')" id="q6-A" class="option-btn p-3 rounded text-left">A. Sợ hãi bỏ trốn ngay lập tức</button>
+                        <button onclick="selectOption(6, 'B')" id="q6-B" class="option-btn p-3 rounded text-left">B. Khóc lóc van xin tha mạng</button>
+                        <button onclick="selectOption(6, 'C')" id="q6-C" class="option-btn p-3 rounded text-left">C. Thản nhiên, không tin mình có tội và nhất quyết không trốn</button>
+                        <button onclick="selectOption(6, 'D')" id="q6-D" class="option-btn p-3 rounded text-left">D. Mắng chửi Đan Thiềm</button>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="quiz-item space-y-3" data-correct="B">
+                    <p class="font-bold text-amber-300">Câu 7: Bi kịch lớn nhất của Vũ Như Tô ở cuối đoạn trích là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(7, 'A')" id="q7-A" class="option-btn p-3 rounded text-left">A. Bị mất hết của cải</button>
+                        <button onclick="selectOption(7, 'B')" id="q7-B" class="option-btn p-3 rounded text-left">B. Cửu Trùng Đài bị đốt cháy và hoài bão nghệ thuật bị tan thành tro bụi</button>
+                        <button onclick="selectOption(7, 'C')" id="q7-C" class="option-btn p-3 rounded text-left">C. Bị người thân phản bội</button>
+                        <button onclick="selectOption(7, 'D')" id="q7-D" class="option-btn p-3 rounded text-left">D. Không được thăng quan tiến chức</button>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="quiz-item space-y-3" data-correct="D">
+                    <p class="font-bold text-amber-300">Câu 8: Tiếng kêu cuối cùng của Vũ Như Tô "Ôi mộng lớn! Ôi Đan Thiềm! Ôi Cửu Trùng Đài!" thể hiện điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(8, 'A')" id="q8-A" class="option-btn p-3 rounded text-left">A. Sự tiếc nuối vua Lê Tương Dực</button>
+                        <button onclick="selectOption(8, 'B')" id="q8-B" class="option-btn p-3 rounded text-left">B. Sự oán giận quân sĩ</button>
+                        <button onclick="selectOption(8, 'C')" id="q8-C" class="option-btn p-3 rounded text-left">C. Ý định trả thù</button>
+                        <button onclick="selectOption(8, 'D')" id="q8-D" class="option-btn p-3 rounded text-left">D. Sự vỡ mộng cay đắng và đau đớn tột cùng khi lý tưởng nghệ thuật sụp đổ</button>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="quiz-item space-y-3" data-correct="A">
+                    <p class="font-bold text-amber-300">Câu 9: Tính chất hai mặt của công trình Cửu Trùng Đài là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(9, 'A')" id="q9-A" class="option-btn p-3 rounded text-left">A. Vừa là kiệt tác nghệ thuật, vừa là công trình đẫm mồ hôi xương máu của dân</button>
+                        <button onclick="selectOption(9, 'B')" id="q9-B" class="option-btn p-3 rounded text-left">B. Vừa đẹp vừa nhỏ bé</button>
+                        <button onclick="selectOption(9, 'C')" id="q9-C" class="option-btn p-3 rounded text-left">C. Vừa kiên cố vừa dễ sập</button>
+                        <button onclick="selectOption(9, 'D')" id="q9-D" class="option-btn p-3 rounded text-left">D. Vừa cổ kính vừa hiện đại</button>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="quiz-item space-y-3" data-correct="C">
+                    <p class="font-bold text-amber-300">Câu 10: Tác phẩm kịch "Vũ Như Tô" giúp người đọc rút ra bài học sâu sắc nào về nghệ thuật?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <button onclick="selectOption(10, 'A')" id="q10-A" class="option-btn p-3 rounded text-left">A. Nghệ thuật chỉ cần phục vụ giới thượng lưu</button>
+                        <button onclick="selectOption(10, 'B')" id="q10-B" class="option-btn p-3 rounded text-left">B. Nghệ thuật có thể tách rời khỏi đời sống thực tế</button>
+                        <button onclick="selectOption(10, 'C')" id="q10-C" class="option-btn p-3 rounded text-left">C. Nghệ thuật chân chính phải vị nhân sinh, gắn liền với quyền lợi nhân dân</button>
+                        <button onclick="selectOption(10, 'D')" id="q10-D" class="option-btn p-3 rounded text-left">D. Người nghệ sĩ không cần quan tâm đến hoàn cảnh lịch sử</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-4">
+                <button onclick="checkQuiz()" class="bg-black hover:bg-slate-900 text-white font-bold px-8 py-3 rounded-full text-base border-2 border-amber-400 shadow-lg">
+                    NỘP BÀI TRẮC NGHIỆM
+                </button>
+            </div>
+
+            <!-- Quiz Results Box -->
+            <div id="quiz-result" class="hidden p-5 rounded-lg border text-sm space-y-3"></div>
+        </div>
+
+        <!-- Part 2: 3 Essay / Analytical Exercises -->
+        <div class="space-y-4 pt-4">
+            <h3 class="text-lg font-bold text-slate-800">BÀI TẬP TỰ LUẬN PHÂN TÍCH VÀ NGHỊ LUẬN</h3>
+
+            <!-- Essay 1 -->
+            <div class="border border-slate-300 p-4 rounded-lg bg-slate-50 space-y-2">
+                <p class="font-bold text-slate-900">Bài tập 1: Hãy phân tích ý nghĩa lời đề tựa vở kịch của Nguyễn Huy Tưởng: <em>"Than ôi! Như Tô phải hay những kẻ giết Như Tô phải? Ta chẳng biết. Lầm cất hại người, sai nết hại mình. Cầm bút chẳng qua cùng một bệnh với Đan Thiềm."</em></p>
+                <button onclick="toggleAnswer('essay1')" class="primary-btn px-4 py-1.5 rounded text-sm">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="essay1" class="hidden mt-3 p-4 bg-white rounded border border-slate-200 text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>1. <strong>Thắc mắc "Như Tô phải hay kẻ giết Như Tô phải?":</strong> Tác giả thể hiện sự băn khoăn trước mâu thuẫn không thể dung hòa. Vũ Như Tô đúng ở khát vọng sáng tạo cái đẹp cho dân tộc, nhưng sai vì xa rời thực tế lầm than của dân. Kẻ giết Vũ Như Tô đúng ở khát vọng đòi quyền sống, nhưng lại hủy hoại một kiệt tác nghệ thuật và một tài năng hiếm có.</p>
+                    <p>2. <strong>Cùng một bệnh với Đan Thiềm:</strong> "Bệnh" ở đây là "bệnh nghệ" – sự say đắm, tôn thờ cái đẹp nghệ thuật. Nguyễn Huy Tưởng tự nhận mình cũng mang tấm lòng đồng điệu, trân trọng sáng tạo nghệ thuật như Đan Thiềm.</p>
+                </div>
+            </div>
+
+            <!-- Essay 2 -->
+            <div class="border border-slate-300 p-4 rounded-lg bg-slate-50 space-y-2">
+                <p class="font-bold text-slate-900">Bài tập 2: So sánh điểm giống và khác nhau trong thái độ, phản ứng của Vũ Như Tô và Đan Thiềm khi biến cố xảy ra trong Hồi V.</p>
+                <button onclick="toggleAnswer('essay2')" class="primary-btn px-4 py-1.5 rounded text-sm">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="essay2" class="hidden mt-3 p-4 bg-white rounded border border-slate-200 text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• <strong>Giống nhau:</strong> Cả hai đều trân trọng Cửu Trùng Đài, coi đó là công trình vĩ đại, sẵn sàng hy sinh để bảo vệ hoài bão nghệ thuật.</p>
+                    <p>• <strong>Khác nhau:</strong></p>
+                    <p>- <em>Vũ Như Tô:</em> Ảo tưởng, ngơ ngác, tin rằng mình danh chính ngôn thuận nên không chịu trốn, đến phút cuối mới bừng tỉnh khi Cửu Trùng Đài bị đốt.</p>
+                    <p>- <em>Đan Thiềm:</em> Tỉnh táo hơn, sớm nhận ra hiểm họa từ sự căm giận của nhân dân, liên tục hối thúc Vũ Như Tô chạy trốn để bảo toàn tính mạng "báu vật quốc gia".</p>
+                </div>
+            </div>
+
+            <!-- Essay 3 -->
+            <div class="border border-slate-300 p-4 rounded-lg bg-slate-50 space-y-2">
+                <p class="font-bold text-slate-900">Bài tập 3: Đánh giá mô hình xung đột bi kịch qua công thức tính chỉ số tác động xã hội giữa Hoài bão Nghệ thuật \( (A) \) và Chi phí Dân sinh \( (C) \): Khi \( A < C \), điều gì sẽ xảy ra đối với tác phẩm?</p>
+                <button onclick="toggleAnswer('essay3')" class="primary-btn px-4 py-1.5 rounded text-sm">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="essay3" class="hidden mt-3 p-4 bg-white rounded border border-slate-200 text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• Giả sử giá trị hoài bão nghệ thuật là \( A \), chi phí xương máu và sự hy sinh của nhân dân là \( C \).</p>
+                    <p>• Nếu \( A < C \) (Chi phí dân sinh vượt quá giá trị nhân văn mà tác phẩm mang lại cho cộng đồng tại thời điểm đó), mâu thuẫn xã hội sẽ bùng nổ theo phương trình phản ứng cân bằng trạng thái: \( \text{Nghệ thuật xa rời} + \text{Dân khổ} \xrightleftharpoons{} \text{Xung đột bi kịch} \).</p>
+                    <p>• <strong>Kết luận:</strong> Tác phẩm nghệ thuật dù vĩ đại đến đâu nhưng nếu được xây dựng trên sự bóc lột và nỗi đau khổ của nhân dân thì sẽ bị chính nhân dân phủ nhận và phá hủy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-slate-600 text-sm py-4 border-t border-slate-300 font-medium">
+        Chương trình GDPT 2018 - Bộ sách thống nhất
+    </div>
+
+</div>
+
+<!-- JavaScript Core Functions -->
+<script>
+    // Toggle Answer Function
+    function toggleAnswer(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+    }
+
+    // Quiz State Tracker
+    const userAnswers = {};
+
+    function selectOption(qNum, option) {
+        userAnswers[qNum] = option;
+        const options = ['A', 'B', 'C', 'D'];
+        options.forEach(opt => {
+            const btn = document.getElementById(`q${qNum}-${opt}`);
+            if (btn) {
+                btn.classList.remove('selected');
+            }
+        });
+        const selectedBtn = document.getElementById(`q${qNum}-${option}`);
+        if (selectedBtn) {
+            selectedBtn.classList.add('selected');
+        }
+    }
+
+    function checkQuiz() {
+        const quizItems = document.querySelectorAll('.quiz-item');
+        let score = 0;
+        const total = quizItems.length;
+
+        quizItems.forEach((item, index) => {
+            const qNum = index + 1;
+            const correctOpt = item.getAttribute('data-correct');
+            const userOpt = userAnswers[qNum];
+
+            const options = ['A', 'B', 'C', 'D'];
+            options.forEach(opt => {
+                const btn = document.getElementById(`q${qNum}-${opt}`);
+                if (btn) {
+                    btn.classList.remove('correct', 'wrong');
+                    if (opt === correctOpt) {
+                        btn.classList.add('correct');
+                    } else if (opt === userOpt && userOpt !== correctOpt) {
+                        btn.classList.add('wrong');
+                    }
+                }
+            });
+
+            if (userOpt === correctOpt) {
+                score++;
+            }
+        });
+
+        const resultBox = document.getElementById('quiz-result');
+        resultBox.classList.remove('hidden');
+
+        if (score === total) {
+            resultBox.className = "p-5 rounded-lg border text-sm space-y-2 bg-emerald-900 border-emerald-400 text-emerald-100";
+            resultBox.innerHTML = `
+                <p class="text-lg font-bold text-emerald-300">🎉 XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ KIẾN THỨC!</p>
+                <p>Bạn đã trả lời đúng <strong>${score}/${total}</strong> câu hỏi!</p>
+                <p class="text-xs text-emerald-200">Bạn đã nắm vững toàn bộ nội dung bài học và bi kịch Vũ Như Tô.</p>
+            `;
+        } else {
+            resultBox.className = "p-5 rounded-lg border text-sm space-y-2 bg-rose-950 border-rose-500 text-rose-100";
+            resultBox.innerHTML = `
+                <p class="text-lg font-bold text-rose-300">KẾT QUẢ TRẮC NGHIỆM: ${score}/${total} CÂU ĐÚNG</p>
+                <p>Hãy kiểm tra lại các câu trả lời chưa đúng (các ô màu đỏ) và tham khảo đáp án chính xác (các ô màu xanh) ở trên nhé!</p>
+            `;
+        }
+    }
+</script>
+
+</body>
+</html>

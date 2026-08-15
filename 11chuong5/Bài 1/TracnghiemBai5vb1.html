@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức Văn học - Hăm-lét</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #FFFFFF;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,253,208,0.3);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,253,208,0.5);
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col antialiased selection:bg-amber-500 selection:text-white">
+
+    <header class="bg-[#4d2626] border-b border-amber-900/40 px-6 py-4 flex items-center justify-between shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-cream shadow-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-sm font-semibold tracking-wider text-cream uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC VĂN HỌC</h1>
+                <p class="text-xs text-amber-200/80" id="header-subtitle">Bài: Sống, hay không sống – đó là vấn đề (Ngữ văn 10 - KNTT)</p>
+            </div>
+        </div>
+        <div id="mode-badge" class="hidden px-3 py-1 bg-amber-500/20 border border-amber-400/40 rounded-full text-xs font-medium text-cream flex items-center space-x-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span id="badge-text">Chế độ Luyện Tập</span>
+        </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center">
+
+        <!-- SCREEN 1: START SCREEN (giống h1.jpg) -->
+        <div id="screen-start" class="w-full max-w-5xl mx-auto flex flex-col items-center space-y-8 animate-fadeIn">
+            <div class="text-center space-y-3">
+                <div class="inline-flex p-3 bg-amber-500/10 border border-amber-500/30 rounded-full shadow-lg mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-300 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-cream tracking-tight">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-300">20 câu hỏi</strong> bám sát nội dung bài học <strong class="text-amber-300">Sống, hay không sống – đó là vấn đề (Hăm-lét)</strong> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- Phân loại mức độ câu hỏi -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl">
+                <div class="bg-[#4d2626]/80 border border-amber-500/20 rounded-2xl p-4 shadow-md backdrop-blur-sm">
+                    <div class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-1">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-gray-300">Kiến thức lý thuyết, tác giả, cốt truyện, chi tiết đoạn trích.</p>
+                </div>
+                <div class="bg-[#4d2626]/80 border border-amber-500/20 rounded-2xl p-4 shadow-md backdrop-blur-sm">
+                    <div class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-1">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-gray-300">Giải thích tâm trạng, ý nghĩa lời thoại, từ ngữ, hành động nhân vật.</p>
+                </div>
+                <div class="bg-[#4d2626]/80 border border-amber-500/20 rounded-2xl p-4 shadow-md backdrop-blur-sm">
+                    <div class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-1">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-gray-300">Liên kết đa phần, phân tích tư duy, đánh giá xung đột bi kịch.</p>
+                </div>
+                <div class="bg-[#4d2626]/80 border border-amber-500/20 rounded-2xl p-4 shadow-md backdrop-blur-sm">
+                    <div class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-1">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-gray-300">Lồng ghép triết lý nhân sinh, phân tích yếu tố nghệ thuật phức tạp.</p>
+                </div>
+            </div>
+
+            <div class="text-center text-xs text-amber-300/80 font-medium uppercase tracking-widest pt-2">
+                VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+            </div>
+
+            <!-- Nút chọn chế độ -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+                <!-- Chế độ Luyện Tập -->
+                <button onclick="startQuiz('practice')" class="group text-left bg-[#4d2626] hover:bg-[#592c2c] border-2 border-amber-500/30 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 shadow-xl hover:shadow-amber-500/10 flex flex-col justify-between space-y-4">
+                    <div class="flex items-start justify-between">
+                        <div class="space-y-1">
+                            <span class="text-xs font-bold text-amber-400 tracking-wider uppercase">Hình thức 1</span>
+                            <h3 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors">Chế độ Luyện Tập</h3>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-semibold rounded-full border border-amber-400/30">Không giới hạn</span>
+                    </div>
+                    <p class="text-sm text-gray-300">
+                        Học tập & củng cố kiến thức không áp lực. Làm bài không tính giờ, xem điểm và lời giải chi tiết ngay khi hoàn thành.
+                    </p>
+                    <div class="flex items-center text-xs font-semibold text-amber-300 space-x-1 group-hover:translate-x-1 transition-transform">
+                        <span>Bắt đầu luyện tập ngay</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </button>
+
+                <!-- Chế độ Tính Giờ -->
+                <button onclick="startQuiz('timed')" class="group text-left bg-[#4d2626] hover:bg-[#592c2c] border-2 border-amber-500/30 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 shadow-xl hover:shadow-amber-500/10 flex flex-col justify-between space-y-4">
+                    <div class="flex items-start justify-between">
+                        <div class="space-y-1">
+                            <span class="text-xs font-bold text-amber-400 tracking-wider uppercase">Hình thức 2</span>
+                            <h3 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors">Chế độ Tính Giờ</h3>
+                        </div>
+                        <span class="px-3 py-1 bg-rose-500/20 text-rose-300 text-xs font-semibold rounded-full border border-rose-400/30">20 Phút</span>
+                    </div>
+                    <p class="text-sm text-gray-300">
+                        Thử thách & kiểm tra đánh giá năng lực. Có đồng hồ đếm ngược, xáo trộn thứ tự câu hỏi chống gian lận.
+                    </p>
+                    <div class="flex items-center text-xs font-semibold text-amber-300 space-x-1 group-hover:translate-x-1 transition-transform">
+                        <span>Bắt đầu làm bài thi</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: QUIZ SCREEN (giống h2.jpg) -->
+        <div id="screen-quiz" class="hidden w-full max-w-6xl mx-auto flex flex-col space-y-6 animate-fadeIn">
+            <!-- Top bar quiz -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between bg-[#4d2626] border border-amber-500/20 rounded-2xl p-4 shadow-md gap-4">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-amber-500/20 text-amber-300 px-3 py-1.5 rounded-xl border border-amber-400/30 font-semibold text-xs flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                        <span>DANH SÁCH CÂU HỎI</span>
+                    </div>
+                    <div class="text-xs text-gray-300 font-medium">
+                        Đã làm: <strong id="answered-count" class="text-amber-300">0</strong> / 20 câu
+                    </div>
+                </div>
+                <div id="timer-box" class="hidden items-center space-x-2 bg-rose-500/20 border border-rose-500/40 text-rose-200 px-4 py-1.5 rounded-xl text-sm font-bold shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rose-300 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Thời gian: <span id="time-left">20:00</span></span>
+                </div>
+            </div>
+
+            <!-- Quiz Layout: Grid Navigator + Question Box -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+                <!-- Question Navigator (Trái) -->
+                <div class="lg:col-span-1 bg-[#4d2626] border border-amber-500/20 rounded-2xl p-4 shadow-md space-y-4">
+                    <div id="question-grid" class="grid grid-cols-5 gap-2">
+                        <!-- Rendered dynamically by JS -->
+                    </div>
+                    <div class="pt-2 border-t border-amber-900/40 space-y-2 text-xs text-gray-300">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-[#361a1a] border border-amber-500/30 inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-amber-500/40 border border-amber-400 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-blue-600 border border-blue-400 inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                    <button onclick="confirmSubmit()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center space-x-2 text-sm border border-emerald-400/40">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+
+                <!-- Question Content Box (Phải) -->
+                <div class="lg:col-span-3 bg-[#4d2626] border border-amber-500/20 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between min-h-[480px]">
+                    <div class="space-y-6">
+                        <!-- Header câu hỏi -->
+                        <div class="flex items-center justify-between pb-4 border-b border-amber-900/40">
+                            <div class="flex items-center space-x-3">
+                                <span id="current-q-num" class="text-xl font-bold text-cream">Câu 1 / 20</span>
+                                <span id="current-q-level" class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-lg text-xs font-semibold border border-amber-400/30">Mức Biết</span>
+                            </div>
+                        </div>
+
+                        <!-- Nội dung câu hỏi -->
+                        <div id="question-text" class="text-base sm:text-lg text-white font-medium leading-relaxed">
+                            <!-- Rendered by JS -->
+                        </div>
+
+                        <!-- Các lựa chọn đáp án -->
+                        <div id="options-container" class="space-y-3 pt-2">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Footer điều hướng câu hỏi -->
+                    <div class="flex items-center justify-between pt-6 mt-8 border-t border-amber-900/40">
+                        <button onclick="prevQuestion()" id="btn-prev" class="px-4 py-2 bg-[#361a1a] hover:bg-[#592c2c] text-gray-300 hover:text-white rounded-xl text-sm font-medium border border-amber-500/20 transition duration-150 flex items-center space-x-1 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                            <span>Câu Trước</span>
+                        </button>
+
+                        <button onclick="clearAnswer()" class="text-xs text-amber-300/80 hover:text-amber-200 underline underline-offset-4 font-medium transition">
+                            Xóa lựa chọn câu này
+                        </button>
+
+                        <button onclick="nextQuestion()" id="btn-next" class="px-6 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-sm font-semibold shadow-md transition duration-150 flex items-center space-x-1 border border-amber-400/40">
+                            <span>Câu Tiếp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: RESULT SCREEN (giống h3.jpg) -->
+        <div id="screen-result" class="hidden w-full max-w-5xl mx-auto flex flex-col space-y-8 animate-fadeIn">
+            <!-- Header kết quả -->
+            <div class="bg-[#4d2626] border border-amber-500/20 rounded-3xl p-8 text-center shadow-2xl space-y-6">
+                <div class="inline-flex p-4 bg-amber-500/20 border border-amber-400/40 rounded-full text-amber-300 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="space-y-2">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-cream">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p class="text-sm text-amber-200/80" id="result-mode-label">Chế độ Luyện Tập</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto pt-2">
+                    <div class="bg-[#361a1a] border border-amber-500/20 rounded-2xl p-4 shadow-inner">
+                        <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Điểm số</div>
+                        <div class="text-3xl font-extrabold text-amber-300" id="res-score">0.0 <span class="text-sm text-gray-400">/ 10.0</span></div>
+                    </div>
+                    <div class="bg-[#361a1a] border border-amber-500/20 rounded-2xl p-4 shadow-inner">
+                        <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Số câu đúng</div>
+                        <div class="text-3xl font-extrabold text-emerald-400" id="res-correct">0 <span class="text-sm text-gray-400">/ 20 câu</span></div>
+                    </div>
+                    <div class="bg-[#361a1a] border border-amber-500/20 rounded-2xl p-4 shadow-inner">
+                        <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Thời gian làm bài</div>
+                        <div class="text-lg font-bold text-cream pt-1" id="res-time">Không giới hạn</div>
+                    </div>
+                </div>
+
+                <!-- Đánh giá & nhận xét từ giáo viên -->
+                <div class="bg-[#361a1a] border border-amber-500/30 rounded-2xl p-6 text-left space-y-2 max-w-3xl mx-auto shadow-lg">
+                    <div class="flex items-center space-x-2 text-amber-300 font-bold text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                        </svg>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacher-feedback" class="text-sm text-gray-200 leading-relaxed italic">
+                        <!-- Rendered by JS -->
+                    </p>
+                </div>
+
+                <!-- Buttons actions -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="resetQuiz()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-semibold rounded-xl shadow-lg transition duration-200 flex items-center space-x-2 border border-amber-400/40 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToReview()" class="px-6 py-3 bg-[#361a1a] hover:bg-[#592c2c] text-cream font-semibold rounded-xl shadow-lg transition duration-200 flex items-center space-x-2 border border-amber-500/30 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <span>Xem đáp án & Lời giải chi tiết</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Review Section -->
+            <div id="review-section" class="space-y-6 pt-4">
+                <div class="flex items-center space-x-3 pb-2 border-b border-amber-500/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-cream">ĐÁP ÁN & LỜI GIẢI CHI TIẾT</h3>
+                </div>
+                <div id="review-list" class="space-y-6">
+                    <!-- Rendered dynamically by JS -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Thông báo tùy chỉnh thay vì alert() -->
+    <div id="custom-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-[#4d2626] border border-amber-500/40 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 animate-scaleUp">
+            <div class="flex items-center space-x-3 text-amber-300">
+                <div class="p-2 bg-amber-500/20 rounded-xl border border-amber-400/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-cream" id="modal-title">Thông báo</h3>
+            </div>
+            <p id="modal-message" class="text-sm text-gray-200 leading-relaxed"></p>
+            <div class="flex justify-end space-x-3 pt-2" id="modal-buttons">
+                <button onclick="closeModal()" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-sm font-semibold shadow transition">Đồng ý</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* 
+           DATABASE 20 CÂU HỎI TRẮC NGHIỆM VĂN HỌC 10 - KNTT
+           8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao
+           Bám sát văn bản "Sống, hay không sống – đó là vấn đề" (Trích Hăm-lét - Shakespeare)
+        */
+        const originalQuestions = [
+            // --- MỨC BIẾT (8 câu: 1 -> 8) ---
+            {
+                id: 1,
+                level: "Mức Biết",
+                question: "Tác giả của vở bi kịch nổi tiếng <i>Hăm-lét</i> là ai?",
+                options: [
+                    "A. Uy-li-am Sếch-xpia (William Shakespeare)",
+                    "B. A-rít-xtốt (Aristotle)",
+                    "C. Xắc-xơ Gram-ma-ti-cút (Saxo Grammaticus)",
+                    "D. Phơ-răng-xoa đơ Ben-phóc (François de Belleforest)"
+                ],
+                correct: 0,
+                explanation: "Vở bi kịch <i>Hăm-lét</i> là kiệt tác đỉnh cao của nhà soạn kịch vĩ đại người Anh Uy-li-am Sếch-xpia (1564-1616)."
+            },
+            {
+                id: 2,
+                level: "Mức Biết",
+                question: "Đoạn trích <i>Sống, hay không sống – đó là vấn đề</i> thuộc hồi mấy, cảnh mấy của vở kịch <i>Hăm-lét</i>?",
+                options: [
+                    "A. Hồi I, cảnh 1",
+                    "B. Hồi II, cảnh 2",
+                    "C. Hồi III, cảnh 1",
+                    "D. Hồi V, cảnh 2"
+                ],
+                correct: 2,
+                explanation: "Theo chú thích trong sách giáo khoa, đoạn trích <i>Sống, hay không sống – đó là vấn đề</i> nằm ở cảnh 1, hồi III của vở bi kịch <i>Hăm-lét</i>."
+            },
+            {
+                id: 3,
+                level: "Mức Biết",
+                question: "Nhà triết học Hy Lạp cổ đại nào đã đưa ra khái niệm 'hiệu ứng thanh lọc' của bi kịch?",
+                options: [
+                    "A. Platon",
+                    "B. A-rít-xtốt (Aristotle)",
+                    "C. Socrates",
+                    "D. Homer"
+                ],
+                correct: 1,
+                explanation: "Nhà triết học Hy Lạp cổ đại A-rít-xtốt (Aristotle) là người đầu tiên đề xuất và gọi tên hiệu ứng thanh lọc (catharsis) của bi kịch."
+            },
+            {
+                id: 4,
+                level: "Mức Biết",
+                question: "Trước khi Hăm-lét xuất hiện trong cảnh 1 hồi III, vua Clô-đi-út và Pô-lô-ni-út đang bàn bạc điều gì?",
+                options: [
+                    "A. Kế hoạch chuẩn bị chiến tranh chống lại hoàng tử xứ Na Uy Pho-tin-brát",
+                    "B. Dò xét nguyên nhân chứng rối loạn tâm thần (bệnh điên) của thái tử Hăm-lét",
+                    "C. Tổ chức lễ cưới linh đình giữa nhà vua và Hoàng hậu Giéc-trút",
+                    "D. Tìm kiếm bức mật thư gửi sang nước Anh"
+                ],
+                correct: 1,
+                explanation: "Đoạn đầu cảnh 1 hồi III cho thấy vua Clô-đi-út cùng Pô-lô-ni-út bàn bạc, sắp đặt để rình nghe trộm cuộc trò chuyện giữa Hăm-lét và Ô-phê-li-a nhằm tìm hiểu nguyên nhân Hăm-lét phát điên."
+            },
+            {
+                id: 5,
+                level: "Mức Biết",
+                question: "Nhân vật Ô-phê-li-a trong đoạn trích có mối quan hệ như thế nào với thái tử Hăm-lét?",
+                options: [
+                    "A. Là em gái ruột",
+                    "B. Là người yêu của Hăm-lét",
+                    "C. Là bạn học cũ cùng thời",
+                    "D. Là cung nữ trong hoàng cung"
+                ],
+                correct: 1,
+                explanation: "Ô-phê-li-a là con gái của viên cận thần Pô-lô-ni-út, đồng thời là người yêu của thái tử Hăm-lét."
+            },
+            {
+                id: 6,
+                level: "Mức Biết",
+                question: "Uy-li-am Sếch-xpia sinh ra và lớn lên tại quốc gia nào?",
+                options: [
+                    "A. Pháp",
+                    "B. Hi Lạp",
+                    "C. Anh",
+                    "D. Ý"
+                ],
+                correct: 2,
+                explanation: "Uy-li-am Sếch-xpia sinh ra và lớn lên tại thị trấn Xtơ-rét-phớt ở tây nam nước Anh, là nhà thơ, nhà soạn kịch nổi tiếng nhất nước Anh thời Phục hưng."
+            },
+            {
+                id: 7,
+                level: "Mức Biết",
+                question: "Theo phần tóm tắt vở kịch, nguyên nhân trực tiếp khiến vua cha của Hăm-lét băng hà là gì?",
+                options: [
+                    "A. Bị bệnh hiểm nghèo qua đời trong hoàng cung",
+                    "B. Bị chú ruột Clô-đi-út mưu sát để chiếm đoạt ngai vàng",
+                    "C. Tử trận trong cuộc chiến chống hoàng tử xứ Na Uy Pho-tin-brát",
+                    "D. Bị ngã suối tử nạn trong một chuyến đi biển"
+                ],
+                correct: 1,
+                explanation: "Hồn ma vua cha hiện lên báo cho Hăm-lét biết chính chú của chàng là Clô-đi-út đã mưu sát anh trai để chiếm ngai vàng và cưới hoàng hậu."
+            },
+            {
+                id: 8,
+                level: "Mức Biết",
+                question: "Trong đoạn độc thoại nổi tiếng, câu nói mở đầu của Hăm-lét là gì?",
+                options: [
+                    "A. Sống, hay không sống – đó là vấn đề.",
+                    "B. Ôi, gánh nặng của tội ác!",
+                    "C. Từ giờ phút này, ý nghĩ ta phải đẫm máu!",
+                    "D. Nữ thần của ta ơi, khi nàng cầu nguyện..."
+                ],
+                correct: 0,
+                explanation: "Đoạn độc thoại triết lý nổi tiếng bậc nhất lịch sử kịch thế giới bắt đầu bằng câu: <i>'Sống, hay không sống – đó là vấn đề.'</i>"
+            },
+
+            // --- MỨC HIỂU (7 câu: 9 -> 15) ---
+            {
+                id: 9,
+                level: "Mức Hiểu",
+                question: "Qua lời độc thoại <i>'Sống, hay không sống – đó là vấn đề'</i>, hai trạng thái 'sống' và 'không sống' (chết) được Hăm-lét hình dung như thế nào?",
+                options: [
+                    "A. 'Sống' là sự hèn nhát; 'chết' là sự giải thoát hoàn toàn không vương vấn.",
+                    "B. 'Sống' là chịu đựng mọi đọa đày, áp bức, sóng gió của biển khổ; 'chết' là giấc ngủ chấm dứt đau khổ nhưng lại ẩn chứa những giấc mơ bí ẩn sau cõi chết.",
+                    "C. 'Sống' là vinh quang tột đỉnh; 'chết' là sự trừng phạt của định mệnh.",
+                    "D. 'Sống' là mưu sát kẻ thù; 'chết' là sự đầu hàng trước cường quyền."
+                ],
+                correct: 1,
+                explanation: "Hăm-lét cân nhắc giữa việc chịu đựng kiếp sống đầy đọa hay tự kết liễu. Chàng ví 'chết là ngủ', nhưng nỗi sợ 'những giấc mơ nào sẽ tới' trong cõi chết mới là điều khiến con người chần chừ."
+            },
+            {
+                id: 10,
+                level: "Mức Hiểu",
+                question: "Theo quan niệm của Hăm-lét, nguyên nhân chính khiến con người dù phải chịu đựng bao nhiêu 'khổ nhục trên cõi thế' nhưng vẫn không dám tự định đoạt số phận (tự sát) là gì?",
+                options: [
+                    "A. Vì sợ luật pháp hoàng gia trừng phạt",
+                    "B. Vì còn vướng bận tình yêu đôi lứa",
+                    "C. Vì sợ một cái gì mênh mang, bí ẩn sau khi chết mà không ai biết trước",
+                    "D. Vì thiếu vũ khí và phương tiện hành động"
+                ],
+                correct: 2,
+                explanation: "Hăm-lét suy ngẫm: con người cam chịu khổ nhục <i>'chỉ vì sợ một cái gì mênh mang sau khi chết, cả một thế giới huyền bí mà đã vượt biên cương thì không một du khách nào còn quay trở lại'</i>."
+            },
+            {
+                id: 11,
+                level: "Mức Hiểu",
+                question: "Việc xây dựng sự đối lập giữa lời Hăm-lét nói với Ô-phê-li-a trong phần độc thoại (nội tâm chân thực, đau đớn) và phần đối thoại (cố tình giả điên, lạnh lùng) nhằm thể hiện dụng ý nghệ thuật gì?",
+                options: [
+                    "A. Làm nổi bật sự tàn nhẫn và vô cảm của Hăm-lét đối với người yêu.",
+                    "B. Khắc họa tâm trạng giằng xé sâu sắc, sự cô độc tuyệt đối và ý thức bảo vệ người mình yêu khỏi cạm bẫy cung đình của Hăm-lét.",
+                    "C. Chứng minh Hăm-lét thực sự đã bị mất trí hoàn toàn.",
+                    "D. Tạo tiếng cười trào phúng để giảm bớt căng thẳng cho vở kịch."
+                ],
+                correct: 1,
+                explanation: "Sự đối lập giữa độc thoại và đối thoại thể hiện nội dung tư tưởng sâu sắc: Hăm-lét phải che giấu nội tâm bão tố, đẩy Ô-phê-li-a rời xa mình để bảo vệ nàng trước âm mưu đen tối của triều đình."
+            },
+            {
+                id: 12,
+                level: "Mức Hiểu",
+                question: "Trong đoạn trích, Hăm-lét nhận thức thế nào về mối quan hệ giữa 'nhan sắc' và 'đức hạnh' trong thời đại đảo điên?",
+                options: [
+                    "A. Nhan sắc và đức hạnh luôn song hành, bổ sung hoàn hảo cho nhau.",
+                    "B. Nhan sắc có mãnh lực biến đức hạnh thành phóng đãng, trong khi đức hạnh không thể khép nhan sắc vào khuôn khổ nết na.",
+                    "C. Đức hạnh có thể dễ dàng chiến thắng và cải tạo nhan sắc xấu xa.",
+                    "D. Cả nhan sắc và đức hạnh đều không có ý nghĩa gì trong xã hội phong kiến."
+                ],
+                correct: 1,
+                explanation: "Hăm-lét thốt lên bi quan: <i>'Vì nhan sắc có mãnh lực biến đức hạnh thành phóng đãng, nhưng đức hạnh không thể nào khép nhan sắc vào khuôn khổ nết na'</i> – phản ánh cảm quan u tối về thực tại thời đại."
+            },
+            {
+                id: 13,
+                level: "Mức Hiểu",
+                question: "Xung đột chủ đạo trong bi kịch Sếch-xpia (được thể hiện rõ qua tâm sự của Hăm-lét) là gì?",
+                options: [
+                    "A. Mâu thuẫn giữa các phe phái phong kiến tranh giành ruộng đất.",
+                    "B. Mâu thuẫn gay gắt giữa lựa chọn hành động tự do của nhân vật (như một nhân cách mạnh mẽ) với cái tất yếu (định mệnh, định kiến thời đại, thực tại xã hội đen tối).",
+                    "C. Mâu thuẫn giữa tình yêu nam nữ và gia đình.",
+                    "D. Mâu thuẫn giữa giai cấp nông dân và giai cấp thống trị."
+                ],
+                correct: 1,
+                explanation: "Xung đột trong bi kịch là mâu thuẫn gay gắt giữa khát vọng hành động tự do, cao cả của nhân vật với thế lực đen tối của thực tại xã hội và định kiến."
+            },
+            {
+                id: 14,
+                level: "Mức Hiểu",
+                question: "Hiệu ứng thanh lọc (catharsis) của bi kịch mang lại điều gì cho người tiếp nhận khi theo dõi kịch?",
+                options: [
+                    "A. Khiến người xem chìm đắm trong bi thương và tuyệt vọng vĩnh viễn.",
+                    "B. Giúp người xem sợ hãi cái ác, căm ghét sự đê tiện, giả dối, ngưỡng mộ cái cao cả để tâm hồn hài hòa, thăng bằng hơn.",
+                    "C. Giúp người xem giải trí nhẹ nhàng như khi xem hài kịch.",
+                    "D. Cung cấp các kiến thức lịch sử chính xác về vương quốc Đan Mạch."
+                ],
+                correct: 1,
+                explanation: "A-rít-xtốt chỉ ra hiệu ứng thanh lọc giúp khán giả trải nghiệm bi kịch để căm ghét cái đê tiện, cảm phục cái cao cả, khiến tâm hồn trong sáng, thăng bằng hơn."
+            },
+            {
+                id: 15,
+                level: "Mức Hiểu",
+                question: "Bối cảnh lịch sử - xã hội nào đã tác động sâu sắc đến tư tưởng và cảm quan nghệ thuật của Sếch-xpia trong việc xây dựng vở bi kịch <i>Hăm-lét</i>?",
+                 options: [
+                    "A. Thời kỳ đầu Trung cổ với sự thống trị tuyệt đối của thần quyền.",
+                    "B. Bối cảnh hậu kì Phục hưng, khi lí tưởng nhân văn chủ nghĩa lâm vào khủng hoảng sâu sắc trước thực tại lịch sử nghiệt ngã.",
+                    "C. Thời kỳ cách mạng công nghiệp ở Anh thế kỉ XVIII.",
+                    "D. Giai đoạn chiến tranh thế giới thứ nhất."
+                ],
+                correct: 1,
+                explanation: "Sếch-xpia đặt nhân vật vào bối cảnh hậu kì Phục hưng, khi lí tưởng nhân văn lâm vào khủng hoảng sâu sắc trước hiện thực xã hội đầy rẫy sự bất công, giả dối."
+            },
+
+            // --- VẬN DỤNG (3 câu: 16 -> 18) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                question: "Từ sự phân tích đoạn độc thoại của Hăm-lét, ta thấy nguyên nhân sâu xa khiến thái tử thường rơi vào trạng thái do dự, trì hoãn hành động trả thù là gì?",
+                options: [
+                    "A. Do Hăm-lét thiếu can đảm và sợ hãi cái chết thông thường.",
+                    "B. Do tư duy triết lý sâu sắc, sự thức tỉnh về sứ mệnh cải tạo cả một thời đại 'đảo điên' chứ không đơn thuần là một vụ trả thù cá nhân.",
+                    "C. Do sự can thiệp và ngăn cản từ phía Hoàng hậu Giéc-trút.",
+                    "D. Do Hăm-lét bị bệnh thần kinh nặng không thể suy nghĩ tỉnh táo."
+                ],
+                correct: 1,
+                explanation: "Hăm-lét không phải kẻ hèn nhát mà là một trí thức lớn mang hoài bão cao cả, suy ngẫm đa chiều về lẽ sống chết và trách nhiệm vạch mặt cái ác của cả thời đại, khiến quyết tâm đôi khi chùng xuống."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                question: "Ý nghĩa triết lý nhân sinh lớn nhất rút ra từ câu hỏi kinh điển <i>'Sống, hay không sống – đó là vấn đề'</i> là gì?",
+                options: [
+                    "A. Lựa chọn giữa việc tự sát hay tiếp tục sống tầm thường.",
+                    "B. Sự tự ý thức sâu sắc về giá trị nhân phẩm, quyền tự định đoạt cuộc đời và dũng khí đối mặt với nghịch cảnh thay vì cam chịu hèn mạt.",
+                    "C. Lời than thân trách phận của một kẻ bất lực trước hoàn cảnh.",
+                    "D. Sự tuyệt vọng tuyệt đối vào tương lai của loài người."
+                ],
+                correct: 1,
+                explanation: "Câu hỏi mở ra tầm vóc triết lý phổ quát về sự lựa chọn phẩm giá con người: đối mặt và chiến đấu với nghịch cảnh hay đầu hàng sự hèn mạt."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                question: "Xét trong sự vận động của toàn bộ vở kịch, việc Hăm-lét liên tục dằn vặt, tự trách bản thân vì sự chậm trễ hành động phản ánh đặc điểm nào của kiểu nhân vật bi kịch thời Phục hưng?",
+                options: [
+                    "A. Tính cách đơn giản, một chiều, hành động bộc phát theo cảm tính.",
+                    "B. Con người cá nhân thức tỉnh, giàu nội tâm, có ý chí mạnh mẽ nhưng luôn bị giằng xé giữa lý tưởng cao đẹp và thực tại phũ phàng.",
+                    "C. Sự khuất phục hoàn toàn trước lực lượng siêu nhiên và định mệnh.",
+                    "D. Tinh thần vị kỷ, chỉ mưu cầu lợi ích cá nhân."
+                ],
+                correct: 1,
+                explanation: "Nhân vật bi kịch Sếch-xpia là con người tự do, phóng khoáng, có nội tâm vô cùng phong phú và phức tạp, luôn trăn trở giữa lý tưởng nhân văn cao quý và thực tại đen tối."
+            },
+
+            // --- VẬN DỤNG CAO (2 câu: 19 -> 20) ---
+            {
+                id: 19,
+                level: "VD Cao",
+                question: "Lồng ghép triết lý nghệ thuật và cấu trúc tự sự của Sếch-xpia: Tại sao trong cảnh kịch đầy tính triết lý này, nhà viết kịch lại đặt đoạn độc thoại nội tâm sâu thẳm ngay trước một cuộc đối thoại đầy kịch tính với Ô-phê-li-a?",
+                options: [
+                    "A. Để kéo dài thời lượng vở kịch cho đủ năm hồi theo quy chuẩn thời đại.",
+                    "B. Tạo sự tương phản nghệ thuật đỉnh cao giữa sự cô đơn chiêm nghiệm triết học vũ trụ của cá nhân với sự nghiệt ngã, giả dối của quan hệ thực tế xã hội cung đình.",
+                    "C. Để làm phân tán tư tưởng khán giả trước khi bước vào cao trào vụ án mạng.",
+                    "D. Nhấn mạnh sự yếu đuối trong tình yêu của hoàng tử Đan Mạch."
+                ],
+                correct: 1,
+                explanation: "Sự đan xen tinh tế giữa độc thoại triết lý và đối thoại thực tế tạo nên chiều sâu nghệ thuật đặc trưng của Sếch-xpia: đặt nội tâm cô độc của cá nhân đối diện trực tiếp với bức tường thành giả dối của thực tại."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                question: "Đánh giá tổng thể về hình tượng Hăm-lét qua đoạn trích và toàn bộ tác phẩm, cụm từ nào khái quát chính xác nhất bi kịch của một 'con người đại diện cho bình minh Phục hưng lạc lối trong đêm trường trung cổ'?",
+                options: [
+                    "A. Bi kịch của kẻ phản bội lý tưởng gia đình.",
+                    "B. Bi kịch của hành động vĩ đại bị tê liệt bởi ý thức triết lý quá sâu sắc và sự đối đầu đơn độc với cả một hệ thống xã hội thối nát.",
+                    "C. Bi kịch tình yêu không thành giữa hoàng tử và thường dân.",
+                    "D. Bi kịch của sự ám ảnh bởi quyền lực ngai vàng."
+                ],
+                correct: 1,
+                explanation: "Bi kịch của Hăm-lét là bi kịch của người trí thức mang khát vọng cao đẹp nhưng phải đơn độc chiến đấu với cả một thời đại đảo điên, nơi tư duy lớn đôi khi biến thành sức ì của hành động."
+            }
+        ];
+
+        let questions = [];
+        let currentQuizMode = 'practice'; // 'practice' or 'timed'
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // { qIndex: selectedOptionIndex }
+        let timerInterval = null;
+        let remainingSeconds = 1200; // 20 phút = 1200 giây
+        let isSubmitted = false;
+
+        // Khởi động khi tải trang
+        window.onload = function() {
+            // Không tự động chạy gì cho đến khi người dùng chọn chế độ
+        }
+
+        // Bắt đầu bài kiểm tra
+        function startQuiz(mode) {
+            currentQuizMode = mode;
+            isSubmitted = false;
+            userAnswers = {};
+            currentQuestionIndex = 0;
+
+            // Xáo trộn câu hỏi nếu ở chế độ Tính Giờ để chống gian lận
+            if (mode === 'timed') {
+                questions = JSON.parse(JSON.stringify(originalQuestions));
+                // Fisher-Yates shuffle
+                for (let i = questions.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [questions[i], questions[j]] = [questions[j], questions[i]];
+                }
+                remainingSeconds = 1200;
+                document.getElementById('timer-box').classList.remove('hidden');
+                document.getElementById('timer-box').classList.add('flex');
+                document.getElementById('badge-text').innerText = 'Chế độ Tính Giờ (20 Phút)';
+                startTimer();
+            } else {
+                questions = JSON.parse(JSON.stringify(originalQuestions)); // Giữ nguyên thứ tự cho luyện tập
+                document.getElementById('timer-box').classList.remove('flex');
+                document.getElementById('timer-box').classList.add('hidden');
+                document.getElementById('badge-text').innerText = 'Chế độ Luyện Tập';
+            }
+
+            document.getElementById('mode-badge').classList.remove('hidden');
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            renderQuestionGrid();
+            loadQuestion(0);
+        }
+
+        // Đồng hồ đếm ngược
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                remainingSeconds--;
+                let m = Math.floor(remainingSeconds / 60);
+                let s = remainingSeconds % 60;
+                document.getElementById('time-left').innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+
+                if (remainingSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    showCustomModal("Hết giờ!", "Thời gian làm bài đã kết thúc. Hệ thống sẽ tự động nộp bài và chấm điểm cho bạn.", () => {
+                        submitQuiz(true);
+                    });
+                }
+            }, 1000);
+        }
+
+        // Render bảng điều hướng câu hỏi (grid 20 ô)
+        function renderQuestionGrid() {
+            const grid = document.getElementById('question-grid');
+            grid.innerHTML = '';
+            for (let i = 0; i < questions.length; i++) {
+                let btn = document.createElement('button');
+                btn.id = `grid-btn-${i}`;
+                btn.className = `h-10 rounded-xl text-xs font-bold transition flex items-center justify-center border `;
+                
+                if (i === currentQuestionIndex) {
+                    btn.className += `bg-blue-600 text-white border-blue-400 shadow-md ring-2 ring-blue-400/50`;
+                } else if (userAnswers[i] !== undefined) {
+                    btn.className += `bg-amber-500/40 text-amber-200 border-amber-400`;
+                } else {
+                    btn.className += `bg-[#361a1a] text-gray-300 border-amber-500/20 hover:bg-[#592c2c]`;
+                }
+
+                btn.innerText = i + 1;
+                btn.onclick = () => goToQuestion(i);
+                grid.appendChild(btn);
+            }
+        }
+
+        // Tải câu hỏi lên màn hình
+        function loadQuestion(index) {
+            currentQuestionIndex = index;
+            const q = questions[index];
+
+            document.getElementById('current-q-num').innerText = `Câu ${index + 1} / 20`;
+            document.getElementById('current-q-level').innerText = q.level;
+            document.getElementById('question-text').innerHTML = q.question;
+
+            const optsContainer = document.getElementById('options-container');
+            optsContainer.innerHTML = '';
+
+            q.options.forEach((optText, optIdx) => {
+                let isSelected = userAnswers[index] === optIdx;
+                let optDiv = document.createElement('div');
+                optDiv.className = `p-4 rounded-xl border cursor-pointer transition flex items-start space-x-3 text-sm sm:text-base font-medium `;
+                
+                if (isSelected) {
+                    optDiv.className += `bg-amber-500/25 border-amber-400 text-cream shadow-inner`;
+                } else {
+                    optDiv.className += `bg-[#361a1a] border-amber-500/20 text-gray-200 hover:bg-[#592c2c] hover:border-amber-500/40`;
+                }
+
+                optDiv.innerHTML = `
+                    <div class="flex items-center h-5 pt-0.5">
+                        <input type="radio" name="question-opt" ${isSelected ? 'checked' : ''} class="w-4 h-4 text-amber-600 bg-gray-700 border-amber-500 focus:ring-amber-500 cursor-pointer">
+                    </div>
+                    <div class="flex-1">${optText}</div>
+                `;
+
+                optDiv.onclick = () => selectOption(index, optIdx);
+                optsContainer.appendChild(optDiv);
+            });
+
+            // Cập nhật trạng thái nút Prev / Next
+            document.getElementById('btn-prev').disabled = index === 0;
+            document.getElementById('btn-next').innerHTML = index === questions.length - 1 ? 
+                `<span>Hoàn Thành</span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>` :
+                `<span>Câu Tiếp</span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>`;
+
+            renderQuestionGrid();
+            updateAnsweredCount();
+
+            // Render MathJax nếu có công thức toán
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Chọn đáp án
+        function selectOption(qIdx, optIdx) {
+            if (isSubmitted) return;
+            userAnswers[qIdx] = optIdx;
+            loadQuestion(qIdx);
+        }
+
+        // Xóa lựa chọn câu hiện tại
+        function clearAnswer() {
+            if (isSubmitted) return;
+            delete userAnswers[currentQuestionIndex];
+            loadQuestion(currentQuestionIndex);
+        }
+
+        // Chuyển câu hỏi
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                loadQuestion(currentQuestionIndex + 1);
+            } else {
+                confirmSubmit();
+            }
+        }
+
+        function goToQuestion(index) {
+            loadQuestion(index);
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answered-count').innerText = count;
+        }
+
+        // Xác nhận nộp bài
+        function confirmSubmit() {
+            if (isSubmitted) return;
+            const answeredCount = Object.keys(userAnswers).length;
+            const unanswered = 20 - answeredCount;
+
+            let msg = `Bạn đã trả lời ${answeredCount}/20 câu.`;
+            if (unanswered > 0) {
+                msg += ` Còn ${unanswered} câu chưa trả lời.`;
+            }
+            msg += ` Bạn có chắc chắn muốn nộp bài và xem kết quả không?`;
+
+            showCustomModal("Xác nhận nộp bài", msg, () => {
+                submitQuiz(false);
+            }, true);
+        }
+
+        // Nộp bài và chấm điểm
+        function submitQuiz(forced) {
+            if (isSubmitted) return;
+            isSubmitted = true;
+            clearInterval(timerInterval);
+
+            // Tính điểm
+            let correctCount = 0;
+            questions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            let score = (correctCount / 20) * 10;
+            score = Math.round(score * 10) / 10; // Làm tròn 1 chữ số thập phân
+
+            // Hiển thị màn hình kết quả
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            document.getElementById('res-score').innerHTML = `${score} <span class="text-sm text-gray-400">/ 10.0</span>`;
+            document.getElementById('res-correct').innerHTML = `${correctCount} <span class="text-sm text-gray-400">/ 20 câu</span>`;
+            document.getElementById('result-mode-label').innerText = currentQuizMode === 'practice' ? 'Chế độ Luyện Tập' : 'Chế độ Tính Giờ';
+            
+            if (currentQuizMode === 'timed') {
+                let timeUsed = 1200 - remainingSeconds;
+                let m = Math.floor(timeUsed / 60);
+                let s = timeUsed % 60;
+                document.getElementById('res-time').innerText = `${m} phút ${s} giây`;
+            } else {
+                document.getElementById('res-time').innerText = 'Không giới hạn';
+            }
+
+            // Đánh giá và nhận xét từ giáo viên
+            let feedback = "";
+            if (score >= 9.0) {
+                feedback = `Xuất sắc! Em nắm rất vững kiến thức trọng tâm của bài học <i>'Sống, hay không sống – đó là vấn đề'</i> (Hăm-lét). Em có tư duy phân tích sắc sảo, hiểu sâu sắc về xung đột bi kịch, triết lý nhân sinh cũng như nghệ thuật độc thoại nội tâm của Sếch-xpia. Hãy tiếp tục phát huy phong độ này!`;
+            } else if (score >= 7.0) {
+                feedback = `Khá tốt! Em đã nắm bắt được hầu hết nội dung cơ bản, cốt truyện và ý nghĩa đoạn trích. Tuy nhiên, ở một số câu hỏi vận dụng và vận dụng cao về chiều sâu triết lý nhân sinh hay dụng ý nghệ thuật đối thoại, em còn nhầm lẫn nhỏ. Hãy xem lại phần lời giải chi tiết để hoàn thiện hơn nhé!`;
+            } else if (score >= 5.0) {
+                feedback = `Đạt yêu cầu trung bình. Em đã có cố gắng trong việc nắm bắt kiến thức cơ bản. Dù vậy, em cần ôn tập kỹ lại sách giáo khoa Ngữ văn 10 (bộ Kết nối tri thức) phần tìm hiểu chi tiết về đoạn trích Hăm-lét, đặc biệt là các lớp nghĩa triết lý và xung đột bi kịch. Cố gắng rèn luyện thêm nhé!`;
+            } else {
+                feedback = `Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và nội dung bài học. Hãy đọc kỹ lại văn bản trong sách giáo khoa, ghi nhớ các chi tiết về nhân vật, hoàn cảnh sáng tác và kỹ lưỡng đọc lại phần lời giải chi tiết bên dưới để làm lại bài đạt kết quả tốt hơn!`;
+            }
+            document.getElementById('teacher-feedback').innerHTML = feedback;
+
+            // Render đáp án & lời giải chi tiết
+            renderReviewList();
+
+            // Cuộn lên đầu trang kết quả
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render danh sách review đáp án chi tiết
+        function renderReviewList() {
+            const listContainer = document.getElementById('review-list');
+            listContainer.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                let userAns = userAnswers[idx];
+                let isCorrect = userAns === q.correct;
+
+                let card = document.createElement('div');
+                card.className = `bg-[#4d2626] border rounded-2xl p-6 shadow-lg space-y-4 ${isCorrect ? 'border-emerald-500/40' : 'border-rose-500/40'}`;
+
+                let headerHtml = `
+                    <div class="flex items-center justify-between pb-3 border-b border-amber-900/40">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-base font-bold text-cream">Câu ${idx + 1}</span>
+                            <span class="px-2.5 py-0.5 bg-amber-500/20 text-amber-300 rounded-md text-xs font-semibold border border-amber-400/30">${q.level}</span>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 ${isCorrect ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/30' : 'bg-rose-500/20 text-rose-300 border border-rose-400/30'}">
+                            ${isCorrect ? '✓ Đúng' : '✕ Sai'}
+                        </span>
+                    </div>
+                `;
+
+                let qTextHtml = `<div class="text-sm sm:text-base text-white font-medium">${q.question}</div>`;
+
+                let optsHtml = `<div class="space-y-2 pt-1">`;
+                q.options.forEach((optText, oIdx) => {
+                    let optStyle = "bg-[#361a1a] border-amber-500/20 text-gray-300";
+                    let badge = "";
+
+                    if (oIdx === q.correct) {
+                        optStyle = "bg-emerald-950/40 border-emerald-500 text-emerald-200 font-semibold";
+                        badge = `<span class="ml-2 px-2 py-0.5 bg-emerald-500 text-white rounded text-xs">Đáp án đúng</span>`;
+                    } else if (oIdx === userAns && !isCorrect) {
+                        optStyle = "bg-rose-950/40 border-rose-500 text-rose-200";
+                        badge = `<span class="ml-2 px-2 py-0.5 bg-rose-500 text-white rounded text-xs">Bạn đã chọn</span>`;
+                    } else if (oIdx === userAns && isCorrect) {
+                        badge = `<span class="ml-2 px-2 py-0.5 bg-emerald-600 text-white rounded text-xs">Bạn đã chọn</span>`;
+                    }
+
+                    optsHtml += `<div class="p-3 rounded-xl border text-xs sm:text-sm ${optStyle} flex items-center justify-between"><span>${optText}</span>${badge}</div>`;
+                });
+                optsHtml += `</div>`;
+
+                let explanationHtml = `
+                    <div class="mt-4 p-4 bg-[#361a1a] border border-amber-500/30 rounded-xl space-y-1">
+                        <div class="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center space-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                card.innerHTML = headerHtml + qTextHtml + optsHtml + explanationHtml;
+                listContainer.appendChild(card);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Cuộn xuống phần xem lại đáp án
+        function scrollToReview() {
+            const reviewSec = document.getElementById('review-section');
+            reviewSec.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Làm lại bài kiểm tra
+        function resetQuiz() {
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            document.getElementById('mode-badge').classList.add('hidden');
+        }
+
+        // Modal tùy chỉnh thông báo
+        function showCustomModal(title, message, callback, showCancel = false) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-message').innerText = message;
+            
+            const btnContainer = document.getElementById('modal-buttons');
+            if (showCancel) {
+                btnContainer.innerHTML = `
+                    <button onclick="closeModal()" class="px-4 py-2 bg-[#361a1a] hover:bg-gray-700 text-gray-300 rounded-xl text-sm font-medium border border-amber-500/20 transition">Hủy</button>
+                    <button onclick="window.modalCallback && window.modalCallback(); closeModal();" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-sm font-semibold shadow transition">Đồng ý</button>
+                `;
+            } else {
+                btnContainer.innerHTML = `
+                    <button onclick="closeModal(); window.modalCallback && window.modalCallback();" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-sm font-semibold shadow transition">Đồng ý</button>
+                `;
+            }
+            window.modalCallback = callback;
+            document.getElementById('custom-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
