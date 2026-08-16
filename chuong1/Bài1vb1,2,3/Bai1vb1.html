@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài học: Truyện về các vị thần sáng tạo thế giới</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- MathJax library with Chemistry support (No polyfill) -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+  <style>
+    body {
+      background-color: #f4f7f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .square-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-color: #1e3a8a;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-right: 0.6rem;
+      flex-shrink: 0;
+    }
+    .circle-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background-color: #037859;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 9999px;
+      margin-right: 0.6rem;
+      flex-shrink: 0;
+    }
+    /* Millionaire Game Option Hover Styles */
+    .quiz-option {
+      transition: all 0.2s ease-in-out;
+    }
+    .quiz-option:hover {
+      background-color: #fef08a !important;
+      color: #000000 !important;
+    }
+  </style>
+</head>
+<body class="text-gray-800 antialiased p-3 sm:p-6">
+
+  <!-- Chosen Palette: Primary 1 #1e3a8a, Primary 2 #037859, Accent #33FF33 -->
+  <!-- Application Structure Plan: Built as a single-page interactive lesson structure containing Header, Intro Box, Content Sections I-III, Special Boxes, SGK Exercise Solutions, Interactive Gameshow Quiz, and Practical Calculations/Analysis with MathJax. Designed to maximize clarity, accessibility, and engagement. -->
+  <!-- Visualization & Content Choices: Used structured cards, HTML tables, MathJax equations, interactive JS toggles for solutions, and a dynamic 10-question quiz engine. Confirming NO SVG / Mermaid JS used. -->
+  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+  <!-- Thẻ div chủ -->
+  <div class="max-w-5xl mx-auto space-y-6">
+
+    <!-- 1. HEADER (Gồm 2 khối màu, bo góc 12px, giữa có đường kẻ) -->
+    <header class="rounded-[12px] overflow-hidden shadow-md">
+      <!-- Khối trên: Màu 1 (#1e3a8a) -->
+      <div style="background-color: #1e3a8a;" class="p-4 text-white text-center font-bold text-lg sm:text-xl tracking-wide uppercase">
+        CHƯƠNG: SỰ HẤP DẪN CỦA TRUYỆN KỂ
+      </div>
+      <!-- Đường kẻ mảnh phân cách -->
+      <div class="border-t border-white/20"></div>
+      <!-- Khối dưới: Màu 2 (#037859) -->
+      <div style="background-color: #037859;" class="p-5 text-white text-center font-extrabold text-xl sm:text-3xl tracking-wider uppercase">
+        TRUYỆN VỀ CÁC VỊ THẦN SÁNG TẠO THẾ GIỚI
+        <span class="block text-sm font-medium italic lowercase text-emerald-100 mt-1">(Thần thoại Việt Nam)</span>
+      </div>
+    </header>
+
+    <!-- 2. INTRO BOX (Khung viền đen mỏng, nền trắng, chứa câu hỏi dẫn nhập in nghiêng) -->
+    <div class="bg-white border border-black rounded-[12px] p-5 shadow-sm">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">📖</span>
+        <p class="italic text-gray-700 leading-relaxed font-medium">
+          "Nêu tên một truyện kể hoặc bộ phim có nhân vật chính là một vị thần. Theo bạn, điều gì làm nên sức hấp dẫn của tác phẩm đó?"
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT SECTION I: NỘI DUNG TÓM TẮT VĂN BẢN -->
+    <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+      <h2 class="text-2xl font-bold uppercase text-[#1e3a8a] border-b-4 border-[#1e3a8a] pb-2 flex items-center">
+        <span class="square-badge">I</span> TÓM TẮT NỘI DUNG CÁC TRUYỆN KỂ
+      </h2>
+
+      <!-- Mục 1: Thần Trụ Trời -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#037859] flex items-center">
+          <span class="circle-badge">1</span> THẦN TRỤ TRỜI
+        </h3>
+        
+        <!-- Khung tóm tắt có màu nền -->
+        <div class="bg-slate-50 border-l-4 border-[#037859] p-4 rounded-r-lg space-y-2 text-justify shadow-sm">
+          <p><strong>Bối cảnh:</strong> Thuở ấy chưa có vũ trụ, chưa có muôn vật và loài người. Trời đất chỉ là một đám hỗn độn tối tăm và lạnh lẽo.</p>
+          <p><strong>Hành trạng của thần:</strong> Bất ngờ xuất hiện một vị thần với thân thể to lớn vô cùng, bước một bước từ đỉnh núi này sang đỉnh núi khác. Thần tự mình đào đất, đắp một cái cột vĩ đại vừa to vừa cao để chống trời, nâng bầu trời lên cao vút. Từ đó, trời đất phân chia thành hai: Đất phẳng như cái mâm vuông, Trời ở trên vồng cao như cái bát úp.</p>
+          <p><strong>Dấu tích & Hệ quả:</strong> Khi bầu trời đã khô vồng, thần phá cột đi, ném vung đất đá ra khắp nơi tạo thành núi đồi, gò đống, cao nguyên và biển cả. Dấu tích cột chống trời được dân gian gọi là núi Thạch Môn (Kinh Thiên Trụ / Núi Khổng Lồ).</p>
+        </div>
+
+        <!-- Khung hình minh họa h1.png -->
+        <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+          <img src="h1.png" alt="Minh họa Thần Trụ Trời" class="mx-auto max-h-64 object-contain mb-2 rounded shadow" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'p-6 text-gray-400 italic bg-gray-100 rounded-lg border\'>[ Khung hình minh họa Thần Trụ Trời: h1.png ]</div>';">
+          <p class="text-xs text-gray-500 italic mt-1">Hình 1: Thần Trụ Trời đào đất đắp cột chống phân chia Trời và Đất (File: h1.png)</p>
+        </div>
+
+        <!-- Khung công thức / Bài vè ghi nhận -->
+        <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg shadow-sm">
+          <p class="font-bold text-amber-900 mb-1">📜 Bài vè dân gian ghi nhớ công lao các vị thần sáng tạo:</p>
+          <p class="italic text-amber-800 text-center leading-relaxed font-serif">
+            "Nhất ông đếm cát,<br>
+            Nhì ông tát bể (biển),<br>
+            Ba ông kể sao,<br>
+            Bốn ông đào sông,<br>
+            Năm ông trồng cây,<br>
+            Sáu ông xây rú,<br>
+            Bảy ông trụ trời."
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-gray-200 my-4">
+
+      <!-- Mục 2: Thần Sét -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#037859] flex items-center">
+          <span class="circle-badge">2</span> THẦN SÉT
+        </h3>
+        
+        <div class="bg-slate-50 border-l-4 border-[#037859] p-4 rounded-r-lg space-y-2 text-justify shadow-sm">
+          <p><strong>Danh hiệu & Đặc điểm:</strong> Danh hiệu Thiên Lôi (hoặc ông Sấm). Mặt mũi rất nanh ác, tiếng quát tháo dữ dội, tính tình cực kỳ nóng nảy.</p>
+          <p><strong>Công việc:</strong> Thi hành luật pháp ở trần gian theo lệnh Ngọc Hoàng. Thần mang búa đá, khi xử án nhảy xuống trỏ búa vào đầu kẻ phạm tội (người, vật, cây cỏ).</p>
+          <p><strong>Thói quen & Sự cố:</strong> Thần hay ngủ vào mùa đông, tháng Hai tháng Ba mới dậy làm việc. Có lúc tính nóng nảy làm thần đánh nhầm người vô tội, bị Ngọc Hoàng phạt nằm im trong rừng, thỉnh thoảng bị gà thần mổ làm thần giật mình nơm nớp.</p>
+        </div>
+
+        <!-- Khung hình minh họa h2.png -->
+        <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+          <img src="h2.png" alt="Minh họa Thần Sét" class="mx-auto max-h-64 object-contain mb-2 rounded shadow" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'p-6 text-gray-400 italic bg-gray-100 rounded-lg border\'>[ Khung hình minh họa Thần Sét: h2.png ]</div>';">
+          <p class="text-xs text-gray-500 italic mt-1">Hình 2: Thần Sét (Thiên Lôi) thi hành luật pháp (File: h2.png)</p>
+        </div>
+      </div>
+
+      <hr class="border-gray-200 my-4">
+
+      <!-- Mục 3: Thần Gió -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[#037859] flex items-center">
+          <span class="circle-badge">3</span> THẦN GIÓ
+        </h3>
+        
+        <div class="bg-slate-50 border-l-4 border-[#037859] p-4 rounded-r-lg space-y-2 text-justify shadow-sm">
+          <p><strong>Hình dạng & Bảo bối:</strong> Hình dạng kì quặc, không có đầu. Bảo bối là một chiếc quạt màu nhiệm dùng để tạo gió nhỏ hay bão lớn tùy lệnh Ngọc Hoàng.</p>
+          <p><strong>Truyện tích con Thần Gió:</strong> Thần có đứa con nhỏ nghịch ngợm. Một hôm vắng bố, đứa con lấy quạt quạt làm thổi bay mất bát gạo duy nhất của người nghèo khổ đang đun cháo nuôi vợ ốm. Người nghèo kiện lên Thiên đình, Ngọc Hoàng đày con Thần Gió xuống trần chăn trâu cho người mất gạo.</p>
+          <p><strong>Nguồn gốc cây Ngải Gió:</strong> Sau đó, Ngọc Hoàng biến đứa con thành cây ngải gió (ngải tướng quân) để báo tin gió cho thiên hạ và làm thuốc chữa bệnh cảm gió.</p>
+        </div>
+
+        <!-- Khung hình minh họa h3.png -->
+        <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+          <img src="h3.png" alt="Minh họa Thần Gió" class="mx-auto max-h-64 object-contain mb-2 rounded shadow" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'p-6 text-gray-400 italic bg-gray-100 rounded-lg border\'>[ Khung hình minh họa Thần Gió: h3.png ]</div>';">
+          <p class="text-xs text-gray-500 italic mt-1">Hình 3: Thần Gió cùng chiếc quạt thần tạo nên dông bão (File: h3.png)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT SECTION II: TRI THỨC VĂN HỌC KHÁI NIỆM & KHUNG ĐẶC BIỆT -->
+    <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+      <h2 class="text-2xl font-bold uppercase text-[#1e3a8a] border-b-4 border-[#1e3a8a] pb-2 flex items-center">
+        <span class="square-badge">II</span> TRI THỨC THẦN THOẠI VIỆT NAM
+      </h2>
+
+      <!-- Định nghĩa được đóng khung có màu nền -->
+      <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-5 space-y-3">
+        <h3 class="font-bold text-lg text-blue-900 border-b border-blue-200 pb-2">📌 Định nghĩa & Phân loại Thần thoại</h3>
+        <p class="text-gray-800 leading-relaxed">
+          <strong>Thần thoại:</strong> Là thể loại văn học dân gian ra đời sớm nhất, phản ánh nhận thức, lý giải của con người thời cổ đại về nguồn gốc vũ trụ, thế giới tự nhiên và đời sống con người.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+          <div class="bg-white p-3 rounded-lg shadow-sm border border-blue-100">
+            <span class="font-bold text-blue-800 block mb-1">1. Thần thoại suy nguyên:</span>
+            Kể về nguồn gốc vũ trụ, các hiện tượng tự nhiên (Trời, Đất, Mặt Trời, Sét, Gió, Sông, Biển...).
+          </div>
+          <div class="bg-white p-3 rounded-lg shadow-sm border border-blue-100">
+            <span class="font-bold text-blue-800 block mb-1">2. Thần thoại sáng tạo:</span>
+            Kể về sự sáng tạo ra con người, văn hóa, kĩ nghệ và các anh hùng văn hóa.
+          </div>
+        </div>
+      </div>
+
+      <!-- BẢNG TỔNG HỢP NỘI DUNG -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-center border-collapse border border-[#cbd5e0] rounded-lg">
+          <thead>
+            <tr class="bg-[#e2e8f0] text-gray-800 font-bold">
+              <th class="border border-[#cbd5e0] p-3">Tên Vị Thần</th>
+              <th class="border border-[#cbd5e0] p-3">Hình Dạng / Tính Khí</th>
+              <th class="border border-[#cbd5e0] p-3">Chức Năng Sáng Tạo</th>
+              <th class="border border-[#cbd5e0] p-3">Hiện Tượng Tự Nhiên Giải Thích</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-[#cbd5e0] p-3 font-semibold">Thần Trụ Trời</td>
+              <td class="border border-[#cbd5e0] p-3">Thân thể to lớn vô hạn, bước một bước từ đỉnh nọ sang đỉnh kia.</td>
+              <td class="border border-[#cbd5e0] p-3">Đào đất đắp cột chống trời, phân chia Trời và Đất.</td>
+              <td class="border border-[#cbd5e0] p-3">Sự hình thành vòm trời, mặt đất phẳng, núi đồi, gò đống, biển cả.</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-[#cbd5e0] p-3 font-semibold">Thần Sét</td>
+              <td class="border border-[#cbd5e0] p-3">Mặt mũi nanh ác, tiếng quát dữ dội, tính tình cực kỳ nóng nảy.</td>
+              <td class="border border-[#cbd5e0] p-3">Thi hành luật pháp ở trần gian, trừng phạt kẻ có tội.</td>
+              <td class="border border-[#cbd5e0] p-3">Hiện tượng sấm sét, tiếng gà gáy làm giật mình, dông bão mùa xuân.</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-[#cbd5e0] p-3 font-semibold">Thần Gió</td>
+              <td class="border border-[#cbd5e0] p-3">Hình dạng kỳ quặc không có đầu, sở hữu chiếc quạt mầu nhiệm.</td>
+              <td class="border border-[#cbd5e0] p-3">Tạo gió bão, phối hợp với Thần Mưa, Thần Sét.</td>
+              <td class="border border-[#cbd5e0] p-3">Các luồng gió, trận bão bất ngờ và sự ra đời của cây Ngải Gió.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CÁC KHUNG ĐẶC BIỆT 5: Em có biết, Em có thể, Lưu ý -->
+      <div class="space-y-4 pt-2">
+        <!-- Khung Em có biết -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+          <h4 class="font-bold text-amber-800 text-lg flex items-center gap-2">
+            💡 em có biết
+          </h4>
+          <p class="text-amber-900 text-sm mt-1 leading-relaxed">
+            Trong quan niệm dân gian Việt Nam, hình ảnh "Trời tròn Đất vuông" xuất hiện rất sớm trong các thần thoại như Thần Trụ Trời và được thể hiện rõ nét qua sự tích Bánh chưng Bánh giầy thời Hùng Vương!
+          </p>
+        </div>
+
+        <!-- Khung Em có thể -->
+        <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg shadow-sm">
+          <h4 class="font-bold text-indigo-800 text-lg flex items-center gap-2">
+            🚀 em có thể
+          </h4>
+          <p class="text-indigo-900 text-sm mt-1 leading-relaxed">
+            Sử dụng kĩ năng vẽ tranh hoặc ứng dụng thiết kế để minh họa lại hình tượng Thần Trụ Trời đang nâng vòm bầu trời, hoặc kể lại một trong ba câu chuyện thần thoại trên bằng hình thức truyện tranh (comic strip).
+          </p>
+        </div>
+
+        <!-- Khung Lưu ý -->
+        <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-lg shadow-sm">
+          <h4 class="font-bold text-rose-800 text-lg flex items-center gap-2">
+            ⚠️ Lưu ý
+          </h4>
+          <p class="text-rose-900 text-sm mt-1 leading-relaxed">
+            Nội dung các truyện thần thoại phản ánh thế giới quan ngây thơ, trực quan của con người thời cổ đại. Cần tôn trọng trí tưởng tượng dân gian và không dùng tri thức khoa học hiện đại để phủ nhận giá trị văn hóa - nghệ thuật của tác phẩm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT SECTION III: CÂU HỎI BÀI TẬP SGK VỚI NÚT XEM LỜI GIẢI -->
+    <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+      <h2 class="text-2xl font-bold uppercase text-[#1e3a8a] border-b-4 border-[#1e3a8a] pb-2 flex items-center">
+        <span class="square-badge">III</span> HƯỚNG DẪN TRẢ LỜI CÂU HỎI VĂN BẢN (SGK)
+      </h2>
+
+      <!-- Câu 1 -->
+      <div class="p-4 bg-[#edf2f7] border-l-4 border-[#1e3a8a] rounded-r-lg space-y-2">
+        <p class="font-bold text-gray-900">Câu 1 (Trang 14 SGK):</p>
+        <p class="text-gray-800">Xác định thời gian, không gian, nhân vật và sự kiện chính trong từng truyện kể.</p>
+        <button onclick="toggleAnswer('sgk-1')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2 mt-2">
+          <span>👁️ Xem lời giải</span>
+        </button>
+        <div id="sgk-1" class="hidden mt-3 p-4 bg-[#e6fffa] border-l-4 border-[#037859] rounded-r-lg text-gray-800 space-y-2 text-sm">
+          <p><strong>• Thần Trụ Trời:</strong> Thời gian hoang sơ chưa có vũ trụ; Không gian hỗn độn, tối tăm; Nhân vật: Thần Trụ Trời; Sự kiện: Thần dựng cột chống trời, chia tách trời đất và tạo nên địa hình.</p>
+          <p><strong>• Thần Sét:</strong> Thời gian thuở cổ sơ; Không gian trên trời và trần gian; Nhân vật: Thần Sét; Sự kiện: Thần trừng phạt kẻ có tội, đánh nhầm người tốt bị phạt, thua Cường Bạo Đại Vương.</p>
+          <p><strong>• Thần Gió:</strong> Thời gian cổ sơ; Không gian vĩnh hằng; Nhân vật: Thần Gió, con thần Gió; Sự kiện: Con Thần Gió nghịch quạt làm mất bát gạo, bị Ngọc Hoàng hóa thành cây ngải gió.</p>
+        </div>
+      </div>
+
+      <!-- Câu 2 -->
+      <div class="p-4 bg-[#edf2f7] border-l-4 border-[#1e3a8a] rounded-r-lg space-y-2">
+        <p class="font-bold text-gray-900">Câu 2 (Trang 14 SGK):</p>
+        <p class="text-gray-800">Hãy chỉ ra một số dấu hiệu giúp người đọc nhận biết ba truyện kể trên thuộc nhóm thần thoại suy nguyên.</p>
+        <button onclick="toggleAnswer('sgk-2')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2 mt-2">
+          <span>👁️ Xem lời giải</span>
+        </button>
+        <div id="sgk-2" class="hidden mt-3 p-4 bg-[#e6fffa] border-l-4 border-[#037859] rounded-r-lg text-gray-800 space-y-2 text-sm">
+          <p>Các dấu hiệu nhận biết thần thoại suy nguyên:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Nội dung tập trung giải thích nguồn gốc các hiện tượng tự nhiên (Trời, Đất, Sấm sét, Gió, Cây ngải gió...).</li>
+            <li>Nhân vật chính là các vị thần có sức mạnh siêu nhiên, ngoại hình và hành động khổng lồ.</li>
+            <li>Không gian mang tính vũ trụ, chưa có ranh giới rõ ràng; Thời gian phiếm chỉ, cổ sơ.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Câu 3 -->
+      <div class="p-4 bg-[#edf2f7] border-l-4 border-[#1e3a8a] rounded-r-lg space-y-2">
+        <p class="font-bold text-gray-900">Câu 3 (Trang 14 SGK):</p>
+        <p class="text-gray-800">Trong cái nhìn của con người thời cổ đại, thần Trụ Trời, thần Gió, thần Sét có hình dạng và tính khí ra sao? Sự tưởng tượng về các vị thần ấy được hình thành trên cơ sở nào?</p>
+        <button onclick="toggleAnswer('sgk-3')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2 mt-2">
+          <span>👁️ Xem lời giải</span>
+        </button>
+        <div id="sgk-3" class="hidden mt-3 p-4 bg-[#e6fffa] border-l-4 border-[#037859] rounded-r-lg text-gray-800 space-y-2 text-sm">
+          <p>• <strong>Hình dạng & Tính khí:</strong> Thần Trụ Trời khổng lồ; Thần Sét nanh ác, nóng nảy; Thần Gió kỳ quặc không đầu. Họ mang đặc tính siêu nhiên kết hợp nét tính cách con người.</p>
+          <p>• <strong>Cơ sở tưởng tượng:</strong> Dựa trên sự quan sát trực quan các hiện tượng tự nhiên (Sét dữ dội, Gió không thấy hình dáng nhưng cảm nhận được lực quạt, Bầu trời bao la vồng cao như bát úp) kết hợp với tư duy "vạn vật hữu linh".</p>
+        </div>
+      </div>
+
+      <!-- Mục có biểu tượng dấu ? -->
+      <div class="p-4 bg-purple-50 border border-purple-200 rounded-lg space-y-2">
+        <div class="flex items-center gap-2 text-purple-900 font-bold text-lg">
+          <span class="text-2xl">❓</span>
+          <span>Mục Hỏi Nhanh (Dấu ?): Tại sao cây Ngải Gió lại cuốn lá lại khi trời sắp nổi gió?</span>
+        </div>
+        <button onclick="toggleAnswer('q-mark-1')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2">
+          <span>❓ Giải đáp thắc mắc</span>
+        </button>
+        <div id="q-mark-1" class="hidden mt-2 p-3 bg-white border border-purple-200 rounded text-sm text-gray-800">
+          Theo thần thoại, cây ngải gió chính là con Thần Gió bị phạt. Mỗi khi trời sắp nổi gió mưa, đứa con lại nhớ bố nên cuộn lá lại để báo tin cho con người. Về mặt sinh học, đây là phản ứng của cây trước sự thay đổi độ ẩm và áp suất không khí.
+        </div>
+      </div>
+
+      <!-- Mục hoạt động hình bàn tay -->
+      <div class="p-4 bg-orange-50 border border-orange-200 rounded-lg space-y-2">
+        <div class="flex items-center gap-2 text-orange-900 font-bold text-lg">
+          <span class="text-2xl">🖐️</span>
+          <span>Hoạt động thảo luận nhóm: Phân tích thông điệp nhân văn trong truyện Thần Gió</span>
+        </div>
+        <p class="text-sm text-gray-700">Nêu vấn đề: Dù là con của vị thần quyền năng, tại sao đứa con Thần Gió vẫn bị Ngọc Hoàng trừng phạt nghiêm khắc khi làm mất bát gạo của người nghèo?</p>
+        <button onclick="toggleAnswer('hand-act-1')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2">
+          <span>🖐️ Xem hướng giải quyết</span>
+        </button>
+        <div id="hand-act-1" class="hidden mt-2 p-3 bg-white border border-orange-200 rounded text-sm text-gray-800 space-y-1">
+          <p><strong>Hướng giải quyết:</strong> Chi tiết này thể hiện quan niệm công bằng xã hội của người xưa:</p>
+          <ul class="list-disc pl-5">
+            <li>Mọi hành vi gây thiệt hại cho người lao động nghèo khổ đều phải bị trừng phạt, không ngoại lệ cho dòng dõi thần thánh.</li>
+            <li>Thể hiện ước mơ về một xã hội công minh, nơi người yếu thế được bảo vệ.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION IV: KẾT NỐI ĐỌC - VIẾT -->
+    <section class="bg-white rounded-[12px] shadow-md p-6 space-y-4">
+      <h2 class="text-2xl font-bold uppercase text-[#1e3a8a] border-b-4 border-[#1e3a8a] pb-2 flex items-center">
+        <span class="square-badge">IV</span> KẾT NỐI ĐỌC - VIẾT
+      </h2>
+      <div class="p-4 bg-teal-50 border-l-4 border-[#037859] rounded-r-lg space-y-2">
+        <p class="font-bold text-gray-900">Đề bài (Trang 14 SGK):</p>
+        <p class="italic text-gray-800">"Viết đoạn văn (khoảng 150 chữ) phân tích một chi tiết kì ảo trong một truyện thần thoại đã học hoặc tự đọc thêm."</p>
+        <button onclick="toggleAnswer('write-sample')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2">
+          <span>📝 Xem đoạn văn tham khảo</span>
+        </button>
+        <div id="write-sample" class="hidden mt-3 p-4 bg-white border border-teal-200 rounded-lg text-gray-800 leading-relaxed text-sm space-y-2">
+          <p class="font-semibold text-[#037859]">Đoạn văn tham khảo:</p>
+          <p>
+            Trong truyền thuyết "Thần Trụ Trời", chi tiết kì ảo thần tự mình vươn vai đứng dậy, đào đất đắp một cái cột vừa to vừa cao để chống trời là một sáng tạo nghệ thuật độc đáo. Chi tiết này mang dáng dấp khổng lồ hóa, vĩ đại hóa sức mạnh của vị thần khởi tạo. Cái cột chống trời không chỉ phân chia ranh giới giữa vòm trời bao la và mặt đất phẳng lặng mà còn là chiếc cầu nối giữa hai cõi. Khi vòm trời đã khô vồng, hành động phá cột ném vung đất đá ra khắp nơi giải thích một cách ngây thơ nhưng đầy sinh động sự hình thành của núi đồi, cồn cát, hòn đảo và biển cả. Chi tiết kì ảo này vừa thể hiện trí tưởng tượng phong phú, vừa phản ánh khát vọng mãnh liệt của con người thời cổ đại trong việc khám phá và chinh phục thế giới tự nhiên.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION V: GAMESHOW "AI LÀ TRIỆU PHÚ" - 10 CÂU TRẮC NGHIỆM -->
+    <section class="bg-[#0f172a] text-white rounded-[12px] shadow-2xl p-6 space-y-6 border-4 border-yellow-500">
+      <div class="text-center space-y-2 border-b-2 border-yellow-500/50 pb-4">
+        <span class="text-xs uppercase tracking-widest text-yellow-400 font-bold">🎯 TRÒ CHƠI CỦNG CỐ TRI THỨC</span>
+        <h2 class="text-3xl font-extrabold text-yellow-400 uppercase tracking-wide flex items-center justify-center gap-2">
+          💰 GAMESHOW: AI LÀ TRIỆU PHÚ
+        </h2>
+        <p class="text-sm text-slate-300">Hãy trả lời 10 câu hỏi dưới đây để chinh phục đỉnh cao tri thức thần thoại!</p>
+      </div>
+
+      <form id="quizForm" class="space-y-6">
+        
+        <!-- Câu 1 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 1: Thần thoại Việt Nam thuộc thể loại văn học nào?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q1" value="A" class="mr-2"> A. Văn học viết hiện đại
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q1" value="B" class="mr-2"> B. Văn học dân gian
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q1" value="C" class="mr-2"> C. Văn học trung đại
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q1" value="D" class="mr-2"> D. Truyện ngụ ngôn
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 2: Hành động chính của Thần Trụ Trời là gì?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q2" value="A" class="mr-2"> A. Đánh nhau với Cường Bạo Đại Vương
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q2" value="B" class="mr-2"> B. Đào đất đắp cột chống trời
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q2" value="C" class="mr-2"> C. Làm ra cây ngải gió
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q2" value="D" class="mr-2"> D. Quạt gió tạo mưa
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 3 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 3: Núi Thạch Môn còn có tên gọi dân gian nào khác?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q3" value="A" class="mr-2"> A. Núi Tản Viên
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q3" value="B" class="mr-2"> B. Cọi chống trời (Kinh Thiên Trụ)
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q3" value="C" class="mr-2"> C. Núi Trường Sơn
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q3" value="D" class="mr-2"> D. Núi Ngũ Hành
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 4 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 4: Thần Sét còn có danh hiệu là gì?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q4" value="A" class="mr-2"> A. Thiên Lôi (ông Sấm)
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q4" value="B" class="mr-2"> B. Cựu Đẩu
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q4" value="C" class="mr-2"> C. Ngọc Hoàng
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q4" value="D" class="mr-2"> D. Thần Vũ Trụ
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 5 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 5: Vũ khí thi hành luật pháp của Thần Sét là gì?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q5" value="A" class="mr-2"> A. Chiếc quạt thần
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q5" value="B" class="mr-2"> B. Mũi tên bạc
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q5" value="C" class="mr-2"> C. Lưỡi búa đá
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q5" value="D" class="mr-2"> D. Cây gậy sắt
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 6 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 6: Tại sao Thần Sét lại sợ tiếng gà gáy?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q6" value="A" class="mr-2"> A. Vì gà gáy làm lộ nơi trốn
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q6" value="B" class="mr-2"> B. Vì từng bị con gà thần mổ đau khi bị phạt
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q6" value="C" class="mr-2"> C. Vì Ngọc Hoàng quy định
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q6" value="D" class="mr-2"> D. Vì thần bị dị ứng tiếng gà
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 7 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 7: Ngoại hình của Thần Gió có điểm gì đặc biệt?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q7" value="A" class="mr-2"> A. Có nhiều tay nhiều mắt
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q7" value="B" class="mr-2"> B. Hình dạng kì quặc, không có đầu
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q7" value="C" class="mr-2"> C. Thân hình bằng lửa
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q7" value="D" class="mr-2"> D. Giống một ông lão râu tóc bạc phơ
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 8 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 8: Con của Thần Gió bị đày xuống trần gian làm nghề gì?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q8" value="A" class="mr-2"> A. Cày ruộng
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q8" value="B" class="mr-2"> B. Chăn trâu cho người mất gạo
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q8" value="C" class="mr-2"> C. Đánh cá ngoài biển
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q8" value="D" class="mr-2"> D. Đi kiếm củi trên núi
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 9 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 9: Thần thoại suy nguyên chủ yếu nhằm giải thích điều gì?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q9" value="A" class="mr-2"> A. Lịch sử chống ngoại xâm
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q9" value="B" class="mr-2"> B. Nguồn gốc vũ trụ và các hiện tượng tự nhiên
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q9" value="C" class="mr-2"> C. Quy tắc ứng xử xã hội
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q9" value="D" class="mr-2"> D. Các bài học đạo đức gia đình
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 10 -->
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+          <p class="font-bold text-yellow-300">Câu 10: Yếu tố nào làm nên sức hấp dẫn "một đi không trở lại" của thần thoại cổ đại?</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q10" value="A" class="mr-2"> A. Kĩ xảo điện ảnh chân thực
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q10" value="B" class="mr-2"> B. Niềm tin thiêng liêng vạn vật hữu linh & tư duy hồn nhiên
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q10" value="C" class="mr-2"> C. Tính chính xác khoa học cao
+            </label>
+            <label class="quiz-option flex items-center p-2 rounded bg-slate-700 cursor-pointer">
+              <input type="radio" name="q10" value="D" class="mr-2"> D. Sự phức tạp trong cốt truyện
+            </label>
+          </div>
+        </div>
+
+        <!-- Nút Nộp Bài (Màu xanh đen) -->
+        <div class="text-center pt-4">
+          <button type="button" onclick="checkQuiz()" class="px-8 py-3 bg-[#1e3a8a] hover:bg-blue-900 text-yellow-300 font-extrabold text-lg rounded-xl shadow-lg border-2 border-yellow-400 transition-all transform hover:scale-105">
+            🏆 NỘP BÀI KHÁM PHÁ
+          </button>
+        </div>
+      </form>
+
+      <!-- Khung hiển thị kết quả Trắc nghiệm -->
+      <div id="quizResult" class="hidden mt-6 p-5 rounded-xl border"></div>
+    </section>
+
+    <!-- SECTION VI: 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH -->
+    <section class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+      <h2 class="text-2xl font-bold uppercase text-[#1e3a8a] border-b-4 border-[#1e3a8a] pb-2 flex items-center">
+        <span class="square-badge">VI</span> BÀI TẬP TỰ LUẬN & TÍNH TOÁN ỨNG DỤNG
+      </h2>
+
+      <!-- Bài tự luận 1 -->
+      <div class="p-4 bg-[#edf2f7] border-l-4 border-[#1e3a8a] rounded-r-lg space-y-2">
+        <p class="font-bold text-gray-900">
+
+      <!-- Bài tự luận  -->
+      <div class="p-4 bg-[#edf2f7] border-l-4 border-[#1e3a8a] rounded-r-lg space-y-2">
+        <p class="font-bold text-gray-900"> (Phân tích So sánh Văn học):</p>
+        <p class="text-gray-800">So sánh hình tượng Thần Trụ Trời (Thần thoại Việt Nam) và thần Nữ Oa (Thần thoại Trung Quốc) trong việc lý giải nguồn gốc vũ trụ.</p>
+        <button onclick="toggleAnswer('essay-3')" class="px-4 py-2 bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold rounded-lg shadow transition-all duration-200 text-sm flex items-center gap-2">
+          <span>📖 Xem lời giải chi tiết</span>
+        </button>
+        <div id="essay-3" class="hidden mt-3 p-4 bg-[#e6fffa] border-l-4 border-[#037859] rounded-r-lg text-gray-800 space-y-2 text-sm">
+          <p><strong>Lời giải chi tiết:</strong></p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Giống nhau:</strong> Cả hai đều thể hiện tư duy suy nguyên, lý giải sự hình thành hoặc khôi phục trật tự vũ trụ (Trời - Đất); đều sử dụng các yếu tố kì ảo khổng lồ.</li>
+            <li><strong>Khác nhau:</strong> Thần Trụ Trời là thần đực, tạo dựng vòm trời và mặt đất ban đầu từ đống hỗn độn; Nữ Oa là nữ thần, luyện đá ngũ sắc vá trời cứu nhân loại sau biến cố vỡ trời. Thần thoại Việt Nam mang tính trực quan, giản dị, gần gũi với môi trường nông nghiệp.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 border-t border-gray-300 text-gray-600 font-medium text-sm">
+      Chương trình GDPT 2018 - Bộ sách thống nhất
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT FUNCTIONS -->
+  <script>
+    // Hàm ẩn/hiện lời giải
+    function toggleAnswer(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      }
+    }
+
+    // Hàm kiểm tra đáp án Trắc nghiệm Gameshow
+    function checkQuiz() {
+      const answers = {
+        q1: 'B',
+        q2: 'B',
+        q3: 'B',
+        q4: 'A',
+        q5: 'C',
+        q6: 'B',
+        q7: 'B',
+        q8: 'B',
+        q9: 'B',
+        q10: 'B'
+      };
+
+      const explanations = {
+        q1: 'Thần thoại là thể loại tự sự dân gian ra đời sớm nhất.',
+        q2: 'Thần Trụ Trời tự mình đào đất, đắp một cái cột vừa to vừa cao để chống trời.',
+        q3: 'Văn bản nêu rõ: "Sau này người hạ giới vẫn cho núi Thạch Môn... là Cọi chống trời (Kinh thiên trụ)".',
+        q4: 'Thần Sét có danh hiệu là Thiên Lôi, cũng gọi là ông Sấm.',
+        q5: 'Khi xử án, Thần Sét mang theo một lưỡi búa đá.',
+        q6: 'Thần bị phạt nằm im, thỉnh thoảng bị gà thần mổ làm thần đau và giật mình sợ hãi.',
+        q7: 'Thần Gió có hình dạng kì quặc, không có đầu.',
+        q8: 'Con Thần Gió bị đày xuống trần gian chăn trâu cho người bị mất gạo.',
+        q9: 'Thần thoại suy nguyên giải thích nguồn gốc vũ trụ và các hiện tượng tự nhiên.',
+        q10: 'Vẻ đẹp thiêng liêng xuất phát từ niềm tin vạn vật hữu linh và tâm hồn hồn nhiên thời cổ đại.'
+      };
+
+      let score = 0;
+      let total = 10;
+      let detailHtml = '<h3 class="font-bold text-lg mb-3">Kết quả chi tiết:</h3><ol class="list-decimal pl-5 space-y-2">';
+
+      for (let i = 1; i <= total; i++) {
+        const qName = 'q' + i;
+        const selected = document.querySelector(`input[name="${qName}"]:checked`);
+        const userAns = selected ? selected.value : 'Chưa chọn';
+        const correctAns = answers[qName];
+
+        if (userAns === correctAns) {
+          score++;
+          detailHtml += `<li class="text-green-300"><strong>Câu ${i}: Đúng!</strong> (${userAns}) - ${explanations[qName]}</li>`;
+        } else {
+          detailHtml += `<li class="text-red-300"><strong>Câu ${i}: Sai!</strong> Bạn chọn: <span class="underline">${userAns}</span> | Đáp án đúng: <span class="font-bold underline">${correctAns}</span>. <br><span class="text-slate-300 text-xs">${explanations[qName]}</span></li>`;
+        }
+      }
+
+      detailHtml += '</ol>';
+
+      const resultBox = document.getElementById('quizResult');
+      resultBox.classList.remove('hidden');
+
+      if (score === total) {
+        resultBox.className = "mt-6 p-5 rounded-xl border border-green-500 bg-green-950 text-green-200 space-y-3";
+        resultBox.innerHTML = `<div class="text-2xl font-bold text-green-400">🎉 XIN CHÚC MỪNG! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ TRI THỨC! (Điểm tuyệt đối: ${score}/${total})</div>` + detailHtml;
+      } else {
+        resultBox.className = "mt-6 p-5 rounded-xl border border-yellow-500 bg-slate-900 text-yellow-200 space-y-3";
+        resultBox.innerHTML = `<div class="text-xl font-bold text-yellow-400">Kết quả của bạn: ${score}/${total} câu đúng.</div>` + detailHtml;
+      }
+
+      // Scroll to result box smoothly
+      resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
