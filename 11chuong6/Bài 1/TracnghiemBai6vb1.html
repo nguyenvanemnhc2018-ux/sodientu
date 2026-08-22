@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Tác gia Nguyễn Du</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDD0',
+                        burgundy: '#663333',
+                        darkcard: '#1a0d0d',
+                        darkaccent: '#2d1414',
+                        darkborder: '#4a2424',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax setup -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background-color: #663333;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d1414;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a2424;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #663333;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+
+    <!-- HEADER BAR -->
+    <header class="bg-[#1e0a0a] border-b border-[#4a2424] px-4 py-3 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+                <div class="bg-amber-600 text-cream p-2 rounded-lg">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold text-cream uppercase tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs text-gray-300">Bài 6: Tác gia Nguyễn Du (Ngữ văn 11 - Kết nối tri thức)</p>
+                </div>
+            </div>
+            <div id="header-status-badge" class="flex items-center gap-2 bg-[#2d1414] px-3 py-1.5 rounded-full border border-[#4a2424]">
+                <span id="status-dot" class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                <span id="status-text" class="text-xs font-semibold text-gray-200">Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+        <!-- SCREEN 1: START / MODE SELECTION (Matching h1.jpg) -->
+        <section id="screen-start" class="block space-y-8 py-4">
+            <div class="text-center space-y-3">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 mb-2 border border-amber-500/30">
+                    <i class="fa-solid fa-check text-xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-cream uppercase tracking-wider">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-gray-200 max-w-2xl mx-auto text-sm md:text-base">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-bold text-amber-300">20 câu hỏi</span> bám sát nội dung bài học <span class="font-bold text-amber-300">Tác gia Nguyễn Du</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- LEVEL CARDS GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-[#2a1212]/80 border border-[#4a2424] rounded-xl p-4 shadow-md hover:border-amber-500/50 transition">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">MỨC BIẾT (8 CÂU)</span>
+                    <p class="text-xs text-gray-300">Kiểm tra các kiến thức lý thuyết có trong bài học: tiểu sử, tác phẩm, hoàn cảnh sáng tác.</p>
+                </div>
+                <div class="bg-[#2a1212]/80 border border-[#4a2424] rounded-xl p-4 shadow-md hover:border-amber-500/50 transition">
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">MỨC HIỂU (7 CÂU)</span>
+                    <p class="text-xs text-gray-300">Giải thích nội dung, nghệ thuật, tư tưởng tác phẩm và các hiện tượng ngữ văn đơn giản.</p>
+                </div>
+                <div class="bg-[#2a1212]/80 border border-[#4a2424] rounded-xl p-4 shadow-md hover:border-amber-500/50 transition">
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">VẬN DỤNG (3 CÂU)</span>
+                    <p class="text-xs text-gray-300">Phối hợp nhiều mảng kiến thức, rèn luyện tư duy phân tích tác phẩm và so sánh văn học.</p>
+                </div>
+                <div class="bg-[#2a1212]/80 border border-[#4a2424] rounded-xl p-4 shadow-md hover:border-amber-500/50 transition">
+                    <span class="text-xs font-bold text-purple-400 uppercase tracking-wider block mb-1">VD CAO (2 CÂU)</span>
+                    <p class="text-xs text-gray-300">Giải quyết các yếu tố nghệ thuật phức tạp, đánh giá tầm vóc và chiều sâu tư tưởng tác giả.</p>
+                </div>
+            </div>
+
+            <!-- MODE CHOICE CARDS -->
+            <div class="space-y-4 pt-4">
+                <h3 class="text-center text-xs uppercase tracking-widest text-cream font-bold">VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Practice Mode Card -->
+                    <div onclick="startQuiz('practice')" class="bg-[#220d0d] hover:bg-[#2d1212] border-2 border-[#4a2424] hover:border-amber-500 rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl flex flex-col justify-between group">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 flex items-center gap-2">
+                                    <span>1. Chế độ Luyện Tập</span>
+                                </h4>
+                                <span class="bg-blue-900/60 text-blue-300 text-xs px-2.5 py-1 rounded-full border border-blue-700">Không giới hạn</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Học tập & củng cố kiến thức không áp lực thời gian. Giúp học sinh bình tĩnh suy ngẫm, xem đáp án và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <button class="mt-6 w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-cream font-semibold text-sm transition shadow-lg">
+                            Bắt đầu Luyện Tập <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Timed Mode Card -->
+                    <div onclick="startQuiz('timed')" class="bg-[#220d0d] hover:bg-[#2d1212] border-2 border-[#4a2424] hover:border-amber-500 rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl flex flex-col justify-between group">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 flex items-center gap-2">
+                                    <span>2. Chế độ Tính Giờ</span>
+                                </h4>
+                                <span class="bg-amber-900/60 text-amber-300 text-xs px-2.5 py-1 rounded-full border border-amber-700">20 Phút</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án được xáo trộn ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <button class="mt-6 w-full py-2.5 rounded-xl bg-red-700 hover:bg-red-600 text-cream font-semibold text-sm transition shadow-lg">
+                            Bắt đầu Tính Giờ <i class="fa-solid fa-stopwatch ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: TESTING INTERFACE (Matching h2.jpg) -->
+        <section id="screen-quiz" class="hidden space-y-6">
+            <!-- TIMER / STATUS HEADER IN QUIZ -->
+            <div id="quiz-timer-bar" class="hidden bg-[#2d1414] border border-[#4a2424] rounded-xl p-3 flex items-center justify-between shadow-md">
+                <div class="flex items-center gap-2 text-amber-300 font-semibold text-sm">
+                    <i class="fa-solid fa-clock animate-bounce"></i>
+                    <span>Thời gian còn lại:</span>
+                </div>
+                <div id="timer-display" class="text-xl font-mono font-bold text-cream bg-[#1a0d0d] px-4 py-1 rounded-lg border border-[#4a2424]">
+                    20:00
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- LEFT SIDEBAR: QUESTION NAVIGATION MAP -->
+                <div class="lg:col-span-4 bg-[#220d0d] border border-[#4a2424] rounded-2xl p-4 h-fit space-y-4 shadow-xl">
+                    <div class="flex items-center justify-between border-b border-[#3a1a1a] pb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-cream">DANH SÁCH CÂU HỎI</span>
+                        <span id="answered-count-badge" class="text-xs bg-amber-600/30 text-amber-300 border border-amber-500/40 px-2.5 py-0.5 rounded-full font-bold">
+                            0 / 20 đã làm
+                        </span>
+                    </div>
+
+                    <!-- Question Grid 5x4 -->
+                    <div id="question-grid" class="grid grid-cols-5 gap-2">
+                        <!-- Dynamic Buttons -->
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="space-y-1.5 pt-2 text-xs text-gray-300 border-t border-[#3a1a1a]">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-[#331818] border border-gray-600 inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-amber-600 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-blue-600 border-2 border-white inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit Test Button -->
+                    <button onclick="confirmSubmit()" class="w-full mt-4 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Nộp Bài & Kết Thúc
+                    </button>
+                </div>
+
+                <!-- RIGHT MAIN: QUESTION ITEM -->
+                <div class="lg:col-span-8 bg-[#220d0d] border border-[#4a2424] rounded-2xl p-6 flex flex-col justify-between shadow-xl min-h-[480px]">
+                    <div class="space-y-6">
+                        <!-- Question Header -->
+                        <div class="flex items-center justify-between border-b border-[#3a1a1a] pb-3">
+                            <h3 class="text-lg font-bold text-cream flex items-center gap-2">
+                                <span id="current-question-num">Câu 1 / 20</span>
+                            </h3>
+                            <span id="current-question-level" class="text-xs px-2.5 py-1 rounded-full font-semibold bg-blue-900/60 text-blue-300 border border-blue-700">
+                                Mức Biết
+                            </span>
+                        </div>
+
+                        <!-- Question Content -->
+                        <div id="question-text" class="text-base md:text-lg font-medium text-white leading-relaxed">
+                            <!-- Question text populated by JS -->
+                        </div>
+
+                        <!-- Options List -->
+                        <div id="options-container" class="space-y-3">
+                            <!-- Options populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Actions -->
+                    <div class="flex items-center justify-between border-t border-[#3a1a1a] pt-4 mt-6">
+                        <button id="btn-prev" onclick="navigateQuestion(-1)" class="px-4 py-2 bg-[#331818] hover:bg-[#4a2424] text-gray-200 text-sm font-semibold rounded-xl transition disabled:opacity-40 disabled:cursor-not-allowed">
+                            <i class="fa-solid fa-chevron-left mr-1"></i> Câu Trước
+                        </button>
+
+                        <button onclick="clearCurrentSelection()" class="text-xs text-gray-400 hover:text-amber-300 underline transition">
+                            Xóa lựa chọn câu này
+                        </button>
+
+                        <button id="btn-next" onclick="navigateQuestion(1)" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-cream font-bold text-sm rounded-xl transition shadow-md">
+                            Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & EXPLANATIONS (Matching h3.jpg) -->
+        <section id="screen-results" class="hidden space-y-8">
+            <!-- RESULT SUMMARY CARD -->
+            <div class="bg-[#220d0d] border border-[#4a2424] rounded-2xl p-6 md:p-8 max-w-3xl mx-auto shadow-2xl space-y-6 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                    <i class="fa-solid fa-trophy text-3xl"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-cream uppercase tracking-wide">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-subtitle" class="text-xs text-gray-400 uppercase mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                    <div class="bg-[#1a0d0d] border border-[#3a1a1a] p-4 rounded-xl">
+                        <span class="text-xs text-gray-400 block mb-1">Điểm số</span>
+                        <span id="score-val" class="text-3xl font-black text-amber-400">0.0</span>
+                        <span class="text-xs text-gray-400"> / 10.0</span>
+                    </div>
+                    <div class="bg-[#1a0d0d] border border-[#3a1a1a] p-4 rounded-xl">
+                        <span class="text-xs text-gray-400 block mb-1">Số câu đúng</span>
+                        <span id="correct-count-val" class="text-3xl font-black text-emerald-400">0</span>
+                        <span class="text-xs text-gray-400"> / 20 câu</span>
+                    </div>
+                    <div class="bg-[#1a0d0d] border border-[#3a1a1a] p-4 rounded-xl">
+                        <span class="text-xs text-gray-400 block mb-1">Thời gian làm bài</span>
+                        <span id="time-spent-val" class="text-xl font-bold text-cream block mt-1">--</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Evaluation Box -->
+                <div class="bg-[#2a1616] border border-amber-500/30 rounded-xl p-4 text-left space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacher-feedback-text" class="text-xs md:text-sm text-gray-200 leading-relaxed">
+                        <!-- Dynamic feedback -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    <button onclick="resetApp()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-cream font-bold text-sm transition shadow-lg">
+                        <i class="fa-solid fa-rotate-right mr-2"></i> Làm lại bài kiểm tra
+                    </button>
+                    <a href="#detailed-explanations" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#331818] hover:bg-[#4a2424] text-gray-200 font-semibold text-sm transition border border-[#4a2424]">
+                        <i class="fa-solid fa-list-check mr-2"></i> Xem đáp án & Lời giải
+                    </a>
+                </div>
+            </div>
+
+            <!-- DETAILED EXPLANATIONS SECTION -->
+            <div id="detailed-explanations" class="space-y-6 pt-6 max-w-4xl mx-auto">
+                <div class="flex items-center justify-between border-b border-[#4a2424] pb-3">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-amber-400"></i>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-gray-400">20/20 câu hỏi</span>
+                </div>
+
+                <div id="explanations-container" class="space-y-6">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1a0d0d] border-t border-[#4a2424] py-4 text-center text-xs text-gray-400 mt-8">
+        <p>© 2026 Ôn Luyện Củng Cố Kiến Thức Ngữ Văn 11 - Bài 6: Tác gia Nguyễn Du</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // QUESTION BANK (STRICTLY FROM Bai6vb1.pdf)
+        // 20 Questions: 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao
+        const rawQuestionBank = [
+            // --- MỨC BIẾT (8 câu) ---
+            {
+                id: 1,
+                level: "Biết",
+                question: "Nguyễn Du (1765 - 1820), tên chữ là Tố Như, hiệu là Thanh Hiên, có quê gốc ở đâu?",
+                options: [
+                    "Làng Tiên Điền, huyện Nghi Xuân, tỉnh Hà Tĩnh",
+                    "Làng Hoa Thiều, huyện Đông Ngàn, tỉnh Bắc Ninh",
+                    "Huyện Nghi Xuân, thành phố Hà Nội",
+                    "Xứ Kinh Bắc, tỉnh Hà Tĩnh"
+                ],
+                correctIndex: 0,
+                rationale: "SGK nêu rõ quê gốc của Nguyễn Du ở làng Tiên Điền, huyện Nghi Xuân, tỉnh Hà Tĩnh. Làng Hoa Thiều, Kinh Bắc là quê ngoại của ông."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                question: "Thân phụ Nguyễn Du là Nguyễn Nghiễm từng giữ chức vụ gì trong triều Lê?",
+                options: [
+                    "Tham tụng",
+                    "Bồi tụng",
+                    "Chánh sứ",
+                    "Tể tướng"
+                ],
+                correctIndex: 0,
+                rationale: "Theo chú thích trong tài liệu, thân phụ ông là Nguyễn Nghiễm đỗ tiến sĩ năm 1731 và từng giữ chức Tham tụng trong triều Lê (chức quan kiêm nhiệm công việc giống Tể tướng)."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                question: "Ba tập thơ chữ Hán còn lưu giữ được của Nguyễn Du gồm những tập nào?",
+                options: [
+                    "Thanh Hiên thi tập, Nam trung tạp ngâm, Bắc hành tạp lục",
+                    "Thanh Hiên thi tập, Đoạn trường tân thanh, Bắc hành tạp lục",
+                    "Nam trung tạp ngâm, Văn chiêu hồn, Bắc hành tạp lục",
+                    "Thanh Hiên thi tập, Nam trung tạp ngâm, Thác lời trai phường nón"
+                ],
+                correctIndex: 0,
+                rationale: "Ba tập thơ chữ Hán của Nguyễn Du gồm: Thanh Hiên thi tập (78 bài), Nam trung tạp ngâm (40 bài) và Bắc hành tạp lục (132 bài)."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                question: "Tác phẩm nào của Nguyễn Du được viết bằng chữ Nôm theo thể thơ song thất lục bát?",
+                options: [
+                    "Văn tế thập loại chúng sinh",
+                    "Truyện Kiều",
+                    "Thác lời trai phường nón",
+                    "Văn tế sống hai cô gái Trường Lưu"
+                ],
+                correctIndex: 0,
+                rationale: "Văn tế thập loại chúng sinh (Văn chiêu hồn) viết bằng chữ Nôm theo thể thơ song thất lục bát. Truyện Kiều và Thác lời trai phường nón viết bằng thể lục bát."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                question: "Nguồn gốc cốt truyện của Truyện Kiều được Nguyễn Du tiếp thu từ tác phẩm nào của Trung Quốc?",
+                options: [
+                    "Kim Vân Kiều truyện của Thanh Tâm Tài Nhân",
+                    "Truyện Kiều của Mộng Liên Đường chủ nhân",
+                    "Bắc hành tạp lục của Khuất Nguyên",
+                    "Đoạn trường tân thanh của Thanh Tâm Tài Nhân"
+                ],
+                correctIndex: 0,
+                rationale: "Tài liệu khẳng định Sáng tác Truyện Kiều, Nguyễn Du đã tiếp thu đề tài, cốt truyện từ Kim Vân Kiều truyện của Thanh Tâm Tài Nhân (Trung Quốc)."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                question: "Truyện Kiều của Nguyễn Du được viết theo thể loại và quy mô như thế nào?",
+                options: [
+                    "Truyện thơ Nôm, thể lục bát, gồm 3 254 câu",
+                    "Truyện thơ Nôm, thể song thất lục bát, gồm 3 254 câu",
+                    "Tập thơ chữ Hán, thể lục bát, gồm 3 254 câu",
+                    "Truyện thơ Nôm, thể tự do, gồm 3 254 câu"
+                ],
+                correctIndex: 0,
+                rationale: "Truyện Kiều được viết theo hình thức truyện thơ Nôm, thể lục bát, gồm 3 254 câu thơ."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                question: "Tháng 10 năm 2013, tổ chức nào đã vinh danh Nguyễn Du là Danh nhân văn hóa của nhân loại?",
+                options: [
+                    "UNESCO",
+                    "UNICEF",
+                    "WHO",
+                    "WWF"
+                ],
+                correctIndex: 0,
+                rationale: "Vào tháng 10 năm 2013, Tổ chức Giáo dục, Khoa học và Văn hóa Liên hợp quốc (UNESCO) vinh danh Nguyễn Du là Danh nhân văn hóa của nhân loại."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                question: "Theo phần Tri thức ngữ văn, biện pháp tu từ lặp cấu trúc có tác dụng chủ yếu nào?",
+                options: [
+                    "Nhấn mạnh nội dung, tạo nhịp điệu và tăng tính nhạc",
+                    "Tạo vẻ đẹp cân xứng và đối lập giữa các hình ảnh",
+                    "Giải thích nghĩa của từ ngữ và mở rộng câu",
+                    "Tạo sự gay cấn và kịch tính cho cốt truyện"
+                ],
+                correctIndex: 0,
+                rationale: "Tri thức ngữ văn nêu rõ: Lặp cấu trúc nhằm nhấn mạnh nội dung cần biểu đạt, tạo nhịp điệu và tăng tính nhạc cho lời văn."
+            },
+
+            // --- MỨC HIỂU (7 câu) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                question: "Tập thơ Thanh Hiên thi tập phản ánh nội dung cảm xúc chủ đạo nào của Nguyễn Du?",
+                options: [
+                    "Nỗi đau bi kịch cá nhân và đồng cảm với thời đại tan hoang",
+                    "Nỗi chán nản chốn quan trường và khát vọng từ quan",
+                    "Niềm thương xót cho các nhân vật lịch sử Trung Quốc",
+                    "Cảm xúc trẻ trung, lãng mạn và tinh nghịch của tuổi trẻ"
+                ],
+                correctIndex: 0,
+                rationale: "Thanh Hiên thi tập được sáng tác trong những năm tháng bi thương nhất của cuộc đời tác giả, chất chứa bi kịch cá nhân và sự đồng cảm sâu sắc với nỗi đau chung của một thời đại đổ vỡ."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                question: "Tâm sự bao trùm của Nguyễn Du trong tập thơ Nam trung tạp ngâm khi ra làm quan cho nhà Nguyễn là gì?",
+                options: [
+                    "Chán nản chốn quan trường, khao khát về sống ẩn dật nơi quê nhà",
+                    "Hào hứng phụng sự triều đại mới và lập công danh",
+                    "Ca ngợi vẻ đẹp tráng lệ của các lâu đài, đền đài chốn đô thành",
+                    "Phê phán sâu sắc các hành vi kiêu binh nổi loạn"
+                ],
+                correctIndex: 0,
+                rationale: "Trong Nam trung tạp ngâm, nhà thơ luôn bày tỏ nỗi chán nản, thất vọng về chốn quan trường và niềm khao khát được từ quan, về sống ẩn dật nơi quê nhà."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                question: "Thái độ của Nguyễn Du thể hiện như thế nào khi đối diện với quá khứ và hiện tại Trung Quốc trong Bắc hành tạp lục?",
+                options: [
+                    "Mang tính đối thoại và tinh thần phản biện sắc sảo",
+                    "Sùng bái và ngợi ca tuyệt đối xã hội phong kiến Trung Hoa",
+                    "Chỉ tập trung miêu tả sự xa hoa của đền đài, cung điện",
+                    "Thờ ơ với những kiếp người khốn cùng trên đường đi sứ"
+                ],
+                correctIndex: 0,
+                rationale: "Tài liệu ghi rõ: Nguyễn Du luôn thể hiện cái nhìn mang tính đối thoại và tinh thần phản biện, chỉ ra sự tương phản giữa những điều 'nghe nói' và 'trông thấy'."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                question: "Điểm sáng tạo độc đáo trong mô hình kết thúc Truyện Kiều so với các truyện thơ Nôm truyền thống là gì?",
+                options: [
+                    "Đoạn kết không viên mãn trọn vẹn để tôn trọng logic hiện thực",
+                    "Xây dựng đoạn kết có hậu theo kiểu kết hôn viên mãn",
+                    "Trừng phạt tất cả các nhân vật mà không có sự báo ân",
+                    "Cho nhân vật chính quy y hoàn toàn không trở về gia đình"
+                ],
+                correctIndex: 0,
+                rationale: "Sáng tạo độc đáo ở đoạn kết Truyện Kiều là không viên mãn như các truyện thơ Nôm khác, vì sau đoàn tụ các nhân vật không có hạnh phúc trọn vẹn, phù hợp với logic hiện thực."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                question: "Khát vọng tình yêu tự do trong Truyện Kiều được Nguyễn Du thể hiện tập trung qua hình ảnh/hành động nào?",
+                options: [
+                    "Thúy Kiều 'Xăm xăm băng lối vườn khuya một mình' đến với Kim Trọng",
+                    "Thúy Kiều hy sinh bản thân bán mình cứu cha và em",
+                    "Thúy Kiều trao duyên lại cho em gái Thúy Vân",
+                    "Thúy Kiều lập bàn thờ cầu siêu cho các linh hồn bất hạnh"
+                ],
+                correctIndex: 0,
+                rationale: "Nguyễn Du dám để người thiếu nữ 'Xăm xăm băng lối vườn khuya một mình' đi theo tiếng gọi con tim, khẳng định tình yêu tự do vượt qua khuôn phép khắt khe."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                question: "Đóng góp nghệ thuật lớn nhất của Nguyễn Du cho thể loại truyện thơ Nôm trong việc xây dựng nhân vật là gì?",
+                options: [
+                    "Khắc họa thành công thế giới nội tâm 'con người bên trong'",
+                    "Giữ nguyên 100% ngoại hình nhân vật từ tác phẩm gốc",
+                    "Xây dựng nhân vật chỉ mang tính ước lệ, một chiều",
+                    "Sử dụng hoàn toàn ngôn ngữ bác học, bác bỏ ca dao"
+                ],
+                correctIndex: 0,
+                rationale: "Đóng góp nghệ thuật lớn nhất của ông là tài nghệ khắc họa 'con người bên trong' nhân vật, khám phá thế giới nội tâm phong phú, bí ẩn và diễn biến tâm lý phức tạp."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                question: "Phân biệt sự khác nhau căn bản giữa biện pháp lặp cấu trúc và biện pháp đối theo tài liệu?",
+                options: [
+                    "Đối đòi hỏi từ ngữ sóng đôi tạo tương đồng/tương phản, lặp cấu trúc dùng cụm/câu cùng kiểu",
+                    "Lặp cấu trúc chỉ dùng trong thơ, biện pháp đối chỉ dùng trong văn xôi",
+                    "Đối dùng để miêu tả thiên nhiên, lặp cấu trúc dùng để miêu tả nhân vật",
+                    "Cả hai biện pháp đều không tạo nhịp điệu cho lời văn"
+                ],
+                correctIndex: 0,
+                rationale: "Biện pháp đối sử dụng từ ngữ cùng từ loại hoặc câu cùng cấu trúc sóng đôi nhằm nhấn mạnh sự tương đồng/tương phản; còn lặp cấu trúc sử dụng câu/cụm từ cùng kiểu để nhấn mạnh và tạo nhịp điệu."
+            },
+
+            // --- MỨC VẬN DỤNG (3 câu) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                question: "Vì sao Nguyễn Du đã biến đổi diện mạo và tính cách các nhân vật trong Kim Vân Kiều truyện khi viết Truyện Kiều?",
+                options: [
+                    "Phù hợp với chủ đề mới, bản sắc văn hóa và tâm hồn dân tộc Việt Nam",
+                    "Do ông không nhớ rõ nguyên tác của Thanh Tâm Tài Nhân",
+                    "Nhằm kéo dài dung lượng câu thơ cho tác phẩm kiệt tác",
+                    "Để làm giảm bớt tính bi kịch trong cuộc đời Thúy Kiều"
+                ],
+                correctIndex: 0,
+                rationale: "Tài liệu phân tích: Tính cách các nhân vật đều được thay đổi để phù hợp với chủ đề mới, với bản sắc văn hóa và tâm hồn dân tộc Việt Nam, mang lại chiều sâu bi kịch riêng."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                question: "Việc Nguyễn Du 'bỏ qua' các lâu đài tráng lệ để xót thương mẹ con người ăn mày trong Bắc hành tạp lục thể hiện điều gì?",
+                options: [
+                    "Chiều sâu tâm hồn, bản lĩnh và tầm vóc nhân cách văn hóa lớn",
+                    "Sự chán ghét kiến trúc cổ đại của Trung Quốc",
+                    "Thói quen sinh hoạt bình dân của nhà thơ",
+                    "Thái độ xa rời thực tế đời sống xã hội đương thời"
+                ],
+                correctIndex: 0,
+                rationale: "Sự đồng cảm vượt qua khoảng cách địa lý với những kiếp người bé nhỏ, khốn cùng khẳng định chiều sâu tâm hồn, bản lĩnh và tầm vóc của một nhân cách văn hóa lớn."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                question: "Nghệ thuật 'tả cảnh ngụ tình' trong Truyện Kiều được thể hiện qua mối quan hệ nào giữa thiên nhiên và nhân vật?",
+                options: [
+                    "Hình tượng thiên nhiên thành tấm gương phản chiếu tâm trạng con người",
+                    "Thiên nhiên chỉ đóng vai trò trang trí phông nền cho câu chuyện",
+                    "Cảnh thiên nhiên luôn đối lập hoàn toàn với cảm xúc nhân vật",
+                    "Thiên nhiên triệt tiêu hoàn toàn nội tâm của nhân vật"
+                ],
+                correctIndex: 0,
+                rationale: "Nguyễn Du biến hình tượng thiên nhiên thành tấm gương phản chiếu những rung động tinh tế, phức tạp của lòng người (mẫu mực cổ điển của tả cảnh ngụ tình)."
+            },
+
+            // --- MỨC VẬN DỤNG CAO (2 câu) ---
+            {
+                id: 19,
+                level: "VD Cao",
+                question: "Tư tưởng nhân đạo của Nguyễn Du đạt tới chiều sâu mới mẻ qua việc xây dựng nhân vật Thúy Kiều như thế nào?",
+                options: [
+                    "Trân trọng con người toàn diện, khẳng định ý thức phẩm giá và tinh thần phản kháng",
+                    "Tuyệt đối hóa số phận bi kịch khiến nhân vật buông xuôi tha hóa",
+                    "Chỉ đề cao tài năng nghệ thuật mà coi nhẹ đạo đức nhân phẩm",
+                    "Đặt nhân vật đứng ngoài mọi biến cố lịch sử phong kiến"
+                ],
+                correctIndex: 0,
+                rationale: "Tư tưởng nhân đạo sâu sắc thể hiện ở chỗ: Nguyễn Du trân trọng con người toàn diện (tâm hồn, thể xác), và dù rơi vào cảnh đọa tày, Thúy Kiều vẫn không mất ý thức phẩm giá và tinh thần phản kháng."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                question: "Hành trình vận động tư tưởng nghệ thuật của Nguyễn Du qua các sáng tác được khái quát theo quy luật nào?",
+                options: [
+                    "Từ hiểu mình, thương mình đến thấu hiểu con người và thương đời",
+                    "Từ thương đời rộng lớn sau đó thu hẹp về bi kịch cá nhân",
+                    "Từ tư tưởng hoài cổ triều Lê chuyển sang sùng bái triều Nguyễn",
+                    "Từ sáng tác chữ Nôm bình dân tiến đến sáng tác chữ Hán bác học"
+                ],
+                correctIndex: 0,
+                rationale: "Tài liệu đính kèm đúc kết: Đó là hành trình đi từ hiểu mình, thương mình đến thấu hiểu con người và thương đời. Nhịp đập trái tim Tố Như hòa cùng mạch sống của nhân loại khổ đau."
+            }
+        ];
+
+        // STATE VARIABLES
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let activeQuestions = [];
+        let userAnswers = {}; // { questionId: optionIndex }
+        let currentQuestionIdx = 0;
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 mins in seconds
+        let timeSpentSeconds = 0;
+
+        // INITIALIZATION
+        window.addEventListener('DOMContentLoaded', () => {
+            // Setup initial UI states
+        });
+
+        // UTILITY: Shuffle Array (Fisher-Yates) for Timed Mode
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            timeSpentSeconds = 0;
+
+            if (mode === 'timed') {
+                // Shuffle questions and options for Timed mode to prevent cheating
+                activeQuestions = shuffleArray(rawQuestionBank).map(q => {
+                    // Create shuffled options with tracking
+                    let optsWithOrigIndex = q.options.map((optText, idx) => ({
+                        text: optText,
+                        isCorrect: idx === q.correctIndex
+                    }));
+                    let shuffledOpts = shuffleArray(optsWithOrigIndex);
+                    let newCorrectIdx = shuffledOpts.findIndex(o => o.isCorrect);
+
+                    return {
+                        ...q,
+                        options: shuffledOpts.map(o => o.text),
+                        correctIndex: newCorrectIdx
+                    };
+                });
+
+                timeRemaining = 20 * 60;
+                startTimer();
+                document.getElementById('quiz-timer-bar').classList.remove('hidden');
+                document.getElementById('status-text').innerText = 'Chế độ TÍNH GIỜ (20 Phút)';
+            } else {
+                // Practice Mode: Keep standard structure
+                activeQuestions = JSON.parse(JSON.stringify(rawQuestionBank));
+                document.getElementById('quiz-timer-bar').classList.add('hidden');
+                document.getElementById('status-text').innerText = 'Chế độ LUYỆN TẬP';
+            }
+
+            // Switch screens
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-results').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            renderQuestionGrid();
+            loadQuestion(currentQuestionIdx);
+        }
+
+        // TIMER LOGIC
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                timeSpentSeconds++;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút làm bài! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(timeRemaining / 60);
+            const secs = timeRemaining % 60;
+            document.getElementById('timer-display').innerText = 
+                `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // RENDER SIDEBAR QUESTION GRID
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('question-grid');
+            gridContainer.innerHTML = '';
+
+            activeQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.className = getGridBtnClass(idx);
+                btn.innerText = idx + 1;
+                btn.onclick = () => {
+                    currentQuestionIdx = idx;
+                    loadQuestion(idx);
+                };
+                gridContainer.appendChild(btn);
+            });
+
+            updateAnsweredCountBadge();
+        }
+
+        function getGridBtnClass(idx) {
+            const isAnswered = userAnswers[activeQuestions[idx].id] !== undefined;
+            const isCurrent = idx === currentQuestionIdx;
+
+            let base = "h-10 w-full rounded-lg font-bold text-xs transition flex items-center justify-center border ";
+
+            if (isCurrent) {
+                return base + "bg-blue-600 border-white text-white shadow-lg ring-2 ring-blue-400";
+            } else if (isAnswered) {
+                return base + "bg-amber-600 border-amber-500 text-cream";
+            } else {
+                return base + "bg-[#2d1414] border-[#4a2424] text-gray-300 hover:bg-[#3d1a1a]";
+            }
+        }
+
+        function updateAnsweredCountBadge() {
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('answered-count-badge').innerText = `${answeredCount} / 20 đã làm`;
+        }
+
+        // LOAD QUESTION CONTENT
+        function loadQuestion(idx) {
+            const q = activeQuestions[idx];
+
+            document.getElementById('current-question-num').innerText = `Câu ${idx + 1} / 20`;
+            
+            // Level badge color
+            const levelBadge = document.getElementById('current-question-level');
+            levelBadge.innerText = `Mức ${q.level}`;
+            if (q.level === 'Biết') levelBadge.className = "text-xs px-2.5 py-1 rounded-full font-semibold bg-blue-900/60 text-blue-300 border border-blue-700";
+            else if (q.level === 'Hiểu') levelBadge.className = "text-xs px-2.5 py-1 rounded-full font-semibold bg-emerald-900/60 text-emerald-300 border border-emerald-700";
+            else if (q.level === 'Vận dụng') levelBadge.className = "text-xs px-2.5 py-1 rounded-full font-semibold bg-amber-900/60 text-amber-300 border border-amber-700";
+            else levelBadge.className = "text-xs px-2.5 py-1 rounded-full font-semibold bg-purple-900/60 text-purple-300 border border-purple-700";
+
+            document.getElementById('question-text').innerText = q.question;
+
+            // Render Options
+            const optsContainer = document.getElementById('options-container');
+            optsContainer.innerHTML = '';
+
+            const selectedOpt = userAnswers[q.id];
+
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = selectedOpt === optIdx;
+                const optLetter = String.fromCharCode(65 + optIdx); // A, B, C, D
+
+                const card = document.createElement('div');
+                card.onclick = () => selectOption(q.id, optIdx);
+                card.className = `p-4 rounded-xl border-2 cursor-pointer transition flex items-start gap-3 ${
+                    isSelected 
+                        ? 'bg-amber-900/40 border-amber-500 shadow-md' 
+                        : 'bg-[#1a0d0d] border-[#3a1a1a] hover:border-[#5a2a2a]'
+                }`;
+
+                card.innerHTML = `
+                    <span class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
+                        isSelected ? 'bg-amber-500 text-black' : 'bg-[#2d1414] text-gray-300 border border-[#4a2424]'
+                    }">${optLetter}</span>
+                    <span class="text-sm text-gray-100 mt-0.5 leading-relaxed">${optText}</span>
+                `;
+                optsContainer.appendChild(card);
+            });
+
+            // Update Nav Buttons
+            document.getElementById('btn-prev').disabled = idx === 0;
+            document.getElementById('btn-next').disabled = idx === activeQuestions.length - 1;
+
+            // Refresh Grid styling
+            activeQuestions.forEach((_, i) => {
+                const btn = document.getElementById(`grid-btn-${i}`);
+                if (btn) btn.className = getGridBtnClass(i);
+            });
+
+            // Re-render MathJax
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // SELECT OPTION
+        function selectOption(questionId, optionIdx) {
+            userAnswers[questionId] = optionIdx;
+            updateAnsweredCountBadge();
+            loadQuestion(currentQuestionIdx);
+        }
+
+        // CLEAR SELECTION
+        function clearCurrentSelection() {
+            const qId = activeQuestions[currentQuestionIdx].id;
+            delete userAnswers[qId];
+            updateAnsweredCountBadge();
+            loadQuestion(currentQuestionIdx);
+        }
+
+        // NAVIGATE QUESTION
+        function navigateQuestion(step) {
+            const newIdx = currentQuestionIdx + step;
+            if (newIdx >= 0 && newIdx < activeQuestions.length) {
+                currentQuestionIdx = newIdx;
+                loadQuestion(currentQuestionIdx);
+            }
+        }
+
+        // SUBMIT CONFIRMATION
+        function confirmSubmit() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount < 20) {
+                if (confirm(`Bạn mới trả lời ${answeredCount}/20 câu. Bạn có chắc chắn muốn nộp bài sớm không?`)) {
+                    submitQuiz();
+                }
+            } else {
+                if (confirm("Bạn có chắc chắn muốn kết thúc bài kiểm tra và nộp bài?")) {
+                    submitQuiz();
+                }
+            }
+        }
+
+        // SUBMIT QUIZ & CALCULATE RESULTS
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            activeQuestions.forEach(q => {
+                if (userAnswers[q.id] === q.correctIndex) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / 20) * 10;
+
+            // Render Results Screen
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-results').classList.remove('hidden');
+
+            document.getElementById('score-val').innerText = score.toFixed(1);
+            document.getElementById('correct-count-val').innerText = correctCount;
+            document.getElementById('result-mode-subtitle').innerText = 
+                currentMode === 'timed' ? 'Chế độ TÍNH GIỜ (20 Phút)' : 'Chế độ LUYỆN TẬP';
+
+            if (currentMode === 'timed') {
+                const minsSpent = Math.floor(timeSpentSeconds / 60);
+                const secsSpent = timeSpentSeconds % 60;
+                document.getElementById('time-spent-val').innerText = `${minsSpent} phút ${secsSpent} giây`;
+            } else {
+                document.getElementById('time-spent-val').innerText = 'Không giới hạn';
+            }
+
+            // Teacher Feedback logic
+            let feedback = "";
+            if (score >= 9.0) {
+                feedback = "Xuất sắc! Em đã nắm vững toàn bộ kiến thức sâu rộng về tác gia Nguyễn Du từ tiểu sử, sự nghiệp thơ chữ Hán, chữ Nôm đến các giá trị tư tưởng và nghệ thuật vượt thời đại. Hãy tiếp tục phát huy tư duy phân tích xuất sắc này nhé!";
+            } else if (score >= 7.0) {
+                feedback = "Kết quả rất tốt! Em đã hiểu rõ hầu hết các nội dung trọng tâm trong SGK về Nguyễn Du và Truyện Kiều. Cần lưu ý xem kỹ hơn lời giải ở các câu vận dụng phân tích nghệ thuật để đạt điểm tối đa.";
+            } else if (score >= 5.0) {
+                feedback = "Đạt yêu cầu! Em đã nhớ được các kiến thức cơ bản ở mức độ Biết. Tuy nhiên, ở các câu hỏi Thông hiểu và Vận dụng sâu về tư tưởng nhân đạo cũng như các tập thơ chữ Hán, em còn lúng túng. Hãy đọc lại kỹ lời giải bên dưới.";
+            } else {
+                feedback = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết Bài 6: Tác gia Nguyễn Du trong SGK. Hãy đọc lại kĩ từng trang tài liệu và xem lại giải thích chi tiết bên dưới để củng cố kiến thức nhé!";
+            }
+            document.getElementById('teacher-feedback-text').innerText = feedback;
+
+            // Render Explanations
+            renderExplanations();
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // RENDER EXPLANATIONS
+        function renderExplanations() {
+            const container = document.getElementById('explanations-container');
+            container.innerHTML = '';
+
+            activeQuestions.forEach((q, idx) => {
+                const userChoice = userAnswers[q.id];
+                const isCorrect = userChoice === q.correctIndex;
+
+                const qCard = document.createElement('div');
+                qCard.className = "bg-[#220d0d] border border-[#4a2424] rounded-2xl p-5 space-y-4 shadow-lg";
+
+                let statusBadge = isCorrect
+                    ? `<span class="bg-emerald-900/80 text-emerald-300 border border-emerald-600 text-xs px-2.5 py-1 rounded-full font-bold"><i class="fa-solid fa-check mr-1"></i> Đúng</span>`
+                    : `<span class="bg-red-900/80 text-red-300 border border-red-600 text-xs px-2.5 py-1 rounded-full font-bold"><i class="fa-solid fa-xmark mr-1"></i> ${userChoice === undefined ? 'Bỏ trống' : 'Sai'}</span>`;
+
+                let optionsHTML = '';
+                q.options.forEach((optText, oIdx) => {
+                    const optLetter = String.fromCharCode(65 + oIdx);
+                    const isThisCorrect = oIdx === q.correctIndex;
+                    const isThisUserChoice = oIdx === userChoice;
+
+                    let optStyle = "bg-[#1a0d0d] border-[#3a1a1a] text-gray-300";
+                    let iconHtml = '';
+
+                    if (isThisCorrect) {
+                        optStyle = "bg-emerald-950/60 border-emerald-600 text-emerald-200 font-semibold";
+                        iconHtml = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    } else if (isThisUserChoice && !isCorrect) {
+                        optStyle = "bg-red-950/60 border-red-600 text-red-200 line-through opacity-80";
+                        iconHtml = `<i class="fa-solid fa-circle-xmark text-red-400 ml-auto"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3 rounded-xl border text-xs md:text-sm flex items-center gap-3 ${optStyle}">
+                            <span class="font-bold">${optLetter}.</span>
+                            <span class="leading-relaxed flex-grow">${optText}</span>
+                            ${iconHtml}
+                        </div>
+                    `;
+                });
+
+                qCard.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-[#3a1a1a] pb-2">
+                        <span class="font-bold text-cream text-sm">Câu ${idx + 1} <span class="text-xs text-amber-400 font-normal">(${q.level})</span></span>
+                        ${statusBadge}
+                    </div>
+                    <p class="text-sm md:text-base font-medium text-white">${q.question}</p>
+                    <div class="space-y-2 pt-1">
+                        ${optionsHTML}
+                    </div>
+                    <div class="bg-[#180909] border border-amber-500/20 rounded-xl p-3 text-xs text-gray-300 space-y-1">
+                        <div class="text-amber-300 font-bold flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb"></i> Lời giải chi tiết:
+                        </div>
+                        <p class="leading-relaxed pl-5">${q.rationale}</p>
+                    </div>
+                `;
+
+                container.appendChild(qCard);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // RESET APP TO START SCREEN
+        function resetApp() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('screen-results').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            document.getElementById('status-text').innerText = 'Chưa chọn chế độ';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
