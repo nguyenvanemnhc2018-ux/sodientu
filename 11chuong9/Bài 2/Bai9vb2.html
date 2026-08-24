@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Chosen Palette: Palette based on custom request: Header Color 1 (#1E3A8A), Header Color 2 (#2563EB), Accent/Button Color (#33FF33), Body Background (#f4f7f9) -->
+    <!-- Application Structure Plan: The single-page application is structured into a cohesive educational layout. It begins with a dual-colored Header Block (#1E3A8A and #2563EB) and Intro Box for initial context. The core content is systematically divided into numbered Roman sections (I, II, III), with subsections marked in circled numbers. Each section covers specific thematic content from Nguyễn Đình Chiểu's "Văn tế nghĩa sĩ Cần Giuộc" (Author & Work, Analysis of Text, Summary). Content components include styled Callout boxes ('Em có biết', 'Em có thể', 'Lưu ý'), interactive question/activity boxes with JS toggle answers, responsive comparison tables, a 10-question "Ai là triệu phú" gamified quiz with instant evaluation, and 3 calculated/analytic essay questions with toggleable solutions. -->
+    <!-- Visualization & Content Choices: HTML Table for contrasting weapons/forces (No SVG/Mermaid used). Styled Tailwind containers for content presentation. Interactive JS for toggling solutions and checking quiz answers. MathJax integrated for mathematical and chemical notation rendering. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lựa chọn và hành động - Văn tế nghĩa sĩ Cần Giuộc</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax with Chemistry support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .section-underline {
+            border-bottom: 3px solid #1e293b;
+        }
+        .millionaire-option:hover {
+            background-color: #fde047;
+            color: #1e1b4b;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Container Chính -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+            <!-- Khối 1: Tên Chương (Màu 1: #1E3A8A) -->
+            <div class="bg-[#1E3A8A] text-white py-3 px-6 text-center font-bold text-lg md:text-xl tracking-wide uppercase">
+                CHƯƠNG: LỰA CHỌN VÀ HÀNH ĐỘNG
+            </div>
+            <!-- Đường kẻ mảnh phân cách -->
+            <div class="h-[1px] bg-blue-300"></div>
+            <!-- Khối 2: Tên Bài (Màu 2: #2563EB) -->
+            <div class="bg-[#2563EB] text-white py-4 px-6 text-center font-extrabold text-xl md:text-2xl tracking-wider uppercase">
+                BÀI: VĂN TẾ NGHĨA SĨ CẦN GIUỘC
+                <div class="text-sm font-normal normal-case mt-1 italic text-blue-100">- Nguyễn Đình Chiểu -</div>
+            </div>
+        </div>
+
+        <!-- LỜI DẪN (INTRO BOX) -->
+        <div class="bg-white border border-black rounded-xl p-5 shadow-sm space-y-3">
+            <div class="flex items-start space-x-2">
+                <span class="text-2xl">💡</span>
+                <div class="italic text-gray-700 leading-relaxed space-y-2">
+                    <p>• Hãy kể vắn tắt hiểu biết của bạn về một tấm gương đã anh dũng hi sinh vì nền độc lập tự chủ của dân tộc trong thời kì chống thực dân Pháp xâm lược.</p>
+                    <p>• Theo bạn, việc tưởng nhớ và tôn vinh những người đã hi sinh cho sự nghiệp bảo vệ Tổ quốc có ý nghĩa như thế nào trong việc giáo dục thế hệ trẻ hôm nay?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC I: TÁC GIẢ VÀ TÁC PHẨM -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold text-gray-800 uppercase section-underline pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-[#1E3A8A] text-white font-bold mr-3 text-sm">I</span>
+                TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <!-- 1. Tác giả -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#2563EB] text-white font-bold mr-2 text-xs">1</span>
+                    Tác giả Nguyễn Đình Chiểu (1822 - 1888)
+                </h3>
+
+                <!-- Hình minh họa h1.png -->
+                <div class="my-4 text-center">
+                    <img src="h1.png" alt="Chân dung Nguyễn Đình Chiểu" class="max-w-xs rounded border border-gray-300 shadow-sm mx-auto" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-64 h-52 border-2 border-dashed border-gray-400 flex flex-col justify-center items-center text-gray-500 rounded bg-gray-50 mx-auto my-2\'><span class=\'font-semibold text-sm\'>[Khung hình h1.png]</span><span class=\'text-xs text-gray-400 mt-1\'>Chân dung Nguyễn Đình Chiểu</span></div>';">
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2 text-gray-800">
+                    <p><strong>• Cuộc đời:</strong> Tự là Mạnh Trạch, hiệu Trọng Phủ, quê gốc ở Thừa Thiên, sinh tại Gia Định. Cuộc đời gặp nhiều bất hạnh (bị mù cả hai mắt, đường khoa cử dở dang), nhưng ông vẫn kiên cường sống có ích bằng nghề dạy học, bốc thuốc và sáng tác thơ văn.</p>
+                    <p><strong>• Khí tiết:</strong> Khi thực dân Pháp xâm lược Nam Bộ, ông tích cực cùng các nghĩa quân bàn mưu tính kế đánh giặc; kiên quyết giữ vững khí tiết, không hợp tác với kẻ thù.</p>
+                    <p><strong>• Tác phẩm chính:</strong> Các truyện thơ Nôm nổi tiếng như <em>Lục Vân Tiên, Dương Từ - Hà Mậu, Ngư tiều y thuật vấn đáp, Văn tế nghĩa sĩ trận vong Lục tỉnh...</em></p>
+                </div>
+
+                <!-- Khung Em có biết -->
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+                    <h4 class="font-bold text-amber-800 flex items-center mb-1">
+                        <span class="mr-2">✨</span> Em có biết
+                    </h4>
+                    <p class="text-sm text-amber-900 leading-relaxed">
+                        Nguyễn Đình Chiểu đã được tổ chức UNESCO chính thức vinh danh là <strong>Danh nhân văn hóa của nhân loại</strong> vào năm 2021. Tác phẩm của ông chủ yếu viết bằng chữ Nôm, hướng đến quần chúng nhân dân và đề cao đạo lý làm người.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2. Tác phẩm -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#2563EB] text-white font-bold mr-2 text-xs">2</span>
+                    Tác phẩm "Văn tế nghĩa sĩ Cần Giuộc"
+                </h3>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2 text-gray-800">
+                    <p><strong>• Hoàn cảnh sáng tác:</strong> Đêm 16/12/1861, những nghĩa sĩ nông dân tại Cần Giuộc (Long An) đã dũng cảm tập kích đồn giặc Pháp, diệt một số kẻ thù nhưng khoảng 20 nghĩa sĩ đã anh dũng hy sinh. Theo ủy thác của Tuần phủ Gia Định Đỗ Quang, Nguyễn Đình Chiểu viết bài văn tế này để đọc tại lễ truy điệu các anh hùng.</p>
+                    <p><strong>• Thể loại & Bút pháp:</strong> Viết theo thể <em>phú Đường luật</em>, sử dụng lối văn <em>biền ngẫu</em> (các cặp câu đối nhau). Bài văn tế kết hợp nhuần nhuyễn giữa nghị luận, tự sự và trữ tình biểu cảm.</p>
+                </div>
+
+                <!-- Khung Lưu ý -->
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg shadow-sm">
+                    <h4 class="font-bold text-purple-800 flex items-center mb-1">
+                        <span class="mr-2">📌</span> Lưu ý
+                    </h4>
+                    <p class="text-sm text-purple-900 leading-relaxed">
+                        Cấu trúc một bài văn tế truyền thống gồm 3-4 phần chính: <strong>Lung khởi/Tán</strong> (cảm hứng chung), <strong>Thích thực/Thán</strong> (hồi tưởng cuộc đời, công trạng), <strong>Ai cấu/Ai</strong> (bày tỏ niềm đau thương, tiếc xót) và <strong>Kê tóm/Khấn</strong> (lời thề và ca ngợi linh hồn bất tử).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC II: NỘI DUNG VĂN BẢN VÀ CẢM NHẬN CHI TIẾT -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold text-gray-800 uppercase section-underline pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-[#1E3A8A] text-white font-bold mr-3 text-sm">II</span>
+                NỘI DUNG BÀI HỌC VÀ PHÂN TÍCH
+            </h2>
+
+            <!-- 1. Đoạn 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#2563EB] text-white font-bold mr-2 text-xs">1</span>
+                    Bối cảnh thời đại và Xuất thân người nghĩa sĩ (Mục 1 - 9)
+                </h3>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2 text-gray-800">
+                    <p><strong>• Bối cảnh thời đại:</strong> <em>"Súng giặc đất rền; Lòng dân trời tỏ"</em> - Bão táp chiến tranh bùng nổ, ranh giới giữa chính và tà phân định rõ ràng. Lòng dân đánh giặc chính là ý trời.</p>
+                    <p><strong>• Xuất thân:</strong> Nghĩa sĩ vốn là "dân ấp dân lân", người nông dân nghèo khổ, "cui cút làm ăn, toan lo nghèo khó".</p>
+                    <p><strong>• Hành trang:</strong> Chỉ quen tay cuốc, tay cày, chưa từng biết binh thư, tập khiên tập súng. Họ cầm vũ khí đứng lên hoàn toàn do <em>"mến nghĩa làm quân chiêu mộ"</em>.</p>
+                </div>
+
+                <!-- Mục có biểu tượng dấu ? -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <div class="font-semibold text-blue-900 flex items-center">
+                        <span class="text-xl mr-2">❓</span> Câu hỏi suy ngẫm: Câu văn mở đầu "Súng giặc đất rền; Lòng dân trời tỏ." có ý nghĩa như thế nào?
+                    </div>
+                    <button onclick="toggleAnswer('ans-q1')" class="bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold py-1.5 px-4 rounded transition text-sm shadow">
+                        Xem câu trả lời
+                    </button>
+                    <div id="ans-q1" class="hidden bg-green-50 border border-green-200 p-3 rounded text-sm text-gray-800 space-y-1">
+                        <p><strong>Giải thích:</strong> Mở đầu bằng cấu trúc đối lập ngắn gọn, dồn dập. "Súng giặc đất rền" báo hiệu hiểm họa xâm lược tàn khốc; "Lòng dân trời tỏ" khẳng định ý chí kiên cường, lòng yêu nước nồng nàn của nhân dân thấu tận trời xanh, khẳng định tính chất chính nghĩa của cuộc kháng chiến.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Đoạn 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#2563EB] text-white font-bold mr-2 text-xs">2</span>
+                    Tinh thần chiến đấu dũng cảm của người nghĩa sĩ (Mục 10 - 15)
+                </h3>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2 text-gray-800">
+                    <p><strong>• Lòng căm thù giặc:</strong> "Ghét thói mọi như nhà nông ghét cỏ", "muốn tới ăn gan", "muốn ra cắn cổ". Tình cảm căm thù bộc trực, mãnh liệt của người nông dân Nam Bộ.</p>
+
+                    <!-- Bảng so sánh tương phản -->
+                    <div class="overflow-x-auto my-3">
+                        <table class="w-full text-center border-collapse border border-[#cbd5e0] text-sm">
+                            <thead>
+                                <tr class="bg-[#e2e8f0]">
+                                    <th class="border border-[#cbd5e0] p-2">Thực dân Pháp (Kẻ thù)</th>
+                                    <th class="border border-[#cbd5e0] p-2">Nghĩa sĩ Cần Giuộc (Ta)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-[#cbd5e0] p-2">Đạn nhỏ đạn to, tàu sắt tàu đồng</td>
+                                    <td class="border border-[#cbd5e0] p-2">Manh áo vải, một ngọn tầm vông</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-[#cbd5e0] p-2">Trại lính bòng bong, hỏa lực hiện đại</td>
+                                    <td class="border border-[#cbd5e0] p-2">Rơm con cúi, lưỡi dao phay</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-[#cbd5e0] p-2">Quân cơ tinh nhuệ, cướp nước gian trá</td>
+                                    <td class="border border-[#cbd5e0] p-2">Nông dân tay ngang, vì nghĩa quên thân</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>• Tinh thần tiến công:</strong> Các động từ mạnh mẽ: <em>đạp rào lướt tới, xô cửa xông vào, liều mình như chẳng có, kẻ đâm ngang người chém ngược</em> làm quân địch "hồn kinh".</p>
+                </div>
+
+                <!-- Mục Hoạt động (Hình bàn tay) -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <div class="font-semibold text-blue-900 flex items-center">
+                        <span class="text-xl mr-2">🖐️</span> Hoạt động: Phân tích nghệ thuật tương phản được sử dụng trong mô tả trận đánh Cần Giuộc.
+                    </div>
+                    <button onclick="toggleAnswer('ans-act1')" class="bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold py-1.5 px-4 rounded transition text-sm shadow">
+                        Xem hướng giải quyết
+                    </button>
+                    <div id="ans-act1" class="hidden bg-green-50 border border-green-200 p-3 rounded text-sm text-gray-800 space-y-1">
+                        <p><strong>Hướng dẫn:</strong> Tác giả đặt hai hình ảnh đối lập tuyệt đối: một bên là vũ khí tối tân (súng, đạn, tàu sắt) của thực dân Pháp và một bên là trang bị thô sơ (áo vải, tầm vông, rơm con cúi, dao phay) của nghĩa sĩ. Qua đó làm nổi bật tinh thần quả cảm, chí khí anh hùng hy sinh vì đại nghĩa của người dân Nam Bộ.</p>
+                    </div>
+                </div>
+
+                <!-- Khung Em có thể -->
+                <div class="bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg shadow-sm">
+                    <h4 class="font-bold text-teal-800 flex items-center mb-1">
+                        <span class="mr-2">💡</span> Em có thể
+                    </h4>
+                    <p class="text-sm text-teal-900 leading-relaxed">
+                        Sử dụng các động từ hành động mạnh (đạp, lướt, xô, xông, đâm, chém) để rèn luyện kỹ năng viết đoạn văn miêu tả không khí chiến đấu hào hùng, tạo nhịp điệu dồn dập cho bài viết văn biểu cảm.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. Đoạn 3 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#2563EB] text-white font-bold mr-2 text-xs">3</span>
+                    Nỗi đau thương xót và Tượng đài bất tử (Mục 16 - 30)
+                </h3>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2 text-gray-800">
+                    <p><strong>• Khúc ai ca đau thương:</strong> Cảnh đất trời và con người chịu nỗi đau mất mát: <em>"cỏ cây mấy dặm sầu giăng"</em>, <em>"mẹ già ngồi khóc trẻ"</em>, <em>"vợ yếu chạy tìm chồng"</em>.</p>
+                    <p><strong>• Sự hy sinh bất tử:</strong> <em>"Thác mà trả nước non rồi nợ, danh thơm đồn sáu tỉnh chúng đều khen"</em>. Sự hy sinh của họ không vô ích mà để lại tiếng thơm muôn đời, trở thành tượng đài nghệ thuật bất tử.</p>
+                </div>
+
+                <!-- Bài tập ví dụ trong bài -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <div class="font-semibold text-blue-900 flex items-center">
+                        <span class="text-xl mr-2">📝</span> Ví dụ nâng cao: Tính chất bi tráng của bài văn tế thể hiện rõ nhất ở điểm nào?
+                    </div>
+                    <button onclick="toggleAnswer('ans-ex1')" class="bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold py-1.5 px-4 rounded transition text-sm shadow">
+                        Xem lời giải
+                    </button>
+                    <div id="ans-ex1" class="hidden bg-green-50 border border-green-200 p-3 rounded text-sm text-gray-800 space-y-1">
+                        <p><strong>Lời giải chi tiết:</strong> Tính chất <em>bi tráng</em> hòa quyện giữa yếu tố <strong>Bi</strong> (đau thương, mất mát, nước mắt) và <strong>Tráng</strong> (hào hùng, oanh liệt, khí thế kiên cường). Dù người nghĩa sĩ ngã xuống nhưng tầm vóc và tư thế của họ vẫn hiên ngang, danh thơm sống mãi với sông núi đất nước.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC III: TỔNG KẾT BÀI HỌC -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-4">
+            <h2 class="text-xl font-bold text-gray-800 uppercase section-underline pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-[#1E3A8A] text-white font-bold mr-3 text-sm">III</span>
+                TỔNG KẾT
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-900 mb-2">1. Giá trị nội dung</h4>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        Bài văn tế là bức tượng đài bi tráng bằng ngôn từ khắc họa hình tượng người nông dân nghĩa sĩ Cần Giuộc dũng cảm hy sinh vì Tổ quốc. Tác phẩm thể hiện lòng cảm phục, thương xót sâu sắc của tác giả và nhân dân đối với những người anh hùng.
+                    </p>
+                </div>
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-900 mb-2">2. Giá trị nghệ thuật</h4>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        - Ngôn ngữ bình dị, mang đậm dấu ấn Nam Bộ.<br>
+                        - Sử dụng bút pháp tương phản xuất sắc, nhịp điệu biền ngẫu trầm hùng.<br>
+                        - Sự kết hợp nhuần nhuyễn giữa chất trữ tình và chất nghị luận.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC IV: BÀI TẬP CỦNG CỐ & VẬN DỤNG -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-8">
+            <h2 class="text-xl font-bold text-gray-800 uppercase section-underline pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-[#1E3A8A] text-white font-bold mr-3 text-sm">IV</span>
+                BÀI TẬP CỦNG CỐ VÀ VẬN DỤNG
+            </h2>
+
+            <!-- GAME SHOW AI LÀ TRIỆU PHÚ -->
+            <div class="bg-indigo-950 text-white rounded-xl p-6 shadow-xl space-y-6">
+                <div class="text-center space-y-1">
+                    <span class="bg-yellow-500 text-black px-3 py-1 rounded-full font-extrabold text-xs tracking-wider uppercase">Gameshow Củng Cố</span>
+                    <h3 class="text-2xl font-black text-yellow-400 tracking-wide">🏆 AI LÀ TRIỆU PHÚ 🏆</h3>
+                    <p class="text-xs text-indigo-200">Hãy chọn đáp án đúng nhất cho 10 câu hỏi dưới đây!</p>
+                </div>
+
+                <form id="quizForm" class="space-y-6 text-sm">
+                    <!-- Câu 1 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 1: Tác giả Nguyễn Đình Chiểu được UNESCO vinh danh là Danh nhân văn hóa thế giới vào năm nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q1" value="A" class="mr-2"> A. 2018</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q1" value="B" class="mr-2"> B. 2020</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q1" value="C" class="mr-2"> C. 2021</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q1" value="D" class="mr-2"> D. 2022</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 2 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 2: Bài "Văn tế nghĩa sĩ Cần Giuộc" được viết theo thể loại văn học nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q2" value="A" class="mr-2"> A. Thơ Đường luật lục bát</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q2" value="B" class="mr-2"> B. Văn tế (Thể phú Đường luật biền ngẫu)</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q2" value="C" class="mr-2"> C. Truyện thơ Nôm</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q2" value="D" class="mr-2"> D. Hát nói</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 3 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 3: Xuất thân thực sự của những người nghĩa sĩ Cần Giuộc trước khi cầm súng đánh giặc là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q3" value="A" class="mr-2"> A. Quân lính triều đình chuyên nghiệp</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q3" value="B" class="mr-2"> B. Binh lính thuộc lực lượng cơ vệ</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q3" value="C" class="mr-2"> C. Nông dân nghèo "dân ấp dân lân"</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q3" value="D" class="mr-2"> D. Các tướng sĩ từ Huế vào</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 4 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 4: Binh khí chính của nghĩa sĩ Cần Giuộc trong trận công đồn là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q4" value="A" class="mr-2"> A. Súng hỏa mai và thần công</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q4" value="B" class="mr-2"> B. Gậy tầm vông, rơm con cúi, lưỡi dao phay</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q4" value="C" class="mr-2"> C. Khiên, mác, giáp sắt hiện đại</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q4" value="D" class="mr-2"> D. Đạn to đạn nhỏ và tàu đồng</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 5 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 5: Cụm từ nào thể hiện nguyên nhân người nông dân tự nguyện tham gia đánh giặc?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q5" value="A" class="mr-2"> A. Do lệnh truy nã của triều đình</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q5" value="B" class="mr-2"> B. "Mến nghĩa làm quân chiêu mộ"</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q5" value="C" class="mr-2"> C. Vì tiền tài và danh vọng ban thưởng</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q5" value="D" class="mr-2"> D. Theo dòng ở lính diễn binh</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 6 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 6: Hình ảnh "bòng bong che trắng lốp" và "ống khói chạy đen sì" dùng để chỉ yếu tố nào của giặc?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q6" value="A" class="mr-2"> A. Tàu thuyền và đồn bót của giặc Pháp</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q6" value="B" class="mr-2"> B. Khói lửa chiến tranh ngoài sa trường</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q6" value="C" class="mr-2"> C. Đèn dầu và vùa hương trong chùa</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q6" value="D" class="mr-2"> D. Nhà cửa xóm làng bị cháy</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 7 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 7: Thái độ của người nghĩa sĩ đối với kẻ thù xâm lược được thể hiện qua so sánh nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q7" value="A" class="mr-2"> A. "Như trời hạn trông mưa"</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q7" value="B" class="mr-2"> B. "Ghét thói mọi như nhà nông ghét cỏ"</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q7" value="C" class="mr-2"> C. "Như cá gặp nước"</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q7" value="D" class="mr-2"> D. "Như chim mỏi về rừng"</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 8 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 8: Nghệ thuật nổi bật nhất trong việc xây dựng hình ảnh người nghĩa sĩ đánh giặc là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q8" value="A" class="mr-2"> A. Ẩn dụ tượng trưng phong cách cổ điển</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q8" value="B" class="mr-2"> B. Thủ pháp tương phản và nhịp điệu dồn dập</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q8" value="C" class="mr-2"> C. Sử dụng nhiều từ Hán Việt huyền bí</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q8" value="D" class="mr-2"> D. Miêu tả tâm lý nhân vật sâu sắc</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 9 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 9: Giọng điệu chủ đạo của đoạn cuối bài văn tế là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q9" value="A" class="mr-2"> A. Vui tươi, phấn khởi</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q9" value="B" class="mr-2"> B. Bi thương nhưng hào hùng, tôn kính</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q9" value="C" class="mr-2"> C. Châm biếm, đả kích</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q9" value="D" class="mr-2"> D. Trầm lặng, hoài niệm quá khứ</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 10 -->
+                    <div class="bg-indigo-900/80 p-4 rounded-lg border border-indigo-700">
+                        <p class="font-bold text-yellow-300 mb-3">Câu 10: Ý nghĩa lịch sử - văn học quan trọng nhất của tác phẩm là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q10" value="A" class="mr-2"> A. Lần đầu tiên dựng tượng đài nghệ thuật về người nông dân đánh giặc</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q10" value="B" class="mr-2"> B. Bài văn đầu tiên sử dụng chữ Nôm ở Việt Nam</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q10" value="C" class="mr-2"> C. Tác phẩm đánh dấu sự kết thúc của thể loại văn tế</label>
+                            <label class="p-2 bg-indigo-800 rounded border border-indigo-600 flex items-center cursor-pointer millionaire-option transition"><input type="radio" name="q10" value="D" class="mr-2"> D. Mở đầu cho trào lưu văn học lãng mạn Việt Nam</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button type="button" onclick="checkQuiz()" class="bg-[#1e293b] text-white hover:bg-black font-extrabold text-base py-3 px-8 rounded-lg shadow-lg border border-yellow-400 transition transform active:scale-95">
+                            NỘP BÀI TRẮC NGHIỆM
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Kết quả Quiz -->
+                <div id="quizResult" class="hidden p-4 rounded-lg bg-white text-gray-900 space-y-3">
+                    <div id="quizScore" class="font-bold text-lg text-center"></div>
+                    <div id="quizDetails" class="text-xs md:text-sm space-y-2"></div>
+                </div>
+            </div>
+
+            <!-- 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH CHI TIẾT -->
+            <div class="space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 uppercase border-b pb-2">
+                    ✍️ BÀI TẬP TỰ LUẬN PHÂN TÍCH 
+                </h3>
+
+                <!-- Bài tự luận 1 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-bold text-gray-800">
+                        Bài tập 1 (Phân tích nghệ thuật): Phân tích hiệu quả biểu đạt của các động từ mạnh trong câu văn tả trận đánh công đồn Cần Giuộc.
+                    </p>
+                    <button onclick="toggleAnswer('essay1')" class="bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold py-1.5 px-4 rounded transition text-sm shadow">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay1" class="hidden bg-green-50 border border-green-200 p-4 rounded text-sm text-gray-800 leading-relaxed space-y-2">
+                        <p><strong>Lời giải:</strong></p>
+                        <p>- Các động từ mạnh như: <em>đạp, lướt, xô, xông, đâm, chém...</em> tạo nên nhịp điệu dồn dập, mạnh mẽ.</p>
+                        <p>- Hiệu quả: Diễn tả thần tốc khí thế áp đảo của người nghĩa sĩ, biến vũ khí thô sơ thành sức mạnh vô song, khiến kẻ thù hiện đại cũng phải "hồn kinh". Điều này thể hiện tinh thần dũng cảm vô úy của người nông dân yêu nước.</p>
+                    </div>
+                </div>
+
+                <!-- Bài tự luận 1 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-bold text-gray-800">
+
+                <!-- Bài tự luận 2 -->
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                    <p class="font-bold text-gray-800">
+                        Bài tập 2 (Kết nối đọc - viết): Trình bày quan điểm về nhận định: "Tượng đài người nghĩa sĩ Cần Giuộc là tượng đài bất tử mang tính bi tráng nhất trong văn học trung đại Việt Nam".
+                    </p>
+                    <button onclick="toggleAnswer('essay3')" class="bg-[#33FF33] hover:bg-green-400 text-gray-900 font-bold py-1.5 px-4 rounded transition text-sm shadow">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay3" class="hidden bg-green-50 border border-green-200 p-4 rounded text-sm text-gray-800 leading-relaxed space-y-2">
+                        <p><strong>Lời giải:</strong></p>
+                        <p>1. <strong>Tính Bi:</strong> Nỗi đau đớn xót xa trước cái chết của những người nông dân hiền lành, tiếng khóc của mẹ già, vợ yếu, sự mất mát của quê hương.</p>
+                        <p>2. <strong>Tính Tráng:</strong> Khí thế hào hùng, chí khí xả thân vì đại nghĩa, danh thơm lưu truyền muôn đời.</p>
+                        <p>3. <strong>Ý nghĩa:</strong> Lần đầu tiên người nông dân - vốn bị lãng quên trong văn học phong kiến - xuất hiện ở vị trí trung tâm bức tượng đài lịch sử với vẻ đẹp anh hùng trọn vẹn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-gray-600 font-semibold py-6 border-t border-gray-300">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hàm Toggle Lời giải / Đáp án
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('hidden');
+            }
+        }
+
+        // Đáp án đúng của 10 câu trắc nghiệm
+        const correctAnswers = {
+            q1: "C",
+            q2: "B",
+            q3: "C",
+            q4: "B",
+            q5: "B",
+            q6: "A",
+            q7: "B",
+            q8: "B",
+            q9: "B",
+            q10: "A"
+        };
+
+        const explanations = {
+            q1: "UNESCO vinh danh Nguyễn Đình Chiểu vào năm 2021.",
+            q2: "Tác phẩm thuộc thể văn tế, viết theo lối phú Đường luật biền ngẫu.",
+            q3: "Họ là nông dân nghèo khổ 'dân ấp dân lân' cày cấy ở xóm làng.",
+            q4: "Binh khí chỉ có gậy tầm vông, rơm con cúi châm ngòi, dao phay.",
+            q5: "Họ đứng lên tự nguyện vì 'mến nghĩa làm quân chiêu mộ'.",
+            q6: "Bòng bong chỉ lều bạt trướng vải, ống khói chỉ tàu chiến chạy bằng hơi nước của Pháp.",
+            q7: "Họ thể hiện sự căm thù giặc trực diện: 'ghét thói mọi như nhà nông ghét cỏ'.",
+            q8: "Bút pháp tương phản giữa vũ khí giặc và ta, kết hợp nhịp điệu dồn dập.",
+            q9: "Đoạn cuối vừa bi thương trước sự mất mát vừa hào hùng ngợi ca sự bất tử.",
+            q10: "Lần đầu tiên người nông dân đánh giặc được khắc họa thành tượng đài nghệ thuật trung tâm."
+        };
+
+        // Hàm Kiểm tra Quiz
+        function checkQuiz() {
+            let score = 0;
+            const total = 10;
+            let detailsHtml = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : "Chưa chọn";
+                const isCorrect = userAns === correctAnswers[qName];
+
+                if (isCorrect) score++;
+
+                detailsHtml += `
+                    <div class="p-2 border-b ${isCorrect ? 'bg-green-50' : 'bg-red-50'} rounded">
+                        <p class="font-bold ${isCorrect ? 'text-green-700' : 'text-red-700'}">
+                            Câu ${i}: ${isCorrect ? 'Correct! Đúng' : 'Wrong! Sai'} (Bạn chọn: ${userAns} | Đáp án đúng: ${correctAnswers[qName]})
+                        </p>
+                        <p class="text-xs text-gray-700 mt-0.5">💡 ${explanations[qName]}</p>
+                    </div>
+                `;
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            const scoreDiv = document.getElementById('quizScore');
+            const detailsDiv = document.getElementById('quizDetails');
+
+            resultDiv.classList.remove('hidden');
+            
+            if (score === total) {
+                scoreDiv.className = "font-bold text-xl text-center text-green-600 mb-2";
+                scoreDiv.innerHTML = `🎉 XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ KHIẾN BẠN ĐẠT SCORE HOÀN HẢO ${score}/${total} ĐIỂM! 🎉`;
+            } else {
+                scoreDiv.className = "font-bold text-xl text-center text-red-600 mb-2";
+                scoreDiv.innerHTML = `KẾT QUẢ: ${score}/${total} ĐIỂM. HÃY XEM HƯỚNG DẪN GIẢI CHI TIẾT BÊN DƯỚI!`;
+            }
+
+            detailsDiv.innerHTML = detailsHtml;
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Văn Tế Nghĩa Sĩ Cần Giuộc</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- MathJax Configuration and Script -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Custom Theme Styling -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-panel {
+            background-color: rgba(45, 18, 18, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 253, 208, 0.15);
+        }
+        .bg-card {
+            background-color: rgba(35, 12, 12, 0.85);
+            border: 1px solid rgba(255, 253, 208, 0.1);
+        }
+        .bg-card-hover:hover {
+            background-color: rgba(55, 22, 22, 0.95);
+            border-color: rgba(255, 253, 208, 0.3);
+        }
+        .btn-gold {
+            background-color: #d97706;
+            color: #ffffff;
+        }
+        .btn-gold:hover {
+            background-color: #b45309;
+        }
+        .btn-green {
+            background-color: #059669;
+            color: #ffffff;
+        }
+        .btn-green:hover {
+            background-color: #047857;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #421d1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8c4343;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b35959;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- TOP HEADER NAVBAR -->
+    <header class="bg-[#421d1d] border-b border-[#8c4343] py-3 px-4 md:px-8 flex flex-wrap justify-between items-center sticky top-0 z-50 shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-[#d97706] text-white p-2 rounded-lg flex items-center justify-center font-bold text-xl">
+                📖
+            </div>
+            <div>
+                <h1 class="text-cream font-bold text-lg md:text-xl tracking-wide uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                <p class="text-xs text-amber-200/80 font-medium">Văn tế nghĩa sĩ Cần Giuộc (Nguyễn Đình Chiểu - Ngữ văn 11)</p>
+            </div>
+        </div>
+        <div class="mt-2 md:mt-0 flex items-center space-x-2">
+            <span id="headerModeBadge" class="bg-[#522525] text-amber-200 border border-[#8c4343] text-xs px-3 py-1.5 rounded-full font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                Chưa chọn chế độ
+            </span>
+            <div id="timerContainer" class="hidden bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs px-3 py-1.5 rounded-full font-mono font-bold text-sm">
+                ⏱️ <span id="timerDisplay">20:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow container mx-auto px-4 py-6 md:py-8 max-w-6xl">
+
+        <!-- SCREEN 1: START / MODE SELECTION -->
+        <section id="startScreen" class="space-y-8 animate-fadeIn">
+            <!-- Hero Title Banner -->
+            <div class="text-center space-y-4 max-w-3xl mx-auto pt-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-cream uppercase tracking-tight">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-300">20 câu hỏi</strong> bám sát nội dung bài học <em class="text-cream font-semibold">Văn tế nghĩa sĩ Cần Giuộc</em> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- Question Matrix Breakdown Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Biết -->
+                <div class="bg-panel p-4 rounded-xl border-l-4 border-blue-500 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-blue-300 uppercase tracking-wider">MỨC BIẾT (8 CÂU)</span>
+                        <span class="text-xs bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded">40%</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-normal">
+                        Kiểm tra các kiến thức trực tiếp về tác giả Nguyễn Đình Chiểu, tác phẩm, hoàn cảnh sáng tác và các sự kiện có trong bài.
+                    </p>
+                </div>
+                <!-- Hiểu -->
+                <div class="bg-panel p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-emerald-300 uppercase tracking-wider">MỨC HIỂU (7 CÂU)</span>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-200 px-2 py-0.5 rounded">35%</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-normal">
+                        Giải đáp các vấn đề liên quan đến nội dung, nghệ thuật, lòng căm thù giặc và trang bị vũ khí ở mức độ cơ bản.
+                    </p>
+                </div>
+                <!-- Vận dụng -->
+                <div class="bg-panel p-4 rounded-xl border-l-4 border-amber-500 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-amber-300 uppercase tracking-wider">VẬN DỤNG (3 CÂU)</span>
+                        <span class="text-xs bg-amber-500/20 text-amber-200 px-2 py-0.5 rounded">15%</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-normal">
+                        Phối hợp kiến thức phân tích tác phẩm, rèn luyện tư duy nghệ thuật bi tráng và triết lý sống thà chết vinh hơn sống nhục.
+                    </p>
+                </div>
+                <!-- Vận dụng cao -->
+                <div class="bg-panel p-4 rounded-xl border-l-4 border-purple-500 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-purple-300 uppercase tracking-wider">VD CAO (2 CÂU)</span>
+                        <span class="text-xs bg-purple-500/20 text-purple-200 px-2 py-0.5 rounded">10%</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-normal">
+                        Kiến thức lồng ghép, đánh giá bức tượng đài nghệ thuật nông dân và tầm vóc lịch sử của tác phẩm.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mode Options Selection -->
+            <div class="space-y-4 max-w-4xl mx-auto pt-4">
+                <h3 class="text-center text-sm font-bold tracking-widest text-amber-200 uppercase">
+                    VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Practice Mode Card -->
+                    <div onclick="startQuiz('practice')" class="bg-card bg-card-hover p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-1 shadow-lg flex flex-col justify-between group border border-amber-500/20">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors">
+                                    1. Chế độ Luyện Tập
+                                </h4>
+                                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-500/30">
+                                    Không giới hạn
+                                </span>
+                            </div>
+                            <p class="text-xs text-amber-100/70 font-medium">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-amber-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                            <span>Bắt đầu Luyện Tập</span>
+                            <span>→</span>
+                        </div>
+                    </div>
+
+                    <!-- Timed Mode Card -->
+                    <div onclick="startQuiz('timed')" class="bg-card bg-card-hover p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-1 shadow-lg flex flex-col justify-between group border border-amber-500/20">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors">
+                                    2. Chế độ Tính Giờ
+                                </h4>
+                                <span class="bg-amber-500/20 text-amber-300 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-500/30">
+                                    20 Phút
+                                </span>
+                            </div>
+                            <p class="text-xs text-amber-100/70 font-medium">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-amber-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                            <span>Bắt đầu Tính Giờ</span>
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: QUIZ TAKING INTERFACE -->
+        <section id="quizScreen" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 animate-fadeIn">
+            <!-- Left Sidebar Navigation -->
+            <div class="lg:col-span-4 space-y-4">
+                <div class="bg-panel p-5 rounded-2xl space-y-4 shadow-xl">
+                    <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                        <h3 class="font-bold text-cream text-sm uppercase tracking-wider">DANH SÁCH CÂU HỎI</h3>
+                        <span id="progressCounter" class="bg-amber-500/20 text-amber-300 font-mono text-xs px-2.5 py-1 rounded-full border border-amber-500/30">
+                            0 / 20 đã làm
+                        </span>
+                    </div>
+
+                    <!-- Question Palette Buttons (1-20) -->
+                    <div id="questionGrid" class="grid grid-cols-5 gap-2 pt-1">
+                        <!-- Dynamic generated buttons -->
+                    </div>
+
+                    <!-- Legend Colors -->
+                    <div class="pt-3 border-t border-white/10 space-y-2 text-xs text-slate-300">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-[#4a2222] border border-slate-500 inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-amber-600 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-blue-600 inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button onclick="submitQuizConfirm()" class="w-full mt-4 btn-green font-bold py-3 px-4 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Question Content Box -->
+            <div class="lg:col-span-8">
+                <div class="bg-panel p-6 md:p-8 rounded-2xl space-y-6 shadow-xl relative min-h-[450px] flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <!-- Question Header Meta -->
+                        <div class="flex flex-wrap justify-between items-center gap-2 border-b border-white/10 pb-4">
+                            <span id="currentQuestionNum" class="text-xl font-bold text-cream">
+                                Câu 1 / 20
+                            </span>
+                            <span id="currentQuestionLevel" class="text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
+                                Mức Biết
+                            </span>
+                        </div>
+
+                        <!-- Question Text -->
+                        <div id="questionText" class="text-base md:text-lg font-medium text-white leading-relaxed pt-2">
+                            <!-- Question text dynamically rendered -->
+                        </div>
+
+                        <!-- Options List -->
+                        <div id="optionsContainer" class="space-y-3 pt-2">
+                            <!-- Dynamic rendered options -->
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Controls -->
+                    <div class="flex flex-wrap justify-between items-center gap-4 pt-6 border-t border-white/10 mt-6">
+                        <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-4 py-2.5 rounded-xl bg-[#522525] hover:bg-[#6e3232] text-slate-200 text-sm font-semibold transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                            ❮ Câu Trước
+                        </button>
+                        <button onclick="clearCurrentSelection()" class="text-xs text-amber-200/70 hover:text-amber-200 underline">
+                            Xóa lựa chọn câu này
+                        </button>
+                        <button id="nextBtn" onclick="navigateQuestion(1)" class="px-5 py-2.5 rounded-xl btn-gold text-sm font-bold transition-colors">
+                            Câu Tiếp ❯
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & DETAILED SOLUTIONS -->
+        <section id="resultScreen" class="hidden space-y-8 animate-fadeIn">
+            <!-- Score Overview Card -->
+            <div class="bg-panel p-6 md:p-8 rounded-2xl max-w-3xl mx-auto space-y-6 shadow-2xl border border-amber-500/30 text-center">
+                <div class="inline-flex p-4 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                    <span class="text-4xl">🏆</span>
+                </div>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-cream uppercase">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeTitle" class="text-xs text-amber-200/80 font-medium uppercase tracking-wider mt-1">
+                        Chế độ LUYỆN TẬP
+                    </p>
+                </div>
+
+                <!-- Score Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-2">
+                    <div class="bg-card p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-slate-300">Điểm số</p>
+                        <p id="finalScore" class="text-3xl font-black text-amber-400 font-mono mt-1">0.0 <span class="text-xs font-normal text-slate-400">/ 10.0</span></p>
+                    </div>
+                    <div class="bg-card p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-slate-300">Số câu đúng</p>
+                        <p id="correctCount" class="text-3xl font-black text-emerald-400 font-mono mt-1">0 <span class="text-xs font-normal text-slate-400">/ 20 câu</span></p>
+                    </div>
+                    <div class="bg-card p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-slate-300">Thời gian làm bài</p>
+                        <p id="timeSpent" class="text-2xl font-bold text-blue-300 mt-2">--:--</p>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-[#3b1919] p-4 md:p-5 rounded-xl border border-amber-500/30 text-left space-y-2">
+                    <div class="flex items-center space-x-2 text-amber-300 font-bold text-sm">
+                        <span>💬</span>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedback" class="text-sm text-slate-200 leading-relaxed italic">
+                        --
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="resetToHome()" class="px-6 py-3 rounded-xl btn-gold font-bold text-sm shadow-lg flex items-center space-x-2">
+                        <span>🔄</span>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToSolutions()" class="px-6 py-3 rounded-xl bg-[#522525] hover:bg-[#6e3232] font-semibold text-sm text-slate-200 shadow-lg flex items-center space-x-2">
+                        <span>📜</span>
+                        <span>Xem đáp án & Lời giải</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Answers Breakdown -->
+            <div id="solutionSection" class="space-y-6 pt-6 border-t border-white/10">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <span>📊</span> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-slate-300">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutionListContainer" class="space-y-6">
+                    <!-- Dynamic solution cards rendered -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#381818] border-t border-[#6b3131] py-4 text-center text-xs text-amber-200/60 mt-8">
+        <p>© Hệ thống Trắc nghiệm Ngữ Văn - Bám sát SGK Kết nối tri thức với cuộc sống</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // QUESTION DATA BANK (Strictly from B9vb2.pdf - 20 questions)
+        const rawQuestions = [
+            // --- 8 CÂU MỨC BIẾT ---
+            {
+                id: 1,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Tác phẩm \\(\\text{Văn tế nghĩa sĩ Cần Giuộc}\\) là sáng tác nổi tiếng của ai?",
+                options: [
+                    "Nguyễn Trãi",
+                    "Nguyễn Đình Chiểu",
+                    "Phan Văn Trị",
+                    "Cao Bát Nhạ"
+                ],
+                correct: 1,
+                explanation: "Theo tiểu sử tác giả trong SGK, \\(\\text{Văn tế nghĩa sĩ Cần Giuộc}\\) do Nguyễn Đình Chiểu (1822-1888) sáng tác. Tác phẩm đạt đến đỉnh cao của nghệ thuật văn tế."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Bài văn tế được tác giả viết bằng chữ gì và theo thể loại nào?",
+                options: [
+                    "Viết bằng chữ Hán, thể thất ngôn bát cú Đường luật",
+                    "Viết bằng chữ Nôm, thể phú Đường luật (văn biền ngẫu)",
+                    "Viết bằng chữ Quốc ngữ, thể hát nói",
+                    "Viết bằng chữ Nôm, thể ngâm khúc"
+                ],
+                correct: 1,
+                explanation: "Tác phẩm được viết bằng chữ Nôm, theo thể phú Đường luật, sử dụng lối văn biền ngẫu với các vế câu đối nhau sóng đôi."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Sự kiện lịch sử trực tiếp dẫn đến việc ra đời của bài văn tế là gì?",
+                options: [
+                    "Trận đánh thành Gia Định năm 1859",
+                    "Trận nghĩa quân tập kích đồn giặc ở Cần Giuộc đêm 16/12/1861",
+                    "Khởi nghĩa Ba Tri (Bến Tre) năm 1888",
+                    "Lễ truy điệu Trương Định năm 1864"
+                ],
+                correct: 1,
+                explanation: "Đêm 16/12/1861, những nghĩa sĩ nông dân tập kích đồn giặc ở Cần Giuộc, hy sinh gần 20 người. Tuần phủ Đỗ Quang ủy thác Nguyễn Đình Chiểu viết bài văn tế đọc tại lễ truy điệu."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Tổ chức quốc tế nào đã vinh danh Nguyễn Đình Chiểu là Danh nhân văn hóa thế giới vào năm 2021?",
+                options: [
+                    "UNICEF",
+                    "UNESCO",
+                    "WHO",
+                    "UNEP"
+                ],
+                correct: 1,
+                explanation: "Theo thông tin chú thích trong bài học, Nguyễn Đình Chiểu được UNESCO vinh danh là Danh nhân văn hóa của nhân loại vào năm 2021."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Cấu trúc nội dung cơ bản của một bài văn tế thường gồm những phần chính nào?",
+                options: [
+                    "Khởi, Thừa, Chuyển, Hợp",
+                    "Tán (đánh giá, ca ngợi), Thán (khái quát công lao), Ai (bày tỏ thương xót)",
+                    "Đặt vấn đề, Giải quyết vấn đề, Kết thúc vấn đề",
+                    "Mở bài, Thân bài, Kết bài"
+                ],
+                correct: 1,
+                explanation: "SGK nêu rõ cấu trúc nội dung văn tế nói chung gồm ba phần chính: Tán (nhận định, ca ngợi công đức), Thán (khái quát sự nghiệp, công lao) và Ai (bày tỏ niềm xót thương, kính trọng)."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Xuất thân của những người nghĩa sĩ trong bài văn tế trước khi ra chiến trường là gì?",
+                options: [
+                    "Những quân lính chính quy thuộc biên chế quân cơ quân vệ",
+                    "Nông dân nghèo khó, cui cút làm ăn, chỉ biết ruộng trâu",
+                    "Các thương gia giàu có ở Chợ Trường Bình",
+                    "Những võ sĩ thuộc mười tám ban võ nghệ"
+                ],
+                correct: 1,
+                explanation: "Trước khi chiến đấu, họ là người \"dân ấp dân lân\", \"cui cút làm ăn; toan lo nghèo khó\", \"chỉ biết ruộng trâu, ở trong làng bộ\", hoàn toàn không phải quân lính chuyên nghiệp."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Vũ khí nào dưới đây KHÔNG phải là trang bị thô sơ của người nghĩa sĩ Cần Giuộc?",
+                options: [
+                    "Ngọn tầm vông",
+                    "Lưỡi dao phay",
+                    "Rơm con cúi",
+                    "Súng hỏa mai bắn đạn nhỏ đạn to"
+                ],
+                correct: 3,
+                explanation: "Các nghĩa sĩ dùng trang bị thô sơ: \"ngọn tầm vông\", \"lưỡi dao phay\", \"rơm con cúi\" để đốt nhà dạy đạo, còn \"đạn nhỏ đạn to\", \"súng nổ\" là vũ khí hiện đại của giặc Pháp."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelBadgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                question: "Địa danh nào xuất hiện trong bài văn tế gắn liền với nơi diễn ra trận đánh lịch sử năm 1861?",
+                options: [
+                    "Sông Bến Nghé",
+                    "Sông Cần Giuộc (chợ Trường Bình)",
+                    "Đất Đồng Nai",
+                    "Chùa Tôn Thạnh"
+                ],
+                correct: 1,
+                explanation: "Sông Cần Giuộc và Chợ Trường Bình (nay thuộc tỉnh Long An) là nơi diễn ra trận đánh nổi tiếng đêm 16/12/1861."
+            },
+
+            // --- 7 CÂU MỨC HIỂU ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Câu văn mở đầu \\(\\text{“Súng giặc đất rền; Lòng dân trời tỏ.”}\\) có ý nghĩa nghệ thuật và tư tưởng như thế nào?",
+                options: [
+                    "Miêu tả thời tiết giông bão bất ngờ và sự sợ hãi của người dân Nam Bộ",
+                    "Khái quát bối cảnh thời đại bão táp biến động và khẳng định ý nguyện, chính nghĩa sắt đá của nhân dân",
+                    "Tố cáo triều đình phong kiến nhà Nguyễn bạc nhược trước kẻ thù",
+                    "Thông báo tin thắng trận của quân ta ở Bến Nghé"
+                ],
+                correct: 1,
+                explanation: "Câu mở đầu ngắn gọn, đối lập hai vế: \"súng giặc đất rền\" (hiểm họa chiến tranh) với \"lòng dân trời tỏ\" (chính nghĩa, lòng yêu nước sáng soi), mở ra không khí bi tráng của thời đại."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Cụm từ \\(\\text{“mến nghĩa làm quân chiêu mộ”}\\) giải thích điều gì về động cơ chiến đấu của nghĩa sĩ?",
+                options: [
+                    "Họ đi lính vì bị triều đình bắt bớ, cưỡng ép",
+                    "Họ cầm vũ khí tự nguyện xuất phát từ lòng mến nghĩa lớn, muốn bảo vệ quê hương",
+                    "Họ chiến đấu để lấy tiền thưởng và chức tước ban ấm",
+                    "Họ theo quân lính để được diễn binh luyện tập võ nghệ"
+                ],
+                correct: 1,
+                explanation: "Chiêu mộ là quân tình nguyện. Tác giả nhấn mạnh họ không thuộc dòng dõi binh nghiệp, đi đánh giặc thuần túy vì lòng mến nghĩa lớn đối với đất nước."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Thái độ căm thù giặc sâu sắc của người nghĩa sĩ nông dân được thể hiện qua chi tiết nghệ thuật nào?",
+                options: [
+                    "\"Trông tin quan như trời hạn trông mưa\"",
+                    "\"Bữa thấy bòng bong che trắng lốp, muốn tới ăn gan; Ngày xem ống khói chạy đen sì, muốn ra cắn cổ\"",
+                    "\"Tập khiên, tập súng, tập mác, tập cò, mắt chưa từng ngó\"",
+                    "\"Chi nhọc quan quản gióng trống kỳ trống giục\""
+                ],
+                correct: 1,
+                explanation: "Hình ảnh \"muốn tới ăn gan\", \"muốn ra cắn cổ\" khi nhìn thấy tàu chiến, bóng cờ của giặc thể hiện sự căm thù giặc xâm lược tột cùng bằng những hành động mãnh liệt."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Biện pháp tương phản nghệ thuật đặc sắc ở phần miêu tả trận đánh là gì?",
+                options: [
+                    "Sự tương phản giữa thiên nhiên sông Cần Giuộc mộng mơ và ngọn đèn khuya leo lét",
+                    "Sự tương phản giữa vũ khí thô sơ (áo vải, tầm vông, dao phay) với vũ khí hiện đại (súng nổ, tàu sắt, tàu đồng) của Pháp",
+                    "Sự tương phản giữa triều đình Huế và Tuần phủ Gia Định",
+                    "Sự tương phản giữa tiếng hạc kêu và tiếng trống giục"
+                ],
+                correct: 1,
+                explanation: "Sự tương phản gay gắt giữa một bên là \"manh áo vải\", \"ngọn tầm vông\", \"rơm con cúi\" với một bên là \"tàu sắt tàu đồng\", \"đạn nhỏ đạn to\" làm nổi bật tinh thần quả cảm phi thường."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Sức mạnh tinh thần nào giúp những người nông dân \"tay vốn quen làm\" dám \"đạp rào lướt tới, coi giặc cũng như không\"?",
+                options: [
+                    "Sự am hiểu sâu sắc chín chục trận binh thư",
+                    "Lòng yêu nước căm thù giặc sâu sắc và ý thức tự giác bảo vệ tấc đất quê hương",
+                    "Sự chỉ huy tài tình của các tướng lĩnh quân đội triều đình",
+                    "Mong muốn được phong chức tước và đất đai"
+                ],
+                correct: 1,
+                explanation: "Chính lòng căm thù giặc cướp nước (\"ghét thói mọi như nhà nông ghét cỏ\") và ý thức tự tôn dân tộc đã tạo nên sức mạnh quật khởi cho người nghĩa sĩ nông dân."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Tình cảm của tác giả và nhân dân thể hiện ở đoạn cuối bài tế (từ \\(\\text{“Ôi thôi thôi!”}\\) đến hết) mang sắc thái gì?",
+                options: [
+                    "Hoàn toàn bi lụy, tuyệt vọng trước sức mạnh của quân giặc",
+                    "Xót thương vô hạn trước sự hy sinh nhưng vượt lên bi thương là niềm tự hào, ca ngợi linh hồn bất tử",
+                    "Oán trách người nghĩa sĩ đã liều mình xông trận",
+                    "Thản nhiên coi cái chết là quy luật của tự nhiên"
+                ],
+                correct: 1,
+                explanation: "Đoạn cuối đan xen niềm đau xót nghẹn ngào (\"nước mắt anh hùng lau chẳng ráo\") với âm hưởng ca ngợi bi tráng (\"thác mà trả nước non rồi nợ, danh thơm đồn sáu tỉnh...\" )."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                question: "Từ ngữ địa phương Nam Bộ nào trong bài tế góp phần tạo nên phong cách nghệ thuật mộc mạc, chân thực của Nguyễn Đình Chiểu?",
+                options: [
+                    "Mười tám ban võ nghệ, binh thư",
+                    "Cui cút, rơm con cúi, dao phay, dật dờ, mắc mớ chi",
+                    "Nhật nguyệt, xa thư, thổ vương",
+                    "Tà đạo, tẩu tẩu, hoàng đế"
+                ],
+                correct: 1,
+                explanation: "Những khẩu ngữ và từ ngữ Nam Bộ như \"cui cút\", \"rơm con cúi\", \"dao phay\", \"dật dờ\", \"mắc mớ chi\" giúp bài tế mang đậm hơi thở cuộc sống và màu sắc Nam Bộ."
+            },
+
+            // --- 3 CÂU MỨC VẬN DỤNG ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelBadgeClass: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+                question: "Quan điểm: \\(\\text{“Thà thác mà đặng câu địch khái, về theo tổ phụ cũng vinh; Hơn còn mà chịu chữ đầu Tây, ở với man di rất khổ”}\\) thể hiện ĐẠO LÝ sống nào của dân tộc?",
+                options: [
+                    "Triết lý nhẫn nhục chờ thời cơ",
+                    "Đạo lý thà chết vinh còn hơn sống nhục, giữ vững khí tiết trung nghĩa kiên cường",
+                    "Tư tưởng buông bỏ mọi tham vọng ở đời",
+                    "Quan niệm lấy sự hòa hoãn làm trọng"
+                ],
+                correct: 1,
+                explanation: "Câu văn thể hiện sự lựa chọn dũng cảm: thà hy sinh để giữ tròn tinh thần chống giặc (\"địch khái\") còn hơn sống đầu hàng giặc (\"đầu Tây\"), thể hiện khí tiết lẫm liệt."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelBadgeClass: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+                question: "Sự phối hợp giữa bút pháp bi tráng, thủ pháp tương phản và ngôn từ biền ngẫu có tác dụng gì trong việc xây dựng hình tượng nhân vật?",
+                options: [
+                    "Tạo nên hình ảnh người lính triều đình uy nghiêm, giàu kinh nghiệm",
+                    "Dựng lên bức tượng đài nghệ thuật bi tráng, bất tử về người nông dân nghĩa sĩ chống ngoại xâm",
+                    "Làm mờ đi sự hy sinh mất mát của nhân dân Nam Bộ",
+                    "Biến bài văn tế thành một bản tấu trình quân sự đơn thuần"
+                ],
+                correct: 1,
+                explanation: "Sự kết hợp tài hoa các yếu tố nghệ thuật đã tạo nên bức tượng đài bằng thơ văn đầu tiên rạng rỡ và tráng lệ về người nông dân anh hùng."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelBadgeClass: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+                question: "Phân tích câu văn \\(\\text{“Một trận khói tan, nghìn năm tiết rỡ”}\\), em hiểu gì về giá trị sự hy sinh của nghĩa sĩ Cần Giuộc?",
+                options: [
+                    "Trận đánh thất bại hoàn toàn không để lại danh tiếng gì",
+                    "Thân xác dù tan biến sau trận chiến nhưng danh tiết, phẩm giá anh hùng sẽ lưu danh muôn đời",
+                    "Giặc Pháp đã rút lui hoàn toàn sau một trận khói súng",
+                    "Cuộc chiến đấu chỉ có ý nghĩa trong một thời gian ngắn"
+                ],
+                correct: 1,
+                explanation: "\"Một trận khói tan\" chỉ sự hy sinh nhanh chóng trong trận chiến, nhưng \"nghìn năm tiết rỡ\" khẳng định phẩm giá kiên trung bất khuất ấy sẽ tỏa sáng muôn đời."
+            },
+
+            // --- 2 CÂU MỨC VẬN DỤNG CAO ---
+            {
+                id: 19,
+                level: "VD Cao",
+                levelBadgeClass: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+                question: "Vì sao nhận định: \\(\\text{“Với bài văn tế này, lần đầu tiên trong lịch sử văn học dân tộc có một tượng đài sừng sững về người nghĩa sĩ nông dân chống giặc cứu nước tương xứng với phẩm chất ngoài đời của họ”}\\) lại hoàn toàn chính xác?",
+                options: [
+                    "Vì trước đó văn học phong kiến chỉ tập trung khắc họa vua chúa, tướng lĩnh; người nông dân lần đầu tiên xuất hiện ở vị trí trung tâm bi tráng của thời đại",
+                    "Vì đây là tác phẩm dài nhất trong lịch sử văn học viết Việt Nam",
+                    "Vì bài văn tế được vua Tự Đức đích thân viết lời bình",
+                    "Vì đây là bài văn duy nhất viết về đề tài chống thực dân Pháp"
+                ],
+                correct: 0,
+                explanation: "Trong văn học trung đại trước đó, nông dân chỉ là nhân vật phụ hoặc quần chúng thầm lặng. Lần đầu tiên Nguyễn Đình Chiểu đưa họ lên vị trí trung tâm bi tráng, tạc dựng tượng đài bất tử."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                levelBadgeClass: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+                question: "So với tư tưởng yêu nước truyền thống, nét ĐỘT PHÁ mới mẻ trong tinh thần yêu nước ở \\(\\text{Văn tế nghĩa sĩ Cần Giuộc}\\) là gì?",
+                options: [
+                    "Chỉ trung thành tuyệt đối với triều đình phong kiến mà quên đi dân tộc",
+                    "Ý thức tự giác đứng lên đánh giặc cứu nước của quần chúng nhân dân lao động ngay cả khi triều đình bất lực, nhu nhược",
+                    "Ủng hộ việc đầu hàng giặc để bảo toàn mạng sống cho nhân dân",
+                    "Kêu gọi nhân dân bỏ ruộng vườn để đi theo đạo mới"
+                ],
+                correct: 1,
+                explanation: "Nét đột phá là tinh thần chủ động, tự nguyện chống ngoại xâm xuất phát từ lòng căm thù giặc và tình yêu quê hương của nhân dân lao động, vượt qua sự thụ động của triều đình."
+            }
+        ];
+
+        // APP STATE
+        let quizQuestions = [];
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let currentIndex = 0;
+        let userAnswers = {}; // { questionIndex: selectedOptionIndex }
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 mins in seconds
+        let startTime = null;
+        let isSubmitted = false;
+
+        // INITIALIZATION
+        window.onload = function() {
+            // Check MathJax rendering readiness
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        };
+
+        // START QUIZ FUNCTION
+        function startQuiz(mode) {
+            currentMode = mode;
+            isSubmitted = false;
+            userAnswers = {};
+            currentIndex = 0;
+            timeRemaining = 20 * 60;
+            startTime = new Date();
+
+            // Prepare Question Set
+            if (mode === 'timed') {
+                // Shuffle questions and options for Timed mode to prevent cheating
+                quizQuestions = shuffleQuestionsAndOptions(rawQuestions);
+            } else {
+                // Deep clone standard question set for Practice mode
+                quizQuestions = JSON.parse(JSON.stringify(rawQuestions));
+            }
+
+            // Update UI Elements
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            const badge = document.getElementById('headerModeBadge');
+            const timerBox = document.getElementById('timerContainer');
+
+            if (mode === 'timed') {
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Chế độ TÍNH GIỜ`;
+                timerBox.classList.remove('hidden');
+                startTimer();
+            } else {
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-blue-400"></span> Chế độ LUYỆN TẬP`;
+                timerBox.classList.add('hidden');
+            }
+
+            renderQuestionGrid();
+            renderQuestion(0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // TIMER LOGIC
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    finishQuiz(true); // Auto finish on timeout
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeRemaining / 60);
+            const s = timeRemaining % 60;
+            const formatted = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').innerText = formatted;
+        }
+
+        // SHUFFLE LOGIC FOR TIMED MODE
+        function shuffleQuestionsAndOptions(questionsArray) {
+            let shuffledQ = JSON.parse(JSON.stringify(questionsArray));
+            
+            // Fisher-Yates shuffle questions
+            for (let i = shuffledQ.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledQ[i], shuffledQ[j]] = [shuffledQ[j], shuffledQ[i]];
+            }
+
+            // Shuffle options for each question and keep track of correct answer
+            shuffledQ.forEach(q => {
+                let optionsWithIdx = q.options.map((opt, idx) => ({ text: opt, isCorrect: idx === q.correct }));
+                for (let i = optionsWithIdx.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [optionsWithIdx[i], optionsWithIdx[j]] = [optionsWithIdx[j], optionsWithIdx[i]];
+                }
+                q.options = optionsWithIdx.map(item => item.text);
+                q.correct = optionsWithIdx.findIndex(item => item.isCorrect);
+            });
+
+            return shuffledQ;
+        }
+
+        // RENDER SIDEBAR QUESTION GRID
+        function renderQuestionGrid() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+            quizQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.onclick = () => jumpToQuestion(idx);
+                btn.className = getGridBtnClass(idx);
+                btn.innerText = idx + 1;
+                grid.appendChild(btn);
+            });
+            updateProgressCounter();
+        }
+
+        function getGridBtnClass(idx) {
+            let base = "h-10 rounded-lg text-xs font-bold transition-all border flex items-center justify-center ";
+            if (idx === currentIndex) {
+                return base + "bg-blue-600 text-white border-blue-400 ring-2 ring-blue-400/50";
+            }
+            if (userAnswers[idx] !== undefined) {
+                return base + "bg-amber-600 text-white border-amber-500";
+            }
+            return base + "bg-[#4a2222] text-slate-300 border-[#6e3232] hover:bg-[#5c2a2a]";
+        }
+
+        function updateProgressCounter() {
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('progressCounter').innerText = `${answeredCount} / 20 đã làm`;
+        }
+
+        // RENDER CURRENT QUESTION CONTENT
+        function renderQuestion(index) {
+            currentIndex = index;
+            const q = quizQuestions[index];
+
+            // Header info
+            document.getElementById('currentQuestionNum').innerText = `Câu ${index + 1} / 20`;
+            const levelBadge = document.getElementById('currentQuestionLevel');
+            levelBadge.innerText = `Mức ${q.level}`;
+            levelBadge.className = `text-xs px-3 py-1 rounded-full font-semibold border ${q.levelBadgeClass}`;
+
+            // Question text
+            document.getElementById('questionText').innerHTML = q.question;
+
+            // Options list
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+                const optDiv = document.createElement('div');
+                optDiv.onclick = () => selectOption(index, optIdx);
+                
+                let cardStyle = "flex items-start space-x-3 p-4 rounded-xl border cursor-pointer transition-all duration-200 ";
+                if (isSelected) {
+                    cardStyle += "bg-amber-500/20 border-amber-500 text-amber-200 shadow-md";
+                } else {
+                    cardStyle += "bg-[#3d1818] border-[#6b2c2c] hover:bg-[#4a1f1f] text-slate-200";
+                }
+
+                optDiv.className = cardStyle;
+                optDiv.innerHTML = `
+                    <span class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${isSelected ? 'bg-amber-500 text-white' : 'bg-[#5c2626] text-slate-300'}">
+                        ${prefixes[optIdx]}
+                    </span>
+                    <div class="text-sm md:text-base leading-snug pt-0.5">${optText}</div>
+                `;
+                container.appendChild(optDiv);
+            });
+
+            // Update Navigation Buttons
+            document.getElementById('prevBtn').disabled = (index === 0);
+            const nextBtn = document.getElementById('nextBtn');
+            if (index === quizQuestions.length - 1) {
+                nextBtn.innerText = "Xem Lại ❯";
+            } else {
+                nextBtn.innerText = "Câu Tiếp ❯";
+            }
+
+            // Refresh Palette buttons highlight
+            for (let i = 0; i < quizQuestions.length; i++) {
+                const btn = document.getElementById(`grid-btn-${i}`);
+                if (btn) btn.className = getGridBtnClass(i);
+            }
+
+            // Typeset MathJax dynamically if needed
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            renderQuestion(qIdx);
+            updateProgressCounter();
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentIndex];
+            renderQuestion(currentIndex);
+            updateProgressCounter();
+        }
+
+        function navigateQuestion(direction) {
+            const target = currentIndex + direction;
+            if (target >= 0 && target < quizQuestions.length) {
+                renderQuestion(target);
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            renderQuestion(idx);
+        }
+
+        function submitQuizConfirm() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount < 20) {
+                const unAnswered = 20 - answeredCount;
+                if (!confirm(`Bạn còn ${unAnswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay không?`)) {
+                    return;
+                }
+            }
+            finishQuiz(false);
+        }
+
+        // FINISH AND EVALUATE QUIZ
+        function finishQuiz(isTimeout = false) {
+            clearInterval(timerInterval);
+            isSubmitted = true;
+
+            // Calculate Score
+            let correctNum = 0;
+            quizQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctNum++;
+                }
+            });
+
+            const score = (correctNum / 20) * 10;
+            const timeSpentSeconds = (new Date() - startTime) / 1000;
+            const mSpent = Math.floor(timeSpentSeconds / 60);
+            const sSpent = Math.floor(timeSpentSeconds % 60);
+            const timeSpentStr = currentMode === 'timed' 
+                ? `${mSpent} phút ${sSpent} giây` 
+                : "Không giới hạn";
+
+            // Populate Results UI
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+
+            document.getElementById('resultModeTitle').innerText = currentMode === 'timed' 
+                ? (isTimeout ? "Chế độ TÍNH GIỜ (Đã hết giờ)" : "Chế độ TÍNH GIỜ") 
+                : "Chế độ LUYỆN TẬP";
+
+            document.getElementById('finalScore').innerHTML = `${score.toFixed(1)} <span class="text-xs font-normal text-slate-400">/ 10.0</span>`;
+            document.getElementById('correctCount').innerHTML = `${correctNum} <span class="text-xs font-normal text-slate-400">/ 20 câu</span>`;
+            document.getElementById('timeSpent').innerText = timeSpentStr;
+
+            // Teacher Feedback Generator
+            const feedbackElem = document.getElementById('teacherFeedback');
+            if (score >= 9.0) {
+                feedbackElem.innerHTML = `🌟 <strong>Xuất sắc!</strong> Em nắm rất vững kiến thức tác phẩm <em>Văn tế nghĩa sĩ Cần Giuộc</em>, phân tích nghệ thuật bi tráng và tư tưởng tác phẩm vô cùng sâu sắc. Hãy tiếp tục phát huy nhé!`;
+            } else if (score >= 7.0) {
+                feedbackElem.innerHTML = `👍 <strong>Khá giỏi!</strong> Em đã hiểu sâu nội dung bài học và làm tốt các câu hỏi lý thuyết, thông hiểu. Hãy rèn luyện thêm ở các câu vận dụng cao để đạt điểm tối đa!`;
+            } else if (score >= 5.0) {
+                feedbackElem.innerHTML = `👌 <strong>Đạt yêu cầu.</strong> Em đã thuộc được phần lớn kiến thức cơ bản trong SGK. Tuy nhiên cần xem kỹ lại phần phân tích nghệ thuật tương phản và hoàn cảnh lịch sử để củng cố kỹ hơn.`;
+            } else {
+                feedbackElem.innerHTML = `⚠️ <strong>Cần cố gắng nhiều hơn!</strong> Kết quả cho thấy em chưa nắm vững lý thuyết bài học <em>Văn tế nghĩa sĩ Cần Giuộc</em>. Hãy xem kỹ lời giải chi tiết bên dưới và ôn tập lại bài học SGK để làm lại nhé!`;
+            }
+
+            // Render Detailed Solutions List
+            renderSolutionList();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderSolutionList() {
+            const container = document.getElementById('solutionListContainer');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            quizQuestions.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = (userChoice === q.correct);
+
+                const card = document.createElement('div');
+                card.className = "bg-panel p-6 rounded-2xl border border-white/10 space-y-4 shadow-lg";
+
+                // Header status line
+                let statusBadge = isCorrect 
+                    ? `<span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs px-3 py-1 rounded-full font-bold">✓ Đúng</span>`
+                    : `<span class="bg-red-500/20 text-red-300 border border-red-500/40 text-xs px-3 py-1 rounded-full font-bold">✕ Sai</span>`;
+
+                let headerHTML = `
+                    <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-bold text-cream">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2 py-0.5 rounded border ${q.levelBadgeClass}">Mức ${q.level}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+                    <div class="text-base font-medium text-white">${q.question}</div>
+                `;
+
+                // Options status list
+                let optionsHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">`;
+                q.options.forEach((optText, optIdx) => {
+                    let optionStyle = "p-3 rounded-xl border text-sm flex items-start space-x-2 ";
+                    
+                    if (optIdx === q.correct) {
+                        // Correct option target
+                        optionStyle += "bg-emerald-950/80 border-emerald-500 text-emerald-200 font-semibold";
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        // User wrong choice
+                        optionStyle += "bg-red-950/80 border-red-500 text-red-200 line-through opacity-90";
+                    } else {
+                        // Standard option
+                        optionStyle += "bg-[#361616] border-[#572424] text-slate-300";
+                    }
+
+                    let icon = "";
+                    if (optIdx === q.correct) icon = "✓ ";
+                    if (optIdx === userChoice && !isCorrect) icon = "✕ ";
+
+                    optionsHTML += `
+                        <div class="${optionStyle}">
+                            <span class="font-bold shrink-0">${prefixes[optIdx]}.</span>
+                            <div class="leading-normal">${icon}${optText}</div>
+                        </div>
+                    `;
+                });
+                optionsHTML += `</div>`;
+
+                // Detailed explanation box
+                let explanationHTML = `
+                    <div class="bg-[#2c1313] p-4 rounded-xl border border-amber-500/20 text-xs md:text-sm text-slate-200 leading-relaxed mt-3 space-y-1">
+                        <div class="font-bold text-amber-300 flex items-center gap-1">
+                            <span>💡</span> <span>Lời giải chi tiết:</span>
+                        </div>
+                        <div>${q.explanation}</div>
+                    </div>
+                `;
+
+                card.innerHTML = headerHTML + optionsHTML + explanationHTML;
+                container.appendChild(card);
+            });
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // RESET AND RETURN HOME
+        function resetToHome() {
+            clearInterval(timerInterval);
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('startScreen').classList.remove('hidden');
+
+            document.getElementById('headerModeBadge').innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Chưa chọn chế độ`;
+            document.getElementById('timerContainer').classList.add('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSolutions() {
+            const solElem = document.getElementById('solutionSection');
+            if (solElem) {
+                solElem.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

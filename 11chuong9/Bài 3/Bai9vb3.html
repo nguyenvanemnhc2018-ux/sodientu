@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài học: Cộng đồng và cá thể - An-be Anh-xtanh</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- MathJax with Chemical Support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1f2937;
+        }
+
+        /* Custom Header Styling using User Colors */
+        .header-box {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 2px solid #1E3A8A;
+        }
+
+        .header-top {
+            background-color: #1E3A8A;
+            color: #ffffff;
+            padding: 14px 20px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            letter-spacing: 0.05em;
+        }
+
+        .header-divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .header-bottom {
+            background-color: #2563EB;
+            color: #ffffff;
+            padding: 18px 20px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Custom Accent Elements */
+        .primary-accent {
+            background-color: #33FF33;
+            color: #052e16;
+        }
+
+        .btn-action {
+            background-color: #33FF33;
+            color: #052e16;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-action:hover {
+            background-color: #2be02b;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(51, 255, 51, 0.4);
+        }
+
+        /* Section Title Underline */
+        .section-header-title {
+            border-bottom: 4px solid #1e293b;
+            padding-bottom: 6px;
+        }
+
+        /* Number Badges */
+        .badge-square {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 6px;
+            background-color: #1E3A8A;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-right: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #2563EB;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-right: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Question & Answer Box */
+        .question-box {
+            background-color: #edf2f7;
+            border-left: 5px solid #1E3A8A;
+            border-radius: 0 8px 8px 0;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            border-radius: 0 8px 8px 0;
+            padding: 16px;
+            margin-top: 10px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        /* Millionaire Game Style */
+        .millionaire-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 16px;
+            color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .option-btn {
+            background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+            border: 1px solid #64748b;
+            border-radius: 9999px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .option-btn:hover {
+            border-color: #33FF33;
+            background: linear-gradient(90deg, #1e293b 0%, #0f766e 100%);
+        }
+
+        .option-btn.selected {
+            border-color: #33FF33;
+            background: #14532d;
+            color: #33FF33;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BOX -->
+        <div class="header-box">
+            <div class="header-top">
+                <i class="fa-solid fa-book-bookmark mr-2"></i>CHƯƠNG: LỰA CHỌN VÀ HÀNH ĐỘNG
+            </div>
+            <div class="header-divider"></div>
+            <div class="header-bottom">
+                VĂN BẢN 3: CỘNG ĐỒNG VÀ CÁ THỂ
+            </div>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="bg-white border border-gray-900 rounded-xl p-5 shadow-md">
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-quote-left text-2xl text-blue-900 mt-1"></i>
+                <div class="italic text-gray-800 space-y-2 font-medium">
+                    <p>• Nêu những ấn tượng nảy sinh khi bạn nghĩ về khái niệm “cộng đồng”.</p>
+                    <p>• Hãy chia sẻ những suy nghĩ chân thật về bản thân và niềm mong muốn về một môi trường sống có thể giúp bạn phát huy được năng lực của mình.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN LESSON CONTENT -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <div class="flex items-center">
+                <span class="badge-square">I</span>
+                <h2 class="text-2xl font-bold text-gray-900 uppercase section-header-title flex-1">
+                    TÁC GIẢ VÀ TÁC PHẨM
+                </h2>
+            </div>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-3 pl-2">
+                <div class="flex items-center">
+                    <span class="badge-circle">1</span>
+                    <h3 class="text-xl font-bold text-gray-800">Tác giả An-be Anh-xtanh (Albert Einstein)</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center pt-2">
+                    <div class="md:col-span-2 space-y-3">
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                            <p><strong>• Năm sinh - năm mất:</strong> 1879 – 1955.</p>
+                            <p><strong>• Quốc tịch:</strong> Nhà vật lí lí thuyết người Đức, trở thành công dân Mỹ năm 1940.</p>
+                            <p><strong>• Vị thế:</strong> Được nhìn nhận là một trong những nhà bác học vĩ đại nhất mọi thời đại, có tầm ảnh hưởng lớn lao trong nhiều lĩnh vực: khoa học, tư tưởng, tôn giáo và chính trị.</p>
+                            <p><strong>• Giải thưởng:</strong> Giải Nô-ben Vật lí năm 1921 cho những cống hiến đối với vật lí lí thuyết, đặc biệt là sự khám phá ra định luật của hiệu ứng quang điện và thuyết tương đối \(E = mc^2\).</p>
+                        </div>
+                    </div>
+
+                    <!-- Image Frame Placeholder h1.png -->
+                    <div class="border-2 border-dashed border-gray-400 rounded-xl p-3 bg-gray-50 text-center">
+                        <img src="h1.png" alt="An-be Anh-xtanh" class="mx-auto rounded-lg max-h-48 object-cover shadow-sm" onerror="this.src='https://placehold.co/300x200/1e293b/ffffff?text=Hình+h1.png+(Anh-xtanh)';">
+                        <span class="text-xs text-gray-500 italic mt-2 block">Hình 1: An-be Anh-xtanh (h1.png)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-3 pl-2 pt-4">
+                <div class="flex items-center">
+                    <span class="badge-circle">2</span>
+                    <h3 class="text-xl font-bold text-gray-800">Tác phẩm "Cộng đồng và cá thể"</h3>
+                </div>
+                <div class="p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl space-y-2">
+                    <p><strong>• Xuất xứ:</strong> Trích từ tiểu luận cùng tên trong tập sách <em>"Thế giới như tôi thấy"</em> (lần đầu công bố năm 1931 ở Đức, tái bản bổ sung năm 1955 ở Mỹ).</p>
+                    <p><strong>• Thể loại:</strong> Văn bản nghị luận tư tưởng / tiểu luận triết học - xã hội.</p>
+                    <p><strong>• Phương thức biểu đạt:</strong> Nghị luận kết hợp chặt chẽ giữa lí lẽ sắc bén, bằng chứng lịch sử và tư duy nhân văn sâu sắc.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <div class="flex items-center">
+                <span class="badge-square">II</span>
+                <h2 class="text-2xl font-bold text-gray-900 uppercase section-header-title flex-1">
+                    NỘI DUNG BÀI HỌC VÀ MẠCH LẬP LUẬN
+                </h2>
+            </div>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-4 pl-2">
+                <div class="flex items-center">
+                    <span class="badge-circle">1</span>
+                    <h3 class="text-xl font-bold text-gray-800">Mối quan hệ sự phụ thuộc của cá thể vào cộng đồng</h3>
+                </div>
+
+                <div class="p-4 bg-indigo-50 border border-indigo-200 rounded-xl space-y-3">
+                    <h4 class="font-bold text-indigo-900"><i class="fa-solid fa-brain mr-2"></i>Tóm tắt luận điểm 1:</h4>
+                    <p class="leading-relaxed">
+                        Con người là sinh thể sống theo bầy. Hầu hết hoạt động, nhu cầu vật chất và tinh thần của cá thể đều gắn liền với cộng đồng: ăn thức ăn người khác trồng, mặc quần áo người khác may, sống trong nhà người khác xây, tiếp nhận tri thức và ngôn ngữ từ cộng đồng. Căn cước và ý nghĩa tồn tại của một cá thể phụ thuộc vào cộng đồng.
+                    </p>
+                </div>
+
+                <!-- Interactive Question Box 1 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold text-blue-900"><i class="fa-solid fa-circle-question mr-2"></i>[Theo dõi] Tác giả tập hợp bằng chứng nhằm làm sáng tỏ luận điểm khởi đầu như thế nào?</span>
+                        <button onclick="toggleAnswer('ans1')" class="px-4 py-1.5 rounded-lg btn-action text-sm">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                        </button>
+                    </div>
+                    <div id="ans1" class="answer-box hidden">
+                        <p><strong>Hướng giải quyết:</strong> Anh-xtanh liệt kê các bằng chứng sinh hoạt đời thường vô cùng gần gũi (thức ăn, quần áo, nhà ở, ngôn ngữ, tri thức) để khẳng định bản chất xã hội của con người. Nhờ ngôn ngữ do cộng đồng tạo ra, con người mới phát triển được khả năng tư duy vượt lên trên động vật cao cấp.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Question Box 2 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold text-blue-900"><i class="fa-solid fa-lightbulb mr-2"></i>[Dự đoán] Luận điểm này sẽ dẫn mạch lập luận đi theo hướng nào?</span>
+                        <button onclick="toggleAnswer('ans2')" class="px-4 py-1.5 rounded-lg btn-action text-sm">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                        </button>
+                    </div>
+                    <div id="ans2" class="answer-box hidden">
+                        <p><strong>Hướng giải quyết:</strong> Dự đoán mạch lập luận sẽ không chỉ dừng lại ở sự phụ thuộc một chiều của cá thể vào cộng đồng, mà sẽ "lật đi lật lại vấn đề" để chỉ ra chiều ngược lại: Vai trò quyết định của các cá thể sáng tạo đối với sự tiến bộ và giá trị của cộng đồng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-4 pl-2 pt-4">
+                <div class="flex items-center">
+                    <span class="badge-circle">2</span>
+                    <h3 class="text-xl font-bold text-gray-800">Vai trò quyết định của các cá thể sáng tạo đơn lẻ</h3>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl space-y-3">
+                    <h4 class="font-bold text-amber-900"><i class="fa-solid fa-star mr-2"></i>Tóm tắt luận điểm 2:</h4>
+                    <p class="leading-relaxed">
+                        Mặc dù giá trị cá nhân phụ thuộc vào đóng góp cho xã hội, nhưng tài sản vật chất, tinh thần và đạo đức của cộng đồng đều do các <strong>cá thể sáng tạo đơn lẻ</strong> tạo dựng (người tìm ra lửa, trồng trọt, phát minh đầu máy hơi nước...). Chỉ có cá thể đơn lẻ mới có thể tư duy độc lập và đề ra quy phạm mới. Biển hiện của cộng đồng lành mạnh là sự gắn kết nội bộ đi đôi với tính độc lập của cá thể.
+                    </p>
+                </div>
+
+                <!-- Image Placeholder h2.png -->
+                <div class="border-2 border-dashed border-gray-400 rounded-xl p-4 bg-gray-50 text-center my-3">
+                    <img src="h2.png" alt="Albert Einstein giảng bài" class="mx-auto rounded-lg max-h-56 object-cover shadow-sm" onerror="this.src='https://placehold.co/400x220/0f172a/ffffff?text=Hình+h2.png+(Einstein+và+công+thức)';">
+                    <span class="text-xs text-gray-500 italic mt-2 block">Hình 2: Albert Einstein nghiên cứu và sáng tạo độc lập (h2.png)</span>
+                </div>
+
+                <!-- Interactive Question Box 3 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold text-blue-900"><i class="fa-solid fa-arrows-rotate mr-2"></i>[Chú ý] Cách lật đi lật lại vấn đề của tác giả ở đoạn này?</span>
+                        <button onclick="toggleAnswer('ans3')" class="px-4 py-1.5 rounded-lg btn-action text-sm">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                        </button>
+                    </div>
+                    <div id="ans3" class="answer-box hidden">
+                        <p><strong>Hướng giải quyết:</strong> Tác giả phản bác quan niệm phiến diện cho rằng "chỉ có phẩm chất xã hội mới làm nên giá trị con người". Ông khẳng định đối thoại hai chiều: Nếu thiếu mảnh đất cộng đồng, cá nhân không thể phát triển; nhưng nếu thiếu cá thể sáng tạo độc lập thì xã hội không thể tiến lên tầng cao mới.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 3 -->
+            <div class="space-y-4 pl-2 pt-4">
+                <div class="flex items-center">
+                    <span class="badge-circle">3</span>
+                    <h3 class="text-xl font-bold text-gray-800">Thực trạng suy tàn cá tính và sự khủng hoảng trong thời đại</h3>
+                </div>
+
+                <div class="p-4 bg-rose-50 border border-rose-200 rounded-xl space-y-3">
+                    <h4 class="font-bold text-rose-900"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Tóm tắt luận điểm 3:</h4>
+                    <p class="leading-relaxed">
+                        Thời đại hiện nay (đầu thế kỉ XX) có dân số tăng nhanh nhưng tỉ lệ người có tư chất thủ lĩnh giảm sút. Tổ chức hành chính thay thế cho vai trò cá nhân. Sự thiếu hụt cá tính diễn ra trầm trọng trong nghệ thuật (hội hoạ, âm nhạc xuống cấp), chính trị (thiếu người cầm lái, dân chúng mất độc lập tinh thần, dễ bị truyền thông thao túng dẫn đến chiến tranh mù quáng).
+                    </p>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="overflow-x-auto my-4">
+                    <p class="font-bold text-gray-700 mb-2">Bảng tổng hợp thực trạng các lĩnh vực theo Anh-xtanh:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Lĩnh vực</th>
+                                <th>Thực trạng biểu hiện</th>
+                                <th>Hậu quả đối với cộng đồng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold">Kĩ thuật & Khoa học</td>
+                                <td>Tổ chức máy móc thay thế vai trò cá nhân thủ lĩnh</td>
+                                <td>Thiếu hụt các phát kiến mang tính đột phá độc lập</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Nghệ thuật</td>
+                                <td>Hội họa và âm nhạc xuống cấp rõ rệt</td>
+                                <td>Đánh mất sự cộng hưởng sâu sắc trong công chúng</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Chính trị & Xã hội</td>
+                                <td>Mất tự do tinh thần, báo chí kích động mù quáng</td>
+                                <td>Dung dưỡng chế độ độc tài, con người bị lôi kéo vào chiến tranh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Interactive Question Box 4 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold text-blue-900"><i class="fa-solid fa-comments mr-2"></i>[Bạn hiểu thế nào] "Trong chính trị, sự độc lập tinh thần và ý thức lẽ phải giảm sút khủng khiếp"?</span>
+                        <button onclick="toggleAnswer('ans4')" class="px-4 py-1.5 rounded-lg btn-action text-sm">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                        </button>
+                    </div>
+                    <div id="ans4" class="answer-box hidden">
+                        <p><strong>Hướng giải quyết:</strong> Con người mất đi khả năng tư duy phán đoán độc lập, dễ bị bộ máy tuyên truyền báo chí thao túng tâm lí, dẫn đến hành động cuồng mộ hận thù, sẵn sàng đi lính giết người vì lợi ích ích kỷ của các thế lực cầm quyền.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 4 -->
+            <div class="space-y-4 pl-2 pt-4">
+                <div class="flex items-center">
+                    <span class="badge-circle">4</span>
+                    <h3 class="text-xl font-bold text-gray-800">Tư duy tích cực và niềm tin vào tương lai của nhân loại</h3>
+                </div>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-3">
+                    <h4 class="font-bold text-emerald-900"><i class="fa-solid fa-seedling mr-2"></i>Tóm tắt luận điểm 4:</h4>
+                    <p class="leading-relaxed">
+                        Anh-xtanh không bi quan. Ông coi sự suy tàn hiện tại chỉ là "chứng cảm cúm của trẻ con" trong giai đoạn phát triển quá nhanh của kĩ thuật và kinh tế. Nhờ sự phát triển kĩ thuật và phân công lao động có kế hoạch, con người sẽ được giải phóng sức lao động, có thêm thời gian dư rỗi để phát triển nhân cách, đưa cộng đồng khỏe mạnh trở lại.
+                    </p>
+                </div>
+
+                <!-- Interactive Question Box 5 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold text-blue-900"><i class="fa-solid fa-sun mr-2"></i>[Tư duy tích cực] Niềm tin tương lai của Anh-xtanh dựa trên cơ sở nào?</span>
+                        <button onclick="toggleAnswer('ans5')" class="px-4 py-1.5 rounded-lg btn-action text-sm">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem lời giải
+                        </button>
+                    </div>
+                    <div id="ans5" class="answer-box hidden">
+                        <p><strong>Hướng giải quyết:</strong> Dựa trên quy luật tiến hóa: Kĩ thuật giúp giải phóng con người khỏi lao động nặng nhọc, tạo ra bảo đảm vật chất và thời gian rảnh rỗi. Đó là điều kiện tiên quyết để cá nhân quay trở lại tự do sáng tạo và trau dồi nhân cách.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <div class="flex items-center">
+                <span class="badge-square">III</span>
+                <h2 class="text-2xl font-bold text-gray-900 uppercase section-header-title flex-1">
+                    HƯỚNG DẪN TRẢ LỜI CÂU HỎI SGK (CÂU 1 - CÂU 7)
+                </h2>
+            </div>
+
+            <!-- Example Question List with Toggle Answers -->
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-2">
+                        <p class="font-bold text-gray-800">Câu 1: Xác định nội dung trọng tâm của văn bản và các căn cứ xác định.</p>
+                        <button onclick="toggleAnswer('sgk1')" class="px-4 py-1.5 rounded-lg btn-action text-sm shrink-0">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem đáp án
+                        </button>
+                    </div>
+                    <div id="sgk1" class="answer-box hidden">
+                        <p><strong>Đáp án chi tiết:</strong></p>
+                        <p>• <em>Nội dung trọng tâm:</em> Mối quan hệ biện chứng giữa cộng đồng và cá thể; khẳng định tầm quan trọng của các cá thể sáng tạo độc lập đối với sự phát triển của xã hội.</p>
+                        <p>• <em>Căn cứ:</em> Nhan đề "Cộng đồng và cá thể", hệ thống luận điểm xuyên suốt từ việc bàn về sự phụ thuộc của con người vào cộng đồng đến vai trò của cá thể sáng tạo và thực trạng xã hội.</p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-2">
+                        <p class="font-bold text-gray-800">Câu 2: Tóm tắt những luận điểm cơ bản được triển khai trong văn bản.</p>
+                        <button onclick="toggleAnswer('sgk2')" class="px-4 py-1.5 rounded-lg btn-action text-sm shrink-0">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem đáp án
+                        </button>
+                    </div>
+                    <div id="sgk2" class="answer-box hidden">
+                        <p><strong>Đáp án chi tiết:</strong></p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>Cá thể sống phụ thuộc sâu sắc vào cộng đồng về cả vật chất, tinh thần và ngôn ngữ.</li>
+                            <li>Tất cả tài sản vật chất và tinh thần của cộng đồng đều do các cá thể sáng tạo đơn lẻ tạo dựng.</li>
+                            <li>Thực trạng thời đại: Sự giảm sút tư chất thủ lĩnh, sự thiếu hụt cá tính sáng tạo và nguy cơ từ chế độ độc tài.</li>
+                            <li>Niềm tin lạc quan: Kĩ thuật phát triển sẽ giải phóng sức lao động, tạo tiền đề phục hồi sức sống cho cá thể và cộng đồng.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-2">
+                        <p class="font-bold text-gray-800">Câu 3: Bằng chứng về sự phụ thuộc của cá thể và tư duy khác biệt của tác giả?</p>
+                        <button onclick="toggleAnswer('sgk3')" class="px-4 py-1.5 rounded-lg btn-action text-sm shrink-0">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem đáp án
+                        </button>
+                    </div>
+                    <div id="sgk3" class="answer-box hidden">
+                        <p><strong>Đáp án chi tiết:</strong></p>
+                        <p>• Bằng chứng: Ăn thức ăn người trồng, mặc áo người may, ở nhà người xây, học ngôn ngữ và tri thức từ người khác.</p>
+                        <p>• Tư duy khác biệt: Anh-xtanh chỉ ra rằng sự phụ thuộc không có nghĩa là cá thể mất đi vai trò; trái lại, cộng đồng lành mạnh phải nâng đỡ tính độc lập của cá thể.</p>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-2">
+                        <p class="font-bold text-gray-800">Câu 4: Lí lẽ khẳng định vai trò của các cá thể sáng tạo?</p>
+                        <button onclick="toggleAnswer('sgk4')" class="px-4 py-1.5 rounded-lg btn-action text-sm shrink-0">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem đáp án
+                        </button>
+                    </div>
+                    <div id="sgk4" class="answer-box hidden">
+                        <p><strong>Đáp án chi tiết:</strong> Chỉ cá thể đơn lẻ mới có khả năng tư duy độc lập, phát minh kĩ thuật, sáng tạo nghệ thuật và đề ra các quy phạm đạo đức mới cho cộng đồng hướng theo.</p>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-2">
+                        <p class="font-bold text-gray-800">Câu 5: Đòi hỏi đối với mỗi cá nhân và cộng đồng trong mạch ngầm văn bản?</p>
+                        <button onclick="toggleAnswer('sgk5')" class="px-4 py-1.5 rounded-lg btn-action text-sm shrink-0">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem đáp án
+                        </button>
+                    </div>
+                    <div id="sgk5" class="answer-box hidden">
+                        <p><strong>Đáp án chi tiết:</strong></p>
+                        <p>• <em>Đối với cá nhân:</em> Phải giữ vững tư duy độc lập, tự chủ tinh thần, không hùa theo đám đông, cống hiến cho người khác.</p>
+                        <p>• <em>Đối với cộng đồng:</em> Phải tạo điều kiện và mảnh đất dinh dưỡng tôn trọng sự khác biệt và tính tự do của cá nhân.</p>
+                    </div>
+                </div>
+
+                <!-- Q6 & Q7 -->
+                <div class="question-box">
+                    <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-2">
+                        <p class="font-bold text-gray-800">Câu 6 & 7: Tính thời sự của nhận định và Cơ sở niềm tin vào tương lai?</p>
+                        <button onclick="toggleAnswer('sgk6')" class="px-4 py-1.5 rounded-lg btn-action text-sm shrink-0">
+                            <i class="fa-solid fa-eye mr-1"></i>Xem đáp án
+                        </button>
+                    </div>
+                    <div id="sgk6" class="answer-box hidden">
+                        <p><strong>Đáp án chi tiết:</strong></p>
+                        <p>• <em>Tính thời sự:</em> Rất phù hợp trong kỷ nguyên số, khi mạng xã hội và AI có thể làm con người lười tư duy, dễ bị thao túng tâm lý đám đông.</p>
+                        <p>• <em>Cơ sở niềm tin:</em> Sự phát triển công nghệ sẽ giảm bớt gánh nặng lao động chân tay, giải phóng tiềm năng trí tuệ nhân loại.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION IV: SPECIAL BOXES -->
+        <div class="space-y-6">
+
+            <!-- "EM CÓ THỂ" BOX (ACTIVITY HAND SYMBOL) -->
+            <div class="bg-amber-50 border-2 border-amber-400 rounded-xl p-6 shadow-md space-y-3">
+                <div class="flex items-center space-x-3 text-amber-900">
+                    <i class="fa-regular fa-hand-point-right text-3xl"></i>
+                    <h3 class="text-xl font-bold uppercase">Em có thể (Kết nối đọc - viết)</h3>
+                </div>
+                <p class="text-gray-800 font-medium">
+                    Viết đoạn văn (khoảng 150 chữ) nêu những điều bạn thấy cần nghĩ tiếp với An-be Anh-xtanh về vấn đề “Cộng đồng và cá thể”.
+                </p>
+                <div>
+                    <button onclick="toggleAnswer('emcothe1')" class="px-5 py-2 rounded-lg btn-action shadow">
+                        <i class="fa-solid fa-lightbulb mr-2"></i>Xem hướng dẫn đoạn văn mẫu
+                    </button>
+                </div>
+                <div id="emcothe1" class="answer-box hidden bg-white border border-amber-300">
+                    <p class="font-bold text-amber-900 mb-1">Đoạn văn tham khảo:</p>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        Đọc “Cộng đồng và cá thể” của An-be Anh-xtanh, em nhận thấy tư tưởng của ông vẫn vẹn nguyên giá trị trong thời đại trí tuệ nhân tạo ngày nay. Trong kỉ nguyên 4.0, sự phụ thuộc của con người vào thuật toán và không gian mạng ngày càng trầm trọng, khiến nguy cơ xói mòn tư duy độc lập trở nên rõ dệt hơn bao giờ hết. Nhìn từ góc nhìn của Anh-xtanh, chúng ta cần “nghĩ tiếp” về trách nhiệm bảo vệ bản sắc cá nhân giữa làn sóng đồng điệu hóa của truyền thông số. Mỗi cá thể không chỉ thụ động tiếp nhận thông tin từ cộng đồng mạng mà phải rèn luyện năng lực phản biện, sáng tạo những giá trị nguyên bản. Một cộng đồng số lành mạnh chỉ có thể được tạo nên bởi những công dân số có bản lĩnh tinh thần, biết cống hiến tri thức vì sự phát triển chung của nhân loại.
+                    </p>
+                </div>
+            </div>
+
+            <!-- "THỰC HÀNH TIẾNG VIỆT" BOX -->
+            <div class="bg-emerald-50 border-2 border-emerald-400 rounded-xl p-6 shadow-md space-y-3">
+                <div class="flex items-center space-x-3 text-emerald-900">
+                    <i class="fa-solid fa-spell-check text-3xl"></i>
+                    <h3 class="text-xl font-bold uppercase">Thực hành tiếng Việt: Cách giải thích nghĩa của từ</h3>
+                </div>
+                <div class="space-y-2 text-gray-800">
+                    <p><strong>• Phương pháp giải thích từ:</strong> Trình bày khái niệm mà từ biểu thị, nêu rõ đặc điểm chung của loại và tính chất đặc thù của đối tượng.</p>
+                    <p><strong>• Ví dụ minh họa:</strong> Từ <em>"Tượng đài"</em> = Công trình kiến trúc lớn gồm một/nhóm tượng + đặt ở vị trí thích hợp + biểu trưng cho dân tộc/sự kiện lịch sử/người có công lớn.</p>
+                </div>
+            </div>
+
+            <!-- "EM CÓ BIẾT" BOX -->
+            <div class="bg-purple-50 border-2 border-purple-300 rounded-xl p-6 shadow-md space-y-3">
+                <div class="flex items-center space-x-3 text-purple-900">
+                    <i class="fa-solid fa-book-open-reader text-3xl"></i>
+                    <h3 class="text-xl font-bold uppercase">Em có biết</h3>
+                </div>
+                <div class="text-gray-800 leading-relaxed space-y-2">
+                    <p>
+                        An-be Anh-xtanh không chỉ là nhà vật lí thiên tài xây dựng nên Thuyết tương đối mở ra kỉ nguyên hạt nhân và vũ trụ học hiện đại, mà ông còn là một nhà tư tưởng hòa bình kiên trung. Tập tiểu luận <em>"Thế giới như tôi thấy"</em> tập hợp các bài viết, bài phát biểu và thư từ của ông, thể hiện quan điểm sâu sắc về tự do cá nhân, dân chủ, giáo dục và trách nhiệm nhân đạo của khoa học trước vận mệnh loài người.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION V: GAMESHOW AI LÀ TRIỆU PHÚ (10 CÂU TRẮC NGHIỆM) -->
+        <div class="millionaire-card p-6 md:p-8 space-y-6">
+            <div class="text-center space-y-2 border-b border-blue-800 pb-4">
+                <div class="inline-block px-4 py-1 rounded-full bg-yellow-400 text-slate-900 font-black text-xs uppercase tracking-widest">
+                    Gameshow Tri Thức
+                </div>
+                <h2 class="text-3xl font-extrabold text-yellow-400 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-trophy text-amber-300"></i> AI LÀ TRIỆU PHÚ <i class="fa-solid fa-trophy text-amber-300"></i>
+                </h2>
+                <p class="text-gray-300 text-sm">Củng cố tri thức 10 câu hỏi mức độ Biết - Hiểu - Vận dụng thấp</p>
+            </div>
+
+            <!-- Quiz Form Container -->
+            <form id="quizForm" class="space-y-6">
+
+                <!-- Q1 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 1 (Biết): Tác giả An-be Anh-xtanh được trao giải Nô-ben Vật lí năm nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q1')">
+                            <input type="radio" name="q1" value="A" class="hidden"> <span><strong>A.</strong> Năm 1911</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q1')">
+                            <input type="radio" name="q1" value="B" class="hidden"> <span><strong>B.</strong> Năm 1921</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q1')">
+                            <input type="radio" name="q1" value="C" class="hidden"> <span><strong>C.</strong> Năm 1931</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q1')">
+                            <input type="radio" name="q1" value="D" class="hidden"> <span><strong>D.</strong> Năm 1940</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 2 (Biết): Văn bản "Cộng đồng và cá thể" được trích từ tập sách nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q2')">
+                            <input type="radio" name="q2" value="A" class="hidden"> <span><strong>A.</strong> Vũ trụ và con người</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q2')">
+                            <input type="radio" name="q2" value="B" class="hidden"> <span><strong>B.</strong> Thuyết tương đối rộng</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q2')">
+                            <input type="radio" name="q2" value="C" class="hidden"> <span><strong>C.</strong> Thế giới như tôi thấy</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q2')">
+                            <input type="radio" name="q2" value="D" class="hidden"> <span><strong>D.</strong> Đi tìm lẽ sống</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 3 (Biết): Theo tác giả, để con người hơn được động vật, trước hết phải mang ơn điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q3')">
+                            <input type="radio" name="q3" value="A" class="hidden"> <span><strong>A.</strong> Vì có sức mạnh thể chất hơn</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q3')">
+                            <input type="radio" name="q3" value="B" class="hidden"> <span><strong>B.</strong> Vì được sống trong cộng đồng loài người</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q3')">
+                            <input type="radio" name="q3" value="C" class="hidden"> <span><strong>C.</strong> Vì tự mình chế tạo mọi thứ</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q3')">
+                            <input type="radio" name="q3" value="D" class="hidden"> <span><strong>D.</strong> Vì có khả năng săn bắn giỏi hơn</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 4 (Hiểu): Yếu tố nào giúp con người có khả năng tư duy vượt xa động vật cao cấp?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q4')">
+                            <input type="radio" name="q4" value="A" class="hidden"> <span><strong>A.</strong> Ngôn ngữ</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q4')">
+                            <input type="radio" name="q4" value="B" class="hidden"> <span><strong>B.</strong> Vũ khí</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q4')">
+                            <input type="radio" name="q4" value="C" class="hidden"> <span><strong>C.</strong> Bản năng sinh tồn</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q4')">
+                            <input type="radio" name="q4" value="D" class="hidden"> <span><strong>D.</strong> Sức mạnh bầy đàn</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 5 (Hiểu): Theo Anh-xtanh, yếu tố nào tạo ra các giá trị mới vật chất, tinh thần cho xã hội?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q5')">
+                            <input type="radio" name="q5" value="A" class="hidden"> <span><strong>A.</strong> Sự số đông của tập thể</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q5')">
+                            <input type="radio" name="q5" value="B" class="hidden"> <span><strong>B.</strong> Các cá thể sáng tạo đơn lẻ</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q5')">
+                            <input type="radio" name="q5" value="C" class="hidden"> <span><strong>C.</strong> Bộ máy hành chính</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q5')">
+                            <input type="radio" name="q5" value="D" class="hidden"> <span><strong>D.</strong> Các cơ quan truyền thông</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 6 (Hiểu): Biểu hiện nào chứng tỏ sự suy tàn cá tính trong chính trị thời đại tác giả?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q6')">
+                            <input type="radio" name="q6" value="A" class="hidden"> <span><strong>A.</strong> Thiếu người cầm lái và báo chí dễ thao túng đám đông</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q6')">
+                            <input type="radio" name="q6" value="B" class="hidden"> <span><strong>B.</strong> Có quá nhiều thủ lĩnh xuất sắc</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q6')">
+                            <input type="radio" name="q6" value="C" class="hidden"> <span><strong>C.</strong> Dân chúng tự do tranh luận phản biện</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q6')">
+                            <input type="radio" name="q6" value="D" class="hidden"> <span><strong>D.</strong> Không ai sử dụng báo chí</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 7 (Hiểu): Động lực giúp Anh-xtanh tin vào một tương lai tốt đẹp hơn cho nhân loại là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q7')">
+                            <input type="radio" name="q7" value="A" class="hidden"> <span><strong>A.</strong> Sự gia tăng dân số nhanh chóng</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q7')">
+                            <input type="radio" name="q7" value="B" class="hidden"> <span><strong>B.</strong> Sự phát triển kĩ thuật giải phóng sức lao động cho con người</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q7')">
+                            <input type="radio" name="q7" value="C" class="hidden"> <span><strong>C.</strong> Sự xuất hiện của chế độ độc tài</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q7')">
+                            <input type="radio" name="q7" value="D" class="hidden"> <span><strong>D.</strong> Việc hủy bỏ phân công lao động</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 8 (Vận dụng thấp): Hình ảnh so sánh "chứng cảm cúm của trẻ con" ngụ ý điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q8')">
+                            <input type="radio" name="q8" value="A" class="hidden"> <span><strong>A.</strong> Căn bệnh nan y không thể chữa khỏi</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q8')">
+                            <input type="radio" name="q8" value="B" class="hidden"> <span><strong>B.</strong> Biểu hiện bệnh tật tạm thời của nhân loại đang vươn mình lớn lên</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q8')">
+                            <input type="radio" name="q8" value="C" class="hidden"> <span><strong>C.</strong> Sự suy thoái vĩnh viễn của nền văn minh</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q8')">
+                            <input type="radio" name="q8" value="D" class="hidden"> <span><strong>D.</strong> Dịch bệnh y học có thật thời Trung cổ</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 9 (Vận dụng thấp): Một "cộng đồng lành mạnh" theo Anh-xtanh phải đạt chuẩn mực nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q9')">
+                            <input type="radio" name="q9" value="A" class="hidden"> <span><strong>A.</strong> Bắt buộc mọi người phải suy nghĩ hoàn toàn giống nhau</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q9')">
+                            <input type="radio" name="q9" value="B" class="hidden"> <span><strong>B.</strong> Gắn liền tính độc lập của cá thể với sự liên kết bên trong của xã hội</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q9')">
+                            <input type="radio" name="q9" value="C" class="hidden"> <span><strong>C.</strong> Xóa bỏ hoàn toàn trách nhiệm cá nhân</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q9')">
+                            <input type="radio" name="q9" value="D" class="hidden"> <span><strong>D.</strong> Để các cá thể hoàn toàn tách biệt không liên hệ xã hội</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-bold text-yellow-300 text-lg">Câu 10 (Vận dụng thấp): Bài học lớn nhất rút ra cho học sinh trong học tập và đời sống là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-btn" onclick="selectOption(this, 'q10')">
+                            <input type="radio" name="q10" value="A" class="hidden"> <span><strong>A.</strong> Luôn tuân theo ý kiến số đông không cần suy nghĩ</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q10')">
+                            <input type="radio" name="q10" value="B" class="hidden"> <span><strong>B.</strong> Tự rèn luyện tư duy độc lập, đồng thời tích cực đóng góp cho cộng đồng</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q10')">
+                            <input type="radio" name="q10" value="C" class="hidden"> <span><strong>C.</strong> Tách biệt hoàn toàn bản thân khỏi tập thể học sinh</span>
+                        </label>
+                        <label class="option-btn" onclick="selectOption(this, 'q10')">
+                            <input type="radio" name="q10" value="D" class="hidden"> <span><strong>D.</strong> Chỉ quan tâm đến lợi ích vật chất cá nhân</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg rounded-full shadow-lg transition-all transform hover:scale-105 border-2 border-emerald-300">
+                        <i class="fa-solid fa-paper-plane mr-2"></i>NỘP BÀI QUINZ
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Quiz Results Box -->
+            <div id="quizResult" class="hidden bg-slate-900 p-6 rounded-xl border-2 border-amber-400 space-y-4">
+                <h3 id="scoreText" class="text-2xl font-bold text-center"></h3>
+                <div id="detailedExpl" class="space-y-3 text-sm text-gray-200 divide-y divide-slate-800"></div>
+            </div>
+        </div>
+
+        <!-- SECTION VI: BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <div class="flex items-center">
+                <span class="badge-square">VI</span>
+                <h2 class="text-2xl font-bold text-gray-900 uppercase section-header-title flex-1">
+                    BÀI TẬP TỰ LUẬN
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+
+                <!-- Essay Q1 -->
+                <div class="border border-slate-300 rounded-xl p-5 space-y-3 bg-slate-50">
+                    <p class="font-bold text-slate-900 text-lg">
+                        
+                <!-- Essay Q3 -->
+                <div class="border border-slate-300 rounded-xl p-5 space-y-3 bg-slate-50">
+                    <p class="font-bold text-slate-900 text-lg">
+                        Bài tập  (Lập luận logic chuẩn đoán): Phân tích tính đúng/sai của mệnh đề logic sau:
+                    </p>
+                    <p class="italic text-gray-800">
+                        "Nếu một cá nhân hoàn toàn cách ly khỏi cộng đồng thì cá nhân đó vẫn có thể sáng tạo ra các chuẩn mực đạo đức và ngôn ngữ mới cho xã hội."
+                    </p>
+                    <button onclick="toggleAnswer('tl3')" class="px-4 py-2 rounded-lg btn-action text-sm">
+                        <i class="fa-solid fa-brain mr-1"></i>Xem đáp án & lời giải chi tiết
+                    </button>
+                    <div id="tl3" class="answer-box hidden bg-white">
+                        <p class="font-bold text-emerald-900">Lời giải chi tiết:</p>
+                        <p>• <strong>Kết luận:</strong> Mệnh đề trên là <strong>SAI</strong>.</p>
+                        <p>• <strong>Lí giải theo quan điểm Anh-xtanh:</strong> Cá thể đơn lẻ là chủ thể tư duy sáng tạo, nhưng sự phát triển của cá thể phải dựa trên <em>"mảnh đất dinh dưỡng của cộng đồng"</em>. Nếu cách ly hoàn toàn từ khi sinh ra, con người không có ngôn ngữ và môi trường xã hội để hình thành năng lực tư duy (chỉ tương đương động vật cao cấp), do đó không thể sáng tạo quy phạm hay ngôn ngữ cho cộng đồng.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-900 text-white text-center py-6 rounded-xl shadow-inner mt-8">
+            <p class="font-bold text-lg tracking-wide text-gray-200">Chương trình GDPT 2018 - Bộ sách thống nhất</p>
+            <p class="text-xs text-gray-400 mt-1">Thiết kế bài học tương tác Ngữ Văn 11 - Tích hợp MathJax & Tailwind CSS</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Toggle Answer Visibility
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Handle Option Selection Styling in Millionaire Quiz
+        function selectOption(element, qName) {
+            // Find all options for this question and remove selected state
+            const parent = element.closest('.grid');
+            const options = parent.querySelectorAll('.option-btn');
+            options.forEach(opt => opt.classList.remove('selected'));
+
+            // Add selected state to clicked element
+            element.classList.add('selected');
+            const radio = element.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+            }
+        }
+
+        // Quiz Logic and Checking
+        function checkQuiz() {
+            const answers = {
+                q1: 'B',
+                q2: 'C',
+                q3: 'B',
+                q4: 'A',
+                q5: 'B',
+                q6: 'A',
+                q7: 'B',
+                q8: 'B',
+                q9: 'B',
+                q10: 'B'
+            };
+
+            const explanations = {
+                q1: 'Đáp án B: Anh-xtanh nhận Giải Nobel Vật lí năm 1921 cho những cống hiến đối với vật lí lí thuyết và hiệu ứng quang điện.',
+                q2: 'Đáp án C: Văn bản là tiểu luận trích trong cuốn "Thế giới như tôi thấy".',
+                q3: 'Đáp án B: Theo Anh-xtanh, con người hơn động vật trước hết vì được sống trong cộng đồng loài người.',
+                q4: 'Đáp án A: Ngôn ngữ do cộng đồng tạo ra giúp con người phát triển khả năng tư duy.',
+                q5: 'Đáp án B: Các cá thể sáng tạo đơn lẻ mới tạo ra tài sản vật chất, tinh thần và quy phạm đạo đức mới.',
+                q6: 'Đáp án A: Biểu hiện suy tàn chính trị là thiếu thủ lĩnh và báo chí thao túng kích động đám đông.',
+                q7: 'Đáp án B: Kĩ thuật giúp giải phóng sức lao động, mang lại bảo đảm vật chất và thời gian rảnh rỗi.',
+                q8: 'Đáp án B: "Chứng cảm cúm trẻ con" ngụ ý căn bệnh tạm thời của một nhân loại đang trên đà lớn lên.',
+                q9: 'Đáp án B: Cộng đồng lành mạnh gắn liền giữa tính độc lập cá thể với sự liên kết xã hội.',
+                q10: 'Đáp án B: Cần rèn luyện tư duy độc lập sáng tạo đồng thời gắn bó cống hiến cho cộng đồng.'
+            };
+
+            let score = 0;
+            let total = 10;
+            let explHtml = '';
+
+            for (let i = 1; i <= total; i++) {
+                const qKey = 'q' + i;
+                const selected = document.querySelector(`input[name="${qKey}"]:checked`);
+                const userAns = selected ? selected.value : null;
+
+                if (userAns === answers[qKey]) {
+                    score++;
+                    explHtml += `<div class="p-2 border-l-4 border-green-500 bg-green-950/30">
+                        <span class="text-green-400 font-bold"><i class="fa-solid fa-check mr-1"></i>Câu ${i}: Đúng!</span> ${explanations[qKey]}
+                    </div>`;
+                } else {
+                    explHtml += `<div class="p-2 border-l-4 border-red-500 bg-red-950/30">
+                        <span class="text-red-400 font-bold"><i class="fa-solid fa-xmark mr-1"></i>Câu ${i}: Sai (Bạn chọn: ${userAns || 'Chưa chọn'}).</span> Đáp án đúng: <strong>${answers[qKey]}</strong>. ${explanations[qKey]}
+                    </div>`;
+                }
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            const scoreText = document.getElementById('scoreText');
+            const detailedExpl = document.getElementById('detailedExpl');
+
+            resultDiv.classList.remove('hidden');
+
+            if (score === total) {
+                scoreText.className = "text-2xl font-bold text-center text-green-400";
+                scoreText.innerHTML = `<i class="fa-solid fa-crown text-yellow-300 mr-2"></i>XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA: ${score}/${total} CÂU!`;
+            } else {
+                scoreText.className = "text-2xl font-bold text-center text-red-400";
+                scoreText.innerHTML = `KẾT QUẢ: ${score}/${total} CÂU ĐÚNG. HÃY XEM GIẢI CHI TIẾT BÊN DƯỚI:`;
+            }
+
+            detailedExpl.innerHTML = explHtml;
+
+            // Scroll to results smoothly
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
