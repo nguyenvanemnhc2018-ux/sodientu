@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Và tôi vẫn muốn mẹ...</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            color: #2d3748;
+        }
+        .roman-square {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #1E3A8A;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+        }
+        .arabic-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            background-color: #2563EB;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+        /* Millionaire Game Styling */
+        .millionaire-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 2px solid #f59e0b;
+        }
+        .millionaire-option {
+            background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+            border: 1px solid #64748b;
+            transition: all 0.2s ease;
+        }
+        .millionaire-option:hover {
+            background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+            border-color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-xl shadow-md overflow-hidden border border-blue-900">
+            <!-- Khối Chương (Màu 1: #1E3A8A) -->
+            <div class="p-4 text-center font-bold text-lg md:text-xl text-white uppercase tracking-wide" style="background-color: #1E3A8A;">
+                CHƯƠNG: GHI CHÉP VÀ TƯỞNG TƯỢNG TRONG KÍ
+            </div>
+            <!-- Đường kẻ mảnh phân cách -->
+            <div class="border-t border-blue-300/40"></div>
+            <!-- Khối Bài (Màu 2: #2563EB) -->
+            <div class="p-5 text-center font-extrabold text-xl md:text-2xl text-white uppercase tracking-wider" style="background-color: #2563EB;">
+                VĂN BẢN 2: VÀ TÔI VẪN MUỐN MẸ...
+                <span class="block text-sm font-normal normal-case mt-1 text-blue-100">(Trích "Những nhân chứng cuối cùng - Solo cho giọng trẻ em" - Xvét-la-na A-lếch-xi-ê-vích)</span>
+            </div>
+        </div>
+
+        <!-- INTRO BOX (Lời dẫn) -->
+        <div class="bg-white border border-gray-900 rounded-lg p-5 shadow-sm">
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-quote-left text-2xl text-gray-700 mt-1"></i>
+                <p class="italic text-gray-800 text-base leading-relaxed">
+                    "Chiến tranh không chỉ cướp đi sinh mạng, mà còn tước đoạt tuổi thơ và để lại những vết thương lòng không bao giờ lành. Qua lời kể chân thực của nhân chứng Din-na Cô-si-ắc - một đứa trẻ 8 tuổi trải qua Thế chiến thứ hai, tác phẩm giãi bày nỗi đau mất mát cùng khát vọng tình mẹ cháy bỏng, nhức nhối suốt cả cuộc đời."
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION I -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold uppercase text-blue-950 border-b-4 border-blue-900 pb-2 flex items-center">
+                <span class="roman-square">I</span> TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <!-- 1. Tác giả -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="arabic-circle">1</span> Tác giả Xvét-la-na A-lếch-xi-ê-vích (Svetlana Alexievich)
+                </h3>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><strong>Sinh năm:</strong> 1948, là nhà báo, nhà văn nổi tiếng người Bê-la-rút (Belarus).</li>
+                        <li><strong>Giải thưởng:</strong> Đạt giải <strong>Nobel Văn học năm 2015</strong>.</li>
+                        <li><strong>Phong cách sáng tác:</strong> Nổi tiếng với các tác phẩm văn học phi hư cấu (truyện ký tư liệu) dựng lên <em>"một tượng đài tưởng niệm sự thống khổ và lòng can đảm trong thời đại chúng ta"</em>.</li>
+                        <li><strong>Tác phẩm tiêu biểu:</strong> <em>Chiến tranh không có một khuôn mặt phụ nữ (1983)</em>, <em>Những nhân chứng cuối cùng (1985)</em>, <em>Lời nguyện cầu từ Chéc-nô-byl (1997)</em>...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Khung hình h1.png -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h1.png" alt="Chân dung tác giả Svetlana Alexievich và tác phẩm" class="mx-auto max-h-64 object-contain rounded shadow-sm mb-2" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'p-8 text-gray-500 font-medium\'><i class=\'fa-regular fa-image text-3xl mb-2 block\'></i>[Khung hình minh họa h1.png: Tác giả Svetlana Alexievich và cuốn sách Những nhân chứng cuối cùng]</div>';">
+                <span class="text-xs text-gray-500 italic">Hình 1: Tác giả Svetlana Alexievich - Giải Nobel Văn học 2015</span>
+            </div>
+
+            <!-- 2. Tác phẩm -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="arabic-circle">2</span> Tác phẩm "Và tôi vẫn muốn mẹ..."
+                </h3>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg space-y-2 text-gray-700">
+                    <p><strong>Xuất xứ:</strong> Rút từ cuốn <em>"Những nhân chứng cuối cùng – Solo cho giọng trẻ em"</em> (NXB Phụ nữ, Hà Nội, 2017).</p>
+                    <p><strong>Thể loại & Thao tác nghệ thuật:</strong> Truyện ký phi hư cấu sử dụng hình thức phỏng vấn các nhân chứng từng trải qua Thế chiến thứ hai từ thời thơ bé. Tác giả đóng vai trò ghi chép, chọn lọc và sắp xếp sự kiện.</p>
+                    <p><strong>Nhân chứng kể chuyện:</strong> Din-na Cô-si-ắc (Zina Kosyak) – lúc 8 tuổi học xong lớp Một thì chiến tranh bùng nổ; hiện là thợ tóc.</p>
+                </div>
+            </div>
+
+            <!-- Khung Em có biết -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg space-y-1">
+                <h4 class="font-bold text-amber-800 flex items-center">
+                    <i class="fa-solid fa-lightbulb mr-2"></i> EM CÓ BIẾT?
+                </h4>
+                <p class="text-sm text-amber-900 leading-relaxed">
+                    Văn học phi hư cấu (Non-fiction) của Svetlana Alexievich không sáng tạo ra nhân vật hư cấu mà dựa trên hàng trăm cuộc phỏng vấn ghi âm thực tế. Bà ghép nối những "giọng nói độc thoại" thành một bản hợp xướng lịch sử sống động và nghẹn ngào cảm xúc.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION II -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold uppercase text-blue-950 border-b-4 border-blue-900 pb-2 flex items-center">
+                <span class="roman-square">II</span> TÓM TẮT VÀ ĐỌC HIỂU CHI TIẾT NỘI DUNG
+            </h2>
+
+            <!-- 1. Bối cảnh bùng nổ chiến tranh -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="arabic-circle">1</span> Sự kiện ban đầu & Kí ức tuổi thơ bị xé rách
+                </h3>
+                <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg space-y-2">
+                    <p class="text-gray-700"><strong>Tháng 5/1941:</strong> Din-na hoàn thành lớp Một, được bố mẹ tiễn đi trại hè đội viên ở Gô-rô-đi-sa (gần Min-xcơ). Mới bơi được 1 lần thì 2 ngày sau chiến tranh bùng nổ.</p>
+                    <p class="text-gray-700"><strong>Ấn tượng đầu tiên:</strong> Lũ trẻ thơ ngây hò reo "Ura!" khi thấy máy bay Đức vì ngỡ là máy bay lạ, cho đến khi bom dội xuống. <em>"Khi đó tất cả màu sắc đều biến mất"</em> và từ "chết chóc" khó hiểu bắt đầu xuất hiện.</p>
+                </div>
+
+                <!-- Mục Hoạt động / Bàn tay -->
+                <div class="bg-sky-50 border border-sky-200 rounded-lg p-4 space-y-2">
+                    <div class="flex items-center text-sky-800 font-bold">
+                        <i class="fa-solid fa-hand-pointer mr-2 text-sky-600"></i> HOẠT ĐỘNG KHÁM PHÁ: Hoàn cảnh chuyến đi trại hè có gì khác thường?
+                    </div>
+                    <p class="text-sm text-gray-600">Hãy suy nghĩ về sự thay đổi đột ngột từ không khí trại hè vui tươi sang thảm họa chiến tranh.</p>
+                    <button onclick="toggleAnswer('hd-1')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                        Xem hướng giải quyết
+                    </button>
+                    <div id="hd-1" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700">
+                        <strong>Hướng giải quyết:</strong> Chuyến đi trại hè bắt đầu bằng sự tiễn đưa đầm ấm của cha mẹ, nhưng lập tức bị cắt đứt bởi tiếng bom đạn. Lũ trẻ bị nhồi nhét lương thực vào áo gối, phải lên tàu tản cư xa gia đình, di chuyển suốt cả tháng trời trong lo sợ và không thể trở về quê nhà Min-xcơ đã bị cháy rụi.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khung hình h2.png -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h2.png" alt="Cuộc tản cư của trẻ em trong chiến tranh" class="mx-auto max-h-64 object-contain rounded shadow-sm mb-2" onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'p-8 text-gray-500 font-medium\'><i class=\'fa-regular fa-image text-3xl mb-2 block\'></i>[Khung hình minh họa h2.png: Hình ảnh đoàn tàu tản cư và trẻ em trong Thế chiến thứ hai]</div>';">
+                <span class="text-xs text-gray-500 italic">Hình 2: Những chuyến tàu tản cư đầy đau thương thời chiến</span>
+            </div>
+
+            <!-- 2. Cuộc sống sơ tán & Nạn đói -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="arabic-circle">2</span> Tản cư đến Mô-đô-vi-a & Bức tranh nạn đói tàn khốc
+                </h3>
+                <div class="bg-indigo-50/50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2 text-gray-700">
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Tấm lòng với chú lính:</strong> Trên đường đi, trẻ em nhường lại ngũ cốc, đường cho những người lính bị thương và gọi họ là "các ba".</li>
+                        <li><strong>Sống trong thiếu thốn:</strong> Đến Mô-đô-vi-a, 250 đứa trẻ ngủ trên rơm rạ, 4 đứa chung 1 đôi ủng. Các cô bảo mẫu nhìn học sinh khóc vì không có gì ăn.</li>
+                        <li><strong>Hiện thực xót xa:</strong> Phải giết con ngựa Mai-ca già dịu dàng chở nước để lấy mẩu thịt nhỏ nấu xúp; trẻ em tước vỏ cây, ăn sạch cỏ dại, khoét túi áo tích cỏ để nhai lại; ăn bánh mì đắng trộn rau muối, hoa hồ đào.</li>
+                        <li><strong>Bức tranh gai góc:</strong> Bé gái điên rình canh con chuột trong hang vì quá đói; nồi nước tầm ma đặt trước mỗi nhà để người tản cư hớp cho ấm bụng.</li>
+                    </ul>
+                </div>
+
+                <!-- Mục Câu hỏi dấu ? -->
+                <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-2">
+                    <div class="flex items-center text-blue-900 font-bold">
+                        <i class="fa-solid fa-circle-question mr-2 text-blue-700"></i> CÂU HỎI TRUY VẤN (?): Chi tiết "con ngựa Mai-ca" và "những cái nồi tầm ma" thể hiện điều gì?
+                    </div>
+                    <button onclick="toggleAnswer('q-1')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                        Xem câu trả lời
+                    </button>
+                    <div id="q-1" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700">
+                        <strong>Trả lời:</strong>
+                        <br>- <em>Con ngựa Mai-ca:</em> Tượng trưng cho sự hy sinh tận cùng và bi kịch nhân tính khi người ta buộc phải ăn thịt bạn đồng hành gắn bó để duy trì sự sống.
+                        <br>- <em>Nồi nước tầm ma:</em> Thể hiện tình đồng bào, sự sẻ chia ấm áp của những con người nghèo khổ dành cho dòng người tị nạn trong giông bão chiến tranh.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Nỗi đau mất mẹ và khao khát tình thân -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="arabic-circle">3</span> Trạng thái tâm lý & Nỗi khao khát tình mẹ dai dẳng
+                </h3>
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg space-y-2 text-gray-700">
+                    <p><strong>Nỗi ám ảnh từ "Mẹ":</strong> Đêm đến, trẻ em khóc rền gọi ba mẹ. Các cô giáo phải né tránh từ "mẹ" trong sách truyện vì chỉ cần ai nhắc đến, tất cả sẽ gào khóc không nguôi.</p>
+                    <p><strong>Sự nhầm lẫn ngây thơ:</strong> Din-na khai mình "thi lại" lớp Một chỉ vì nghĩ thi lại nghĩa là nhận được bằng khen.</p>
+                    <p><strong>Chuyến trốn chạy tìm mẹ:</strong> Trốn trại đi tìm mẹ, kiệt sức trong rừng được ông Bôn-sa-cốp cứu cưu mang. Chiến tranh kết thúc, chờ 2 tuần không thấy ai đón, cô bé lại trốn dưới gầm tàu về Min-xcơ.</p>
+                    <p><strong>Bi kịch cay đắng:</strong> Bố mẹ cô không bỏ rơi cô mà đã hy sinh trong trận bom khi lao ra ga tàu tìm con.</p>
+                </div>
+            </div>
+
+            <!-- Khung Em có thể -->
+            <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg space-y-1">
+                <h4 class="font-bold text-emerald-800 flex items-center">
+                    <i class="fa-solid fa-user-check mr-2"></i> EM CÓ THỂ
+                </h4>
+                <p class="text-sm text-emerald-900 leading-relaxed">
+                    Đánh giá tác động của câu kết: <em>"Tôi đã năm mươi mốt tuổi, tôi có hai con. Và tôi vẫn còn muốn mẹ."</em>. Qua đó, em có thể cảm nhận sâu sắc rằng thời gian có thể trôi qua, con người có thể trưởng thành và làm cha làm mẹ, nhưng đứa trẻ bị tổn thương trong chiến tranh mãi mãi mang một khoảng trống vô tận không gì khỏa lấp được.
+                </p>
+            </div>
+
+            <!-- Khung Lưu ý -->
+            <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg space-y-1">
+                <h4 class="font-bold text-purple-800 flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> LƯU Ý KHI ĐỌC TUYỂN TẬP KÝ PHI HƯ CẤU
+                </h4>
+                <p class="text-sm text-purple-900 leading-relaxed">
+                    Khi đọc văn bản tư liệu/ký sự lịch sử: Cần phân biệt rõ thông tin khách quan (sự kiện, thời gian, địa danh) và cảm xúc, góc nhìn cá nhân của nhân chứng. Tác giả là người ghi lại nhưng đóng vai trò định hướng nghệ thuật qua việc lựa chọn và sắp xếp các chi tiết đắt giá.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION III -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold uppercase text-blue-950 border-b-4 border-blue-900 pb-2 flex items-center">
+                <span class="roman-square">III</span> CÂU HỎI VÀ BÀI TẬP SGK (CÓ LỜI GIẢI CHI TIẾT)
+            </h2>
+
+            <!-- Câu 1 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">Câu 1 (Trang 44): Hãy tóm lược nội dung được kể lại trong văn bản và cho biết những điểm nhấn quan trọng của câu chuyện.</p>
+                <button onclick="toggleAnswer('sgk-q1')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải
+                </button>
+                <div id="sgk-q1" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-1">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p><strong>- Tóm lược:</strong> Văn bản kể về kí ức chiến tranh của Din-na Cô-si-ắc lúc 8 tuổi. Sau chuyến đi trại hè năm 1941, chiến tranh nổ ra, cô bé phải tản cư qua nhiều nơi tới Mô-đô-vi-a. Tại trại mồ côi, cô đối mặt với nạn đói khủng khiếp, thiếu thốn vật chất và nỗi đau xa cha mẹ. Sau chiến tranh, cô chờ đợi bố mẹ nhưng họ đã qua đời vì bom đạn khi đi tìm cô. Đến năm 51 tuổi, cô vẫn đau đớn nhớ mẹ.</p>
+                    <p><strong>- Điểm nhấn quan trọng:</strong> Sự biến mất đột ngột của màu sắc bình yên; sự khắc nghiệt của nạn đói (ăn cỏ, giết ngựa Mai-ca); sự khao khát từ "mẹ" và kết thúc bi kịch mất cha mẹ.</p>
+                </div>
+            </div>
+
+            <!-- Câu 2 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">Câu 2 (Trang 44): Chỉ ra những yếu tố tạo nên tính xác thực của các sự kiện được nhân vật kể lại cũng như trạng thái tâm lý của nhân vật.</p>
+                <button onclick="toggleAnswer('sgk-q2')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải
+                </button>
+                <div id="sgk-q2" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-1">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p><strong>- Yếu tố tạo tính xác thực:</strong> Tên nhân vật cụ thể (Din-na Cô-si-ắc, ông Bôn-sa-cốp, con ngựa Mai-ca), địa danh rõ ràng (Gô-rô-đi-sa, Min-xcơ, Mô-đô-vi-a), mốc thời gian (tháng 5 năm 1941), các chi tiết sinh hoạt chân thực (4 đứa chung đôi ủng, ăn vỏ cây, nồi nước tầm ma).</p>
+                    <p><strong>- Trạng thái tâm lý:</strong> Thơ ngây ngơ ngác ban đầu \(\rightarrow\) Sợ hãi trước cái chết \(\rightarrow\) Ám ảnh bởi nạn đói \(\rightarrow\) Mòn mỏi, tuyệt vọng vì khát khao tình mẹ.</p>
+                </div>
+            </div>
+
+            <!-- Câu 3 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">Câu 3 (Trang 44): Phân tích một số chi tiết, hình ảnh tạo nên bức tranh cuộc sống đặc biệt được tái hiện trong văn bản. Chi tiết nào gây ấn tượng mạnh nhất?</p>
+                <button onclick="toggleAnswer('sgk-q3')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải
+                </button>
+                <div id="sgk-q3" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-1">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p><strong>- Các chi tiết đặc sắc:</strong> Nồi nước tầm ma trước cửa mỗi nhà, hình ảnh con ngựa Mai-ca già bị giết làm xúp, cô bé điên canh con chuột trong hang, những đứa trẻ khóc gào đêm khuya khi nghe ai đó nhắc từ "mẹ".</p>
+                    <p><strong>- Chi tiết gây ấn tượng mạnh nhất:</strong> Lũ trẻ tước vỏ cây, khoét túi áo đút cỏ vào nhai lại như "những con vật nhai lại". Chi tiết này phơi bày tận cùng sự tàn khốc của nạn đói do chiến tranh gây ra, biến những đứa trẻ thơ thành sinh linh tội nghiệp đấu tranh giành giật sự sống từ ngọn cỏ.</p>
+                </div>
+            </div>
+
+            <!-- Câu 4 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">Câu 4 (Trang 45): Vai trò và thái độ của tác giả khi ghi lại các sự kiện do nhân chứng kể lại?</p>
+                <button onclick="toggleAnswer('sgk-q4')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải
+                </button>
+                <div id="sgk-q4" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-1">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p><strong>- Vai trò tác giả:</strong> Người lắng nghe, ghi chép, lắng lọc và tổ chức các lời kể riêng lẻ thành một chỉnh thể nghệ thuật có sức cuốn hút và xâu chuỗi logic.</p>
+                    <p><strong>- Thái độ:</strong> Đồng cảm sâu sắc, tôn trọng tính khách quan của sự thật lịch sử, thể hiện niềm căm giận chiến tranh phi nghĩa và nâng niu từng nỗi đau của con người.</p>
+                </div>
+            </div>
+
+            <!-- Câu 5 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">Câu 5 (Trang 45): Yếu tố tạo nên sức lay động của văn bản và thông điệp bạn nhận được?</p>
+                <button onclick="toggleAnswer('sgk-q5')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải
+                </button>
+                <div id="sgk-q5" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-1">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p><strong>- Yếu tố lay động:</strong> Tính chân thực tuyệt đối của giọng kể trẻ thơ, những chi tiết ám ảnh về nạn đói và nỗi khát khao tình mẫu tử tột cùng.</p>
+                    <p><strong>- Thông điệp:</strong> Tố cáo tội ác chiến tranh tàn bạo; lên tiếng bảo vệ hòa bình và quyền được sống hạnh phúc của trẻ em; khẳng định giá trị thiêng liêng vô giá của tình cảm gia đình.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION IV: GAMESHOW AI LÀ TRIỆU PHÚ (10 CÂU TRẮC NGHIỆM) -->
+        <div class="millionaire-card rounded-xl p-6 text-white space-y-6 shadow-2xl">
+            <div class="text-center border-b border-amber-500/50 pb-4">
+                <span class="bg-amber-500 text-slate-950 font-black px-4 py-1 rounded-full text-xs uppercase tracking-widest">Gameshow Trắc Nghiệm</span>
+                <h2 class="text-2xl font-black text-amber-400 mt-2 uppercase flex items-center justify-center">
+                    <i class="fa-solid fa-trophy mr-3 text-amber-300"></i> AI LÀ TRIỆU PHÚ KHAN GIẢ KIẾN THỨC
+                </h2>
+                <p class="text-slate-300 text-sm mt-1">Chọn đáp án đúng nhất cho 10 câu hỏi dưới đây để hoàn thành thử thách!</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 1: Tác giả Svetlana Alexievich được trao giải Nobel Văn học vào năm nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q1" value="A"> <span>A. 2010</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q1" value="B"> <span>B. 2015</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q1" value="C"> <span>C. 2018</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q1" value="D"> <span>D. 2020</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 2: Nhân chứng Din-na Cô-si-ắc trong văn bản bao nhiêu tuổi khi chiến tranh bùng nổ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q2" value="A"> <span>A. 6 tuổi</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q2" value="B"> <span>B. 8 tuổi</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q2" value="C"> <span>C. 10 tuổi</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q2" value="D"> <span>D. 12 tuổi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 3: Nơi trẻ em được đưa đến sơ tán sống qua mùa đông khắc nghiệt là vùng đất nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q3" value="A"> <span>A. Gô-rô-đi-sa</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q3" value="B"> <span>B. Min-xcơ</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q3" value="C"> <span>C. Mô-đô-vi-a</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q3" value="D"> <span>D. Mát-xcơ-va</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 4: Vì sao các cô bảo mẫu phải tránh nhắc đến từ "mẹ" trước mặt bọn trẻ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q4" value="A"> <span>A. Vì quy định của trại sơ tán</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q4" value="B"> <span>B. Vì lũ trẻ sẽ giận dỗi không ăn cơm</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q4" value="C"> <span>C. Vì chỉ cần nghe thấy, tất cả lũ trẻ sẽ gào khóc không nguôi</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q4" value="D"> <span>D. Vì bố mẹ bọn trẻ đều đã dặn trước như vậy</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 5: Tên con ngựa già dịu dàng dùng để chở nước trong trại mồ côi là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q5" value="A"> <span>A. Mai-ca</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q5" value="B"> <span>B. Bôn-sa</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q5" value="C"> <span>C. Ka-tiu-sa</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q5" value="D"> <span>D. An-na</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 6: Vì sao nhân chứng Din-na lại nói mình "thi lại" khi được hỏi ở trại mồ côi?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q6" value="A"> <span>A. Vì cô bé thực sự học kém</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q6" value="B"> <span>B. Vì cô bé nghĩ "thi lại" tức là bằng khen</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q6" value="C"> <span>C. Vì cô bé muốn ở lại lớp để đợi bố mẹ</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q6" value="D"> <span>D. Vì cô giáo vô tình ghi nhầm vào học bạ</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 7: Tác phẩm "Và tôi vẫn muốn mẹ..." thuộc thể loại văn học nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q7" value="A"> <span>A. Truyện ngắn viễn tưởng</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q7" value="B"> <span>B. Truyện ký phi hư cấu (Kí tư liệu)</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q7" value="C"> <span>C. Tiểu thuyết lịch sử hư cấu</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q7" value="D"> <span>D. Kịch bản phim tài liệu</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 8: Người đã tìm thấy Din-na trong rừng khi cô trốn khỏi trại mồ côi là ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q8" value="A"> <span>A. Bố của cô</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q8" value="B"> <span>B. Ông già Bôn-sa-cốp</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q8" value="C"> <span>C. Cô giáo chủ nhiệm</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q8" value="D"> <span>D. Một người lính tản cư</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 9: Sự thật đau lòng về bố mẹ của Din-na sau chiến tranh là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q9" value="A"> <span>A. Họ đã chuyển sang sống ở quốc gia khác</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q9" value="B"> <span>B. Họ đã hy sinh trong trận bom khi chạy ra ga tìm con</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q9" value="C"> <span>C. Bố cô hy sinh, còn mẹ cô đã lập gia đình mới</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q9" value="D"> <span>D. Họ bị mất trí nhớ nên không thể quay lại đón cô</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-700">
+                    <p class="font-bold text-amber-300 mb-3">Câu 10: Ý nghĩa sâu sắc nhất của câu kết "Tôi đã năm mươi mốt tuổi, tôi có hai con. Và tôi vẫn còn muốn mẹ." là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q10" value="A"> <span>A. Thể hiện sự nuối tiếc tuổi trẻ đã qua</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q10" value="B"> <span>B. Khẳng định nỗi đau mất mẹ do chiến tranh là vết thương vĩnh viễn không thể chữa lành</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q10" value="C"> <span>C. Thể hiện mong muốn được trở lại tuổi thơ để đi trại hè</span>
+                        </label>
+                        <label class="millionaire-option p-3 rounded cursor-pointer flex items-center space-x-2">
+                            <input type="radio" name="q10" value="D"> <span>D. Lời trách móc cha mẹ đã không đến đón mình đúng hẹn</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Button Nộp Bài -->
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold rounded-full shadow-lg transform hover:scale-105 transition uppercase tracking-wider">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> NỘP BÀI VÀ XEM KẾT QUẢ
+                    </button>
+                </div>
+            </form>
+
+            <!-- Kết quả Quiz -->
+            <div id="quizResult" class="hidden mt-6 p-6 bg-white rounded-lg text-slate-900 space-y-4"></div>
+        </div>
+
+        <!-- SECTION V: 2 BÀI TẬP TỰ LUẬN 
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold uppercase text-blue-950 border-b-4 border-blue-900 pb-2 flex items-center">
+                <span class="roman-square">V</span> BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH NÂNG CAO
+            </h2>
+
+            <!-- Bài 1 -->
+            <div class="bg-slate-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">
+                    <strong>
+
+            <!-- Bài 1 -->
+            <div class="bg-slate-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">
+                    <strong>Bài 1 (Thống kê và So sánh nghệ thuật):</strong> Lập bảng so sánh giữa hình thức Kí hư cấu (như tiểu thuyết/truyện ngắn) và Kí phi hư cấu (như tác phẩm của Svetlana Alexievich) về các tiêu chí: Nguồn gốc sự kiện, Tác giả, và Tính xác thực.
+                </p>
+                <button onclick="toggleAnswer('tl-2')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="tl-2" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-2">
+                    <p><strong>Lời giải chi tiết: Bảng so sánh</strong></p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-slate-300 text-center text-sm">
+                            <thead>
+                                <tr class="bg-slate-200">
+                                    <th class="border border-slate-300 p-2">Tiêu chí</th>
+                                    <th class="border border-slate-300 p-2">Kí Hư Cấu</th>
+                                    <th class="border border-slate-300 p-2">Kí Phi Hư Cấu (Văn bản 2)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-slate-300 p-2 font-medium">Nguồn gốc sự kiện</td>
+                                    <td class="border border-slate-300 p-2">Do tác giả tưởng tượng, sáng tác dựa trên quan sát.</td>
+                                    <td class="border border-slate-300 p-2">Dựa hoàn toàn trên sự thật lịch sử và nhân chứng có thật.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-300 p-2 font-medium">Vai trò tác giả</td>
+                                    <td class="border border-slate-300 p-2">Nhà sáng tác, hư cấu nhân vật và cốt truyện.</td>
+                                    <td class="border border-slate-300 p-2">Người ghi chép, phỏng vấn, chọn lọc và tổng hợp tư liệu.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-300 p-2 font-medium">Tính xác thực</td>
+                                    <td class="border border-slate-300 p-2">Tính chân thực nghệ thuật (chân thực theo logic đời sống).</td>
+                                    <td class="border border-slate-300 p-2">Tính xác thực lịch sử tuyệt đối (tên tuổi, địa danh, mốc thời gian).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài 2 -->
+            <div class="bg-slate-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                <p class="font-semibold text-gray-800">
+                    <strong>Bài 2 (Viết đoạn văn kết nối đọc - viết):</strong> Viết đoạn văn khoảng 150 chữ phân tích ý nghĩa của hai câu cuối văn bản: <em>"Tôi đã năm mươi mốt tuổi, tôi có hai con. Và tôi vẫn còn muốn mẹ."</em>.
+                </p>
+                <button onclick="toggleAnswer('tl-3')" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded transition">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="tl-3" class="hidden mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 rounded text-sm text-gray-700 space-y-2">
+                    <p><strong>Đoạn văn mẫu tham khảo:</strong></p>
+                    <p class="italic leading-relaxed bg-white p-3 border rounded">
+                        Hai câu kết của văn bản: "Tôi đã năm mươi mốt tuổi, tôi có hai con. Và tôi vẫn còn muốn mẹ." là một nốt lặng đầy nhức nhối, dồn nén toàn bộ sức nặng cảm xúc của tác phẩm. Sự đối lập giữa độ tuổi "năm mươi mốt" cùng vị thế "đã có hai con" của một người phụ nữ trưởng thành với tiếng gọi "vẫn còn muốn mẹ" tha thiết đã lột tả tận cùng nỗi cô đơn và khoảng trống không gì bù đắp nổi. Thời gian có thể trôi qua hơn bốn thập kỷ, vết thương thể xác có thể lành, nhưng ký ức tuổi thơ bị xé rách bởi bom đạn tàn khốc vẫn vẹn nguyên. Câu nói bất hủ ấy vừa là lời kết án đanh thép đối với tội ác chiến tranh phi nghĩa – thứ đã tước đoạt tuổi thơ và tình mẫu tử thiêng liêng, vừa là tiếng gọi nhân văn tha thiết khẳng định: nhu cầu yêu thương và có mẹ là khát vọng vĩnh cữu của con người, bất chấp tuổi tác hay thời gian.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="bg-gray-800 text-gray-300 text-center py-4 rounded-xl shadow-inner text-sm font-medium">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hàm Toggle Lời giải / Đáp án
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Hàm Kiểm tra Trắc nghiệm Quiz "Ai là triệu phú"
+        function checkQuiz() {
+            const answers = {
+                q1: 'B',
+                q2: 'B',
+                q3: 'C',
+                q4: 'C',
+                q5: 'A',
+                q6: 'B',
+                q7: 'B',
+                q8: 'B',
+                q9: 'B',
+                q10: 'B'
+            };
+
+            const explanations = {
+                q1: "Svetlana Alexievich được trao giải Nobel Văn học năm 2015 nhờ những tác phẩm ghi chép lịch sử độc đáo.",
+                q2: "Nhân chứng Din-na Cô-si-ắc học xong lớp Một năm 1941 (lúc 8 tuổi) thì chiến tranh bùng nổ.",
+                q3: "Bọn trẻ tản cư được chở đi cả tháng trời và đưa đến vùng Mô-đô-vi-a (Mordovia).",
+                q4: "Chỉ cần ai nhắc đến từ 'mẹ', tất cả 250 đứa trẻ trong trại lập tức gào khóc không nguôi vì quá nhớ thương cha mẹ.",
+                q5: "Con ngựa già chở nước có tên là Mai-ca, sau đó bị giết để nấu xúp cứu sống lũ trẻ qua nạn đói.",
+                q6: "Nhân chứng hồi tưởng ngây thơ: 'tôi nghĩ: Thi lại tức là bằng khen' nên đã tự nhận mình thi lại.",
+                q7: "Tác phẩm thuộc thể loại Truyện ký phi hư cấu (Kí tư liệu phỏng vấn nhân chứng thực tế).",
+                q8: "Ông già Bôn-sa-cốp đã tìm thấy Din-na đói lả trong rừng và mang cô về gia đình cưu mang.",
+                q9: "Cả bố và mẹ cô đều đã hy sinh trong một trận bom khi lao ra ga tàu tìm con.",
+                q10: "Câu kết khẳng định nỗi đau mất mẹ và bi kịch tuổi thơ do chiến tranh gây ra là vết thương vĩnh viễn không bao giờ lành."
+            };
+
+            let score = 0;
+            let total = 10;
+            let detailHTML = '';
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const correct = answers[qName];
+
+                if (selected && selected.value === correct) {
+                    score++;
+                    detailHTML += `<p class="text-emerald-600 font-semibold">✓ Câu ${i}: Đúng! (${selected.value}) - ${explanations[qName]}</p>`;
+                } else {
+                    const userVal = selected ? selected.value : 'Chưa chọn';
+                    detailHTML += `<p class="text-rose-600 font-semibold">✗ Câu ${i}: Sai! (Bạn chọn: ${userVal} | Đáp án đúng: ${correct}) - ${explanations[qName]}</p>`;
+                }
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            resultDiv.classList.remove('hidden');
+
+            let headerText = '';
+            if (score === total) {
+                headerText = `<div class="p-4 bg-emerald-100 border border-emerald-400 rounded-lg text-emerald-800 font-bold text-lg text-center mb-4">
+                    🎉 XIN CHÚC MỪNG! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ KIẾN THỨC! <br> Đạt điểm tuyệt đối: ${score}/${total} điểm!
+                </div>`;
+            } else {
+                headerText = `<div class="p-4 bg-amber-100 border border-amber-400 rounded-lg text-amber-900 font-bold text-lg text-center mb-4">
+                    BẠN ĐÃ HOÀN THÀNH BÀI THI! <br> Kết quả: <span class="text-rose-600 text-xl">${score}/${total}</span> câu đúng.
+                </div>`;
+            }
+
+            resultDiv.innerHTML = headerText + '<div class="space-y-2 text-sm border-t pt-3">' + detailHTML + '</div>';
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

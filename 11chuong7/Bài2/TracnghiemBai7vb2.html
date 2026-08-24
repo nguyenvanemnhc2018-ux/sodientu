@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức Văn học - Bài "Và tôi vẫn muốn mẹ..."</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .text-cream {
+            color: #FFFDD0;
+        }
+
+        .bg-dark-card {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+        }
+
+        .bg-dark-inner {
+            background-color: #182234;
+        }
+
+        .option-card {
+            transition: all 0.2s ease-in-out;
+            background-color: #131c2e;
+            border: 1px solid #1e293b;
+        }
+
+        .option-card:hover {
+            border-color: #3b82f6;
+            background-color: #1e293b;
+        }
+
+        .option-card.selected {
+            border-color: #f59e0b;
+            background-color: #261f18;
+        }
+
+        .option-card.correct-answer {
+            border-color: #10b981;
+            background-color: #064e3b;
+        }
+
+        .option-card.wrong-answer {
+            border-color: #ef4444;
+            background-color: #7f1d1d;
+        }
+
+        .btn-q-nav {
+            transition: all 0.15s ease;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="p-2 md:p-6 min-h-screen flex flex-col justify-between">
+
+    <header class="max-w-6xl mx-auto w-full mb-6 bg-dark-card rounded-xl p-4 shadow-2xl flex flex-col md:flex-row justify-between items-center border-b border-amber-900/40">
+        <div class="flex items-center gap-3 mb-2 md:mb-0">
+            <div class="p-3 bg-amber-600/20 rounded-lg border border-amber-500/30">
+                <i class="fa-solid fa-book-open text-amber-400 text-2xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl md:text-2xl font-bold text-cream tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                <p class="text-xs md:text-sm text-gray-300 font-medium">
+                    Bài: "VÀ TÔI VẪN MUỐN MẸ..." <span class="text-gray-400">(Trích Những nhân chứng cuối cùng - Svetlana Alexievich)</span>
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <span id="mode-badge" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 border border-gray-700 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+                <span>Chưa chọn chế độ</span>
+            </span>
+            <div id="timer-box" class="hidden px-3 py-1.5 rounded-full text-xs font-bold bg-amber-500/20 border border-amber-500/40 text-amber-300 flex items-center gap-2">
+                <i class="fa-regular fa-clock animate-pulse"></i>
+                <span id="timer-display">20:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-6xl mx-auto w-full flex-grow flex flex-col justify-center">
+
+        <!-- STATE 1: START SCREEN -->
+        <div id="state-start" class="bg-dark-card rounded-2xl p-6 md:p-10 shadow-2xl border border-gray-800">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <div class="w-16 h-16 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-amber-500/30">
+                    <i class="fa-solid fa-check-double text-amber-400 text-2xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight uppercase mb-3">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="text-amber-300 font-semibold">\(20 \text{ câu hỏi}\)</span> bám sát nội dung bài học <span class="text-amber-200 italic font-medium">"Và tôi vẫn muốn mẹ..."</span> với \(4 \text{ mức độ tư duy}\) chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 Difficulty level indicators -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                <div class="bg-dark-inner p-4 rounded-xl border border-blue-900/50">
+                    <div class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">MỨC BIẾT (\(8 \text{ CÂU}\))</div>
+                    <p class="text-xs text-gray-400">Kiểm tra thông tin sự kiện, nhân vật, bối cảnh trực tiếp trong văn bản.</p>
+                </div>
+                <div class="bg-dark-inner p-4 rounded-xl border border-emerald-900/50">
+                    <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">MỨC HIỂU (\(7 \text{ CÂU}\))</div>
+                    <p class="text-xs text-gray-400">Giải thích ý nghĩa chi tiết, hình ảnh, tâm lý nhân vật và vai trò tác giả.</p>
+                </div>
+                <div class="bg-dark-inner p-4 rounded-xl border border-amber-900/50">
+                    <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">VẬN DỤNG (\(3 \text{ CÂU}\))</div>
+                    <p class="text-xs text-gray-400">Phân tích tác phẩm, liên kết các phần để làm rõ chủ đề & tư tưởng.</p>
+                </div>
+                <div class="bg-dark-inner p-4 rounded-xl border border-purple-900/50">
+                    <div class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">VD CAO (\(2 \text{ CÂU}\))</div>
+                    <p class="text-xs text-gray-400">Lồng ghép nghệ thuật phức tạp, đánh giá giá trị nhân văn sâu sắc.</p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Cards -->
+            <div class="text-center mb-4">
+                <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:</span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Practice Mode Card -->
+                <div onclick="startQuiz('practice')" class="group cursor-pointer bg-dark-inner hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-amber-500/60 transition-all duration-300 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">1. Chế độ Luyện Tập</h3>
+                            <span class="px-2.5 py-1 text-xs font-medium bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">Không giới hạn</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-4">Học tập & củng cố kiến thức không áp lực</p>
+                        <p class="text-xs md:text-sm text-gray-300 leading-relaxed mb-6">
+                            Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                        </p>
+                    </div>
+                    <button class="w-full py-2.5 bg-slate-700 group-hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <span>Bắt đầu Luyện tập</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Timed Mode Card -->
+                <div onclick="startQuiz('timed')" class="group cursor-pointer bg-dark-inner hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-amber-500/60 transition-all duration-300 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">2. Chế độ Tính Giờ</h3>
+                            <span class="px-2.5 py-1 text-xs font-medium bg-amber-500/10 text-amber-400 rounded-full border border-amber-500/20">\(20 \text{ Phút}\)</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-4">Thử thách & kiểm tra đánh giá năng lực</p>
+                        <p class="text-xs md:text-sm text-gray-300 leading-relaxed mb-6">
+                            Có đồng hồ đếm ngược \(20 \text{ phút}\). Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                        </p>
+                    </div>
+                    <button class="w-full py-2.5 bg-slate-700 group-hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <span>Vào thi Tính giờ</span>
+                        <i class="fa-solid fa-stopwatch text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATE 2: TESTING SCREEN -->
+        <div id="state-quiz" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Sidebar: Question Navigation Grid -->
+            <div class="lg:col-span-4 bg-dark-card rounded-2xl p-5 border border-gray-800 flex flex-col justify-between shadow-xl">
+                <div>
+                    <div class="flex justify-between items-center mb-4 pb-3 border-b border-gray-800">
+                        <span class="text-xs font-bold text-gray-300 uppercase tracking-wider">DANH SÁCH CÂU HỎI</span>
+                        <span id="answered-count-badge" class="text-xs font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20 px-2.5 py-1 rounded-md">
+                            \(0 / 20 \text{ đã làm}\)
+                        </span>
+                    </div>
+
+                    <!-- Question Grid 1 to 20 -->
+                    <div id="question-grid" class="grid grid-cols-5 gap-2.5 mb-6">
+                        <!-- JS populated -->
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="space-y-2 text-xs text-gray-400 bg-dark-inner p-3 rounded-lg border border-slate-800">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded bg-slate-800 border border-slate-600"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded bg-amber-500"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded bg-blue-600"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-6 pt-4 border-t border-gray-800">
+                    <button onclick="confirmSubmit()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Main Area: Active Question Display -->
+            <div class="lg:col-span-8 bg-dark-card rounded-2xl p-6 md:p-8 border border-gray-800 flex flex-col justify-between shadow-xl">
+                <div>
+                    <!-- Question Header & Level Tag -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 id="q-title" class="text-xl font-bold text-white">
+                            Câu 1 / 20
+                        </h2>
+                        <span id="q-level" class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                            Mức Biết
+                        </span>
+                    </div>
+
+                    <!-- Question Body -->
+                    <div id="q-text" class="text-base md:text-lg text-gray-100 font-medium mb-8 leading-relaxed">
+                        <!-- JS populated -->
+                    </div>
+
+                    <!-- Options List -->
+                    <div id="options-container" class="space-y-3 mb-8">
+                        <!-- JS populated -->
+                    </div>
+                </div>
+
+                <!-- Action Controls -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-800">
+                    <button id="btn-prev" onclick="navigateQuestion(-1)" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-gray-300 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fa-solid fa-chevron-left mr-1"></i> Câu Trước
+                    </button>
+                    <button onclick="clearCurrentAnswer()" class="text-xs text-gray-400 hover:text-rose-400 transition-colors">
+                        Xóa lựa chọn câu này
+                    </button>
+                    <button id="btn-next" onclick="navigateQuestion(1)" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-sm font-bold transition-colors">
+                        Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATE 3: RESULTS & EXPLANATIONS SCREEN -->
+        <div id="state-result" class="hidden space-y-8">
+            <!-- Score Summary Card -->
+            <div class="bg-dark-card rounded-2xl p-6 md:p-10 border border-gray-800 text-center shadow-2xl relative overflow-hidden">
+                <div class="w-20 h-20 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-trophy text-amber-400 text-3xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-wider mb-1">
+                    KẾT QUẢ BÀI KIỂM TRA
+                </h2>
+                <p id="res-mode-label" class="text-xs text-gray-400 uppercase tracking-widest mb-8">
+                    Chế độ LUYỆN TẬP
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-8">
+                    <div class="bg-dark-inner p-4 rounded-xl border border-gray-800">
+                        <div class="text-xs text-gray-400 mb-1">Điểm số</div>
+                        <div id="res-score" class="text-3xl font-extrabold text-amber-400">0.0 <span class="text-xs font-normal text-gray-400">/ 10.0</span></div>
+                    </div>
+                    <div class="bg-dark-inner p-4 rounded-xl border border-gray-800">
+                        <div class="text-xs text-gray-400 mb-1">Số câu đúng</div>
+                        <div id="res-correct" class="text-3xl font-extrabold text-emerald-400">0 <span class="text-xs font-normal text-gray-400">/ 20 câu</span></div>
+                    </div>
+                    <div class="bg-dark-inner p-4 rounded-xl border border-gray-800">
+                        <div class="text-xs text-gray-400 mb-1">Thời gian làm bài</div>
+                        <div id="res-time" class="text-3xl font-extrabold text-blue-400">--:--</div>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="max-w-3xl mx-auto bg-dark-inner p-5 rounded-xl border border-amber-500/30 text-left mb-8">
+                    <div class="flex items-center gap-2 text-amber-400 font-bold text-sm mb-2">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="res-feedback" class="text-sm text-gray-200 leading-relaxed italic">
+                        <!-- JS generated feedback -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="resetQuiz()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToExplanations()" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-gray-200 font-bold rounded-xl border border-slate-700 transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Explanation List Section -->
+            <div id="explanations-section" class="bg-dark-card rounded-2xl p-6 md:p-8 border border-gray-800 shadow-2xl">
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-800">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-amber-400"></i>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-gray-400">\(20 / 20 \text{ câu hỏi}\)</span>
+                </div>
+
+                <div id="explanations-container" class="space-y-6">
+                    <!-- JS populated -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="max-w-6xl mx-auto w-full mt-8 text-center text-xs text-amber-200/60 py-3">
+        Tư liệu & Đề thi trắc nghiệm chuẩn hóa Văn học | Bài 7: "Và tôi vẫn muốn mẹ..." (Svetlana Alexievich)
+    </footer>
+
+    <script>
+        /* RAW QUESTION BANK (20 Questions: 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao) */
+        const originalQuestions = [
+            // --- 8 CÂU MỨC BIẾT (1-8) ---
+            {
+                id: 1,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Nhân vật kể lại kí ức trong văn bản <i>\"Và tôi vẫn muốn mẹ...\"</i> là ai và năm đó bao nhiêu tuổi?",
+                options: [
+                    "Zina Kosyak (Din-na Cô-si-ắc), khi đó 8 tuổi",
+                    "Svetlana Alexievich (Xvét-la-na A-lếch-xi-ê-vích), khi đó 10 tuổi",
+                    "Ông già Bolshakov (Bôn-sa-cốp), khi đó 60 tuổi",
+                    "Một em bé không rõ tên ở trại hè Gorodisha (Gô-rô-đi-sa)"
+                ],
+                answer: 0,
+                explanation: "Theo văn bản: Nhân vật kể chuyện là Din-na Cô-si-ắc (Zina Kosyak) - tám tuổi, học xong lớp Một vào tháng 5/1941 thì chiến tranh nổ ra."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Văn bản <i>\"Và tôi vẫn muốn mẹ...\"</i> được rút ra từ tác phẩm nào của nhà văn Svetlana Alexievich?",
+                options: [
+                    "Chiến tranh không có một khuôn mặt phụ nữ",
+                    "Lời nguyện cầu từ Chéc-nô-bum (Chernobyl)",
+                    "Những nhân chứng cuối cùng – Solo cho giọng trẻ em",
+                    "Những cậu bé kẽm"
+                ],
+                answer: 2,
+                explanation: "Văn bản rút từ cuốn <i>Những nhân chứng cuối cùng – Solo cho giọng trẻ em</i> của nhà văn Svetlana Alexievich (Phan Xuân Loan dịch)."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Nhà văn Svetlana Alexievich (Xvét-la-na A-lếch-xi-ê-vích) được trao giải thưởng cao quý nào vào năm 2015?",
+                options: [
+                    "Giải thưởng Pulitzer Văn học",
+                    "Giải Nobel Văn học",
+                    "Giải thưởng Booker Quốc tế",
+                    "Giải thưởng Văn học Nhà nước Belarus"
+                ],
+                answer: 1,
+                explanation: "Svetlana Alexievich là nhà báo, nhà văn Bê-la-rút (Belarus), được trao Giải Nobel Văn học năm 2015."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Trại hè đội viên mà nhân vật Din-na Cô-si-ắc đến tham gia trước khi chiến tranh nổ ra nằm ở địa danh nào?",
+                options: [
+                    "Mô-đô-vi-a (Mordovia)",
+                    "Gô-rô-đi-sa (Gorodisha) gần Min-xcơ (Minsk)",
+                    "Mát-xcơ-va (Moscow)",
+                    "Lê-nin-grát (Leningrad)"
+                ],
+                answer: 1,
+                explanation: "Theo văn bản: <i>\"ba mẹ tiễn tôi đi trại hè đội viên ở Gô-rô-đi-sa (Gorodisha) gần Min-xcơ (Minsk)\"</i>."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Khi nạn đói xảy ra tại vùng sơ tán Mô-đô-vi-a, con vật duy nhất trong trại trẻ bị giết để làm thức ăn cho lũ trẻ là con gì?",
+                options: [
+                    "Con mèo gầy trơ xương",
+                    "Con chó gác trại",
+                    "Con ngựa Mai-ca (Maika) già dịu dàng",
+                    "Con bò sữa của nhà dân"
+                ],
+                answer: 2,
+                explanation: "Theo văn bản: Lũ trẻ có con ngựa Mai-ca già và dịu dàng dùng chở nước. Ngày hôm sau, người ta giết Mai-ca và cho lũ trẻ húp nước cùng mẩu thịt nhỏ."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Lý do vì sao cô bé Din-na lại nhận lời học lại lớp Một khi mới tới trại mồ côi?",
+                options: [
+                    "Vì cô bị trượt kỳ thi ở trường cũ",
+                    "Vì cô nghĩ từ \"thi lại\" đồng nghĩa với được nhận \"bằng khen\"",
+                    "Vì các cô bảo mẫu bắt buộc cô phải học lại",
+                    "Vì cô bị mất hết hồ sơ học tập cũ"
+                ],
+                answer: 1,
+                explanation: "Theo văn bản: <i>\"khi tới trại mồ côi và người ta hỏi em nào bị thi lại, tôi đáp là em, vì tôi nghĩ: Thi lại tức là bằng khen.\"</i>"
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Ai là người đã tìm thấy Din-na trong rừng khi cô trốn khỏi trại trẻ ở năm học lớp Ba?",
+                options: [
+                    "Các cô giáo bảo mẫu trại trẻ",
+                    "Những người lính tản cư",
+                    "Ông già Bôn-sa-cốp (Bolshakov)",
+                    "Mẹ của nhân vật Din-na"
+                ],
+                answer: 2,
+                explanation: "Theo văn bản: <i>\"Đói lả và kiệt sức, tôi được ông già Bôn-sa-cốp (Bolshakov) tìm thấy trong rừng. Biết tôi từ trại mồ côi, ông mang tôi về gia đình mình.\"</i>"
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelText: "Mức Biết",
+                levelClass: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                question: "Khi những người tản cư ghé qua nhà, gia đình ông Bôn-sa-cốp luôn chuẩn bị món gì ở mỗi nhà để họ hớp cho ấm áp?",
+                options: [
+                    "Nồi súp khoai tây nóng",
+                    "Nồi nước tầm ma",
+                    "Cháo ngũ cốc",
+                    "Nước trà hoa hồ đào"
+                ],
+                answer: 1,
+                explanation: "Theo văn bản: <i>\"Người sơ tán đông lắm... Mỗi nhà đều có một nồi nước tầm ma. Để người tị nạn có chút gì đó ấm áp mà hớp khi họ ghé qua.\"</i>"
+            },
+
+            // --- 7 CÂU MỨC HIỂU (9-15) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Vì sao các cô bảo mẫu và giáo viên trong trại trẻ lại cố gắng không nhắc đến từ <i>\"mẹ\"</i> và chọn những quyển sách không có từ này?",
+                options: [
+                    "Vì họ muốn lũ trẻ quên hẳn cha mẹ để dễ quản lý",
+                    "Vì từ \"mẹ\" bị cấm sử dụng trong thời kỳ chiến tranh",
+                    "Vì từ \"mẹ\" chạm vào nỗi đau mất mát, khiến tất cả lũ trẻ lập tức gào khóc không nguôi",
+                    "Vì lũ trẻ còn quá nhỏ chưa hiểu hết ý nghĩa của từ \"mẹ\""
+                ],
+                answer: 2,
+                explanation: "Văn bản ghi rõ: <i>\"Nhưng nếu ai đó bất ngờ nhắc đến 'mẹ', lập tức tất cả khóc oà. Gào khóc không nguôi.\"</i> Việc tránh từ này là hành động bảo vệ tâm lý nhạy cảm, thương tổn của những đứa trẻ thiếu vắng tình mẹ."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Chi tiết những đứa trẻ nhường thực phẩm (ngũ cốc, đường) cho những người lính bị thương trên tàu và gọi họ là <i>\"các ba\"</i> thể hiện điều gì?",
+                options: [
+                    "Tình cảm ngây thơ, lòng nhân ái tự nhiên và sự khao khát tình thân cha con tha thiết của trẻ nhỏ thời chiến",
+                    "Sự cưỡng ép của cán bộ phụ trách đoàn di tản trên tàu",
+                    "Sự trao đổi lương thực lấy sự bảo vệ của quân đội",
+                    "Sự nhầm lẫn vô thức của trẻ con khi không nhận ra mặt cha mình"
+                ],
+                answer: 0,
+                explanation: "Trẻ em mang theo thực phẩm ít ỏi nhưng sẵn sàng trao hết cho những người lính rên la vì đau đớn, gọi họ là 'các ba' bộc lộ sự hồn nhiên, lòng trắc ẩn sâu sắc và nỗi khát khao người cha trong chiến tranh."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Câu nói: <i>\"Thiên nhiên đã cứu chúng tôi, những con vật nhai lại\"</i> được hiểu như thế nào trong ngữ cảnh văn bản?",
+                options: [
+                    "Lũ trẻ học được kỹ năng chăn nuôi gia súc nhai lại",
+                    "Bị cái đói cồn cào hành hạ, lũ trẻ phải ăn sạch chồi mầm, vỏ cây, cỏ và mang cỏ trong túi áo để nhai đi nhai lại như động vật",
+                    "Thiên nhiên ban tặng vô số hoa quả phong phú giúp lũ trẻ sống sót",
+                    "Lũ trẻ biến thành các sinh vật hoang dã trong rừng"
+                ],
+                answer: 1,
+                explanation: "Nạn đói khốc liệt buộc lũ trẻ phải ăn cỏ, tước vỏ cây non, khoét túi áo cất cỏ để nhai lại suốt ngày. Cách ví von xót xa phản ánh tình cảnh sinh tồn tột cùng khốn khổ."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Tại sao tác giả lại nhấn mạnh hình ảnh hai con mèo <i>\"gầy trơ xương\"</i> trong trại trẻ mồ côi?",
+                options: [
+                    "Để miêu tả vẻ hoang tàn của cảnh vật xung quanh nhà thờ",
+                    "Để phản ánh mức độ tàn khốc của nạn đói, đến mức lũ trẻ thấy 'phúc đức' vì mèo quá gầy nên người ta không thịt chúng",
+                    "Để thể hiện tình yêu động vật tha thiết của nhân vật Din-na",
+                    "Để phê phán thái độ ngược đãi động vật của những người trong trại"
+                ],
+                answer: 1,
+                explanation: "Hình ảnh hai con mèo gầy trơ xương là bằng chứng tố cáo nạn đói thảm khốc. Sự nhẹ nhõm 'phúc đức làm sao... không phải ăn chúng' của lũ trẻ cho thấy giới hạn sinh tồn cay đắng."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Phương thức trần thuật chính và vai trò của tác giả Svetlana Alexievich trong văn bản này là gì?",
+                options: [
+                    "Tác giả tự sáng tác một tiểu thuyết hư cấu dựa trên trí tưởng tượng",
+                    "Tác giả đóng vai trò là người lắng nghe, ghi chép và kết nối những kí ức chân thực của nhân chứng lịch sử",
+                    "Tác giả là nhân vật chính trực tiếp nếm trải mọi sự kiện từ đầu đến cuối",
+                    "Tác giả đóng vai trò là một nhà nghiên cứu tâm lý học trẻ em"
+                ],
+                answer: 1,
+                explanation: "Tác phẩm thuộc thể loại truyện ký / văn học tài liệu phi hư cấu. Tác giả phỏng vấn nhân chứng, chọn lọc, ghi lại và sắp xếp kí ức của người trong cuộc mà không can thiệp hư cấu."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Chi tiết chiếc bánh mì đắng được làm từ <i>\"rau muối, hoa hồ đào, khoai tây\"</i> phản ánh hiện thực gì?",
+                options: [
+                    "Sự phong phú và sáng tạo trong văn hóa ẩm thực vùng Mô-đô-vi-a",
+                    "Sự thiếu thốn, khốn khổ tột cùng về thực phẩm của người dân và trẻ em thời chiến",
+                    "Truyền thống làm bánh mì lâu đời của nhân dân Bê-la-rút",
+                    "Chế độ ăn kiêng dành cho trẻ em bị suy dinh dưỡng"
+                ],
+                answer: 1,
+                explanation: "Vì thiếu bột mì, người ta phải xay tất tần tật mọi thứ cây cỏ (rau muối, hoa hồ đào...) trộn vào làm bánh mì đắng, minh chứng cho sự thảm khốc của cái đói thời chiến."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelText: "Mức Hiểu",
+                levelClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                question: "Hành động lẻn trốn dưới gầm ghế con tàu để đi Min-xcơ của cô bé Din-na khi chiến tranh kết thúc thể hiện tâm trạng gì?",
+                options: [
+                    "Sự tò mò muốn đi du lịch khám phá các thành phố lớn",
+                    "Khao khát mãnh liệt, niềm hy vọng ngây thơ và tuyệt vọng muốn tìm lại cha mẹ sau nhiều năm xa cách",
+                    "Ý định bỏ trốn khỏi sự quản lý của gia đình ông Bôn-sa-cốp",
+                    "Mong muốn lên thành phố học nghề làm tóc"
+                ],
+                answer: 1,
+                explanation: "Sau hai tuần đợi chờ tuyệt vọng, nhận thức tuổi thơ tin rằng mọi chuyến tàu đều về Min-xcơ nơi mẹ đang chờ, thúc đẩy cô bé đánh liều trốn dưới gầm ghế tàu hỏa."
+            },
+
+            // --- 3 CÂU MỨC VẬN DỤNG (16-18) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelText: "Vận dụng",
+                levelClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+                question: "Phân tích ý nghĩa nghệ thuật của chi tiết <i>\"bé gái điên lẻn vào vườn rình canh con chuột để ăn\"</i> đối với chủ đề tác phẩm:",
+                options: [
+                    "Là một hình ảnh chân thực, nhói đau tố cáo sự tàn khốc của chiến tranh đã tước đoạt tuổi thơ và biến dạng bản tính con người vì cái đói",
+                    "Là chi tiết nhằm tạo tính kịch tính, giật gân cho câu chuyện phiêu lưu",
+                    "Thể hiện trò chơi dân gian hồn nhiên của trẻ em nông thôn thời chiến",
+                    "Nhấn mạnh tác hại của dịch chuột đối với đời sống sinh hoạt"
+                ],
+                answer: 0,
+                explanation: "Chi tiết bé gái điên rình chuột ăn là một nét vẽ nhói lòng về bức tranh chiến tranh. Nó tột cùng tố cáo cái đói hủy hoại cả thể xác lẫn tâm thần của những đứa trẻ ngây thơ."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelText: "Vận dụng",
+                levelClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+                question: "Sự tương phản giữa các sự kiện tàn khốc (máy bay ném bom, cái chết, nạn đói) và điểm nhìn ngây thơ của đứa trẻ 8 tuổi tạo nên hiệu quả nghệ thuật gì?",
+                options: [
+                    "Làm giảm bớt không khí căng thẳng nguy hiểm của chiến tranh",
+                    "Tăng sức tố cáo phi nhân tính của chiến tranh, xoáy sâu vào nỗi đau thương và lay động mạnh mẽ lòng trắc ẩn của người đọc",
+                    "Tạo nên góc nhìn dí dỏm, hài hước về thời chiến",
+                    "Làm cho tác phẩm mang màu sắc thần thoại huyền ảo"
+                ],
+                answer: 1,
+                explanation: "Nhìn sự tàn bạo của chiến tranh qua ánh mắt trong trẻo, ngây thơ của đứa trẻ càng làm nổi bật sự vô lý, phi nhân tính của chiến tranh, khiến nỗi đau hiện lên vô cùng xót xa và nhói lòng."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelText: "Vận dụng",
+                levelClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+                question: "Mối liên hệ giữa quá khứ và hiện tại trong câu: <i>\"Đến giờ tôi vẫn không thể thản nhiên nhìn cỏ mọng và ăn rất nhiều bánh mì. Tôi không cảm thấy no. Sau hàng chục năm trôi qua.\"</i> phản ánh điều gì?",
+                options: [
+                    "Thói quen ăn uống lãng phí không thể sửa đổi của nhân vật",
+                    "Vết thương tâm lý và nỗi ám ảnh sinh tồn do nạn đói thời chiến gây ra tồn tại dai dẳng, hằn sâu suốt cả đời người",
+                    "Cơ thể nhân vật bị rối loạn tiêu hóa mãn tính do thiếu chất",
+                    "Tình cảm hoài niệm về những kỷ niệm gian khổ nhưng tươi đẹp thời thơ ấu"
+                ],
+                answer: 1,
+                explanation: "Chiến tranh không chỉ tàn phá lúc nó diễn ra mà còn để lại vết thương tâm lý vĩnh viễn. Cảm giác 'không thấy no' dù đã hàng chục năm trôi qua thể hiện ám ảnh hằn sâu trong vô thức."
+            },
+
+            // --- 2 CÂU MỨC VẬN DỤNG CAO (19-20) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelText: "VD Cao",
+                levelClass: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+                question: "Phân tích ý nghĩa nhân văn sâu sắc của hai câu kết văn bản: <i>\"Tôi đã năm mươi mốt tuổi, tôi có hai con. Và tôi vẫn còn muốn mẹ.\"</i>:",
+                options: [
+                    "Khẳng định sự trưởng thành hoàn toàn của nhân vật khi đã lập gia đình và có hai con",
+                    "Bộc lộ nỗi bất lực của một người phụ nữ trung niên trong cuộc sống gia đình",
+                    "Bộc lộ bi kịch mất mát vĩnh viễn do chiến tranh; dù thời gian trôi qua, dù đã trưởng thành làm mẹ, tiếng gọi 'mẹ' và khát vọng tình thân vẫn vẹn nguyên, nhói đau trong lòng đứa trẻ ngày nào",
+                    "Thể hiện sự trách móc cha mẹ vì đã không đến đón nhân vật tại ga tàu hỏa năm xưa"
+                ],
+                answer: 2,
+                explanation: "Câu kết đắt giá gói gọn toàn bộ chủ đề tư tưởng. Dù đã 51 tuổi, đã làm mẹ của hai con, đứa trẻ năm xưa vẫn khát khao tình mẹ. Chiến tranh có thể trôi qua hàng thập kỷ, nhưng tổn thương mất mát tình thân là vĩnh viễn không thể lấp đầy."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelText: "VD Cao",
+                levelClass: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+                question: "Đánh giá giá trị tư tưởng của thể loại văn học tài liệu phi hư cấu qua nhận định của Ủy ban Nobel về tác phẩm của Svetlana Alexievich: <i>\"dựng lên một tượng đài tưởng niệm sự thống khổ và lòng can đảm trong thời đại chúng ta\"</i>:",
+                options: [
+                    "Tác phẩm chỉ có giá trị tư liệu lịch sử thuần túy, thiếu tính nghệ thuật văn học",
+                    "Sử dụng tiếng nói chân thực của nhân chứng để khắc họa chân lý lịch sử, qua đó thức tỉnh lương tri nhân loại, kêu gọi hòa bình và vinh danh sức mạnh sinh tồn của con người",
+                    "Thể loại này giúp tác giả dễ dàng hư cấu các tình tiết theo ý muốn để gây chấn động dư luận",
+                    "Tác phẩm chủ yếu nhằm mục đích ca ngợi các chiến công quân sự và huy chương thời chiến"
+                ],
+                answer: 1,
+                explanation: "Bằng việc tập hợp hàng trăm tiếng nói nhân chứng chân thực ('Solo cho giọng trẻ em'), tác giả tạo nên 'tượng đài sự thống khổ', thức tỉnh lương tri toàn nhân loại trước thảm họa chiến tranh và tôn vinh lòng can đảm sinh tồn."
+            }
+        ];
+
+        /* APP STATE MANAGEMENT VARIABLES */
+        let currentQuizData = [];
+        let userAnswers = {};
+        let currentQuestionIndex = 0;
+        let quizMode = 'practice'; // 'practice' or 'timed'
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let timeSpentSeconds = 0;
+
+        // Utility: Shuffle array for Timed Mode
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Start Quiz Handler
+        function startQuiz(mode) {
+            quizMode = mode;
+            userAnswers = {};
+            currentQuestionIndex = 0;
+            timeSpentSeconds = 0;
+
+            if (mode === 'timed') {
+                // Shuffle questions and options for Timed mode
+                currentQuizData = originalQuestions.map(q => {
+                    const optionIndices = [0, 1, 2, 3];
+                    const shuffledIndices = shuffleArray(optionIndices);
+                    const newOptions = shuffledIndices.map(i => q.options[i]);
+                    const newAnswerIndex = shuffledIndices.indexOf(q.answer);
+
+                    return {
+                        ...q,
+                        options: newOptions,
+                        answer: newAnswerIndex
+                    };
+                });
+                currentQuizData = shuffleArray(currentQuizData);
+
+                // Update UI badges
+                document.getElementById('mode-badge').className = "px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-2";
+                document.getElementById('mode-badge').innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span><span>Chế độ TÍNH GIỜ</span>`;
+                document.getElementById('timer-box').classList.remove('hidden');
+
+                // Start timer
+                timeRemaining = 20 * 60;
+                updateTimerDisplay();
+                clearInterval(timerInterval);
+                timerInterval = setInterval(() => {
+                    timeRemaining--;
+                    timeSpentSeconds++;
+                    updateTimerDisplay();
+                    if (timeRemaining <= 0) {
+                        clearInterval(timerInterval);
+                        alertMessage("Đã hết thời gian 20 phút! Hệ thống tự động nộp bài.");
+                        submitQuiz();
+                    }
+                }, 1000);
+            } else {
+                // Practice Mode (Keep original standard order)
+                currentQuizData = JSON.parse(JSON.stringify(originalQuestions));
+                document.getElementById('mode-badge').className = "px-3 py-1.5 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/40 flex items-center gap-2";
+                document.getElementById('mode-badge').innerHTML = `<span class="w-2 h-2 rounded-full bg-blue-400"></span><span>Chế độ LUYỆN TẬP</span>`;
+                document.getElementById('timer-box').classList.add('hidden');
+
+                // Stopwatch for practice time
+                clearInterval(timerInterval);
+                timerInterval = setInterval(() => {
+                    timeSpentSeconds++;
+                }, 1000);
+            }
+
+            // Switch Screen State
+            document.getElementById('state-start').classList.add('hidden');
+            document.getElementById('state-result').classList.add('hidden');
+            document.getElementById('state-quiz').classList.remove('hidden');
+
+            renderQuestionGrid();
+            loadQuestion(0);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('timer-display').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('question-grid');
+            gridContainer.innerHTML = '';
+
+            for (let i = 0; i < currentQuizData.length; i++) {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${i}`;
+                btn.className = getGridBtnClass(i);
+                btn.textContent = i + 1;
+                btn.onclick = () => loadQuestion(i);
+                gridContainer.appendChild(btn);
+            }
+            updateAnsweredBadge();
+        }
+
+        function getGridBtnClass(index) {
+            const isCurrent = index === currentQuestionIndex;
+            const isAnswered = userAnswers.hasOwnProperty(index);
+
+            let base = "h-10 w-full rounded-lg font-bold text-sm border transition-all flex items-center justify-center ";
+
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white border-blue-400 shadow-md ring-2 ring-blue-400/50";
+            } else if (isAnswered) {
+                return base + "bg-amber-500 text-slate-950 font-extrabold border-amber-400";
+            } else {
+                return base + "bg-dark-inner hover:bg-slate-800 text-gray-300 border-slate-700";
+            }
+        }
+
+        function updateAnsweredBadge() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answered-count-badge').innerHTML = 
+                `\\(${count} / 20 \\text{ đã làm}\\)`;
+            if (window.MathJax) MathJax.typesetPromise();
+        }
+
+        function loadQuestion(index) {
+            currentQuestionIndex = index;
+            const q = currentQuizData[index];
+
+            // Header Title & Level
+            document.getElementById('q-title').textContent = `Câu ${index + 1} / 20`;
+            const levelElem = document.getElementById('q-level');
+            levelElem.textContent = q.levelText;
+            levelElem.className = `px-3 py-1 rounded-full text-xs font-semibold ${q.levelClass}`;
+
+            // Question Text
+            document.getElementById('q-text').innerHTML = q.question;
+
+            // Options Container
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+                const card = document.createElement('div');
+                card.className = `option-card p-4 rounded-xl cursor-pointer flex items-center gap-3 ${isSelected ? 'selected' : ''}`;
+                card.onclick = () => selectOption(optIdx);
+
+                card.innerHTML = `
+                    <div class="w-8 h-8 rounded-lg border ${isSelected ? 'bg-amber-500 border-amber-400 text-slate-950 font-bold' : 'border-slate-700 bg-slate-800/80 text-gray-300'} flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        ${prefixes[optIdx]}
+                    </div>
+                    <div class="text-sm md:text-base text-gray-200">${optText}</div>
+                `;
+                optionsContainer.appendChild(card);
+            });
+
+            // Update Previous / Next Buttons
+            document.getElementById('btn-prev').disabled = (index === 0);
+            if (index === currentQuizData.length - 1) {
+                document.getElementById('btn-next').innerHTML = `Nộp Bài <i class="fa-solid fa-check ml-1"></i>`;
+                document.getElementById('btn-next').className = "px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-sm font-bold transition-colors";
+            } else {
+                document.getElementById('btn-next').innerHTML = `Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>`;
+                document.getElementById('btn-next').className = "px-5 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-sm font-bold transition-colors";
+            }
+
+            // Refresh Question Grid Status Buttons
+            for (let i = 0; i < currentQuizData.length; i++) {
+                const btn = document.getElementById(`grid-btn-${i}`);
+                if (btn) btn.className = getGridBtnClass(i);
+            }
+
+            // Re-render MathJax formula typesetting
+            if (window.MathJax) MathJax.typesetPromise();
+        }
+
+        function selectOption(optionIndex) {
+            userAnswers[currentQuestionIndex] = optionIndex;
+            loadQuestion(currentQuestionIndex);
+            updateAnsweredBadge();
+        }
+
+        function clearCurrentAnswer() {
+            if (userAnswers.hasOwnProperty(currentQuestionIndex)) {
+                delete userAnswers[currentQuestionIndex];
+                loadQuestion(currentQuestionIndex);
+                updateAnsweredBadge();
+            }
+        }
+
+        function navigateQuestion(direction) {
+            const newIndex = currentQuestionIndex + direction;
+            if (newIndex >= 0 && newIndex < currentQuizData.length) {
+                loadQuestion(newIndex);
+            } else if (newIndex >= currentQuizData.length) {
+                confirmSubmit();
+            }
+        }
+
+        function confirmSubmit() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount < currentQuizData.length) {
+                const unanswered = currentQuizData.length - answeredCount;
+                if (!confirm(`Em vẫn còn ${unanswered} câu chưa làm. Em có chắc chắn muốn nộp bài ngay không?`)) {
+                    return;
+                }
+            }
+            submitQuiz();
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            // Calculate score
+            let correctCount = 0;
+            currentQuizData.forEach((q, idx) => {
+                if (userAnswers[idx] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / currentQuizData.length) * 10;
+            const formattedScore = score.toFixed(1);
+
+            // Format time spent
+            const mins = Math.floor(timeSpentSeconds / 60);
+            const secs = timeSpentSeconds % 60;
+            const timeFormatted = quizMode === 'timed' 
+                ? `${mins} phút ${secs} giây`
+                : `${mins} phút ${secs} giây (Không giới hạn)`;
+
+            // Display Results
+            document.getElementById('res-score').innerHTML = `${formattedScore} <span class="text-xs font-normal text-gray-400">/ 10.0</span>`;
+            document.getElementById('res-correct').innerHTML = `${correctCount} <span class="text-xs font-normal text-gray-400">/ ${currentQuizData.length} câu</span>`;
+            document.getElementById('res-time').textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+            document.getElementById('res-mode-label').textContent = quizMode === 'timed' ? 'Chế độ TÍNH GIỜ' : 'Chế độ LUYỆN TẬP';
+
+            // Generate Teacher Feedback based on score
+            document.getElementById('res-feedback').textContent = getTeacherFeedback(score, correctCount);
+
+            // Render Explanations
+            renderExplanations();
+
+            // Switch Screen State
+            document.getElementById('state-quiz').classList.add('hidden');
+            document.getElementById('state-result').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.MathJax) MathJax.typesetPromise();
+        }
+
+        function getTeacherFeedback(score, correctCount) {
+            if (score >= 9.0) {
+                return `Xuất sắc! Em đã nắm rất vững toàn bộ kiến thức tác phẩm "Và tôi vẫn muốn mẹ..." của Svetlana Alexievich. Em có khả năng cảm thụ văn học sâu sắc, phân tích tinh tế các chi tiết nghệ thuật cũng như thông định tư tưởng nhân văn cao cả. Hãy tiếp tục phát huy năng lực này nhé!`;
+            } else if (score >= 7.0) {
+                return `Kết quả rất tốt! Em đã hiểu rõ nội dung văn bản và nắm vững các thông tin sự kiện chính. Tuy nhiên, cần chú ý đọc kỹ hơn các câu hỏi ở mức độ Vận dụng và Vận dụng cao để đạt điểm tối đa trong các kỳ thi sắp tới.`;
+            } else if (score >= 5.0) {
+                return `Khá tốt! Em đã đạt mức điểm trung bình khá. Kết quả cho thấy em đã đọc qua bài học nhưng chưa thật sự đào sâu vào các yếu tố nghệ thuật và ý nghĩa biểu tượng của văn bản. Hãy đọc kỹ phần Lời giải chi tiết bên dưới để củng cố kiến thức nhé!`;
+            } else {
+                return `Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững các chi tiết trọng tâm của bài học "Và tôi vẫn muốn mẹ...". Em nên đọc lại văn bản trong SGK, xem kỹ lời giải chi tiết cho từng câu bên dưới và tiến hành làm lại bài kiểm tra nhé!`;
+            }
+        }
+
+        function renderExplanations() {
+            const container = document.getElementById('explanations-container');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            currentQuizData.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.answer;
+
+                const item = document.createElement('div');
+                item.className = "bg-dark-inner p-5 rounded-xl border border-gray-800 space-y-4";
+
+                let statusBadge = isCorrect 
+                    ? `<span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold"><i class="fa-solid fa-check mr-1"></i>Đúng</span>`
+                    : `<span class="px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 border border-rose-500/30 text-xs font-bold"><i class="fa-solid fa-xmark mr-1"></i>Sai / Chưa làm</span>`;
+
+                let optionsHtml = '';
+                q.options.forEach((opt, optIdx) => {
+                    let optClass = "p-3 rounded-lg text-sm flex items-center gap-3 border border-slate-800 bg-slate-900/60 text-gray-300";
+
+                    if (optIdx === q.answer) {
+                        optClass = "p-3 rounded-lg text-sm flex items-center gap-3 border border-emerald-500/60 bg-emerald-950/40 text-emerald-200 font-medium";
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        optClass = "p-3 rounded-lg text-sm flex items-center gap-3 border border-rose-500/60 bg-rose-950/40 text-rose-200 line-through";
+                    }
+
+                    let iconMark = '';
+                    if (optIdx === q.answer) {
+                        iconMark = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        iconMark = `<i class="fa-solid fa-circle-xmark text-rose-400 ml-auto"></i>`;
+                    }
+
+                    optionsHtml += `
+                        <div class="${optClass}">
+                            <span class="w-6 h-6 rounded flex items-center justify-center text-xs font-bold ${optIdx === q.answer ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-gray-300'}">${prefixes[optIdx]}</span>
+                            <span>${opt}</span>
+                            ${iconMark}
+                        </div>
+                    `;
+                });
+
+                item.innerHTML = `
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-white text-base">Câu ${idx + 1}</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold ${q.levelClass}">${q.levelText}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+                    <div class="text-sm md:text-base text-gray-200 font-medium">${q.question}</div>
+                    <div class="space-y-2 pt-1">${optionsHtml}</div>
+                    <div class="bg-slate-900/90 p-4 rounded-lg border border-amber-500/20 text-xs md:text-sm text-gray-300">
+                        <div class="text-amber-400 font-bold mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <p class="leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function scrollToExplanations() {
+            document.getElementById('explanations-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            clearInterval(timerInterval);
+            document.getElementById('state-result').classList.add('hidden');
+            document.getElementById('state-quiz').classList.add('hidden');
+            document.getElementById('state-start').classList.remove('hidden');
+            document.getElementById('mode-badge').className = "px-3 py-1.5 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 border border-gray-700 flex items-center gap-2";
+            document.getElementById('mode-badge').innerHTML = `<span class="w-2 h-2 rounded-full bg-gray-400"></span><span>Chưa chọn chế độ</span>`;
+            document.getElementById('timer-box').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function alertMessage(msg) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 bg-amber-500 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-2xl z-50 transition-all border border-amber-300";
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 4000);
+        }
+
+        // Initialize math typesetting on page load
+        window.onload = function() {
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        };
+    </script>
+</body>
+</html>
