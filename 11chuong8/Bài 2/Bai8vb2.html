@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài học: Trí thông minh nhân tạo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mau1: '#1E3A8A',
+                        mau2: '#2563EB',
+                        chudao: '#33FF33',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- MathJax Library (có hỗ trợ hóa học TeX) -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .rounded-12 {
+            border-radius: 12px;
+        }
+        .btn-primary-custom {
+            background-color: #33FF33;
+            color: #064e3b;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-primary-custom:hover {
+            filter: brightness(0.92);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="py-8 px-4">
+
+    <!-- Container chính -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK (Chương & Tên bài chung 1 khung, bo góc 12px) -->
+        <header class="overflow-hidden rounded-12 shadow-md border border-blue-900">
+            <!-- Khối Chương (Màu 1) -->
+            <div class="bg-mau1 text-white p-4 text-center text-sm md:text-base font-semibold tracking-wide uppercase">
+                Chương: Cấu trúc của văn bản thông tin
+            </div>
+            <!-- Đường kẻ mảnh ngăn cách -->
+            <div class="border-t border-blue-400/40"></div>
+            <!-- Khối Tên Bài (Màu 2) -->
+            <div class="bg-mau2 text-white p-6 text-center font-bold text-xl md:text-3xl uppercase tracking-wider">
+                BÀI: TRÍ THÔNG MINH NHÂN TẠO
+                <div class="text-xs md:text-sm font-normal normal-case mt-1 text-blue-100">
+                    (Trích <i>50 ý tưởng về tương lai</i> - Ri-sát Oát-xơn / Richard Watson)
+                </div>
+            </div>
+        </header>
+
+        <!-- LỜI DẪN / KHỞI ĐỘNG (Intro Box) -->
+        <section class="bg-white border border-gray-900 rounded-12 p-5 shadow-sm">
+            <h3 class="font-bold text-gray-800 text-lg mb-2 flex items-center gap-2">
+                <span class="text-xl">🚀</span> Lời dẫn nhập & Khởi động
+            </h3>
+            <p class="italic text-gray-700 leading-relaxed">
+                "Hãy chia sẻ những điều bạn đã biết và những điều bạn muốn biết về trí thông minh nhân tạo (AI). Liệu trong tương lai, những cỗ máy thông minh sẽ trở thành trợ thủ đắc lực hay sẽ thách thức chính trí tuệ của con người?"
+            </p>
+        </section>
+
+        <!-- NỘI DUNG CHÍNH CỦA BÀI HỌC -->
+        
+        <!-- MỤC I -->
+        <section class="bg-white rounded-12 shadow-md p-6 border border-gray-100 space-y-5">
+            <h2 class="text-xl md:text-2xl font-bold text-indigo-950 uppercase border-b-4 border-indigo-900 pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-mau1 text-white font-bold rounded-lg mr-3 text-lg shadow">I</span>
+                TÌM HIỂU CHUNG VỀ VĂN BẢN
+            </h2>
+
+            <!-- Mục I.1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-mau2 text-white font-bold rounded-full mr-2 text-sm shadow-sm">1</span>
+                    Tác giả và Tác phẩm
+                </h3>
+
+                <div class="bg-blue-50 border-l-4 border-mau2 p-4 rounded-r-lg space-y-2">
+                    <p><strong>Tác giả:</strong> Ri-sát Oát-xơn (Richard Watson, sinh năm 1961) là nhà tương lai học, giảng viên đại học người Anh, cây bút nổi tiếng về các phát minh, sáng chế và phân tích xu hướng toàn cầu.</p>
+                    <p><strong>Xuất xứ:</strong> Trích từ tác phẩm <i>"50 ý tưởng về tương lai"</i> (2012, bản dịch Việt ngữ năm 2019).</p>
+                    <p><strong>Thể loại & Thao tác văn bản:</strong> Văn bản thông tin (Thuyết minh giải thích hiện tượng khoa học & dự báo tương lai).</p>
+                </div>
+            </div>
+
+            <!-- Mục I.2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-mau2 text-white font-bold rounded-full mr-2 text-sm shadow-sm">2</span>
+                    Chủ đề và Khái niệm AI
+                </h3>
+
+                <div class="bg-slate-50 border border-gray-300 p-4 rounded-lg space-y-3">
+                    <p><strong>Chủ đề:</strong> Sự phát triển của Trí thông minh nhân tạo (AI), phân loại AI, các dự báo lịch sử và những suy tư về viễn cảnh tương lai nhân loại.</p>
+                    <div class="p-3 bg-indigo-50 rounded border-l-4 border-indigo-700">
+                        <p class="font-semibold text-indigo-900">📌 Định nghĩa thuật ngữ:</p>
+                        <p class="text-gray-800">Thuật ngữ "Trí thông minh nhân tạo" (Artificial Intelligence - AI) được nhà khoa học máy tính người Mỹ Giôn Mác Cát-thi (John McCarthy) đặt ra vào năm 1956.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC II -->
+        <section class="bg-white rounded-12 shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-indigo-950 uppercase border-b-4 border-indigo-900 pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-mau1 text-white font-bold rounded-lg mr-3 text-lg shadow">II</span>
+                NỘI DUNG CHI TIẾT & CẤU TRÚC VĂN BẢN
+            </h2>
+
+            <!-- Mục II.1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-mau2 text-white font-bold rounded-full mr-2 text-sm shadow-sm">1</span>
+                    Sự phát triển tốc độ xử lý & Phân loại AI
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-amber-50 border border-amber-300 p-4 rounded-lg">
+                        <h4 class="font-bold text-amber-900 border-b border-amber-200 pb-1 mb-2">⚡ Tốc độ xử lý tính toán</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-800">
+                            <li><strong>Năm 2008:</strong> PC xử lý \(\approx 10\) tỉ lệnh/giây (chỉ bằng não một con cá nhỏ).</li>
+                            <li><strong>Năm 2040 (Dự báo):</strong> Bộ não máy xử lý \(\approx 100\) nghìn tỉ (\(10^{14}\)) lệnh/giây (tương đương năng lực bộ não con người).</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-emerald-50 border border-emerald-300 p-4 rounded-lg">
+                        <h4 class="font-bold text-emerald-900 border-b border-emerald-200 pb-1 mb-2">🤖 Phân loại AI</h4>
+                        <ul class="space-y-1 text-sm text-gray-800">
+                            <li><strong>AI yếu (AI hẹp):</strong> Trí thông minh lập trình sẵn, bổ sung thay vì vượt lên trí tuệ con người.</li>
+                            <li><strong>AI mạnh:</strong> Những cỗ máy có khả năng suy nghĩ thực sự, tự học hỏi khi vận hành và phản ứng linh hoạt với sự kiện bất ngờ.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mục II.2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-mau2 text-white font-bold rounded-full mr-2 text-sm shadow-sm">2</span>
+                    Phương tiện phi ngôn ngữ: Tiễn trình lịch sử và Dự báo AI
+                </h3>
+
+                <!-- Khung chứa hình ảnh sơ đồ -->
+                <div class="bg-gray-50 p-4 border border-gray-300 rounded-lg text-center space-y-3">
+                    <p class="font-semibold text-gray-700 text-sm">Sơ đồ tóm tắt các mốc thời gian và thành tựu của AI (Hình minh họa 1 trong văn bản)</p>
+                    <div class="inline-block border-2 border-dashed border-gray-400 p-2 rounded-lg bg-white max-w-full">
+                        <img src="h1.png" alt="Sơ đồ mốc thời gian phát triển AI" class="max-h-96 mx-auto object-contain rounded" onerror="this.onerror=null; this.src='https://via.placeholder.com/700x350?text=Khung+H%C3%ACnh+h1.png+(S%C6%A1+%C4%91%E1%BB%93+ph%C3%A1t+tri%E1%BB%83n+AI)';">
+                    </div>
+                    <p class="text-xs text-gray-500 italic">Lưu ý: Đảm bảo tập tin ảnh được đặt tên <code>h1.png</code> nằm cùng thư mục để hiển thị trực quan.</p>
+                </div>
+
+                <!-- Bảng tóm tắt các mốc sự kiện -->
+                <div class="overflow-x-auto mt-3">
+                    <table class="w-full border-collapse border border-gray-300 text-sm text-center">
+                        <thead>
+                            <tr class="bg-gray-200 text-gray-800">
+                                <th class="border border-gray-300 p-2 font-bold">Mốc thời gian</th>
+                                <th class="border border-gray-300 p-2 font-bold">Sự kiện / Dự báo chính</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">1990</td>
+                                <td class="border border-gray-300 p-2 text-left">Tập đoàn iRobot được thành lập để sản xuất rô-bốt công nghiệp & gia dụng.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2011</td>
+                                <td class="border border-gray-300 p-2 text-left">Cỗ máy Watson (IBM) chiến thắng chương trình truyền hình Jeopardy!</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2027</td>
+                                <td class="border border-gray-300 p-2 text-left">Máy nướng bánh giá 79 USD vượt qua bài kiểm tra Turing (Turing test).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2040</td>
+                                <td class="border border-gray-300 p-2 text-left">Điện thoại thông minh 750 USD có năng lực xử lý tương đương não người.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2042</td>
+                                <td class="border border-gray-300 p-2 text-left">Virus máy tính vô hiệu hóa 90% máy móc.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2050</td>
+                                <td class="border border-gray-300 p-2 text-left">Số lượng rô-bốt thông minh chính thức vượt qua số lượng con người.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2054</td>
+                                <td class="border border-gray-300 p-2 text-left">Máy móc bắt đầu biết vẽ tranh và soạn nhạc sáng tạo.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-semibold text-mau1">2069</td>
+                                <td class="border border-gray-300 p-2 text-left">Máy móc đòi hỏi quyền bình đẳng với con người.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Mục II.3 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-mau2 text-white font-bold rounded-full mr-2 text-sm shadow-sm">3</span>
+                    Các quan niệm trái chiều và Câu hỏi tương lai
+                </h3>
+
+                <div class="bg-indigo-50 border border-indigo-200 p-4 rounded-lg space-y-3">
+                    <p><strong>Quan điểm lạc quan / khẳng định:</strong> Ray Kurzweil đánh cược rằng máy tính sẽ vượt qua bài kiểm tra Turing vào năm 2029.</p>
+                    <p><strong>Quan điểm hoài nghi / phản bác:</strong> Bill Calvin cho rằng não người quá phức tạp, máy tính không thể mô phỏng trọn vẹn, hoặc nếu có sẽ mang cả những điểm yếu và cảm xúc không toàn vẹn.</p>
+                    <p><strong>Hai câu hỏi lớn của tác giả:</strong></p>
+                    <ol class="list-decimal list-inside space-y-1 pl-2 text-gray-800">
+                        <li>Não người đơn thuần là cỗ máy sinh học hay còn điều gì sâu xa hơn? (Nếu hợp nhất với máy móc, con người có thể đạt sự bất tử?)</li>
+                        <li>Khi máy móc đảm nhận công việc, chuyện gì sẽ xảy ra với lực lượng lao động con người bị thay thế?</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- TƯƠNG TÁC: BÀI TẬP VÍ DỤ / CÂU HỎI TRONG BÀI / HOẠT ĐỘNG -->
+        <section class="bg-white rounded-12 shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="text-xl font-bold text-indigo-950 uppercase border-b-2 border-indigo-800 pb-2 flex items-center gap-2">
+                <span>📌</span> CÂU HỎI & HOẠT ĐỘNG KHÁM PHÁ
+            </h2>
+
+            <!-- Câu hỏi / Biểu tượng dấu ? -->
+            <div class="space-y-4">
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-md">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="font-semibold text-gray-800">
+                            ❓ <strong>Câu hỏi đọc hiểu 1:</strong> Đánh giá hiệu quả thông tin của sơ đồ mốc thời gian được tác giả sử dụng trong văn bản?
+                        </div>
+                        <button onclick="toggleAnswer('qa1')" class="btn-primary-custom px-3 py-1 text-xs rounded shadow whitespace-nowrap">
+                            Xem trả lời
+                        </button>
+                    </div>
+                    <div id="qa1" class="hidden mt-3 p-3 bg-green-50 border-l-4 border-emerald-500 rounded text-sm text-gray-800 leading-relaxed">
+                        <strong>Hướng dẫn giải:</strong> Sơ đồ phi ngôn ngữ giúp trực quan hóa tiến trình lịch sử và các dự báo tương lai. Nó giúp người đọc tiếp nhận khối lượng dữ liệu mốc thời gian một cách nhanh chóng, sinh động, dễ so sánh tốc độ phát triển gia tăng theo từng thập kỷ.
+                    </div>
+                </div>
+
+                <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-4 rounded-r-md">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="font-semibold text-gray-800">
+                            ❓ <strong>Câu hỏi đọc hiểu 2:</strong> Cách đặt câu hỏi ở phần cuối văn bản thể hiện thái độ gì của tác giả?
+                        </div>
+                        <button onclick="toggleAnswer('qa2')" class="btn-primary-custom px-3 py-1 text-xs rounded shadow whitespace-nowrap">
+                            Xem trả lời
+                        </button>
+                    </div>
+                    <div id="qa2" class="hidden mt-3 p-3 bg-green-50 border-l-4 border-emerald-500 rounded text-sm text-gray-800 leading-relaxed">
+                        <strong>Hướng dẫn giải:</strong> Cho thấy thái độ khách quan, đa chiều, vừa hào hứng vừa trăn trở, lo ân trước những tác động xã hội, đạo đức và việc làm do AI mang lại cho nhân loại.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mục Hoạt động (Hình bàn tay / Nêu vấn đề) -->
+            <div class="bg-[#edf2f7] border-l-4 border-indigo-700 p-4 rounded-r-md space-y-2">
+                <div class="flex justify-between items-start gap-3">
+                    <div class="font-semibold text-indigo-950">
+                        🖐️ <strong>Hoạt động Nêu vấn đề & Thảo luận:</strong> Bạn có đồng tình với dự báo "Đến năm 2069, máy móc sẽ đòi quyền bình đẳng với con người" không? Vì sao?
+                    </div>
+                    <button onclick="toggleAnswer('act1')" class="btn-primary-custom px-3 py-1 text-xs rounded shadow whitespace-nowrap">
+                        Xem hướng giải quyết
+                    </button>
+                </div>
+                <div id="act1" class="hidden mt-3 p-3 bg-green-50 border-l-4 border-emerald-500 rounded text-sm text-gray-800 leading-relaxed">
+                    <strong>Gợi ý hướng giải quyết:</strong><br>
+                    - <i>Nếu đồng tình:</i> Căn cứ vào tốc độ phát triển cấp số nhân của AI mạnh, khả năng tự học, sáng tạo nghệ thuật và ý thức nhân tạo tự phát.<br>
+                    - <i>Nếu không đồng tình:</i> Máy móc dù thông minh đến đâu vẫn là sản phẩm do con người lập trình, thiếu bản chất sinh học, cảm xúc thực thụ và tính chủ thể tâm linh.
+                </div>
+            </div>
+        </section>
+
+        <!-- THÀNH PHẦN ĐẶC BIỆT: EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý -->
+        <section class="space-y-4">
+            <!-- Em có biết -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+                <h4 class="font-bold text-amber-900 text-md flex items-center gap-2 mb-1">
+                    💡 Em có biết
+                </h4>
+                <p class="text-sm text-amber-950 leading-relaxed">
+                    Bài kiểm tra Turing (Turing Test) do nhà toán học Alan Turing đưa ra năm 1950. Một máy tính được coi là vượt qua bài kiểm tra nếu người đối thoại không thể phân biệt được câu trả lời đó là của máy hay của con người!
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg shadow-sm">
+                <h4 class="font-bold text-teal-900 text-md flex items-center gap-2 mb-1">
+                    🌟 Em có thể
+                </h4>
+                <p class="text-sm text-teal-950 leading-relaxed">
+                    Sử dụng các công cụ sơ đồ tư duy trực tuyến hoặc phương tiện phi ngôn ngữ (infographic) để tóm tắt nội dung các văn bản thông tin phức tạp một cách khoa học và ngắn gọn.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-lg shadow-sm">
+                <h4 class="font-bold text-rose-900 text-md flex items-center gap-2 mb-1">
+                    ⚠️ Lưu ý
+                </h4>
+                <p class="text-sm text-rose-950 leading-relaxed">
+                    Khi đọc văn bản thông tin dự báo khoa học, cần phân biệt rõ giữa <strong>dữ liệu thực tế/mốc lịch sử đã xảy ra</strong> và <strong>các giả thuyết/dự báo tương lai</strong> của các nhà khoa học.
+                </p>
+            </div>
+        </section>
+
+        <!-- TRẮC NGHIỆM CỦNG CỐ: AI LÀ TRIỆU PHÚ (10 CÂU) -->
+        <section class="bg-slate-900 text-white rounded-12 shadow-xl p-6 border border-yellow-500 space-y-6">
+            <div class="text-center border-b border-yellow-500/40 pb-4">
+                <span class="bg-yellow-500 text-slate-900 font-black px-3 py-1 rounded-full text-xs uppercase tracking-widest">Gameshow Trắc Nghiệm</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-yellow-400 mt-2 tracking-wide">
+                    💰 AI LÀ TRIỆU PHÚ AI 💰
+                </h2>
+                <p class="text-xs text-slate-300 mt-1">Trả lời 10 câu hỏi để củng cố kiến thức văn bản Trí Thông Minh Nhân Tạo!</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                
+                <!-- Câu 1 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 1 (100 $): Thuật ngữ "Trí thông minh nhân tạo" (AI) được ai đưa ra vào năm 1956?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q1" value="A"> <span>A. Alan Turing</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q1" value="B"> <span>B. John McCarthy</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q1" value="C"> <span>C. Ray Kurzweil</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q1" value="D"> <span>D. Bill Calvin</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 2 (200 $): Theo bài viết, năm 2008 tốc độ xử lý của PC tương đương bộ não của sinh vật nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q2" value="A"> <span>A. Con ong</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q2" value="B"> <span>B. Con cá nhỏ</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q2" value="C"> <span>C. Con chuột</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q2" value="D"> <span>D. Con chim</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 3 (300 $): Khác biệt cốt lõi giữa "AI mạnh" và "AI yếu" là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q3" value="A"> <span>A. AI mạnh có thể tự học và suy nghĩ thực sự</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q3" value="B"> <span>B. AI yếu tốn ít điện năng hơn</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q3" value="C"> <span>C. AI mạnh chỉ chạy được trên siêu máy tính</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q3" value="D"> <span>D. AI yếu không dùng lập trình</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 4 (500 $): Năm 2011, cỗ máy Watson của IBM đã đạt được thành tựu gì nổi tiếng?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q4" value="A"> <span>A. Đánh bại vô địch cờ vua thế giới</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q4" value="B"> <span>B. Chiến thắng trò chơi Jeopardy! trên TV</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q4" value="C"> <span>C. Tự vẽ được bức tranh đầu tiên</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q4" value="D"> <span>D. Vượt qua bài kiểm tra Turing</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 5 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 5 (1.000 $): Theo dự báo trong sơ đồ, đến năm bao nhiêu số lượng rô-bốt thông minh sẽ vượt qua con người?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q5" value="A"> <span>A. 2027</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q5" value="B"> <span>B. 2040</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q5" value="C"> <span>C. 2050</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q5" value="D"> <span>D. 2069</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 6 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 6 (2.000 $): Nhà thần kinh học Bill Calvin thể hiện quan điểm như thế nào về AI?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q6" value="A"> <span>A. Rất hoài nghi về khả năng mô phỏng não người của máy tính</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q6" value="B"> <span>B. Khẳng định AI sẽ thay thế con người trước năm 2030</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q6" value="C"> <span>C. Tin rằng máy tính không bao giờ bị nhiễm virus</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q6" value="D"> <span>D. Đặt cược 1 triệu đô cho sự phát triển của rô-bốt</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 7 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 7 (5.000 $): Trang web nào được tác giả dẫn chứng như một ví dụ về "trí thông minh tổng hợp" trực tuyến?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q7" value="A"> <span>A. Google</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q7" value="B"> <span>B. Wikipedia</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q7" value="C"> <span>C. Facebook</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q7" value="D"> <span>D. Youtube</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 8 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 8 (10.000 $): Theo sơ đồ, sự kiện nào dự báo xảy ra vào năm 2069?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q8" value="A"> <span>A. Máy móc biết vẽ tranh và soạn nhạc</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q8" value="B"> <span>B. Máy móc đòi quyền bình đẳng với con người</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q8" value="C"> <span>C. Virus làm hỏng 90% máy tính</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q8" value="D"> <span>D. iRobot ngừng hoạt động</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 9 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 9 (20.000 $): Ý nghĩa chính của việc tác giả đưa ra các dự báo viễn cảnh tương lai là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q9" value="A"> <span>A. Gây hoảng loạn cho người đọc</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q9" value="B"> <span>B. Buộc người đọc suy tư về hành động và lựa chọn trong hiện tại</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q9" value="C"> <span>C. Khuyên mọi người không nên dùng máy tính nữa</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q9" value="D"> <span>D. Quảng cáo cho các công ty công nghệ</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 10 -->
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-2">Câu 10 (CHẶNG ĐỈNH - 50.000 $): Thao tác lập luận chính giúp văn bản đạt tính thuyết phục cao là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q10" value="A"> <span>A. Chỉ dùng hư cấu nghệ thuật</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q10" value="B"> <span>B. Kết hợp mốc lịch sử, số liệu thực tế, sơ đồ phi ngôn ngữ và quan điểm đa chiều</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q10" value="C"> <span>C. Bỏ qua các ý kiến trái chiều</span>
+                        </label>
+                        <label class="flex items-center space-x-2 bg-slate-700/60 p-2 rounded hover:bg-slate-700 cursor-pointer">
+                            <input type="radio" name="q10" value="D"> <span>D. Chỉ đưa ra thơ ca minh họa</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Nút nộp bài -->
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="bg-indigo-950 text-white font-bold border-2 border-yellow-400 px-8 py-3 rounded-full hover:bg-indigo-900 transition shadow-lg text-base">
+                        CHÍNH THỨC NỘP BÀI
+                    </button>
+                </div>
+            </form>
+
+            <!-- Khối kết quả quiz -->
+            <div id="quizResult" class="hidden p-4 rounded-lg text-center font-bold text-lg border"></div>
+            <!-- Khối hướng dẫn chi tiết -->
+            <div id="quizExplanation" class="hidden space-y-3 bg-slate-800 p-4 rounded-lg text-sm text-gray-200"></div>
+        </section>
+
+        <!-- BÀI TẬP TỰ LUẬN  (2 CÂU) -->
+        <section class="bg-white rounded-12 shadow-md p-6 border border-gray-100 space-y-5">
+            <h2 class="text-xl font-bold text-indigo-950 uppercase border-b-2 border-indigo-800 pb-2 flex items-center gap-2">
+                ✏️ BÀI TẬP TỰ LUẬN & TÍNH TOÁN DỮ LIỆU
+            </h2>
+
+            <!-- Bài 1 -->
+            <div class="bg-slate-50 border border-gray-200 p-4 rounded-lg space-y-3">
+                <div class="flex justify-between items-start gap-2">
+                    <p class="font-semibold text-gray-800">
+                        <strong>
+
+            <!-- Bài 1 -->
+            <div class="bg-slate-50 border border-gray-200 p-4 rounded-lg space-y-3">
+                <div class="flex justify-between items-start gap-2">
+                    <p class="font-semibold text-gray-800">
+                        <strong>Bài 1 (Phân tích cấu trúc văn bản):</strong> Xác định các thành phần cấu trúc của văn bản thông tin <i>Trí thông minh nhân tạo</i> (Sapo, Các mục chính, Phương tiện phi ngôn ngữ, Lời kết).
+                    </p>
+                    <button onclick="toggleAnswer('tl2')" class="btn-primary-custom px-3 py-1 text-xs rounded shadow whitespace-nowrap">
+                        Xem lời giải
+                    </button>
+                </div>
+                <div id="tl2" class="hidden p-3 bg-green-50 border-l-4 border-emerald-500 rounded text-sm text-gray-800 leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong><br>
+                    - <strong>Sapo/Mở đầu:</strong> Dẫn dắt từ lịch sử đặt thuật ngữ năm 1956 đến câu hỏi gợi mở thách thức.<br>
+                    - <strong>Các mục chính:</strong> Tốc độ xử lý -> Phân loại AI mạnh/yếu -> Quan điểm trái chiều khoa học -> 2 câu hỏi cốt lõi về tương lai.<br>
+                    - <strong>Phương tiện phi ngôn ngữ:</strong> Sơ đồ dòng thời gian từ 1990 đến 2069.<br>
+                    - <strong>Kết luận:</strong> Thông điệp hài hước nhưng sâu sắc về thế giới tương lai.
+                </div>
+            </div>
+
+            <!-- Bài 2 -->
+            <div class="bg-slate-50 border border-gray-200 p-4 rounded-lg space-y-3">
+                <div class="flex justify-between items-start gap-2">
+                    <p class="font-semibold text-gray-800">
+                        <strong>Bài 2 (Viết đoạn văn ngắn 150 chữ):</strong> Tóm tắt những thông tin thú vị nhất mà bạn thu thập được về AI sau khi học xong văn bản này.
+                    </p>
+                    <button onclick="toggleAnswer('tl3')" class="btn-primary-custom px-3 py-1 text-xs rounded shadow whitespace-nowrap">
+                        Xem lời giải
+                    </button>
+                </div>
+                <div id="tl3" class="hidden p-3 bg-green-50 border-l-4 border-emerald-500 rounded text-sm text-gray-800 leading-relaxed">
+                    <strong>Đoạn văn mẫu tham khảo:</strong><br>
+                    Văn bản "Trí thông minh nhân tạo" của Richard Watson đã mang đến cho em những góc nhìn vô cùng kỳ thú về sự phát triển của công nghệ. Điểm ấn tượng nhất là sự gia tăng vượt bậc của tốc độ xử lý máy tính: từ mức chỉ bằng bộ não con cá nhỏ năm 2008, dự báo đến năm 2040 máy tính sẽ đạt \(100\) nghìn tỉ lệnh/giây, tương đương bộ não con người. Thêm vào đó, sự phân biệt giữa "AI yếu" (chỉ lập trình sẵn) và "AI mạnh" (có khả năng tự học, phản ứng với sự cố) giúp em hiểu rõ hơn về bản chất của trí tuệ nhân tạo. Đặc biệt, sơ đồ tiến trình lịch sử dự báo những mốc thời gian giật mình như máy tính vẽ tranh (2054) hay máy móc đòi quyền bình đẳng (2069). Văn bản không chỉ cung cấp tri thức mà còn gợi mở trách nhiệm của con người trong việc làm chủ công nghệ ở tương lai.
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-xs text-gray-500 py-6 border-t border-gray-300">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT XỬ LÝ TƯƠNG TÁC -->
+    <script>
+        // Hàm Toggle Ẩn/Hiện Lời giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Hàm Kiểm tra Quiz Trắc nghiệm
+        function checkQuiz() {
+            const answers = {
+                q1: 'B',
+                q2: 'B',
+                q3: 'A',
+                q4: 'B',
+                q5: 'C',
+                q6: 'A',
+                q7: 'B',
+                q8: 'B',
+                q9: 'B',
+                q10: 'B'
+            };
+
+            const explanations = {
+                q1: "John McCarthy đặt ra thuật ngữ AI năm 1956.",
+                q2: "Năm 2008, PC xử lý 10 tỉ lệnh/giây, tương đương não con cá nhỏ.",
+                q3: "AI mạnh có khả năng suy nghĩ thực sự, tự học và thích ứng sự kiện bất ngờ.",
+                q4: "Watson (IBM) thắng trò chơi truyền hình Jeopardy! năm 2011.",
+                q5: "Sơ đồ dự báo năm 2050 số lượng rô-bốt thông minh vượt con người.",
+                q6: "Bill Calvin cho rằng não người quá phức tạp nên máy tính khó mô phỏng trọn vẹn.",
+                q7: "Wikipedia được dẫn chứng là mô hình trí thông minh tổng hợp hiệu quả.",
+                q8: "Năm 2069 dự báo máy móc đòi quyền bình đẳng với con người.",
+                q9: "Các viễn cảnh buộc người đọc nhìn nhận và điều chỉnh hành động hiện tại.",
+                q10: "Sự kết hợp đa dạng dữ liệu thực tế, sơ đồ và lập luận đa chiều tạo nên sức thuyết phục."
+            };
+
+            let score = 0;
+            let total = 10;
+            let explanationHtml = '<h4 class="font-bold text-yellow-400 mb-2 border-b border-gray-600 pb-1">HƯỚNG DẪN GIẢI CHI TIẾT TỪNG CÂU:</h4>';
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const correctAns = answers[qName];
+
+                if (selected && selected.value === correctAns) {
+                    score++;
+                    explanationHtml += `<p class="text-green-400">✓ <strong>Câu ${i}:</strong> Đúng! (${explanations[qName]})</p>`;
+                } else {
+                    const userVal = selected ? selected.value : 'Chưa chọn';
+                    explanationHtml += `<p class="text-red-400">✗ <strong>Câu ${i}:</strong> Sai (Bạn chọn: ${userVal} - Đáp án đúng: ${correctAns}). ${explanations[qName]}</p>`;
+                }
+            }
+
+            const resultBox = document.getElementById('quizResult');
+            const expBox = document.getElementById('quizExplanation');
+
+            resultBox.classList.remove('hidden');
+            expBox.classList.remove('hidden');
+
+            if (score === total) {
+                resultBox.className = "p-4 rounded-lg text-center font-bold text-lg border bg-emerald-950 text-emerald-300 border-emerald-500 mt-4";
+                resultBox.innerHTML = `🏆 XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA ${score}/${total} CÂU! BẠN CHÍNH THỨC TRỞ THÀNH TRIỆU PHÚ AI! 💰`;
+            } else {
+                resultBox.className = "p-4 rounded-lg text-center font-bold text-lg border bg-rose-950 text-rose-300 border-rose-500 mt-4";
+                resultBox.innerHTML = `🎯 BẠN ĐẠT ${score}/${total} CÂU ĐÚNG. HÃY XEM LẠI HƯỚNG DẪN CHI TIẾT BÊN DƯỚI ĐỂ CỦNG CỐ KIẾN THỨC NHÉ!`;
+            }
+
+            expBox.innerHTML = explanationHtml;
+        }
+    </script>
+</body>
+</html>

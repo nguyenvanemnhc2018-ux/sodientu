@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Trí Thông Minh Nhân Tạo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- MathJax for rendering math formulas -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .bg-custom-dark {
+            background-color: #120909;
+        }
+
+        .bg-custom-card {
+            background-color: #1c0e0e;
+        }
+
+        .bg-custom-panel {
+            background-color: #241212;
+        }
+
+        .border-custom {
+            border-color: #3b1d1d;
+        }
+
+        .title-cream {
+            color: #FFFDD0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #120909;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a2525;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #663333;
+        }
+
+        .option-card {
+            transition: all 0.2s ease;
+        }
+        .option-card:hover {
+            border-color: #eab308;
+            background-color: #2e1717;
+        }
+        .option-card.selected {
+            border-color: #3b82f6;
+            background-color: #1e293b;
+        }
+
+        /* Option marker in answers */
+        .opt-correct {
+            border-color: #22c55e !important;
+            background-color: rgba(34, 197, 94, 0.1) !important;
+            color: #4ade80 !important;
+        }
+        .opt-wrong {
+            border-color: #ef4444 !important;
+            background-color: rgba(239, 68, 68, 0.1) !important;
+            color: #f87171 !important;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-[#663333] text-white antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- TOP NAVIGATION / HEADER -->
+    <header class="bg-[#180c0c] border-b border-[#3d1e1e] sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500 text-black p-2 rounded-lg font-bold text-xl flex items-center justify-center w-10 h-10 shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl tracking-tight title-cream uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs text-amber-200/80 font-medium">Bài: TRÍ THÔNG MINH NHÂN TẠO <span class="text-amber-400/60">(Ri-sát Oát-xơn - Ngữ văn)</span></p>
+                </div>
+            </div>
+            <div>
+                <span id="headerModeBadge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 border border-gray-700">
+                    <span class="w-2 h-2 mr-2 rounded-full bg-gray-400"></span> Chưa chọn chế độ
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+
+        <!-- SCREEN 1: START SCREEN -->
+        <div id="screenStart" class="space-y-8 my-auto">
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 mb-2 border border-amber-500/30 shadow-inner">
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight title-cream uppercase">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-300">20 câu hỏi</strong> bám sát nội dung bài học <strong class="text-amber-300">Trí thông minh nhân tạo</strong> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 LEVEL CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="bg-[#241212] border border-[#422222] p-4 rounded-xl shadow-lg hover:border-amber-500/50 transition">
+                    <h3 class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-1">MỨC BIẾT (8 CÂU)</h3>
+                    <p class="text-xs text-gray-300">Kiến thức lý thuyết, mốc thời gian, thuật ngữ, khái niệm cơ bản trong bài học.</p>
+                </div>
+                <div class="bg-[#241212] border border-[#422222] p-4 rounded-xl shadow-lg hover:border-amber-500/50 transition">
+                    <h3 class="text-blue-400 font-bold text-xs uppercase tracking-wider mb-1">MỨC HIỂU (7 CÂU)</h3>
+                    <p class="text-xs text-gray-300">Giải thích hiện tượng, so sánh AI mạnh/yếu, vai trò sơ đồ & quan điểm tác giả.</p>
+                </div>
+                <div class="bg-[#241212] border border-[#422222] p-4 rounded-xl shadow-lg hover:border-amber-500/50 transition">
+                    <h3 class="text-emerald-400 font-bold text-xs uppercase tracking-wider mb-1">VẬN DỤNG (3 CÂU)</h3>
+                    <p class="text-xs text-gray-300">Phối hợp kiến thức phân tích thao tác lập luận, mối quan hệ ý chính - ý phụ.</p>
+                </div>
+                <div class="bg-[#241212] border border-[#422222] p-4 rounded-xl shadow-lg hover:border-amber-500/50 transition">
+                    <h3 class="text-purple-400 font-bold text-xs uppercase tracking-wider mb-1">VD CAO (2 CÂU)</h3>
+                    <p class="text-xs text-gray-300">Giải quyết yếu tố nghệ thuật phức tạp, đánh giá ý nghĩa triết học & nhân văn.</p>
+                </div>
+            </div>
+
+            <!-- MODE SELECTION -->
+            <div class="max-w-4xl mx-auto pt-4 space-y-6">
+                <p class="text-center text-xs font-bold uppercase tracking-widest text-amber-200/80">VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- MODE 1: PRACTICE -->
+                    <div class="bg-[#1f1010] border border-[#3d1f1f] hover:border-amber-500 rounded-2xl p-6 shadow-2xl flex flex-col justify-between transition group">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-white group-hover:text-amber-300 transition">1. Chế độ Luyện Tập</h3>
+                                <span class="bg-blue-900/60 text-blue-300 border border-blue-700/50 text-xs px-3 py-1 rounded-full font-medium">Không giới hạn</span>
+                            </div>
+                            <p class="text-xs text-gray-400 font-medium">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <button onclick="startQuiz('practice')" class="mt-6 w-full py-3 px-4 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl shadow-lg shadow-amber-500/20 flex items-center justify-center space-x-2 transition transform active:scale-95">
+                            <i class="fa-solid fa-book-reader"></i>
+                            <span>Bắt đầu Luyện Tập</span>
+                        </button>
+                    </div>
+
+                    <!-- MODE 2: TIMED -->
+                    <div class="bg-[#1f1010] border border-[#3d1f1f] hover:border-amber-500 rounded-2xl p-6 shadow-2xl flex flex-col justify-between transition group">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-white group-hover:text-amber-300 transition">2. Chế độ Tính Giờ</h3>
+                                <span class="bg-amber-900/60 text-amber-300 border border-amber-700/50 text-xs px-3 py-1 rounded-full font-medium">20 Phút</span>
+                            </div>
+                            <p class="text-xs text-gray-400 font-medium">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <button onclick="startQuiz('timed')" class="mt-6 w-full py-3 px-4 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg shadow-amber-600/20 flex items-center justify-center space-x-2 transition transform active:scale-95">
+                            <i class="fa-solid fa-stopwatch"></i>
+                            <span>Bắt đầu Tính Giờ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: TEST SCREEN -->
+        <div id="screenQuiz" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- LEFT SIDEBAR: QUESTION NAVIGATION -->
+            <div class="lg:col-span-4 bg-[#1f1010] border border-[#3d1f1f] rounded-2xl p-5 shadow-xl flex flex-col justify-between space-y-6">
+                <div>
+                    <div class="flex items-center justify-between border-b border-[#3d1f1f] pb-3 mb-4">
+                        <h3 class="font-bold text-sm text-gray-200 tracking-wider uppercase">DANH SÁCH CÂU HỎI</h3>
+                        <span id="progressSummary" class="text-xs font-semibold bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded-lg border border-amber-500/30">
+                            0 / 20 đã làm
+                        </span>
+                    </div>
+
+                    <!-- Countdown Timer Bar (Visible in Timed Mode) -->
+                    <div id="timerContainer" class="hidden mb-4 p-3 bg-[#2a1414] border border-amber-500/40 rounded-xl flex items-center justify-between">
+                        <span class="text-xs text-gray-300 font-medium flex items-center"><i class="fa-solid fa-clock mr-2 text-amber-400"></i> Thời gian còn lại:</span>
+                        <span id="timerDisplay" class="font-mono text-lg font-bold text-amber-400">20:00</span>
+                    </div>
+
+                    <!-- Question Buttons Grid -->
+                    <div id="questionGrid" class="grid grid-cols-5 gap-2.5">
+                        <!-- Rendered dynamically -->
+                    </div>
+
+                    <!-- Status Legend -->
+                    <div class="mt-6 space-y-2 border-t border-[#3d1f1f] pt-4 text-xs text-gray-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3.5 h-3.5 bg-[#2a1414] border border-gray-600 rounded"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3.5 h-3.5 bg-amber-600 border border-amber-400 rounded"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3.5 h-3.5 bg-blue-600 border border-blue-400 rounded"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="confirmSubmit()" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/20 flex items-center justify-center space-x-2 transition transform active:scale-95">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Nộp Bài & Kết Thúc</span>
+                </button>
+            </div>
+
+            <!-- RIGHT PANEL: CURRENT QUESTION -->
+            <div class="lg:col-span-8 bg-[#1f1010] border border-[#3d1f1f] rounded-2xl p-6 shadow-xl flex flex-col justify-between space-y-6">
+                <div class="space-y-6">
+                    <!-- Question Header & Level -->
+                    <div class="flex items-center justify-between border-b border-[#3d1f1f] pb-4">
+                        <div class="flex items-center space-x-3">
+                            <h3 id="currentQuestionTitle" class="text-xl font-extrabold text-white">Câu 1 / 20</h3>
+                            <span id="currentQuestionLevel" class="text-xs px-3 py-1 rounded-full font-semibold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                                Mức Biết
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Question Content -->
+                    <div id="currentQuestionText" class="text-base sm:text-lg font-medium text-gray-100 leading-relaxed">
+                        <!-- Rendered dynamically -->
+                    </div>
+
+                    <!-- Options List -->
+                    <div id="currentOptionsList" class="space-y-3">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Controls Bar -->
+                <div class="flex items-center justify-between border-t border-[#3d1f1f] pt-4">
+                    <button id="btnPrev" onclick="navigateQuestion(-1)" class="px-4 py-2.5 bg-[#2a1414] hover:bg-[#3d1f1f] disabled:opacity-40 disabled:cursor-not-allowed text-gray-300 rounded-xl font-semibold text-sm flex items-center space-x-2 transition">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Câu Trước</span>
+                    </button>
+                    <button onclick="clearCurrentSelection()" class="text-xs text-gray-400 hover:text-amber-400 underline transition">
+                        Xóa lựa chọn câu này
+                    </button>
+                    <button id="btnNext" onclick="navigateQuestion(1)" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl text-sm flex items-center space-x-2 transition shadow-lg shadow-amber-500/20">
+                        <span>Câu Tiếp</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: RESULT SCREEN -->
+        <div id="screenResult" class="hidden space-y-8">
+            <!-- RESULT CARD -->
+            <div class="bg-[#1f1010] border border-[#3d1f1f] rounded-2xl p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto space-y-6">
+                <div class="text-center space-y-3">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 shadow-inner">
+                        <i class="fa-solid fa-trophy text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold title-cream tracking-tight uppercase">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeLabel" class="text-xs text-gray-400 font-semibold tracking-widest uppercase">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-[#2a1414] border border-[#3d1f1f] p-4 rounded-xl text-center space-y-1">
+                        <p class="text-xs text-gray-400 font-medium">Điểm số</p>
+                        <p id="resScore" class="text-3xl font-extrabold text-amber-400">0.0 <span class="text-sm font-normal text-gray-400">/ 10.0</span></p>
+                    </div>
+                    <div class="bg-[#2a1414] border border-[#3d1f1f] p-4 rounded-xl text-center space-y-1">
+                        <p class="text-xs text-gray-400 font-medium">Số câu đúng</p>
+                        <p id="resCorrect" class="text-3xl font-extrabold text-emerald-400">0 <span class="text-sm font-normal text-gray-400">/ 20 câu</span></p>
+                    </div>
+                    <div class="bg-[#2a1414] border border-[#3d1f1f] p-4 rounded-xl text-center space-y-1">
+                        <p class="text-xs text-gray-400 font-medium">Thời gian làm bài</p>
+                        <p id="resTime" class="text-2xl font-bold text-blue-400 pt-1">Không giới hạn</p>
+                    </div>
+                </div>
+
+                <!-- Teacher Evaluation Box -->
+                <div class="bg-[#2a1414] border border-amber-500/30 p-5 rounded-xl space-y-2">
+                    <h4 class="text-amber-400 font-bold text-sm flex items-center">
+                        <i class="fa-solid fa-comment-dots mr-2"></i> Đánh giá & Nhận xét từ Giáo viên:
+                    </h4>
+                    <p id="teacherFeedback" class="text-sm text-gray-200 leading-relaxed italic">
+                        <!-- Dynamic feedback -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    <button onclick="resetQuiz()" class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-[#faad14] fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#explanationsSection" class="w-full sm:w-auto px-6 py-3 bg-[#2a1414] hover:bg-[#3d1f1f] text-gray-200 font-bold rounded-xl border border-[#3d1f1f] transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-[#faad14] fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- EXPLANATIONS SECTION -->
+            <div id="explanationsSection" class="max-w-4xl mx-auto space-y-6 pt-6">
+                <div class="flex items-center justify-between border-b border-[#3d1f1f] pb-3">
+                    <h3 class="text-xl font-extrabold title-cream flex items-center">
+                        <i class="fa-solid fa-list-ol text-amber-400 mr-3"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-gray-400">20/20 câu hỏi</span>
+                </div>
+
+                <div id="explanationsList" class="space-y-6">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        /* 
+           QUESTION DATASET BASED STRICTLY ON "Trí thông minh nhân tạo" (Richard Watson)
+           20 Questions: 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao.
+           Formatted with MathJax standard \( ... \) formulas where required.
+        */
+        const originalQuestions = [
+            // --- 8 CÂU MỨC BIẾT ---
+            {
+                id: 1,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Thuật ngữ “Trí thông minh nhân tạo” (AI) được nhà khoa học máy tính Giôn Mác Cát-thi (John McCarthy) đặt ra vào năm nào?",
+                options: [
+                    "A. Năm \( \\text{Năm } 1950 \)",
+                    "B. Năm \( \\text{Năm } 1956 \)",
+                    "C. Năm \( \\text{Năm } 2008 \)",
+                    "D. Năm \( \\text{Năm } 2011 \)"
+                ],
+                correct: 1, // B
+                explanation: "Theo văn bản SGK (trang 71): 'Năm 1956, nhà khoa học máy tính người Mỹ Giôn Mác Cát-thi (John McCarthy) đã đặt ra thuật ngữ “trí thông minh nhân tạo (AI)”'."
+            },
+            {
+                id: 2,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Theo văn bản, máy tính cá nhân năm 2008 xử lý khoảng \( 10 \\text{ tỉ lệnh/giây} \), tốc độ này chỉ tương đương với bộ não của sinh vật nào?",
+                options: [
+                    "A. Bộ não của một con kiến nhỏ",
+                    "B. Bộ não của một con cá nhỏ",
+                    "C. Bộ não của một con chim sẻ",
+                    "D. Bộ não của một con chuột"
+                ],
+                correct: 1, // B
+                explanation: "SGK trang 71 ghi rõ: 'Năm 2008, một máy tính cá nhân có khả năng xử lí khoảng 10 tỉ lệnh mỗi giây... Nhưng chừng ấy chỉ bằng tốc độ xử lí của học não một con cá nhỏ'."
+            },
+            {
+                id: 3,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Trong sơ đồ tiến trình phát triển AI, cỗ máy tính Oát-xơn (Watson) của hãng IBM chiến thắng chương trình Gieo-pơ-đi (Jeopardy!) vào năm nào?",
+                options: [
+                    "A. Năm \( \\text{Năm } 1990 \)",
+                    "B. Năm \( \\text{Năm } 2011 \)",
+                    "C. Năm \( \\text{Năm } 2027 \)",
+                    "D. Năm \( \\text{Năm } 2040 \)"
+                ],
+                correct: 1, // B
+                explanation: "Trong sơ đồ mốc thời gian (SGK trang 72), mốc năm 2011 ghi: 'Oát-xơn (Watson), cỗ máy tính của IBM, chiến thắng Gieo-pơ-đi (Jeopardy!), một chương trình truyền hình Mỹ'."
+            },
+            {
+                id: 4,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Theo tác giả Ri-sát Oát-xơn, “AI yếu” (đôi khi còn gọi là “AI hẹp”) là gì?",
+                options: [
+                    "A. Trí thông minh có khả năng suy nghĩ thực sự và tự có cảm xúc như con người",
+                    "B. Trí thông minh được dùng để bổ sung thay vì vượt lên trí tuệ loài người",
+                    "C. Trí thông minh có khả năng tự sáng tác nhạc và vẽ tranh nghệ thuật",
+                    "D. Trí thông minh có thể phản ứng lại tất cả sự kiện bất ngờ ngoài lập trình"
+                ],
+                correct: 1, // B
+                explanation: "SGK trang 71 nêu định nghĩa: '“AI yếu” (đôi khi còn được biết đến là “AI hẹp”) là trí thông minh được dùng để bổ sung thay vì vượt lên trí tuệ loài người'."
+            },
+            {
+                id: 5,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Trong sơ đồ mốc thời gian phát triển AI, dự đoán nào được đưa ra cho mốc năm \( \\text{Năm } 2042 \)?",
+                options: [
+                    "A. Số lượng rô-bốt thông minh vượt qua con người",
+                    "B. Điện thoại di động giá 750 đô la xử lý tương đương não người",
+                    "C. Virus máy tính vô hiệu hoá \( 90\\% \) máy móc",
+                    "D. Máy móc bắt đầu vẽ tranh và soạn nhạc"
+                ],
+                correct: 2, // C
+                explanation: "Trong sơ đồ mốc thời gian (SGK trang 72), mốc năm 2042 ghi nhận dự đoán: 'Virus máy tính vô hiệu hoá 90% máy móc'."
+            },
+            {
+                id: 6,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Nhà tương lai học Ray Cơ-do-uên (Ray Kurzweil) đã công khai đánh cược với ai về việc máy tính sẽ vượt qua bài kiểm tra Tu-rinh vào năm 2029?",
+                options: [
+                    "A. Giôn Mác Cát-thi (John McCarthy)",
+                    "B. A-lanh Tu-rinh (Alan Turing)",
+                    "C. Bin Can-vin (Bill Calvin)",
+                    "D. Mít-sen Cây-po (Mitchell Kapor)"
+                ],
+                correct: 3, // D
+                explanation: "SGK trang 72 ghi: 'Ray Cơ-do-uên, nhà tương lai học... đã công khai đánh cược với Mít-sen Cây-po, người sáng lập công ti phần mềm Lô-tút'."
+            },
+            {
+                id: 7,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Theo sơ đồ trong bài văn bản, mốc thời gian nào dự đoán máy móc bắt đầu biết vẽ tranh và soạn nhạc?",
+                options: [
+                    "A. Năm \( \\text{Năm } 2027 \)",
+                    "B. Năm \( \\text{Năm } 2050 \)",
+                    "C. Năm \( \\text{Năm } 2054 \)",
+                    "D. Năm \( \\text{Năm } 2069 \)"
+                ],
+                correct: 2, // C
+                explanation: "Sơ đồ SGK trang 72 ghi mốc năm 2054: 'Máy móc bắt đầu vẽ tranh và soạn nhạc'."
+            },
+            {
+                id: 8,
+                level: "Mức Biết",
+                levelCode: "know",
+                question: "Văn bản “Trí thông minh nhân tạo” của tác giả Ri-sát Oát-xơn được trích từ tác phẩm nào?",
+                options: [
+                    "A. Hồ sơ tương lai: lược sử 50 năm tới",
+                    "B. 50 ý tưởng về tương lai",
+                    "C. Trí tuệ tương lai",
+                    "D. Kĩ thuật số và con người"
+                ],
+                correct: 1, // B
+                explanation: "Nguồn trích dẫn ghi rõ: 'Trí thông minh nhân tạo (Trích 50 ý tưởng về tương lai)' của tác giả Ri-sát Oát-xơn."
+            },
+
+            // --- 7 CÂU MỨC HIỂU ---
+            {
+                id: 9,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Điểm khác biệt căn bản giữa “AI mạnh” và “AI yếu” theo cách phân tích của tác giả là gì?",
+                options: [
+                    "A. AI mạnh hoạt động bằng điện thoại, AI yếu hoạt động bằng máy tính cá nhân",
+                    "B. AI mạnh có khả năng suy nghĩ thực sự và học hỏi khi vận hành; AI yếu chủ yếu được lập trình trước để bổ trợ con người",
+                    "C. AI mạnh chỉ ứng dụng trong quân sự, AI yếu chỉ ứng dụng trong y tế",
+                    "D. AI mạnh ra đời năm 1956, AI yếu ra đời năm 2008"
+                ],
+                correct: 1, // B
+                explanation: "Văn bản đối lập: AI yếu chủ yếu được dạy chuỗi hành động logic sẵn có để bổ sung cho trí tuệ người, trong khi AI mạnh có khả năng suy nghĩ thực sự, học hỏi khi vận hành và ứng phó với sự kiện bất ngờ."
+            },
+            {
+                id: 10,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Tác giả dẫn chứng về Wikipedia và lý thuyết của Adam Smith nhằm mục đích làm rõ khái niệm nào?",
+                options: [
+                    "A. Sự cạn kiệt tài nguyên thiên nhiên trong tương lai",
+                    "B. Khái niệm “trí thông minh tổng hợp” phát sinh từ sự tự tổ chức trực tuyến",
+                    "C. Tác hại của virus máy tính đối với mạng toàn cầu",
+                    "D. Quy trình chế tạo ra điện thoại thông minh giá 750 đô la"
+                ],
+                correct: 1, // B
+                explanation: "SGK trang 72-73 đề cập Internet nuôi dưỡng thị trường thông tin gọi là 'trí thông minh tổng hợp', dẫn giải qua lý thuyết Adam Smith và ví dụ Wikipedia tạo ra tri thức tập thể."
+            },
+            {
+                id: 11,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Quan điểm của nhà thần kinh học Bill Calvin (Bin Can-vin) thể hiện thái độ như thế nào về khả năng của AI?",
+                options: [
+                    "A. Tuyệt đối tin tưởng AI sẽ hoàn toàn thay thế con người trước năm 2029",
+                    "B. Khẳng định não người quá phức tạp nên máy tính không thể mô phỏng được, hoặc nếu có sẽ mang cả nhược điểm cảm xúc",
+                    "C. Cho rằng AI sẽ tiêu diệt loài người bằng virus máy tính",
+                    "D. Đề nghị dừng nghiên cứu AI để bảo vệ công việc của người lao động"
+                ],
+                correct: 1, // B
+                explanation: "SGK trang 72 ghi quan điểm của Bill Calvin: 'não người phức tạp đến mức máy tính sẽ không bao giờ mô phỏng được, hoặc, nếu có, chúng sẽ thừa hưởng cả những điểm yếu và không toàn vẹn về mặt cảm xúc'."
+            },
+            {
+                id: 12,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Hiệu quả nổi bật của việc tác giả đưa sơ đồ mốc thời gian (1990 - 2069) vào văn bản là gì?",
+                options: [
+                    "A. Thay thế hoàn toàn cho lời văn mô tả để tiết kiệm dung lượng bài viết",
+                    "B. Trực quan hóa tiến trình phát triển và các dự đoán về AI theo dòng thời gian, giúp người đọc dễ theo dõi và hình dung",
+                    "C. Chứng minh rằng tất cả các dự đoán công nghệ chắc chắn 100% sẽ xảy ra",
+                    "D. Cung cấp công thức toán học tính toán tốc độ xử lý của vi mạch máy tính"
+                ],
+                correct: 1, // B
+                explanation: "Sơ đồ là phương tiện phi ngôn ngữ giúp hệ thống hóa thông tin trực quan, cô đọng, sinh động, giúp người đọc nắm bắt mạch phát triển từ quá khứ đến tương lai của AI."
+            },
+            {
+                id: 13,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Việc tác giả đặt ra hai câu hỏi lớn ở phần gần cuối bài có tác dụng gì đối với việc triển khai nội dung văn bản?",
+                options: [
+                    "A. Thể hiện sự bế tắc của tác giả vì không thể tìm ra câu trả lời",
+                    "B. Gợi mở những suy tư, tranh luận chiều sâu về bản chất con người và tác động xã hội của AI trong tương lai",
+                    "C. Khẳng định máy tính sẽ nô dịch con người trong tương lai gần",
+                    "D. Yêu cầu người đọc phải giải các bài toán logic phức tạp"
+                ],
+                correct: 1, // B
+                explanation: "Hai câu hỏi lớn chuyển mạch văn bản từ việc liệt kê thành tựu/dự đoán sang kích thích tư duy phản biện của người đọc về bản chất não người, kỉ nguyên tiến hóa mới và vấn đề việc làm."
+            },
+            {
+                id: 14,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Phương án nào sau đây khái quát đúng nhất chủ đề chính của văn bản “Trí thông minh nhân tạo”?",
+                options: [
+                    "A. Lịch sử ra đời của công ty iRobot và sự thắng lợi của cỗ máy Watson",
+                    "B. Sự phát triển vượt bậc, tiềm năng cùng những băn khoăn, dự báo về tương lai của trí thông minh nhân tạo đối với con người",
+                    "C. Hướng dẫn kĩ thuật lập trình các thuật toán AI mạnh và AI yếu",
+                    "D. Phân tích tác hại của virus máy tính năm 2042"
+                ],
+                correct: 1, // B
+                explanation: "Bài văn bản tập trung trình bày sự tiến bộ nhanh chóng của AI (khái niệm, các mốc phát triển, AI mạnh/yếu) đồng thời đặt ra những câu hỏi dự báo đầy suy tư về tương lai nhân loại."
+            },
+            {
+                id: 15,
+                level: "Mức Hiểu",
+                levelCode: "understand",
+                question: "Lời kết văn bản: “Hi vọng rằng máy móc sẽ không giận dữ và không tìm ra cách nô dịch loài người” thể hiện sắc thái biểu cảm gì của tác giả?",
+                options: [
+                    "A. Sự hoảng sợ tột độ và tuyệt vọng trước tương lai",
+                    "B. Nụ cười hóm hỉnh, hóm hỉnh nhưng chứa đựng lời nhắc nhở hóm hỉnh, sâu sắc về viễn cảnh công nghệ",
+                    "C. Sự mỉa mai, coi thường các thành tựu của khoa học máy tính",
+                    "D. Thái độ hoàn toàn dửng dưng không quan tâm đến tương lai"
+                ],
+                correct: 1, // B
+                explanation: "Câu kết mang giọng điệu hài hước, dí dỏm nhẹ nhàng của một nhà tương lai học nhưng ẩn chứa thông điệp cảnh báo tinh tế về tầm quan trọng của việc kiểm soát công nghệ AI."
+            },
+
+            // --- 3 CÂU VẬN DỤNG ---
+            {
+                id: 16,
+                level: "Vận Dụng",
+                levelCode: "apply",
+                question: "Trong văn bản, tác giả đã phối hợp những thao tác lập luận và nghệ thuật trình bày nào để tăng độ thuyết phục cho bài viết?",
+                options: [
+                    "A. Chủ yếu dùng biểu cảm trữ tình và miêu tả cảnh vật thiên nhiên",
+                    "B. Kết hợp giải thích khái niệm, đưa số liệu mốc thời gian, dẫn chứng thực tế và liệt kê ý kiến trái chiều của các chuyên gia",
+                    "C. Sử dụng phong cách hư cấu huyền bí và thần thoại cổ đại",
+                    "D. Dùng đối thoại kịch tính giữa các nhân vật hư cấu"
+                ],
+                correct: 1, // B
+                explanation: "Tác giả vận dụng phối hợp: giải thích (AI mạnh/yếu), chứng minh bằng số liệu mốc lịch sử (1956, 2008, 2040), sơ đồ trực quan và đưa ra quan điểm đối lập (Ray Kurzweil vs Bill Calvin) để bài viết đa chiều và giàu sức thuyết phục."
+            },
+            {
+                id: 17,
+                level: "Vận Dụng",
+                levelCode: "apply",
+                question: "Mối quan hệ logic giữa ý chính “Sự tiến bộ vũ bão của AI” và các ý phụ về “vấn đề việc làm, sự hợp nhất sinh học” trong bài được thể hiện như thế nào?",
+                options: [
+                    "A. Quan hệ đối lập hoàn toàn, ý phụ phủ định tính đúng đắn của ý chính",
+                    "B. Quan hệ nguyên nhân - kết quả và phát triển cuốn chiếu: Sự phát triển AI (nguyên nhân) dẫn đến những hệ quả và câu hỏi lớn về xã hội, con người (kết quả)",
+                    "C. Quan hệ bổ sung độc lập không liên quan gì đến nhau",
+                    "D. Quan hệ lặp lại trùng lặp không phát triển ý"
+                ],
+                correct: 1, // B
+                explanation: "Trình tự lập luận đi từ hiện tượng/thành tựu AI (nguyên nhân) tới việc mở rộng suy luận về các hệ quả xã hội như việc làm, sự thay đổi bản chất con người (kết quả suy ngẫm)."
+            },
+            {
+                id: 18,
+                level: "Vận Dụng",
+                levelCode: "apply",
+                question: "Việc đặt song song hai quan điểm trái chiều giữa Ray Cơ-do-uên và Bin Can-vin phản ánh phương pháp tư duy nào của tác giả văn bản thông tin?",
+                options: [
+                    "A. Tư duy phiến diện, cố tình làm người đọc hoang mang",
+                    "B. Tư duy khách quan, đa chiều, tôn trọng các góc nhìn khoa học khác nhau về một vấn đề phức tạp",
+                    "C. Thao tác bác bỏ hoàn toàn cả hai quan điểm để đưa ra đáp án cá nhân",
+                    "D. Phương pháp ngụy biện vòng quanh"
+                ],
+                correct: 1, // B
+                explanation: "Văn bản thông tin khoa học khách quan cần phản ánh bức tranh toàn cảnh. Việc đưa cả ý kiến lạc quan (Kurzweil) và hoài nghi (Calvin) cho thấy góc nhìn đa chiều, khoa học và công bằng."
+            },
+
+            // --- 2 CÂU VẬN DỤNG CAO ---
+            {
+                id: 19,
+                level: "Vận Dụng Cao",
+                levelCode: "high_apply",
+                question: "Phân tích chiều sâu triết học và nhân văn trong giả định của tác giả: “Nếu não người chỉ đơn giản là bộ sưu tập của những nguyên tử... chúng ta sẽ bước vào một kỉ nguyên tiến hoá mới, thời điểm chúng ta bắt đầu hợp nhất với máy móc...”. Giả định này đặt ra bài học gì?",
+                options: [
+                    "A. Khuyên con người nên từ bỏ cơ thể sinh học ngay lập tức để chuyển sang làm máy móc",
+                    "B. Đặt ra câu hỏi về ranh giới giữa nhân tính (cảm xúc, tâm hồn) và trí tuệ nhân tạo, nhắc nhở con người phải định vị lại giá trị cốt lõi của bản thể trong kỉ nguyên công nghệ",
+                    "C. Khẳng định con người sẽ hoàn toàn bị diệt vong và không còn hy vọng tồn tại",
+                    "D. Chứng minh rằng máy móc hoàn toàn không có giá trị gì đối với sự tiến hóa"
+                ],
+                correct: 1, // B
+                explanation: "Câu hỏi chạm đến chiều sâu triết học vị nhân sinh: Nếu con người chỉ là 'nguyên tử/DNA', máy móc sẽ vượt qua ta. Nhưng chính cảm xúc, tâm hồn và nhân tính mới là ranh giới cốt lõi. Điều này buộc con người phải trăn trở bảo vệ các giá trị nhân văn khi công nghệ phát triển."
+            },
+            {
+                id: 20,
+                level: "Vận Dụng Cao",
+                levelCode: "high_apply",
+                question: "Đánh giá thông điệp mang tính thời đại mà tác giả Ri-sát Oát-xơn gửi gắm đến người đọc thông qua toàn bộ văn bản?",
+                options: [
+                    "A. Cần tuyệt đối tẩy chay công nghệ AI để tránh bị máy móc nô dịch",
+                    "B. Công nghệ AI là xu thế tất yếu phát triển mãnh liệt; con người cần chủ động đón nhận, nâng cao năng lực thích ứng đồng thời làm chủ công nghệ bằng đạo đức và nhân tính",
+                    "C. Phụ thuộc hoàn toàn vào AI trong mọi lĩnh vực mà không cần rèn luyện tư duy con người",
+                    "D. Chỉ tập trung nghiên cứu AI yếu và cấm phát triển các hệ thống máy tính tự động"
+                ],
+                correct: 1, // B
+                explanation: "Văn bản không bài trừ công nghệ mà giúp người đọc nhận thức rõ xu thế tất yếu của tương lai. Thông điệp cốt lõi là sự chuẩn bị tâm thế: chủ động học hỏi, nâng cao trí tuệ, đồng thời giữ vững bản lĩnh và giá trị đạo đức con người trước làn sóng công nghệ."
+            }
+        ];
+
+        // QUIZ STATE
+        let quizMode = null; // 'practice' or 'timed'
+        let questions = [];
+        let userAnswers = {}; // { questionIndex: optionIndex }
+        let currentQuestionIdx = 0;
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let timeSpent = 0;
+
+        // SHUFFLE ARRAY HELPER
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            quizMode = mode;
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            timeSpent = 0;
+
+            // Header badge update
+            const modeBadge = document.getElementById('headerModeBadge');
+            if (mode === 'practice') {
+                modeBadge.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-900/80 text-blue-300 border border-blue-700";
+                modeBadge.innerHTML = `<span class="w-2 h-2 mr-2 rounded-full bg-blue-400 animate-pulse"></span> Chế độ LUYỆN TẬP`;
+                questions = [...originalQuestions]; // Keep standard order for practice
+            } else {
+                modeBadge.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-900/80 text-amber-300 border border-amber-700";
+                modeBadge.innerHTML = `<span class="w-2 h-2 mr-2 rounded-full bg-amber-400 animate-pulse"></span> Chế độ TÍNH GIỜ`;
+                
+                // Shuffle questions and options for Timed mode to prevent memorization
+                questions = shuffleArray(originalQuestions).map(q => {
+                    return {
+                        ...q,
+                        // Keep option strings intact
+                        options: [...q.options]
+                    };
+                });
+
+                // Start Timer
+                timeRemaining = 20 * 60;
+                document.getElementById('timerContainer').classList.remove('hidden');
+                startTimer();
+            }
+
+            // UI Screen Switching
+            document.getElementById('screenStart').classList.add('hidden');
+            document.getElementById('screenResult').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.remove('hidden');
+
+            renderQuestionGrid();
+            renderCurrentQuestion();
+        }
+
+        // TIMER FUNCTIONALITY
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                timeSpent++;
+                updateTimerDisplay();
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const formatted = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').textContent = formatted;
+        }
+
+        // RENDER QUESTION GRID IN SIDEBAR
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('questionGrid');
+            gridContainer.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `qbtn-${idx}`;
+                btn.onclick = () => jumpToQuestion(idx);
+                
+                // Default Base Styling
+                let bgClass = "bg-[#2a1414] text-gray-300 border-gray-700 hover:border-amber-500/50";
+                
+                if (idx === currentQuestionIdx) {
+                    bgClass = "bg-blue-600 text-white font-bold border-blue-400 shadow-md shadow-blue-600/30 ring-2 ring-blue-400/50";
+                } else if (userAnswers[idx] !== undefined) {
+                    bgClass = "bg-amber-600 text-white font-semibold border-amber-400";
+                }
+
+                btn.className = `h-10 rounded-lg text-xs border transition flex items-center justify-center font-medium ${bgClass}`;
+                btn.textContent = idx + 1;
+                gridContainer.appendChild(btn);
+            });
+
+            // Update Progress text
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('progressSummary').textContent = `${answeredCount} / 20 đã làm`;
+        }
+
+        // RENDER CURRENT QUESTION
+        function renderCurrentQuestion() {
+            const q = questions[currentQuestionIdx];
+
+            // Update Title & Level Badge
+            document.getElementById('currentQuestionTitle').textContent = `Câu ${currentQuestionIdx + 1} / 20`;
+            
+            const levelBadge = document.getElementById('currentQuestionLevel');
+            levelBadge.textContent = q.level;
+            
+            if (q.levelCode === 'know') {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40";
+            } else if (q.levelCode === 'understand') {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold uppercase bg-blue-500/20 text-blue-300 border border-blue-500/40";
+            } else if (q.levelCode === 'apply') {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+            } else {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-semibold uppercase bg-purple-500/20 text-purple-300 border border-purple-500/40";
+            }
+
+            // Render Question Text
+            document.getElementById('currentQuestionText').innerHTML = q.question;
+
+            // Render Options
+            const optionsContainer = document.getElementById('currentOptionsList');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[currentQuestionIdx] === optIdx;
+                
+                const optDiv = document.createElement('div');
+                optDiv.onclick = () => selectOption(optIdx);
+                optDiv.className = `option-card p-4 rounded-xl border text-sm sm:text-base cursor-pointer flex items-center space-x-3 ${
+                    isSelected 
+                    ? 'selected border-blue-500 bg-[#1e293b] text-white font-medium shadow-lg' 
+                    : 'bg-[#2a1414] border-[#3d1f1f] text-gray-200'
+                }`;
+
+                optDiv.innerHTML = `
+                    <div class="w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold transition-colors ${
+                        isSelected ? 'border-blue-400 bg-blue-500 text-white' : 'border-gray-500 text-gray-400'
+                    }">
+                        ${String.fromCharCode(65 + optIdx)}
+                    </div>
+                    <div class="flex-grow">${optText}</div>
+                `;
+
+                optionsContainer.appendChild(optDiv);
+            });
+
+            // Update Navigation Button States
+            document.getElementById('btnPrev').disabled = currentQuestionIdx === 0;
+            
+            const btnNext = document.getElementById('btnNext');
+            if (currentQuestionIdx === questions.length - 1) {
+                btnNext.innerHTML = `<span>Hoàn thành</span> <i class="fa-solid fa-check ml-1"></i>`;
+            } else {
+                btnNext.innerHTML = `<span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right ml-1"></i>`;
+            }
+
+            // Re-render MathJax formula markup
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+
+            renderQuestionGrid();
+        }
+
+        // SELECT OPTION
+        function selectOption(optIdx) {
+            userAnswers[currentQuestionIdx] = optIdx;
+            renderCurrentQuestion();
+        }
+
+        // CLEAR SELECTION
+        function clearCurrentSelection() {
+            delete userAnswers[currentQuestionIdx];
+            renderCurrentQuestion();
+        }
+
+        // NAVIGATE QUESTION
+        function navigateQuestion(direction) {
+            const nextIdx = currentQuestionIdx + direction;
+            if (nextIdx >= 0 && nextIdx < questions.length) {
+                currentQuestionIdx = nextIdx;
+                renderCurrentQuestion();
+            } else if (nextIdx >= questions.length) {
+                confirmSubmit();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            currentQuestionIdx = idx;
+            renderCurrentQuestion();
+        }
+
+        // CONFIRM SUBMIT
+        function confirmSubmit() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const remaining = questions.length - answeredCount;
+
+            let msg = "Bạn có chắc chắn muốn nộp bài?";
+            if (remaining > 0) {
+                msg = `Bạn còn ${remaining} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay bây giờ?`;
+            }
+
+            if (window.confirm(msg)) {
+                submitQuiz();
+            }
+        }
+
+        // SUBMIT QUIZ & CALCULATE RESULTS
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            let correctCount = 0;
+            questions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / questions.length) * 10;
+
+            // Render Results Screen UI
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenResult').classList.remove('hidden');
+
+            document.getElementById('resultModeLabel').textContent = quizMode === 'practice' ? 'Chế độ LUYỆN TẬP' : 'Chế độ TÍNH GIỜ';
+            document.getElementById('resScore').innerHTML = `${score.toFixed(1)} <span class="text-sm font-normal text-gray-400">/ 10.0</span>`;
+            document.getElementById('resCorrect').innerHTML = `${correctCount} <span class="text-sm font-normal text-gray-400">/ 20 câu</span>`;
+            
+            if (quizMode === 'timed') {
+                const minutesSpent = Math.floor(timeSpent / 60);
+                const secondsSpent = timeSpent % 60;
+                document.getElementById('resTime').textContent = `${minutesSpent} phút ${secondsSpent} giây`;
+            } else {
+                document.getElementById('resTime').textContent = 'Không giới hạn';
+            }
+
+            // Dynamic Teacher Feedback
+            const feedbackElem = document.getElementById('teacherFeedback');
+            if (score >= 8.5) {
+                feedbackElem.textContent = "Xuất sắc! Em đã nắm rất vững toàn bộ kiến thức bài Trí thông minh nhân tạo từ các mốc lịch sử, khái niệm AI đến khả năng phân tích tư duy vận dụng cao. Hãy tiếp tục phát huy!";
+            } else if (score >= 6.5) {
+                feedbackElem.textContent = "Khá tốt! Em đã hiểu rõ các mốc phát triển chính và nội dung bài học. Cần đọc kỹ hơn ở những câu hỏi phân tích sâu và vận dụng cao để đạt điểm tối đa nhé!";
+            } else if (score >= 5.0) {
+                feedbackElem.textContent = "Đạt yêu cầu! Em đã nhớ được một số thông tin cơ bản nhưng còn nhầm lẫn ở các câu phân biệt AI mạnh/yếu và câu hỏi vận dụng. Hãy ôn kỹ lại lời giải chi tiết bên dưới nhé!";
+            } else {
+                feedbackElem.textContent = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết Bài Trí thông minh nhân tạo. Hãy xem kỹ lời giải từng câu và ôn lại bài học SGK để làm lại nhé!";
+            }
+
+            // Render Explanations
+            renderExplanations();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // RENDER DETAILED EXPLANATIONS
+        function renderExplanations() {
+            const listContainer = document.getElementById('explanationsList');
+            listContainer.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+                const isUnanswered = userChoice === undefined;
+
+                const card = document.createElement('div');
+                card.className = "bg-[#1f1010] border border-[#3d1f1f] rounded-2xl p-5 sm:p-6 space-y-4 shadow-lg";
+
+                // Header status pill
+                let statusBadge = '';
+                if (isCorrect) {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-900/60 text-emerald-300 border border-emerald-700/60"><i class="fa-solid fa-check mr-1"></i> Đúng</span>`;
+                } else if (isUnanswered) {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-gray-800 text-gray-400 border border-gray-700"><i class="fa-solid fa-minus mr-1"></i> Chưa chọn</span>`;
+                } else {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-rose-900/60 text-rose-300 border border-rose-700/60"><i class="fa-solid fa-xmark mr-1"></i> Sai</span>`;
+                }
+
+                // Level Badge
+                let levelBadgeClass = "bg-amber-500/20 text-amber-300 border-amber-500/40";
+                if (q.levelCode === 'understand') levelBadgeClass = "bg-blue-500/20 text-blue-300 border-blue-500/40";
+                if (q.levelCode === 'apply') levelBadgeClass = "bg-emerald-500/20 text-emerald-300 border-emerald-500/40";
+                if (q.levelCode === 'high_apply') levelBadgeClass = "bg-purple-500/20 text-purple-300 border-purple-500/40";
+
+                let optionsHTML = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optStyle = "bg-[#2a1414] border-[#3d1f1f] text-gray-300";
+                    let iconHTML = '';
+
+                    if (optIdx === q.correct) {
+                        optStyle = "opt-correct border";
+                        iconHTML = `<i class="fa-solid fa-circle-check ml-auto text-emerald-400"></i>`;
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        optStyle = "opt-wrong border";
+                        iconHTML = `<i class="fa-solid fa-circle-xmark ml-auto text-rose-400"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl border text-sm flex items-center space-x-3 ${optStyle}">
+                            <span class="font-bold w-5">${String.fromCharCode(65 + optIdx)}.</span>
+                            <span class="flex-grow">${optText}</span>
+                            ${iconHTML}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-[#3d1f1f] pb-3">
+                        <div class="flex items-center space-x-2">
+                            <h4 class="font-bold text-white text-base">Câu ${idx + 1}</h4>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full font-medium border ${levelBadgeClass}">${q.level}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+                    
+                    <div class="text-gray-100 font-medium text-sm sm:text-base leading-relaxed">${q.question}</div>
+                    
+                    <div class="space-y-2 pt-1">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-[#2a1414] border border-amber-500/20 p-4 rounded-xl text-xs sm:text-sm text-amber-200/90 leading-relaxed space-y-1">
+                        <p class="font-bold text-amber-400 flex items-center">
+                            <i class="fa-solid fa-lightbulb mr-2"></i> Lời giải chi tiết:
+                        </p>
+                        <p>${q.explanation}</p>
+                    </div>
+                `;
+
+                listContainer.appendChild(card);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // RESET QUIZ
+        function resetQuiz() {
+            document.getElementById('screenResult').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenStart').classList.remove('hidden');
+
+            const modeBadge = document.getElementById('headerModeBadge');
+            modeBadge.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 border border-gray-700";
+            modeBadge.innerHTML = `<span class="w-2 h-2 mr-2 rounded-full bg-gray-400"></span> Chưa chọn chế độ`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

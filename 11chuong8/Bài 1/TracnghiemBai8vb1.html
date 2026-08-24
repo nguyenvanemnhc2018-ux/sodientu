@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức - Nữ phóng viên đầu tiên</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for rendering formatting and LaTeX symbols -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$','$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background-color: #663333;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-card {
+            background-color: rgba(20, 15, 20, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-card-hover:hover {
+            background-color: rgba(40, 25, 30, 0.6);
+            border-color: rgba(255, 253, 208, 0.3);
+        }
+        .bg-sidebar {
+            background-color: rgba(15, 10, 15, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .option-card {
+            background-color: rgba(30, 20, 25, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.2s ease;
+        }
+        .option-card:hover {
+            background-color: rgba(60, 35, 45, 0.8);
+            border-color: #FFFDD0;
+        }
+        .option-card.selected {
+            background-color: rgba(120, 50, 60, 0.85);
+            border-color: #FFFDD0;
+            box-shadow: 0 0 10px rgba(255, 253, 208, 0.2);
+        }
+        .btn-q-nav {
+            background-color: rgba(40, 25, 30, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .btn-q-nav.current {
+            border-color: #3b82f6;
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+        .btn-q-nav.answered {
+            background-color: #d97706;
+            color: #ffffff;
+            border-color: #f59e0b;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 253, 208, 0.3);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 253, 208, 0.5);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="w-full bg-black/40 border-b border-white/10 px-4 py-3 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-amber-600/30 p-2 rounded-lg border border-amber-500/40 text-amber-300">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold text-cream tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs md:text-sm text-gray-300">
+                        Bài: <span class="font-semibold text-white">Nữ phóng viên đầu tiên</span> (Tác giả: Trần Nhật Vy - Ngữ văn 11)
+                    </p>
+                </div>
+            </div>
+            <div id="modeBadgeHeader" class="hidden md:flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/10 text-xs font-medium text-amber-200">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span id="headerModeText">Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-1 flex flex-col">
+
+        <!-- SCREEN 1: START SCREEN / OVERVIEW & MODE SELECTION -->
+        <section id="startScreen" class="max-w-5xl mx-auto px-4 py-8 flex-1 flex flex-col justify-center items-center w-full">
+            <!-- Icon Check Circle -->
+            <div class="w-16 h-16 bg-amber-500/20 border-2 border-amber-400/60 rounded-full flex items-center justify-center text-amber-300 mb-6 shadow-lg">
+                <i class="fa-solid fa-check text-2xl"></i>
+            </div>
+
+            <h2 class="text-2xl md:text-4xl font-extrabold text-center text-cream mb-3 tracking-tight">
+                BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+            </h2>
+            <p class="text-center text-gray-200 max-w-2xl text-sm md:text-base mb-8">
+                Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-200">20 câu hỏi</strong> bám sát nội dung bài học <em class="text-cream font-semibold">Nữ phóng viên đầu tiên</em> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+            </p>
+
+            <!-- Cognitive Level Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-10">
+                <div class="bg-card p-4 rounded-xl border border-white/10 shadow-md">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-300 block mb-1">Mức Biết (8 câu)</span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Kiểm tra kiến thức trực tiếp có trong văn bản: nhân vật, mốc thời gian, sự kiện.
+                    </p>
+                </div>
+                <div class="bg-card p-4 rounded-xl border border-white/10 shadow-md">
+                    <span class="text-xs font-bold uppercase tracking-wider text-green-300 block mb-1">Mức Hiểu (7 câu)</span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Giải thích nội dung, chi tiết nghệ thuật, trích dẫn và các mối liên hệ đơn giản.
+                    </p>
+                </div>
+                <div class="bg-card p-4 rounded-xl border border-white/10 shadow-md">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-300 block mb-1">Vận Dụng (3 câu)</span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Phối hợp kiến thức, phân tích tư tưởng nhân vật, lập luận và trào lưu xã hội.
+                    </p>
+                </div>
+                <div class="bg-card p-4 rounded-xl border border-white/10 shadow-md">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-300 block mb-1">VD Cao (2 câu)</span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Đánh giá yếu tố nghệ thuật phức tạp, vai trò lịch sử văn học và nữ quyền.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Section Header -->
+            <p class="text-xs uppercase tracking-widest text-amber-200 font-bold mb-4 text-center">
+                Vui lòng chọn hình thức kiểm tra:
+            </p>
+
+            <!-- Mode Selection Options -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+                <!-- Practice Mode Card -->
+                <div onclick="startQuiz('practice')" class="bg-card bg-card-hover p-6 rounded-2xl border border-white/15 cursor-pointer transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-cream group-hover:text-amber-200 transition-colors">
+                                1. Chế độ Luyện Tập
+                            </h3>
+                            <span class="bg-blue-500/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-400/30">
+                                Không giới hạn
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-medium mb-2">Học tập & củng cố kiến thức không áp lực</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                        </p>
+                    </div>
+                    <button class="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 px-4 rounded-xl text-sm transition-colors shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-play"></i> Bắt đầu Luyện Tập
+                    </button>
+                </div>
+
+                <!-- Timed Mode Card -->
+                <div onclick="startQuiz('timed')" class="bg-card bg-card-hover p-6 rounded-2xl border border-white/15 cursor-pointer transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-cream group-hover:text-amber-200 transition-colors">
+                                2. Chế độ Tính Giờ
+                            </h3>
+                            <span class="bg-amber-500/20 text-amber-300 text-xs px-3 py-1 rounded-full border border-amber-400/30">
+                                20 Phút
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-medium mb-2">Thử thách & kiểm tra đánh giá năng lực</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                        </p>
+                    </div>
+                    <button class="mt-6 w-full bg-amber-600 hover:bg-amber-500 text-white font-medium py-2.5 px-4 rounded-xl text-sm transition-colors shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-stopwatch"></i> Bắt đầu Tính Giờ
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: QUIZ IN PROGRESS -->
+        <section id="quizScreen" class="hidden flex-1 flex flex-col lg:flex-row w-full max-w-7xl mx-auto p-4 gap-6">
+            <!-- Left Sidebar: Navigation Grid -->
+            <aside class="w-full lg:w-80 bg-sidebar p-5 rounded-2xl border border-white/10 flex flex-col justify-between shrink-0">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+                        <div>
+                            <h3 class="text-xs font-bold text-gray-300 uppercase tracking-wider">Danh sách câu hỏi</h3>
+                            <span id="answeredCounter" class="text-xs text-amber-300 font-semibold">0 / 20 đã làm</span>
+                        </div>
+                        <!-- Timer display container -->
+                        <div id="timerContainer" class="hidden flex items-center gap-2 bg-red-950/80 border border-red-500/40 px-3 py-1.5 rounded-lg text-red-200 text-sm font-bold animate-pulse">
+                            <i class="fa-regular fa-clock"></i>
+                            <span id="timerText">20:00</span>
+                        </div>
+                    </div>
+
+                    <!-- Question Grid Buttons -->
+                    <div id="questionGrid" class="grid grid-cols-5 gap-2.5 mb-6">
+                        <!-- Dynamic Question Grid Buttons generated by JS -->
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="space-y-2 text-xs text-gray-300 pt-3 border-t border-white/10">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-gray-800 border border-white/20 inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-amber-600 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-blue-600 inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="confirmSubmitQuiz()" class="mt-6 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Nộp Bài & Kết Thúc
+                </button>
+            </aside>
+
+            <!-- Right Main Quiz Body -->
+            <main class="flex-1 bg-card p-6 md:p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <!-- Question Title & Level Tag Header -->
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
+                        <div class="flex items-center gap-3">
+                            <h2 id="questionHeader" class="text-xl font-bold text-cream">Câu 1 / 20</h2>
+                            <span id="levelBadge" class="bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-md font-medium border border-blue-400/30">
+                                Mức Biết
+                            </span>
+                        </div>
+                        <span id="modeDisplayBadge" class="text-xs bg-white/10 px-2.5 py-1 rounded text-gray-300">
+                            Chế độ Luyện Tập
+                        </span>
+                    </div>
+
+                    <!-- Question Text -->
+                    <div id="questionText" class="text-base md:text-lg font-medium text-white mb-8 leading-relaxed">
+                        <!-- Question content injected by JS -->
+                    </div>
+
+                    <!-- Option Choices List -->
+                    <div id="optionsContainer" class="space-y-3.5 mb-8">
+                        <!-- Dynamic Options injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Bottom Quiz Actions -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
+                    <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs md:text-sm font-semibold transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2">
+                        <i class="fa-solid fa-chevron-left"></i> Câu Trước
+                    </button>
+
+                    <button onclick="clearCurrentSelection()" class="text-xs text-gray-400 hover:text-amber-200 transition-colors underline">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="nextBtn" onclick="navigateQuestion(1)" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-black font-bold text-xs md:text-sm transition-colors flex items-center gap-2 shadow-md">
+                        Câu Tiếp <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </main>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & EXPLANATIONS -->
+        <section id="resultScreen" class="hidden max-w-5xl mx-auto px-4 py-8 flex-1 w-full space-y-8">
+            <!-- Summary Banner -->
+            <div class="bg-card p-6 md:p-8 rounded-2xl border border-white/10 text-center relative overflow-hidden">
+                <div class="w-16 h-16 bg-amber-500/20 border-2 border-amber-400/60 rounded-full flex items-center justify-center text-amber-300 mx-auto mb-4 shadow-lg">
+                    <i class="fa-solid fa-trophy text-2xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-cream mb-1">KẾT QUẢ BÀI KIỂM TRA</h2>
+                <p id="resultModeSubtitle" class="text-xs text-gray-300 mb-6">Chế độ LUYỆN TẬP</p>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-6">
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/10">
+                        <span class="text-xs text-gray-400 uppercase tracking-wider block mb-1">Điểm số</span>
+                        <div id="scoreDisplay" class="text-2xl md:text-3xl font-black text-amber-300">0.0 <span class="text-sm font-normal text-gray-400">/ 10.0</span></div>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/10">
+                        <span class="text-xs text-gray-400 uppercase tracking-wider block mb-1">Số câu đúng</span>
+                        <div id="correctCountDisplay" class="text-2xl md:text-3xl font-black text-emerald-400">0 <span class="text-sm font-normal text-gray-400">/ 20 câu</span></div>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/10">
+                        <span class="text-xs text-gray-400 uppercase tracking-wider block mb-1">Thời gian làm bài</span>
+                        <div id="timeTakenDisplay" class="text-2xl md:text-3xl font-black text-blue-300">Không giới hạn</div>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-amber-950/40 border border-amber-500/30 p-4 rounded-xl text-left max-w-3xl mx-auto">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-comment-dots text-amber-400 text-lg mt-0.5"></i>
+                        <div>
+                            <h4 class="text-xs font-bold text-amber-300 uppercase tracking-wider mb-1">Đánh giá & Nhận xét từ Giáo viên:</h4>
+                            <p id="teacherRemark" class="text-xs md:text-sm text-gray-200 leading-relaxed">
+                                <!-- Remark filled dynamically -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4 mt-6">
+                    <button onclick="resetToStart()" class="px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-black font-bold text-sm transition-colors shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i> Làm lại bài kiểm tra
+                    </button>
+                    <a href="#explanationsSection" class="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors flex items-center gap-2 border border-white/15">
+                        <i class="fa-solid fa-list-check"></i> Xem đáp án & Lời giải
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Answers & Explanations Section -->
+            <div id="explanationsSection" class="pt-4">
+                <div class="flex items-center justify-between mb-6 pb-2 border-b border-white/10">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-gray-300">20/20 câu hỏi</span>
+                </div>
+
+                <div id="explanationsList" class="space-y-6">
+                    <!-- Dynamic Explanation cards injected here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-black/40 border-t border-white/10 py-4 px-4 text-center text-xs text-gray-400 mt-auto">
+        <p>© Hệ thống Ôn luyện Trắc nghiệm Ngữ văn 11 — Bài học: <em>Nữ phóng viên đầu tiên</em> (Trần Nhật Vy)</p>
+    </footer>
+
+    <script>
+        /* ==========================================================================
+           QUIZ DATABASE (20 Questions strictly based on Bai8vb1.pdf)
+           ========================================================================== */
+        const originalQuizData = [
+            // --- 8 CÂU MỨC BIẾT ---
+            {
+                id: 1,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Nhân vật Manh Manh nữ sĩ được đề cập trong văn bản có tên thật là gì và sinh sống trong khoảng thời gian nào?",
+                options: [
+                    "A. Nguyễn Thị Minh Khai (1910 - 1941)",
+                    "B. Nguyễn Thị Kiêm (1914 - 2005)",
+                    "C. Nguyễn Thị Manh Manh (1912 - 1998)",
+                    "D. Trương Thị Em (1915 - 2000)"
+                ],
+                correct: 1,
+                explanation: "Căn cứ vào văn bản: \\(\\text{Manh Manh nữ sĩ tên thật là Nguyễn Thị Kiêm (1914 - 2005)}\\), quê ở Gò Công."
+            },
+            {
+                id: 2,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Làng báo Sài Gòn ghi nhận sự xuất hiện của nữ phóng viên chính hiệu Manh Manh nữ sĩ tại tuần báo nào vào khoảng giữa năm \\(1931\\)?",
+                options: [
+                    "A. Báo Đuốc Nhà Nam",
+                    "B. Báo Thần Chung",
+                    "C. Tuần báo Phụ nữ Tân văn",
+                    "D. Báo Công Luận"
+                ],
+                correct: 2,
+                explanation: "Văn bản nêu rõ: Khoảng giữa năm \\(1931\\), làng báo Sài Gòn xuất hiện một nữ phóng viên chính hiệu ở tuần báo \\(\\text{Phụ nữ Tân văn}\\)."
+            },
+            {
+                id: 3,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Bút danh ban đầu của bà Nguyễn Thị Kiêm khi mới bước vào nghề báo chỉ viết các mục nhỏ là gì?",
+                options: [
+                    "A. Ngoạ Long, Đuốc Nhà Nam",
+                    "B. YM, Nguyễn Văn MYM",
+                    "C. Thơ Mới, Văn Uyển",
+                    "D. Thị Nọ, Thị Kia"
+                ],
+                correct: 1,
+                explanation: "Theo bài viết: \\(\\text{\"Ban đầu bà chỉ là phóng viên thường, viết các mục nhỏ với bút hiệu YM, Nguyễn Văn MYM\"}\\)."
+            },
+            {
+                id: 4,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Sự kiện văn học nào diễn ra ngày \\(10/3/1932\\) đã làm tên tuổi của Nguyễn Thị Kiêm sáng lên qua bút danh Manh Manh nữ sĩ?",
+                options: [
+                    "A. Bài diễn thuyết tại Hội Khuyến học Sài Gòn",
+                    "B. Phan Khôi đăng bài thơ \"Tình già\" trên Phụ nữ Tân văn",
+                    "C. Buổi nói chuyện tại Hội quán Khai Trí Tiến Đức",
+                    "D. Việc thành lập Nữ lưu học hội tại Tao Đàn"
+                ],
+                correct: 1,
+                explanation: "Văn bản ghi rõ: \\(\\text{\"Sau khi Phan Khôi đăng bài thơ Tình già (Phụ nữ Tân văn, số 122, ngày 10/3/1932) thì tên tuổi bà sáng lên...\"}\\)"
+            },
+            {
+                id: 5,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Trong Thi nhân Việt Nam, Hoài Thanh - Hoài Chân ghi nhận cuộc diễn thuyết tán dương Thơ mới của cô Nguyễn Thị Kiêm tại Hội Khuyến học Sài Gòn (SAMIPIC) diễn ra vào thời gian nào?",
+                options: [
+                    "A. Ngày 26 tháng 7 (26 Juillet) năm \\(1933\\)",
+                    "B. Ngày 26 tháng 5 năm \\(1932\\)",
+                    "C. Ngày 03 tháng 5 năm \\(1934\\)",
+                    "D. Ngày 08 tháng 9 năm \\(1934\\)"
+                ],
+                correct: 0,
+                explanation: "Theo trích dẫn Thi nhân Việt Nam trong bài: \\(\\text{\"hôm 26 Juillet 1933, một nữ sĩ có tài và có gan, cô Nguyễn Thị Kiêm, đã lên diễn đàn...\"}\\)"
+            },
+            {
+                id: 6,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Những bài Thơ mới tiêu biểu nào do Nguyễn Thị Kiêm sáng tác được đề cập trong văn bản?",
+                options: [
+                    "A. Tình già, Mùa xuân chín",
+                    "B. Hai cô thiếu nữ, Viếng phòng vắng",
+                    "C. Nhớ rừng, Lời kỹ nữ",
+                    "D. Trăng nghệ thuật, Tiếng thu"
+                ],
+                correct: 1,
+                explanation: "Bài viết nêu: \\(\\text{\"Không chỉ nói, bà còn sáng tác Thơ mới, những bài Hai cô thiếu nữ, Viếng phòng vắng,... để lại ấn tượng mạnh mãi về sau.\"}\\)"
+            },
+            {
+                id: 7,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Ngoại hình của Nguyễn Thị Kiêm được nhà báo Ngoạ Long miêu tả ra sao?",
+                options: [
+                    "A. Dáng người cao ráo, thanh tú, khuôn mặt trái xoan",
+                    "B. Người thấp lùn, bộ tướng núc ních, mặt má miếng bầu, môi nhọn như mỏ chim, đôi mắt sáng ngời",
+                    "C. Dáng điệu đài các, làn da trắng nón, khuôn mặt nghiêm nghị",
+                    "D. Thùy mị, nhỏ nhắn, luôn khép lép theo lễ giáo phong kiến"
+                ],
+                correct: 1,
+                explanation: "Trích văn bản: \\(\\text{\"Người thấp lùn, bộ tướng núc ních, mặt má miếng bầu, môi nhọn như mỏ chim,... đôi mắt sáng ngời, thông minh\"}\\)."
+            },
+            {
+                id: 8,
+                level: "Mức Biết",
+                levelCode: "biết",
+                question: "Sau khi tờ Phụ nữ Tân văn đình bản vào cuối năm \\(1934\\), thể loại báo chí nào trở thành sở trường nổi bật của nhà báo Nguyễn Thị Kiêm?",
+                options: [
+                    "A. Tiểu thuyết chương hồi",
+                    "B. Phỏng vấn",
+                    "C. Thơ trào phúng",
+                    "D. Kịch bản sân khấu"
+                ],
+                correct: 1,
+                explanation: "Văn bản xác nhận: \\(\\text{\"Bà trở thành một nhà báo bình thường, cộng tác với một số báo đương thời. Sở trường của bà là phỏng vấn.\"}\\)"
+            },
+
+            // --- 7 CÂU MỨC HIỂU ---
+            {
+                id: 9,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Tại sao tác giả lại gọi Nguyễn Thị Kiêm là \"nữ phóng viên chính hiệu\" đầu tiên trên làng báo Việt Nam?",
+                options: [
+                    "A. Vì bà là người duy nhất sở hữu bằng đại học báo chí thời bấy giờ",
+                    "B. Vì trước đó, các bài viết về phụ nữ thường do các ký giả nam giả danh \"Thị nọ Thị kia\" (ký giả có râu) đảm nhiệm",
+                    "C. Vì bà là người sáng lập ra báo Phụ nữ Tân văn ở Sài Gòn",
+                    "D. Vì bà là nữ nhà báo duy nhất đi du học Pháp trở về"
+                ],
+                correct: 1,
+                explanation: "Theo bài viết trích lời Ngoạ Long: Trước đó người giữ mục phụ nữ mặc dù ký tên Thị nọ Thị kia nhưng đều là \\(\\text{\"ký giả có râu\"}\\) (nam giới). Nguyễn Thị Kiêm là nữ phóng viên thật sự."
+            },
+            {
+                id: 10,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Theo quan niệm của Nguyễn Thị Kiêm trình bày tại Hội Khuyến học Sài Gòn, vì sao cần phải có lối \"Thơ mới\"?",
+                options: [
+                    "A. Để xóa bỏ hoàn toàn tất cả các giá trị văn học dân gian truyền thống",
+                    "B. Để tình cảm không bị gò bó, khuôn khổ làm cho \"đẹt mất\", giúp diễn tả thiết thực, rõ ràng các thi cảm",
+                    "C. Nhằm mục đích chứng tỏ nữ giới làm thơ giỏi hơn nam giới",
+                    "D. Để phục vụ việc học tiếng Pháp của học sinh thời bấy giờ"
+                ],
+                correct: 1,
+                explanation: "Trích lời bà Kiêm trong văn bản: \\(\\text{\"Muốn cho tình tứ không vì khuôn khổ mà bị đẹt mất... thì rất cần phải có một lối thơ khác, do lề lối nguyên tắc rộng rãi hơn...\"}\\)"
+            },
+            {
+                id: 11,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Tác giả văn bản đã trích dẫn những tư liệu báo chí như báo Đông Pháp, Ngọ Báo để phản ánh điều gì về các buổi diễn thuyết của Nguyễn Thị Kiêm ở Hà Nội?",
+                options: [
+                    "A. Sự phản đối gay gắt và bức xúc của công chúng miền Bắc",
+                    "B. Không khí chật nát, công chúng kéo đến đông đảo như \"nước chảy\", ngơ ngác tưởng như đi xem hội",
+                    "C. Sự vắng vẻ, lạnh nhạt của khán giả Hà Nội đối với phong trào Thơ mới",
+                    "D. Sự hỗn loạn và mất trật tự của thính phòng"
+                ],
+                correct: 1,
+                explanation: "Các báo miêu tả công chúng kéo đến \\(\\text{\"như nước chảy, lũ lượt bọn năm bọn ba... trên gác, dưới nhà, không một chỗ hở\"}\\), cho thấy sức hút kỷ lục."
+            },
+            {
+                id: 12,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Chi tiết Nguyễn Thị Kiêm phải \"đứng trên bàn để nói\" tại Hội Khuyến học Sài Gòn có ý nghĩa gì?",
+                options: [
+                    "A. Thể hiện sự thiếu tôn trọng thính giả của nữ sĩ",
+                    "B. Vừa khắc họa hóm hỉnh ngoại hình thấp lùn của bà, vừa phản ánh bầu không khí thính phòng chật nát, đông đúc người dự",
+                    "C. Là yêu cầu bắt buộc của ban tổ chức Hội Khuyến học",
+                    "D. Cho thấy sự kiêu ngạo của một nhà diễn thuyết trẻ tuổi"
+                ],
+                correct: 1,
+                explanation: "Văn bản cho biết vì bộ tướng thấp lùn và thính phòng quá đông người, để cử tọa trong phòng nhìn thấy diễn giả, bà phải đứng lên bàn. Chi tiết vừa khách quan vừa chân thực."
+            },
+            {
+                id: 13,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Tại buổi diễn thuyết ở Hà Nội năm \\(1934\\), Nguyễn Thị Kiêm định nghĩa như thế nào về \"đàn bà tân tiến\"?",
+                options: [
+                    "A. Đàn bà biết ăn mặc theo phong cách phương Tây và từ bỏ gia đình",
+                    "B. Đàn bà mới, biết đi theo trào lưu xã hội, theo thời đại văn minh và xin được đồng một phẩm giá làm người",
+                    "C. Đàn bà chỉ tập trung vào việc tranh luận chính trị trên báo chí",
+                    "D. Đàn bà từ chối các nghĩa vụ làm mẹ và làm vợ trong gia đình"
+                ],
+                correct: 1,
+                explanation: "Bà nói tại Hội quán Khai Trí Tiến Đức: \\(\\text{\"Đàn bà tân tiến là đàn bà mới, biết đi theo trào lưu xã hội... xin được đồng một phẩm giá làm người trong xã hội\"}\\)."
+            },
+            {
+                id: 14,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Sự kiện nào đánh dấu bước ngoặt khiến phong trào cổ vũ Thơ mới và đấu tranh cho nữ quyền của Nguyễn Thị Kiêm bị xẹp xuống vào cuối năm \\(1934\\)?",
+                options: [
+                    "A. Tờ Phụ nữ Tân văn bị đình bản",
+                    "B. Bà bị chính quyền Pháp cấm diễn thuyết",
+                    "C. Bà rời Việt Nam sang Pháp sinh sống",
+                    "D. Sự xuất hiện của các nhà thơ Nam Đồng thư quán"
+                ],
+                correct: 0,
+                explanation: "Văn bản nêu rõ: \\(\\text{\"Đáng tiếc, cuối năm 1934, tờ Phụ nữ Tân văn đình bản, bà Kiêm mất chỗ dựa, phong trào cổ vũ Thơ mới và đấu tranh cho nữ quyền của bà bị xẹp xuống\"}\\)."
+            },
+            {
+                id: 15,
+                level: "Mức Hiểu",
+                levelCode: "hiểu",
+                question: "Mục đích giao tiếp chính của văn bản thông tin \"Nữ phóng viên đầu tiên\" của Trần Nhật Vy là gì?",
+                options: [
+                    "A. Kêu gọi phụ nữ hiện đại tích cực tham gia viết báo trào phúng",
+                    "B. Phê phán định kiến hủ bại của xã hội phong kiến đối với nữ giới",
+                    "C. Cung cấp thông tin chân thực, khách quan về cuộc đời, sự nghiệp và những đóng góp phong trào của Manh Manh nữ sĩ Nguyễn Thị Kiêm",
+                    "D. Giải thích quy trình xuất bản một tờ báo ở Sài Gòn đầu thế kỷ XX"
+                ],
+                correct: 2,
+                explanation: "Văn bản thông tin tập trung giới thiệu nhân vật lịch sử - báo chí Nguyễn Thị Kiêm cùng hành trạng, đóng góp của bà cho Thơ mới và phong trào nữ quyền."
+            },
+
+            // --- 3 CÂU MỨC VẬN DỤNG ---
+            {
+                id: 16,
+                level: "Vận Dụng",
+                levelCode: "vận dụng",
+                question: "Việc tác giả đưa các trích dẫn định kiến xã hội thời đó (như: \"đàn bà An Nam lại có nảy sanh một số người quái gở! Họ vượt ra khỏi buồng the...\") có tác dụng phân tích gì?",
+                options: [
+                    "A. Chứng minh xã hội thời bấy giờ hoàn toàn ủng hộ sự tự do của phụ nữ",
+                    "B. Làm nổi bật bối cảnh định kiến khắt khe của lễ giáo cũ, qua đó tôn vinh sự dũng cảm, bản lĩnh tiên phong của Nguyễn Thị Kiêm",
+                    "C. Bào chữa cho những hành vi vượt rào thiếu chuẩn mực của giới nữ lưu",
+                    "D. Khai thác khía cạnh hài hước để tăng tính giải trí cho bài báo"
+                ],
+                correct: 1,
+                explanation: "Việc đối lập tư tưởng cởi mở của bà Kiêm với định kiến hủ bại nặng nề đương thời nhấn mạnh tinh thần tiên phong, bản lĩnh độc lập và ý nghĩa cách mạng trong hành động của bà."
+            },
+            {
+                id: 17,
+                level: "Vận Dụng",
+                levelCode: "vận dụng",
+                question: "Cách tác giả Trần Nhật Vy xây dựng chân dung Nguyễn Thị Kiêm có điểm gì đặc sắc về nghệ thuật viết chân dung nhân vật trong văn bản thông tin?",
+                options: [
+                    "A. Chỉ dùng tưởng tượng nghệ thuật và các chi tiết hư cấu để tăng sức hấp dẫn",
+                    "B. Kết hợp khách quan giữa mốc thời gian, tư liệu báo chí, trích dẫn lời nói trực tiếp và miêu tả chân thực ngoại hình (không tô vẽ mỹ lệ)",
+                    "C. Sử dụng phong cách trữ tình lãng mạn để ca ngợi tuyệt đối nhân vật",
+                    "D. Tập trung miêu tả đời sống cá nhân riêng tư mà bỏ qua các hoạt động xã hội"
+                ],
+                correct: 1,
+                explanation: "Tác giả khắc họa chân dung bằng tư liệu báo chí xác thực, dẫn lời chứng trực tiếp (Hoài Thanh, Ngoạ Long), ghi nhận cả điểm yếu ngoại hình (\"trời bắt xấu\") tạo nên một chân dung sống động, chân thực."
+            },
+            {
+                id: 18,
+                level: "Vận Dụng",
+                levelCode: "vận dụng",
+                question: "Từ các sự kiện Nguyễn Thị Kiêm đi diễn thuyết khắp Bắc - Trung - Nam (Sài Gòn, Huế, Hà Nội, Hải Phòng, Nam Định), ta có thể rút ra nhận xét gì về vai trò của bà trong phong trào Thơ mới?",
+                options: [
+                    "A. Bà chỉ là một người thưởng thức thơ ca đơn thuần ở Sài Gòn",
+                    "B. Bà là nhà diễn thuyết, nhà diễn giải và tuyên truyền đầy nhiệt huyết, góp phần quan trọng đưa Thơ mới lan tỏa rộng rãi ra toàn quốc",
+                    "C. Bà hoạt động độc lập và không ảnh hưởng gì tới các báo chí phía Bắc",
+                    "D. Vai trò của bà chỉ giới hạn trong việc viết bài phê bình trên báo Phụ nữ Tân văn"
+                ],
+                correct: 1,
+                explanation: "Các chuyến diễn thuyết xuyên Việt của bà đã tạo nên làn sóng tranh luận sâu rộng, cổ vũ công chúng và giới tri thức toàn quốc đón nhận Thơ mới."
+            },
+
+            // --- 2 CÂU MỨC VẬN DỤNG CAO ---
+            {
+                id: 19,
+                level: "VD Cao",
+                levelCode: "vận dụng cao",
+                question: "Ở phần kết văn bản, tác giả viết: \"Thế nhưng hầu hết những ghi nhận về văn thơ giai đoạn \\(1930 - 1945\\) đều lãng quên bà!\". Chi tiết này gợi ra suy ngẫm sâu sắc gì về lịch sử văn học?",
+                options: [
+                    "A. Tác giả khẳng định Nguyễn Thị Kiêm không có đóng góp gì đáng kể cho Thơ mới",
+                    "B. Phản ánh khoảng trầm và sự bất công trong việc ghi nhận lịch sử, qua đó đòi hỏi sự công bằng, nhân văn trong việc đánh giá di sản của các nữ sĩ tiên phong",
+                    "C. Cho thấy các nhà nghiên cứu văn học giai đoạn \\(1930 - 1945\\) luôn đánh giá chính xác mọi nhân vật",
+                    "D. Khẳng định thể loại Thơ mới không có giá trị lâu dài trong văn học Việt Nam"
+                ],
+                correct: 1,
+                explanation: "Lời nhận xét thẳng thắn ở cuối bài như một khoảng lặng gợi suy tư: lịch sử văn học nhiều khi đã lãng quên những người tiên phong mở đường (đặc biệt là phụ nữ), đặt ra yêu cầu nhìn nhận lại công bằng hơn."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                levelCode: "vận dụng cao",
+                question: "Đánh giá mối liên hệ giữa hai nội dung lớn trong cuộc đời hoạt động của Nguyễn Thị Kiêm: Cổ vũ \"Thơ mới\" và Đấu tranh cho \"Nữ quyền\"?",
+                options: [
+                    "A. Đó là hai hoạt động mâu thuẫn và triệt tiêu lẫn nhau trong sự nghiệp của bà",
+                    "B. Cả hai đều xuất phát từ tinh thần giải phóng: giải phóng cá nhân khỏi lễ giáo hủ bại (Nữ quyền) và giải phóng cảm xúc, nghệ thuật khỏi khuôn luật gò bó (Thơ mới)",
+                    "C. Việc cổ vũ Thơ mới chỉ là cái cớ để bà thu hút sự chú ý nhằm kiếm tiền xuất bản báo",
+                    "D. Đấu tranh nữ quyền là nhiệm vụ chính, còn Thơ mới chỉ là thú vui ngẫu hứng không liên quan"
+                ],
+                correct: 1,
+                explanation: "Thơ mới đòi thoát khỏi niêm luật gò bó của thơ cũ để tự do thể hiện tình cảm; Nữ quyền đòi thoát khỏi buồng the và lễ giáo hủ bại để bình đẳng làm người. Cả hai thống nhất ở tinh thần giải phóng cái Tôi và khát vọng tân tiến."
+            }
+        ];
+
+        /* ==========================================================================
+           STATE VARIABLES
+           ========================================================================== */
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let currentQuestions = [];
+        let currentIndex = 0;
+        let userAnswers = {}; // { qIndex: selectedOptionIndex }
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 mins in seconds
+        let isSubmitted = false;
+
+        /* ==========================================================================
+           HELPER FUNCTIONS
+           ========================================================================== */
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function showScreen(screenId) {
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+
+            document.getElementById(screenId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* ==========================================================================
+           START QUIZ LOGIC
+           ========================================================================== */
+        function startQuiz(mode) {
+            currentMode = mode;
+            isSubmitted = false;
+            userAnswers = {};
+            currentIndex = 0;
+
+            // Prepare questions based on mode
+            if (mode === 'timed') {
+                // Shuffle question order and also shuffle options for integrity
+                currentQuestions = shuffleArray(originalQuizData).map(q => {
+                    // Create a copy of options
+                    const optsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+                    const shuffledOpts = shuffleArray(optsWithIndex);
+                    
+                    // Find new index of correct answer
+                    const newCorrectIndex = shuffledOpts.findIndex(item => item.originalIndex === q.correct);
+                    
+                    // Clean text prefix (A., B., C., D.) and re-assign standard prefix
+                    const prefixes = ["A. ", "B. ", "C. ", "D. "];
+                    const cleanOpts = shuffledOpts.map((item, idx) => {
+                        let cleanText = item.text.replace(/^[A-D]\.\s*/, '');
+                        return prefixes[idx] + cleanText;
+                    });
+
+                    return {
+                        ...q,
+                        options: cleanOpts,
+                        correct: newCorrectIndex
+                    };
+                });
+
+                // Setup Timer (20 mins)
+                timeRemaining = 20 * 60;
+                document.getElementById('timerContainer').classList.remove('hidden');
+                document.getElementById('headerModeText').innerText = "Chế độ TÍNH GIỜ (20 phút)";
+                document.getElementById('modeDisplayBadge').innerText = "Chế độ Tính Giờ";
+                startTimer();
+            } else {
+                // Practice mode - standard order
+                currentQuestions = JSON.parse(JSON.stringify(originalQuizData));
+                document.getElementById('timerContainer').classList.add('hidden');
+                document.getElementById('headerModeText').innerText = "Chế độ LUYỆN TẬP";
+                document.getElementById('modeDisplayBadge').innerText = "Chế độ Luyện Tập";
+                if (timerInterval) clearInterval(timerInterval);
+            }
+
+            document.getElementById('modeBadgeHeader').classList.remove('hidden');
+
+            renderSidebarGrid();
+            renderQuestion(0);
+            showScreen('quizScreen');
+
+            // Trigger MathJax re-render
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        /* ==========================================================================
+           TIMER LOGIC
+           ========================================================================== */
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút! Hệ thống sẽ tự động nộp bài làm của bạn.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const formatted = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timerText').innerText = formatted;
+        }
+
+        /* ==========================================================================
+           SIDEBAR & QUESTION RENDER
+           ========================================================================== */
+        function renderSidebarGrid() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `qbtn-${idx}`;
+                btn.className = 'btn-q-nav h-9 w-full rounded-lg text-xs font-bold transition-all flex items-center justify-center';
+                btn.innerText = idx + 1;
+                btn.onclick = () => jumpToQuestion(idx);
+                grid.appendChild(btn);
+            });
+
+            updateGridButtonsState();
+        }
+
+        function updateGridButtonsState() {
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('answeredCounter').innerText = `${answeredCount} / 20 đã làm`;
+
+            currentQuestions.forEach((_, idx) => {
+                const btn = document.getElementById(`qbtn-${idx}`);
+                if (!btn) return;
+
+                btn.className = 'btn-q-nav h-9 w-full rounded-lg text-xs font-bold transition-all flex items-center justify-center ';
+
+                if (idx === currentIndex) {
+                    btn.classList.add('current', 'ring-2', 'ring-blue-300');
+                } else if (userAnswers[idx] !== undefined) {
+                    btn.classList.add('answered');
+                } else {
+                    btn.classList.add('text-gray-300', 'hover:bg-white/10');
+                }
+            });
+        }
+
+        function renderQuestion(index) {
+            currentIndex = index;
+            const q = currentQuestions[index];
+
+            // Question header
+            document.getElementById('questionHeader').innerText = `Câu ${index + 1} / 20`;
+            
+            // Level Badge
+            const levelBadge = document.getElementById('levelBadge');
+            levelBadge.innerText = q.level;
+            
+            if (q.levelCode === 'biết') {
+                levelBadge.className = 'bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-md font-medium border border-blue-400/30';
+            } else if (q.levelCode === 'hiểu') {
+                levelBadge.className = 'bg-green-500/20 text-green-300 text-xs px-2.5 py-1 rounded-md font-medium border border-green-400/30';
+            } else if (q.levelCode === 'vận dụng') {
+                levelBadge.className = 'bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-md font-medium border border-amber-400/30';
+            } else {
+                levelBadge.className = 'bg-purple-500/20 text-purple-300 text-xs px-2.5 py-1 rounded-md font-medium border border-purple-400/30';
+            }
+
+            // Question Text
+            document.getElementById('questionText').innerText = q.question;
+
+            // Render Options
+            const optsContainer = document.getElementById('optionsContainer');
+            optsContainer.innerHTML = '';
+
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+                const optCard = document.createElement('div');
+                optCard.className = `option-card p-4 rounded-xl cursor-pointer flex items-center justify-between text-sm transition-all ${isSelected ? 'selected' : ''}`;
+                optCard.onclick = () => selectOption(optIdx);
+
+                optCard.innerHTML = `
+                    <span class="font-medium ${isSelected ? 'text-cream' : 'text-gray-200'}">${optText}</span>
+                    <div class="w-5 h-5 rounded-full border ${isSelected ? 'border-amber-300 bg-amber-400 text-black flex items-center justify-center' : 'border-white/30'} shrink-0 ml-3">
+                        ${isSelected ? '<i class="fa-solid fa-check text-xs"></i>' : ''}
+                    </div>
+                `;
+                optsContainer.appendChild(optCard);
+            });
+
+            // Prev / Next button state
+            document.getElementById('prevBtn').disabled = (index === 0);
+            
+            const nextBtn = document.getElementById('nextBtn');
+            if (index === currentQuestions.length - 1) {
+                nextBtn.innerHTML = 'Nộp Bài <i class="fa-solid fa-check ml-1"></i>';
+                nextBtn.className = 'px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs md:text-sm transition-colors flex items-center gap-2 shadow-md';
+            } else {
+                nextBtn.innerHTML = 'Câu Tiếp <i class="fa-solid fa-chevron-right"></i>';
+                nextBtn.className = 'px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-black font-bold text-xs md:text-sm transition-colors flex items-center gap-2 shadow-md';
+            }
+
+            updateGridButtonsState();
+
+            // Re-render MathJax formula typesetting
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(optIdx) {
+            userAnswers[currentIndex] = optIdx;
+            renderQuestion(currentIndex);
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentIndex];
+            renderQuestion(currentIndex);
+        }
+
+        function navigateQuestion(step) {
+            const target = currentIndex + step;
+            if (target >= 0 && target < currentQuestions.length) {
+                renderQuestion(target);
+            } else if (target >= currentQuestions.length) {
+                confirmSubmitQuiz();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            renderQuestion(idx);
+        }
+
+        function confirmSubmitQuiz() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount < 20) {
+                const confirmMsg = `Bạn mới hoàn thành ${answeredCount}/20 câu hỏi.\nBạn có chắc chắn muốn nộp bài sớm không?`;
+                if (!confirm(confirmMsg)) return;
+            } else {
+                if (!confirm("Bạn đã trả lời hết 20 câu hỏi. Bạn có muốn nộp bài ngay bây giờ?")) return;
+            }
+            submitQuiz();
+        }
+
+        /* ==========================================================================
+           SUBMIT & EVALUATION LOGIC
+           ========================================================================== */
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+            isSubmitted = true;
+
+            // Calculate score
+            let correctCount = 0;
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / 20) * 10;
+            const scoreFormatted = score.toFixed(1);
+
+            // Time taken display
+            let timeTakenText = "Không giới hạn";
+            if (currentMode === 'timed') {
+                const totalSecondsUsed = (20 * 60) - timeRemaining;
+                const m = Math.floor(totalSecondsUsed / 60);
+                const s = totalSecondsUsed % 60;
+                timeTakenText = `${m} phút ${s} giây`;
+            }
+
+            // Fill results UI
+            document.getElementById('scoreDisplay').innerHTML = `${scoreFormatted} <span class="text-sm font-normal text-gray-400">/ 10.0</span>`;
+            document.getElementById('correctCountDisplay').innerHTML = `${correctCount} <span class="text-sm font-normal text-gray-400">/ 20 câu</span>`;
+            document.getElementById('timeTakenDisplay').innerText = timeTakenText;
+            document.getElementById('resultModeSubtitle').innerText = currentMode === 'timed' ? 'Chế độ TÍNH GIỜ (20 Phút)' : 'Chế độ LUYỆN TẬP';
+
+            // Teacher Feedback Remark
+            let remark = "";
+            if (score === 10) {
+                remark = "Xuất sắc! Em đã nắm vững toàn bộ kiến thức lý thuyết, hoàn cảnh lịch sử, giá trị tư tưởng và nghệ thuật của bài 'Nữ phóng viên đầu tiên'. Hãy duy trì tinh thần học tập tuyệt vời này nhé!";
+            } else if (score >= 8.0) {
+                remark = "Giỏi lắm! Em hiểu sâu bài học, phân tích tốt bối cảnh Thơ mới và phong trào Nữ quyền. Cần rà soát kỹ lại một vài chi tiết nhỏ ở các câu vận dụng để đạt điểm tuyệt đối!";
+            } else if (score >= 6.5) {
+                remark = "Khá tốt! Em đã nắm được các nội dung cơ bản của văn bản. Tuy nhiên, cần chú ý đọc kĩ các trích dẫn báo chí và các câu hỏi phân tích sâu sắc về ngoại hình, phong trào nữ quyền.";
+            } else if (score >= 5.0) {
+                remark = "Đạt yêu cầu! Em đã nhớ được một số thông tin cơ bản nhưng chưa thực sự nắm chắc các chi tiết cốt lõi và tư tưởng nhân vật. Hãy đọc kỹ lại phần Lời giải chi tiết bên dưới nhé!";
+            } else {
+                remark = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững kiến thức văn bản 'Nữ phóng viên đầu tiên' (Trần Nhật Vy). Hãy xem kỹ lời giải chi tiết của từng câu và đọc lại bài học trong SGK để làm lại bài nhé!";
+            }
+            document.getElementById('teacherRemark').innerText = remark;
+
+            // Render Explanations
+            renderExplanations();
+
+            showScreen('resultScreen');
+
+            // Trigger MathJax re-render
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function renderExplanations() {
+            const container = document.getElementById('explanationsList');
+            container.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+                const isUnanswered = userChoice === undefined;
+
+                const card = document.createElement('div');
+                card.className = `bg-card p-5 md:p-6 rounded-2xl border ${isCorrect ? 'border-emerald-500/40' : 'border-red-500/40'} space-y-4`;
+
+                // Badge for Level & Result Status
+                let statusBadge = '';
+                if (isCorrect) {
+                    statusBadge = `<span class="bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full border border-emerald-500/30 font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> Đúng</span>`;
+                } else if (isUnanswered) {
+                    statusBadge = `<span class="bg-gray-500/20 text-gray-300 text-xs px-3 py-1 rounded-full border border-gray-500/30 font-bold flex items-center gap-1"><i class="fa-solid fa-minus"></i> Bỏ trống</span>`;
+                } else {
+                    statusBadge = `<span class="bg-red-500/20 text-red-300 text-xs px-3 py-1 rounded-full border border-red-500/30 font-bold flex items-center gap-1"><i class="fa-solid fa-xmark"></i> Sai</span>`;
+                }
+
+                // Options list HTML
+                let optionsHtml = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optStyle = 'border border-white/10 bg-black/20 text-gray-300';
+                    let iconHtml = '';
+
+                    if (optIdx === q.correct) {
+                        // Correct option
+                        optStyle = 'border-2 border-emerald-500 bg-emerald-950/40 text-emerald-200 font-semibold';
+                        iconHtml = '<i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>';
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        // User wrongly selected option
+                        optStyle = 'border-2 border-red-500 bg-red-950/40 text-red-200 line-through';
+                        iconHtml = '<i class="fa-solid fa-circle-xmark text-red-400 text-base"></i>';
+                    }
+
+                    optionsHtml += `
+                        <div class="p-3 rounded-xl text-xs md:text-sm flex items-center justify-between ${optStyle}">
+                            <span>${optText}</span>
+                            ${iconHtml}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <h4 class="font-bold text-cream text-sm md:text-base">Câu ${idx + 1}</h4>
+                            <span class="text-xs px-2.5 py-0.5 rounded bg-white/10 text-gray-300">${q.level}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <p class="text-sm md:text-base font-medium text-white leading-relaxed">${q.question}</p>
+
+                    <div class="space-y-2">
+                        ${optionsHtml}
+                    </div>
+
+                    <div class="bg-black/40 p-4 rounded-xl border border-white/10 text-xs md:text-sm text-amber-100/90 leading-relaxed mt-3">
+                        <div class="font-bold text-amber-300 mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb text-amber-400"></i> Lời giải chi tiết:
+                        </div>
+                        <p>${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function resetToStart() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('modeBadgeHeader').classList.add('hidden');
+            showScreen('startScreen');
+        }
+
+        // Initialize view on page load
+        window.onload = function() {
+            showScreen('startScreen');
+        };
+    </script>
+</body>
+</html>
