@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Thần Thoại Việt Nam</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax CDN -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+            color: #F3F4F6;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-dark-card {
+            background-color: #111827;
+        }
+        .bg-dark-sidebar {
+            background-color: #131B2E;
+        }
+        .border-dark-subtle {
+            border-color: #1F2937;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+
+    <!-- HEADER -->
+    <header class="bg-[#0f172a] border-b border-gray-800 px-4 py-3 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500/20 p-2 rounded-lg border border-amber-500/30">
+                    <i class="fa-solid fa-book-open text-amber-400 text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold text-cream tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs md:text-sm text-gray-400">
+                        Bài: <span class="text-amber-200 font-medium">TRUYỆN VỀ CÁC VỊ THẦN SÁNG TẠO THẾ GIỚI (Thần thoại Việt Nam)</span>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <span id="headerModeBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 border border-gray-700">
+                    <i class="fa-solid fa-circle text-[8px] text-gray-400"></i>
+                    <span>Chưa chọn chế độ</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow flex flex-col justify-center items-center p-3 md:p-6 max-w-7xl w-full mx-auto">
+
+        <!-- SCREEN 1: START / MODE SELECTION SCREEN -->
+        <div id="startScreen" class="w-full max-w-4xl space-y-8 my-auto py-4">
+            <div class="text-center space-y-3">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-2">
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-white tracking-tight uppercase">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="text-amber-300 font-semibold">20 câu hỏi</span> bám sát nội dung bài học <span class="text-amber-200 font-semibold">Truyện về các vị thần sáng tạo thế giới</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- Matrix breakdown cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <div class="bg-gray-900/80 border border-gray-800 p-4 rounded-xl text-center space-y-1 hover:border-blue-500/40 transition">
+                    <span class="text-xs uppercase tracking-wider font-semibold text-blue-400 block">MỨC BIẾT (8 CÂU)</span>
+                    <p class="text-[11px] text-gray-400">Kiến thức trực tiếp, chi tiết, nhân vật trong tác phẩm.</p>
+                </div>
+                <div class="bg-gray-900/80 border border-gray-800 p-4 rounded-xl text-center space-y-1 hover:border-green-500/40 transition">
+                    <span class="text-xs uppercase tracking-wider font-semibold text-green-400 block">MỨC HIỂU (7 CÂU)</span>
+                    <p class="text-[11px] text-gray-400">Giải thích hiện tượng, ý nghĩa chi tiết nội dung nghệ thuật.</p>
+                </div>
+                <div class="bg-gray-900/80 border border-gray-800 p-4 rounded-xl text-center space-y-1 hover:border-amber-500/40 transition">
+                    <span class="text-xs uppercase tracking-wider font-semibold text-amber-400 block">VẬN DỤNG (3 CÂU)</span>
+                    <p class="text-[11px] text-gray-400">Phân tích tổng hợp, tư duy liên hệ dân gian.</p>
+                </div>
+                <div class="bg-gray-900/80 border border-gray-800 p-4 rounded-xl text-center space-y-1 hover:border-purple-500/40 transition">
+                    <span class="text-xs uppercase tracking-wider font-semibold text-purple-400 block">VD CAO (2 CÂU)</span>
+                    <p class="text-[11px] text-gray-400">Đánh giá yếu tố nghệ thuật phức tạp & chiều sâu tư tưởng.</p>
+                </div>
+            </div>
+
+            <div class="text-center pt-2">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <!-- Option 1: Practice Mode -->
+                    <div onclick="startQuiz('practice')" class="cursor-pointer bg-gray-900/90 border border-gray-800 hover:border-blue-500/60 p-6 rounded-2xl text-left transition transform hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/30 group">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-lg font-bold text-white group-hover:text-blue-400 transition">1. Chế độ Luyện Tập</h4>
+                            <span class="px-2.5 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full text-xs font-medium">Không giới hạn</span>
+                        </div>
+                        <p class="text-xs text-gray-400 font-medium mb-3">Học tập & củng cố kiến thức không áp lực</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                        </p>
+                    </div>
+
+                    <!-- Option 2: Timed Mode -->
+                    <div onclick="startQuiz('timed')" class="cursor-pointer bg-gray-900/90 border border-gray-800 hover:border-amber-500/60 p-6 rounded-2xl text-left transition transform hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-950/30 group">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-lg font-bold text-white group-hover:text-amber-400 transition">2. Chế độ Tính Giờ</h4>
+                            <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-xs font-medium">20 Phút</span>
+                        </div>
+                        <p class="text-xs text-gray-400 font-medium mb-3">Thử thách & kiểm tra đánh giá năng lực</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: QUIZ TAKING SCREEN -->
+        <div id="quizScreen" class="hidden w-full grid grid-cols-1 lg:grid-cols-4 gap-6 my-auto py-2">
+            
+            <!-- Left Sidebar: Question Grid Navigation -->
+            <div class="lg:col-span-1 bg-gray-900/90 border border-gray-800 rounded-2xl p-4 flex flex-col justify-between space-y-4">
+                <div>
+                    <div class="flex justify-between items-center pb-3 mb-4 border-b border-gray-800">
+                        <span class="text-xs font-bold text-gray-300 uppercase tracking-wider">DANH SÁCH CÂU HỎI</span>
+                        <span id="progressCount" class="text-xs font-semibold px-2 py-0.5 bg-amber-500/10 text-amber-300 border border-amber-500/20 rounded-md">
+                            0 / 20 đã làm
+                        </span>
+                    </div>
+
+                    <!-- Question Grid -->
+                    <div id="questionGrid" class="grid grid-cols-5 gap-2">
+                        <!-- Dynamically filled with buttons 1..20 -->
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="mt-6 pt-4 border-t border-gray-800 space-y-2 text-[11px] text-gray-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-gray-800 border border-gray-700"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-amber-500 text-black"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded bg-blue-600 text-white"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timer / Mode display & Submit button -->
+                <div class="space-y-3 pt-3 border-t border-gray-800">
+                    <div id="timerContainer" class="hidden text-center bg-gray-950 p-2.5 rounded-xl border border-red-900/50">
+                        <span class="text-xs text-gray-400 block mb-0.5">Thời gian còn lại</span>
+                        <span id="timerDisplay" class="text-xl font-extrabold text-red-400 font-mono">20:00</span>
+                    </div>
+
+                    <button onclick="submitQuiz()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center space-x-2 text-sm">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Area: Question Details & Options -->
+            <div class="lg:col-span-3 bg-gray-900/90 border border-gray-800 rounded-2xl p-5 md:p-8 flex flex-col justify-between min-h-[480px]">
+                
+                <!-- Question Header & Text -->
+                <div class="space-y-5">
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                        <div class="flex items-center space-x-3">
+                            <span id="currentQuestionNumber" class="text-lg md:text-xl font-bold text-white">Câu 1 / 20</span>
+                            <span id="currentQuestionLevel" class="text-xs px-2.5 py-1 rounded-md font-medium bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                                Mức Biết
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Question Prompt -->
+                    <div id="questionText" class="text-base md:text-lg font-medium text-gray-100 leading-relaxed min-h-[60px]">
+                        Loading question...
+                    </div>
+
+                    <!-- Choices List -->
+                    <div id="optionsContainer" class="space-y-3 pt-2">
+                        <!-- Options generated here -->
+                    </div>
+                </div>
+
+                <!-- Question Navigation Footer -->
+                <div class="flex items-center justify-between border-t border-gray-800 pt-5 mt-6">
+                    <button id="btnPrev" onclick="prevQuestion()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fa-solid fa-chevron-left mr-1"></i> Câu Trước
+                    </button>
+
+                    <button onclick="clearSelection()" class="text-xs text-gray-400 hover:text-amber-400 underline transition">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="btnNext" onclick="nextQuestion()" class="px-5 py-2 bg-amber-500 hover:bg-amber-400 text-black rounded-xl text-sm font-bold transition disabled:opacity-40 disabled:cursor-not-allowed">
+                        Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: RESULT & SOLUTION DISPLAY SCREEN -->
+        <div id="resultScreen" class="hidden w-full max-w-4xl space-y-8 my-auto py-4">
+            
+            <!-- Summary Banner -->
+            <div class="bg-gray-900/90 border border-gray-800 rounded-2xl p-6 md:p-8 text-center space-y-6">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">
+                    <i class="fa-solid fa-trophy text-3xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeSubtitle" class="text-sm text-gray-400 mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-950/60 border border-gray-800 p-4 rounded-xl">
+                        <span class="text-xs text-gray-400 block mb-1">Điểm số</span>
+                        <span id="finalScore" class="text-3xl font-extrabold text-amber-400">0.0 <span class="text-sm font-normal text-gray-400">/ 10.0</span></span>
+                    </div>
+                    <div class="bg-gray-950/60 border border-gray-800 p-4 rounded-xl">
+                        <span class="text-xs text-gray-400 block mb-1">Số câu đúng</span>
+                        <span id="correctCount" class="text-3xl font-extrabold text-emerald-400">0 <span class="text-sm font-normal text-gray-400">/ 20 câu</span></span>
+                    </div>
+                    <div class="bg-gray-950/60 border border-gray-800 p-4 rounded-xl">
+                        <span class="text-xs text-gray-400 block mb-1">Thời gian làm bài</span>
+                        <span id="timeSpent" class="text-2xl font-bold text-gray-200">Không giới hạn</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-amber-950/20 border border-amber-500/30 rounded-xl p-4 text-left space-y-2">
+                    <div class="flex items-center space-x-2 text-amber-400 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedback" class="text-xs md:text-sm text-gray-300 leading-relaxed">
+                        Cần cố gắng nhiều hơn! Hãy xem kỹ lời giải từng câu và ôn lại bài học SGK để làm lại nhé.
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                    <button onclick="resetApp()" class="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl text-sm transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToSolutions()" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-xl text-sm transition flex items-center justify-center space-x-2 border border-gray-700">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions List -->
+            <div id="solutionsSection" class="space-y-6 pt-4">
+                <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                    <h3 class="text-lg font-bold text-amber-200 flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span id="solutionCountBadge" class="text-xs text-gray-400">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutionsListContainer" class="space-y-6">
+                    <!-- Detailed solution blocks dynamically inserted -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 border-t border-gray-800 py-3 text-center text-xs text-gray-400">
+        <p>Hệ thống Ôn Luyện Kiến Thức Văn Học Khách Quan • Thiết kế giảng dạy chuẩn cấu trúc Bộ Giáo dục</p>
+    </footer>
+
+    <script>
+        /*
+         * MASTER QUESTION BANK (20 Questions: 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao)
+         * Strictly derived from chuong1bai123.pdf
+         */
+        const rawQuestions = [
+            // --- MỨC BIẾT (8 CÂU) ---
+            {
+                id: 1,
+                level: "Biết",
+                levelCode: "know",
+                question: "Theo văn bản, nhân vật Thần Gió có đặc điểm ngoại hình nào rất kỳ quặc?",
+                options: [
+                    "Thần không có đầu",
+                    "Thần có 6 tay và 3 mắt",
+                    "Thần luôn mang cánh chim khổng lồ",
+                    "Thần có thân mình là ngọn lửa"
+                ],
+                answer: 0,
+                explanation: "Trong văn bản mục 3 (Thần Gió), tác giả Nguyễn Đổng Chi miêu tả: 'Thần Gió có một hình dạng kì quặc. Thần không có đầu. Bảo bối của thần là một thứ quạt màu nhiệm.'"
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelCode: "know",
+                question: "Trong thiên đình và dân gian, Thần Sét còn có những danh hiệu hoặc tên gọi nào khác?",
+                options: [
+                    "Thiên Lôi hoặc ông Sấm",
+                    "Cường Bạo Đại Vương",
+                    "Thần Cụt Đầu",
+                    "Ngọc Hoàng Thượng Đế"
+                ],
+                answer: 0,
+                explanation: "Trong văn bản mục 2 (Thần Sét), ghi rõ: 'Thần Sét có danh hiệu là Thiên Lôi, cũng có khi được gọi là ông Sấm.'"
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelCode: "know",
+                question: "Trong bài vè dân gian được dẫn trong bài Thần Trụ Trời, vị thần nào được xếp ở vị trí thứ nhất?",
+                options: [
+                    "Ông đếm cát",
+                    "Ông tát bể",
+                    "Ông kể sao",
+                    "Ông trụ trời"
+                ],
+                answer: 0,
+                explanation: "Bài vè dân gian trong bài viết: 'Nhất ông đếm cát / Nhì ông tát bể / Ba ông kể sao...'. Vị thần thứ nhất là 'ông đếm cát'."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelCode: "know",
+                question: "Vũ khí/bảo bối mà Thần Sét dùng để thi hành luật pháp dưới trần gian là gì?",
+                options: [
+                    "Lưỡi búa đá và ngọn cờ",
+                    "Chiếc quạt màu nhiệm",
+                    "Cột đá chống trời",
+                    "Cây ngải tướng quân"
+                ],
+                answer: 0,
+                explanation: "Mục 2 ghi: 'Thần có một lưỡi búa đá. Khi xử án kẻ nào... thần tự mình nhảy xuống tận nơi trỏ ngọn cờ vào đầu tội nhân rồi dùng lưỡi búa bổ xuống đầu.'"
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelCode: "know",
+                question: "Theo quan niệm người hạ giới, núi Thạch Môn (Kinh Chủ, Hải Dương) là di tích của cái gì?",
+                options: [
+                    "Cột chống trời do Thần Trụ Trời đắp nên",
+                    "Nơi Thần Sét bị phạt giam giữ",
+                    "Nơi con Thần Gió chăn trâu",
+                    "Trụ sở làm việc của Ngọc Hoàng"
+                ],
+                answer: 0,
+                explanation: "Mục 1 ghi rõ: 'Sau này người hạ giới vẫn cho núi Thạch Môn là di tích của cột đó; người ta gọi nó là Cột chống trời (Kình thiên trụ)...'"
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelCode: "know",
+                question: "Con của Thần Gió do nghịch ngợm quạt văng bát gạo đã bị Ngọc Hoàng phạt hóa thành loài cây gì dưới trần gian?",
+                options: [
+                    "Cây ngải gió (cây ngải tướng quân)",
+                    "Cây lúa nước",
+                    "Cây đa cổ thụ",
+                    "Cây hỏa ngục"
+                ],
+                answer: 0,
+                explanation: "Mục 3 ghi: 'Ngọc Hoàng lại bắt con thần Gió hoá làm cây ngải để báo tin gió cho thiên hạ. Người hạ giới thường gọi là cây ngải gió hoặc cây ngải tướng quân.'"
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelCode: "know",
+                question: "Theo nội dung Tri thức ngữ văn trong file bài học, thần thoại Việt Nam được chia thành hai nhóm chính nào?",
+                options: [
+                    "Thần thoại suy nguyên và thần thoại sáng tạo",
+                    "Thần thoại huyền ảo và thần thoại thực tế",
+                    "Thần thoại anh hùng và thần thoại cổ tích",
+                    "Thần thoại thiên đình và thần thoại trần gian"
+                ],
+                answer: 0,
+                explanation: "Văn bản phần Tri thức thần thoại ghi rõ: 'Thần thoại Việt Nam gồm có hai nhóm: thần thoại suy nguyên và thần thoại sáng tạo.'"
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelCode: "know",
+                question: "Nguyên nhân khiến Thần Sét có lúc làm người, vật chết oan và bị Ngọc Hoàng trừng phạt là gì?",
+                options: [
+                    "Tính tình Thần Sét rất nóng nảy, hễ Ngọc Hoàng sai là đi ngay, thấy là đánh liền",
+                    "Thần Sét cố tình chống lại mệnh lệnh của Ngọc Hoàng",
+                    "Thần Sét bị Cường Bạo Đại Vương xúi giục",
+                    "Thần Sét bị mất lưỡi búa đá"
+                ],
+                answer: 0,
+                explanation: "Văn bản ghi: 'Tính thần Sét rất nóng nảy: hễ Ngọc Hoàng sai là đi ngay, hễ thấy là đánh liền cho nên cũng có lúc làm cho người, vật chết oan.'"
+            },
+
+            // --- MỨC HIỂU (7 CÂU) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Vì sao sau khi nâng bầu trời lên cao và khô cứng, Thần Trụ Trời lại phá cột đá và ném đất đá văng đi khắp mọi nơi?",
+                options: [
+                    "Để tạo ra núi, đảo, cồn đồi, cao nguyên và biển cả, giải thích địa hình chỗ cao chỗ thấp của mặt đất",
+                    "Vì Thần Trụ Trời tức giận Ngọc Hoàng nên phá hủy công trình",
+                    "Do cột đá bị nứt vỡ không chống giữ được bầu trời nữa",
+                    "Để ngăn cản con người trần gian trèo lên thiên đình"
+                ],
+                answer: 0,
+                explanation: "Văn bản giải thích: Khi cột phá đi, hòn đá văng ra thành núi, đảo; đất tung tóe thành cồn đồi, cao nguyên; chỗ đào lấy đất thành biển cả. Chi tiết này nhằm suy nguyên địa hình tự nhiên."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Chi tiết người hạ giới bắt chước tiếng gọi gà mỗi khi thấy chớp rạch xuất phát từ điểm yếu nào của Thần Sét?",
+                options: [
+                    "Thần Sét giật mình sợ tiếng gà do từng bị gà thần mổ đau nhói khi bị Ngọc Hoàng phạt nằm im",
+                    "Thần Sét rất yêu quý loài gà nên sẽ dừng đánh sấm sét",
+                    "Tiếng gọi gà làm Thần Sét quên mất nhiệm vụ Ngọc Hoàng giao",
+                    "Tiếng gọi gà giúp thu hút Cường Bạo Đại Vương đến ứng cứu"
+                ],
+                answer: 0,
+                explanation: "Văn bản giải thích khi bị phạt nằm im, 'Con gà thần của Ngọc Hoàng... mổ làm cho thần đau nhói... Khi được tha, thần có thói quen hễ thấy hoặc nghe tiếng gà là giật mình. Người hạ giới bắt chước tiếng gọi gà để dọa thần...'"
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Chuyện con Thần Gió hóa thành cây ngải gió mang ý nghĩa lí giải hiện tượng tự nhiên nào trong đời sống?",
+                options: [
+                    "Hiện tượng cây cuốn lá báo hiệu trời sắp nổi gió mưa và công dụng lá ngải chữa bệnh cảm gió cho trâu",
+                    "Hiện tượng xuất hiện dông bão mù tạt vào mùa đông",
+                    "Hiện tượng mất mùa đói kém ở vùng đồng bằng",
+                    "Giải thích nguồn gốc ra đời của loài trâu dưới hạ giới"
+                ],
+                answer: 0,
+                explanation: "Văn bản nêu: 'Mỗi lần cây ngải gió cuốn bông cuốn lá lại, người hạ giới biết là trời sắp nổi gió... Lại mỗi lần trâu bị cảm gió, người ta thường lấy lá cây ngải để chữa...'"
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Chi tiết Thần Gió phối hợp với Thần Mưa và Thần Sét phản ánh nhận thức gì của con người thời cổ đại?",
+                options: [
+                    "Nhận thức về sự nguy hiểm và sức mạnh tàn phá khủng khiếp khi các thiên tai dông bão xảy ra đồng thời",
+                    "Quan niệm cho rằng các vị thần luôn bất hòa và tranh giành quyền lực",
+                    "Ước mơ về một thời tiết ôn hòa, mưa thuận gió hòa quanh năm",
+                    "Sự lý giải về sự ra đời của các loài cây trồng dưới hạ giới"
+                ],
+                answer: 0,
+                explanation: "Văn bản viết: 'Khi thần Gió phối hợp với thần Mưa, có khi cả thần Sét nữa cùng hoạt động là những lúc đáng sợ nhất.' Phản ánh sự khiêu chiến và sức mạnh tàn phá của bão dông tự nhiên."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Vì sao chùm truyện Thần Trụ Trời, Thần Sét, Thần Gió lại được xếp vào nhóm 'Thần thoại suy nguyên'?",
+                options: [
+                    "Vì các truyện tập trung lí giải sự hình thành thế giới tự nhiên và nguồn gốc các hiện tượng thiên nhiên",
+                    "Vì nhân vật chính trong truyện là các anh hùng văn hóa có công đánh đuổi giặc ngoại xâm",
+                    "Vì truyện kể về lịch sử dựng nước và giữ nước của các vua Hùng",
+                    "Vì truyện mang tính chất răn dạy đạo đức con người trong cuộc sống xã hội"
+                ],
+                answer: 0,
+                explanation: "Theo Tri thức ngữ văn: 'Ở nhóm thần thoại suy nguyên, nhiều truyện có cách hình dung, lí giải về sự hình thành thế giới tự nhiên, nguồn gốc con người và vạn vật...'"
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Chuyện Thần Sét cực oai dữ nhưng từng bị thua Cường Bạo Đại Vương thể hiện tư tưởng gì của nhân dân lao động cổ đại?",
+                options: [
+                    "Ý thức về sức mạnh, sự ngang tàng bất khuất của con người trần thế trước các lực lượng thần linh siêu nhiên",
+                    "Sự tuyệt vọng của con người trước sự tàn phá của thiên tai",
+                    "Thái độ tôn sùng tuyệt đối đối với tất cả các vị thần trên thiên đình",
+                    "Khát vọng muốn tiêu diệt hoàn toàn giới thần linh trên trời"
+                ],
+                answer: 0,
+                explanation: "Nhân vật Cường Bạo Đại Vương thể hiện tư duy ngạo nghễ, bản tính ngang tàng của con người trước thần linh, làm thiên đình phải xấu hổ."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelCode: "understand",
+                question: "Tên gọi 'Thần Cụt Đầu' trong dân gian gắn liền với chi tiết đặc tả nào về Thần Gió?",
+                options: [
+                    "Thần không có đầu và thường xuống hạ giới tạo ra các trận gió xoáy giữa đồng bằng",
+                    "Thần từng bị Ngọc Hoàng chặt đầu do làm đổ bát gạo của người nghèo",
+                    "Thần bị Thần Sét dùng búa đá bổ trúng đầu trong một cuộc tranh chấp",
+                    "Thần biến thành ngọn cây ngải bị rụng mất phần ngọn"
+                ],
+                answer: 0,
+                explanation: "Văn bản nêu: Thần Gió không có đầu, khi xuống hạ giới nổi lên trận gió xoáy giữa đồng bằng, dân gian thường gọi là 'thần Cụt Đầu'."
+            },
+
+            // --- MỨC VẬN DỤNG (3 CÂU) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelCode: "apply",
+                question: "Sự kết hợp giữa các chi tiết kì ảo (vóc dáng khổng lồ, dùng đầu đội trời, đạp đất đắp cột) và thực tế địa hình (mặt đất bằng phẳng hay gồ ghề, núi, biển) trong Thần Trụ Trời phản ánh đặc trưng tư duy nào của người xưa?",
+                options: [
+                    "Dùng trí tưởng tượng phong phú, bay bổng để gán cho tự nhiên một thể chất con người nhằm giải thích hiện thực địa lý",
+                    "Tư duy khoa học logic chính xác dựa trên sự quan sát địa chất hiện đại",
+                    "Sự hoang mang, sợ hãi không thể giải thích được nên sáng tạo ra những câu chuyện hư cấu vô nghĩa",
+                    "Tư duy phản bác các giá trị tôn giáo phương Tây thời trung đại"
+                ],
+                answer: 0,
+                explanation: "Người cổ đại chưa có khoa học giải thích địa chất nên đã lấy mô hình lao động của con người phóng đại lên quy mô vũ trụ (kì ảo) để giải thích các hiện tượng thực tế xung quanh."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelCode: "apply",
+                question: "Từ chi tiết người nghèo đi kiện Thần Gió vì bị văng mất bát gạo và phán quyết của Ngọc Hoàng, anh/chị rút ra nhận xét gì về quan niệm công lý trong dân gian?",
+                options: [
+                    "Thể hiện niềm tin vào sự công bằng: dù là thần linh hay con thần linh hễ vô tình/cố ý gây tai họa cho người nghèo đều phải chịu phạt và đền bù",
+                    "Cho thấy Ngọc Hoàng là vị vua tàn nhẫn, luôn trừng phạt nặng nề thần tiên",
+                    "Phản ánh sự bất công trong xã hội khi người nghèo luôn bị thần linh bắt nạt",
+                    "Cho thấy công lý chỉ tồn tại trên thiên đình còn dưới trần gian không có"
+                ],
+                answer: 0,
+                explanation: "Việc Ngọc Hoàng xử phạt nghiêm con Thần Gió (bắt xuống chăn trâu cho người mất gạo và hóa cây ngải) phản ánh ước mơ và niềm tin vào sự công bằng, nghiêm minh của luật trời."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelCode: "apply",
+                question: "So sánh Thần Trụ Trời với các vị thần trong bài vè ('nhất ông đếm cát, nhì ông tát bể...'), điểm tương đồng nổi bật về mặt nội dung giữa các hình tượng thần linh này là gì?",
+                options: [
+                    "Đều mang tinh thần lao động kiến thiết, phân công công việc cụ thể để sáng tạo và sắp đặt thế giới",
+                    "Đều là những vị thần có tính khí dữ tợn, chuyên trừng phạt con người",
+                    "Đều bị Cường Bạo Đại Vương đánh bại trong các trận giao chiến",
+                    "Đều có hình dạng kì quặc không có đầu hoặc tay chân"
+                ],
+                answer: 0,
+                explanation: "Tất cả các vị thần này đều được nhân gian hình dung như những 'người lao động khổng lồ' mang nhiệm vụ kiến thiết thế giới: đào sông, tát biển, đếm cát, trụ trời..."
+            },
+
+            // --- MỨC VẬN DỤNG CAO (2 CÂU) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelCode: "high_apply",
+                question: "Phân tích giá trị nghệ thuật đặc sắc của không gian và thời gian huyền thoại ('Thuở ấy chưa có vũ trụ... trời đất chỉ là đám hỗn độn tối tăm') trong chùm thần thoại suy nguyên. Không gian và thời gian này có tác dụng gì?",
+                options: [
+                    "Tạo nên quy mô vũ trụ kì vĩ, màu sắc thiêng liêng hoang sơ, nâng tầm vóc các vị thần và tăng tính thuyết phục cho việc lý giải sự khởi đầu thế giới",
+                    "Làm cho câu chuyện mang tính xác thực lịch sử giống như các cuốn biên niên sử thời trung đại",
+                    "Giúp người đọc xác định chính xác mốc thời gian và vị trí địa lý xảy ra sự kiện",
+                    "Nhằm chứng minh rằng thế giới tự nhiên được tạo ra một cách ngẫu nhiên không có mục đích"
+                ],
+                answer: 0,
+                explanation: "Thời gian phiếm chỉ hoang sơ và không gian hỗn độn vô tận là đặc trưng nghệ thuật thần thoại, giúp xây dựng bối cảnh thiêng liêng, kỳ vĩ thích hợp cho các hành động sáng tạo vũ trụ."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelCode: "high_apply",
+                question: "Đánh giá nhận định: 'Niềm tin thiêng liêng về một thế giới mà ở đó vạn vật đều có linh hồn trong thần thoại tạo nên vẻ đẹp một đi không trở lại, đồng thời gửi gắm thái độ ứng xử của con người với tự nhiên.' Ý nghĩa sâu sắc nhất của nhận định này là gì?",
+                options: [
+                    "Khẳng định thần thoại phản ánh tâm hồn trong trẻo của người xưa, nhắc nhở con người hiện đại biết yêu thương, tôn trọng và sống hòa hợp với thiên nhiên",
+                    "Khuyên con người hiện đại nên tiếp tục tin vào các vị thần Thần Sét, Thần Gió để tránh thiên tai",
+                    "Cho rằng thần thoại chỉ là sản phẩm lạc hậu của thời kỳ mông muội không còn giá trị ứng dụng",
+                    "Nhấn mạnh rằng chỉ có con người thời cổ đại mới biết cách sáng tạo ra nghệ thuật chân chính"
+                ],
+                answer: 0,
+                explanation: "Vẻ đẹp 'một đi không trở lại' của thần thoại cùng niềm tin vạn vật hữu linh nhắc nhở con người hiện đại thái độ tôn trọng tự nhiên, coi thiên nhiên như có linh hồn để giữ gìn môi trường sống hòa hợp."
+            }
+        ];
+
+        /*
+         * APP STATE VARIABLES
+         */
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let questions = []; // current active question set
+        let userAnswers = {}; // map question index -> selected option index
+        let currentQuestionIdx = 0;
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let startTime = null;
+        let endTime = null;
+
+        // Utility to shuffle array (Fisher-Yates)
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            startTime = new Date();
+
+            // Setup Header Badge
+            const badge = document.getElementById('headerModeBadge');
+            if (mode === 'practice') {
+                badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30";
+                badge.innerHTML = `<i class="fa-solid fa-graduation-cap text-xs"></i> <span>Chế độ LUYỆN TẬP</span>`;
+                
+                // Keep original order
+                questions = JSON.parse(JSON.stringify(rawQuestions));
+                document.getElementById('timerContainer').classList.add('hidden');
+            } else {
+                badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30";
+                badge.innerHTML = `<i class="fa-solid fa-stopwatch text-xs"></i> <span>Chế độ TÍNH GIỜ</span>`;
+
+                // Shuffle questions & options for Timed mode
+                let shuffled = JSON.parse(JSON.stringify(rawQuestions));
+                shuffled = shuffleArray(shuffled);
+                shuffled.forEach(q => {
+                    const originalAnsText = q.options[q.answer];
+                    q.options = shuffleArray(q.options);
+                    q.answer = q.options.indexOf(originalAnsText);
+                });
+                questions = shuffled;
+
+                // Setup Timer
+                timeRemaining = 20 * 60;
+                document.getElementById('timerContainer').classList.remove('hidden');
+                startTimer();
+            }
+
+            // Switch Screen UI
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            // Render Sidebar & Load First Question
+            renderSidebarGrid();
+            loadQuestion(0);
+        }
+
+        // TIMER FUNCTION
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút làm bài! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(timeRemaining / 60);
+            const secs = timeRemaining % 60;
+            const str = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').textContent = str;
+        }
+
+        // RENDER SIDEBAR GRID
+        function renderSidebarGrid() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.onclick = () => jumpToQuestion(idx);
+                btn.className = getGridBtnClass(idx);
+                btn.textContent = idx + 1;
+                grid.appendChild(btn);
+            });
+
+            updateAnsweredCount();
+        }
+
+        function getGridBtnClass(idx) {
+            const isCurrent = idx === currentQuestionIdx;
+            const isAnswered = userAnswers[idx] !== undefined;
+
+            let base = "h-10 w-full rounded-lg font-bold text-xs transition flex items-center justify-center border ";
+            if (isCurrent) {
+                return base + "bg-blue-600 border-blue-400 text-white shadow-md shadow-blue-900/50 ring-2 ring-blue-400/50";
+            } else if (isAnswered) {
+                return base + "bg-amber-500 border-amber-400 text-black";
+            } else {
+                return base + "bg-gray-800/80 border-gray-700 text-gray-300 hover:bg-gray-700";
+            }
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('progressCount').textContent = `${count} / ${questions.length} đã làm`;
+        }
+
+        // LOAD QUESTION
+        function loadQuestion(idx) {
+            currentQuestionIdx = idx;
+            const q = questions[idx];
+
+            // Update Question Number & Level
+            document.getElementById('currentQuestionNumber').textContent = `Câu ${idx + 1} / ${questions.length}`;
+            
+            const levelBadge = document.getElementById('currentQuestionLevel');
+            levelBadge.textContent = `Mức ${q.level}`;
+            if (q.levelCode === 'know') {
+                levelBadge.className = "text-xs px-2.5 py-1 rounded-md font-medium bg-blue-500/20 text-blue-300 border border-blue-500/30";
+            } else if (q.levelCode === 'understand') {
+                levelBadge.className = "text-xs px-2.5 py-1 rounded-md font-medium bg-green-500/20 text-green-300 border border-green-500/30";
+            } else if (q.levelCode === 'apply') {
+                levelBadge.className = "text-xs px-2.5 py-1 rounded-md font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30";
+            } else {
+                levelBadge.className = "text-xs px-2.5 py-1 rounded-md font-medium bg-purple-500/20 text-purple-300 border border-purple-500/30";
+            }
+
+            // Set Question Text
+            document.getElementById('questionText').textContent = q.question;
+
+            // Render Options
+            const optsContainer = document.getElementById('optionsContainer');
+            optsContainer.innerHTML = '';
+
+            const letters = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, oIdx) => {
+                const isSelected = userAnswers[idx] === oIdx;
+                const optDiv = document.createElement('div');
+                optDiv.onclick = () => selectOption(idx, oIdx);
+                
+                let cardStyle = "flex items-start space-x-3 p-4 rounded-xl cursor-pointer border transition ";
+                if (isSelected) {
+                    cardStyle += "bg-blue-950/60 border-blue-500 text-white shadow-md shadow-blue-950/40";
+                } else {
+                    cardStyle += "bg-gray-950/40 border-gray-800 text-gray-200 hover:bg-gray-800/60 hover:border-gray-700";
+                }
+
+                optDiv.className = cardStyle;
+                optDiv.innerHTML = `
+                    <div class="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs ${isSelected ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-400'}">
+                        ${letters[oIdx]}
+                    </div>
+                    <div class="text-sm md:text-base pt-0.5 leading-relaxed font-normal">
+                        ${optText}
+                    </div>
+                `;
+                optsContainer.appendChild(optDiv);
+            });
+
+            // Update Nav Buttons
+            document.getElementById('btnPrev').disabled = (idx === 0);
+            document.getElementById('btnNext').disabled = (idx === questions.length - 1);
+
+            // Refresh Grid styling
+            renderSidebarGrid();
+
+            // Re-render MathJax if math present
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // SELECT OPTION
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            loadQuestion(qIdx);
+        }
+
+        // CLEAR SELECTION
+        function clearSelection() {
+            delete userAnswers[currentQuestionIdx];
+            loadQuestion(currentQuestionIdx);
+        }
+
+        // NAVIGATION
+        function prevQuestion() {
+            if (currentQuestionIdx > 0) {
+                loadQuestion(currentQuestionIdx - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIdx < questions.length - 1) {
+                loadQuestion(currentQuestionIdx + 1);
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            loadQuestion(idx);
+        }
+
+        // SUBMIT QUIZ
+        function submitQuiz() {
+            endTime = new Date();
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctNum = 0;
+            questions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.answer) {
+                    correctNum++;
+                }
+            });
+
+            const score = ((correctNum / questions.length) * 10).toFixed(1);
+
+            // Fill Result Screen Stats
+            document.getElementById('finalScore').innerHTML = `${score} <span class="text-sm font-normal text-gray-400">/ 10.0</span>`;
+            document.getElementById('correctCount').innerHTML = `${correctNum} <span class="text-sm font-normal text-gray-400">/ ${questions.length} câu</span>`;
+            
+            document.getElementById('resultModeSubtitle').textContent = (currentMode === 'practice') ? 'Chế độ LUYỆN TẬP' : 'Chế độ TÍNH GIỜ';
+
+            // Calculate Time Spent
+            if (currentMode === 'practice') {
+                const diffSecs = Math.floor((endTime - startTime) / 1000);
+                const m = Math.floor(diffSecs / 60);
+                const s = diffSecs % 60;
+                document.getElementById('timeSpent').textContent = `${m} phút ${s} giây`;
+            } else {
+                const spentSecs = (20 * 60) - timeRemaining;
+                const m = Math.floor(spentSecs / 60);
+                const s = spentSecs % 60;
+                document.getElementById('timeSpent').textContent = `${m} phút ${s} giây`;
+            }
+
+            // Generate Teacher Feedback
+            const feedbackText = getTeacherFeedback(parseFloat(score), correctNum);
+            document.getElementById('teacherFeedback').textContent = feedbackText;
+
+            // Render Detailed Solutions
+            renderDetailedSolutions();
+
+            // Switch Screen UI
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // TEACHER FEEDBACK GENERATOR
+        function getTeacherFeedback(score, correctCount) {
+            if (score >= 9.0) {
+                return `Xuất sắc! Em đã nắm rất vững toàn bộ nội dung kiến thức bài "Truyện về các vị thần sáng tạo thế giới" (Thần Trụ Trời, Thần Sét, Thần Gió) cũng như các đặc trưng thể loại thần thoại suy nguyên. Hãy tiếp tục phát huy tư duy phân tích sâu sắc này nhé!`;
+            } else if (score >= 7.0) {
+                return `Kết quả Khá tốt! Em đã hiểu rõ các chi tiết sự kiện và ý nghĩa của các hình tượng thần linh trong bài. Hãy đọc kỹ lại lời giải những câu bị sai ở mức Vận dụng cao để hoàn thiện tư duy đạt điểm tuyệt đối.`;
+            } else if (score >= 5.0) {
+                return `Đạt yêu cầu (Trung bình). Em đã nhớ được các chi tiết cơ bản nhưng vẫn còn nhầm lẫn ở các câu hỏi thông hiểu và vận dụng nghệ thuật. Hãy rà soát kĩ lời giải chi tiết bên dưới để củng cố lại kiến thức SGK.`;
+            } else {
+                return `Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và các chi tiết cốt truyện trong bài học. Hãy đọc kỹ lại các văn bản Thần Trụ Trời, Thần Sét, Thần Gió và xem lại giải thích từng câu để ôn luyện lại nhé!`;
+            }
+        }
+
+        // RENDER DETAILED SOLUTIONS LIST
+        function renderDetailedSolutions() {
+            const container = document.getElementById('solutionsListContainer');
+            container.innerHTML = '';
+
+            const letters = ['A', 'B', 'C', 'D'];
+
+            questions.forEach((q, idx) => {
+                const userSelected = userAnswers[idx];
+                const isCorrect = (userSelected === q.answer);
+
+                const card = document.createElement('div');
+                card.className = "bg-gray-900/90 border border-gray-800 rounded-2xl p-5 md:p-6 space-y-4";
+
+                // Header Line
+                let statusBadge = isCorrect 
+                    ? `<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-md text-xs font-bold"><i class="fa-solid fa-check mr-1"></i> Đúng</span>`
+                    : `<span class="px-3 py-1 bg-rose-500/10 text-rose-400 border border-rose-500/30 rounded-md text-xs font-bold"><i class="fa-solid fa-xmark mr-1"></i> ${userSelected !== undefined ? 'Sai' : 'Bỏ trống'}</span>`;
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold text-white text-base">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded font-medium bg-gray-800 text-gray-300 border border-gray-700">Mức ${q.level}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+
+                    <p class="text-gray-100 font-medium text-sm md:text-base leading-relaxed">${q.question}</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1">
+                        ${q.options.map((opt, oIdx) => {
+                            let optStyle = "p-3 rounded-xl border text-xs md:text-sm flex items-start space-x-2.5 ";
+                            
+                            if (oIdx === q.answer) {
+                                // Correct Answer Highlight
+                                optStyle += "bg-emerald-950/40 border-emerald-500 text-emerald-200 font-medium";
+                            } else if (oIdx === userSelected && !isCorrect) {
+                                // User Wrong Choice Highlight
+                                optStyle += "bg-rose-950/40 border-rose-500 text-rose-200 line-through opacity-80";
+                            } else {
+                                // Normal Option
+                                optStyle += "bg-gray-950/30 border-gray-800/80 text-gray-400";
+                            }
+
+                            return `
+                                <div class="${optStyle}">
+                                    <span class="font-bold text-xs uppercase px-1.5 py-0.5 rounded ${oIdx === q.answer ? 'bg-emerald-600 text-white' : (oIdx === userSelected ? 'bg-rose-600 text-white' : 'bg-gray-800 text-gray-400')}">
+                                        ${letters[oIdx]}
+                                    </span>
+                                    <span class="pt-0.5">${opt}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <!-- Explanation Box -->
+                    <div class="mt-3 p-3.5 bg-gray-950/80 border border-blue-900/40 rounded-xl text-xs md:text-sm text-gray-300 leading-relaxed space-y-1">
+                        <div class="text-blue-400 font-semibold flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-circle-info"></i> Lời giải chi tiết & Căn cứ kiến thức:
+                        </div>
+                        <p>${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // SCROLL TO SOLUTIONS
+        function scrollToSolutions() {
+            document.getElementById('solutionsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // RESET APPLICATION
+        function resetApp() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('startScreen').classList.remove('hidden');
+
+            const badge = document.getElementById('headerModeBadge');
+            badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 border border-gray-700";
+            badge.innerHTML = `<i class="fa-solid fa-circle text-[8px] text-gray-400"></i> <span>Chưa chọn chế độ</span>`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
