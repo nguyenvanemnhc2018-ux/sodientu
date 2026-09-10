@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Tập Nghiên Cứu Văn Học Trung Đại</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#663333',
+                        brandCream: '#FFFDD0',
+                        cardDark: '#1a1423',
+                        panelDark: '#231b2e',
+                        borderDark: '#3b2d4a',
+                        accentBlue: '#3b82f6',
+                        accentGreen: '#10b981',
+                        accentYellow: '#f59e0b',
+                        accentRed: '#ef4444'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Configuration and Engine -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #663333;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-card {
+            background-color: #16121e;
+        }
+        .bg-panel {
+            background-color: #211a2c;
+        }
+        .border-panel {
+            border-color: #382c47;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #16121e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #382c47;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #524067;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- TOP HEADER BAR -->
+    <header class="bg-[#120e19] border-b border-[#2d2238] sticky top-0 z-50 px-4 py-3 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500/20 text-amber-300 p-2 rounded-lg border border-amber-500/30">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-cream text-lg sm:text-xl font-bold tracking-wide flex items-center gap-2">
+                        ÔN LUYỆN CỦNG CỐ KIẾN THỨC
+                    </h1>
+                    <p class="text-xs text-gray-300">
+                        Bài: <span class="text-amber-200 font-medium">PHẦN 1 - TẬP NGHIÊN CỨU VỀ MỘT VẤN ĐỀ VĂN HỌC TRUNG ĐẠI VIỆT NAM</span> (Ngữ văn 11)
+                    </p>
+                </div>
+            </div>
+            <div id="mode-badge-container" class="flex items-center">
+                <span id="current-mode-badge" class="bg-slate-800 text-gray-300 text-xs px-3 py-1.5 rounded-full border border-slate-700 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-gray-400"></span> Chưa chọn chế độ
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6">
+
+        <!-- ========================================== -->
+        <!-- SCREEN 1: BẮT ĐẦU LÀM (MODE SELECTION)     -->
+        <!-- ========================================== -->
+        <section id="screen-start" class="block space-y-8 my-4">
+            
+            <div class="text-center space-y-3 max-w-3xl mx-auto pt-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 mb-2 border border-amber-500/30">
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-cream uppercase tracking-wider">
+                    Bài Kiểm Tra Trắc Nghiệm Khách Quan
+                </h2>
+                <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-300">20 câu hỏi</strong> bám sát nội dung bài học <strong class="text-amber-200">Phần 1: Tập nghiên cứu về một vấn đề văn học trung đại Việt Nam</strong> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 LEVEL SUMMARY CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                <div class="bg-card p-4 rounded-xl border border-panel hover:border-blue-500/50 transition shadow-md">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-gray-300">Kiểm tra kiến thức quy trình, các bước lập kế hoạch, quy định đề cương và từ điển công cụ trong bài học.</p>
+                </div>
+                <div class="bg-card p-4 rounded-xl border border-panel hover:border-emerald-500/50 transition shadow-md">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-1">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-gray-300">Giải thích bản chất, sự khác biệt giữa mục tiêu & nhiệm vụ, vai trò của hồ sơ nghiên cứu & chuyên gia.</p>
+                </div>
+                <div class="bg-card p-4 rounded-xl border border-panel hover:border-amber-500/50 transition shadow-md">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-1">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-gray-300">Xây dựng hệ thống luận điểm, phối hợp phương pháp và thao tác nghiên cứu cho đề tài cụ thể.</p>
+                </div>
+                <div class="bg-card p-4 rounded-xl border border-panel hover:border-purple-500/50 transition shadow-md">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-gray-300">Xử lý vấn đề phức tạp: đánh giá logic nghiên cứu và giải quyết thách thức văn bản phiên âm/dịch.</p>
+                </div>
+            </div>
+
+            <!-- MODE CHOICE CARDS -->
+            <div class="max-w-4xl mx-auto pt-4 space-y-4">
+                <div class="text-center text-cream font-semibold text-sm tracking-widest uppercase mb-4">
+                    Vui lòng chọn hình thức kiểm tra:
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Practice Mode -->
+                    <div onclick="startQuiz('practice')" class="bg-card hover:bg-[#1f1a2b] p-6 rounded-2xl border-2 border-panel hover:border-blue-500 transition-all cursor-pointer group flex flex-col justify-between shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-cream group-hover:text-blue-300 flex items-center gap-2">
+                                    1. Chế độ Luyện Tập
+                                </h3>
+                                <span class="bg-blue-500/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-500/30">Không giới hạn</span>
+                            </div>
+                            <p class="text-xs text-gray-300 italic">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-panel/60 flex items-center justify-between text-blue-400 group-hover:translate-x-1 transition-transform">
+                            <span class="text-sm font-semibold">Bắt đầu Luyện tập</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Timed Mode -->
+                    <div onclick="startQuiz('timed')" class="bg-card hover:bg-[#1f1a2b] p-6 rounded-2xl border-2 border-panel hover:border-amber-500 transition-all cursor-pointer group flex flex-col justify-between shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-cream group-hover:text-amber-300 flex items-center gap-2">
+                                    2. Chế độ Tính Giờ
+                                </h3>
+                                <span class="bg-amber-500/20 text-amber-300 text-xs px-3 py-1 rounded-full border border-amber-500/30 font-semibold">20 Phút</span>
+                            </div>
+                            <p class="text-xs text-gray-300 italic">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-panel/60 flex items-center justify-between text-amber-400 group-hover:translate-x-1 transition-transform">
+                            <span class="text-sm font-semibold">Bắt đầu Tính giờ</span>
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SCREEN 2: ĐANG LÀM (QUIZ TAKING)           -->
+        <!-- ========================================== -->
+        <section id="screen-quiz" class="hidden my-2">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                
+                <!-- LEFT SIDEBAR: QUESTION NAVIGATION -->
+                <div class="lg:col-span-1 bg-card p-4 sm:p-5 rounded-2xl border border-panel flex flex-col justify-between space-y-6 shadow-xl h-fit">
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pb-3 border-b border-panel">
+                            <div>
+                                <h3 class="font-bold text-cream text-sm tracking-wider uppercase">DANH SÁCH CÂU HỎI</h3>
+                                <p class="text-xs text-gray-300 mt-0.5"><span id="answered-count-text">0</span> / 20 đã làm</p>
+                            </div>
+                            <div id="timer-box" class="hidden bg-amber-500/20 border border-amber-500/40 text-amber-300 px-3 py-1.5 rounded-lg text-sm font-mono font-bold flex items-center gap-1.5">
+                                <i class="fa-solid fa-stopwatch animate-pulse"></i>
+                                <span id="timer-display">20:00</span>
+                            </div>
+                        </div>
+
+                        <!-- 1-20 BUTTON GRID -->
+                        <div id="question-grid" class="grid grid-cols-5 gap-2">
+                            <!-- JS generates 20 question buttons -->
+                        </div>
+
+                        <!-- LEGEND -->
+                        <div class="mt-6 pt-4 border-t border-panel space-y-2 text-xs text-gray-300">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded bg-slate-700 border border-slate-600 inline-block"></span>
+                                <span>Chưa trả lời</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded bg-amber-500 inline-block"></span>
+                                <span>Đã chọn đáp án</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded bg-blue-600 ring-2 ring-blue-400 inline-block"></span>
+                                <span>Đang làm (Hiện tại)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="submitQuizConfirm()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm mt-4">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+
+                <!-- RIGHT MAIN CONTENT: QUESTION DISPLAY -->
+                <div class="lg:col-span-3 bg-card p-6 sm:p-8 rounded-2xl border border-panel flex flex-col justify-between min-h-[500px] shadow-xl">
+                    <div class="space-y-6">
+                        <!-- QUESTION HEADER & BADGES -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-panel">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl sm:text-2xl font-black text-cream" id="current-q-title">Câu 1 / 20</span>
+                                <span id="current-q-level" class="text-xs px-2.5 py-1 rounded font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                                    Mức Biết
+                                </span>
+                            </div>
+                            <span class="text-xs text-gray-300 bg-panel px-3 py-1 rounded-full border border-panel">
+                                Điểm: 0.5 điểm/câu
+                            </span>
+                        </div>
+
+                        <!-- QUESTION TEXT -->
+                        <div id="current-q-text" class="text-base sm:text-lg font-medium text-white leading-relaxed pt-2">
+                            <!-- Question text populated here -->
+                        </div>
+
+                        <!-- OPTIONS LIST -->
+                        <div id="options-container" class="space-y-3 pt-2">
+                            <!-- Options A, B, C, D populated here -->
+                        </div>
+                    </div>
+
+                    <!-- NAVIGATION CONTROLS -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-6 mt-8 border-t border-panel">
+                        <button id="btn-prev" onclick="navigateQuestion(-1)" class="bg-panel hover:bg-slate-800 text-gray-300 px-5 py-2.5 rounded-xl font-semibold text-sm transition border border-panel flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <i class="fa-solid fa-chevron-left"></i> Câu Trước
+                        </button>
+                        
+                        <button onclick="clearCurrentSelection()" class="text-xs text-gray-300 hover:text-amber-300 transition underline underline-offset-4">
+                            Xóa lựa chọn câu này
+                        </button>
+
+                        <button id="btn-next" onclick="navigateQuestion(1)" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-6 py-2.5 rounded-xl font-bold text-sm transition shadow-md flex items-center gap-2">
+                            Câu Tiếp <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SCREEN 3: KẾT THÚC (RESULTS & EXPLANATION) -->
+        <!-- ========================================== -->
+        <section id="screen-result" class="hidden space-y-8 my-4">
+            
+            <!-- SUMMARY SCORE BOX -->
+            <div class="bg-card p-6 sm:p-10 rounded-2xl border border-panel text-center max-w-4xl mx-auto shadow-2xl space-y-6">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-cream uppercase tracking-wide">
+                        KẾT QUẢ BÀI KIỂM TRA
+                    </h2>
+                    <p id="result-mode-subtitle" class="text-gray-300 text-sm mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- STATS GRID -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto pt-2">
+                    <div class="bg-panel p-4 rounded-xl border border-panel">
+                        <p class="text-xs text-gray-300 mb-1">Điểm số</p>
+                        <p class="text-3xl font-black text-amber-300" id="res-score">0.0 <span class="text-sm font-normal text-gray-300">/ 10.0</span></p>
+                    </div>
+                    <div class="bg-panel p-4 rounded-xl border border-panel">
+                        <p class="text-xs text-gray-300 mb-1">Số câu đúng</p>
+                        <p class="text-3xl font-black text-emerald-400" id="res-correct">0 <span class="text-sm font-normal text-gray-300">/ 20 câu</span></p>
+                    </div>
+                    <div class="bg-panel p-4 rounded-xl border border-panel">
+                        <p class="text-xs text-gray-300 mb-1">Thời gian làm bài</p>
+                        <p class="text-xl font-bold text-blue-300 pt-1" id="res-time">Không giới hạn</p>
+                    </div>
+                </div>
+
+                <!-- TEACHER FEEDBACK BOX -->
+                <div class="bg-amber-950/30 border border-amber-500/30 p-5 rounded-xl text-left max-w-2xl mx-auto space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots text-lg"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="res-feedback" class="text-sm text-amber-100 leading-relaxed italic pl-7">
+                        <!-- Dynamic feedback generated here -->
+                    </p>
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <button onclick="resetToStart()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-rotate-right"></i> Làm lại bài kiểm tra
+                    </button>
+                    <button onclick="scrollToExplanations()" class="bg-panel hover:bg-slate-800 text-cream font-semibold px-6 py-3 rounded-xl border border-panel transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-list-check"></i> Xem đáp án & Lời giải
+                    </button>
+                </div>
+            </div>
+
+            <!-- DETAILED REVIEW SECTION -->
+            <div id="explanation-section" class="max-w-4xl mx-auto space-y-6 pt-4">
+                <div class="flex items-center justify-between pb-3 border-b border-panel">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-amber-400"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-gray-300">20/20 câu hỏi</span>
+                </div>
+
+                <div id="explanation-list" class="space-y-6">
+                    <!-- JS renders detailed review cards here -->
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#120e19] border-t border-[#2d2238] py-4 text-center text-xs text-gray-300 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            Trợ lý Soạn Trắc Nghiệm Văn Học Trung Đại - Ngữ văn 11 | Đáp ứng chuẩn cấu trúc Bộ Giáo Dục
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // ORIGINAL QUESTION BANK (STRICTLY FROM Phan1Tapnghiencuu.pdf)
+        const rawQuestions = [
+            // --- 8 BỊẾT ---
+            {
+                id: 1,
+                level: "Biết",
+                levelCode: 1,
+                question: "Theo quy định hình thức trình bày đề cương báo cáo nghiên cứu trong tài liệu, yêu cầu chuẩn về cỡ chữ (font size) và dãn dòng (line spacing) là bao nhiêu?",
+                options: [
+                    "Cỡ chữ 12; dãn dòng 1.0 - 1.2 lines",
+                    "Cỡ chữ 14; dãn dòng 1,3 - 1,5 lines",
+                    "Cỡ chữ 13; dãn dòng 1.5 - 2.0 lines",
+                    "Cỡ chữ 14; dãn dòng 1.15 lines"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 16 tài liệu quy định rõ hình thức đề cương: Đánh máy A4, font Times New Roman, cỡ chữ: 14; dãn dòng: 1,3 - 1,5 lines; lề trái: 3 cm; lề trên, dưới, phải: 2 cm."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelCode: 1,
+                question: "Trong phần Mở đầu của đề cương báo cáo nghiên cứu văn học trung đại, trật tự chuẩn của các mục được quy định như thế nào?",
+                options: [
+                    "I. Lí do chọn đề tài -> II. Mục tiêu và nhiệm vụ -> III. Đối tượng và phạm vi -> IV. Phương pháp nghiên cứu",
+                    "I. Mục tiêu nghiên cứu -> II. Lí do chọn đề tài -> III. Phương pháp -> IV. Đối tượng và phạm vi",
+                    "I. Lí do chọn đề tài -> II. Đối tượng và phạm vi -> III. Mục tiêu -> IV. Phụ lục",
+                    "I. Tên đề tài -> II. Phương pháp nghiên cứu -> III. Lí do chọn đề tài -> IV. Nhiệm vụ"
+                ],
+                correctIndex: 0,
+                explanation: "Trang 17 tài liệu cấu trúc phần MỞ ĐẦU gồm 4 mục theo thứ tự: I. LÍ DO CHỌN ĐỀ TÀI; II. MỤC TIÊU VÀ NHIỆM VỤ NGHIÊN CỨU; III. ĐỐI TƯỢNG VÀ PHẠM VI NGHIÊN CỨU; IV. PHƯƠNG PHÁP NGHIÊN CỨU."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelCode: 1,
+                question: "Loại từ điển và sách công cụ tra cứu thiết yếu nào được gợi ý sử dụng phục vụ nghiên cứu văn học trung đại Việt Nam?",
+                options: [
+                    "Từ điển Tiếng Việt hiện đại, Từ điển Anh - Việt",
+                    "Hán Việt từ điển, Từ điển văn học, Từ điển điển cố văn học, các tổng tập/hợp tuyển",
+                    "Từ điển thuật ngữ ngữ văn học đường, Từ điển Tục ngữ",
+                    "Từ điển Bách khoa toàn thư, Từ điển Điển tích Trung Hoa hiện đại"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 14 tài liệu nêu rõ các loại từ điển và sách công cụ tra cứu về văn học trung đại bao gồm: Hán Việt từ điển, Từ điển văn học, Từ điển điển cố văn học và các tổng tập, hợp tuyển, tuyển tập văn học."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelCode: 1,
+                question: "Bảng gợi ý Kế hoạch thực hiện báo cáo nghiên cứu trong tài liệu bao gồm tổng cộng bao nhiêu hoạt động/bước chính?",
+                options: [
+                    "5 hoạt động",
+                    "7 hoạt động",
+                    "9 hoạt động",
+                    "12 hoạt động"
+                ],
+                correctIndex: 2,
+                explanation: "Bảng Kế hoạch thực hiện báo cáo nghiên cứu (trang 13 - 14) liệt kê chi tiết 9 bước công việc từ sưu tầm tài liệu đến hoàn thành nộp báo cáo."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelCode: 1,
+                question: "Đối với hướng nghiên cứu 'Giải mã, phân tích giá trị của một tác phẩm hoặc đoạn trích', tài liệu khuyến nghị nên chọn loại văn bản nào?",
+                options: [
+                    "Một tập tiểu thuyết chương hồi dài tập",
+                    "Một văn bản ngắn, như bài thơ tứ tuyệt hoặc bát cú",
+                    "Toàn bộ sáng tác thơ Nôm của một tác giả",
+                    "Bộ tổng tập văn học qua nhiều thế kỷ"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 9 tài liệu nêu rõ: 'Với hướng này, chỉ nên lựa chọn một văn bản ngắn, ví dụ một bài thơ tứ tuyệt hoặc bát cú trong thơ ca trung đại Việt Nam'."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelCode: 1,
+                question: "Thành phần nào sau đây KHÔNG thuộc các mục cần ghi trong một 'Phiếu ghi nội dung trích dẫn' theo mẫu gợi ý?",
+                options: [
+                    "Số thứ tự/ký hiệu phiếu và thông tin phân loại",
+                    "Nội dung trích dẫn nguyên văn và nguồn trích dẫn (số trang)",
+                    "Dự kiến sử dụng và mục đích của việc đưa trích dẫn",
+                    "Cảm nhận cá nhân và đánh giá tính cách tác giả"
+                ],
+                correctIndex: 3,
+                explanation: "Mẫu phiếu trích dẫn (trang 15) gồm: STT/Kí hiệu, Phân loại, Dự kiến sử dụng, Mục đích trích dẫn, Nội dung trích dẫn và Nguồn trích dẫn (kèm số trang). Không có mục cảm nhận tính cách tác giả."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelCode: 1,
+                question: "Theo tài liệu, các thao tác nghiên cứu phổ biến, dễ vận dụng cho học sinh cấp Trung học phổ thông bao gồm:",
+                options: [
+                    "Phỏng vấn sâu nhân chứng, thực nghiệm sinh học",
+                    "Khảo sát, thống kê, phân loại",
+                    "Chụp ảnh quang phổ, đo đạc địa chất",
+                    "Số hóa thuật toán định lượng phức tạp"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 12 tài liệu ghi rõ: 'các thao tác: khảo sát, thống kê, phân loại... là những thao tác phổ biến, dễ vận dụng đối với học sinh THPT'."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelCode: 1,
+                question: "Quy định về độ dài số trang của phần nội dung chính đề cương báo cáo nghiên cứu (không tính bìa, mục lục, phụ lục...) là bao nhiêu?",
+                options: [
+                    "1 - 2 trang",
+                    "4 - 6 trang",
+                    "10 - 15 trang",
+                    "20 - 30 trang"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 16 ghi rõ yêu cầu về hình thức đề cương: 'Số trang: 4 - 6 (không tính trang bìa, mục lục, lời nói đầu, tài liệu tham khảo và phụ lục)'."
+            },
+
+            // --- 7 HIỂU ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Ý nghĩa quan trọng nhất của việc 'đọc lướt và phân loại sơ bộ tài liệu' ngay từ bước đầu nghiên cứu là gì?",
+                options: [
+                    "Giúp hoàn thành bản báo cáo nghiên cứu nhanh nhất mà không cần đọc sâu",
+                    "Giúp làm chủ thông tin, xác định hoặc điều chỉnh hướng nghiên cứu hợp lý",
+                    "Thay thế hoàn toàn cho việc viết phiếu trích dẫn sau này",
+                    "Bỏ qua các công trình nghiên cứu của những người đi trước"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 15 giải thích: Đọc lướt và phân loại sơ bộ giúp người nghiên cứu 'làm chủ' thông tin, từ đó 'xác định hay điều chỉnh hướng nghiên cứu một cách hợp lí'."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Sự khác biệt cơ bản về mức độ trình bày giữa 'Mục tiêu nghiên cứu' và 'Nhiệm vụ nghiên cứu' trong phần Mở đầu là gì?",
+                options: [
+                    "Mục tiêu viết cụ thể từng ý, còn nhiệm vụ chỉ viết 1 - 2 câu khái quát",
+                    "Mục tiêu chỉ viết 1 - 2 câu mang tính khái quát; nhiệm vụ cần triển khai cụ thể các công việc cần thực hiện",
+                    "Mục tiêu và nhiệm vụ hoàn toàn trùng lặp về độ dài và nội dung",
+                    "Mục tiêu dành riêng cho giáo viên hướng dẫn, nhiệm vụ dành cho học sinh"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 17 ghi rõ: 'Khi nêu mục tiêu nghiên cứu, chỉ cần viết 1 - 2 câu mang tính khái quát; khi nêu nhiệm vụ nghiên cứu, cần triển khai cụ thể hơn (chú ý đánh số cho từng nhiệm vụ)'."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Khi nghiên cứu một chi tiết, điển cố trong tác phẩm trung đại, vì sao người nghiên cứu vẫn phải đặt nó trong mối quan hệ với 'chỉnh thể văn bản'?",
+                options: [
+                    "Để tăng dung lượng số trang báo cáo nghiên cứu",
+                    "Vì ý nghĩa của chi tiết chỉ bộc lộ chính xác khi gắn với chỉnh thể tác phẩm và phong cách nghệ thuật tác giả",
+                    "Vì chi tiết đứng riêng lẻ không mang bất kỳ hình ảnh nghệ thuật nào",
+                    "Để không phải tra cứu từ điển điển cố văn học"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 10 nêu rõ: 'Tuy chỉ đi sâu vào một khía cạnh, nhưng vẫn cần đặt nó trong mối quan hệ với chỉnh thể văn bản và sự nghiệp cũng như phong cách nghệ thuật của tác giả'."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Bản chất và vai trò chính của việc lập 'Hồ sơ nghiên cứu' trong quá trình thực hiện đề tài là gì?",
+                options: [
+                    "Tập hợp tất cả tư liệu, tài liệu và sản phẩm nghiên cứu được sắp xếp khoa học để sử dụng lâu dài",
+                    "Là bản cam kết tiến độ giữa nhóm nghiên cứu và nhà trường",
+                    "Là danh mục các cuốn sách dự định sẽ mua tại thư viện",
+                    "Bản ghi nhận xét cuối cùng của hội đồng chấm thi"
+                ],
+                correctIndex: 0,
+                explanation: "Trang 15 ghi rõ: 'Hồ sơ nghiên cứu bao gồm tất cả những tư liệu, tài liệu liên quan đến đề tài, vấn đề và sản phẩm trong quá trình nghiên cứu. Hồ sơ cần thực hiện, sắp xếp, lưu trữ một cách khoa học để có thể sử dụng lâu dài'."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Trong bước 4 của Kế hoạch thực hiện ('Tham khảo ý kiến chuyên gia'), sản phẩm dự kiến thu được là gì?",
+                options: [
+                    "Danh mục tài liệu tham khảo chính thức",
+                    "Bản ghi chép ý kiến chuyên gia, bản tiếp thu và điều chỉnh công việc",
+                    "Bản in bìa báo cáo nghiên cứu",
+                    "Phiếu khảo sát ngữ liệu chưa phân loại"
+                ],
+                correctIndex: 1,
+                explanation: "Bảng trang 13 (STT 4) ghi rõ sản phẩm dự kiến thu được là: 'Bản ghi chép ý kiến chuyên gia' và 'Bản tiếp thu và điều chỉnh các công việc đã thực hiện'."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Đề tài nào sau đây thuộc hướng nghiên cứu 'So sánh văn học' được gợi ý trong tài liệu?",
+                options: [
+                    "Bút pháp trữ tình trong Văn tế nghĩa sĩ Cần Giuộc của Nguyễn Đình Chiểu",
+                    "Nghệ thuật lập luận trong Dụ chư tì tướng hịch văn của Trần Quốc Tuấn",
+                    "Cảm xúc mùa thu trong bài Thu hứng (Đỗ Phủ) và Thu vịnh (Nguyễn Khuyến)",
+                    "Ý nghĩa của chi tiết cái bóng trong Chuyện người con gái Nam Xương"
+                ],
+                correctIndex: 2,
+                explanation: "Trang 10-11 xếp đề tài 'Cảm xúc mùa thu trong bài Thu hứng của Đỗ Phủ và bài Thu vịnh của Nguyễn Khuyến' thuộc hướng nghiên cứu so sánh văn học."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelCode: 2,
+                question: "Tính chất 'tập nghiên cứu' đối với học sinh Trung học phổ thông thể hiện ở điểm nào khi chọn đề tài?",
+                options: [
+                    "Đề tài bắt buộc phải hoàn toàn mới chưa từng có ai nghiên cứu",
+                    "Đề tài không nhất thiết hoàn toàn mới; phạm vi giới hạn ở khía cạnh cụ thể, tránh quá khó hoặc quá rộng",
+                    "Đề tài phải có quy mô quốc gia và tính phát kiến triết học",
+                    "Đề tài chỉ được giới hạn trong các tác phẩm văn học nước ngoài"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 9 nêu rõ: 'Với tính chất \"tập nghiên cứu\", các đề tài, vấn đề được lựa chọn không nhất thiết hoàn toàn mới; phạm vi nội dung nên giới hạn ở một khía cạnh cụ thể, tránh lựa chọn những vấn đề quá khó, quá rộng hoặc quá chuyên sâu'."
+            },
+
+            // --- 3 VẬN DỤNG ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelCode: 3,
+                question: "Cho đề tài 'Chất liệu văn học dân gian trong Truyện Kiều của Nguyễn Du', cách xác định hệ thống các luận điểm chính hợp logic và bám sát hướng dẫn tài liệu là:",
+                options: [
+                    "Luận điểm 1: Tục ngữ, thành ngữ dân gian trong Truyện Kiều; Luận điểm 2: Chất liệu ca dao trong Truyện Kiều",
+                    "Luận điểm 1: Cuộc đời Nguyễn Du; Luận điểm 2: Tóm tắt tác phẩm Truyện Kiều",
+                    "Luận điểm 1: Hoàn cảnh lịch sử thế kỷ XVIII; Luận điểm 2: Giá trị nhân đạo chung",
+                    "Luận điểm 1: Tóm tắt Kim Vân Kiều Truyện; Luận điểm 2: Phân tích nhân vật Thúy Kiều"
+                ],
+                correctIndex: 0,
+                explanation: "Trang 12 ví dụ cụ thể: Với đề tài 'Chất liệu văn học dân gian trong Truyện Kiều của Nguyễn Du', các luận điểm chính có thể là: 'Tục ngữ, thành ngữ dân gian trong Truyện Kiều; Chất liệu ca dao trong Truyện Kiều;...'"
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelCode: 3,
+                question: "Để thực hiện đề tài 'Nghệ thuật lập luận trong Dụ chư tì tướng hịch văn của Trần Quốc Tuấn', học sinh cần phối hợp các phương pháp và thao tác nghiên cứu ưu tiên nào?",
+                options: [
+                    "Phương pháp điền dã di tích kết hợp đo đạc địa lý",
+                    "Phương pháp phân tích tác phẩm văn học kết hợp thao tác khảo sát, thống kê các hệ thống luận điểm, lý lẽ, dẫn chứng",
+                    "Phương pháp so sánh văn học phương Tây hiện đại",
+                    "Phương pháp nghiên cứu tiểu sử nhân chứng lịch sử"
+                ],
+                correctIndex: 1,
+                explanation: "Nghiên cứu nghệ thuật lập luận trong văn nghị luận trung đại đòi hỏi ưu tiên phương pháp phân tích tác phẩm văn học kết hợp khảo sát, thống kê, phân loại các luận điểm, lý lẽ và dẫn chứng lập luận."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelCode: 3,
+                question: "Trong quy trình nghiên cứu, công việc nào bắt đầu đầu tiên nhưng đồng thời cần diễn ra xuyên suốt toàn bộ quá trình thực hiện đề tài?",
+                options: [
+                    "In ấn và đóng bìa báo cáo nghiên cứu",
+                    "Đọc, ghi chép, tích lũy ngữ liệu và tài liệu để hình thành và phát triển luận điểm",
+                    "Họp nhóm phân công viết báo cáo lần 2",
+                    "Bảo vệ báo cáo trước hội đồng chuyên môn"
+                ],
+                correctIndex: 1,
+                explanation: "Trang 15 tài liệu khẳng định: 'Đọc để hình thành ý tưởng nghiên cứu, từ đó xây dựng, phát triển luận điểm là công việc diễn ra đầu tiên nhưng xuyên suốt quá trình thực hiện đề tài'."
+            },
+
+            // --- 2 VẬN DỤNG CAO ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelCode: 4,
+                question: "Một nhóm học sinh chọn đề tài 'Nghệ thuật đối trong bài thơ Thu điếu của Nguyễn Khuyến' với mục tiêu: 'Tìm hiểu biểu hiện nghệ thuật đối và tác dụng của chúng'. Hệ thống luận điểm và phương pháp nào thể hiện sự gắn kết logic cao nhất?",
+                options: [
+                    "Phương pháp phân tích tác phẩm & so sánh; Luận điểm: Đối từ loại, đối thanh điệu, đối ý giữa câu thực - luận và tác dụng khắc họa không gian thu tĩnh lặng",
+                    "Phương pháp nghiên cứu tiểu sử; Luận điểm: Quá trình đi thi đỗ ba kỳ khoa bảng của Nguyễn Khuyến",
+                    "Phương pháp văn học sử; Luận điểm: Lịch sử phát triển của thể thơ Nôm Đường luật thời Nguyễn",
+                    "Phương pháp điền dã; Luận điểm: Khảo sát địa hình ao hồ tại quê hương Bình Luc, Hà Nam"
+                ],
+                correctIndex: 0,
+                explanation: "Trang 11 ví dụ về đề tài 'Nghệ thuật đối trong bài thơ Thu điếu của Nguyễn Khuyến': mục tiêu cần tìm hiểu các biểu hiện nghệ thuật đối, phân tích tác dụng và nhận xét bút pháp. Do đó phương pháp phân tích kết hợp khảo sát các vế đối (từ loại, thanh điệu, ý) mới giải quyết trực tiếp mục tiêu đặt ra."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelCode: 4,
+                question: "Trong nghiên cứu văn học trung đại Việt Nam, do đặc thù văn bản chữ Hán - Nôm có nhiều bản phiên âm và dịch nghĩa khác nhau, giải pháp nghiên cứu tối ưu và khoa học nhất được khuyên dùng là gì?",
+                options: [
+                    "Tự suy đoán bản dịch theo ý hiểu cá nhân mà không cần tham khảo từ điển",
+                    "Chỉ sử dụng bản dịch ngẫu nhiên đầu tiên tìm được trên internet",
+                    "Tra cứu từ điển công cụ, đối chiếu các bản dịch uy tín và xin tư vấn của thầy cô/chuyên gia để chọn văn bản tốt nhất",
+                    "Bỏ qua các tác phẩm Hán - Nôm, chỉ chọn nghiên cứu tác phẩm chữ Quốc ngữ"
+                ],
+                correctIndex: 2,
+                explanation: "Trang 11 & 14 nhấn mạnh: Tác phẩm trung đại có nhiều bản dịch/phiên âm, học sinh cần trang bị các từ điển công cụ (Hán Việt từ điển, Từ điển điển cố...), kết hợp xin tư vấn từ thầy cô, chuyên gia để lựa chọn bản văn bản chuẩn xác nhất."
+            }
+        ];
+
+        // STATE VARIABLES
+        let currentQuestions = [];
+        let userAnswers = {}; // { qIndex: selectedOptionIndex }
+        let currentQIndex = 0;
+        let quizMode = null; // 'practice' or 'timed'
+        let timerInterval = null;
+        let timeRemaining = 1200; // 20 mins = 1200 seconds
+        let secondsElapsed = 0;
+
+        // UTILITY: Shuffle Array (Fisher-Yates)
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            quizMode = mode;
+            userAnswers = {};
+            currentQIndex = 0;
+            secondsElapsed = 0;
+
+            // Mode Badge update
+            const badge = document.getElementById('current-mode-badge');
+            if (mode === 'timed') {
+                badge.className = "bg-amber-500/20 text-amber-300 text-xs px-3 py-1.5 rounded-full border border-amber-500/40 font-semibold flex items-center gap-1.5";
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> Chế độ TÍNH GIỜ (20 phút)`;
+                document.getElementById('timer-box').classList.remove('hidden');
+                
+                // Shuffle questions and options for Timed Mode
+                currentQuestions = shuffleArray(rawQuestions).map(q => {
+                    const shuffledOpts = shuffleArray(q.options.map((opt, idx) => ({ text: opt, isCorrect: idx === q.correctIndex })));
+                    return {
+                        ...q,
+                        options: shuffledOpts.map(o => o.text),
+                        correctIndex: shuffledOpts.findIndex(o => o.isCorrect)
+                    };
+                });
+
+                startTimer();
+            } else {
+                badge.className = "bg-blue-500/20 text-blue-300 text-xs px-3 py-1.5 rounded-full border border-blue-500/40 font-semibold flex items-center gap-1.5";
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-blue-400"></span> Chế độ LUYỆN TẬP`;
+                document.getElementById('timer-box').classList.add('hidden');
+                
+                // Keep original order for Practice Mode
+                currentQuestions = JSON.parse(JSON.stringify(rawQuestions));
+            }
+
+            // Screen Switching
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            renderQuestionGrid();
+            loadQuestion(0);
+        }
+
+        // TIMER LOGIC
+        function startTimer() {
+            clearInterval(timerInterval);
+            timeRemaining = 1200;
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                secondsElapsed++;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút! Hệ thống sẽ tự động nộp bài.");
+                    finishQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(timeRemaining / 60);
+            const secs = timeRemaining % 60;
+            document.getElementById('timer-display').innerText = 
+                `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // RENDER SIDEBAR QUESTION BUTTONS
+        function renderQuestionGrid() {
+            const grid = document.getElementById('question-grid');
+            grid.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `q-btn-${idx}`;
+                btn.onclick = () => loadQuestion(idx);
+                btn.className = getGridBtnClass(idx);
+                btn.innerText = idx + 1;
+                grid.appendChild(btn);
+            });
+
+            updateAnsweredCount();
+        }
+
+        function getGridBtnClass(idx) {
+            const isCurrent = idx === currentQIndex;
+            const isAnswered = userAnswers.hasOwnProperty(idx);
+
+            let base = "h-9 w-full rounded-lg font-bold text-xs transition flex items-center justify-center ";
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white ring-2 ring-blue-400 shadow-lg";
+            }
+            if (isAnswered) {
+                return base + "bg-amber-500 text-slate-950 font-black";
+            }
+            return base + "bg-slate-800 hover:bg-slate-700 text-gray-300 border border-slate-700";
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answered-count-text').innerText = count;
+        }
+
+        // LOAD QUESTION
+        function loadQuestion(index) {
+            currentQIndex = index;
+            const q = currentQuestions[index];
+
+            // Update Header & Badges
+            document.getElementById('current-q-title').innerText = `Câu ${index + 1} / ${currentQuestions.length}`;
+            
+            const levelBadge = document.getElementById('current-q-level');
+            levelBadge.innerText = `Mức ${q.level}`;
+            if (q.levelCode === 1) levelBadge.className = "text-xs px-2.5 py-1 rounded font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30";
+            else if (q.levelCode === 2) levelBadge.className = "text-xs px-2.5 py-1 rounded font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+            else if (q.levelCode === 3) levelBadge.className = "text-xs px-2.5 py-1 rounded font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30";
+            else levelBadge.className = "text-xs px-2.5 py-1 rounded font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30";
+
+            // Update Question Text
+            document.getElementById('current-q-text').innerHTML = q.question;
+
+            // Render Options
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+
+                const optCard = document.createElement('div');
+                optCard.onclick = () => selectOption(optIdx);
+                optCard.className = `p-4 rounded-xl border-2 transition cursor-pointer flex items-start gap-3.5 ${
+                    isSelected 
+                    ? 'bg-amber-500/15 border-amber-500 text-cream shadow-md' 
+                    : 'bg-panel border-panel hover:border-slate-600 text-gray-200'
+                }`;
+
+                optCard.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg border flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 ${
+                        isSelected 
+                        ? 'bg-amber-500 border-amber-400 text-slate-950' 
+                        : 'bg-slate-800 border-slate-700 text-gray-300'
+                    }">
+                        ${prefixes[optIdx]}
+                    </div>
+                    <div class="text-sm leading-relaxed pt-0.5 flex-1">${optText}</div>
+                `;
+
+                container.appendChild(optCard);
+            });
+
+            // Update Navigation Buttons
+            document.getElementById('btn-prev').disabled = (index === 0);
+            
+            const btnNext = document.getElementById('btn-next');
+            if (index === currentQuestions.length - 1) {
+                btnNext.innerHTML = `Nộp Bài <i class="fa-solid fa-check"></i>`;
+                btnNext.onclick = submitQuizConfirm;
+            } else {
+                btnNext.innerHTML = `Câu Tiếp <i class="fa-solid fa-chevron-right"></i>`;
+                btnNext.onclick = () => navigateQuestion(1);
+            }
+
+            // Refresh Grid Buttons UI
+            currentQuestions.forEach((_, i) => {
+                const b = document.getElementById(`q-btn-${i}`);
+                if (b) b.className = getGridBtnClass(i);
+            });
+
+            // Typeset MathJax formulas if present
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(optIdx) {
+            userAnswers[currentQIndex] = optIdx;
+            updateAnsweredCount();
+            loadQuestion(currentQIndex);
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentQIndex];
+            updateAnsweredCount();
+            loadQuestion(currentQIndex);
+        }
+
+        function navigateQuestion(delta) {
+            const newIndex = currentQIndex + delta;
+            if (newIndex >= 0 && newIndex < currentQuestions.length) {
+                loadQuestion(newIndex);
+            }
+        }
+
+        function submitQuizConfirm() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const total = currentQuestions.length;
+
+            if (answeredCount < total) {
+                const confirmSubmit = confirm(`Em mới làm ${answeredCount}/${total} câu hỏi. Em có chắc chắn muốn nộp bài sớm không?`);
+                if (!confirmSubmit) return;
+            } else {
+                const confirmSubmit = confirm("Em có chắc chắn muốn kết thúc và nộp bài kiểm tra?");
+                if (!confirmSubmit) return;
+            }
+
+            finishQuiz();
+        }
+
+        // FINISH QUIZ & SHOW RESULTS
+        function finishQuiz() {
+            clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correctIndex) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / currentQuestions.length) * 10;
+
+            // UI Updates for Result Screen
+            document.getElementById('res-score').innerHTML = `${score.toFixed(1)} <span class="text-sm font-normal text-gray-300">/ 10.0</span>`;
+            document.getElementById('res-correct').innerHTML = `${correctCount} <span class="text-sm font-normal text-gray-300">/ 20 câu</span>`;
+            
+            if (quizMode === 'timed') {
+                document.getElementById('result-mode-subtitle').innerText = "Chế độ TÍNH GIỜ (20 Phút)";
+                const minsUsed = Math.floor(secondsElapsed / 60);
+                const secsUsed = secondsElapsed % 60;
+                document.getElementById('res-time').innerText = `${minsUsed} phút ${secsUsed} giây`;
+            } else {
+                document.getElementById('result-mode-subtitle').innerText = "Chế độ LUYỆN TẬP";
+                document.getElementById('res-time').innerText = "Không giới hạn";
+            }
+
+            // Teacher Feedback logic
+            const feedbackEl = document.getElementById('res-feedback');
+            if (score === 10) {
+                feedbackEl.innerText = "Xuất sắc! Em đã nắm vững toàn bộ quy trình, phương pháp và tri thức tập nghiên cứu một vấn đề văn học trung đại Việt Nam. Hãy tiếp tục phát huy tinh thần tự học tuyệt vời này nhé!";
+            } else if (score >= 8) {
+                feedbackEl.innerText = "Rất tốt! Em hiểu rất rõ bài học, biết cách phân biệt mục tiêu - nhiệm vụ và lập kế hoạch khoa học. Hãy rèn luyện thêm ở các câu hỏi Vận dụng cao để đạt điểm tối đa!";
+            } else if (score >= 6.5) {
+                feedbackEl.innerText = "Khá tốt! Em đã nắm được các bước cơ bản trong quy trình nghiên cứu và đề cương báo cáo. Cần đọc kỹ hơn file tài liệu để hiểu sâu hơn các thao tác xử lý ngữ liệu.";
+            } else if (score >= 5) {
+                feedbackEl.innerText = "Đạt yêu cầu! Em đã bước đầu nhận biết được các khái niệm cơ bản. Hãy dành thời gian ôn lại các bước lập kế hoạch và quy định trình bày đề cương nhé!";
+            } else {
+                feedbackEl.innerText = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết Bài Phần 1: Tập nghiên cứu về một vấn đề văn học trung đại. Hãy xem kỹ lời giải chi tiết bên dưới và đọc lại file tài liệu SGK để làm lại bài nhé!";
+            }
+
+            // Render Detailed Explanations
+            renderExplanations();
+
+            // Switch Screen
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderExplanations() {
+            const list = document.getElementById('explanation-list');
+            list.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            currentQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = (userAns === q.correctIndex);
+
+                const card = document.createElement('div');
+                card.className = "bg-card p-6 rounded-2xl border border-panel space-y-4 shadow-lg";
+
+                let statusBadge = isCorrect 
+                    ? `<span class="bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full border border-emerald-500/30 font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> Đúng (+0.5đ)</span>`
+                    : `<span class="bg-red-500/20 text-red-300 text-xs px-3 py-1 rounded-full border border-red-500/30 font-bold flex items-center gap-1"><i class="fa-solid fa-xmark"></i> Sai</span>`;
+
+                let levelBadgeClass = "bg-blue-500/20 text-blue-300 border-blue-500/30";
+                if (q.levelCode === 2) levelBadgeClass = "bg-emerald-500/20 text-emerald-300 border-emerald-500/30";
+                if (q.levelCode === 3) levelBadgeClass = "bg-amber-500/20 text-amber-300 border-amber-500/30";
+                if (q.levelCode === 4) levelBadgeClass = "bg-purple-500/20 text-purple-300 border-purple-500/30";
+
+                let optionsHTML = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optStyle = "bg-panel border-panel text-gray-300";
+                    let icon = "";
+
+                    if (optIdx === q.correctIndex) {
+                        optStyle = "bg-emerald-950/40 border-emerald-500/60 text-emerald-200 font-semibold";
+                        icon = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto text-base"></i>`;
+                    } else if (optIdx === userAns && !isCorrect) {
+                        optStyle = "bg-red-950/40 border-red-500/60 text-red-200 font-semibold";
+                        icon = `<i class="fa-solid fa-circle-xmark text-red-400 ml-auto text-base"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl border flex items-center gap-3 text-sm ${optStyle}">
+                            <span class="w-6 h-6 rounded bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-xs shrink-0 text-gray-300">
+                                ${prefixes[optIdx]}
+                            </span>
+                            <span class="flex-1">${optText}</span>
+                            ${icon}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-panel">
+                        <div class="flex items-center gap-2">
+                            <span class="font-black text-cream text-base">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded font-semibold border ${levelBadgeClass}">
+                                Mức ${q.level}
+                            </span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <div class="text-sm sm:text-base font-medium text-white leading-relaxed">
+                        ${q.question}
+                    </div>
+
+                    <div class="space-y-2 pt-1">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-panel p-4 rounded-xl border border-panel/80 text-xs sm:text-sm space-y-1 mt-3">
+                        <div class="font-bold text-amber-300 flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-lightbulb"></i> Lời giải chi tiết:
+                        </div>
+                        <p class="text-gray-200 leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                list.appendChild(card);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function scrollToExplanations() {
+            document.getElementById('explanation-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetToStart() {
+            clearInterval(timerInterval);
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+
+            const badge = document.getElementById('current-mode-badge');
+            badge.className = "bg-slate-800 text-gray-300 text-xs px-3 py-1.5 rounded-full border border-slate-700 flex items-center gap-1.5";
+            badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-gray-400"></span> Chưa chọn chế độ`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
