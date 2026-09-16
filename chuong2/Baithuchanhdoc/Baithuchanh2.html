@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành đọc: Cánh đồng - Ngân Hoa</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-custom': '#33FF33',
+                        'color1': '#1E3A8A',
+                        'color2': '#2563EB',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- MathJax with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .square-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #1E3A8A;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        .circle-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            background-color: #2563EB;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        /* Custom styles for tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 10px 14px;
+            text-align: center;
+        }
+        th {
+            background-color: #e2e8f0;
+            font-weight: 600;
+        }
+        /* Game show styling */
+        .millionaire-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 3px solid #f59e0b;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .option-btn {
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid #3b82f6;
+            transition: all 0.2s ease;
+        }
+        .option-btn:hover {
+            border-color: #f59e0b;
+            background: linear-gradient(180deg, #1e3a8a 0%, #1e293b 100%);
+        }
+    </style>
+</head>
+<body class="p-3 md:p-6">
+
+    <!-- Main wrapper container -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <header class="rounded-xl overflow-hidden shadow-lg border border-slate-300">
+            <!-- Block 1: Color 1 (#1E3A8A) -->
+            <div class="bg-[#1E3A8A] text-white p-4 text-center text-lg md:text-xl font-bold tracking-wide uppercase">
+                Chương: Vẻ đẹp của thơ ca
+            </div>
+            <!-- Thin Divider Line -->
+            <div class="h-0.5 bg-blue-300 opacity-50"></div>
+            <!-- Block 2: Color 2 (#2563EB) -->
+            <div class="bg-[#2563EB] text-white p-5 text-center text-xl md:text-2xl font-extrabold tracking-wider uppercase">
+                THỰC HÀNH ĐỌC: CÁNH ĐỒNG (NGÂN HOA)
+            </div>
+        </header>
+
+        <!-- INTRO BOX (LỜI DẪN) -->
+        <section class="bg-white border border-black rounded-xl p-5 shadow-md">
+            <p class="italic text-gray-700 leading-relaxed text-justify">
+                "Bài thơ <strong class="text-slate-900 font-semibold">Cánh đồng</strong> của nhà thơ Ngân Hoa là một tiếng nói trữ tình hiện đại, nơi thế giới tự nhiên và tâm hồn con người giao thoa sâu sắc. Đọc văn bản giúp người đọc khám phá nhịp điệu tự do, sự phóng khoáng trong hình ảnh thơ và những suy tưởng độc đáo về sự sống, sáng tạo nghệ thuật."
+            </p>
+        </section>
+
+        <!-- MAIN SECTION I -->
+        <section class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 uppercase pb-2 mb-4 border-b-4 border-slate-800 flex items-center">
+                <span class="square-number">I</span> MỘT SỐ ĐIỀU CẦN LƯU Ý KHI ĐỌC VĂN BẢN
+            </h2>
+
+            <div class="space-y-4 text-gray-800">
+                <div class="p-4 bg-slate-50 border-l-4 border-blue-600 rounded-r-lg shadow-sm">
+                    <p class="flex items-start">
+                        <span class="circle-number flex-shrink-0">1</span>
+                        <span><strong>Cảm nhận nhịp điệu &amp; hình ảnh thơ:</strong> Cảm nhận sự biến hoá của nhịp điệu, sự phóng khoáng trong cách xây dựng hình ảnh thơ, sự dụng công trong cách tổ chức mạch thơ.</span>
+                    </p>
+                </div>
+
+                <div class="p-4 bg-slate-50 border-l-4 border-blue-600 rounded-r-lg shadow-sm">
+                    <p class="flex items-start">
+                        <span class="circle-number flex-shrink-0">2</span>
+                        <span><strong>Dòng chảy cảm xúc &amp; suy tưởng:</strong> Lắng nghe dòng chảy cảm xúc và suy tưởng của nhân vật trữ tình được biểu hiện sống động, sắc nét trong sự tự do của hình thức thơ ca.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN SECTION II -->
+        <section class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 uppercase pb-2 mb-4 border-b-4 border-slate-800 flex items-center">
+                <span class="square-number">II</span> VĂN BẢN THƠ "CÁNH ĐỒNG"
+            </h2>
+
+            <!-- Illustration Image Frame -->
+            <div class="my-4 p-2 bg-gray-100 border border-dashed border-gray-400 rounded-lg text-center">
+                <img src="h1.png" alt="Minh hoạ Cánh đồng và bình gốm" class="mx-auto max-h-80 rounded shadow object-cover" onerror="this.src='https://placehold.co/800x400/1e3a8a/ffffff?text=Hình+1:+Minh+hoạ+Cánh+đồng+mùa+xuân+và+bình+gốm';">
+                <p class="text-sm text-gray-500 mt-2 font-medium">Hình 1: Hình ảnh minh hoạ hoa cúc, bình gốm và cánh đồng mùa xuân (h1.png)</p>
+            </div>
+
+            <!-- Poem Box -->
+            <div class="bg-amber-50/60 border border-amber-200 rounded-xl p-6 md:p-8 space-y-6 my-6 shadow-inner font-serif text-lg leading-relaxed text-slate-800">
+                <div class="text-center font-bold text-2xl text-amber-900">CÁNH ĐỒNG</div>
+                <div class="text-center italic text-amber-700 text-sm mb-6">(Ngân Hoa)</div>
+
+                <div class="space-y-2">
+                    <p>Những đốm cúc vừa hái về từ cánh đồng mùa xuân rộng lớn.</p>
+                    <p>Toả sáng trên chiếc bình gốm sẫm màu</p>
+                    <p>Chạm vào em một chiếc lá già nua, một nụ hoa bé bỏng, một hơi thở run run, một làn sương ẩm ướt</p>
+                    <p>Chạm vào em một lảnh lót trong veo, một vang rền trầm đục, một nức nở âm u, một lặng câm rực rỡ...</p>
+                </div>
+
+                <div class="text-center my-2 text-amber-500">*</div>
+
+                <div class="space-y-2">
+                    <p>Em chạy về với cánh đồng rộng lớn mùa xuân</p>
+                    <p>Chân ngập trong đất mềm tơi xốp</p>
+                    <p>Em gọi tên những loài hoa chưa kịp mọc</p>
+                    <p>Em gọi tên những trái cây chưa kịp ra đời</p>
+                    <p>Những trái cây đang ngủ trong hạt mầm vừa nút</p>
+                    <p>Đang ngủ trong đoá hoa nấp dưới đất cày.</p>
+                </div>
+
+                <div class="text-center my-2 text-amber-500">*</div>
+
+                <div class="space-y-2">
+                    <p>Dưới lớp đất cày có những chiếc bình gốm</p>
+                    <p>Chưa kịp thành hình chờ đợi các loài hoa.</p>
+                </div>
+
+                <div class="text-right text-sm text-gray-500 pt-4 border-t border-amber-200">
+                    <em>Tháng 2/1995</em><br>
+                    (Ngân Hoa, <em>Cánh đồng</em>, NXB Văn học, Hà Nội, 1996, tr. 49-50)
+                </div>
+            </div>
+
+            <!-- Author & Poem Metadata ("Em có biết") -->
+            <div class="bg-blue-50 border-2 border-blue-300 rounded-xl p-5 my-4">
+                <h3 class="font-bold text-blue-900 text-lg flex items-center mb-2">
+                    <span class="mr-2">💡</span> EM CÓ BIẾT
+                </h3>
+                <p class="text-sm text-blue-950 leading-relaxed">
+                    <strong>Ngân Hoa</strong> (tên khai sinh là Nguyễn Thị Ngân Hoa, sinh năm 1970) là nhà văn, nhà nghiên cứu ngôn ngữ. Các tác phẩm văn học đã xuất bản: <em>Cánh đồng</em> (thơ, 1996), <em>Quà của mùa thu</em> (tập truyện ngắn, 1996), <em>Những bông huệ</em> (thơ, 1999). Bài thơ <em>Cánh đồng</em> thuộc chùm thơ được giải B (không có giải A) trong cuộc thi Thơ trên tuần báo Văn nghệ năm 1995.
+                </p>
+            </div>
+        </section>
+
+        <!-- MAIN SECTION III -->
+        <section class="bg-white rounded-xl shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 uppercase pb-2 mb-4 border-b-4 border-slate-800 flex items-center">
+                <span class="square-number">III</span> KHÁM PHÁ VÀ PHÂN TÍCH VĂN BẢN
+            </h2>
+
+            <!-- Circle Item 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-slate-800 flex items-center">
+                    <span class="circle-number">1</span> Biến hoá của nhịp điệu và hình thức thơ tự do
+                </h3>
+                <div class="bg-slate-100 p-4 rounded-lg text-gray-800 leading-relaxed">
+                    Bài thơ sử dụng thể thơ tự do, các câu thơ có độ dài ngắn khác nhau, nhịp điệu biến hoá linh hoạt theo dòng cảm xúc: từ lắng đọng, tĩnh lặng đến dồn dập, đắm say.
+                </div>
+            </div>
+
+            <!-- Activity Section (Hand Icon) -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg space-y-3">
+                <div class="font-bold text-amber-900 flex items-center text-lg">
+                    <span class="mr-2 text-xl">✋</span> HOẠT ĐỘNG: NÊU VẤN ĐỀ VÀ TÌM HIỂU MẠCH CẢM XÚC
+                </div>
+                <p class="text-gray-800">
+                    Hãy phân tích sự chuyển biến không gian và tâm trạng của nhân vật "em" từ khổ thơ thứ nhất (chiếc bình gốm trong phòng) sang khổ thơ thứ hai (chạy về với cánh đồng mùa xuân).
+                </p>
+                <button onclick="toggleAnswer('act-1')" class="bg-[#33FF33] hover:bg-green-400 text-slate-900 font-bold py-2 px-4 rounded-lg shadow transition">
+                    Xem hướng giải quyết
+                </button>
+                <div id="act-1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 mt-3 text-sm leading-relaxed">
+                    <strong>Hướng giải quyết:</strong>
+                    <ul class="list-disc pl-5 space-y-1 mt-1">
+                        <li><strong>Khổ 1:</strong> Không gian thu hẹp trong căn phòng với chiếc bình gốm và những đoá hoa cúc. Cảm xúc đánh thức các giác quan (thị giác, xúc giác, thính giác).</li>
+                        <li><strong>Khổ 2 & 3:</strong> Không gian mở rộng ra cánh đồng mùa xuân bao la. Nhân vật "em" hoà nhập trực tiếp với thiên nhiên (chân ngập trong đất mềm), vươn tới tương lai và sự sống tiềm tàng (hoa chưa mọc, trái cây chưa ra đời).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Circle Item 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-slate-800 flex items-center">
+                    <span class="circle-number">2</span> Biểu tượng "Chiếc bình gốm" và "Hạt mầm"
+                </h3>
+                <div class="bg-slate-100 p-4 rounded-lg text-gray-800">
+                    <p>Hình ảnh chiếc bình gốm và đất cày mang ý nghĩa biểu tượng sâu sắc về nghệ thuật và cuộc sống.</p>
+                </div>
+            </div>
+
+            <!-- Question with '?' mark -->
+            <div class="bg-[#edf2f7] border-l-4 border-blue-800 p-5 rounded-r-lg space-y-3">
+                <div class="font-bold text-blue-900 flex items-center text-lg">
+                    <span class="mr-2 text-xl">❓</span> CÂU HỎI SUY NGẪM
+                </div>
+                <p class="text-gray-800">
+                    Hình ảnh <em>"Dưới lớp đất cày có những chiếc bình gốm / Chưa kịp thành hình chờ đợi các loài hoa"</em> gợi cho em suy nghĩ gì về mối quan hệ giữa nghệ thuật và cuộc sống?
+                </p>
+                <button onclick="toggleAnswer('q-1')" class="bg-[#33FF33] hover:bg-green-400 text-slate-900 font-bold py-2 px-4 rounded-lg shadow transition">
+                    Xem câu trả lời
+                </button>
+                <div id="q-1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 mt-3 text-sm leading-relaxed">
+                    <strong>Trả lời:</strong> Câu thơ gợi tả sức sáng tạo tiềm ẩn trong lòng cuộc sống và lòng đất mẹ. Chiếc bình gốm chưa thành hình đại diện cho những tác phẩm nghệ thuật còn ẩn chứa, chờ đợi sự nảy nở của vẻ đẹp cuộc sống (các loài hoa) để hội tụ và tỏa sáng.
+                </div>
+            </div>
+
+            <!-- Table Summary Example -->
+            <div class="space-y-2">
+                <h4 class="font-semibold text-slate-700">Bảng tổng hợp các giác quan được đánh thức trong bài thơ:</h4>
+                <div class="overflow-x-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Giác quan</th>
+                                <th>Từ ngữ / Hình ảnh biểu hiện</th>
+                                <th>Tác dụng nghệ thuật</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-medium">Thị giác</td>
+                                <li>Đốm cúc, tỏa sáng, bình gốm sẫm màu, lặng câm rực rỡ</li>
+                                <td>Tạo màu sắc tương phản, lung linh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Xúc giác</td>
+                                <li>Lá già nua, nụ hoa bé bỏng, hơi thở run run, làn sương ẩm ướt, chân ngập đất mềm</li>
+                                <td>Gợi cảm giác chân thực, giao thoa trực tiếp với tự nhiên</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Thính giác</td>
+                                <li>Lảnh lót trong veo, vang rền trầm đục, nức nở âm u</li>
+                                <td>Diễn tả nhịp điệu và âm thanh phong phú của tâm hồn</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- "Em có thể" & "Lưu ý" boxes -->
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-purple-50 border-2 border-purple-300 rounded-xl p-5">
+                    <h3 class="font-bold text-purple-900 text-lg flex items-center mb-2">
+                        <span class="mr-2">✨</span> EM CÓ THỂ
+                    </h3>
+                    <p class="text-sm text-purple-950 leading-relaxed">
+                        Vẽ một bức tranh hoặc viết một đoạn văn ngắn (từ 5 - 7 câu) ghi lại cảm nhận của em về một hình ảnh thơ giàu sức gợi nhất trong bài <em>Cánh đồng</em>.
+                    </p>
+                </div>
+
+                <div class="bg-rose-50 border-2 border-rose-300 rounded-xl p-5">
+                    <h3 class="font-bold text-rose-900 text-lg flex items-center mb-2">
+                        <span class="mr-2">⚠️</span> LƯU Ý
+                    </h3>
+                    <p class="text-sm text-rose-950 leading-relaxed">
+                        Khi đọc thơ tự do hiện đại, không nên gò ép phân tích theo cấu trúc số câu, số chữ cố định mà cần tập trung vào mạch cảm xúc, nhịp điệu nội tại và tính biểu tượng của hình ảnh.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMESHOW SECTION: AI LÀ TRIỆU PHÚ (10 TRẮC NGHIỆM) -->
+        <section class="millionaire-box rounded-2xl p-6 md:p-8 text-white space-y-6">
+            <div class="text-center space-y-2 border-b border-amber-500/50 pb-4">
+                <div class="inline-block bg-amber-500 text-slate-950 font-extrabold px-4 py-1 rounded-full text-xs uppercase tracking-widest shadow">
+                    Gameshow Củng Cố Kiến Thức
+                </div>
+                <h2 class="text-2xl md:text-3xl font-black text-amber-400 tracking-wide uppercase">
+                    💰 AI LÀ TRIỆU PHÚ VĂN HỌC 💰
+                </h2>
+                <p class="text-slate-300 text-sm">Trả lời 10 câu hỏi để chinh phục đỉnh cao tri thức bài thơ "Cánh đồng"</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+
+                <!-- Question 1 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 1 (100.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Tác giả của bài thơ "Cánh đồng" là ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Xuân Quỳnh
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Ngân Hoa
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Ý Nhi
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Thanh Thảo
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 2 (200.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Bài thơ "Cánh đồng" thuộc thể thơ nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Thơ Tám chữ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Thơ Tự do
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Thơ Bảy chữ
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Thơ Lục bát
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 3 (500.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Loài hoa nào được nhắc đến ở đầu bài thơ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Hoa Sen
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Hoa Cúc
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Hoa Đào
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Hoa Huệ
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 4 (1.000.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Sự vật nào là vật chứa những đóa cúc vừa hái về?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Chiếc bình thuỷ tinh
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Chiếc bình gốm sẫm màu
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Chiếc giỏ mây
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Khay gỗ
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 5 (2.000.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Trong khổ 2, nhân vật "em" thực hiện hành động gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Ngồi lặng im ngắm hoa
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Chạy về với cánh đồng rộng lớn mùa xuân
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Tưới nước cho cây
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Hái thêm hoa cúc
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 6 (5.000.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Chi tiết "Chân ngập trong đất mềm tơi xốp" thể hiện điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Sự vất vả của người lao động
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Sự gắn bó, hoà nhập trực tiếp và gần gũi với thiên nhiên
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Cảm giác bỡ ngỡ, sợ hãi
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Khó khăn khi di chuyển trên đồng ruộng
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 7 (10.000.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Biện pháp nghệ thuật nổi bật được sử dụng ở các câu thơ: "một lảnh lót...", "một vang rền...", "một nức nở..." là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Điệp từ "một" kết hợp liệt kê &amp; ẩn dụ chuyển đổi cảm giác
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. So sánh đối lập
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Nhân hoá chiếc bình gốm
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Hoán dụ lấy bộ phận chỉ toàn thể
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 8 (30.000.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Nhân vật "em" đã gọi tên những gì khi về với cánh đồng?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Những kỉ niệm thời thơ ấu
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Những loài hoa chưa kịp mọc và trái cây chưa kịp ra đời
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Tên người thân yêu
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Các mùa trong năm
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 9 (60.000.000 VNĐ):</div>
+                    <p class="font-semibold text-base md:text-lg">Tác phẩm "Cánh đồng" đạt giải thưởng gì trong cuộc thi Thơ trên tuần báo Văn nghệ năm 1995?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Giải A
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Giải B (Không có giải A)
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Giải C
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Giải Khuyến khích
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 md:p-5 space-y-3">
+                    <div class="text-amber-400 font-bold text-sm">Câu hỏi 10 (150.000.000 VNĐ - CÂU QUYẾT ĐỊNH):</div>
+                    <p class="font-semibold text-base md:text-lg">Thông điệp chính của bài thơ "Cánh đồng" là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="A" class="mr-2 text-amber-500 focus:ring-amber-400"> A. Ca ngợi vẻ đẹp mùa xuân ở nông thôn Việt Nam
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="B" class="mr-2 text-amber-500 focus:ring-amber-400"> B. Thể hiện niềm khát khao sáng tạo nghệ thuật và niềm tin vào sức sống tiềm tàng bất tận của thiên nhiên, cuộc sống
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="C" class="mr-2 text-amber-500 focus:ring-amber-400"> C. Khuyên con người nên về quê sinh sống
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="D" class="mr-2 text-amber-500 focus:ring-amber-400"> D. Phê phán lối sống xa rời thiên nhiên của người thành thị
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-900 hover:bg-slate-800 text-amber-400 border-2 border-amber-500 font-extrabold text-lg px-8 py-3 rounded-full shadow-xl transition transform hover:scale-105">
+                        🏆 NỘP BÀI - KIỂM TRẢ KẾT QUẢ
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Output -->
+            <div id="quizResult" class="hidden rounded-xl p-6 border-2"></div>
+        </section>
+
+        <!-- ESSAY & COMPUTATIONAL EXERCISES -->
+        <section class="bg-white rounded-xl shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 uppercase pb-2 mb-4 border-b-4 border-slate-800 flex items-center">
+                <span class="square-number">IV</span> BÀI TẬP TỰ LUẬN TÍNH TOÁN VÀ PHÂN TÍCH
+            </h2>
+
+            <!-- Essay 1 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                <div class="font-bold text-blue-900 text-lg">Bài 1: Phân tích tần số từ vựng &amp; nhịp điệu thơ</div>
+                <p class="text-gray-800">
+                    Thống kê số lượng từ chỉ cảm giác (thị giác, thính giác, xúc giác) xuất hiện ở khổ thơ thứ nhất và nhận xét về mật độ sử dụng từ láy, từ gợi cảm giác của tác giả.
+                </p>
+                <button onclick="toggleAnswer('essay-1')" class="bg-[#33FF33] hover:bg-green-400 text-slate-900 font-bold py-2 px-4 rounded-lg shadow transition">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="essay-1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 mt-3 text-sm leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong>
+                    <ul class="list-disc pl-5 space-y-1 mt-1">
+                        <li><strong>Thị giác:</strong> <em>đốm cúc, toả sáng, sẫm màu, lặng câm rực rỡ</em> (4 hình ảnh).</li>
+                        <li><strong>Xúc giác:</strong> <em>chạm, lá già nua, nụ hoa bé bỏng, hơi thở run run, làn sương ẩm ướt</em> (5 hình ảnh/từ ngữ).</li>
+                        <li><strong>Thính giác:</strong> <em>lảnh lót, trong veo, vang rền, trầm đục, nức nở, âm u</em> (6 từ ngữ).</li>
+                        <li><strong>Nhận xét:</strong> Mật độ từ ngữ đa cảm giác rất cao trong chỉ 4 dòng thơ, tạo nên một không gian nghệ thuật nhiều tầng bậc, đánh thức trọn vẹn giác quan của người đọc.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Essay 2 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                <div class="font-bold text-blue-900 text-lg">Bài 2: Tính toán và đo lường mạch nhịp thơ</div>
+                <p class="text-gray-800">
+                    Hãy tính số lượng tiếng (chữ) trong từng dòng của bài thơ. Nhận xét sự thay đổi độ dài giữa các dòng thơ đối với việc biểu đạt cảm xúc nảy nở, giải phóng tâm hồn.
+                </p>
+                <button onclick="toggleAnswer('essay-2')" class="bg-[#33FF33] hover:bg-green-400 text-slate-900 font-bold py-2 px-4 rounded-lg shadow transition">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="essay-2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 mt-3 text-sm leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong>
+                    <ul class="list-disc pl-5 space-y-1 mt-1">
+                        <li>Khổ 1: Dòng 1 (13 tiếng), Dòng 2 (8 tiếng), Dòng 3 (20 tiếng), Dòng 4 (18 tiếng).</li>
+                        <li>Khổ 2: Dòng 1 (11 tiếng), Dòng 2 (7 tiếng), Dòng 3 (10 tiếng), Dòng 4 (10 tiếng), Dòng 5 (11 tiếng), Dòng 6 (10 tiếng).</li>
+                        <li>Khổ 3: Dòng 1 (11 tiếng), Dòng 2 (12 tiếng).</li>
+                        <li><strong>Nhận xét:</strong> Dòng thơ mở rộng linh hoạt (có câu tới 20 tiếng), không bị gò gép bởi luật thơ truyền thống. Sự duỗi dài của câu thơ trùng khớp với sự mở rộng của cảm xúc trào dâng và không gian cánh đồng mùa xuân bao la.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Essay 3 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                <div class="font-bold text-blue-900 text-lg">Bài 3: Tư duy tượng trưng và liên tưởng sáng tạo</div>
+                <p class="text-gray-800">
+                    Giải thích ý nghĩa cấu trúc sóng đôi: <em>"Trái cây đang ngủ trong hạt mầm"</em> và <em>"Chiếc bình gốm chưa kịp thành hình dưới đất cày"</em>.
+                </p>
+                <button onclick="toggleAnswer('essay-3')" class="bg-[#33FF33] hover:bg-green-400 text-slate-900 font-bold py-2 px-4 rounded-lg shadow transition">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="essay-3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 mt-3 text-sm leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong>
+                    <p>Hai hình ảnh thể hiện tư duy tượng trưng hiện đại:</p>
+                    <ol class="list-decimal pl-5 space-y-1 mt-1">
+                        <li><strong>Hạt mầm / Đất cày:</strong> Nơi tích tụ dưỡng chất, ẩn chứa tiềm năng sự sống tự nhiên.</li>
+                        <li><strong>Chiếc bình gốm chưa thành hình:</strong> Sự tích tụ của nguồn cảm hứng sáng tạo nghệ thuật. Nghệ thuật không ở đâu xa mà nằm sâu trong lòng đời sống, chờ người nghệ sĩ khám phá và hình thành.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-slate-800 text-white text-center py-4 rounded-xl shadow-md font-semibold text-sm tracking-wide">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Function to toggle show/hide of solution boxes
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Correct Answers Key
+        const correctAnswers = {
+            q1: "B",
+            q2: "B",
+            q3: "B",
+            q4: "B",
+            q5: "B",
+            q6: "B",
+            q7: "A",
+            q8: "B",
+            q9: "B",
+            q10: "B"
+        };
+
+        // Explanations Key
+        const explanations = {
+            q1: "Tác giả bài thơ Cánh đồng là nhà thơ, nhà nghiên cứu ngôn ngữ Ngân Hoa.",
+            q2: "Bài thơ được viết theo thể thơ Tự do, không bị gò gép về số câu, số chữ.",
+            q3: "Đó là 'Những đốm cúc vừa hái về từ cánh đồng mùa xuân rộng lớn'.",
+            q4: "Những đốm cúc được cắm và 'Toả sáng trên chiếc bình gốm sẫm màu'.",
+            q5: "Khổ 2 mở đầu bằng câu: 'Em chạy về với cánh đồng rộng lớn mùa xuân'.",
+            q6: "Hành động đặt chân ngập vào đất tơi xốp cho thấy sự gắn bó, hoà nhập trọn vẹn với thiên nhiên.",
+            q7: "Tác giả lặp lại từ 'một' kết hợp phép ẩn dụ chuyển đổi cảm giác (nghe âm thanh thấy màu sắc/trạng thái).",
+            q8: "Nhân vật em 'gọi tên những loài hoa chưa kịp mọc / những trái cây chưa kịp ra đời'.",
+            q9: "Bài thơ thuộc chùm thơ đạt giải B (không có giải A) năm 1995.",
+            q10: "Bài thơ thể hiện khát khao sáng tạo nghệ thuật và niềm tin vào sức sống tiềm tàng của cuộc sống."
+        };
+
+        // Function to check Quiz answers
+        function checkQuiz() {
+            let score = 0;
+            const total = 10;
+            let resultHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const userAns = selected ? selected.value : "Chưa chọn";
+                const isCorrect = userAns === correctAnswers[`q${i}`];
+
+                if (isCorrect) {
+                    score++;
+                }
+            }
+
+            const isPerfect = score === total;
+            const resultBox = document.getElementById("quizResult");
+
+            resultBox.classList.remove("hidden", "bg-emerald-900/90", "bg-rose-900/90", "border-emerald-400", "border-rose-400");
+
+            if (isPerfect) {
+                resultBox.classList.add("bg-emerald-900/90", "border-emerald-400", "text-emerald-100");
+                resultHTML += `<h3 class="text-2xl font-black text-emerald-300 mb-2">🎉 XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ TRÍ TUỆ! 🎉</h3>`;
+                resultHTML += `<p class="text-lg font-bold mb-4">Điểm số tuyệt đối: <span class="text-yellow-300 text-xl">${score}/${total}</span> câu đúng (150.000.000 VNĐ)!</p>`;
+            } else {
+                resultBox.classList.add("bg-rose-900/90", "border-rose-400", "text-rose-100");
+                resultHTML += `<h3 class="text-2xl font-black text-rose-300 mb-2">KẾT QUẢ CUỘC THI</h3>`;
+                resultHTML += `<p class="text-lg font-bold mb-4">Bạn trả lời đúng: <span class="text-yellow-300 text-xl">${score}/${total}</span> câu. Hãy rà soát lại đáp án chi tiết bên dưới!</p>`;
+            }
+
+            resultHTML += `<div class="space-y-3 text-sm text-left border-t border-slate-500/50 pt-4">`;
+            for (let i = 1; i <= total; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const userAns = selected ? selected.value : "Chưa chọn";
+                const isCorrect = userAns === correctAnswers[`q${i}`];
+
+                resultHTML += `
+                    <div class="p-3 rounded-lg ${isCorrect ? 'bg-emerald-950/60 border border-emerald-500/50' : 'bg-rose-950/60 border border-rose-500/50'}">
+                        <div class="font-bold flex items-center">
+                            <span>Câu ${i}: ${isCorrect ? '✅ Đúng' : '❌ Sai'} (Bạn chọn: ${userAns} | Đáp án đúng: ${correctAnswers[`q${i}`]})</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mt-1">💡 <em>${explanations[`q${i}`]}</em></p>
+                    </div>
+                `;
+            }
+            resultHTML += `</div>`;
+
+            resultBox.innerHTML = resultHTML;
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

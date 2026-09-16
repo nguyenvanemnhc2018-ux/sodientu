@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Cánh Đồng (Ngân Hoa)</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts for Hand-drawn / Doodle Aesthetic Poster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for Mathematical & Symbolic Expressions -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Custom CSS Stream & Themes -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        
+        .text-cream {
+            color: #FFFDD0;
+        }
+
+        .bg-burgundy-dark {
+            background-color: #4a2424;
+        }
+
+        .bg-burgundy-card {
+            background-color: #572b2b;
+        }
+
+        .border-burgundy-light {
+            border-color: #7c4040;
+        }
+
+        /* Cute Doodle Poster Typography and Styles */
+        .font-doodle {
+            font-family: 'Patrick Hand', 'Caveat', cursive;
+        }
+
+        .poster-bg {
+            background-color: #faf9f6;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+
+        .doodle-box {
+            border: 2px solid #334155;
+            border-radius: 16px;
+            box-shadow: 4px 4px 0px #334155;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .doodle-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0px #334155;
+        }
+
+        /* Ribbon Shape */
+        .ribbon {
+            position: relative;
+            background: #fde047;
+            color: #1e293b;
+            padding: 8px 24px;
+            border: 2px solid #334155;
+            box-shadow: 3px 3px 0px #334155;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #4a2424;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8c4646;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a65353;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- MAIN TOP NAVIGATION HEADER -->
+    <header class="bg-[#4d2626] border-b border-[#7c4040] py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-book-bookmark text-2xl text-[#FFFDD0]"></i>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-cream tracking-wide uppercase">
+                        Ôn Luyện Củng Cố Kiến Thức
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-200">
+                        Bài: <span class="font-semibold text-cream">CÁNH ĐỒNG</span> (Ngân Hoa - Ngữ văn 10)
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="toggleInfographicModal(true)" class="bg-[#8c4646] hover:bg-[#a65353] text-cream px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 border border-[#b35959]">
+                    <i class="fa-solid fa-palette"></i> Poster Tóm Tắt (Doodle)
+                </button>
+                <div id="mode-badge" class="bg-[#572b2b] text-xs md:text-sm text-cream px-3 py-1.5 rounded-full border border-[#7c4040] flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block animate-pulse"></span>
+                    <span id="mode-badge-text">Chưa chọn chế độ</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BODY CONTENT AREA -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+        <!-- SCREEN 1: START SCREEN (BẮT ĐẦU LÀM) -->
+        <section id="screen-start" class="block">
+            <div class="text-center my-8">
+                <div class="inline-flex p-3 rounded-full bg-[#572b2b] text-yellow-400 mb-4 border border-[#7c4040] shadow-lg">
+                    <i class="fa-solid fa-circle-check text-4xl"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-cream uppercase tracking-wider mb-2">
+                    Bài Kiểm Tra Trắc Nghiệm Khách Quan
+                </h2>
+                <p class="text-gray-200 max-w-2xl mx-auto text-sm md:text-base">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-semibold text-cream">20 câu hỏi</span> bám sát nội dung bài học <span class="font-semibold text-cream">Cánh đồng (Ngân Hoa)</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 Level Overview Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                <div class="bg-burgundy-card border border-burgundy-light rounded-xl p-4 shadow-sm hover:border-blue-400 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-300">Mức Biết (8 CÂU)</span>
+                        <span class="text-xs bg-blue-900/60 text-blue-200 px-2 py-0.5 rounded">\( \circ 1 \)</span>
+                    </div>
+                    <p class="text-xs text-gray-200">Kiến thức lý thuyết, tác giả, tác phẩm, thông số từ ngữ, hình ảnh chi tiết văn bản.</p>
+                </div>
+
+                <div class="bg-burgundy-card border border-burgundy-light rounded-xl p-4 shadow-sm hover:border-green-400 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-green-300">Mức Hiểu (7 CÂU)</span>
+                        <span class="text-xs bg-green-900/60 text-green-200 px-2 py-0.5 rounded">\( \circ 2 \)</span>
+                    </div>
+                    <p class="text-xs text-gray-200">Giải thích hiện tượng nghệ thuật, sự biến hóa nhịp điệu, dòng chảy cảm xúc bài thơ.</p>
+                </div>
+
+                <div class="bg-burgundy-card border border-burgundy-light rounded-xl p-4 shadow-sm hover:border-yellow-400 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-yellow-300">Vận Dụng (3 CÂU)</span>
+                        <span class="text-xs bg-yellow-900/60 text-yellow-200 px-2 py-0.5 rounded">\( \circ 3 \)</span>
+                    </div>
+                    <p class="text-xs text-gray-200">Phối hợp phân tích biểu tượng đất cày, hạt mầm, bình gốm và sức sống nghệ thuật.</p>
+                </div>
+
+                <div class="bg-burgundy-card border border-burgundy-light rounded-xl p-4 shadow-sm hover:border-purple-400 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-300">VD Cao (2 CÂU)</span>
+                        <span class="text-xs bg-purple-900/60 text-purple-200 px-2 py-0.5 rounded">\( \circ 4 \)</span>
+                    </div>
+                    <p class="text-xs text-gray-200">Xử lý tư duy nghệ thuật phức tạp, đánh giá nét tân kỳ của thơ tự do hiện đại.</p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Options -->
+            <div class="text-center mb-6">
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-widest">Vui lòng chọn hình thức kiểm tra:</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+                <!-- Practice Mode Card -->
+                <div class="bg-burgundy-dark border-2 border-burgundy-light rounded-2xl p-6 flex flex-col justify-between hover:border-yellow-400/70 transition shadow-xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-cream">1. Chế độ Luyện Tập</h4>
+                            <span class="bg-blue-900/80 text-blue-200 text-xs px-3 py-1 rounded-full border border-blue-600 font-semibold">Không giới hạn</span>
+                        </div>
+                        <p class="text-sm text-gray-300 mb-4">Học tập & củng cố kiến thức không áp lực</p>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">
+                            Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                        </p>
+                    </div>
+                    <button onclick="startQuiz('PRACTICE')" class="w-full py-3 bg-[#8c4646] hover:bg-[#a65353] text-cream font-bold rounded-xl shadow-lg border border-[#b35959] transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-play"></i> Bắt đầu Luyện Tập
+                    </button>
+                </div>
+
+                <!-- Timed Mode Card -->
+                <div class="bg-burgundy-dark border-2 border-burgundy-light rounded-2xl p-6 flex flex-col justify-between hover:border-yellow-400/70 transition shadow-xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-cream">2. Chế độ Tính Giờ</h4>
+                            <span class="bg-amber-900/80 text-amber-200 text-xs px-3 py-1 rounded-full border border-amber-600 font-semibold">20 Phút</span>
+                        </div>
+                        <p class="text-sm text-gray-300 mb-4">Thử thách & kiểm tra đánh giá năng lực</p>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">
+                            Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                        </p>
+                    </div>
+                    <button onclick="startQuiz('TIMED')" class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg border border-amber-400 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-stopwatch"></i> Bắt đầu Tính Giờ (20 Phút)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: IN PROGRESS (ĐANG LÀM BÀI) -->
+        <section id="screen-test" class="hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                
+                <!-- Left Sidebar: Question Navigation Grid -->
+                <div class="lg:col-span-1 bg-burgundy-dark border border-burgundy-light rounded-2xl p-5 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 pb-3 border-b border-burgundy-light">
+                            <h3 class="font-bold text-cream text-sm uppercase">Danh Sách Câu Hỏi</h3>
+                            <span id="answered-count-badge" class="bg-[#572b2b] text-yellow-300 text-xs px-2.5 py-1 rounded-md font-semibold border border-[#7c4040]">
+                                0 / 20 đã làm
+                            </span>
+                        </div>
+
+                        <!-- Timer Banner (Visible only in Timed mode) -->
+                        <div id="timer-box" class="hidden bg-amber-950/80 border border-amber-600/60 rounded-xl p-3 mb-4 text-center">
+                            <div class="text-xs text-amber-300 uppercase font-bold tracking-wider mb-1">Thời gian còn lại</div>
+                            <div id="timer-display" class="text-2xl font-mono font-bold text-amber-400">20:00</div>
+                        </div>
+
+                        <!-- 1-20 Question Number Grid Buttons -->
+                        <div id="question-grid" class="grid grid-cols-5 gap-2 mb-6">
+                            <!-- Generated dynamically in JS -->
+                        </div>
+
+                        <!-- Legend Status -->
+                        <div class="space-y-2 text-xs text-gray-300 pt-2 border-t border-burgundy-light">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-[#572b2b] border border-gray-500 inline-block"></span>
+                                <span>Chưa trả lời</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-amber-600 inline-block"></span>
+                                <span>Đã chọn đáp án</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-blue-600 inline-block"></span>
+                                <span>Đang làm (Hiện tại)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="submitQuizConfirm()" class="w-full mt-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg border border-emerald-400 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Nộp Bài & Kết Thúc
+                    </button>
+                </div>
+
+                <!-- Main Area: Current Active Question -->
+                <div class="lg:col-span-3 bg-burgundy-dark border border-burgundy-light rounded-2xl p-6 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <!-- Question Header Tag & Level -->
+                        <div class="flex justify-between items-center mb-6 pb-4 border-b border-burgundy-light">
+                            <div class="flex items-center gap-3">
+                                <h3 id="current-question-title" class="text-xl font-bold text-cream">
+                                    Câu 1 / 20
+                                </h3>
+                                <span id="current-question-level" class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-900/80 text-blue-200 border border-blue-500">
+                                    Mức Biết
+                                </span>
+                            </div>
+                            <span class="text-xs text-gray-400">Mã môn: NV10-CD</span>
+                        </div>
+
+                        <!-- Question Prompt Text -->
+                        <div id="question-prompt" class="text-base md:text-lg font-medium text-white mb-6 leading-relaxed">
+                            <!-- Prompt inserted here -->
+                        </div>
+
+                        <!-- 4 Options A, B, C, D -->
+                        <div id="options-container" class="space-y-3 mb-8">
+                            <!-- Options rendered dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Question Control Buttons -->
+                    <div class="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-burgundy-light">
+                        <button id="btn-prev-question" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-xl bg-[#572b2b] hover:bg-[#6e3737] text-gray-300 font-semibold text-sm transition disabled:opacity-40 disabled:cursor-not-allowed border border-[#7c4040]">
+                            <i class="fa-solid fa-chevron-left mr-1"></i> Câu Trước
+                        </button>
+
+                        <button onclick="clearCurrentAnswer()" class="text-xs text-gray-400 hover:text-gray-200 underline">
+                            Xóa lựa chọn câu này
+                        </button>
+
+                        <button id="btn-next-question" onclick="navigateQuestion(1)" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm transition border border-amber-400">
+                            Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: END RESULT (KẾT THÚC BÀI KIỂM TRA) -->
+        <section id="screen-result" class="hidden">
+            <!-- Summary Score Header Card -->
+            <div class="bg-burgundy-dark border border-burgundy-light rounded-2xl p-6 md:p-8 shadow-2xl text-center max-w-3xl mx-auto mb-8">
+                <div class="inline-flex p-4 rounded-full bg-yellow-500/20 text-yellow-400 mb-3 border border-yellow-500/40">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-cream uppercase mb-1">
+                    KẾT QUẢ BÀI KIỂM TRA
+                </h2>
+                <p id="result-mode-label" class="text-xs text-gray-300 uppercase tracking-widest mb-6">Chế độ LUYỆN TẬP</p>
+
+                <!-- 3 Key Metric Stats -->
+                <div class="grid grid-cols-3 gap-3 md:gap-4 mb-6">
+                    <div class="bg-[#572b2b] border border-[#7c4040] rounded-xl p-3 md:p-4">
+                        <span class="block text-xs text-gray-300 mb-1">Điểm số</span>
+                        <span id="res-score" class="text-2xl md:text-3xl font-bold text-yellow-400">0.0</span>
+                        <span class="text-xs text-gray-400">/ 10.0</span>
+                    </div>
+
+                    <div class="bg-[#572b2b] border border-[#7c4040] rounded-xl p-3 md:p-4">
+                        <span class="block text-xs text-gray-300 mb-1">Số câu đúng</span>
+                        <span id="res-correct" class="text-2xl md:text-3xl font-bold text-emerald-400">0</span>
+                        <span class="text-xs text-gray-400">/ 20 câu</span>
+                    </div>
+
+                    <div class="bg-[#572b2b] border border-[#7c4040] rounded-xl p-3 md:p-4">
+                        <span class="block text-xs text-gray-300 mb-1">Thời gian làm bài</span>
+                        <span id="res-time" class="text-base md:text-xl font-bold text-blue-300">00:00</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Evaluation Banner -->
+                <div class="bg-[#572b2b] border-l-4 border-yellow-400 rounded-r-xl p-4 text-left mb-6">
+                    <div class="flex items-center gap-2 text-yellow-300 font-bold text-sm mb-1">
+                        <i class="fa-solid fa-comment-dots"></i> Đánh giá & Nhận xét từ Giáo viên:
+                    </div>
+                    <p id="res-comment" class="text-sm text-gray-200 leading-relaxed">
+                        <!-- Commentary filled in JS -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="resetToStart()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-md border border-amber-400 transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i> Làm lại bài kiểm tra
+                    </button>
+                    <button onclick="scrollToReview()" class="px-6 py-3 bg-[#572b2b] hover:bg-[#6e3737] text-cream font-bold rounded-xl shadow-md border border-[#7c4040] transition flex items-center gap-2">
+                        <i class="fa-solid fa-list-check"></i> Xem đáp án & Lời giải
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Answers & Solution Review Section -->
+            <div id="solution-review-section" class="max-w-4xl mx-auto">
+                <div class="flex justify-between items-center mb-4 pb-2 border-b border-burgundy-light">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical text-yellow-400"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-gray-300">20/20 câu hỏi</span>
+                </div>
+
+                <div id="review-list-container" class="space-y-6">
+                    <!-- Dynamic review items generated in JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- DOODLE INFOGRAPHIC POSTER MODAL (YÊU CẦU 2 & 4) -->
+    <div id="infographic-modal" class="fixed inset-0 bg-black/75 z-50 hidden overflow-y-auto p-4 md:p-8 flex justify-center items-start">
+        <div class="poster-bg max-w-4xl w-full text-slate-800 rounded-3xl p-6 md:p-8 relative border-4 border-slate-700 shadow-2xl my-6">
+            
+            <!-- Close Modal Button -->
+            <button onclick="toggleInfographicModal(false)" class="absolute top-4 right-4 bg-rose-400 hover:bg-rose-500 text-white w-10 h-10 rounded-full font-bold flex items-center justify-center border-2 border-slate-700 shadow-md transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- POSTER HEADER -->
+            <div class="flex flex-wrap justify-between items-center mb-8 gap-4 border-b-2 border-dashed border-slate-400 pb-6">
+                <!-- Lesson Ribbon Banner -->
+                <div class="ribbon rounded-lg">
+                    <span class="font-doodle text-xs uppercase tracking-widest font-bold block text-slate-600">Bài Thực Hành Đọc</span>
+                    <h2 class="font-doodle text-3xl md:text-4xl font-extrabold text-slate-900">
+                        CÁNH ĐỒNG – NGÂN HOA 🌸
+                    </h2>
+                </div>
+
+                <!-- Subject Header Badge (Right Aligned) -->
+                <div class="bg-indigo-100 border-2 border-slate-700 rounded-xl p-3 shadow-[3px_3px_0px_#334155] relative flex items-center gap-2">
+                    <span class="text-lg">📌</span>
+                    <div>
+                        <h3 class="font-doodle text-xl font-bold text-indigo-900 leading-none">Ngữ văn 10</h3>
+                        <p class="font-doodle text-xs text-slate-600">Bộ SGK GDPT 2018</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 1: TÁC GIẢ & TÁC PHẨM -->
+            <div class="doodle-box bg-emerald-50 p-5 mb-6 relative">
+                <div class="absolute -top-3 left-6 bg-emerald-400 text-slate-900 font-doodle px-3 py-0.5 rounded-full border border-slate-700 font-bold text-sm">
+                    1. Tác giả & Hoàn cảnh sáng tác 💡
+                </div>
+                <div class="mt-2 space-y-2 text-sm md:text-base font-doodle text-slate-800">
+                    <p>• <strong>Tác giả:</strong> Ngân Hoa (tên thật: Nguyễn Thị Ngân Hoa, sinh năm 1970) – Nhà văn, nhà nghiên cứu ngôn ngữ.</p>
+                    <p>• <strong>Tác phẩm đã xuất bản:</strong> <em>Cánh đồng</em> (thơ, 1996), <em>Quà của mùa thu</em> (truyện ngắn, 1996), <em>Những bông huệ</em> (thơ, 1999).</p>
+                    <p>• <strong>Xuất xứ:</strong> Bài thơ "Cánh đồng" thuộc chùm thơ đạt <strong>Giải B</strong> (không có giải A) trong cuộc thi Thơ trên tuần báo <em>Văn nghệ</em> năm 1995.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: MẠCH CẢM XÚC & HÌNH ẢNH THƠ -->
+            <div class="doodle-box bg-sky-50 p-5 mb-6 relative">
+                <div class="absolute -top-3 left-6 bg-sky-300 text-slate-900 font-doodle px-3 py-0.5 rounded-full border border-slate-700 font-bold text-sm">
+                    2. Mạch cảm xúc & Sự biến hóa nhịp điệu 🐬☁️
+                </div>
+                <div class="mt-2 space-y-2 text-sm md:text-base font-doodle text-slate-800">
+                    <p>• <strong>Từ chiếc bình gốm sẫm màu:</strong> Những đóa cúc mùa xuân tỏa sáng ➔ Khơi mở chuỗi giác quan: <em>"một chiếc lá già nua, một nụ hoa bé bỏng, hơi thở run run, làn sương ẩm ướt"</em>.</p>
+                    <p>• <strong>Dòng chảy âm thanh & cảm xúc đa tầng:</strong> <em>"lảnh lót trong veo"</em> ➔ <em>"vang rền trầm đục"</em> ➔ <em>"nức nở âm u"</em> ➔ <em>"lặng câm rực rỡ"</em>.</p>
+                    <p>• <strong>Hành động hòa nhập:</strong> Nhân vật trữ tình chạy về với cánh đồng mùa xuân, chân ngập trong đất mềm tơi xốp, cất tiếng gọi tên những mầm sống chưa kịp ra đời.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 3: TRIẾT LÝ VỀ NGHỆ THUẬT VÀ MẦM SỐNG -->
+            <div class="doodle-box bg-orange-50 p-5 mb-6 relative">
+                <div class="absolute -top-3 left-6 bg-amber-300 text-slate-900 font-doodle px-3 py-0.5 rounded-full border border-slate-700 font-bold text-sm">
+                    3. Biểu tượng nghệ thuật & Chiều sâu triết lý 🐱🌱
+                </div>
+                <div class="mt-2 space-y-2 text-sm md:text-base font-doodle text-slate-800">
+                    <p>• <strong>Biểu tượng "Đất cày":</strong> Nơi cất giữ những mầm sống đang ngủ yên (trái cây, đóa hoa) ➔ Thiên nhiên là cái nôi nuôi dưỡng sáng tạo.</p>
+                    <p>• <strong>Biểu tượng "Chiếc bình gốm chưa kịp thành hình":</strong> Đợi chờ các loài hoa ➔ Khát vọng đón nhận vẻ đẹp mới mẻ, tiềm ẩn trong đời sống và thiên chức của người nghệ sĩ.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 4: HỘP THÔNG TIN ĐẶC BIỆT -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <!-- KIẾN THỨC HAY BỊ SAI -->
+                <div class="doodle-box bg-rose-50 p-4 relative">
+                    <div class="flex items-center gap-2 mb-2 font-doodle font-bold text-rose-700 text-lg">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Kiến thức hay bị sai ⚠️
+                    </div>
+                    <ul class="font-doodle text-sm space-y-1.5 text-slate-800 list-disc pl-4">
+                        <li>Nhầm lẫn <strong>Giải B</strong> bài thơ đạt được thành Giải A (Năm 1995 cuộc thi báo Văn nghệ <em>không có giải A</em>).</li>
+                        <li>Nghĩ rằng "bình gốm sẫm màu" và "bình gốm dưới đất cày" là một (Một cái đã hữu hình, một cái đang chờ thành hình).</li>
+                        <li>Cho rằng bài thơ viết theo thể thơ tự do là không có nhịp điệu (Nhịp điệu vô cùng biến hoá và tự do).</li>
+                    </ul>
+                </div>
+
+                <!-- GHI NHỚ NHANH CẦN THIẾT -->
+                <div class="doodle-box bg-purple-50 p-4 relative">
+                    <div class="flex items-center gap-2 mb-2 font-doodle font-bold text-purple-700 text-lg">
+                        <i class="fa-solid fa-star"></i> Ghi nhớ nhanh cần thiết ✨
+                    </div>
+                    <ul class="font-doodle text-sm space-y-1.5 text-slate-800 list-disc pl-4">
+                        <li><strong>Từ khóa nghệ thuật:</strong> Thơ tự do, nhịp điệu biến hóa, giác quan đồng hiện, ngôn từ phóng khoáng.</li>
+                        <li><strong>Thời gian sáng tác:</strong> Tháng 2/1995.</li>
+                        <li><strong>Định hướng đọc:</strong> Lắng nghe dòng chảy cảm xúc & suy tưởng của nhân vật trữ tình.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-6">
+                <button onclick="toggleInfographicModal(false)" class="px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-doodle text-lg rounded-xl shadow-md border-2 border-slate-900 transition">
+                    Đã hiểu bài học - Trở lại Đề Thi! 🎈
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC ENGINE -->
+    <script>
+        // 20 Questions (8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao)
+        const RAW_QUESTIONS = [
+            // LEVEL 1: BIẾT (8 Câu)
+            {
+                id: 1,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Bài thơ <em>\"Cánh đồng\"</em> thuộc tập thơ cùng tên xuất bản năm 1996 là sáng tác của tác giả nào?",
+                options: [
+                    "Ngân Hoa (Nguyễn Thị Ngân Hoa)",
+                    "Xuân Quỳnh",
+                    "Thanh Thảo",
+                    "Ý Nhi"
+                ],
+                correctIndex: 0,
+                explanation: "Căn cứ thông tin SGK / văn bản đính kèm: Ngân Hoa (tên khai sinh là Nguyễn Thị Ngân Hoa, sinh năm 1970) là tác giả bài thơ \"Cánh đồng\"."
+            },
+            {
+                id: 2,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Tác phẩm <em>\"Cánh đồng\"</em> thuộc chùm thơ từng đạt giải thưởng nào trong cuộc thi Thơ trên tuần báo <em>Văn nghệ</em> năm 1995?",
+                options: [
+                    "Giải A chính thức",
+                    "Giải B (không có giải A)",
+                    "Giải C tập thể",
+                    "Giải Khuyến khích"
+                ],
+                correctIndex: 1,
+                explanation: "Theo chú thích trong SGK: Bài thơ Cánh đồng thuộc chùm thơ được giải B (không có giải A) trong cuộc thi Thơ trên tuần báo Văn nghệ năm 1995."
+            },
+            {
+                id: 3,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Những đóa cúc trong khổ đầu của bài thơ được hái về từ đâu?",
+                options: [
+                    "Cánh đồng mùa thu tĩnh lặng",
+                    "Cánh đồng mùa xuân rộng lớn",
+                    "Khu vườn nhỏ sau nhà",
+                    "Cánh đồng đông buốt giá"
+                ],
+                correctIndex: 1,
+                explanation: "Câu thơ mở đầu bài thơ viết: \"Những đóa cúc vừa hái về từ cánh đồng mùa xuân rộng lớn.\""
+            },
+            {
+                id: 4,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Những đóa hoa cúc vừa hái về được miêu tả toả sáng trên vật dụng nào?",
+                options: [
+                    "Chiếc bình thuỷ tinh trong suốt",
+                    "Chiếc bình gốm sẫm màu",
+                    "Chiếc đĩa gốm cổ",
+                    "Chiếc lọ hoa bằng đồng"
+                ],
+                correctIndex: 1,
+                explanation: "Câu thơ thứ 2 ghi rõ: \"Toả sáng trên chiếc bình gốm sẫm màu\"."
+            },
+            {
+                id: 5,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Chiếc bình gốm <em>\"chưa kịp thành hình\"</em> nằm ở vị trí nào được tác giả nhắc tới ở câu kết bài thơ?",
+                options: [
+                    "Dưới mặt hồ nước",
+                    "Dưới lớp đất cày",
+                    "Trên chiếc bàn gỗ",
+                    "Giữa cánh đồng hoa"
+                ],
+                correctIndex: 1,
+                explanation: "Khổ cuối bài thơ khẳng định: \"Dưới lớp đất cày có những chiếc bình gốm / Chưa kịp thành hình chờ đợi các loài hoa.\""
+            },
+            {
+                id: 6,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Trong khổ đầu, cảm giác khi <em>\"chạm vào em\"</em> xuất hiện những chi tiết cụ thể nào?",
+                options: [
+                    "Một chiếc lá già nua, một nụ hoa bé bỏng, một hơi thở run run, một làn sương ẩm ướt",
+                    "Cánh hoa tàn phai, ngọn gió mùa đông, giọt sương băng giá",
+                    "Nắng hè rực rỡ, cơn mưa rào bất chợt, tán cây xanh thẳm",
+                    "Dòng sông êm đềm, tiếng sóng vỗ bờ, ngọn núi cao vút"
+                ],
+                correctIndex: 0,
+                explanation: "Văn bản gốc: \"Chạm vào em một chiếc lá già nua, một nụ hoa bé bỏng, một hơi thở run run, một làn sương ẩm ướt\"."
+            },
+            {
+                id: 7,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Bài thơ <em>\"Cánh đồng\"</em> được ghi mốc thời gian sáng tác vào khi nào?",
+                options: [
+                    "Tháng 1/1990",
+                    "Tháng 2/1995",
+                    "Tháng 3/1996",
+                    "Tháng 12/1999"
+                ],
+                correctIndex: 1,
+                explanation: "Dưới cuối bài thơ ghi rõ mốc thời gian sáng tác: Tháng 2/1995."
+            },
+            {
+                id: 8,
+                level: "BIẾT",
+                levelTitle: "Mức Biết",
+                levelBadgeClass: "bg-blue-900/80 text-blue-200 border-blue-500",
+                prompt: "Trạng thái của những trái cây chưa kịp ra đời được miêu tả như thế nào?",
+                options: [
+                    "Đang héo hắt trong cái lạnh mùa đông",
+                    "Đang ngủ trong hạt mầm vừa nứt, đang ngủ trong đoá hoa nấp dưới đất cày",
+                    "Đang đơm hoa kết trái trên cành cao",
+                    "Đang rơi rụng xuống mặt đất tơi xốp"
+                ],
+                correctIndex: 1,
+                explanation: "Văn bản: \"Những trái cây đang ngủ trong hạt mầm vừa nứt / Đang ngủ trong đoá hoa nấp dưới đất cày.\""
+            },
+
+            // LEVEL 2: HIỂU (7 Câu)
+            {
+                id: 9,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Chuỗi liên tưởng âm thanh <em>\"một lảnh lót trong veo, một vang rền trầm đục, một nức nở âm u, một lặng câm rực rỡ...\"</em> thể hiện điều gì?",
+                options: [
+                    "Mô tả chi tiết vẻ đẹp của các loại hoa cúc mùa xuân",
+                    "Dòng chảy cảm xúc và âm thanh đa dạng, sống động, giàu biến đổi trong tâm hồn nhân vật trữ tình",
+                    "Sự tàn phá của thời gian đối với cảnh vật thiên nhiên",
+                    "Không gian u tối và cô đơn của mùa xuân"
+                ],
+                correctIndex: 1,
+                explanation: "Chuỗi từ láy và hình ảnh âm thanh giàu tính tương phản diễn tả thế giới nội tâm tinh tế, sống động và dòng chảy cảm xúc phóng khoáng của nhân vật trữ tình."
+            },
+            {
+                id: 10,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Hành động <em>\"Em chạy về với cánh đồng rộng lớn mùa xuân / Chân ngập trong đất mềm tơi xốp\"</em> thể hiện tâm trạng gì của nhân vật trữ tình?",
+                options: [
+                    "Khát vọng hòa nhập, trở về với thiên nhiên nguyên sơ và nguồn cội nuôi dưỡng sự sống",
+                    "Sự mệt mỏi và mong muốn trốn chạy khỏi thực tại cuộc sống",
+                    "Ý định thu hoạch các loại nông sản mùa xuân",
+                    "Hành động dạo chơi ngẫu nhiên không có suy tưởng"
+                ],
+                correctIndex: 0,
+                explanation: "Bước chân chạm vào \"đất mềm tơi xốp\" thể hiện sự giao hòa gắn kết trọn vẹn của cái tôi trữ tình với nguồn cội sự sống mùa xuân."
+            },
+            {
+                id: 11,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Hai câu thơ <em>\"Em gọi tên những loài hoa chưa kịp mọc / Em gọi tên những trái cây chưa kịp ra đời\"</em> bộc lộ tư tưởng gì?",
+                options: [
+                    "Niềm tiếc nuối vì mùa xuân trôi qua quá nhanh",
+                    "Tiếng gọi khơi mở, nâng niu những mầm sống tiềm ẩn và các giá trị tương lai chưa hình thành",
+                    "Thể hiện sự thiếu kiên nhẫn của tác giả đối với tự nhiên",
+                    "Khẳng định sức mạnh sáng tạo tuyệt đối của con người"
+                ],
+                correctIndex: 1,
+                explanation: "Tiếng gọi tên những điều \"chưa kịp mọc\", \"chưa kịp ra đời\" là thái độ đón chờ, trân trọng tiềm năng sinh sôi và các giá trị mầm sống ẩn giấu."
+            },
+            {
+                id: 12,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Hình ảnh <em>\"chiếc bình gốm sẫm màu\"</em> ở khổ 1 và <em>\"chiếc bình gốm chưa kịp thành hình\"</em> ở khổ cuối có mối liên hệ như thế nào?",
+                options: [
+                    "Là hai hình ảnh hoàn toàn trái ngược và không liên quan đến nhau",
+                    "Tạo mạch chuyển từ hình ảnh vật thể hiện hữu đến ý niệm tiềm ẩn mầm sống nghệ thuật trong lòng đất",
+                    "Thể hiện sự đổ vỡ của các vật dụng gốm sứ theo thời gian",
+                    "Bối cảnh miêu tả nghề làm gốm truyền thống của làng quê"
+                ],
+                correctIndex: 1,
+                explanation: "Từ chiếc bình gốm đựng hoa cúc hữu hình, tác giả mở ra suy tưởng về chiếc bình gốm phôi thai dưới lớp đất cày – nơi ủ mầm cho các loài hoa tương lai."
+            },
+            {
+                id: 13,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Sự biến hoá của nhịp điệu và thể thơ tự do trong tác phẩm có tác dụng nghệ thuật gì?",
+                options: [
+                    "Làm cho bài thơ khó đọc và thiếu tính nhạc",
+                    "Gò ép cảm xúc của tác giả trong các quy tắc đường luật",
+                    "Bộc lộ sự phóng khoáng, giúp thể hiện sống động dòng chảy cảm xúc và suy tưởng tự do",
+                    "Giúp bài thơ có độ dài cố định theo chuẩn truyền thống"
+                ],
+                correctIndex: 2,
+                explanation: "Định hướng SGK nêu rõ: Hình thức thơ tự do và nhịp điệu biến hóa tạo điều kiện cho mạch cảm xúc và suy tưởng phát triển tự do, sắc nét."
+            },
+            {
+                id: 14,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Cụm từ <em>\"một lặng câm rực rỡ\"</em> là một kết hợp từ độc đáo vì lý do nào?",
+                options: [
+                    "Phối hợp sự im lặng của thị giác với âm thanh chói lót",
+                    "Kết hợp trạng thái tĩnh lặng tuyệt đối với vẻ đẹp nội lực bừng sáng của cảm xúc",
+                    "Miêu tả màu sắc rực rỡ của bình gốm sẫm màu",
+                    "Chỉ trạng thái không thể lên tiếng của nhân vật trữ tình"
+                ],
+                correctIndex: 1,
+                explanation: "\"Lặng câm\" là sự im lặng, nhưng \"rực rỡ\" là sự bừng sáng – sự kết hợp cảm giác này thể hiện năng lượng cảm xúc cuộn trào sâu lắng bên trong vẻ tĩnh lặng."
+            },
+            {
+                id: 15,
+                level: "HIỂU",
+                levelTitle: "Mức Hiểu",
+                levelBadgeClass: "bg-green-900/80 text-green-200 border-green-500",
+                prompt: "Theo phần định hướng Thực hành đọc, lưu ý quan trọng hàng đầu khi tiếp cận bài thơ <em>\"Cánh đồng\"</em> là gì?",
+                options: [
+                    "Phân tích ngữ pháp và đếm số lượng chữ trong từng câu thơ",
+                    "Cảm nhận sự biến hoá của nhịp điệu, hình ảnh phóng khoáng và lắng nghe dòng chảy cảm xúc của nhân vật trữ tình",
+                    "Tra cứu từ điển các từ ngữ Hán Việt xuất hiện trong bài",
+                    "So sánh bài thơ với các tác phẩm thơ Nôm truyền thống"
+                ],
+                correctIndex: 1,
+                explanation: "Trích định hướng đọc: Cảm nhận sự biến hoá của nhịp điệu, sự phóng khoáng trong cách xây dựng hình ảnh thơ, sự dụng công trong tổ chức mạch thơ."
+            },
+
+            // LEVEL 3: VẬN DỤNG (3 Câu)
+            {
+                id: 16,
+                level: "VẬN DỤNG",
+                levelTitle: "Vận Dụng",
+                levelBadgeClass: "bg-yellow-900/80 text-yellow-200 border-yellow-500",
+                prompt: "Phân tích tính biểu tượng của <em>\"đất cày\"</em> và <em>\"hạt mầm\"</em> trong cấu trúc bài thơ:",
+                options: [
+                    "Chỉ đơn thuần phản ánh hoạt động sản xuất nông nghiệp mùa xuân của người nông dân",
+                    "Đất cày là môi trường ôm ấp nuôi dưỡng; hạt mầm biểu tượng cho tiềm năng nghệ thuật và mầm sống chờ bừng nở",
+                    "Đất cày tượng trưng cho sự cằn cỗi, hạt mầm tượng trưng cho ước mơ xa vời không thể thành hiện thực",
+                    "Đất cày là hiện thân của quá khứ, hạt mầm là biểu tượng của sự lãng quên"
+                ],
+                correctIndex: 1,
+                explanation: "Ở mức vận dụng: Đất cày mang ý nghĩa biểu tượng về cội nguồn sáng tạo subterranean ôm ấp những hạt mầm – chứa đựng giá trị nghệ thuật tương lai."
+            },
+            {
+                id: 17,
+                level: "VẬN DỤNG",
+                levelTitle: "Vận Dụng",
+                levelBadgeClass: "bg-yellow-900/80 text-yellow-200 border-yellow-500",
+                prompt: "Sự kết hợp giữa hình ảnh bình gốm (vô sinh/nghệ thuật) và hoa cúc, hạt mầm (hữu sinh/thiên nhiên) gợi suy tư gì về nghệ thuật và cuộc sống?",
+                options: [
+                    "Nghệ thuật (bình gốm) và cuộc sống (mầm sống thiên nhiên) luôn song hành, ôm ấp và tôn vinh lẫn nhau",
+                    "Đồ gốm nhân tạo luôn có giá trị cao hơn so với vẻ đẹp tự nhiên của hoa cúc",
+                    "Thế giới tự nhiên sớm muộn cũng sẽ lấn gạt và phá hủy các vật dụng gốm sứ",
+                    "Con người cần dừng sáng tạo nghệ thuật để tập trung bảo tồn thiên nhiên"
+                ],
+                correctIndex: 0,
+                explanation: "Chiếc bình gốm đón nhận và tôn vinh hoa cúc, cũng như dưới đất cày bình gốm phôi thai chờ đón loài hoa mới – gợi mối quan hệ khăng khít giữa nghệ thuật và sức sống cuộc đời."
+            },
+            {
+                id: 18,
+                level: "VẬN DỤNG",
+                levelTitle: "Vận Dụng",
+                levelBadgeClass: "bg-yellow-900/80 text-yellow-200 border-yellow-500",
+                prompt: "Từ hành trình cảm xúc từ <em>\"chạm vào em\"</em> đến <em>\"em chạy về với cánh đồng\"</em>, bài học về năng lực cảm thụ thẩm mỹ là gì?",
+                options: [
+                    "Cần thụ động đón nhận những ấn tượng từ bên ngoài mà không cần suy tưởng",
+                    "Sự rung động tinh tế của các giác quan là khởi đầu dẫn dắt con người hành động và hòa nhập sâu sắc vào đời sống",
+                    "Chỉ nên tập trung quan sát thị giác mà bỏ qua thính giác và xúc giác",
+                    "Cảm nhận thẩm mỹ chỉ xuất hiện khi con người ở trong không gian khép kín"
+                ],
+                correctIndex: 1,
+                explanation: "Những xúc chạm tinh tế ban đầu (lá già, nụ hoa, làn sương, âm thanh) kích hoạt cảm xúc sâu thẳm, thôi thúc cái tôi trữ tình chủ động chạy về hòa nhập cùng cánh đồng rộng lớn."
+            },
+
+            // LEVEL 4: VẬN DỤNG CAO (2 Câu)
+            {
+                id: 19,
+                level: "VD CAO",
+                levelTitle: "VD Cao",
+                levelBadgeClass: "bg-purple-900/80 text-purple-200 border-purple-500",
+                prompt: "Đánh giá nét tân kỳ trong tư duy nghệ thuật của Ngân Hoa qua thể thơ tự do đa cảm giác trong <em>\"Cánh đồng\"</em>:",
+                options: [
+                    "Tác giả trung thành tuyệt đối với thể thơ thất ngôn cổ điển và niêm luật nghiêm ngặt",
+                    "Tác giả vượt qua lối miêu tả tượng hình đơn thuần để kiến tạo không gian thơ đồng hiện giác quan, giải phóng cảm xúc tự do đa tầng",
+                    "Bài thơ tập trung vào cảm xúc bi thương, bế tắc của người phụ nữ thời hiện đại",
+                    "Tác giả dùng kĩ thuật siêu thực bóc tách thực tại thành những hình ảnh vô nghĩa"
+                ],
+                correctIndex: 1,
+                explanation: "Ở mức vận dụng cao: Tư duy nghệ thuật đổi mới thể hiện qua việc phối hợp đa giác quan (thị giác, xúc giác, thính giác) và hình thức thơ tự do phóng khoáng, hiện đại."
+            },
+            {
+                id: 20,
+                level: "VD CAO",
+                levelTitle: "VD Cao",
+                levelBadgeClass: "bg-purple-900/80 text-purple-200 border-purple-500",
+                prompt: "Từ hình ảnh <em>\"Chưa kịp thành hình chờ đợi các loài hoa\"</em> ở câu kết, đánh giá quan niệm về <em>\"thiên chức của người nghệ sĩ\"</em>:",
+                options: [
+                    "Nghệ sĩ là người sáng tạo nên chiếc bình gốm tinh thần, luôn sẵn sàng tâm thế đón nhận và tôn vinh những mầm sống mới mẻ của đời sống",
+                    "Nghệ sĩ chỉ nên ghi chép lại những gì đã hoàn thành và có sẵn trong thực tế",
+                    "Thiên chức của nghệ sĩ là tạo ra các sản phẩm thủ công mỹ nghệ có tính ứng dụng cao",
+                    "Nghệ sĩ cần tách mình khỏi đời sống và không cần chờ đợi hay đón nhận sự sáng tạo nào khác"
+                ],
+                correctIndex: 0,
+                explanation: "Hình ảnh chiếc bình gốm chưa thành hình chờ đợi các loài hoa là ẩn dụ mang tầm vóc triết lý cao về tâm thế mở của nhà văn: luôn sáng tạo khung hình tinh thần để nâng niu, chờ đón cái đẹp chưa sinh thành."
+            }
+        ];
+
+        let quizState = {
+            mode: null, // 'PRACTICE' or 'TIMED'
+            questions: [],
+            userAnswers: {}, // index: answerIdx
+            currentIndex: 0,
+            timerInterval: null,
+            secondsRemaining: 1200, // 20 mins = 1200s
+            timeSpentSeconds: 0,
+            startTime: null
+        };
+
+        // DOM elements cache
+        const screenStart = document.getElementById('screen-start');
+        const screenTest = document.getElementById('screen-test');
+        const screenResult = document.getElementById('screen-result');
+        const modeBadgeText = document.getElementById('mode-badge-text');
+
+        function startQuiz(mode) {
+            quizState.mode = mode;
+            quizState.userAnswers = {};
+            quizState.currentIndex = 0;
+            quizState.secondsRemaining = 1200;
+            quizState.timeSpentSeconds = 0;
+            quizState.startTime = Date.now();
+
+            // Prepare questions (Shuffle if TIMED, keep standard order if PRACTICE)
+            if (mode === 'TIMED') {
+                quizState.questions = shuffleArray([...RAW_QUESTIONS]).map(q => {
+                    // Also option shuffling for Timed mode to prevent cheating
+                    const optionObjects = q.options.map((opt, idx) => ({ text: opt, isCorrect: idx === q.correctIndex }));
+                    const shuffledOptions = shuffleArray(optionObjects);
+                    return {
+                        ...q,
+                        options: shuffledOptions.map(o => o.text),
+                        correctIndex: shuffledOptions.findIndex(o => o.isCorrect)
+                    };
+                });
+                modeBadgeText.innerText = "Chế độ TÍNH GIỜ (20 Phút)";
+                document.getElementById('timer-box').classList.remove('hidden');
+                startTimer();
+            } else {
+                quizState.questions = JSON.parse(JSON.stringify(RAW_QUESTIONS));
+                modeBadgeText.innerText = "Chế độ LUYỆN TẬP";
+                document.getElementById('timer-box').classList.add('hidden');
+                if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+            }
+
+            // Render view
+            screenStart.classList.add('hidden');
+            screenResult.classList.add('hidden');
+            screenTest.classList.remove('hidden');
+
+            renderQuestionGrid();
+            renderCurrentQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('question-grid');
+            gridContainer.innerHTML = '';
+
+            quizState.questions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.className = getGridBtnClass(idx);
+                btn.innerText = idx + 1;
+                btn.onclick = () => jumpToQuestion(idx);
+                gridContainer.appendChild(btn);
+            });
+
+            updateAnsweredCount();
+        }
+
+        function getGridBtnClass(idx) {
+            const isCurrent = idx === quizState.currentIndex;
+            const isAnswered = quizState.userAnswers.hasOwnProperty(idx);
+
+            let base = "h-9 w-full rounded-lg font-bold text-xs flex items-center justify-center transition border ";
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white border-blue-400 ring-2 ring-blue-300";
+            } else if (isAnswered) {
+                return base + "bg-amber-600 text-white border-amber-400";
+            } else {
+                return base + "bg-[#572b2b] text-gray-300 border-[#7c4040] hover:bg-[#6e3737]";
+            }
+        }
+
+        function renderCurrentQuestion() {
+            const q = quizState.questions[quizState.currentIndex];
+            
+            // Header Info
+            document.getElementById('current-question-title').innerText = `Câu ${quizState.currentIndex + 1} / ${quizState.questions.length}`;
+            const levelBadge = document.getElementById('current-question-level');
+            levelBadge.innerText = q.levelTitle;
+            levelBadge.className = `text-xs font-semibold px-3 py-1 rounded-full border ${q.levelBadgeClass}`;
+
+            // Question Prompt
+            document.getElementById('question-prompt').innerHTML = q.prompt;
+
+            // Render Options
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            const selectedOption = quizState.userAnswers[quizState.currentIndex];
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = selectedOption === optIdx;
+                
+                const optDiv = document.createElement('div');
+                optDiv.className = `p-4 rounded-xl border-2 transition cursor-pointer flex items-start gap-3 ${
+                    isSelected 
+                    ? 'bg-amber-950/70 border-amber-500 text-cream shadow-md' 
+                    : 'bg-[#572b2b] border-[#7c4040] hover:border-gray-400 text-gray-200'
+                }`;
+                optDiv.onclick = () => selectAnswer(optIdx);
+
+                optDiv.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 ${
+                        isSelected ? 'bg-amber-500 text-slate-900' : 'bg-[#4a2424] text-gray-300 border border-[#7c4040]'
+                    }">
+                        ${prefixes[optIdx]}
+                    </div>
+                    <div class="text-sm md:text-base leading-snug pt-0.5 flex-grow">
+                        ${optText}
+                    </div>
+                `;
+                container.appendChild(optDiv);
+            });
+
+            // Update Nav Buttons State
+            document.getElementById('btn-prev-question').disabled = (quizState.currentIndex === 0);
+            const nextBtn = document.getElementById('btn-next-question');
+            if (quizState.currentIndex === quizState.questions.length - 1) {
+                nextBtn.innerHTML = `Nộp Bài <i class="fa-solid fa-check ml-1"></i>`;
+                nextBtn.className = "px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition border border-emerald-400";
+            } else {
+                nextBtn.innerHTML = `Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>`;
+                nextBtn.className = "px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm transition border border-amber-400";
+            }
+
+            // Update Question Grid UI highlights
+            quizState.questions.forEach((_, idx) => {
+                const btn = document.getElementById(`grid-btn-${idx}`);
+                if (btn) btn.className = getGridBtnClass(idx);
+            });
+
+            // Re-render MathJax formulas if any
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function selectAnswer(optIdx) {
+            quizState.userAnswers[quizState.currentIndex] = optIdx;
+            renderCurrentQuestion();
+            updateAnsweredCount();
+        }
+
+        function clearCurrentAnswer() {
+            delete quizState.userAnswers[quizState.currentIndex];
+            renderCurrentQuestion();
+            updateAnsweredCount();
+        }
+
+        function navigateQuestion(direction) {
+            const newIdx = quizState.currentIndex + direction;
+            if (newIdx >= 0 && newIdx < quizState.questions.length) {
+                quizState.currentIndex = newIdx;
+                renderCurrentQuestion();
+            } else if (newIdx >= quizState.questions.length) {
+                submitQuizConfirm();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            quizState.currentIndex = idx;
+            renderCurrentQuestion();
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(quizState.userAnswers).length;
+            document.getElementById('answered-count-badge').innerText = `${count} / ${quizState.questions.length} đã làm`;
+        }
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer-display');
+            if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+
+            quizState.timerInterval = setInterval(() => {
+                quizState.secondsRemaining--;
+                quizState.timeSpentSeconds++;
+
+                const mins = Math.floor(quizState.secondsRemaining / 60);
+                const secs = quizState.secondsRemaining % 60;
+                timerDisplay.innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+                if (quizState.secondsRemaining <= 0) {
+                    clearInterval(quizState.timerInterval);
+                    alertModal("Đã hết 20 phút làm bài! Hệ thống sẽ tự động nộp bài của bạn.", () => {
+                        finishQuiz();
+                    });
+                }
+            }, 1000);
+        }
+
+        function submitQuizConfirm() {
+            const answeredCount = Object.keys(quizState.userAnswers).length;
+            const total = quizState.questions.length;
+            if (answeredCount < total) {
+                const unAnswered = total - answeredCount;
+                if (!confirm(`Bạn còn ${unAnswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay?`)) {
+                    return;
+                }
+            }
+            finishQuiz();
+        }
+
+        function finishQuiz() {
+            if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+
+            // Calculate score
+            let correctCount = 0;
+            quizState.questions.forEach((q, idx) => {
+                if (quizState.userAnswers[idx] === q.correctIndex) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / quizState.questions.length) * 10;
+            const roundedScore = score.toFixed(1);
+
+            // Time calculation
+            let timeText = "";
+            if (quizState.mode === 'TIMED') {
+                const spent = 1200 - quizState.secondsRemaining;
+                const m = Math.floor(spent / 60);
+                const s = spent % 60;
+                timeText = `${m} phút ${s} giây`;
+            } else {
+                timeText = "Không giới hạn";
+            }
+
+            // Display Results
+            document.getElementById('res-score').innerText = roundedScore;
+            document.getElementById('res-correct').innerText = correctCount;
+            document.getElementById('res-[#res-time]') ? document.getElementById('res-[#res-time]').innerText = timeText : document.getElementById('res-time').innerText = timeText;
+            document.getElementById('result-mode-label').innerText = `Chế độ ${quizState.mode === 'TIMED' ? 'TÍNH GIỜ' : 'LUYỆN TẬP'}`;
+
+            // Teacher commentary logic
+            const commentBox = document.getElementById('res-comment');
+            if (score >= 9.0) {
+                commentBox.innerHTML = `<strong>Xuất sắc!</strong> Em đã nắm rất vững kiến thức bài thơ <em>"Cánh đồng"</em> (Ngân Hoa), cảm nhận tinh tế từ mạch cảm xúc, biến hóa nhịp điệu đến chiều sâu triết lý về mầm sống và sáng tạo nghệ thuật. Hãy tiếp tục phát huy nhé!`;
+            } else if (score >= 7.0) {
+                commentBox.innerHTML = `<strong>Khá tốt!</strong> Em đã hiểu sâu nội dung và nghệ thuật của tác phẩm. Tuy nhiên cần lưu ý kỹ hơn các câu hỏi Vận dụng cao về tư duy thơ tự do hiện đại để đạt điểm tối đa.`;
+            } else if (score >= 5.0) {
+                commentBox.innerHTML = `<strong>Đạt yêu cầu!</strong> Em nắm được các chi tiết cơ bản của bài học nhưng chưa phân tích sâu được các yếu tố biểu tượng (như đất cày, chiếc bình gốm phôi thai). Hãy đọc kĩ lời giải chi tiết bên dưới để củng cố lại.`;
+            } else {
+                commentBox.innerHTML = `<strong>Cần cố gắng nhiều hơn!</strong> Kết quả cho thấy em chưa nắm vững lý thuyết Bài thơ <em>Cánh đồng</em>. Hãy mở lại Poster tóm tắt kiến thức và đọc lại kĩ SGK để ôn luyện lại nhé!`;
+            }
+
+            // Render Solution Review List
+            renderSolutionReview();
+
+            // Switch Screen
+            screenTest.classList.add('hidden');
+            screenResult.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderSolutionReview() {
+            const container = document.getElementById('review-list-container');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            quizState.questions.forEach((q, idx) => {
+                const userChoice = quizState.userAnswers[idx];
+                const isCorrect = userChoice === q.correctIndex;
+
+                const card = document.createElement('div');
+                card.className = `bg-burgundy-dark border rounded-2xl p-5 md:p-6 shadow-md ${
+                    isCorrect ? 'border-emerald-600/80' : 'border-rose-600/80'
+                }`;
+
+                let optionsHTML = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optionStyle = "bg-[#572b2b] border-[#7c4040] text-gray-300";
+                    let iconHTML = '';
+
+                    if (optIdx === q.correctIndex) {
+                        optionStyle = "bg-emerald-950/80 border-emerald-500 text-emerald-200 font-semibold";
+                        iconHTML = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    } else if (userChoice === optIdx && !isCorrect) {
+                        optionStyle = "bg-rose-950/80 border-rose-500 text-rose-200 line-through opacity-80";
+                        iconHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 ml-auto"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl border flex items-center gap-3 text-sm ${optionStyle}">
+                            <span class="w-6 h-6 rounded-md font-bold text-xs flex items-center justify-center shrink-0 bg-black/20">
+                                ${prefixes[optIdx]}
+                            </span>
+                            <span class="flex-grow">${optText}</span>
+                            ${iconHTML}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-cream text-base">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full border ${q.levelBadgeClass}">${q.levelTitle}</span>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-full font-bold ${
+                            isCorrect ? 'bg-emerald-900/80 text-emerald-300 border border-emerald-500' : 'bg-rose-900/80 text-rose-300 border border-rose-500'
+                        }">
+                            ${isCorrect ? '✓ Đúng' : '✕ Sai'}
+                        </span>
+                    </div>
+
+                    <div class="text-sm md:text-base font-medium text-white mb-4 leading-relaxed">
+                        ${q.prompt}
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-[#572b2b] border-l-4 border-blue-400 p-3.5 rounded-r-xl text-xs md:text-sm text-gray-200">
+                        <span class="font-bold text-blue-300 block mb-1">💡 Lời giải chi tiết:</span>
+                        ${q.explanation}
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function resetToStart() {
+            if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+            screenResult.classList.add('hidden');
+            screenTest.classList.add('hidden');
+            screenStart.classList.remove('hidden');
+            modeBadgeText.innerText = "Chưa chọn chế độ";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToReview() {
+            document.getElementById('solution-review-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleInfographicModal(show) {
+            const modal = document.getElementById('infographic-modal');
+            if (show) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function alertModal(msg, callback) {
+            alert(msg);
+            if (callback) callback();
+        }
+    </script>
+</body>
+</html>
