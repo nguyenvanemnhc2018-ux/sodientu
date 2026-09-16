@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Prô-mê-tê Bị Xiềng</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Library with Chemistry Support (No polyfill script) -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-container {
+            max-width: 64rem; /* max-w-5xl */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-custom {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-custom:hover {
+            filter: brightness(0.9);
+            transform: translateY(-1px);
+        }
+        .millionaire-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .millionaire-option {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid #3b82f6;
+            transition: all 0.2s;
+        }
+        .millionaire-option:hover {
+            background: rgba(59, 130, 246, 0.3);
+            border-color: #33FF33;
+        }
+    </style>
+</head>
+<body class="py-8 px-4 text-gray-800">
+
+    <div class="main-container space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <header class="rounded-xl overflow-hidden shadow-md text-white">
+            <div style="background-color: #1E3A8A;" class="py-4 px-6 text-center font-bold text-lg md:text-xl tracking-wide uppercase">
+                CHƯƠNG: NHÂN VẬT VÀ XUNG ĐỘT TRONG BI KỊCH
+            </div>
+            <div class="border-b border-white/20"></div>
+            <div style="background-color: #2563EB;" class="py-5 px-6 text-center font-extrabold text-2xl md:text-3xl tracking-wider uppercase">
+                THỰC HÀNH ĐỌC: PRÔ-MÊ-TÊ BỊ XIỀNG (TRÍCH - ÉT-SIN)
+            </div>
+        </header>
+
+        <!-- INTRO BOX (LỜI DẪN) -->
+        <section class="bg-white border border-black rounded-xl p-6 shadow-sm">
+            <p class="italic text-gray-700 leading-relaxed text-center font-medium">
+                "Bi kịch cổ đại Hy Lạp là bài ca ca ngợi ý chí quật cường, tinh thần hi sinh cao cả và lòng vị tha của con người trước số phận và cường quyền bạo lực. Tác phẩm <span class="font-bold uppercase">Prô-mê-tê bị xiềng</span> của Ét-sin là một trong những kiệt tác vĩ đại nhất tái hiện hình tượng người anh hùng văn hóa dũng cảm đấu tranh vì sự sống của nhân loại."
+            </p>
+        </section>
+
+        <!-- SECTION I: TÌM HIỂU CHUNG -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold uppercase tracking-wide border-b-4 border-slate-800 pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white font-bold rounded mr-3 shadow">I</span>
+                TÌM HIỂU CHUNG VỀ TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-blue-600 text-white font-bold rounded-full mr-2 text-sm shadow">1</span>
+                    Tác giả Ét-sin (Eschyle)
+                </h3>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg space-y-2 text-gray-700">
+                    <p>• <strong>Năm sinh - năm mất:</strong> 525 – 456 trước Công nguyên, là nhà soạn kịch vĩ đại người Hy Lạp cổ đại.</p>
+                    <p>• <strong>Vai trò lịch sử:</strong> Được mệnh danh là "cha đẻ của bi kịch Hy Lạp", đóng vai trò quyết định trong việc phát triển nghệ thuật sân khấu bi kịch.</p>
+                    <p>• <strong>Sự nghiệp sáng tác:</strong> Tương truyền ông đã sáng tác khoảng 70 vở bi kịch và 20 vở kịch xa-tia (satire). Hiện nay chỉ còn lưu giữ được 7 tác phẩm trọn vẹn (như <em>Những thiếu nữ cầu xin, Quân Ba Tư, Prô-mê-tê bị xiềng, A-ga-mem-nông...</em>).</p>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-blue-600 text-white font-bold rounded-full mr-2 text-sm shadow">2</span>
+                    Tác phẩm "Prô-mê-tê bị xiềng"
+                </h3>
+                <div class="bg-emerald-50 border-l-4 border-emerald-600 p-4 rounded-r-lg space-y-2 text-gray-700">
+                    <p>• <strong>Xuất xứ & Đề tài:</strong> Khai thác từ đề tài thần thoại Hy Lạp về thần Prô-mê-tê – vị thần cả gan đánh cắp lửa trời mang xuống cho loài người.</p>
+                    <p>• <strong>Bối cảnh bi kịch:</strong> Vì giận dữ trước hành vi trộm lửa và bảo vệ loài người, Thần Vương Dớt (Zeus) đã trừng phạt Prô-mê-tê bằng cách đóng đinh xiềng ông trên đỉnh núi Cô-ca-dơ (Caucase), cho diều hâu ngày đêm moi gan móc ruột.</p>
+                    <p>• <strong>Vị trí đoạn trích:</strong> Trích từ phần đầu của vở bi kịch, thể hiện cuộc đối thoại giữa Nhạc trưởng (đại diện cho tập thể/nữ thần đại dương) và thần Prô-mê-tê.</p>
+                </div>
+
+                <!-- Minhl hoa Image Placeholder -->
+                <div class="mt-4 text-center">
+                    <div class="inline-block border-2 border-dashed border-gray-400 p-4 rounded-xl bg-gray-50 max-w-md w-full">
+                        <img src="h1.png" alt="Minh họa thần Prô-mê-tê bị xiềng trên đỉnh núi Cô-ca-dơ" class="mx-auto max-h-64 object-contain rounded mb-2">
+                        <span class="text-xs text-gray-500 font-semibold italic">Hình 1: Hình minh họa thần Prô-mê-tê bị xiềng trên đỉnh núi Cô-ca-dơ (h1.png)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION II: KHÁM PHÁ NỘI DUNG VB -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold uppercase tracking-wide border-b-4 border-slate-800 pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white font-bold rounded mr-3 shadow">II</span>
+                NỘI DUNG VĂN BẢN VÀ CÁC TRỌNG TÂM ĐỌC HIỂU
+            </h2>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-blue-600 text-white font-bold rounded-full mr-2 text-sm shadow">1</span>
+                    Một số điều cần lưu ý khi đọc văn bản
+                </h3>
+                
+                <!-- Box Định nghĩa / Phát biểu -->
+                <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 space-y-3">
+                    <h4 class="font-bold text-amber-900 uppercase">📌 Ba định hướng trọng tâm:</h4>
+                    <ul class="list-disc list-inside text-gray-800 space-y-2">
+                        <li><strong>Thần thoại Hy Lạp về Prô-mê-tê:</strong> Tìm hiểu nguồn gốc xung đột giữa thần Prô-mê-tê và thần Dớt (Zeus).</li>
+                        <li><strong>Đặc điểm tính cách Prô-mê-tê:</strong> Bộc lộ qua lời thoại tự giãi bày, khẳng định tư thế ngoan cường và tình yêu thương sâu sắc dành cho con người.</li>
+                        <li><strong>Thông điệp chính:</strong> Sự tôn vinh tinh thần hy sinh vì văn minh nhân loại và bản lĩnh chống lại trật tự bạo ngược.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-blue-600 text-white font-bold rounded-full mr-2 text-sm shadow">2</span>
+                    Hệ thống thần linh được đề cập trong văn bản
+                </h3>
+                
+                <p class="text-gray-700">Để hiểu rõ bối cảnh xung đột kịch, người đọc cần nắm vững danh xưng và vai trò của các vị thần được nhắc tới trong lời thoại:</p>
+
+                <!-- Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-slate-300 text-center text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-900 border-b border-slate-300 font-bold">
+                                <th class="p-3 border border-slate-300">Tên thần / Địa danh</th>
+                                <th class="p-3 border border-slate-300">Nguồn gốc & Vai trò trong thần thoại</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 border border-slate-300 font-semibold text-blue-900">Thần Vương (Dớt / Zeus)</td>
+                                <td class="p-3 border border-slate-300 text-left">Chúa tể muôn thần, kẻ lật đổ cha mình để đoạt quyền thống trị; đại diện cho bạo quyền và độc đoán.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 border border-slate-300 font-semibold text-blue-900">Crô-nốt (Cronos)</td>
+                                <td class="p-3 border border-slate-300 text-left">Cha của thần Dớt, người bị Dớt truất ngôi và giam xuống địa ngục Tác-ta.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 border border-slate-300 font-semibold text-blue-900">U-ra-nốt (Uranos) & Gai-a (Gaia)</td>
+                                <td class="p-3 border border-slate-300 text-left">U-ra-nốt là thần Bầu trời sơ khai; Gai-a là Đất Mẹ, tổ tiên của vạn vật.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 border border-slate-300 font-semibold text-blue-900">Tê-mít (Thémis)</td>
+                                <td class="p-3 border border-slate-300 text-left">Mẹ của thần Prô-mê-tê, vị thần cai quản trật tự xã hội và dự báo tương lai.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 border border-slate-300 font-semibold text-blue-900">Tác-ta (Tartare) & Ha-đét (Hadès)</td>
+                                <td class="p-3 border border-slate-300 text-left">Tác-ta là chốn địa ngục đen ngòm; Ha-đét là cõi âm phủ nơi linh hồn người chết xuống.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Image Placeholder 2 -->
+                <div class="mt-4 text-center">
+                    <div class="inline-block border-2 border-dashed border-gray-400 p-4 rounded-xl bg-gray-50 max-w-md w-full">
+                        <img src="h2.png" alt="Sơ đồ tương quan lực lượng giữa Prô-mê-tê và thần Dớt" class="mx-auto max-h-64 object-contain rounded mb-2">
+                        <span class="text-xs text-gray-500 font-semibold italic">Hình 2: Sơ đồ tương quan lực lượng và xung đột kịch (h2.png)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 3 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-blue-600 text-white font-bold rounded-full mr-2 text-sm shadow">3</span>
+                    Phân tích chi tiết tính cách nhân vật Prô-mê-tê
+                </h3>
+
+                <div class="space-y-3">
+                    <div class="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <h4 class="font-bold text-indigo-900">a. Sự thông tuệ và tầm nhìn xa trông rộng:</h4>
+                        <p class="text-gray-700">Prô-mê-tê hiểu rằng thắng lợi thuộc về mưu mẹo và trí tuệ chứ không phải bạo lực đơn thuần <em>("nhờ mưu mẹo chứ không phải bạo quyền và sức mạnh mà ngôi thống trị vào tay người chiến thắng")</em>.</p>
+                    </div>
+
+                    <div class="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <h4 class="font-bold text-indigo-900">b. Lòng dũng cảm và tinh thần hy sinh cao cả vì con người:</h4>
+                        <p class="text-gray-700">Khi thần Dớt muốn tiêu diệt giống người để thay bằng loài mới, chỉ duy nhất Prô-mê-tê dám đứng lên can đảm cưỡng lại <em>("Một mình ta dám đứng lên can đảm / Ngăn không để người trần nát thịt tan xương / Bước xuống âm ti...")</em>.</p>
+                    </div>
+
+                    <div class="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <h4 class="font-bold text-indigo-900">c. Thái độ kiên cường, coi thường bạo quyền:</h4>
+                        <p class="text-gray-700">Dù chịu hình phạt khốc liệt <em>("gập mình dưới sức nặng đè oan trái")</em>, Prô-mê-tê không hối hận mà vạch trần bản chất đền ơn bội nghĩa và thói ngờ vực của bạo chúa Dớt <em>("Đây cái tệ hại vốn đi đôi cùng bạo ngược / Là thiếu lòng tin ở cả bạn bè")</em>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NÊU VẤN ĐỀ & HOẠT ĐỘNG (HÌNH BÀN TAY / KHUNG CÂU HỎI) -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold uppercase text-slate-800 border-b-2 border-slate-300 pb-2 flex items-center">
+                <span>✋ HOẠT ĐỘNG KHÁM PHÁ VÀ CÂU HỎI SUY NGHĨ</span>
+            </h2>
+
+            <!-- Question Box 1 -->
+            <div class="bg-slate-100 border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-slate-900">
+                    <strong>❓ Câu hỏi 1 (?):</strong> Nguyên nhân chính khiến thần Dớt nổi giận và đọa đày Prô-mê-tê một cách khắc nghiệt là gì?
+                </p>
+                <button onclick="toggleAnswer('ans-q1')" class="btn-custom px-4 py-2 rounded shadow text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans-q1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 mt-2">
+                    <strong>Hướng dẫn giải:</strong><br>
+                    Nguyên nhân gồm hai yếu tố:
+                    <ol class="list-decimal list-inside mt-1 space-y-1">
+                        <li>Prô-mê-tê cả gan chống lại ý định của Dớt khi Dớt muốn hủy diệt loài người để tạo ra giống loài mới.</li>
+                        <li>Prô-mê-tê đánh cắp lửa trời trao cho con người, giúp loài người thoát khỏi cảnh tăm tối và duy trì sự sống. Hành động này thách thức quyền năng tuyệt đối của thần Dớt.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Question Box 2 -->
+            <div class="bg-slate-100 border-l-4 border-blue-700 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-slate-900">
+                    <strong>✋ Hoạt động thảo luận:</strong> Phân tích ý nghĩa bi kịch của câu thơ: <em>"Vì thương xót trần gian như thể ruột rà / Mà ta bị khinh rẻ, không đáng người thương xót."</em>
+                </p>
+                <button onclick="toggleAnswer('ans-q2')" class="btn-custom px-4 py-2 rounded shadow text-sm">
+                    Xem lời giải
+                </button>
+                <div id="ans-q2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 mt-2">
+                    <strong>Hướng dẫn giải:</strong><br>
+                    Câu thơ chứa đựng sự nghịch lý đau đớn mang tính bi kịch:
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Một vị thần vì lòng thương yêu bao la đối với loài người khốn khổ mà sẵn sàng vi phạm luật trời.</li>
+                        <li>Kết cục là ông phải gánh chịu nỗi đau thể xác và tinh thần tủi nhục, bị thần linh khinh rẻ, đày ải. Sự hy sinh cao cả đổi lấy đọa đày làm nổi bật vẻ đẹp anh hùng trác tuyệt của Prô-mê-tê.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIAL CALLOUT BOXES (EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý) -->
+        <section class="space-y-4">
+            <!-- EM CÓ BIẾT -->
+            <div class="bg-amber-100 border-l-4 border-amber-500 text-amber-900 p-5 rounded-r-xl shadow-sm space-y-2">
+                <h3 class="font-bold text-lg flex items-center">
+                    💡 EM CÓ BIẾT?
+                </h3>
+                <p class="text-sm md:text-base leading-relaxed">
+                    Hình tượng <strong>Prô-mê-tê (Prométhée)</strong> đã trở thành biểu tượng bất tử trong văn học thế giới đại diện cho tinh thần đấu tranh vì tự do và văn minh. Trong triết học và văn học hiện đại, thuật ngữ <em>"tinh thần Prô-mê-tê" (Promethean spirit)</em> được dùng để chỉ những con người dũng cảm kiên cường, chấp nhận hy sinh bản thân để mang lại tri thức, ánh sáng và tiến bộ cho cộng đồng.
+                </p>
+            </div>
+
+            <!-- EM CÓ THỂ -->
+            <div class="bg-indigo-100 border-l-4 border-indigo-500 text-indigo-900 p-5 rounded-r-xl shadow-sm space-y-2">
+                <h3 class="font-bold text-lg flex items-center">
+                    🎯 EM CÓ THỂ
+                </h3>
+                <p class="text-sm md:text-base leading-relaxed">
+                    Sưu tầm và so sánh hình tượng người anh hùng vì cộng đồng trong thần thoại Hy Lạp (Prô-mê-tê) với các nhân vật anh hùng trong thần thoại hoặc truyền thuyết Việt Nam (như <em>Sơn Tinh, Thánh Gióng, Nữ Thần Mặt Trời...</em>) để thấy được sự tương đồng và khác biệt trong tư duy thẩm mỹ của các dân tộc.
+                </p>
+            </div>
+
+            <!-- LƯU Ý -->
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-900 p-5 rounded-r-xl shadow-sm space-y-2">
+                <h3 class="font-bold text-lg flex items-center">
+                    ⚠️ LƯU Ý
+                </h3>
+                <p class="text-sm md:text-base leading-relaxed">
+                    Khi đọc văn bản bi kịch cổ đại Hy Lạp, cần chú ý đến <strong>ngôn ngữ độc thoại và đối thoại</strong>. Lời kịch không chỉ bộc lộ cảm xúc tức thời mà còn chứa đựng triết lý nhân sinh sâu sắc. Đặc biệt, nhân vật Nhạc trưởng đại diện cho tiếng nói chung của cộng đồng (Đồng ca), đóng vai trò lắng nghe, hỏi han và bình luận về sự việc.
+                </p>
+            </div>
+        </section>
+
+        <!-- GAMESHOW AI LÀ TRIỆU PHÚ - 10 BÀI TẬP TRẮC NGHIỆM -->
+        <section class="millionaire-box rounded-xl shadow-xl p-6 text-white space-y-6 border-2 border-yellow-500">
+            <div class="text-center border-b border-yellow-500/50 pb-4">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-yellow-400 tracking-wider flex items-center justify-center gap-2">
+                    🏆 GAMESHOW: AI LÀ TRIỆU PHÚ 🏆
+                </h2>
+                <p class="text-xs md:text-sm text-gray-300 mt-1">Củng cố kiến thức văn bản "Prô-mê-tê bị xiềng" (10 Câu hỏi)</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 1: Tác giả Ét-sin được danh xưng lịch sử là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="A" class="mr-2"> A. Cha đẻ của hài kịch thế giới
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="B" class="mr-2"> B. Cha đẻ của bi kịch Hy Lạp
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="C" class="mr-2"> C. Nhà thơ sử thi vĩ đại nhất
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q1" value="D" class="mr-2"> D. Triết gia lỗi lạc cổ đại
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 2: Thần Prô-mê-tê bị trừng phạt bằng hình thức nào trên núi Cô-ca-dơ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="A" class="mr-2"> A. Bị đày xuống cõi âm phủ Ha-đét vĩnh viễn
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="B" class="mr-2"> B. Bị ném vào ngọn lửa cuồng nổ của thần Dớt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="C" class="mr-2"> C. Bị đóng đinh xiềng trên đỉnh núi và bị diều hâu moi gan
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q2" value="D" class="mr-2"> D. Bị biến thành ngọn núi đá nghìn năm
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 3: Ai là người đối thoại trực tiếp với Prô-mê-tê trong đoạn trích?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="A" class="mr-2"> A. Thần Dớt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="B" class="mr-2"> B. Thần Ha-đét
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="C" class="mr-2"> C. Nhạc trưởng
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q3" value="D" class="mr-2"> D. Thần Crô-nốt
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 4: Theo lời Prô-mê-tê, thói xấu nào vốn đi đôi với kẻ cai trị bạo ngược?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="A" class="mr-2"> A. Thiếu lòng tin ở cả bạn bè
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="B" class="mr-2"> B. Lòng tham tài sản không đáy
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="C" class="mr-2"> C. Sự hèn nhát trước kẻ thù
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q4" value="D" class="mr-2"> D. Sự dối trá với thần linh
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 5: Nguyên nhân Prô-mê-tê giúp thần Dớt chiến thắng phe Crô-nốt là nhờ vào điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="A" class="mr-2"> A. Sức mạnh bạo lực cơ bắp
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="B" class="mr-2"> B. Mưu mẹo và trí tuệ khôn khéo
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="C" class="mr-2"> C. Phép thuật biến hóa
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q5" value="D" class="mr-2"> D. Sự trợ giúp của người trần
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 6: Thần Vương Dớt đã có dự định đen tối gì đối với giống loài con người?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="A" class="mr-2"> A. Nô dịch loài người làm nô lệ
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="B" class="mr-2"> B. Toan hủy diệt giống người để sinh ra giống mới
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="C" class="mr-2"> C. Ban cho loài người ngọn lửa thần
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q6" value="D" class="mr-2"> D. Đày loài người xuống cõi âm ti
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 7: Nhân vật nào trong đoạn trích đã duy nhất can đảm đứng lên ngăn cản ý định hủy diệt loài người của thần Dớt?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="A" class="mr-2"> A. Thần U-ra-nốt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="B" class="mr-2"> B. Nữ thần Tê-mít
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="C" class="mr-2"> C. Thần Prô-mê-tê
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q7" value="D" class="mr-2"> D. Các vị thần Khổng Lồ
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 8: Địa danh "Tác-ta" (Tartare) trong văn bản được giải thích là nơi nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="A" class="mr-2"> A. Cung điện trần thế của thần Dớt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="B" class="mr-2"> B. Địa ngục đen ngòm thăm thẳm
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="C" class="mr-2"> C. Đỉnh núi cao nhất Hy Lạp
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q8" value="D" class="mr-2"> D. Vùng biển cả sâu thẳm
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 9: Động cơ sâu xa khiến Prô-mê-tê chịu đày đọa khắc nghiệt là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="A" class="mr-2"> A. Vì muốn chiếm đoạt ngôi vương của Dớt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="B" class="mr-2"> B. Vì thương xót trần gian như thể ruột rà
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="C" class="mr-2"> C. Vì bị các vị thần lừa gạt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q9" value="D" class="mr-2"> D. Vì muốn phô trương sức mạnh phép thuật
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700">
+                    <p class="font-semibold text-yellow-300 mb-3">Câu 10: Giọng điệu chủ đạo của lời thoại Prô-mê-tê trong đoạn trích là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="A" class="mr-2"> A. Bi thương nhưng kiên cường, đĩnh đạc và đầy tự hào
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="B" class="mr-2"> B. Yếu đuối, van xin sự tha thứ của thần Dớt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="C" class="mr-2"> C. Hời hợt, không bận tâm đến hình phạt
+                        </label>
+                        <label class="millionaire-option p-3 rounded-lg flex items-center cursor-pointer">
+                            <input type="radio" name="q10" value="D" class="mr-2"> D. Giận dữ mất kiểm soát, chửi rủa vô căn cứ
+                        </label>
+                    </div>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-900 hover:bg-black text-yellow-400 font-bold border-2 border-yellow-400 px-8 py-3 rounded-full text-lg shadow-lg hover:shadow-yellow-500/50 transition">
+                        ⚡ NỘP BÀI KẾT QUẢ ⚡
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Output -->
+            <div id="quizResult" class="hidden p-6 rounded-xl bg-slate-900 border border-yellow-500 mt-6 space-y-4"></div>
+        </section>
+
+        <!-- 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN / VẬN DỤNG CÓ LỜI GIẢI CHI TIẾT -->
+        <section class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold uppercase tracking-wide border-b-4 border-slate-800 pb-2 flex items-center">
+                <span class="inline-flex items-center justify-center w-9 h-9 bg-slate-800 text-white font-bold rounded mr-3 shadow">III</span>
+                BÀI TẬP TỰ LUẬN VẬN DỤNG VÀ PHÂN TÍCH
+            </h2>
+
+            <!-- Essay 1 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-5 rounded-r-xl space-y-3">
+                <h3 class="font-bold text-slate-900 text-base md:text-lg">
+                    Bài 1: Phân tích bản chất xung đột kịch giữa Thần Vương Dớt và Prô-mê-tê.
+                </h3>
+                <p class="text-gray-700 text-sm">
+                    Hãy làm rõ hai tuyến giá trị đối lập đại diện bởi hai nhân vật này trong tác phẩm.
+                </p>
+                <button onclick="toggleAnswer('essay-1')" class="btn-custom px-4 py-2 rounded shadow text-sm">
+                    Xem lời giải
+                </button>
+                <div id="essay-1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 mt-3 text-sm leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong><br>
+                    Xung đột kịch giữa Dớt và Prô-mê-tê là xung đột triết học và chính trị sâu sắc mang tính thời đại:
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Thần Vương Dớt:</strong> Đại diện cho bạo quyền, sự thống trị độc đoán, sự bội phản và thiếu tin tưởng bạn bè. Dớt coi loài người là sinh linh khốn nạn cần bị diệt vong.</li>
+                        <li><strong>Thần Prô-mê-tê:</strong> Đại diện cho trí tuệ, tình thương yêu bao la, lòng dũng cảm bất khuất và tinh thần đấu tranh vì sự tiến bộ của nhân loại.</li>
+                        <li>👉 <em>Ý nghĩa:</em> Xung đột khẳng định chiến thắng tinh thần thuộc về Prô-mê-tê, ca ngợi lý tưởng nhân văn vượt lên bạo lực tàn bạo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Essay 2 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-5 rounded-r-xl space-y-3">
+                <h3 class="font-bold text-slate-900 text-base md:text-lg">
+                    Bài 2: Tính toán chỉ số nghệ thuật bi kịch trong lời thoại Prô-mê-tê.
+                </h3>
+                <p class="text-gray-700 text-sm">
+                    Giả sử trong đoạn trích có \(N = 40\) dòng thơ đối thoại. Trong đó có \(n_1 = 15\) dòng bộc lộ nỗi đau khổ thể xác và \(n_2 = 25\) dòng khẳng định ý chí quật cường. Hãy tính tỉ lệ % thể hiện tinh thần kiên cường và viết phản ứng cân bằng biểu tượng:
+                    $$\text{Bạo quyền} \xrightleftharpoons{} \text{Trí tuệ \& Ý chí}$$
+                </p>
+                <button onclick="toggleAnswer('essay-2')" class="btn-custom px-4 py-2 rounded shadow text-sm">
+                    Xem lời giải
+                </button>
+                <div id="essay-2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 mt-3 text-sm leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong><br>
+                    - Tỉ lệ phần trăm dòng thơ thể hiện ý chí quật cường là:
+                    $$P = \left( \frac{n_2}{N} \right) \times 100\% = \left( \frac{25}{40} \right) \times 100\% = 62.5\%$$
+                    - Nhận xét: Mặc dù bị trừng phạt tàn khốc, phần lớn lời thoại (\(62.5\%\)) vẫn hướng về sự kiên định và khẳng định chính nghĩa.
+                    <br><br>
+                    - Cân bằng trạng thái xung đột kịch bằng công thức toán-hóa học:
+                    $$\text{Bạo quyền (Dớt)} \xrightleftharpoons{\text{Sức mạnh vs Trí tuệ}} \text{Bản lĩnh (Prô-mê-tê)}$$
+                </div>
+            </div>
+
+            <!-- Essay 3 -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-5 rounded-r-xl space-y-3">
+                <h3 class="font-bold text-slate-900 text-base md:text-lg">
+                    Bài 3: Liên hệ thực tiễn và rút ra bài học cho bản thân.
+                </h3>
+                <p class="text-gray-700 text-sm">
+                    Từ tấm gương hy sinh của Prô-mê-tê, em rút ra bài học gì về trách nhiệm của cá nhân đối với cộng đồng trong cuộc sống hiện đại?
+                </p>
+                <button onclick="toggleAnswer('essay-3')" class="btn-custom px-4 py-2 rounded shadow text-sm">
+                    Xem lời giải
+                </button>
+                <div id="essay-3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 mt-3 text-sm leading-relaxed">
+                    <strong>Lời giải chi tiết:</strong><br>
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li><strong>Dũng cảm bảo vệ lẽ phải:</strong> Sẵn sàng đứng lên chống lại cái xấu, cái tàn ác và bất công trong xã hội.</li>
+                        <li><strong>Tinh thần cống hiến:</strong> Biết sống vì người khác, chia sẻ tri thức và ánh sáng sáng tạo đến cộng đồng xung quanh.</li>
+                        <li><strong>Bản lĩnh trước thử thách:</strong> Giữ vững niềm tin và phẩm giá cá nhân ngay cả khi gặp phải gian khổ hay nghịch cảnh.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-slate-800 text-gray-300 text-center py-4 rounded-xl shadow-inner text-sm font-medium">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Hàm Toggle Ẩn/Hiện Lời Giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Hàm Kiểm Tra Đáp Án Trắc Nghiệm "Ai Là Triệu Phú"
+        function checkQuiz() {
+            const correctAnswers = {
+                q1: "B",
+                q2: "C",
+                q3: "C",
+                q4: "A",
+                q5: "B",
+                q6: "B",
+                q7: "C",
+                q8: "B",
+                q9: "B",
+                q10: "A"
+            };
+
+            const explanations = {
+                q1: "Ét-sin là nhà soạn kịch nổi tiếng người Hy Lạp cổ đại, được mệnh danh là 'cha đẻ của bi kịch Hy Lạp'.",
+                q2: "Prô-mê-tê bị đóng đinh xiềng trên đỉnh núi Cô-ca-dơ và bị diều hâu ngày đêm moi gan.",
+                q3: "Nhạc trưởng (đại diện cho tập thể) là người đối thoại và lắng nghe lời giãi bày của Prô-mê-tê.",
+                q4: "Prô-mê-tê vạch trần: 'Đấy cái tệ hại vốn đi đôi cùng bạo ngược / Là thiếu lòng tin ở cả bạn bè'.",
+                q5: "Prô-mê-tê khẳng định nhờ mưu mẹo và trí tuệ chứ không phải bạo lực mà Dớt chiếm được ngai vàng.",
+                q6: "Thần Dớt 'toan hủy diệt giống người / Để sinh ra một giống mới lên thay'.",
+                q7: "Prô-mê-tê tự hào: 'Không ai ngoài ta dám cưỡng lại điều hắn ta dự định / Một mình ta dám đứng lên can đảm...'",
+                q8: "Tác-ta (Tartare) là địa ngục đen ngòm thăm thẳm đang giam giữ Crô-nốt.",
+                q9: "Prô-mê-tê chịu đày đọa 'Vì thương xót trần gian như thể ruột rà'.",
+                q10: "Lời thoại bộc lộ nỗi đau chua xót nhưng tràn đầy lòng tự hào, kiên cường và khí phách đĩnh đạc."
+            };
+
+            let score = 0;
+            const total = 10;
+            let resultHtml = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAns = selected ? selected.value : null;
+                const isCorrect = userAns === correctAnswers[qName];
+
+                if (isCorrect) {
+                    score++;
+                    resultHtml += `<div class="text-green-400 font-semibold">✓ Câu ${i}: Đúng! (${correctAnswers[qName]})</div>`;
+                } else {
+                    resultHtml += `<div class="text-red-400 font-semibold">✗ Câu ${i}: Sai! Đáp án đúng là <strong>${correctAnswers[qName]}</strong>. (Bạn chọn: ${userAns ? userAns : "Chưa chọn"})</div>`;
+                }
+                resultHtml += `<div class="text-gray-300 text-xs pl-4 mb-2 italic">💡 Hướng dẫn: ${explanations[qName]}</div>`;
+            }
+
+            const isPerfect = (score === total);
+            const scoreClass = isPerfect ? "text-green-400 border-green-500" : "text-red-400 border-red-500";
+
+            let headerSummary = `
+                <div class="text-center p-4 border-2 ${scoreClass} rounded-lg mb-4 bg-slate-800">
+                    <h3 class="text-2xl font-bold ${isPerfect ? 'text-green-400' : 'text-red-400'}">
+                        ${isPerfect ? '🎉 XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ KẾT QUẢ!' : '⚡ KẾT QUẢ BÀI LÀM'}
+                    </h3>
+                    <p class="text-lg mt-1 font-bold">Điểm số: <span class="text-yellow-400 text-2xl">${score} / ${total}</span> câu đúng (${(score/total)*100}%)</p>
+                </div>
+            `;
+
+            const resultDiv = document.getElementById("quizResult");
+            resultDiv.innerHTML = headerSummary + resultHtml;
+            resultDiv.classList.remove("hidden");
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

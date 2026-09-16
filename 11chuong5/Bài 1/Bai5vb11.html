@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài học Ngữ văn 12 - Sống, hay không sống - đó là vấn đề</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax with Chemistry/Tex support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1f2937;
+        }
+        .sq-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            background-color: #1e3a8a;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 0.6rem;
+            flex-shrink: 0;
+        }
+        .circle-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.8rem;
+            height: 1.8rem;
+            background-color: #0284C7;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        .btn-accent {
+            background-color: #33FF33;
+            color: #000000;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-accent:hover {
+            background-color: #2be02b;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+        .section-header {
+            border-bottom: 4px solid #1e3a8a;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #cbd5e0;
+        }
+        th {
+            background-color: #e2e8f0;
+            text-align: center;
+            padding: 10px;
+            font-weight: 600;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Millionaire Game Styling */
+        .millionaire-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 3px solid #f59e0b;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .millionaire-option {
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid #38bdf8;
+            color: white;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+        .millionaire-option:hover {
+            background: #0284c7;
+            border-color: #33FF33;
+            color: #ffffff;
+        }
+        .millionaire-option.selected {
+            background: #eab308 !important;
+            color: #000000 !important;
+            border-color: #ffffff !important;
+        }
+        .millionaire-option.correct {
+            background: #22c55e !important;
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+        }
+        .millionaire-option.wrong {
+            background: #ef4444 !important;
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body class="py-8 px-3 md:px-6">
+
+    <!-- MASTER CONTAINER DIV -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK (Colors #1e3a8a & #0284C7) -->
+        <div class="rounded-[12px] overflow-hidden shadow-md text-white border border-gray-200">
+            <!-- Chapter Name Block (#1e3a8a) -->
+            <div class="p-4 text-center text-base md:text-lg font-bold uppercase tracking-wide" style="background-color: #1e3a8a;">
+                CHƯƠNG: NHÂN VẬT VÀ XUNG ĐỘT TRONG BI KỊCH
+            </div>
+            <!-- Thin Divider Line -->
+            <div class="h-[1px] bg-white opacity-40"></div>
+            <!-- Lesson Name Block (#0284C7) -->
+            <div class="p-6 text-center text-2xl md:text-3xl font-extrabold uppercase tracking-wider" style="background-color: #0284C7;">
+                SỐNG, HAY KHÔNG SỐNG – ĐÓ LÀ VẤN ĐỀ
+                <div class="text-sm md:text-base font-normal lowercase italic mt-2 text-blue-100">
+                    (Trích <span class="capitalize font-semibold">Hăm-lét – Hamlet</span> - Uy-li-am Sếch-xpia)
+                </div>
+            </div>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="bg-white border border-gray-800 rounded-[12px] p-5 shadow-sm">
+            <div class="flex items-start gap-3">
+                <i class="fa-solid fa-quote-left text-2xl text-blue-800 mt-1"></i>
+                <p class="italic text-gray-800 text-base md:text-lg leading-relaxed">
+                    "Theo bạn, việc ý thức về tình trạng bi đát của hoàn cảnh có khi nào ngăn trở con người hành động quyết đoán trong cuộc đời?"
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION I: TRI THỨC NGỮ VĂN CƠ BẢN -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-5">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-gray-900 flex items-center">
+                <span class="sq-badge">I</span> TRI THỨC NGỮ VĂN CƠ BẢN
+            </h2>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="circle-badge">1</span> Xung đột trong bi kịch
+                </h3>
+                <div class="bg-blue-50 border-l-4 border-blue-800 p-4 rounded-r-lg text-gray-800 leading-relaxed">
+                    <p class="font-medium text-blue-900 mb-1"><i class="fa-solid fa-bookmark mr-2"></i>Khái niệm xung đột bi kịch:</p>
+                    <p>
+                        <strong>Xung đột trong bi kịch</strong> là những mâu thuẫn gay gắt, căng thẳng giữa hành động tự do của nhân vật có nhân cách mạnh mẽ với các thế lực tất yếu khách quan (như định mệnh, bản tính tự nhiên, thực tại xã hội hay định kiến thời đại).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="circle-badge">2</span> Hiệu ứng thanh lọc của bi kịch
+                </h3>
+                <div class="bg-emerald-50 border-l-4 border-emerald-600 p-4 rounded-r-lg text-gray-800 leading-relaxed">
+                    <p class="font-medium text-emerald-900 mb-1"><i class="fa-solid fa-sparkles mr-2"></i>Khái niệm hiệu ứng thanh lọc (Catharsis):</p>
+                    <p>
+                        Khi dõi theo hành động kịch căng thẳng và kết cục bi thảm, khán giả trải nghiệm sự thương cảm, xót xa và nỗi sợ hãi. Qua đó, tâm hồn con người được thanh lọc, trở nên hài hòa, thăng hoa và biết hướng tới cái cao cả. Triết gia A-rít-xtốt (Aristotle) gọi đây là <strong>hiệu ứng thanh lọc của bi kịch</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION II: TÁC GIẢ VÀ TÓM TẮT TÁC PHẨM -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-5">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-gray-900 flex items-center">
+                <span class="sq-badge">II</span> TÁC GIẢ VÀ TÓM TẮT VỞ KỊCH HĂM-LÉT
+            </h2>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="circle-badge">1</span> Tác giả Uy-li-am Sếch-xpia (William Shakespeare)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                    <div class="md:col-span-2 space-y-2 text-gray-700 leading-relaxed">
+                        <p>• <strong>Cuộc đời:</strong> Uy-li-am Sếch-xpia (1564–1616) là nhà soạn kịch, nhà thơ vĩ đại người Anh thời Phục hưng.</p>
+                        <p>• <strong>Sự nghiệp:</strong> Ông để lại di sản đồ sộ gồm 37 vở kịch, 4 bản trường ca và 154 bài thơ xôn-nê (sonnet).</p>
+                        <p>• <strong>Tác phẩm tiêu biểu:</strong> <em>Rô-mê-ô và Giu-li-ét, Vua Li-ơ, Ô-ten-lô, Mắc-bét</em>, và kiệt tác <em>Hăm-lét</em>.</p>
+                    </div>
+                    <!-- Image Placeholder h1.png -->
+                    <div class="flex flex-col items-center justify-center p-3 border border-gray-300 rounded-lg bg-gray-50">
+                        <img src="h1.png" alt="Chân dung Uy-li-am Sếch-xpia" class="max-h-48 object-contain rounded mb-2" onerror="this.src='https://placehold.co/200x250/e2e8f0/1e3a8a?text=Chân+dung+Shakespeare+(h1.png)';">
+                        <span class="text-xs font-semibold text-gray-600 text-center">Hình 1: Chân dung Uy-li-am Sếch-xpia (h1.png)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="circle-badge">2</span> Tóm tắt bi kịch Hăm-lét
+                </h3>
+                <div class="bg-amber-50 border border-amber-300 p-4 rounded-lg space-y-2 text-gray-800 text-sm md:text-base leading-relaxed">
+                    <p><strong>• Hồi I – II:</strong> Thái tử Hăm-lét nhận tin vua cha đột ngột qua đời. Chú ruột Clô-đi-út lên ngôi và tái giá với mẹ chàng. Hồn ma vua cha hiện về báo tin bị Clô-đi-út mưu sát. Hăm-lét giả điên để điều tra sự thật.</p>
+                    <p><strong>• Hồi III:</strong> Hăm-lét dàn dựng dựng vở kịch "Cái bẫy chuột" để thử lòng chú. Sau đó trong lúc tranh luận với mẹ, chàng đâm chết Pô-lô-ni-út vì tưởng lầm là nhà vua đang rình mò.</p>
+                    <p><strong>• Hồi IV – V:</strong> Vua gửi Hăm-lét sang Anh nhằm mưu sát chàng nhưng bất thành. Trở về Đan Mạch, Hăm-lét chấp nhận cuộc đấu kiếm do Clô-đi-út gài bẫy cùng La-ơ-tơ. Kết cục, cả Hoàng hậu, La-ơ-tơ, Clô-đi-út và Hăm-lét đều thiệt mạng.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III: KHÁM PHÁ ĐOẠN TRÍCH CẢNH 1 - HỒI III -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-5">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-gray-900 flex items-center">
+                <span class="sq-badge">III</span> PHÂN TÍCH NỘI DUNG ĐOẠN TRÍCH
+            </h2>
+
+            <!-- Subsection 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="circle-badge">1</span> Tình thế kịch và cuộc điều tra của nhà vua
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Nhà vua Clô-đi-út và Pô-lô-ni-út sắp đặt cuộc gặp gỡ giữa Hăm-lét và Ô-phê-li-a nhằm nấp sau rèm quan sát, đánh giá xem tình trạng tâm trí của thái tử là điên thật hay điên giả.
+                </p>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="circle-badge">2</span> Độc thoại nội tâm: "Sống, hay không sống – đó là vấn đề"
+                </h3>
+                <div class="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                    <h4 class="font-bold text-indigo-900">Trọng tâm ý nghĩa lời độc thoại:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-800">
+                        <li><strong>"Sống":</strong> Tiếp tục chịu đựng những bất công, tai họa và cam chịu thực tại nghiệt ngã.</li>
+                        <li><strong>"Không sống":</strong> Chọn cái chết để giải thoát hoặc dũng cảm vùng lên chiến đấu chống lại sóng gió số phận.</li>
+                        <li><strong>Trăn trở triết học:</strong> Nỗi sợ hãi thế giới bên kia cái chết làm cho lý trí phân vân, khiến con người do dự không dám hành động quyết đoán.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION IV: CÂU HỎI VÀ HOẠT ĐỘNG TRONG BÀI HỌC -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-gray-900 flex items-center">
+                <span class="sq-badge">IV</span> CÂU HỎI HƯỚNG DẪN VÀ HOẠT ĐỘNG HỌC TẬP
+            </h2>
+
+            <!-- Item with ? icon -->
+            <div class="bg-[rgb(237,242,247)] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-3">
+                <div class="flex items-center gap-2 font-bold text-blue-950 text-base md:text-lg">
+                    <i class="fa-solid fa-circle-question text-xl text-blue-700"></i>
+                    <span>Mục ? (Câu hỏi đọc hiểu 1): Xác định ý nghĩa lời thoại của các nhân vật trước khi Hăm-lét xuất hiện.</span>
+                </div>
+                <button onclick="toggleAnswer('qa1')" class="btn-accent px-4 py-2 rounded-md text-sm">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem câu trả lời
+                </button>
+                <div id="qa1" class="hidden bg-emerald-100 p-4 rounded-md border border-emerald-300 text-gray-800 leading-relaxed mt-2">
+                    <strong>Trả lời:</strong> Các lời thoại cho thấy bầu không khí hoài nghi, căng thẳng bao trùm triều đình. Nhà vua Clô-đi-út lo sợ sự bất ổn của Hăm-lét, trong khi tay chân gài bẫy để dò xét tâm lý chàng.
+                </div>
+            </div>
+
+            <!-- Item with Hand Icon (Hoạt động) -->
+            <div class="bg-[rgb(237,242,247)] border-l-4 border-blue-900 p-4 rounded-r-lg space-y-3">
+                <div class="flex items-center gap-2 font-bold text-blue-950 text-base md:text-lg">
+                    <i class="fa-solid fa-hand-pointer text-xl text-amber-600"></i>
+                    <span>Hoạt động (Nêu vấn đề): Phân tích nguyên nhân làm dấy lên tâm trạng do dự của Hăm-lét.</span>
+                </div>
+                <button onclick="toggleAnswer('act1')" class="btn-accent px-4 py-2 rounded-md text-sm">
+                    <i class="fa-solid fa-gears mr-1"></i> Xem hướng giải quyết
+                </button>
+                <div id="act1" class="hidden bg-emerald-100 p-4 rounded-md border border-emerald-300 text-gray-800 leading-relaxed mt-2">
+                    <strong>Hướng giải quyết:</strong> Sự do dự của Hăm-lét không xuất phát từ tính hèn nhát mà từ ý thức trách nhiệm triết học sâu sắc. Chàng cân nhắc kỹ lưỡng giữa hành động bộc phát và hậu quả đạo đức, ý thức được tính phức tạp của cái chết và cõi vô định.
+                </div>
+            </div>
+
+            <!-- Special Boxes: Em có biết / Em có thể / Lưu ý -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Em có biết -->
+                <div class="bg-purple-50 border border-purple-300 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-purple-900 flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-purple-600"></i> Em có biết
+                    </h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Câu nói <em>"Sống, hay không sống - đó là vấn đề"</em> (To be, or not to be) là một trong những lời độc thoại nổi tiếng nhất trong lịch sử sân khấu thế giới, đại diện cho tư duy triết học thời Phục hưng.
+                    </p>
+                </div>
+
+                <!-- Em có thể -->
+                <div class="bg-cyan-50 border border-cyan-300 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-cyan-900 flex items-center gap-2">
+                        <i class="fa-solid fa-compass text-cyan-600"></i> Em có thể
+                    </h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Rèn luyện năng lực tư duy phản biện, phân tích động cơ và xung đột nội tâm nhân vật khi đối mặt với những quyết định quan trọng trong đời sống.
+                    </p>
+                </div>
+
+                <!-- Lưu ý -->
+                <div class="bg-rose-50 border border-rose-300 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-rose-900 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> Lưu ý
+                    </h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Phân biệt rõ giữa hành động kịch công khai (đối thoại với Ô-phê-li-a) và tiếng nói nội tâm chân thật (độc thoại triết học) của nhân vật Hăm-lét.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION V: TRẮC NGHIỆM AI LÀ TRIỆU PHÚ (10 CÂU) -->
+        <div class="millionaire-box p-6 text-white space-y-6">
+            <div class="text-center space-y-2">
+                <span class="bg-amber-500 text-black font-extrabold px-3 py-1 rounded-full text-xs uppercase tracking-widest">Gameshow</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-amber-400 uppercase tracking-wide">
+                    <i class="fa-solid fa-crown mr-2"></i>AI LÀ TRIỆU PHÚ NGỮ VĂN
+                </h2>
+                <p class="text-xs md:text-sm text-sky-200">Hãy chọn đáp án đúng nhất cho 10 câu hỏi củng cố kiến thức bài học!</p>
+            </div>
+
+            <div id="quiz-container" class="space-y-6">
+                <!-- Quiz questions will be dynamically rendered or laid out -->
+                <form id="quiz-form" class="space-y-6">
+                    
+                    <!-- Q1 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 1: Tác giả của bi kịch Hăm-lét là ai?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q1" value="A" class="hidden"> A. Mô-li-e</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q1" value="B" class="hidden"> B. Uy-li-am Sếch-xpia</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q1" value="C" class="hidden"> C. Sơ-van-tét</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q1" value="D" class="hidden"> D. Schiller</label>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 2: Đoạn trích "Sống, hay không sống – đó là vấn đề" thuộc hồi mấy của tác phẩm?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q2" value="A" class="hidden"> A. Hồi I</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q2" value="B" class="hidden"> B. Hồi II</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q2" value="C" class="hidden"> C. Hồi III</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q2" value="D" class="hidden"> D. Hồi V</label>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 3: Xung đột bi kịch chính trong đoạn trích diễn ra ở đâu?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q3" value="A" class="hidden"> A. Nội tâm nhân vật Hăm-lét</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q3" value="B" class="hidden"> B. Trận chiến giữa Đan Mạch và Na Uy</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q3" value="C" class="hidden"> C. Tranh chấp kinh tế</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q3" value="D" class="hidden"> D. Xung đột giữa học sinh và thầy giáo</label>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 4: Hiệu ứng "Catharsis" trong bi kịch có nghĩa là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q4" value="A" class="hidden"> A. Giải trí hài hước</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q4" value="B" class="hidden"> B. Thanh lọc tâm hồn</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q4" value="C" class="hidden"> C. Gây sợ hãi cực độ</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q4" value="D" class="hidden"> D. Tạo không khí căng thẳng</label>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 5: Nhau nhân vật nào cài cắm Ô-phê-li-a để rình thám thính Hăm-lét?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q5" value="A" class="hidden"> A. Vua Clô-đi-út và Pô-lô-ni-út</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q5" value="B" class="hidden"> B. Hô-ra-si-ô</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q5" value="C" class="hidden"> C. Pho-tin-brát</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q5" value="D" class="hidden"> D. La-ơ-tơ</label>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 6: Câu nói "Sống, hay không sống" thể hiện điều gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q6" value="A" class="hidden"> A. Sự hoang mang nhút nhát</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q6" value="B" class="hidden"> B. Trăn trở triết học về nhân sinh và hành động</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q6" value="C" class="hidden"> C. Lời đe dọa kẻ thù</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q6" value="D" class="hidden"> D. Thất vọng tình yêu</label>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 7: Vì sao Hăm-lét giả điên?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q7" value="A" class="hidden"> A. Vì bị ám ảnh bởi hồn ma</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q7" value="B" class="hidden"> B. Để che mắt kẻ thù và tìm sự thật</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q7" value="C" class="hidden"> C. Vì mất trí thực sự</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q7" value="D" class="hidden"> D. Để trốn tránh trách nhiệm</label>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 8: Vở kịch "Cái bẫy chuột" do Hăm-lét dàn dựng nhằm mục đích gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q8" value="A" class="hidden"> A. Giải trí cho hoàng gia</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q8" value="B" class="hidden"> B. Kiểm chứng tội ác của vua Clô-đi-út</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q8" value="C" class="hidden"> C. Tặng Ô-phê-li-a</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q8" value="D" class="hidden"> D. Tuyên truyền cho dân chúng</label>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 9: Yếu tố nào ngăn cản con người hành động theo nhận thức của Hăm-lét?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q9" value="A" class="hidden"> A. Sự thiếu thốn tiền bạc</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q9" value="B" class="hidden"> B. Nỗi lo sợ những điều bí ẩn sau cái chết</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q9" value="C" class="hidden"> C. Lời khuyên của bạn bè</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q9" value="D" class="hidden"> D. Sự can thiệp của pháp luật</label>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-sky-500/30 space-y-3">
+                        <p class="font-semibold text-amber-300">Câu 10: Tác phẩm kịch Shakespeare thuộc thời kỳ văn hóa nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q10" value="A" class="hidden"> A. Cổ điển Hy Lạp</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q10" value="B" class="hidden"> B. Văn hóa Phục hưng</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q10" value="C" class="hidden"> C. Văn học Trung đại</label>
+                            <label class="millionaire-option p-3 block"><input type="radio" name="q10" value="D" class="hidden"> D. Văn học Hiện đại</label>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="text-center pt-4">
+                        <button type="button" onclick="checkQuiz()" class="bg-blue-950 text-white hover:bg-black font-bold uppercase tracking-wider px-8 py-3 rounded-full border border-sky-400 shadow-lg transition">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>NỘP BÀI
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- RESULT DISPLAY -->
+                <div id="quiz-result" class="hidden p-5 rounded-xl text-center font-bold text-lg"></div>
+            </div>
+        </div>
+
+        <!-- SECTION VI: BÀI TẬP TỰ LUẬN CÓ LỜI GIẢI CHI TIẾT -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold text-gray-900 flex items-center">
+                <span class="sq-badge">VI</span> BÀI TẬP TỰ LUẬN TÍNH TOÁN & VẬN DỤNG
+            </h2>
+
+            <!-- Ex 1 -->
+            <div class="border border-gray-200 rounded-lg p-4 space-y-3 bg-gray-50">
+                <h3 class="font-bold text-gray-800 text-base md:text-lg">
+                    Bài tập 1 (Phân tích nhân vật): Vì sao có thể nói nỗi trăn trở của Hăm-lét mang tính đại diện cho con người Phục hưng?
+                </h3>
+                <button onclick="toggleAnswer('sol1')" class="btn-accent px-4 py-2 rounded-md text-sm">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem lời giải chi tiết
+                </button>
+                <div id="sol1" class="hidden bg-emerald-50 p-4 rounded-md border border-emerald-300 text-gray-800 leading-relaxed text-sm md:text-base">
+                    <strong>Lời giải chi tiết:</strong> Con người Phục hưng đề cao trí tuệ, tự do cá nhân và khát vọng vươn lên. Hăm-lét không chấp nhận hành động trả thù mù quáng mà luôn suy xét ý nghĩa tồn tại, ranh giới giữa cái thiện - cái ác và trách nhiệm đối với xã hội.
+                </div>
+            </div>
+
+            <!-- Ex 2 -->
+            <div class="border border-gray-200 rounded-lg p-4 space-y-3 bg-gray-50">
+                <h3 class="font-bold text-gray-800 text-base md:text-lg">
+                    Bài tập 2 (So sánh nghệ thuật): Hãy so sánh nghệ thuật độc thoại và đối thoại trong cảnh kịch này.
+                </h3>
+                <button onclick="toggleAnswer('sol2')" class="btn-accent px-4 py-2 rounded-md text-sm">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem lời giải chi tiết
+                </button>
+                <div id="sol2" class="hidden bg-emerald-50 p-4 rounded-md border border-emerald-300 text-gray-800 leading-relaxed text-sm md:text-base">
+                    <strong>Lời giải chi tiết:</strong>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Độc thoại:</strong> Bộc lộ chân thật nội tâm, suy tư triết học sâu sắc của Hăm-lét khi chàng ở một mình.</li>
+                        <li><strong>Đối thoại:</strong> Mang tính đối phó, sắc bén, ẩn chứa sự châm biếm nhằm che giấu mục đích thực sự trước kẻ thù và Ô-phê-li-a.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ex 3 -->
+            <div class="border border-gray-200 rounded-lg p-4 space-y-3 bg-gray-50">
+                <h3 class="font-bold text-gray-800 text-base md:text-lg">
+                    Bài tập 3 (Ứng dụng công thức / Lý thuyết kịch): Trong lý thuyết kịch, biểu thức cường độ xung đột kịch có thể biểu diễn tương đối dưới dạng tỉ lệ:
+                    \( C = \frac{X}{H} \) (với \(X\) là mức độ mâu thuẫn, \(H\) là khả năng hòa giải). Hãy giải thích sự biến thiên của \(C\) khi \(H \to 0\).
+                </h3>
+                <button onclick="toggleAnswer('sol3')" class="btn-accent px-4 py-2 rounded-md text-sm">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem lời giải chi tiết
+                </button>
+                <div id="sol3" class="hidden bg-emerald-50 p-4 rounded-md border border-emerald-300 text-gray-800 leading-relaxed text-sm md:text-base">
+                    <strong>Lời giải chi tiết:</strong>
+                     Khi khả năng hòa giải \(H\) tiến dần về 0 (\(H \to 0\)), giá trị cường độ xung đột kịch \(C = \frac{X}{H}\) sẽ tiến tới vô cực (\(C \to \infty\)). Điều này phản ánh quy luật bi kịch: khi mâu thuẫn không thể điều hòa, xung đột đạt tới đỉnh điểm căng thẳng và bắt buộc phải dẫn đến kết cục bi thảm.
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="text-center text-gray-600 text-xs md:text-sm font-semibold border-t border-gray-300 pt-4 pb-8">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Toggle Answer function
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Handle Option Selection Styling for Millionaire Game
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = document.querySelectorAll('.millionaire-option');
+            options.forEach(opt => {
+                opt.addEventListener('click', function() {
+                    const radio = this.querySelector('input[type="radio"]');
+                    if (radio) {
+                        radio.checked = true;
+                        const name = radio.name;
+                        document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+                            r.closest('.millionaire-option').classList.remove('selected');
+                        });
+                        this.classList.add('selected');
+                    }
+                });
+            });
+        });
+
+        // Check Quiz Function
+        function checkQuiz() {
+            const answers = {
+                q1: 'B',
+                q2: 'C',
+                q3: 'A',
+                q4: 'B',
+                q5: 'A',
+                q6: 'B',
+                q7: 'B',
+                q8: 'B',
+                q9: 'B',
+                q10: 'B'
+            };
+
+            let score = 0;
+            let total = 10;
+            let form = document.getElementById('quiz-form');
+
+            for (let i = 1; i <= total; i++) {
+                let qName = 'q' + i;
+                let selected = form.querySelector(`input[name="${qName}"]:checked`);
+                let correctVal = answers[qName];
+
+                let allOptions = form.querySelectorAll(`input[name="${qName}"]`);
+                allOptions.forEach(opt => {
+                    let parent = opt.closest('.millionaire-option');
+                    parent.classList.remove('correct', 'wrong');
+                    if (opt.value === correctVal) {
+                        parent.classList.add('correct');
+                    } else if (selected && opt === selected && selected.value !== correctVal) {
+                        parent.classList.add('wrong');
+                    }
+                });
+
+                if (selected && selected.value === correctVal) {
+                    score++;
+                }
+            }
+
+            let resultDiv = document.getElementById('quiz-result');
+            resultDiv.classList.remove('hidden', 'bg-emerald-800', 'bg-rose-800', 'text-white');
+
+            if (score === total) {
+                resultDiv.classList.add('bg-emerald-800', 'text-white');
+                resultDiv.innerHTML = `<i class="fa-solid fa-trophy text-amber-300 mr-2 text-2xl"></i> XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ NGỮ VĂN KHÔNG ĐỘI TRỜI CHUNG! <br> Score: ${score}/${total} (100%)`;
+            } else {
+                resultDiv.classList.add('bg-rose-800', 'text-white');
+                resultDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-2 text-2xl"></i> BẠN ĐẠT ${score}/${total} CÂU ĐÚNG. <br><span class="text-sm font-normal">Các câu đúng đã được đánh dấu màu xanh lá. Hãy ôn tập lại những nội dung chưa chính xác nhé!</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
