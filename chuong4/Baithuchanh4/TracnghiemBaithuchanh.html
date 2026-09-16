@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức Văn học - Ra-ma buộc tội</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Support -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            background-color: #663333;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-dark-card {
+            background-color: #121824;
+        }
+        .bg-card-inner {
+            background-color: #1a2234;
+        }
+        .border-custom {
+            border-color: #2e3952;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1a2234;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Component -->
+    <header class="bg-[#121824] border-b border-[#2e3952] px-4 py-3 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-amber-600/20 text-amber-400 rounded-lg">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold text-cream">ÔN LUYỆN CỦNG CỐ KIẾN THỨC VĂN HỌC</h1>
+                    <p class="text-xs text-gray-400">Bài: Ra-ma buộc tội (Trích sử thi Ra-ma-ya-na - Van-mi-ki)</p>
+                </div>
+            </div>
+            
+            <div id="mode-badge" class="hidden items-center gap-2 bg-blue-900/40 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold border border-blue-700/50">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                <span id="mode-text">Chế độ LUYỆN TẬP</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6 flex flex-col justify-center">
+
+        <!-- SCREEN 1: BẮT ĐẦU VÀ CHỌN CHẾ ĐỘ -->
+        <div id="screen-welcome" class="space-y-6 my-auto">
+            <div class="text-center space-y-3">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 mb-2">
+                    <i class="fa-solid fa-check text-2xl"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-cream tracking-wide">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-bold text-amber-300">20 câu hỏi</span> bám sát nội dung văn bản <span class="font-bold text-amber-300">Ra-ma buộc tội</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- Stats grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="bg-dark-card border border-custom p-4 rounded-xl text-center">
+                    <span class="text-xs text-blue-400 font-bold uppercase tracking-wider block mb-1">Mức Biết (8 câu)</span>
+                    <p class="text-xs text-gray-400">Kiểm tra kiến thức cốt truyện, nhân vật và sự việc có trong văn bản.</p>
+                </div>
+                <div class="bg-dark-card border border-custom p-4 rounded-xl text-center">
+                    <span class="text-xs text-green-400 font-bold uppercase tracking-wider block mb-1">Mức Hiểu (7 câu)</span>
+                    <p class="text-xs text-gray-400">Giải thích nguyên nhân, tâm trạng, xung đột diễn biến nghệ thuật.</p>
+                </div>
+                <div class="bg-dark-card border border-custom p-4 rounded-xl text-center">
+                    <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block mb-1">Vận Dụng (3 câu)</span>
+                    <p class="text-xs text-gray-400">Phân tích sâu hình tượng nhân vật, tư tưởng và bài học lịch sử.</p>
+                </div>
+                <div class="bg-dark-card border border-custom p-4 rounded-xl text-center">
+                    <span class="text-xs text-purple-400 font-bold uppercase tracking-wider block mb-1">VD Cao (2 câu)</span>
+                    <p class="text-xs text-gray-400">Lồng ghép đánh giá nghệ thuật phức tạp và giá trị sử thi Ấn Độ.</p>
+                </div>
+            </div>
+
+            <!-- Mode selection cards -->
+            <div class="max-w-4xl mx-auto space-y-4 pt-4">
+                <h3 class="text-center text-xs font-bold tracking-widest text-gray-400 uppercase">Vui lòng chọn hình thức kiểm tra:</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Option 1: Practice mode -->
+                    <div class="bg-dark-card border border-custom hover:border-blue-500 transition duration-300 rounded-xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-cream">1. Chế độ Luyện Tập</h4>
+                                <span class="bg-blue-900/60 text-blue-300 text-xs px-2.5 py-1 rounded-full font-medium">Không giới hạn</span>
+                            </div>
+                            <p class="text-xs text-gray-400">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-sm text-gray-300 pt-2">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <button onclick="startTest('practice')" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-graduation-cap"></i> Bắt đầu Luyện Tập
+                        </button>
+                    </div>
+
+                    <!-- Option 2: Timed mode -->
+                    <div class="bg-dark-card border border-custom hover:border-amber-500 transition duration-300 rounded-xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-cream">2. Chế độ Tính Giờ</h4>
+                                <span class="bg-amber-900/60 text-amber-300 text-xs px-2.5 py-1 rounded-full font-medium">20 Phút</span>
+                            </div>
+                            <p class="text-xs text-gray-400">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-sm text-gray-300 pt-2">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <button onclick="startTest('timed')" class="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-stopwatch"></i> Bắt đầu Tính Giờ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: ĐANG LÀM BÀI -->
+        <div id="screen-quiz" class="hidden grid grid-cols-1 lg:grid-cols-4 gap-6">
+            
+            <!-- Left Sidebar (Question Navigation) -->
+            <div class="lg:col-span-1 bg-dark-card border border-custom rounded-xl p-4 flex flex-col justify-between space-y-4">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-custom pb-3">
+                        <span class="text-xs font-bold text-gray-400 uppercase">Danh sách câu hỏi</span>
+                        <span id="answered-count" class="bg-blue-900/50 text-blue-300 text-xs px-2 py-0.5 rounded font-mono">0 / 20 đã làm</span>
+                    </div>
+
+                    <!-- Timer Block (Shown if timed mode) -->
+                    <div id="timer-box" class="hidden bg-amber-950/40 border border-amber-600/30 rounded-lg p-3 text-center">
+                        <span class="text-xs text-amber-300 uppercase tracking-widest block font-bold">Thời gian còn lại</span>
+                        <span id="timer-display" class="text-2xl font-mono font-bold text-amber-400">20:00</span>
+                    </div>
+
+                    <!-- Question Grid Navigation -->
+                    <div id="nav-grid" class="grid grid-cols-5 gap-2 max-h-64 overflow-y-auto custom-scrollbar p-1">
+                        <!-- JS populated nav buttons -->
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="text-xs space-y-1.5 pt-2 text-gray-400 border-t border-custom">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded bg-gray-700 border border-gray-600 inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded bg-amber-600 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded bg-blue-600 inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="finishQuiz()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition duration-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Nộp Bài & Kết Thúc
+                </button>
+            </div>
+
+            <!-- Right Area (Current Question View) -->
+            <div class="lg:col-span-3 bg-dark-card border border-custom rounded-xl p-6 flex flex-col justify-between space-y-6">
+                <div class="space-y-6">
+                    <!-- Question Header & Level -->
+                    <div class="flex justify-between items-center border-b border-custom pb-4">
+                        <div class="flex items-center space-x-3">
+                            <span id="q-number" class="text-xl font-bold text-cream">Câu 1 / 20</span>
+                            <span id="q-level" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-900/60 text-blue-300 border border-blue-700">Mức Biết</span>
+                        </div>
+                    </div>
+
+                    <!-- Question Text -->
+                    <div class="space-y-4">
+                        <h3 id="q-text" class="text-lg md:text-xl font-semibold leading-relaxed text-gray-100">
+                            <!-- Question Content -->
+                        </h3>
+                    </div>
+
+                    <!-- Options List -->
+                    <div id="options-container" class="space-y-3">
+                        <!-- JS Options rendered here -->
+                    </div>
+                </div>
+
+                <!-- Footer Control Buttons -->
+                <div class="flex justify-between items-center pt-4 border-t border-custom">
+                    <button id="btn-prev" onclick="prevQuestion()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg text-sm font-medium transition flex items-center gap-2">
+                        <i class="fa-solid fa-chevron-left"></i> Câu Trước
+                    </button>
+                    
+                    <button onclick="clearCurrentSelection()" class="text-xs text-gray-400 hover:text-amber-400 underline">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="btn-next" onclick="nextQuestion()" class="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-bold transition flex items-center gap-2">
+                        Câu Tiếp <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SCREEN 3: KẾT THÚC & XEM LỜI GIẢI -->
+        <div id="screen-result" class="hidden space-y-8">
+            
+            <!-- Result Overview Card -->
+            <div class="bg-dark-card border border-custom rounded-xl p-6 md:p-8 text-center max-w-3xl mx-auto space-y-6">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 mb-2">
+                    <i class="fa-solid fa-trophy text-3xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-cream">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-lbl" class="text-xs text-gray-400">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 border-y border-custom py-4">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Điểm số</span>
+                        <span id="res-score" class="text-3xl font-bold text-amber-400">0.0 <span class="text-xs text-gray-400 font-normal">/ 10.0</span></span>
+                    </div>
+                    <div>
+                        <span class="text-xs text-gray-400 block">Số câu đúng</span>
+                        <span id="res-correct" class="text-3xl font-bold text-emerald-400">0 <span class="text-xs text-gray-400 font-normal">/ 20 câu</span></span>
+                    </div>
+                    <div>
+                        <span class="text-xs text-gray-400 block">Thời gian làm bài</span>
+                        <span id="res-time" class="text-xl md:text-2xl font-bold text-blue-400 font-mono">00:00</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback -->
+                <div class="bg-card-inner border border-amber-500/30 rounded-lg p-4 text-left space-y-2">
+                    <div class="flex items-center gap-2 text-amber-400 text-sm font-bold">
+                        <i class="fa-solid fa-comment-dots"></i> Đánh giá & Nhận xét từ Giáo viên:
+                    </div>
+                    <p id="teacher-eval" class="text-sm text-gray-200 leading-relaxed italic">
+                        <!-- Dynamic Teacher Feedback -->
+                    </p>
+                </div>
+
+                <!-- Control actions -->
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button onclick="resetApp()" class="px-6 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-rotate-right"></i> Làm lại bài kiểm tra
+                    </button>
+                    <a href="#detailed-solutions" class="px-6 py-2.5 bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold rounded-lg transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-list-check"></i> Xem đáp án & Lời giải
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions Section -->
+            <div id="detailed-solutions" class="space-y-6 max-w-4xl mx-auto pt-6">
+                <div class="flex justify-between items-center border-b border-custom pb-3">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-amber-400"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-gray-400 font-mono">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutions-list" class="space-y-6">
+                    <!-- JS populated solution cards -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        // QUESTION BANK DATA (Strictly based on text file "Ra-ma buộc tội" & strict level distribution)
+        // 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao
+        const rawQuestions = [
+            // --- MỨC BIẾT (8 Câu: 1 - 8) ---
+            {
+                id: 1,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Nhân vật Gia-na-ki (Xi-ta) trong đoạn trích là con của thần nào?",
+                options: [
+                    "A. Thần Lửa A-nhi (Agni)",
+                    "B. Thần Sáng tạo Bra-ma (Brahma)",
+                    "C. Nữ thần Đất Mẹ Pri-thi-vi (Prithvi)",
+                    "D. Đạo sĩ A-ga-xti-a (Agaxtia)"
+                ],
+                answer: 2,
+                explanation: "Căn cứ chú thích SGK: Xi-ta là con của nữ thần Đất Mẹ Pri-thi-vi (Prithvi), được vua Gia-na-ka tìm thấy trên luống cày."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Kẻ đã thực hiện hành vi bắt cóc phu nhân Gia-na-ki đem về đảo Lan-ka là ai?",
+                options: [
+                    "A. Vi-phi-sa-na (Viphisana)",
+                    "B. Ra-va-na (Ravana)",
+                    "C. Ha-nu-man (Hanuman)",
+                    "D. Lắc-ma-na (Laksmana)"
+                ],
+                answer: 1,
+                explanation: "Căn cứ đoạn trích: Ra-va-na, gã Rắc-sa-xa tâm địa xảo trá, là kẻ đã bắt cóc Xi-ta đưa về đảo Lan-ka."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Vị tướng tài ba dũng cảm của loài khỉ Va-na-ra đã vượt biển cả và đốt phá đảo Lan-ka tên là gì?",
+                options: [
+                    "A. Xu-gri-va (Xugriva)",
+                    "B. Bha-ra-ta (Bharata)",
+                    "C. Ha-nu-man (Hanuman)",
+                    "D. Xa-tru-na (Xatruna)"
+                ],
+                answer: 2,
+                explanation: "Văn bản ghi rõ: 'chàng Ha-nu-man hảo hán vượt biển cả đã kết thúc thành công; việc đốt phá Lan-ka và những kì tích khác đã đem lại vinh quang'."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Trong đoạn trích, ai là người đã trực tiếp chuẩn bị giàn hoả thiêu cho Xi-ta theo lời yêu cầu của nàng?",
+                options: [
+                    "A. Ra-ma (Rama)",
+                    "B. Lắc-ma-na (Laksmana)",
+                    "C. Vi-phi-sa-na (Viphisana)",
+                    "D. Ha-nu-man (Hanuman)"
+                ],
+                answer: 1,
+                explanation: "Văn bản nêu rõ: Xi-ta nói với Lắc-ma-na chuẩn bị giàn hỏa thiêu. Lắc-ma-na cố nén cơn giận, chuẩn bị giàn hỏa thiêu cho Xi-ta."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Khi bước vào ngọn lửa thiêng để chứng minh sự trinh tiết, Xi-ta đã cầu xin sự giúp đỡ và bảo vệ từ vị thần nào?",
+                options: [
+                    "A. Thần Lửa A-nhi (Agni)",
+                    "B. Thần Mặt Trời",
+                    "C. Thần Sáng tạo Bra-ma",
+                    "D. Thần Chết"
+                ],
+                answer: 0,
+                explanation: "Xi-ta khấn nguyện trước giàn lửa: 'Nếu con trước sau một lòng một dạ với Ra-ma... xin thần A-nhi phù hộ cho con'."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Vua của loài khỉ Va-na-ra sống ở núi rừng trên cao nguyên Đê-can được nhắc đến trong đoạn trích là:",
+                options: [
+                    "A. Vi-phi-sa-na",
+                    "B. Xu-gri-va",
+                    "C. In-van",
+                    "D. Va-ta-pi"
+                ],
+                answer: 1,
+                explanation: "Theo phần cước chú (2) trang 123 SGK: Xu-gri-va là vua của loài khỉ Va-na-ra sống ở núi rừng cao nguyên Đê-can."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Em trai của Ra-va-na nhưng đã từ bỏ anh mình để ủng hộ đại nghĩa của Ra-ma là ai?",
+                options: [
+                    "A. Lắc-ma-na",
+                    "B. Vi-phi-sa-na",
+                    "C. Xa-tru-na",
+                    "D. Bha-ra-ta"
+                ],
+                answer: 1,
+                explanation: "Theo cước chú và văn bản: Vi-phi-sa-na là em trai Ra-va-na, đã từ bỏ anh mình sang chiến đấu ủng hộ phe Ra-ma."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelCode: "biêt",
+                question: "Hình ảnh nào được người kể chuyện dùng để so sánh với sự đau đớn nghẹt thở của Gia-na-ki khi nghe lời tố cáo của Ra-ma?",
+                options: [
+                    "A. Ánh sáng đối với người bị đau mắt",
+                    "B. Cây dây leo bị vòi voi quật nát",
+                    "C. Thiên thần bị đuổi khỏi trời",
+                    "D. Lễ vật trong lễ tế sinh"
+                ],
+                answer: 1,
+                explanation: "Văn bản miêu tả: 'Nghe những lời giận dữ đó của Ra-ma, Gia-na-ki đau đớn đến nghẹt thở, như một cây dây leo bị vòi voi quật nát'."
+            },
+
+            // --- MỨC HIỂU (7 Câu: 9 - 15) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Lý do chính yếu nào khiến Ra-ma tuyên bố gạt bỏ tình cảm cá nhân và ruồng rẫy Xi-ta trước mặt đông đủ mọi người?",
+                options: [
+                    "A. Vì Ra-ma đã hết yêu thương Xi-ta và muốn cưới người khác.",
+                    "B. Vì lo sợ tai tiếng, bảo vệ uy tín, danh dự và danh tiếng của dòng họ lừng lẫy.",
+                    "C. Vì Ra-ma nghe lời xúi giục của em trai Vi-phi-sa-na.",
+                    "D. Vì Ra-ma muốn thử thách sức chịu đựng của quân sĩ Va-na-ra."
+                ],
+                answer: 1,
+                explanation: "Ra-ma khẳng định: 'vì sợ tai tiếng... Ta làm điều đó vì nhân phẩm của ta, để xóa bỏ vết ô nhục, để bảo vệ uy tín và danh dự của dòng họ lừng lẫy tiếng tăm của ta'."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Trong đáp lời Ra-ma, Xi-ta đã phân biệt sự khác nhau giữa điều gì để khẳng định lòng trinh tiết của mình?",
+                options: [
+                    "A. Giữa lời nói bên ngoài và hành động bên trong.",
+                    "B. Giữa thân xác bị phụ thuộc vào kẻ khác (do số mệnh) và trái tim thuộc về Ra-ma.",
+                    "C. Giữa nguồn gốc dòng họ cao quý và xuất thân từ nhân dân.",
+                    "D. Giữa thần linh tối cao và con người phàm trần."
+                ],
+                answer: 1,
+                explanation: "Xi-ta giải thích: 'những gì nằm trong vòng kiểm soát của thiếp, tức trái tim thiếp đây, là thuộc về chàng. Thiếp có thể làm gì với cái thân thiếp đây, bởi nó có thể phụ thuộc vào kẻ khác...'"
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Chi tiết 'Ra-ma vẫn ngồi, mắt dán xuống đất' khi Xi-ta chuẩn bị bước vào giàn hỏa thiêu thể hiện tâm trạng gì của nhân vật?",
+                options: [
+                    "A. Thể hiện sự lạnh lùng, dửng dưng và vô cảm tuyệt đối của Ra-ma.",
+                    "B. Thể hiện sự tức giận tột cùng không muốn nhìn mặt Xi-ta.",
+                    "C. Thể hiện sự xung đột giằng xé nội tâm mãnh liệt giữa bổn phận làm vua và tình yêu thương vợ.",
+                    "D. Thể hiện sự hối hận vì đã lỡ lời sỉ nhục người phụ nữ trinh tiết."
+                ],
+                answer: 2,
+                explanation: "Ra-ma phải nén chịu đau đớn (lòng đau như dao cắt) vì danh dự và bổn phận anh hùng, sự im lặng 'mắt dán xuống đất' giấu đi nỗi đau đớn nội tâm tột cùng."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Sự việc Xi-ta quyết định nhảy vào giàn hỏa thiêu có ý nghĩa cơ bản nào đối với danh dự của nàng?",
+                options: [
+                    "A. Là hành động bốc đồng để trả thù sự xúc phạm gay gắt của Ra-ma.",
+                    "B. Là minh chứng cao nhất dùng ngọn lửa thiêng thanh tẩy và chứng giám cho lòng thủy chung, trinh tiết.",
+                    "C. Là giải pháp đường cùng khi không còn nơi nào để nương tựa.",
+                    "D. Là cách thể hiện sự phục tùng tuyệt đối với thần linh Ấn Độ."
+                ],
+                answer: 1,
+                explanation: "Nghi lễ thử lửa có ý nghĩa kiểm chứng đức hạnh và thanh tẩy; Xi-ta nạp mình cho lửa để thần A-nhi chứng giám danh dự trong sạch của nàng."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Vì sao Xi-ta lại trách Ra-ma đã dùng những lời lẽ gay gắt 'giống như một kẻ thấp hèn chửi mắng một con mụ thấp hèn'?",
+                options: [
+                    "A. Vì Ra-ma đã dùng cách đánh giá tầm thường của phụ nữ thấp hèn để gán ghép, nghi ngờ tư cách danh giá của nàng.",
+                    "B. Vì Ra-ma không cho nàng được quyền thanh minh trước bạn hữu.",
+                    "C. Vì Ra-ma công khai xúi giục nàng đi theo những người đàn ông khác.",
+                    "D. Vì Ra-ma đã không đánh giá cao công lao cứu viện của tướng Ha-nu-man."
+                ],
+                answer: 0,
+                explanation: "Xi-ta tủi hổ vì Ra-ma đánh đồng nàng với loại phụ nữ thấp hèn, suy từ hành vi tầm thường mà ngờ vực danh dự cao quý của nàng."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Thái độ của đám đông (dân chúng, loài Rắc-sa-xa, loài Va-na-ra) khi thấy Xi-ta bước vào ngọn lửa thiêu thể hiện điều gì?",
+                options: [
+                    "A. Sự đồng tình tuyệt đối với quyết định nghiêm khắc của Đức vua Ra-ma.",
+                    "B. Sự xúc động, đau lòng đứt ruột và xót thương sâu sắc cho trang tuyệt thế giai nhân.",
+                    "C. Sự hân hoan vì đã tiêu diệt được mầm mống tội lỗi.",
+                    "D. Sự lo sợ ngọn lửa sẽ thiêu rụi toàn bộ lãnh địa."
+                ],
+                answer: 1,
+                explanation: "Văn bản ghi: 'Ai nấy, già cũng như trẻ, đau lòng đứt ruột xem nàng... Các phụ nữ bật ra tiếng kêu khóc thảm thương. Cả loài Rắc-sa-xa lẫn loài Va-na-ra cùng kêu khóc vang trời'."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Trong lời buộc tội, Ra-ma đã ví sự xuất hiện của Xi-ta trước mặt mình giống như điều nào dưới đây?",
+                options: [
+                    "A. Mũi tên xuyên thẳng vào trái tim.",
+                    "B. Ánh sáng đối với người bị đau mắt.",
+                    "C. Cây dây leo bị quật nát.",
+                    "D. Thiên thần bị đuổi khỏi thiên đường."
+                ],
+                answer: 1,
+                explanation: "Trích lời Ra-ma: 'Giờ đây, nàng đang đứng trước mặt ta, nhưng trông thấy nàng, ta không chịu nổi, chẳng khác nào ánh sáng đối với người bị đau mắt'."
+            },
+
+            // --- MỨC VẬN DỤNG (3 Câu: 16 - 18) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelCode: "van-dung",
+                question: "Từ hành động dũng cảm bước vào giàn hỏa thiêu của Xi-ta, bài học về tư tưởng đạo đức cổ đại Ấn Độ được rút ra là gì?",
+                options: [
+                    "A. Sức mạnh của người phụ nữ nằm ở sự Im lặng và nhẫn nhịn tuyệt đối.",
+                    "B. Danh dự, nhân phẩm và lòng trung thành trinh tiết là giá trị thiêng liêng cao nhất vượt lên trên sự sống và cái chết.",
+                    "C. Thần linh sẽ luôn can thiệp trực tiếp vào mọi tranh chấp của con người.",
+                    "D. Người phụ nữ phải phụ thuộc hoàn toàn vào quyết định của người chồng trong gia đình."
+                ],
+                answer: 1,
+                explanation: "Hành động thử lửa phản ánh quan niệm sử thi Ấn Độ: người phụ nữ cao quý sẵn sàng đối mặt với cái chết để bảo vệ nhân phẩm và sự trong sạch trinh tiết."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelCode: "van-dung",
+                question: "Phân tích xung đột giữa 'nghĩa vụ quân vương' và 'tình cảm cá nhân' trong nhân vật Ra-ma cho thấy hình mẫu người anh hùng sử thi khao khát điều gì?",
+                options: [
+                    "A. Đặt danh dự dòng họ và quyền lợi cộng đồng lên trên tình cảm cá nhân riêng tư.",
+                    "B. Đặt hạnh phúc gia đình lên trên trách nhiệm với quốc gia dân tộc.",
+                    "C. Sẵn sàng từ bỏ danh dự để bảo vệ người mình yêu thương.",
+                    "D. Tìm cách dung hòa mọi mâu thuẫn bằng thái độ thỏa hiệp."
+                ],
+                answer: 0,
+                explanation: "Anh hùng sử thi là đại diện cho cộng đồng, danh dự dòng họ và chuẩn mực đạo đức xã hội; vì thế Ra-ma buộc phải gạt bỏ tình cảm cá nhân để giữ trọn tư cách quân vương."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelCode: "van-dung",
+                question: "Công thức toán học mô tả tỷ lệ lý tưởng về số câu hỏi các mức độ trong một đề thi được biểu diễn chuẩn MathJax như thế nào?",
+                options: [
+                    "A. \\( T = \\text{Biết} \\circ \\text{Hiểu} \\circ \\text{Vận dụng} \\circ \\text{VD Cao} \\)",
+                    "B. \\( P_{tổng} = 8\\circ\\text{Biết} + 7\\circ\\text{Hiểu} + 3\\circ\\text{Vận dụng} + 2\\circ\\text{VD Cao} \\)",
+                    "C. \\( \\text{Tỷ lệ} = \\frac{8}{20} \\circ 100\\% \\)",
+                    "D. \\( \\text{Điểm} = \\sum_{i=1}^{n} a_i \\circ x_i \\)"
+                ],
+                answer: 1,
+                explanation: "Đề thi phân bổ chuẩn mực: \\( P_{tổng} = 8\\circ\\text{Biết} + 7\\circ\\text{Hiểu} + 3\\circ\\text{Vận dụng} + 2\\circ\\text{VD Cao} \\) tương ứng đúng 20 câu hỏi."
+            },
+
+            // --- MỨC VẬN DỤNG CAO (2 Câu: 19 - 20) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelCode: "vd-cao",
+                question: "Nghệ thuật miêu tả tâm lý và xây dựng nhân vật trong đoạn trích 'Ra-ma buộc tội' đạt đến đỉnh cao sử thi ở điểm nào?",
+                options: [
+                    "A. Xây dựng nhân vật hoàn hảo không có tì vết hay bất kỳ sự giằng xé nào.",
+                    "B. Đặt nhân vật vào thử thách khốc liệt giữa bổn phận anh hùng và tình yêu, khắc họa diễn biến tâm trạng qua ngôn từ đối thoại và hành động mang tính nghi lễ huyền thoại.",
+                    "C. Tập trung miêu tả cảnh chiến trận hoành tráng thay vì tâm lý nhân vật.",
+                    "D. Sử dụng yếu tố kì ảo để giải quyết mâu thuẫn ngay từ đầu câu chuyện."
+                ],
+                answer: 1,
+                explanation: "Vận dụng cao: Tác giả Van-mi-ki đã tạo nên tình huống xung đột đỉnh điểm, miêu tả tâm lý phức tạp qua lời đối thoại giàu tính kịch và hành động thử lửa trang nghiêm mang màu sắc tín ngưỡng sử thi."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelCode: "vd-cao",
+                question: "Đánh giá về ảnh hưởng của thể loại sử thi trong đoạn trích đối với văn hóa và tư tưởng Ấn Độ cổ đại, phát biểu nào sau đây mang tính khái quát sâu sắc nhất?",
+                options: [
+                    "A. Đoạn trích chỉ đơn thuần phê phán sự ghen tuông vô cớ của người đàn ông trong xã hội phong kiến.",
+                    "B. Đoạn trích thể hiện sự chiến thắng của cái đẹp và phẩm hạnh trinh tiết trước mọi hoài nghi; đồng thời phản ánh lý tưởng thẩm mỹ về người anh hùng mẫu mực và người phụ nữ thủy chung trong tâm thức văn hóa Ấn Độ.",
+                    "C. Đoạn trích chứng minh rằng sức mạnh thần linh luôn làm chủ và quyết định hoàn toàn số phận con người.",
+                    "D. Đoạn trích đề cao quyền lực tuyệt đối của đẳng cấp vương thất đối với nhân dân lao động."
+                ],
+                answer: 1,
+                explanation: "Vận dụng cao: 'Ra-ma buộc tội' không chỉ phản ánh mâu thuẫn cá nhân mà qua đó đúc kết lý tưởng triết học - văn hóa Ấn Độ: sự lên ngôi của chuẩn mực đạo đức (Dharma), nhân phẩm trinh tiết và tinh thần danh dự anh hùng."
+            }
+        ];
+
+        // GLOBAL APP STATE
+        let currentQuestions = [];
+        let currentQuestionIdx = 0;
+        let userAnswers = {}; // { qIndex: selectedOptionIndex }
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let elapsedTime = 0;
+
+        // Shuffle Array helper
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function startTest(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            elapsedTime = 0;
+
+            const badge = document.getElementById('mode-badge');
+            const badgeText = document.getElementById('mode-text');
+            badge.classList.remove('hidden');
+            badge.classList.add('flex');
+
+            if (mode === 'practice') {
+                badgeText.innerText = "Chế độ LUYỆN TẬP";
+                document.getElementById('timer-box').classList.add('hidden');
+                // Keep default order in practice mode
+                currentQuestions = JSON.parse(JSON.stringify(rawQuestions));
+            } else {
+                badgeText.innerText = "Chế độ TÍNH GIỜ (20 phút)";
+                document.getElementById('timer-box').classList.remove('hidden');
+                // Shuffle questions & options in timed mode
+                currentQuestions = shuffleArray(rawQuestions).map(q => {
+                    let shuffledOpts = shuffleArray(q.options);
+                    // Update correct answer index
+                    let origCorrectText = q.options[q.answer];
+                    let newCorrectIdx = shuffledOpts.indexOf(origCorrectText);
+                    return {
+                        ...q,
+                        options: shuffledOpts,
+                        answer: newCorrectIdx
+                    };
+                });
+                startTimer();
+            }
+
+            // Switch screen
+            document.getElementById('screen-welcome').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            renderNavGrid();
+            renderQuestion(0);
+
+            // Re-render MathJax
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Timer function
+        function startTimer() {
+            timeRemaining = 20 * 60;
+            updateTimerDisplay();
+            if (timerInterval) clearInterval(timerInterval);
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                elapsedTime++;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút làm bài! Hệ thống sẽ tự động nộp bài.");
+                    finishQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeRemaining / 60).toString().padStart(2, '0');
+            const s = (timeRemaining % 60).toString().padStart(2, '0');
+            document.getElementById('timer-display').innerText = `${m}:${s}`;
+        }
+
+        // Render Nav Grid
+        function renderNavGrid() {
+            const grid = document.getElementById('nav-grid');
+            grid.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `nav-btn-${idx}`;
+                btn.className = `h-10 text-xs font-bold rounded flex items-center justify-center transition border ${getNavBtnClass(idx)}`;
+                btn.innerText = idx + 1;
+                btn.onclick = () => renderQuestion(idx);
+                grid.appendChild(btn);
+            });
+            updateAnsweredCount();
+        }
+
+        function getNavBtnClass(idx) {
+            if (idx === currentQuestionIdx) {
+                return 'bg-blue-600 border-blue-400 text-white font-extrabold ring-2 ring-blue-300';
+            }
+            if (userAnswers[idx] !== undefined) {
+                return 'bg-amber-600 border-amber-500 text-white';
+            }
+            return 'bg-gray-800 border-gray-700 text-gray-300 hover:bg-gray-700';
+        }
+
+        function updateNavGridStyles() {
+            currentQuestions.forEach((_, idx) => {
+                const btn = document.getElementById(`nav-btn-${idx}`);
+                if (btn) {
+                    btn.className = `h-10 text-xs font-bold rounded flex items-center justify-center transition border ${getNavBtnClass(idx)}`;
+                }
+            });
+            updateAnsweredCount();
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answered-count').innerText = `${count} / 20 đã làm`;
+        }
+
+        function renderQuestion(idx) {
+            currentQuestionIdx = idx;
+            const q = currentQuestions[idx];
+
+            document.getElementById('q-number').innerText = `Câu ${idx + 1} / 20`;
+            
+            // Level badge styling
+            const levelLbl = document.getElementById('q-level');
+            levelLbl.innerText = `Mức ${q.level}`;
+            if (q.levelCode === 'biêt') {
+                levelLbl.className = "px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-900/60 text-blue-300 border border-blue-700";
+            } else if (q.levelCode === 'hieu') {
+                levelLbl.className = "px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-900/60 text-emerald-300 border border-emerald-700";
+            } else if (q.levelCode === 'van-dung') {
+                levelLbl.className = "px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-900/60 text-amber-300 border border-amber-700";
+            } else {
+                levelLbl.className = "px-2.5 py-0.5 rounded text-xs font-semibold bg-purple-900/60 text-purple-300 border border-purple-700";
+            }
+
+            document.getElementById('q-text').innerText = q.question;
+
+            // Render options
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            q.options.forEach((opt, optIdx) => {
+                const isSelected = userAnswers[idx] === optIdx;
+                const optBtn = document.createElement('div');
+                optBtn.onclick = () => selectOption(idx, optIdx);
+                optBtn.className = `p-4 rounded-xl border text-sm md:text-base cursor-pointer transition flex items-start gap-3 ${
+                    isSelected 
+                    ? 'bg-amber-950/40 border-amber-500 text-white font-medium' 
+                    : 'bg-card-inner border-custom text-gray-200 hover:border-gray-500'
+                }`;
+
+                optBtn.innerHTML = `
+                    <div class="mt-0.5 w-5 h-5 rounded-full border flex items-center justify-center text-xs shrink-0 ${
+                        isSelected ? 'border-amber-400 bg-amber-500 text-black font-bold' : 'border-gray-500'
+                    }">
+                        ${String.fromCharCode(65 + optIdx)}
+                    </div>
+                    <div class="flex-grow">${opt}</div>
+                `;
+                container.appendChild(optBtn);
+            });
+
+            // Button state
+            document.getElementById('btn-prev').disabled = idx === 0;
+            document.getElementById('btn-prev').style.opacity = idx === 0 ? '0.5' : '1';
+
+            if (idx === currentQuestions.length - 1) {
+                document.getElementById('btn-next').innerText = 'Hoàn Thành';
+            } else {
+                document.getElementById('btn-next').innerHTML = 'Câu Tiếp <i class="fa-solid fa-chevron-right"></i>';
+            }
+
+            updateNavGridStyles();
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            renderQuestion(qIdx);
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentQuestionIdx];
+            renderQuestion(currentQuestionIdx);
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIdx < currentQuestions.length - 1) {
+                renderQuestion(currentQuestionIdx + 1);
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIdx > 0) {
+                renderQuestion(currentQuestionIdx - 1);
+            }
+        }
+
+        function finishQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Compute score
+            let correctCount = 0;
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / currentQuestions.length) * 10;
+            
+            // Switch screen
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            document.getElementById('result-mode-lbl').innerText = currentMode === 'practice' ? 'Chế độ LUYỆN TẬP' : 'Chế độ TÍNH GIỜ';
+            document.getElementById('res-score').innerHTML = `${score.toFixed(1)} <span class="text-xs text-gray-400 font-normal">/ 10.0</span>`;
+            document.getElementById('res-correct').innerHTML = `${correctCount} <span class="text-xs text-gray-400 font-normal">/ 20 câu</span>`;
+            
+            // Time display
+            const minUsed = Math.floor(elapsedTime / 60).toString().padStart(2, '0');
+            const secUsed = (elapsedTime % 60).toString().padStart(2, '0');
+            document.getElementById('res-time').innerText = currentMode === 'practice' ? 'Không giới hạn' : `${minUsed}:${secUsed}`;
+
+            // Generate Teacher Evaluation
+            let evalText = "";
+            if (score >= 9.0) {
+                evalText = "Xuất sắc! Em đã nắm vững toàn bộ kiến thức văn bản 'Ra-ma buộc tội', phân tích sắc bén tâm lý nhân vật và thấu hiểu sâu sắc các giá trị nghệ thuật sử thi Ấn Độ. Hãy tiếp tục phát huy năng lực tư duy cao này!";
+            } else if (score >= 7.0) {
+                evalText = "Kết quả Rất Tốt! Em đã nắm chắc kiến thức cốt truyện và hiểu rõ các mâu thuẫn chính. Cần rèn luyện thêm ở các câu hỏi Vận dụng cao đòi hỏi phân tích tổng hợp nghệ thuật để đạt điểm tối đa.";
+            } else if (score >= 5.0) {
+                evalText = "Khá tốt! Em đã nhớ được nội dung cơ bản nhưng còn nhầm lẫn ở một số câu hỏi phân tích tâm lý nhân vật và ý nghĩa biểu tượng. Hãy đọc lại kỹ lời giải chi tiết bên dưới để củng cố nhé!";
+            } else {
+                evalText = "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và các chi tiết quan trọng trong bài 'Ra-ma buộc tội'. Hãy xem kỹ lời giải từng câu và đọc lại SGK văn bản để làm lại nhé!";
+            }
+            document.getElementById('teacher-eval').innerText = evalText;
+
+            // Render Solution list
+            renderSolutions();
+        }
+
+        function renderSolutions() {
+            const container = document.getElementById('solutions-list');
+            container.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const userSelected = userAnswers[idx];
+                const isCorrect = userSelected === q.answer;
+
+                const card = document.createElement('div');
+                card.className = `bg-dark-card border rounded-xl p-5 space-y-4 ${
+                    isCorrect ? 'border-emerald-600/40' : 'border-rose-600/40'
+                }`;
+
+                let optionsHTML = '';
+                q.options.forEach((opt, optIdx) => {
+                    let optStyle = "bg-card-inner border-custom text-gray-300";
+                    let badgeHTML = "";
+
+                    if (optIdx === q.answer) {
+                        optStyle = "bg-emerald-950/40 border-emerald-500 text-emerald-200 font-semibold";
+                        badgeHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i>`;
+                    } else if (optIdx === userSelected && !isCorrect) {
+                        optStyle = "bg-rose-950/40 border-rose-500 text-rose-200 font-semibold";
+                        badgeHTML = `<i class="fa-solid fa-circle-xmark text-rose-400"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3 rounded-lg border text-sm flex justify-between items-center ${optStyle}">
+                            <span>${opt}</span>
+                            ${badgeHTML}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start gap-2 border-b border-custom pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-base font-bold text-cream">Câu ${idx + 1}</span>
+                            <span class="px-2 py-0.5 rounded text-xs bg-gray-800 text-gray-300 font-mono">Mức ${q.level}</span>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold ${
+                            isCorrect ? 'bg-emerald-900/60 text-emerald-300 border border-emerald-700' : 'bg-rose-900/60 text-rose-300 border border-rose-700'
+                        }">
+                            ${isCorrect ? '✓ Đúng' : '✕ Sai'}
+                        </span>
+                    </div>
+
+                    <p class="text-sm md:text-base font-medium text-gray-100 leading-relaxed">${q.question}</p>
+
+                    <div class="space-y-2">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-card-inner border border-blue-900/40 rounded-lg p-3.5 text-xs md:text-sm text-gray-300 space-y-1">
+                        <span class="font-bold text-blue-400 block"><i class="fa-solid fa-lightbulb"></i> Lời giải chi tiết:</span>
+                        <p class="leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function resetApp() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('mode-badge').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-welcome').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
