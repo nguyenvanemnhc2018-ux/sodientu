@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức - Thế giới mạng & tôi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- MathJax for rendering math formulas -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .header-title {
+            color: #FFFDD0;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #4d2626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8b4545;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a65252;
+        }
+        .glass-panel {
+            background: rgba(45, 20, 20, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 253, 208, 0.15);
+        }
+        .glass-card {
+            background: rgba(60, 27, 27, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 253, 208, 0.4);
+        }
+        .badge-know { background-color: #1e3a8a; color: #93c5fd; }
+        .badge-understand { background-color: #065f46; color: #6ee7b7; }
+        .badge-apply { background-color: #92400e; color: #fde047; }
+        .badge-highapply { background-color: #831843; color: #f472b6; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen antialiased selection:bg-amber-600 selection:text-white">
+
+    <!-- TOP NAVBAR -->
+    <header class="bg-[#4d2626] border-b border-[#8b4545]/40 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500/20 p-2 rounded-lg border border-amber-500/40 text-amber-300">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg sm:text-xl tracking-tight header-title uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs text-amber-200/80">Thực hành đọc: <span class="italic">Thế giới mạng & tôi</span> (Nguyễn Thị Hậu)</p>
+                </div>
+            </div>
+            <div id="modeBadgeHeader" class="hidden sm:flex items-center space-x-2 bg-[#331a1a] px-3 py-1.5 rounded-full border border-amber-500/30 text-xs text-amber-200">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span id="headerModeText">Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- SCREEN 1: START / MODE SELECTION -->
+        <section id="screenStart" class="space-y-8 animate-fadeIn">
+            <div class="text-center space-y-3 pt-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-400 text-amber-300 shadow-inner mb-2">
+                    <i class="fa-solid fa-check text-2xl"></i>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold header-title tracking-wide">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-amber-100/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-bold text-amber-300">20 câu hỏi</span> bám sát văn bản <span class="font-semibold text-amber-200">Thế giới mạng & tôi</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- LEVEL MATRIX GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-xl transition-all duration-300">
+                    <div class="text-xs font-bold uppercase text-blue-300 tracking-wider mb-1">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-gray-200 leading-relaxed">Nhận biết chi tiết, tác giả, tác phẩm, các định nghĩa và chú thích có trong văn bản.</p>
+                </div>
+                <div class="glass-card p-5 rounded-xl transition-all duration-300">
+                    <div class="text-xs font-bold uppercase text-emerald-300 tracking-wider mb-1">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-gray-200 leading-relaxed">Giải thích ý nghĩa tư tưởng, từ ngữ, thông điệp và nội dung nghệ thuật của tác phẩm.</p>
+                </div>
+                <div class="glass-card p-5 rounded-xl transition-all duration-300">
+                    <div class="text-xs font-bold uppercase text-amber-300 tracking-wider mb-1">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-gray-200 leading-relaxed">Phân tích tác dụng của biện pháp nghệ thuật, hình thức tâm sự và bài học ứng xử.</p>
+                </div>
+                <div class="glass-card p-5 rounded-xl transition-all duration-300">
+                    <div class="text-xs font-bold uppercase text-pink-300 tracking-wider mb-1">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-gray-200 leading-relaxed">Đánh giá bản lĩnh nhân sinh, sự kết hợp góc nhìn chuyên môn với trải nghiệm cá nhân.</p>
+                </div>
+            </div>
+
+            <!-- MODE SELECTION CARDS -->
+            <div class="pt-4">
+                <h3 class="text-center text-xs font-bold text-amber-200/70 uppercase tracking-widest mb-6">VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- PRACTICE MODE -->
+                    <div onclick="startQuiz('practice')" class="glass-panel p-6 sm:p-8 rounded-2xl cursor-pointer border-2 border-transparent hover:border-amber-400 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold header-title group-hover:text-amber-300">1. Chế độ Luyện Tập</h4>
+                            <span class="bg-blue-600/40 text-blue-200 text-xs px-3 py-1 rounded-full border border-blue-400/30 font-medium">Không giới hạn</span>
+                        </div>
+                        <p class="text-xs text-amber-100/70 mb-4">Học tập & củng cố kiến thức không áp lực</p>
+                        <p class="text-sm text-gray-200 leading-relaxed mb-6">Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.</p>
+                        <div class="flex items-center text-amber-300 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Bắt đầu Luyện Tập</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- TIMED MODE -->
+                    <div onclick="startQuiz('timed')" class="glass-panel p-6 sm:p-8 rounded-2xl cursor-pointer border-2 border-transparent hover:border-amber-400 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold header-title group-hover:text-amber-300">2. Chế độ Tính Giờ</h4>
+                            <span class="bg-amber-600/40 text-amber-200 text-xs px-3 py-1 rounded-full border border-amber-400/30 font-medium">20 Phút</span>
+                        </div>
+                        <p class="text-xs text-amber-100/70 mb-4">Thử thách & kiểm tra đánh giá năng lực</p>
+                        <p class="text-sm text-gray-200 leading-relaxed mb-6">Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.</p>
+                        <div class="flex items-center text-amber-300 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Vào Bài Tính Giờ</span>
+                            <i class="fa-solid fa-clock ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ACTIVE QUIZ INTERFACE -->
+        <section id="screenQuiz" class="hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                <!-- LEFT SIDEBAR: QUESTION NAVIGATION & PROGRESS -->
+                <div class="lg:col-span-4 flex flex-col space-y-4">
+                    <div class="glass-panel p-5 rounded-2xl border border-amber-500/20">
+                        <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                            <h3 class="font-bold text-sm tracking-wide text-amber-100 uppercase">DANH SÁCH CÂU HỎI</h3>
+                            <span id="progressBadge" class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs px-2.5 py-1 rounded-lg font-mono">0 / 20 đã làm</span>
+                        </div>
+                        
+                        <!-- TIMER DISPLAY (IF TIMED MODE) -->
+                        <div id="timerContainer" class="hidden mb-4 p-3 bg-red-950/60 border border-red-500/40 rounded-xl flex items-center justify-between">
+                            <span class="text-xs text-red-200 uppercase font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-hourglass-half text-amber-400 animate-spin"></i> THỜI GIAN CÒN LẠI:
+                            </span>
+                            <span id="timerDisplay" class="font-mono text-xl font-extrabold text-amber-300">20:00</span>
+                        </div>
+
+                        <!-- QUESTION NUMBERS GRID -->
+                        <div id="questionGrid" class="grid grid-cols-5 gap-2.5 max-h-[340px] overflow-y-auto pr-1">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+
+                        <!-- LEGEND -->
+                        <div class="mt-5 pt-3 border-t border-white/10 text-xs space-y-2 text-amber-100/70">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-[#4d2626] border border-white/20 inline-block"></span>
+                                <span>Chưa trả lời</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-amber-500 inline-block"></span>
+                                <span>Đã chọn đáp án</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-blue-600 inline-block"></span>
+                                <span>Đang làm (Hiện tại)</span>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT BUTTON -->
+                        <button onclick="confirmSubmit()" class="mt-6 w-full py-3.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg hover:shadow-emerald-900/40 transition-all duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Nộp Bài & Kết Thúc</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RIGHT MAIN PANEL: QUESTION DETAILS & OPTIONS -->
+                <div class="lg:col-span-8">
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-amber-500/20 flex flex-col justify-between min-h-[520px]">
+                        <div>
+                            <!-- QUESTION HEADER -->
+                            <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                                <div class="flex items-center space-x-3">
+                                    <span id="qIndexText" class="text-2xl font-black header-title">Câu 1 / 20</span>
+                                    <span id="qLevelBadge" class="badge-know px-3 py-1 rounded-md text-xs font-semibold">Mức Biết</span>
+                                </div>
+                            </div>
+
+                            <!-- QUESTION BODY -->
+                            <div class="mb-8">
+                                <h3 id="qContent" class="text-lg sm:text-xl font-medium leading-relaxed text-white">
+                                    <!-- Question text loaded here -->
+                                </h3>
+                            </div>
+
+                            <!-- OPTIONS LIST -->
+                            <div id="optionsContainer" class="space-y-3">
+                                <!-- Option buttons loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- PREV / NEXT / CLEAR CONTROL FOOTER -->
+                        <div class="mt-8 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+                            <button id="btnPrev" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+                                <i class="fa-solid fa-chevron-left mr-1.5"></i> Câu Trước
+                            </button>
+
+                            <button onclick="clearCurrentSelection()" class="text-xs text-amber-200/60 hover:text-amber-200 underline">
+                                Xóa lựa chọn câu này
+                            </button>
+
+                            <button id="btnNext" onclick="navigateQuestion(1)" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold transition">
+                                Câu Tiếp <i class="fa-solid fa-chevron-right ml-1.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & DETAILED SOLUTIONS -->
+        <section id="screenResult" class="hidden space-y-8 animate-fadeIn">
+            <!-- SUMMARY CARD -->
+            <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-amber-500/30 text-center max-w-4xl mx-auto space-y-6">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/20 border-2 border-amber-400 text-amber-400 shadow-lg">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-extrabold header-title tracking-wide uppercase">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeTitle" class="text-sm text-amber-200/80 mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- SCORE & METRICS METERS -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto pt-2">
+                    <div class="bg-black/30 p-4 rounded-2xl border border-white/10">
+                        <div class="text-xs text-amber-200/70 font-medium mb-1">Điểm số</div>
+                        <div class="text-3xl font-black text-amber-300 font-mono"><span id="scoreText">0.0</span> <span class="text-xs text-amber-200/50 font-normal">/ 10.0</span></div>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-2xl border border-white/10">
+                        <div class="text-xs text-amber-200/70 font-medium mb-1">Số câu đúng</div>
+                        <div class="text-3xl font-black text-emerald-400 font-mono"><span id="correctCountText">0</span> <span class="text-xs text-amber-200/50 font-normal">/ 20 câu</span></div>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-2xl border border-white/10">
+                        <div class="text-xs text-amber-200/70 font-medium mb-1">Thời gian làm bài</div>
+                        <div id="timeSpentText" class="text-2xl font-bold text-blue-300 font-mono mt-1">Không giới hạn</div>
+                    </div>
+                </div>
+
+                <!-- TEACHER FEEDBACK BOX -->
+                <div class="bg-amber-950/40 border border-amber-500/40 p-5 rounded-2xl text-left max-w-3xl mx-auto">
+                    <div class="flex items-center space-x-2 text-amber-300 font-bold text-sm mb-2">
+                        <i class="fa-solid fa-comment-dots text-base"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedback" class="text-sm text-amber-100 leading-relaxed italic">
+                        <!-- Dynamic feedback generated here -->
+                    </p>
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="restartQuiz()" class="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition flex items-center space-x-2 shadow-lg">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#solutionsDetail" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DETAILED SOLUTIONS SECTION -->
+            <div id="solutionsDetail" class="space-y-6 max-w-5xl mx-auto pt-6">
+                <div class="flex items-center justify-between pb-3 border-b border-amber-500/30">
+                    <h3 class="text-xl font-bold header-title flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i>
+                        ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-amber-200/70 font-mono">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutionsList" class="space-y-5">
+                    <!-- Solution cards populated via JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        /* QUESTION DATABASE - STRICTLY BASED ON "THẾ GIỚI MẠNG & TÔI" (NGUYỄN THỊ HẬU) */
+        const quizData = [
+            // --- 8 CÂU BIẾT (Knowledge) ---
+            {
+                id: 1,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Tác giả của văn bản \\(\\text{Thế giới mạng \& tôi}\\) là ai?",
+                options: [
+                    "Nguyễn Thị Hậu",
+                    "Nguyễn Tuân",
+                    "Bùi Hiển",
+                    "Trần Thùy Mai"
+                ],
+                correct: 0,
+                explanation: "Theo thông tin trong chú thích (1) và cuối văn bản, tác giả bài viết là Nguyễn Thị Hậu (sinh năm 1958)."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Theo phần chú thích trong văn bản, tác giả Nguyễn Thị Hậu là nhà nghiên cứu thuộc lĩnh vực nào?",
+                options: [
+                    "Văn học và Ngôn ngữ học",
+                    "Khảo cổ học và Văn hóa học",
+                    "Tâm lý học và Xã hội học",
+                    "Sử học và Triết học"
+                ],
+                correct: 1,
+                explanation: "Chú thích (1) trong văn bản ghi rõ: Nguyễn Thị Hậu sinh năm 1958, là nhà nghiên cứu khảo cổ học, văn hóa học."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Trong văn bản, tác giả đã so sánh thế giới mạng với hình ảnh nào của cuộc sống?",
+                options: [
+                    "Cơn mưa bóng mây",
+                    "Một tấm gương phóng đại nhiều lần",
+                    "Một thế giới hoàn toàn ảo diệu",
+                    "Một dòng sông chảy không ngừng"
+                ],
+                correct: 1,
+                explanation: "Văn bản nêu rõ: \\(\\text{Thế giới mạng như một tấm gương của cuộc sống... nó là tấm gương phóng đại nhiều lần những tốt đẹp hay xấu xa của mỗi con người, của một xã hội.}\\)"
+            },
+            {
+                id: 4,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Theo tác giả, điều cốt lõi khiến con người cần đến \"mạng\" chính là khả năng gì?",
+                options: [
+                    "Giải trí và tìm kiếm thông tin nhanh chóng",
+                    "Chia sẻ và cộng hưởng nhiều lần",
+                    "Thể hiện sự kiêu ngạo và giỏi giang",
+                    "Tạo ra các mối quan hệ ảo không giới hạn"
+                ],
+                correct: 1,
+                explanation: "Trong bài viết tác giả khẳng định: \\(\\text{\"Nhưng cái làm cho con người cần đến “mạng” chính là khả năng chia sẻ và cộng hưởng nhiều lần\"}\\)."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Chú thích nào trong văn bản giải thích khái niệm \\(\\text{status}\\)?",
+                options: [
+                    "Ý kiến bình luận về dòng trạng thái",
+                    "Bài viết trên trang mạng xã hội",
+                    "Dòng trạng thái được đăng lên mạng xã hội của một tài khoản cụ thể",
+                    "Bài viết trên trang nhật kí trực tuyến (blog)"
+                ],
+                correct: 2,
+                explanation: "Chú thích (1) ở trang 96 ghi rõ: \\(\\text{Status}\\) là dòng trạng thái được đăng lên mạng xã hội của một tài khoản cụ thể nào đó."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Tác giả khẳng định quy luật va đập trên thế giới mạng bằng câu văn nào?",
+                options: [
+                    "Bạn \"ném\" ra cái gì thì thế giới mạng sẽ trả lại bạn cái đó.",
+                    "Thế giới mạng luôn nể trọng những người đạo mạo.",
+                    "Thế giới mạng sẽ xa lánh những ai bỗ bã tếu táo.",
+                    "Thế giới mạng hoàn toàn độc lập với đời sống thực."
+                ],
+                correct: 0,
+                explanation: "Trích văn bản: \\(\\text{\"Bạn “ném” ra cái gì thì thế giới mạng sẽ trả lại bạn cái đó. Thật đấy!\"}\\)"
+            },
+            {
+                id: 7,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Văn bản \\(\\text{Thế giới mạng \& tôi}\\) ghi lại địa danh và thời gian sáng tác nào ở cuối bài?",
+                options: [
+                    "Hà Nội, 5/10/2012",
+                    "Sài Gòn, 5/10/2012",
+                    "Sài Gòn, 15/10/2014",
+                    "Đà Nẵng, 5/10/2014"
+                ],
+                correct: 1,
+                explanation: "Cuối bài viết ghi rõ địa danh và thời gian: \\(\\text{Sài Gòn, 5/10/2012}\\)."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                badgeClass: "badge-know",
+                question: "Theo chú thích trong bài, cụm từ \"tuổi teen\" được dùng để chỉ độ tuổi trong khoảng nào?",
+                options: [
+                    "Từ 10 đến 15 tuổi",
+                    "Từ 13 đến 19 tuổi",
+                    "Từ 15 đến 20 tuổi",
+                    "Từ 18 đến 25 tuổi"
+                ],
+                correct: 1,
+                explanation: "Chú thích (2) giải thích: Tuổi teen là tuổi mới lớn (khoảng từ mười ba đến mười chín tuổi)."
+            },
+
+            // --- 7 CÂU HIỂU (Comprehension) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Tại sao tác giả lại cho rằng ở thế giới mạng \"bạn bình đẳng với tất cả\"?",
+                options: [
+                    "Vì trên mạng ai cũng có lượng người theo dõi như nhau.",
+                    "Vì mọi người đều được tự do tỏ bày, bộc lộ, bức xúc, tán thưởng, phản đối, tranh luận, đồng tình...",
+                    "Vì thế giới mạng không phân biệt tuổi tác hay trình độ học vấn.",
+                    "Vì ai cũng có thể trở thành nhà khoa học hay nhà thơ chuyên nghiệp."
+                ],
+                correct: 1,
+                explanation: "Văn bản giải thích: \\(\\text{\"Ở đó, bạn bình đẳng với tất cả khi được tự do tỏ bày / bộc lộ / bức xúc / tán thưởng / phản đối / tranh luận / đồng tình...\"}\\)"
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Tác giả muốn phát biểu bài học ứng xử gì khi viết: \\(\\text{\"Sự tương tác tức thời và “không biên giới” của thế giới mạng... là một sức mạnh có thể “hủy diệt” một cá nhân chỉ trong chốc lát\"}\\)?",
+                options: [
+                    "Mạng xã hội rất an toàn và mọi người không nên quá lo lắng.",
+                    "Cảnh báo nguy cơ và sức ảnh hưởng tiêu cực khủng khép từ sự tương tác mạng nếu con người ứng xử thiếu kiểm soát.",
+                    "Khuyên mọi người hoàn toàn không nên sử dụng mạng xã hội.",
+                    "Khẳng định mạng xã hội chỉ mang lại tác hại hủy diệt con người."
+                ],
+                correct: 1,
+                explanation: "Tác giả nhấn mạnh tính chất hai mặt của mạng xã hội, đặc biệt là tác động lan truyền nhanh chóng có thể hủy diệt uy tín, danh dự của một cá nhân nếu không có giới hạn văn hóa."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Ý nghĩa của nhận định \\(\\text{\"những gì bạn viết trên mạng chắc chắn là một phần con người bạn\"}\\) là gì?",
+                options: [
+                    "Phát ngôn trên mạng hoàn toàn độc lập với nhân cách thực tế.",
+                    "Mạng xã hội chỉ phản ảnh những điều giả dối của con người.",
+                    "Mỗi bài viết, comment trên mạng đều thể hiện nhận thức, thái độ và nhân cách thực của người sử dụng.",
+                    "Con người trên mạng luôn tốt đẹp hơn con người thực tế."
+                ],
+                correct: 2,
+                explanation: "Mặc dù là mạng ảo, nhưng thái độ, cách lựa chọn ngôn ngữ và nội dung phát ngôn đều thể hiện một phần tâm lý, tư tưởng và nhân cách thực của cá nhân đó."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Vì sao tình bạn trên mạng lại \"phải chịu sự thử thách va đập, có khi còn hơn ở ngoài đời\"?",
+                options: [
+                    "Vì người trên mạng không bao giờ trung thực.",
+                    "Vì tính chất tương tác ảo - thật đan xem, cảm xúc dễ biến đổi và mối quan hệ thiếu sự gắn kết trực tiếp vững chắc.",
+                    "Vì mạng xã hội thường xuyên bị lỗi kết nối.",
+                    "Vì không ai muốn tìm bạn thật sự trên mạng."
+                ],
+                correct: 1,
+                explanation: "Trong thế giới mạng, mối quan hệ dễ hình thành nhưng cũng dễ bị rạn nứt bởi va đập ngôn từ và thiếu đi sự trải nghiệm, thấu hiểu trực tiếp ngoài đời."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Hình ảnh so sánh mối quan hệ trên mạng \\(\\text{\"bỗng hoa như mưa bóng mây\"}\\) diễn tả đặc điểm gì?",
+                options: [
+                    "Sự tươi mát và lãng mạn của tình bạn ảo.",
+                    "Tính chất mong manh, đến nhanh đi nhanh, dễ tan biến của các mối quan hệ ảo.",
+                    "Sự bền chặt và vượt qua sóng gió thời tiết.",
+                    "Sự nguy hiểm bất ngờ như giông bão."
+                ],
+                correct: 1,
+                explanation: "\"Mưa bóng mây\" là hiện tượng mưa thoáng qua, nhanh tan. So sánh này nhằm chỉ tính chất mong manh, chốc chốc biến đổi của mối quan hệ mạng."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Theo tác giả, việc nhận ra \"giới hạn\" trong ứng xử trên mạng và ngoài đời có đặc điểm gì?",
+                options: [
+                    "Rất đơn giản, ai cũng làm được.",
+                    "Đều không dễ, vì quá một chút sẽ chuyển từ tếu táo thành hỗn hào, từ khen chê thành mạt sát.",
+                    "Chỉ khó khăn khi ứng xử ngoài đời thực.",
+                    "Không cần thiết vì thế giới mạng là tự do tuyệt đối."
+                ],
+                correct: 1,
+                explanation: "Tác giả chỉ rõ: \\(\\text{\"Để nhận ra được cái giới hạn này, ở trên mạng hay ngoài đời, đều không dễ. Quá đi một chút, từ bỗ bã tếu táo trở nên đanh đá hỗn hào...\"}\\)"
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                badgeClass: "badge-understand",
+                question: "Thái độ của tác giả Nguyễn Thị Hậu đối với thế giới mạng trong bài viết là gì?",
+                options: [
+                    "Phủ nhận hoàn toàn giá trị của mạng xã hội.",
+                    "Tung hô mạng xã hội là nơi hoàn hảo nhất.",
+                    "Chủ động, tích cực nhưng tỉnh táo, nhận diện rõ hai mặt tốt - xấu để tự hoàn thiện bản thân.",
+                    "Thờ ơ, không quan tâm đến những tác động của mạng."
+                ],
+                correct: 2,
+                explanation: "Tác giả lướt mạng mỗi ngày để mở rộng cuộc sống, nhưng luôn giữ thái độ \"tỉnh táo để biết nhìn ra chân giá trị của mình, của người\"."
+            },
+
+            // --- 3 CÂU VẬN DỤNG (Application) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                badgeClass: "badge-apply",
+                question: "Sức hấp dẫn riêng của phương thức nghị luận dưới hình thức tâm sự, thổ lộ trong văn bản \\(\\text{Thế giới mạng \& tôi}\\) thể hiện ở điều nào sau đây?",
+                options: [
+                    "Sử dụng nhiều số liệu thống kê khô khan để thuyết phục.",
+                    "Tạo cảm giác chân thành, tự nhiên, gần gũi như những lời trò chuyện, giúp lý lẽ đi sâu vào lòng người đọc.",
+                    "Lập luận sắc bén mang tính đe dọa người dùng mạng.",
+                    "Tránh né những vấn đề thực tế của đời sống mạng."
+                ],
+                correct: 1,
+                explanation: "Hình thức tâm sự giúp bài văn nghị luận giảm bớt tính lên gân, trở nên tha thiết, chân thành, dễ tạo sự đồng cảm sâu sắc với độc giả."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                badgeClass: "badge-apply",
+                question: "Từ trải nghiệm của tác giả trong văn bản, bài học quan trọng nhất về tinh thần \"chủ động\" trước thế giới mạng là gì?",
+                options: [
+                    "Biết tận dụng mạng để học hỏi, chia sẻ nhưng luôn tỉnh táo làm chủ bản thân, kiểm soát ngôn từ và cảm xúc.",
+                    "Đăng thật nhiều status mỗi ngày để giải tỏa cô đơn.",
+                    "Tránh tranh luận và cắt đứt mọi kết nối bạn bè trên mạng.",
+                    "Thể hiện bản thân giỏi giang và xinh đẹp bằng mọi giá."
+                ],
+                correct: 0,
+                explanation: "Thái độ chủ động thể hiện ở việc không bị lôi kéo bởi ảo tưởng hay tiêu cực, mà biết lấy mạng làm công cụ phản chiếu để nhận rõ chân giá trị của mình và người khác."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                badgeClass: "badge-apply",
+                question: "Biện pháp tu từ so sánh \\(\\text{\"Thế giới mạng như một tấm gương của cuộc sống... phóng đại nhiều lần\"}\\) có tác dụng nghệ thuật gì?",
+                options: [
+                    "Làm cho câu văn dài hơn và phức tạp hơn.",
+                    "Giúp hình dung sinh động khả năng bộc lộ và lan tỏa quy mô cực đại của mạng xã hội đối với cả phẩm chất tốt lẫn xấu.",
+                    "Khẳng định mạng xã hội chỉ phản chiếu những điều sai trái.",
+                    "Giảm bớt tính chân thực của thông điệp bài viết."
+                ],
+                correct: 1,
+                explanation: "So sánh thế giới mạng với \"tấm gương phóng đại\" giúp độc giả dễ dàng hình dung tính chất phản chiếu rõ nét và tốc độ lan truyền vượt trội của môi trường số."
+            },
+
+            // --- 2 CÂU VẬN DỤNG CAO (High Application) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                badgeClass: "badge-highapply",
+                question: "Khẳng định ở cuối văn bản: \\(\\text{\"tỉnh táo để biết nhìn ra chân giá trị của mình, của người\"}\\) khi đối diện với \"tấm gương phóng đại\" thể hiện bản lĩnh nhân sinh nào của người viết?",
+                options: [
+                    "Bản lĩnh sống tự chủ, có bản sắc, vượt qua các cám dỗ ảo để nâng cao năng lực tự nhận thức và thấu hiểu con người.",
+                    "Sự tự tin thái quá vào trình độ cá nhân khi tham gia mạng.",
+                    "Thái độ xa rời thực tế để tìm kiếm sự bình yên ảo.",
+                    "Tư tưởng bảo thủ, từ chối sự thay đổi của công nghệ hiện đại."
+                ],
+                correct: 0,
+                explanation: "Đây là biểu hiện của một nhân cách văn hóa giàu trải nghiệm: không né tránh thế giới công nghệ hiện đại nhưng luôn giữ sự làm chủ nội tâm, dùng môi trường đó làm thước đo rèn luyện nhận thức."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                badgeClass: "badge-highapply",
+                question: "Đánh giá sự kết hợp giữa góc nhìn của một nhà nghiên cứu văn hóa/khảo cổ với trải nghiệm cá nhân của Nguyễn Thị Hậu trong văn bản?",
+                options: [
+                    "Khiến bài viết trở nên nặng tính lý thuyết học thuật khó hiểu.",
+                    "Tạo nên cái nhìn vừa có độ sâu triết lý xã hội sắc sảo, vừa giàu tính nhân văn và gần gũi với hơi thở thời đại.",
+                    "Tạo ra sự mâu thuẫn giữa lý thuyết văn hóa và hành vi lướt mạng.",
+                    "Làm giảm đi tính thời sự của chủ đề thế giới mạng."
+                ],
+                correct: 1,
+                explanation: "Nhờ chuyên môn khảo cổ và văn hóa, tác giả có nhãn quan quan sát đời sống rất sâu sắc, đồng thời trải nghiệm cá nhân chân thực giúp bài viết vừa có tầm vóc tư tưởng vừa giàu cảm xúc."
+            }
+        ];
+
+        /* APP STATE VARIABLES */
+        let activeQuizState = {
+            mode: 'practice', // 'practice' or 'timed'
+            currentQuestions: [],
+            userAnswers: {}, // questionId -> selectedOptionIndex
+            currentIndex: 0,
+            timerInterval: null,
+            timeRemaining: 1200, // 20 minutes in seconds
+            startTime: null,
+            endTime: null
+        };
+
+        function startQuiz(mode) {
+            activeQuizState.mode = mode;
+            activeQuizState.userAnswers = {};
+            activeQuizState.currentIndex = 0;
+            activeQuizState.startTime = new Date();
+
+            if (mode === 'timed') {
+                // Shuffle questions for timed mode to ensure fairness
+                activeQuizState.currentQuestions = shuffleArray([...quizData]);
+                // Shuffle options for each question as well
+                activeQuizState.currentQuestions = activeQuizState.currentQuestions.map(q => {
+                    const shuffledOptions = shuffleOptions(q.options, q.correct);
+                    return {
+                        ...q,
+                        options: shuffledOptions.options,
+                        correct: shuffledOptions.newCorrect
+                    };
+                });
+                activeQuizState.timeRemaining = 1200; // 20 mins
+                document.getElementById('headerModeText').innerText = "Chế độ TÍNH GIỜ (20 Phút)";
+                document.getElementById('timerContainer').classList.remove('hidden');
+                startTimer();
+            } else {
+                // Practice mode uses standard list
+                activeQuizState.currentQuestions = [...quizData];
+                document.getElementById('headerModeText').innerText = "Chế độ LUYỆN TẬP";
+                document.getElementById('timerContainer').classList.add('hidden');
+                if (activeQuizState.timerInterval) clearInterval(activeQuizState.timerInterval);
+            }
+
+            // Switch Screen
+            document.getElementById('screenStart').classList.add('hidden');
+            document.getElementById('screenResult').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.remove('hidden');
+            document.getElementById('modeBadgeHeader').classList.remove('hidden');
+
+            // Render Grid & First Question
+            renderQuestionGrid();
+            loadQuestion(0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Helper to shuffle array
+        function shuffleArray(arr) {
+            let array = [...arr];
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Helper to shuffle options and track correct index
+        function shuffleOptions(options, correctIdx) {
+            let indexedOptions = options.map((opt, idx) => ({ text: opt, isCorrect: idx === correctIdx }));
+            indexedOptions = shuffleArray(indexedOptions);
+            const newOptions = indexedOptions.map(o => o.text);
+            const newCorrect = indexedOptions.findIndex(o => o.isCorrect);
+            return { options: newOptions, newCorrect: newCorrect };
+        }
+
+        // Timer control
+        function startTimer() {
+            if (activeQuizState.timerInterval) clearInterval(activeQuizState.timerInterval);
+            updateTimerDisplay();
+            activeQuizState.timerInterval = setInterval(() => {
+                activeQuizState.timeRemaining--;
+                updateTimerDisplay();
+                if (activeQuizState.timeRemaining <= 0) {
+                    clearInterval(activeQuizState.timerInterval);
+                    alert("Đã hết thời gian làm bài 20 phút! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(activeQuizState.timeRemaining / 60);
+            const secs = activeQuizState.timeRemaining % 60;
+            const formatted = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').innerText = formatted;
+        }
+
+        function renderQuestionGrid() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+            
+            activeQuizState.currentQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.className = getGridBtnClass(idx);
+                btn.innerText = idx + 1;
+                btn.onclick = () => loadQuestion(idx);
+                grid.appendChild(btn);
+            });
+            updateProgressBadge();
+        }
+
+        function getGridBtnClass(idx) {
+            const isCurrent = idx === activeQuizState.currentIndex;
+            const isAnswered = activeQuizState.userAnswers.hasOwnProperty(idx);
+
+            let base = "h-10 w-full rounded-lg font-bold text-sm transition-all flex items-center justify-center ";
+
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white ring-2 ring-blue-300 border-2 border-white shadow-md";
+            }
+            if (isAnswered) {
+                return base + "bg-amber-500 text-slate-950 font-extrabold shadow";
+            }
+            return base + "bg-[#4d2626] text-amber-100 hover:bg-[#663333] border border-white/10";
+        }
+
+        function loadQuestion(index) {
+            activeQuizState.currentIndex = index;
+            const q = activeQuizState.currentQuestions[index];
+
+            // Update question header info
+            document.getElementById('qIndexText').innerText = `Câu ${index + 1} / 20`;
+            const badge = document.getElementById('qLevelBadge');
+            badge.innerText = `Mức ${q.level}`;
+            badge.className = `${q.badgeClass} px-3 py-1 rounded-md text-xs font-semibold`;
+
+            // Update content
+            document.getElementById('qContent').innerHTML = q.question;
+
+            // Render options A, B, C, D
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = activeQuizState.userAnswers[index] === optIdx;
+                const optBtn = document.createElement('div');
+                optBtn.onclick = () => selectOption(index, optIdx);
+                optBtn.className = `p-4 rounded-xl border transition-all cursor-pointer flex items-start space-x-3.5 ${
+                    isSelected 
+                        ? 'bg-amber-500/20 border-amber-400 text-amber-100 shadow-md ring-1 ring-amber-400' 
+                        : 'bg-black/20 border-white/10 text-gray-200 hover:bg-white/5 hover:border-white/30'
+                }`;
+
+                optBtn.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
+                        isSelected ? 'bg-amber-500 text-slate-950' : 'bg-white/10 text-amber-200'
+                    }">${prefixes[optIdx]}</div>
+                    <div class="text-sm sm:text-base leading-relaxed pt-0.5">${optText}</div>
+                `;
+                container.appendChild(optBtn);
+            });
+
+            // Update Navigation Buttons state
+            document.getElementById('btnPrev').disabled = (index === 0);
+            document.getElementById('btnNext').disabled = (index === activeQuizState.currentQuestions.length - 1);
+
+            // Update grid buttons styling
+            renderQuestionGrid();
+
+            // Re-render MathJax formulas
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(qIdx, optIdx) {
+            activeQuizState.userAnswers[qIdx] = optIdx;
+            loadQuestion(qIdx);
+        }
+
+        function clearCurrentSelection() {
+            delete activeQuizState.userAnswers[activeQuizState.currentIndex];
+            loadQuestion(activeQuizState.currentIndex);
+        }
+
+        function navigateQuestion(direction) {
+            const newIndex = activeQuizState.currentIndex + direction;
+            if (newIndex >= 0 && newIndex < activeQuizState.currentQuestions.length) {
+                loadQuestion(newIndex);
+            }
+        }
+
+        function updateProgressBadge() {
+            const count = Object.keys(activeQuizState.userAnswers).length;
+            document.getElementById('progressBadge').innerText = `${count} / 20 đã làm`;
+        }
+
+        function confirmSubmit() {
+            const answeredCount = Object.keys(activeQuizState.userAnswers).length;
+            if (answeredCount < 20) {
+                const confirmMsg = `Bạn mới làm được ${answeredCount}/20 câu hỏi. Bạn có chắc chắn muốn nộp bài sớm không?`;
+                if (!window.confirm(confirmMsg)) return;
+            }
+            submitQuiz();
+        }
+
+        function submitQuiz() {
+            activeQuizState.endTime = new Date();
+            if (activeQuizState.timerInterval) clearInterval(activeQuizState.timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            activeQuizState.currentQuestions.forEach((q, idx) => {
+                if (activeQuizState.userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / 20) * 10;
+            const formattedScore = score.toFixed(1);
+
+            // Calculate Time Spent
+            let timeSpentStr = "Không giới hạn";
+            if (activeQuizState.mode === 'timed') {
+                const totalSecsSpent = 1200 - activeQuizState.timeRemaining;
+                const m = Math.floor(totalSecsSpent / 60);
+                const s = totalSecsSpent % 60;
+                timeSpentStr = `${m} phút ${s} giây`;
+            } else if (activeQuizState.startTime && activeQuizState.endTime) {
+                const diffMs = activeQuizState.endTime - activeQuizState.startTime;
+                const totalSecs = Math.floor(diffMs / 1000);
+                const m = Math.floor(totalSecs / 60);
+                const s = totalSecs % 60;
+                timeSpentStr = `${m} phút ${s} giây`;
+            }
+
+            // Render Results Screen
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenResult').classList.remove('hidden');
+
+            document.getElementById('scoreText').innerText = formattedScore;
+            document.getElementById('correctCountText').innerText = correctCount;
+            document.getElementById('timeSpentText').innerText = timeSpentStr;
+            document.getElementById('resultModeTitle').innerText = activeQuizState.mode === 'timed' ? "Chế độ TÍNH GIỜ" : "Chế độ LUYỆN TẬP";
+
+            // Teacher Feedback logic
+            const feedbackText = getTeacherFeedback(score, correctCount);
+            document.getElementById('teacherFeedback').innerText = feedbackText;
+
+            // Render Detailed Solutions
+            renderDetailedSolutions();
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function getTeacherFeedback(score, correctCount) {
+            if (score >= 9.0) {
+                return `Xuất sắc! Em đạt ${score}/10.0 điểm (${correctCount}/20 câu). Em đã nắm vững lý thuyết và có tư duy phân tích văn hóa - xã hội rất sâu sắc về bài đọc "Thế giới mạng & tôi". Hãy tiếp tục phát huy tinh thần tỉnh táo và tự chủ này!`;
+            } else if (score >= 7.0) {
+                return `Kết quả rất tốt! Em đạt ${score}/10.0 điểm (${correctCount}/20 câu). Em hiểu rõ các thông điệp và bài học ứng xử trong tác phẩm. Cần rèn luyện thêm ở các câu hỏi Vận dụng cao để đạt điểm tối đa nhé!`;
+            } else if (score >= 5.0) {
+                return `Khá tốt! Em đạt ${score}/10.0 điểm (${correctCount}/20 câu). Em đã nắm được các kiến thức cơ bản của văn bản nhưng vẫn còn sót một số chi tiết về mức Hiểu và Vận dụng. Hãy đọc lại kỹ phần Lời giải chi tiết bên dưới nhé!`;
+            } else {
+                return `Cần cố gắng nhiều hơn! Em mới đạt ${score}/10.0 điểm (${correctCount}/20 câu). Kết quả cho thấy em chưa nắm vững nội dung bài học "Thế giới mạng & tôi". Hãy xem kỹ lời giải từng câu và đọc lại SGK để làm lại bài test đạt kết quả tốt hơn nhé!`;
+            }
+        }
+
+        function renderDetailedSolutions() {
+            const container = document.getElementById('solutionsList');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            activeQuizState.currentQuestions.forEach((q, idx) => {
+                const userChoice = activeQuizState.userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+
+                const card = document.createElement('div');
+                card.className = `glass-panel p-6 rounded-2xl border ${
+                    isCorrect ? 'border-emerald-500/40' : 'border-red-500/40'
+                }`;
+
+                let optionsHTML = '';
+                q.options.forEach((optText, optIdx) => {
+                    let styleClass = "bg-black/20 border-white/5 text-gray-300";
+                    let iconHTML = "";
+
+                    if (optIdx === q.correct) {
+                        styleClass = "bg-emerald-950/60 border-emerald-500/60 text-emerald-200 font-medium";
+                        iconHTML = `<i class="fa-solid fa-[#16a34a] fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    }
+                    if (userChoice === optIdx && !isCorrect) {
+                        styleClass = "bg-red-950/60 border-red-500/60 text-red-200 line-through";
+                        iconHTML = `<i class="fa-solid fa-circle-xmark text-red-400 ml-auto"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3 rounded-xl border flex items-center space-x-3 text-sm ${styleClass}">
+                            <span class="w-6 h-6 rounded flex items-center justify-center font-bold text-xs bg-white/10 shrink-0">${prefixes[optIdx]}</span>
+                            <span>${optText}</span>
+                            ${iconHTML}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                        <div class="flex items-center space-x-3">
+                            <span class="font-black text-lg header-title">Câu ${idx + 1}</span>
+                            <span class="${q.badgeClass} px-2.5 py-0.5 rounded text-xs font-semibold">${q.level}</span>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold ${
+                            isCorrect ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-red-500/20 text-red-300 border border-red-500/40'
+                        }">
+                            ${isCorrect ? '<i class="fa-solid fa-check mr-1"></i> Đúng' : '<i class="fa-solid fa-xmark mr-1"></i> Sai'}
+                        </span>
+                    </div>
+
+                    <h4 class="text-base font-medium mb-4 text-white leading-relaxed">${q.question}</h4>
+
+                    <div class="grid grid-cols-1 gap-2.5 mb-4">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-amber-950/30 p-4 rounded-xl border border-amber-500/20 text-xs sm:text-sm text-amber-100/90 leading-relaxed">
+                        <span class="font-bold text-amber-300 flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-lightbulb"></i> Lời giải chi tiết:
+                        </span>
+                        ${q.explanation}
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function restartQuiz() {
+            document.getElementById('screenResult').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenStart').classList.remove('hidden');
+            document.getElementById('modeBadgeHeader').classList.add('hidden');
+            if (activeQuizState.timerInterval) clearInterval(activeQuizState.timerInterval);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Window Onload Initialization
+        window.onload = function() {
+            console.log("Online Testing WebApp loaded successfully.");
+        };
+    </script>
+</body>
+</html>

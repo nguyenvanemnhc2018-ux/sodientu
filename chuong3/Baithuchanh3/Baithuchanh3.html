@@ -1,0 +1,558 @@
+<!-- Chosen Palette: Primary Navy (#1E3A8A), Royal Blue (#2563EB), Accent Lime (#33FF33), Light Slate (#edf2f7), Soft Gray (#f4f7f9) -->
+<!-- Application Structure Plan: Layout được thiết kế dạng trang bài học tương tác chuẩn GDPT 2018. Gồm: 1) Header 2 khối màu bo tròn theo yêu cầu. 2) Khung dẫn nhập (Intro Box). 3) Phần I: Tổng quan & Điểm lưu ý (Thẻ vuông I, hình tròn 1-3). 4) Phần II: Khám phá chi tiết (Thẻ vuông II, quy luật tương tác, bảng ranh giới ứng xử, hình ảnh ẩn dụ, khung hoạt động bàn tay ✋, khung hỏi đáp ❓, và các thẻ Em có biết/Em có thể/Lưu ý). 5) Phần III: Củng cố & Đánh giá năng lực (Gameshow "Ai là triệu phú" 10 câu trắc nghiệm kèm chấm điểm JS & 3 bài tập tự luận/tính toán tương tác). 6) Footer chuẩn. Structure này giúp học sinh vừa nắm chắc lý thuyết văn bản nghị luận vừa hào hứng ôn luyện. -->
+<!-- Visualization & Content Choices: 
+- Tiêu đề mục lớn (I, II, III): Thẻ vuông số La Mã (square-badge), gạch chân đậm #1E3A8A.
+- Tiêu đề mục nhỏ (1, 2, 3): Thẻ tròn số tự nhiên (circle-badge).
+- Khung hình ảnh: Đặt sẵn src="h1.png" và src="h2.png" kèm giao diện khung fallback chuẩn.
+- Bảng biểu: Viền #cbd5e0, header #e2e8f0, full-width.
+- Hoạt động bàn tay ✋ & Dấu hỏi ❓: Thiết kế dạng khung tương tác có nút bấm xem giải quyết/xem đáp án.
+- Em có biết / Em có thể / Lưu ý: Đóng khung với màu nền phân biệt rõ ràng (tím nhạt, xanh ngọc nhạt, đỏ hồng nhạt).
+- Trắc nghiệm Gameshow "Ai là triệu phú": Nền tối nổi bật, tích hợp logic JavaScript kiểm tra kết quả, tính điểm và xuất phản hồi chi tiết.
+- Bài tập tự luận: Chứa công thức toán học MathJax \( ... \) và nút Toggle hiển thị bài giải.
+- KHÔNG sử dụng đồ họa SVG hay thư viện Mermaid JS.
+-->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Đọc: Thế Giới Mạng & Tôi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Library with Chemistry Support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .square-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #1E3A8A;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        .circle-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            background-color: #2563EB;
+            color: white;
+            font-weight: bold;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+            font-size: 0.875rem;
+        }
+        .section-header {
+            border-bottom: 3px solid #1E3A8A;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .btn-accent {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-accent:hover {
+            filter: brightness(0.9);
+            transform: translateY(-1px);
+        }
+        .quiz-option {
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #334155;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-[12px] overflow-hidden shadow-md text-white border border-blue-900">
+            <!-- Top Block (Màu 1: #1E3A8A) -->
+            <div style="background-color: #1E3A8A;" class="p-4 text-center text-sm md:text-base font-semibold tracking-wide uppercase">
+                CHƯƠNG: NGHỆ THUẬT THUYẾT PHỤC TRONG VĂN NGHỊ LUẬN
+            </div>
+            <!-- Fine Divider Line -->
+            <div class="h-[1px] bg-blue-300 opacity-30"></div>
+            <!-- Bottom Block (Màu 2: #2563EB) -->
+            <div style="background-color: #2563EB;" class="p-6 text-center text-xl md:text-2xl font-bold tracking-wider uppercase">
+                THỰC HÀNH ĐỌC: THẾ GIỚI MẠNG & TÔI
+                <span class="block text-xs font-normal normal-case mt-1 opacity-90">(Tác giả: Nguyễn Thị Hậu)</span>
+            </div>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="bg-white border border-black rounded-[12px] p-5 shadow-sm">
+            <p class="italic text-gray-700 leading-relaxed">
+                "Mỗi ngày lướt mạng ta có thể nhận ra muôn mặt của cuộc sống, và có khi, bất ngờ nhận ra khả năng 'biến hóa' của chính mình. Làm thế nào để chúng ta giữ vững thái độ chủ động, tỉnh táo đối diện với 'tấm gương phóng đại' mang tên thế giới mạng?"
+            </p>
+        </div>
+
+        <!-- SECTION I: TỔNG QUAN TÁC PHẨM -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold text-gray-800 uppercase flex items-center section-header">
+                <span class="square-badge">I</span> TỔNG QUAN VĂN BẢN NGHỊ LUẬN
+            </h2>
+
+            <!-- Mục 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-blue-900">
+                    <span class="circle-badge">1</span> Tác giả và xuất xứ văn bản
+                </h3>
+                <div class="bg-blue-50 border-l-4 border-blue-800 p-4 rounded-r-md space-y-2">
+                    <p><strong>Tác giả:</strong> Nguyễn Thị Hậu (sinh năm 1958), là nhà nghiên cứu khảo cổ học, văn hóa học.</p>
+                    <p><strong>Xuất xứ:</strong> Trích từ tác phẩm <em>Thế giới mạng & tôi</em>, NXB Văn học – Công ty cổ phần Sách Thái Hà, Hà Nội, 2014 (tr. 15-18).</p>
+                    <p><strong>Hoàn cảnh sáng tác ghi nhận:</strong> Sài Gòn, 5/10/2012.</p>
+                </div>
+            </div>
+
+            <!-- Khung minh họa h1.png -->
+            <div class="my-4 text-center">
+                <div class="border-2 border-dashed border-gray-400 rounded-lg p-4 bg-gray-50 max-w-md mx-auto">
+                    <img src="h1.png">
+                    <div class="text-gray-500 py-6">
+                        <div class="text-4xl mb-2">🌐</div>
+                        <p class="font-semibold">[ Khung minh họa: h1.png ]</p>
+                        <p class="text-xs">Sự tương tác giữa cá nhân và không gian mạng ảo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mục 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-blue-900">
+                    <span class="circle-badge">2</span> Ba điểm trọng tâm cần lưu ý khi thực hành đọc
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <div class="font-bold text-blue-800 mb-1">01. Trải nghiệm cá nhân</div>
+                        <p class="text-sm">Cách nhìn nhận về thế giới mạng thông qua góc nhìn và cảm nhận cá nhân đời thực.</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <div class="font-bold text-blue-800 mb-1">02. Thái độ chủ động</div>
+                        <p class="text-sm">Xác định bản lĩnh, sự tỉnh táo và trách nhiệm của bản thân trước thế giới mạng.</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <div class="font-bold text-blue-800 mb-1">03. Phong cách nghị luận</div>
+                        <p class="text-sm">Sức hấp dẫn riêng biệt của nghệ thuật nghị luận dưới hình thức tâm sự, thổ lộ chân thành.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION II: NỘI DUNG VÀ NGHỆ THUẬT BÀI HỌC -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold text-gray-800 uppercase flex items-center section-header">
+                <span class="square-badge">II</span> KHÁM PHÁ CHI TIẾT VĂN BẢN
+            </h2>
+
+            <!-- Mục 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-blue-900">
+                    <span class="circle-badge">1</span> Thế giới mạng – Khả năng "biến hóa" và hiện thực tính hai mặt
+                </h3>
+                <div class="bg-slate-50 p-4 border border-slate-300 rounded-md leading-relaxed space-y-2">
+                    <p>• <strong>Sự tự do bộc lộ:</strong> Mạng xã hội cho phép con người thể hiện đủ mọi sắc thái tính cách (kiêu ngạo, yếu đuối, hài hước, lãng mạn, độc đoán...). Ở đó, ai cũng có quyền tự do tỏ bày, bộc lộ, bức xúc, tán thưởng, phản đối, tranh luận...</p>
+                    <p>• <strong>Cảm xúc hai chiều:</strong> Mạng có thể giúp nỗi cô đơn "loãng ra, nhạt đi, nhẹ đi", nhưng cũng chính mạng có lúc lại khiến con người cảm thấy "cô đơn trên mạng" nhiều hơn.</p>
+                </div>
+            </div>
+
+            <!-- Mục 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-blue-900">
+                    <span class="circle-badge">2</span> Quy luật tương tác và "Giới hạn" trên không gian mạng
+                </h3>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-md space-y-2">
+                    <p class="font-semibold text-amber-900">Khái niệm cốt lõi: Quy luật "Ném ra cái gì – Nhận lại cái đó"</p>
+                    <p class="text-gray-800">Mọi status \( (1) \), comment \( (2) \), note \( (3) \), entry \( (4) \) đều chịu sự va đập của cộng đồng. Sự tương tác tức thời và "không biên giới" có sức quyến rũ mê hoặc ghê gớm nhưng đồng thời là sức mạnh có thể "hủy diệt" một cá nhân trong chốc lát.</p>
+                </div>
+
+                <!-- Bảng so sánh ranh giới ứng xử -->
+                <div class="overflow-x-auto mt-4">
+                    <table class="w-full text-sm text-center border-collapse border border-[#cbd5e0]">
+                        <thead>
+                            <tr class="bg-[#e2e8f0] text-gray-800 font-bold">
+                                <th class="border border-[#cbd5e0] p-3">Biểu hiện tích cực / Chuẩn mực</th>
+                                <th class="border border-[#cbd5e0] p-3">Ranh giới vượt quá (Nguy cơ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3">Bỗ bã, tếu táo, vui vẻ</td>
+                                <td class="border border-[#cbd5e0] p-3 text-red-600 font-medium">Trở nên đanh đá, hỗn hào</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-[#cbd5e0] p-3">Nhận xét, khen chê công bằng</td>
+                                <td class="border border-[#cbd5e0] p-3 text-red-600 font-medium">Biến thành tâng bốc hoặc mạt sát</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3">Quan hệ "ảo" chia sẻ chân thành</td>
+                                <td class="border border-[#cbd5e0] p-3 text-red-600 font-medium">Bạn "thật" thành "ảo", chóng tan như mưa bóng mây</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Khung minh họa h2.png -->
+            <div class="my-4 text-center">
+                <div class="border-2 border-dashed border-gray-400 rounded-lg p-4 bg-gray-50 max-w-md mx-auto">
+                    <img src="h2.png">
+                    <div class="text-gray-500 py-6">
+                        <div class="text-4xl mb-2">🔍</div>
+                        <p class="font-semibold">[ Khung minh họa: h2.png ]</p>
+                        <p class="text-xs">Thế giới mạng như một tấm gương phóng đại cuộc sống</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mục 3 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-semibold flex items-center text-blue-900">
+                    <span class="circle-badge">3</span> Hình ảnh so sánh ẩn dụ & Bài học tỉnh táo
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                    <p class="font-bold text-blue-900 mb-2">Định nghĩa & Luận điểm trọng tâm:</p>
+                    <p class="italic">"Thế giới mạng như một tấm gương của cuộc sống, chỉ có điều cần lưu ý, nó là tấm gương phóng đại nhiều lần những tốt đẹp hay xấu xa của mỗi con người, của một xã hội."</p>
+                    <p class="mt-2 text-sm">➔ <strong>Giải pháp của tác giả:</strong> Cần giữ sự <em>tỉnh táo</em> để biết nhìn ra chân giá trị của mình và của người khác khi đối diện với tấm gương phóng đại ấy.</p>
+                </div>
+            </div>
+
+            <!-- MỤC HOẠT ĐỘNG (Hình bàn tay / Nêu vấn đề) -->
+            <div class="bg-slate-100 border-l-4 border-yellow-500 p-4 rounded-r-lg space-y-3">
+                <div class="flex items-center text-yellow-800 font-bold text-base">
+                    <span class="mr-2 text-xl">✋</span> HOẠT ĐỘNG THẢO LUẬN: BÀN VỀ THÁI ĐỘ ỨNG XỬ MẠNG
+                </div>
+                <p class="text-gray-700">Tại sao tác giả lại khẳng định: <em>"Thế giới mạng rất 'tỉnh tướng', không phải cứ đạo mạo lên mặt dạy đời chê bai tất cả thì mạng sẽ vì nể"?</em> Hãy nêu góc nhìn của em.</p>
+                <button onclick="toggleAnswer('act-1')" class="btn-accent px-4 py-1.5 rounded text-sm shadow">
+                    Xem hướng giải quyết
+                </button>
+                <div id="act-1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-md mt-2 text-sm text-gray-800">
+                    <strong>Hướng giải quyết:</strong> 
+                    Mạng xã hội tập hợp nhiều tầng lớp và tri thức khác nhau. Hành vi "đạo mạo, dạy đời" thể hiện sự thượng đẳng giả tạo, dễ bị cộng đồng mạng bóc trần và phản ứng ngược. Ngược lại, sự chân thành, khiêm tốn và tôn trọng ranh giới giao tiếp mới tạo dựng được giá trị thực sự.
+                </div>
+            </div>
+
+            <!-- MỤC DẤU BẤM CÂU HỎI ? -->
+            <div class="bg-[#edf2f7] border-l-4 border-[#1E3A8A] p-4 rounded-r-lg space-y-3">
+                <div class="flex items-center text-[#1E3A8A] font-bold text-base">
+                    <span class="mr-2 text-xl">❓</span> CÂU HỎI KHÁM PHÁ VĂN BẢN
+                </div>
+                <p class="text-gray-800">Sức hấp dẫn riêng của phương thức nghị luận trong văn bản này đến từ đâu?</p>
+                <button onclick="toggleAnswer('q-1')" class="btn-accent px-4 py-1.5 rounded text-sm shadow">
+                    Xem lời giải
+                </button>
+                <div id="q-1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-md mt-2 text-sm text-gray-800">
+                    <strong>Lời giải chi tiết:</strong><br>
+                    Sức hấp dẫn nằm ở việc kết hợp hài hòa giữa **lý lẽ nghị luận sắc bén** với **hình thức tâm sự, thổ lộ tự nhiên**. Tác giả không dùng giọng điệu áp đặt, giáo điều mà chia sẻ trải nghiệm từ chính việc "lướt mạng mỗi ngày" của bản thân, tạo cảm giác gần gũi, đồng cảm sâu sắc với người đọc.
+                </div>
+            </div>
+
+            <!-- KHUNG THÀNH PHẦN ĐẶC BIỆT: EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <!-- Em có biết -->
+                <div class="bg-purple-50 border border-purple-300 rounded-lg p-4">
+                    <h4 class="font-bold text-purple-900 mb-2 flex items-center">
+                        💡 em có biết
+                    </h4>
+                    <p class="text-xs text-purple-950 leading-relaxed">
+                        Các thuật ngữ mạng như <em>status, comment, entry, note</em> xuất hiện mạnh mẽ từ những năm 2008-2012 gắn liền với thời kỳ bùng nổ của Blog Yahoo! 360 và Facebook tại Việt Nam. Tác giả Nguyễn Thị Hậu đã sớm ghi nhận hiện tượng này dưới góc nhìn văn hóa học.
+                    </p>
+                </div>
+
+                <!-- Em có thể -->
+                <div class="bg-teal-50 border border-teal-300 rounded-lg p-4">
+                    <h4 class="font-bold text-teal-900 mb-2 flex items-center">
+                        🎯 em có thể
+                    </h4>
+                    <p class="text-xs text-teal-950 leading-relaxed">
+                        Tự thiết lập "Bộ quy tắc ứng xử mạng cá nhân": kiểm soát cảm xúc trước khi phát ngôn, xác minh thông tin trước khi bình luận, và học cách ngắt kết nối ảo để kết nối đời thực khi cảm thấy cô đơn.
+                    </p>
+                </div>
+
+                <!-- Lưu ý -->
+                <div class="bg-rose-50 border border-rose-300 rounded-lg p-4">
+                    <h4 class="font-bold text-rose-900 mb-2 flex items-center">
+                        📌 lưu ý
+                    </h4>
+                    <p class="text-xs text-rose-950 leading-relaxed">
+                        Văn bản nghị luận xã hội dưới dạng tâm sự cần giữ được sự cân bằng: vừa đảm bảo tính logic, chặt chẽ của lý lẽ, vừa phải giữ được hơi thở đời sống và sự tự nhiên trong cảm xúc.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III: LUYỆN TẬP CỦNG CỐ & GAMESHOW -->
+        <div class="bg-white rounded-[12px] shadow-md p-6 space-y-6">
+            <h2 class="text-xl font-bold text-gray-800 uppercase flex items-center section-header">
+                <span class="square-badge">III</span> CỦNG CỐ & ĐÁNH GIÁ NĂNG LỰC
+            </h2>
+
+            <!-- GAMESHOW "AI LÀ TRIỆU PHÚ" -->
+            <div class="bg-slate-900 text-white p-6 rounded-xl shadow-lg border-2 border-yellow-500">
+                <div class="text-center mb-6">
+                    <span class="bg-yellow-500 text-slate-950 font-extrabold px-3 py-1 rounded-full text-xs tracking-wider uppercase">GAMESHOW</span>
+                    <h3 class="text-2xl font-black text-yellow-400 mt-2">AI LÀ TRIỆU PHÚ NGỮ VĂN</h3>
+                    <p class="text-xs text-gray-300 mt-1">Vượt qua 10 câu hỏi trắc nghiệm để chinh phục đỉnh cao tri thức!</p>
+                </div>
+
+                <form id="quizForm" class="space-y-6">
+                    <!-- Câu 1 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 1: Tác giả của văn bản "Thế giới mạng & tôi" là ai?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q1" value="A" class="mr-2"> A. Nguyễn Ngọc Tư</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q1" value="B" class="mr-2"> B. Nguyễn Thị Hậu</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q1" value="C" class="mr-2"> C. Đặng Anh Đào</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q1" value="D" class="mr-2"> D. Băng Sơn</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 2 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 2: Phương thức biểu đạt chính của văn bản là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q2" value="A" class="mr-2"> A. Biểu cảm</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q2" value="B" class="mr-2"> B. Tự sự</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q2" value="C" class="mr-2"> C. Nghị luận</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q2" value="D" class="mr-2"> D. Thuyết minh</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 3 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 3: Theo tác giả, thế giới mạng giống như hình ảnh so sánh nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q3" value="A" class="mr-2"> A. Một mê cung không lối thoát</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q3" value="B" class="mr-2"> B. Tấm gương phóng đại cuộc sống</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q3" value="C" class="mr-2"> C. Cuốn sách mở ra tri thức</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q3" value="D" class="mr-2"> D. Con dao hai lưỡi sắc bén</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 4 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 4: Chú thích (2) trong văn bản giải thích thuật ngữ "Tuổi teen" là khoảng độ tuổi nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q4" value="A" class="mr-2"> A. Từ 10 đến 15 tuổi</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q4" value="B" class="mr-2"> B. Từ 13 đến 19 tuổi</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q4" value="C" class="mr-2"> C. Từ 15 đến 22 tuổi</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q4" value="D" class="mr-2"> D. Từ 18 đến 25 tuổi</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 5 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 5: Đặc điểm nào sau đây mô tả đúng về "ngôn ngữ trên mạng" theo tác giả?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q5" value="A" class="mr-2"> A. Bắt buộc tuân theo chuẩn mực hàn lâm</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q5" value="B" class="mr-2"> B. Do bạn lựa chọn và là một phần con người bạn</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q5" value="C" class="mr-2"> C. Hoàn toàn giả tạo không phản ánh đời thực</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q5" value="D" class="mr-2"> D. Giống hệt ngôn ngữ giao tiếp hành chính</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 6 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 6: Theo bài viết, sự tương tác tức thời và không biên giới trên mạng có nguy cơ gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q6" value="A" class="mr-2"> A. Làm mất kết nối internet toàn cầu</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q6" value="B" class="mr-2"> B. Có thể "hủy diệt" một cá nhân trong chốc lát</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q6" value="C" class="mr-2"> C. Khiến con người lãng quên quá khứ</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q6" value="D" class="mr-2"> D. Làm gia tăng chi phí sử dụng mạng</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 7 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 7: Thái độ của tác giả đối với việc lướt mạng mỗi ngày là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q7" value="A" class="mr-2"> A. Phản đối và kêu gọi tẩy chay mạng xã hội</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q7" value="B" class="mr-2"> B. Nghiện ngập và phụ thuộc hoàn toàn vào mạng</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q7" value="C" class="mr-2"> C. Vẫn lướt mạng nhưng giữ sự tỉnh táo để nhìn ra chân giá trị</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q7" value="D" class="mr-2"> D. Thờ ơ và xem mạng chỉ là trò giải trí vô bổ</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 8 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 8: Từ "Entry" được giải thích trong chú thích mang nghĩa là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q8" value="A" class="mr-2"> A. Bài viết trên trang nhật ký trực tuyến (blog)</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q8" value="B" class="mr-2"> B. Ý kiến bình luận dưới bài viết</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q8" value="C" class="mr-2"> C. Dòng trạng thái đăng lên trang cá nhân</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q8" value="D" class="mr-2"> D. Thư điện tử cá nhân</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 9 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 9: Điểm hấp dẫn cốt lõi của bài văn nghị luận này là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q9" value="A" class="mr-2"> A. Sử dụng nhiều số liệu thống kê phức tạp</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q9" value="B" class="mr-2"> B. Giọng văn đe dọa, mang tính phê phán gắt gao</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q9" value="C" class="mr-2"> C. Hình thức tâm sự, thổ lộ tự nhiên, giàu trải nghiệm</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q9" value="D" class="mr-2"> D. Trích dẫn nhiều tác phẩm cổ điển thế giới</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 10 -->
+                    <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                        <p class="font-semibold text-yellow-300 mb-3">Câu 10: Quy luật ứng xử nào trên mạng được tác giả đúc kết ngắn gọn?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q10" value="A" class="mr-2"> A. "Cho đi là còn mãi"</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q10" value="B" class="mr-2"> B. "Bạn 'ném' ra cái gì thì thế giới mạng sẽ trả lại bạn cái đó"</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q10" value="C" class="mr-2"> C. "Im lặng là vàng"</label>
+                            <label class="quiz-option p-2 rounded border border-slate-600 cursor-pointer block"><input type="radio" name="q10" value="D" class="mr-2"> D. "Thắng làm vua, thua làm giặc"</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button type="button" onclick="checkQuiz()" style="background-color: #1E3A8A;" class="text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-lg border border-blue-400">
+                            NỘP BÀI KẾT QUẢ
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Kết quả Quiz -->
+                <div id="quizResult" class="hidden mt-6 p-4 rounded-lg bg-slate-800 border border-slate-600">
+                    <h4 id="scoreText" class="text-xl font-bold text-center mb-3"></h4>
+                    <div id="quizFeedback" class="space-y-2 text-sm"></div>
+                </div>
+            </div>
+
+            <!-- BÀI TẬP TỰ LUẬN  & VẬN DỤNG -->
+            <div class="space-y-4 pt-4">
+                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-900 pb-2">
+                    BÀI TẬP TỰ LUẬN & PHÂN TÍCH TỔNG HỢP
+                </h3>
+
+                <!-- 
+
+                <!-- Bài 1 -->
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-300 space-y-2">
+                    <p class="font-semibold text-gray-800">Bài 1 (Phân tích nghệ thuật nghị luận):</p>
+                    <p class="text-sm">Phân tích tác dụng của hình ảnh ẩn dụ "tấm gương phóng đại" được tác giả Nguyễn Thị Hậu sử dụng trong đoạn kết văn bản.</p>
+                    <button onclick="toggleAnswer('essay-2')" class="btn-accent px-4 py-1 rounded text-sm shadow">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay-2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-md text-sm space-y-2">
+                        <p><strong>Lời giải:</strong></p>
+                        <p>• <strong>Hình ảnh ẩn dụ:</strong> "Tấm gương phóng đại" thể hiện bản chất phản chiếu của mạng xã hội.</p>
+                        <p>• <strong>Tác dụng:</strong> Phản ánh tính chất làm gia tăng, khuếch đại quy mô của mọi cảm xúc và hành vi (cả tốt lẫn xấu). Nhờ đó, người đọc thấy được sự cần thiết phải rèn luyện bản lĩnh "tỉnh táo" để soi rọi lại chính mình thay vì bị cuốn theo những dư luận ảo.</p>
+                    </div>
+                </div>
+
+                <!-- Bài 2 -->
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-300 space-y-2">
+                    <p class="font-semibold text-gray-800">Bài  (Viết đoạn văn nghị luận ngắn):</p>
+                    <p class="text-sm">Từ câu nói *"Bạn 'ném' ra cái gì thì thế giới mạng sẽ trả lại bạn cái đó"*, hãy viết 1 đoạn văn (từ 5 - 7 câu) nêu thông điệp ứng xử cho bản thân.</p>
+                    <button onclick="toggleAnswer('essay-3')" class="btn-accent px-4 py-1 rounded text-sm shadow">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay-3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-md text-sm space-y-2">
+                        <p><strong>Lời giải gợi ý:</strong></p>
+                        <p class="italic">"Câu nói của tác giả đúc kết chính xác quy luật nhân quả trong không gian số. Mọi phát ngôn tiêu cực, cào phím thiếu suy nghĩ sẽ kéo theo sự mạt sát và thù ghét từ cộng đồng. Trái lại, khi lan tỏa sự tử tế, lời khen chân thành và tri thức có giá trị, chúng ta sẽ nhận lại sự kết nối văn minh. Do đó, trước khi nhấn nút 'đăng' hay 'bình luận', tôi luôn tự nhắc mình phải kiểm soát cảm xúc. Văn hóa ứng xử trên mạng là bản chiếu thu nhỏ của nhân cách ngoài đời thực."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-gray-600 text-sm py-4 border-t border-gray-300">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Hàm ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('hidden');
+            }
+        }
+
+        // Hàm kiểm tra đáp án Quiz "Ai là triệu phú"
+        function checkQuiz() {
+            const correctAnswers = {
+                q1: "B",
+                q2: "C",
+                q3: "B",
+                q4: "B",
+                q5: "B",
+                q6: "B",
+                q7: "C",
+                q8: "A",
+                q9: "C",
+                q10: "B"
+            };
+
+            const explanations = {
+                q1: "Nguyễn Thị Hậu là tác giả bài viết 'Thế giới mạng & tôi'.",
+                q2: "Bài viết thuộc thể loại văn bản nghị luận xã hội.",
+                q3: "Tác giả so sánh mạng xã hội như 'tấm gương phóng đại nhiều lần'.",
+                q4: "Chú thích (2) định nghĩa tuổi teen từ 13 đến 19 tuổi.",
+                q5: "Ngôn ngữ mạng do bạn lựa chọn và là một phần con người bạn.",
+                q6: "Tương tác mạng có sức mạnh 'hủy diệt' một cá nhân trong chốc lát.",
+                q7: "Tác giả vẫn lướt mạng mỗi ngày nhưng giữ sự tỉnh táo.",
+                q8: "Entry có nghĩa là bài viết trên trang nhật ký trực tuyến (blog).",
+                q9: "Sức hấp dẫn đến từ hình thức tâm sự, thổ lộ tự nhiên, giàu trải nghiệm.",
+                q10: "Quy luật ứng xử tác giả nêu: Bạn 'ném' ra cái gì thì mạng trả lại cái đó."
+            };
+
+            let score = 0;
+            let total = 10;
+            let feedbackHtml = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qKey = "q" + i;
+                const selected = document.querySelector(`input[name="${qKey}"]:checked`);
+                const userAns = selected ? selected.value : null;
+                const rightAns = correctAnswers[qKey];
+
+                if (userAns === rightAns) {
+                    score++;
+                    feedbackHtml += `<div class="text-green-400">✓ <strong>Câu ${i}: Đúng!</strong> (${explanations[qKey]})</div>`;
+                } else {
+                    feedbackHtml += `<div class="text-red-400">✗ <strong>Câu ${i}: Sai.</strong> Đáp án đúng là <strong>${rightAns}</strong>. (${explanations[qKey]})</div>`;
+                }
+            }
+
+            const resultDiv = document.getElementById("quizResult");
+            const scoreText = document.getElementById("scoreText");
+            const quizFeedback = document.getElementById("quizFeedback");
+
+            resultDiv.classList.remove("hidden");
+            
+            if (score === total) {
+                scoreText.className = "text-xl font-bold text-center mb-3 text-green-400";
+                scoreText.innerHTML = `XIN CHÚC MỪNG! BẠN ĐẠT ĐIỂM TỐI ĐA: ${score}/${total} ĐIỂM! 🎉`;
+            } else {
+                scoreText.className = "text-xl font-bold text-center mb-3 text-yellow-400";
+                scoreText.innerHTML = `KẾT QUẢ CỦA BẠN: ${score}/${total} ĐIỂM`;
+            }
+
+            quizFeedback.innerHTML = feedbackHtml;
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

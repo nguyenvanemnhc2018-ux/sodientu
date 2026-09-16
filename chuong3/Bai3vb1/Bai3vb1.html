@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiền tài là nguyên khí của quốc gia - Bài học tương tác</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Library -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .btn-primary {
+            background-color: #2563EB;
+            color: #ffffff;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .btn-accent {
+            background-color: #22c55e;
+            color: #ffffff;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-accent:hover {
+            background-color: #16a34a;
+            transform: translateY(-1px);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #e2e8f0;
+            font-weight: bold;
+        }
+        .section-header-title {
+            border-bottom: 4px solid #1E3A8A;
+            padding-bottom: 6px;
+        }
+        .quiz-option {
+            transition: background-color 0.15s ease;
+        }
+        .quiz-option:hover {
+            background-color: #eff6ff;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+            <!-- Khối Tên Chương (Color 1: #1E3A8A) -->
+            <div style="background-color: #1E3A8A;" class="text-white text-center py-4 px-6 font-bold text-lg md:text-xl tracking-wide uppercase">
+                CHƯƠNG: NGHỆ THUẬT THUYẾT PHỤC TRONG VĂN NGHỊ LUẬN
+            </div>
+            <!-- Đường kẻ mảnh phân cách -->
+            <div class="border-b border-white opacity-30"></div>
+            <!-- Khối Tên Bài (Color 2: #2563EB) -->
+            <div style="background-color: #2563EB;" class="text-white text-center py-6 px-6 font-extrabold text-2xl md:text-3xl tracking-wider uppercase">
+                HIỀN TÀI LÀ NGUYÊN KHÍ CỦA QUỐC GIA
+                <div class="text-sm font-normal normal-case italic opacity-90 mt-2">(Trích "Bài kí đề danh tiến sĩ khoa Nhâm Tuất niên hiệu Đại Bảo thứ ba") — Thân Nhân Trung</div>
+            </div>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="bg-white border border-gray-900 rounded-xl p-5 shadow-sm space-y-3">
+            <h3 class="font-bold text-gray-800 flex items-center gap-2">
+                <span class="text-xl">💡</span> LỜI DẪN KHỞI ĐỘNG
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 italic">
+                <li>Bạn nghĩ gì khi nhìn thấy (trực tiếp hoặc qua phim ảnh) những hàng bia tiến sĩ ở Văn Miếu – Quốc Tử Giám (Hà Nội)?</li>
+                <li>Bạn đã thấy, đã nghe câu <i>"Hiền tài là nguyên khí của quốc gia"</i> ở đâu, trong hoàn cảnh nào?</li>
+            </ul>
+        </div>
+
+        <!-- SECTION I: TÁC GIẢ VÀ TÁC PHẨM -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header-title text-xl font-bold uppercase text-gray-900 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded border-2 border-slate-900 bg-slate-900 text-white font-bold text-base mr-3 shadow">I</span>
+                TÁC GIẢ VÀ BỐI CẢNH TÁC PHẨM
+            </h2>
+
+            <!-- Item 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-700 text-white font-bold text-sm mr-2">1</span>
+                    Tác giả Thân Nhân Trung
+                </h3>
+                <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-md text-gray-800 space-y-2">
+                    <p><b>• Thân Nhân Trung (1418 – 1499):</b> Tự là Hậu Phủ, danh sĩ thời Hậu Lê, quê ở Bắc Giang.</p>
+                    <p><b>• Sự nghiệp:</b> Đỗ Tiến sĩ năm 1469, được triều đình Lê Thánh Tông trọng dụng, góp nhiều công sức tuyển chọn và đào tạo nhân tài; ông từng là thành viên chủ chốt của Hội Tao đàn.</p>
+                </div>
+            </div>
+
+            <!-- Khung hình h1.png -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h1.png" alt="" class="mx-auto max-h-64 object-contain mb-2 rounded shadow-sm" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x300?text=Hang+Bia+Tien+Si+Van+Mieu';">
+                <span class="text-sm text-gray-500 italic">Hình 1: Khung cảnh hàng bia Tiến sĩ tại Văn Miếu - Quốc Tử Giám (h1.png)</span>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-700 text-white font-bold text-sm mr-2">2</span>
+                    Xuất xứ và bối cảnh ra đời
+                </h3>
+                <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-md text-gray-800 space-y-2">
+                    <p><b>• Xuất xứ:</b> Trích từ bài văn bia do Thân Nhân Trung soạn năm 1484 (niên hiệu Hồng Đức) vâng mệnh vua Lê Thánh Tông.</p>
+                    <p><b>• Bối cảnh:</b> Năm 1484, vua Lê Thánh Tông bắt đầu cho dựng bia ghi danh các Tiến sĩ đỗ từ khoa thi Nhâm Tuất (1442) nhằm tôn vinh tri thức, ghi nhận 33 vị đỗ tiến sĩ khoa này và khởi đầu truyền thống dựng bia ghi danh.</p>
+                </div>
+            </div>
+
+            <!-- Bảng tóm tắt từ ngữ chú giải -->
+            <div class="space-y-2">
+                <h4 class="font-bold text-gray-800 text-sm uppercase tracking-wider">Tóm tắt thuật ngữ cốt lõi trong văn bản</h4>
+                <div class="overflow-x-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Thuật ngữ</th>
+                                <th>Giải thích ý nghĩa chi tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold text-blue-800">Hiền tài</td>
+                                <td class="text-left">Người tài giỏi, có phẩm chất đạo đức cao quý nổi bật, là thành phần ưu tú nhất của xã hội.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-blue-800">Nguyên khí</td>
+                                <td class="text-left">Chất làm nên cơ sở tồn tại, phát triển và sức sống mạnh mẽ của một đất nước, xã hội.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-blue-800">Thánh đế minh vương</td>
+                                <td class="text-left">Bậc cai trị (vua, chúa) tài giỏi, sáng suốt (trực tiếp chỉ vua Lê Thánh Tông).</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-blue-800">Sĩ phu / Kẻ sĩ</td>
+                                <td class="text-left">Tầng lớp trí thức, những người học rộng tài cao trong xã hội thời phong kiến.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-blue-800">Mệnh mạch</td>
+                                <td class="text-left">Tính mạng và huyết mạch; ở đây dùng để chỉ vận mệnh sống còn của đất nước.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION II: NỘI DUNG VĂN BẢN VÀ LẬP LUẬN -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header-title text-xl font-bold uppercase text-gray-900 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded border-2 border-slate-900 bg-slate-900 text-white font-bold text-base mr-3 shadow">II</span>
+                NỘI DUNG VĂN BẢN VÀ HỆ THỐNG LẬP LUẬN
+            </h2>
+
+            <!-- Item 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-700 text-white font-bold text-sm mr-2">1</span>
+                    Tư tưởng cốt lõi: Quan hệ giữa Hiền tài và Vận mệnh Quốc gia
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3 text-blue-950">
+                    <p class="font-bold text-lg text-blue-900">📌 Luận điểm tiền đề:</p>
+                    <blockquote class="italic border-l-4 border-blue-600 pl-4 py-1 text-base bg-white/80 rounded-r">
+                        "Hiền tài là nguyên khí của quốc gia, nguyên khí thịnh thì thế nước mạnh, rồi lên cao, nguyên khí suy thì thế nước yếu, rồi xuống thấp."
+                    </blockquote>
+                    <p><b>• Mối quan hệ nhân quả:</b> Hiền tài quyết định sự sống còn, hưng thịnh hay suy vong của toàn bộ thể chế và đất nước.</p>
+                    <p><b>• Thái độ của các bậc thánh vương:</b> Bồi dưỡng nhân tài, kén chọn kẻ sĩ, vun trồng nguyên khí làm việc ưu tiên hàng đầu.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-700 text-white font-bold text-sm mr-2">2</span>
+                    Các chính sách tôn vinh Hiền tài của Triều đình
+                </h3>
+                <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-md text-gray-800 space-y-2">
+                    <p>Triều đình đã dành cho người đỗ đạt nhiều ân huệ đặc biệt:</p>
+                    <ul class="list-disc list-inside space-y-1 ml-2">
+                        <li>Ban khoa danh, đề cao bằng tước trật, chức vị.</li>
+                        <li>Nêu tên ở tháp Nhạn (lưu danh thi đỗ).</li>
+                        <li>Ban danh hiệu Long hổ, bày tiệc Văn hỷ mừng người tài.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-gray-800 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-700 text-white font-bold text-sm mr-2">3</span>
+                    Mục đích và Ý nghĩa của việc dựng Bia Tiến sĩ
+                </h3>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-5 space-y-3">
+                    <p class="font-bold text-indigo-950">Dù đã ban nhiều ân huệ nhưng nhà vua vẫn cho là "chưa đủ", vì vậy phải khắc bia đá vĩnh cửu nhằm:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <div class="bg-white p-3 rounded-lg border border-indigo-200 shadow-sm">
+                            <b class="text-indigo-900 block mb-1">1. Khuyến khích kẻ sĩ:</b>
+                            Giúp sĩ phu trông vào mà phấn chấn, hâm mộ, rèn luyện danh tiết, dốc sức phụng sự đất nước.
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-indigo-200 shadow-sm">
+                            <b class="text-indigo-900 block mb-1">2. Răn đe kẻ gian ác:</b>
+                            Làm cho kẻ có ý xấu nhìn vào bia đá mà răn cấm bản thân, ngăn chặn thói tha hóa, hối lộ.
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-indigo-200 shadow-sm">
+                            <b class="text-indigo-900 block mb-1">3. Củng cố mệnh mạch:</b>
+                            Dẫn việc dĩ vãng, chỉ lối tương lai, làm bền vững nền tảng trị an của nhà nước.
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-indigo-200 shadow-sm">
+                            <b class="text-indigo-900 block mb-1">4. Lưu danh muôn đời:</b>
+                            Để danh thơm không bị phai nhòa theo thời gian như tiệc tùng hay danh hiệu ngắn hạn.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khung hình h2.png -->
+            <div class="my-4 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+                <img src="h2.png" alt="" class="mx-auto max-h-64 object-contain mb-2 rounded shadow-sm" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x300?text=So+Do+Tu+Duy+Lap+Luan';">
+                <span class="text-sm text-gray-500 italic">Hình 2: Sơ đồ tư duy logic lập luận trong bài kí (h2.png)</span>
+            </div>
+
+            <!-- HOẠT ĐỘNG / NÊU VẤN ĐỀ -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl space-y-3">
+                <div class="font-bold text-amber-900 flex items-center gap-2 text-lg">
+                    <span>✋</span> HOẠT ĐỘNG / NÊU VẤN ĐỀ
+                </div>
+                <p class="text-gray-800">
+                    <b>Đặt vấn đề:</b> Tại sao các bậc thánh vương đã cho kén chọn kẻ sĩ, ban tước trật, nêu tên ở tháp Nhạn, bày tiệc Văn hỷ mà vẫn cho là "chưa đủ" và phải quyết định dựng bia đá tại Quốc Tử Giám?
+                </p>
+                <button onclick="toggleAnswer('act-problem')" class="btn-primary px-4 py-2 rounded-lg text-sm shadow">
+                    Xem hướng giải quyết
+                </button>
+                <div id="act-problem" class="hidden bg-white p-4 border border-amber-300 rounded-lg text-gray-800 space-y-2">
+                    <p><b>Hướng giải quyết:</b> Các hình thức đãi ngộ như tiệc mừng hay chức tước chỉ có giá trị nhất thời, giới hạn trong đời người. Việc <b>dựng bia đá</b> mang tính chất trường tồn muôn đời ("lưu vẻ sáng lâu dài"), vừa tạo sức mạnh nhắc nhở trách nhiệm đạo đức lớn lao cho sĩ phu đương thời, vừa để lại tấm gương soi cho hàng trăm thế hệ mai sau.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- THÀNH PHẦN ĐẶC BIỆT -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Em có biết -->
+            <div class="bg-amber-50 border border-amber-300 p-5 rounded-xl space-y-2 shadow-sm">
+                <h4 class="font-bold text-amber-900 flex items-center gap-2 text-base">
+                    <span>📌</span> EM CÓ BIẾT?
+                </h4>
+                <p class="text-sm text-amber-900 leading-relaxed">
+                    Hiện nay tại Văn Miếu – Quốc Tử Giám (Hà Nội) còn lưu giữ <b>82 tấm bia Tiến sĩ</b> khắc bằng đá xanh, đặt trên lưng rùa. Năm 2010, 82 tấm bia này đã được UNESCO chính thức công nhận là <i>Di sản tư liệu thế giới</i> thuộc Chương trình Ký ức Thế giới.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-indigo-50 border border-indigo-300 p-5 rounded-xl space-y-2 shadow-sm">
+                <h4 class="font-bold text-indigo-900 flex items-center gap-2 text-base">
+                    <span>🚀</span> EM CÓ THỂ
+                </h4>
+                <p class="text-sm text-indigo-900 leading-relaxed">
+                    Vận dụng tư tưởng "nguyên khí quốc gia" để viết một đoạn văn ngắn (khoảng 150 chữ) bàn luận về tầm quan trọng của việc thu hút nhân tài và phát triển nguồn nhân lực chất lượng cao trong thời đại công nghệ số hiện nay.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border border-rose-300 p-5 rounded-xl space-y-2 shadow-sm">
+                <h4 class="font-bold text-rose-900 flex items-center gap-2 text-base">
+                    <span>⚠️</span> LƯU Ý
+                </h4>
+                <p class="text-sm text-rose-900 leading-relaxed">
+                    Câu văn <i>"Hiền tài là nguyên khí của quốc gia"</i> được tác giả đặt ngay ở đầu bài kí để làm tiền đề tư tưởng trực tiếp, định hướng toàn bộ lý lẽ và dẫn chứng cho phần lập luận về mục đích dựng bia đá phía sau.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION III: BÀI TẬP VÀ CÂU HỎI SGK -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header-title text-xl font-bold uppercase text-gray-900 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded border-2 border-slate-900 bg-slate-900 text-white font-bold text-base mr-3 shadow">III</span>
+                CÂU HỎI VÀ BÀI TẬP HƯỚNG DẪN (SGK)
+            </h2>
+
+            <!-- Question 1 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 1 (SGK Trang 76):</b> Tìm trong đoạn 2 của văn bản những từ ngữ thể hiện thái độ trọng dụng hiền tài của "các đấng thánh đế minh vương".</p>
+                <button onclick="toggleAnswer('sgk-q1')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q1" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950">
+                    <b>Trả lời chi tiết:</b> Các từ ngữ thể hiện thái độ trọng dụng đặc biệt: <i>"bồi dưỡng nhân tài", "kén chọn kẻ sĩ", "vun trồng nguyên khí", "quý chuộng kẻ sĩ không biết thế nào là cùng", "yêu mến cho khoa danh", "đề cao bằng tước trật", "nêu tên ở tháp Nhạn", "ban danh hiệu Long hổ", "bày tiệc Văn hỷ"</i>. Tác giả khẳng định: <i>"Triều đình mừng được người tài, không có việc gì không làm đến mức cao nhất."</i>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 2 (SGK Trang 76):</b> Trong văn bản có một câu trực tiếp nói về mục đích của việc dựng bia ghi danh những người đỗ tiến sĩ. Bạn hãy cho biết đó là câu nào?</p>
+                <button onclick="toggleAnswer('sgk-q2')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q2" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950">
+                    <b>Trả lời chi tiết:</b> Câu văn trực tiếp nêu mục đích dựng bia: <i>"Thế thì việc dựng tấm bia đá này ích lợi rất nhiều: kẻ ác lấy đó làm răn, người thiện theo đó mà gắng, dẫn việc dĩ vãng, chỉ lối tương lai, vừa để rèn giũa danh tiếng cho sĩ phu, vừa để củng cố mệnh mạch cho nhà nước."</i>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 3 (SGK Trang 76):</b> Xác định luận đề của văn bản và cho biết vì sao bạn xác định như vậy?</p>
+                <button onclick="toggleAnswer('sgk-q3')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q3" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950 space-y-2">
+                    <p><b>Trả lời chi tiết:</b></p>
+                    <p>• <b>Luận đề:</b> Khẳng định tầm quan trọng sống còn của hiền tài đối với quốc gia và ý nghĩa to lớn của việc tôn vinh hiền tài qua việc dựng bia ghi danh.</p>
+                    <p>• <b>Căn cứ xác định:</b> Ngay từ mở đầu, tác giả nêu tư tưởng tiền đề <i>"Hiền tài là nguyên khí của quốc gia"</i>, toàn bộ lập luận sau đó tập trung làm rõ vai trò của hiền tài, trách nhiệm của sĩ phu và mục đích vĩnh cửu của việc dựng bia đá lưu danh.</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 4 (SGK Trang 76):</b> Xét về nội dung, đoạn 3 có mối quan hệ như thế nào với đoạn 2?</p>
+                <button onclick="toggleAnswer('sgk-q4')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q4" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950">
+                    <b>Trả lời chi tiết:</b> Đoạn 2 nêu các chính sách đãi ngộ, tôn vinh phong tặng đã làm (tước trật, tiệc mừng, tháp Nhạn) nhưng mang tính nhất thời. Đoạn 3 là sự nối tiếp và phát triển bậc cao của đoạn 2: giải thích lý do vì sao nhà vua vẫn cho rằng những việc ấy "chưa đủ", từ đó dẫn đến hành động cao nhất là <b>dựng bia đá ở cửa Hiền Quan</b> để lưu giữ tiếng thơm bền vững muôn đời.
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 5 (SGK Trang 76):</b> Bạn hãy khái quát nội dung của đoạn 4 và cho biết đoạn này đảm nhận chức năng gì trong mạch lập luận?</p>
+                <button onclick="toggleAnswer('sgk-q5')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q5" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950">
+                    <b>Trả lời chi tiết:</b> Nội dung đoạn 4 đặt ra vấn đề ý thức trách nhiệm và sự báo đáp của kẻ sĩ khi được tôn vinh. Chức năng trong mạch lập luận: Chuyển tiếp từ việc ca ngợi triều đình sang nhắc nhở và giáo dục tư tưởng đối với các sĩ phu; tạo điểm tựa để kết luận về bài học giáo dục đạo đức ("răn kẻ ác, gắng người thiện") và củng cố mệnh mạch đất nước.
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 6 (SGK Trang 76):</b> Khi viết bài văn bia, tác giả đã thể hiện ít nhất hai tư cách: một là người truyền đạt "thánh ý", hai là kẻ sĩ được trọng dụng. Việc thống nhất hai tư cách đó đã chi phối như thế nào đến cách triển khai luận điểm?</p>
+                <button onclick="toggleAnswer('sgk-q6')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q6" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950">
+                    <b>Trả lời chi tiết:</b> 
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><b>Tư cách truyền "thánh ý":</b> Giúp lời văn mang tính trang trọng, khách quan, thể hiện tầm nhìn chiến lược của triều đình về chính sách bồi dưỡng nhân tài.</li>
+                        <li><b>Tư cách kẻ sĩ được trọng dụng:</b> Giúp bài viết chân thành, thấu hiểu tấm lòng tri ân và nỗi trăn trở tự rèn luyện danh tiết của người tri thức.</li>
+                        <li><b>Sự thống nhất:</b> Tạo nên giọng điệu vừa uy nghiêm vừa tâm tình, lập luận vừa có tính thuyết phục chính trị vừa mang chiều sâu tự vấn đạo đức.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 7 (SGK Trang 76):</b> Tìm một vài dẫn chứng lịch sử để làm sáng tỏ nhận định: "Vì vậy các đấng thánh đế minh vương chẳng ai không lấy việc bồi dưỡng nhân tài, kén chọn kẻ sĩ, vun trồng nguyên khí làm việc đầu tiên."</p>
+                <button onclick="toggleAnswer('sgk-q7')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q7" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950 space-y-2">
+                    <p><b>Dẫn chứng tiêu biểu:</b></p>
+                    <p>1. <b>Thời Lý:</b> Vua Lý Thánh Tông cho lập Văn Miếu (1070), mở khoa thi Minh kinh bác học đầu tiên (1075) và lập Quốc Tử Giám (1076) để đào tạo nhân tài.</p>
+                    <p>2. <b>Thời Trần:</b> Định kì mở các khoa thi Thái học sinh, sử dụng các bậc trí thức kiệt xuất như Chu Văn An, Mạc Đĩnh Chi, Trương Hán Siêu...</p>
+                    <p>3. <b>Thời Lê Sơ:</b> Vua Lê Thái Tổ ban "Chiếu cầu hiền", vua Lê Thánh Tông mở rộng quy mô thi cử, ban hành Luật Hồng Đức tôn vinh giáo dục.</p>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="bg-slate-100 border-l-4 border-blue-800 p-4 rounded-r-lg space-y-3">
+                <p class="font-semibold text-gray-800"><b>Câu 8 (SGK Trang 76):</b> Qua việc đọc văn bản, bạn hiểu gì về tầm quan trọng của việc xác định mục đích viết và bày tỏ quan điểm của người viết trong văn nghị luận?</p>
+                <button onclick="toggleAnswer('sgk-q8')" class="btn-primary px-4 py-2 rounded-md shadow text-sm">Xem lời giải</button>
+                <div id="sgk-q8" class="hidden bg-blue-50 border border-blue-300 p-4 rounded-md text-blue-950">
+                    <b>Trả lời chi tiết:</b> 
+                    Mục đích viết định hướng cho toàn bộ mạch lập luận, cách lựa chọn dẫn chứng và giọng điệu. Việc bày tỏ quan điểm rõ ràng, nhất quán (như Thân Nhân Trung khẳng định hiền tài là nguyên khí) giúp bài văn nghị luận có sức thuyết phục cao, lay động cả trí tuệ lẫn tình cảm của người đọc.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION IV: TRẮC NGHIỆM AI LÀ TRIỆU PHÚ (10 CÂU) -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <div class="border-b-2 border-yellow-500 pb-3 flex items-center justify-between">
+                <h2 class="text-xl font-extrabold uppercase text-gray-900 flex items-center gap-2">
+                    <span>🏆</span> GAMESHOW TRẮC NGHIỆM: AI LÀ TRIỆU PHÚ
+                </h2>
+                <span class="text-xs font-bold bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full border border-yellow-300">10 CÂU CỦNG CỐ</span>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+                <!-- Q1 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 1: Tác giả của "Bài kí đề danh tiến sĩ khoa Nhâm Tuất niên hiệu Đại Bảo thứ ba" là ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q1" value="A"> <span>A. Nguyễn Trãi</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q1" value="B"> <span>B. Thân Nhân Trung</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q1" value="C"> <span>C. Lê Thánh Tông</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q1" value="D"> <span>D. Chu Văn An</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 2: Khái niệm "Hiền tài" trong bài được hiểu đầy đủ nhất là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q2" value="A"> <span>A. Người có tài năng xuất chúng và đạo đức cao quý</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q2" value="B"> <span>B. Người thi đỗ các kì thi khoa bảng</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q2" value="C"> <span>C. Các vị quan lại làm việc trong triều đình</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q2" value="D"> <span>D. Người giàu có, đóng góp nhiều cho vua</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 3: Bia Tiến sĩ đầu tiên tại Văn Miếu được bắt đầu dựng vào năm nào, dưới thời vua nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q3" value="A"> <span>A. Năm 1442 - Vua Lê Thái Tông</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q3" value="B"> <span>B. Năm 1484 - Vua Lê Thánh Tông</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q3" value="C"> <span>C. Năm 1070 - Vua Lý Thánh Tông</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q3" value="D"> <span>D. Năm 1075 - Vua Lý Nhân Tông</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 4: Theo văn bản, khi "nguyên khí suy" thì thế nước sẽ như thế nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q4" value="A"> <span>A. Thế nước mạnh rồi lên cao</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q4" value="B"> <span>B. Thế nước yếu rồi xuống thấp</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q4" value="C"> <span>C. Thế nước không thay đổi</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q4" value="D"> <span>D. Bị xâm lược ngay lập tức</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 5: Văn bản "Hiền tài là nguyên khí của quốc gia" thuộc thể loại văn học nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q5" value="A"> <span>A. Truyện ngắn</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q5" value="B"> <span>B. Văn bia (Nghị luận trung đại)</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q5" value="C"> <span>C. Cáo</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q5" value="D"> <span>D. Hịch</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 6: Cụm từ "Thánh minh" trong bài được dùng để chỉ ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q6" value="A"> <span>A. Vua Lê Thánh Tông</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q6" value="B"> <span>B. Các thần linh</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q6" value="C"> <span>C. Các vị trạng nguyên</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q6" value="D"> <span>D. Tầng lớp nhân dân</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 7: Tấm bia Tiến sĩ khoa Nhâm Tuất (1442) tôn vinh bao nhiêu vị Tiến sĩ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q7" value="A"> <span>A. 10 vị</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q7" value="B"> <span>B. 33 vị</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q7" value="C"> <span>C. 82 vị</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q7" value="D"> <span>D. 100 vị</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 8: Tác dụng nào dưới đây KHÔNG phải mục đích chính của việc dựng bia Tiến sĩ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q8" value="A"> <span>A. Rèn giũa danh tiếng cho sĩ phu</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q8" value="B"> <span>B. Phô trương sự giàu có của ngân khố triều đình</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q8" value="C"> <span>C. Kẻ ác lấy đó làm răn, người thiện theo đó mà gắng</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q8" value="D"> <span>D. Củng cố mệnh mạch cho nhà nước</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 9: Năm 2010, 82 bia Tiến sĩ tại Văn Miếu – Quốc Tử Giám được UNESCO công nhận là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q9" value="A"> <span>A. Di sản thiên nhiên thế giới</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q9" value="B"> <span>B. Di sản tư liệu thế giới</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q9" value="C"> <span>C. Di sản văn hóa phi vật thể đại diện của nhân loại</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q9" value="D"> <span>D. Kỳ quan thiên nhiên mới</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-gray-200 space-y-2">
+                    <p class="font-semibold text-gray-800">Câu 10: Thái độ xưng xưng của tác giả Thân Nhân Trung khi mở đầu bài kí là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q10" value="A"> <span>A. Khiêm nhường và kính cẩn</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q10" value="B"> <span>B. Kiêu ngạo, phô trương</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q10" value="C"> <span>C. Thản nhiên, khách quan</span>
+                        </label>
+                        <label class="quiz-option flex items-center space-x-2 p-2 rounded cursor-pointer border border-transparent">
+                            <input type="radio" name="q10" value="D"> <span>D. Phê phán gay gắt</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="btn-primary px-8 py-3 rounded-lg shadow-md text-base">
+                        NỘP BÀI VÀ XEM KẾT QUẢ
+                    </button>
+                </div>
+            </form>
+
+            <div id="quizResult" class="mt-4 p-4 rounded-lg hidden font-bold text-center"></div>
+            <div id="quizDetail" class="mt-2 space-y-2 hidden text-sm"></div>
+        </div>
+
+        <!-- SECTION V: BÀI TẬP TỰ LUẬN & VẬN DỤNG -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header-title text-xl font-bold uppercase text-gray-900 flex items-center">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded border-2 border-slate-900 bg-slate-900 text-white font-bold text-base mr-3 shadow">V</span>
+                BÀI TẬP TỰ LUẬN VÀ VẬN DỤNG NGHỆ THUẬT LẬP LUẬN
+            </h2>
+
+            <!-- Exercise 1 -->
+            <div class="bg-slate-50 border border-gray-200 p-5 rounded-xl space-y-3">
+                <h3 class="font-bold text-lg text-gray-800">Bài tập 1: Phân tích cấu trúc logic của lập luận</h3>
+                <p class="text-gray-700">Hãy hoàn thành mô hình lập luận tam cú (syllogism) cho bài văn bia theo gợi ý dưới đây:</p>
+                <div class="bg-white p-4 border rounded-md space-y-2 text-sm">
+                    <p><b>• Tiền đề đại (Mô hình tổng quát):</b> Hiền tài là nguyên khí quốc gia \(\rightarrow\) Quyết định sự thịnh suy của đất nước.</p>
+                    <p><b>• Tiền đề tiểu (Thực tế):</b> Triều đình nhà Lê tôn vinh và khắc bia đá ghi danh các Tiến sĩ.</p>
+                    <p><b>• Kết luận:</b> Sĩ phu được khắc tên phải dốc sức báo đáp, rèn giũa đạo đức để củng cố mệnh mạch cho nhà nước.</p>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Viết đoạn văn kết nối đọc - viết -->
+            <div class="bg-slate-50 border border-gray-200 p-5 rounded-xl space-y-3">
+                <h3 class="font-bold text-lg text-gray-800">Bài tập 2: KẾT NỐI ĐỌC – VIẾT (Viết đoạn văn 150 chữ)</h3>
+                <p class="text-gray-700">Viết một đoạn văn (khoảng 150 chữ) nêu suy nghĩ của bạn về sự cần thiết của việc trọng dụng hiền tài trong bối cảnh đất nước hội nhập hiện nay.</p>
+                
+                <button onclick="toggleAnswer('essay-guide')" class="btn-accent px-4 py-2 rounded-md shadow text-sm">
+                    Xem gợi ý dàn ý và bài viết mẫu
+                </button>
+
+                <div id="essay-guide" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-md text-emerald-950 space-y-3">
+                    <p><b>📌 Gợi ý dàn ý:</b></p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><b>Mở đoạn:</b> Khẳng định tư tưởng "Trọng dụng hiền tài" của Thân Nhân Trung vẫn còn nguyên giá trị trong thời đại mới.</li>
+                        <li><b>Thân đoạn:</b> Hiền tài là lực lượng nòng cốt trong kỷ nguyên kinh tế tri thức và công nghệ số. Trọng dụng nhân tài giúp đất nước phát triển nhanh, bền vững và nâng cao vị thế quốc tế.</li>
+                        <li><b>Kết đoạn:</b> Bài học hành động cho bản thân (nỗ lực học tập, rèn luyện tri thức và phẩm chất đạo đức).</li>
+                    </ul>
+                    <div class="border-t border-emerald-300 pt-2">
+                        <p><b>📝 Đoạn văn tham khảo:</b></p>
+                        <p class="italic text-sm leading-relaxed mt-1">
+                            Tư tưởng "Hiền tài là nguyên khí của quốc gia" của Thân Nhân Trung đến nay vẫn giữ nguyên giá trị thời sự. Trong kỷ nguyên hội nhập toàn cầu và cách mạng công nghệ, trọng dụng hiền tài không chỉ là chính sách ưu đãi mà đã trở thành yêu cầu sống còn đối với sự phát triển của đất nước. Hiền tài với tri thức tiên tiến và tâm huyết sẽ là lực lượng tiên phong sáng tạo, giải quyết những thách thức lớn của xã hội và đưa Việt Nam vươn ra thế giới. Để thu hút và phát huy tối đa tiềm năng của nhân tài, chúng ta cần xây dựng môi trường làm việc minh bạch, chính sách đãi ngộ xứng đáng và cơ chế tôn vinh thực chất. Là thế hệ trẻ, mỗi học sinh cần không ngừng học tập, rèn luyện cả tài lẫn đức để góp phần củng cố "nguyên khí" cho dân tộc trong tương lai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT CHỨC NĂNG TƯƠNG TÁC -->
+    <script>
+        // Hàm Toggle Ẩn/Hiện đáp án
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('hidden');
+            }
+        }
+
+        // Chấm điểm bài Trắc nghiệm 10 câu
+        function checkQuiz() {
+            const correctAnswers = {
+                q1: 'B',
+                q2: 'A',
+                q3: 'B',
+                q4: 'B',
+                q5: 'B',
+                q6: 'A',
+                q7: 'B',
+                q8: 'B',
+                q9: 'B',
+                q10: 'A'
+            };
+
+            let score = 0;
+            let total = 10;
+            let detailsHtml = '';
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const correct = correctAnswers[qName];
+
+                if (selected) {
+                    if (selected.value === correct) {
+                        score++;
+                        detailsHtml += `<p class="text-green-700">✓ Câu ${i}: Đúng (${correct})</p>`;
+                    } else {
+                        detailsHtml += `<p class="text-red-600">✗ Câu ${i}: Sai (Bạn chọn ${selected.value}, Đáp án đúng là ${correct})</p>`;
+                    }
+                } else {
+                    detailsHtml += `<p class="text-amber-600">⚠ Câu ${i}: Chưa chọn đáp án (Đáp án đúng là ${correct})</p>`;
+                }
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            const detailDiv = document.getElementById('quizDetail');
+
+            resultDiv.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-yellow-100', 'text-yellow-800', 'bg-red-100', 'text-red-800');
+            
+            if (score >= 8) {
+                resultDiv.classList.add('bg-green-100', 'text-green-800');
+                resultDiv.innerHTML = `🎉 XUẤT SẮC! Bạn đạt ${score}/${total} điểm!`;
+            } else if (score >= 5) {
+                resultDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                resultDiv.innerHTML = `👍 KHÁ TỐT! Bạn đạt ${score}/${total} điểm. Hãy rà soát lại kiến thức nhé!`;
+            } else {
+                resultDiv.classList.add('bg-red-100', 'text-red-800');
+                resultDiv.innerHTML = `💪 CỐ GẮNG HƠN! Bạn đạt ${score}/${total} điểm. Hãy đọc lại bài học!`;
+            }
+
+            detailDiv.classList.remove('hidden');
+            detailDiv.innerHTML = detailsHtml;
+        }
+    </script>
+</body>
+</html>
