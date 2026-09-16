@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Hồn thiêng đưa đường</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Configuration and Script -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #663333;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .text-cream {
+            color: #FFFDD0;
+        }
+
+        .bg-custom-card {
+            background-color: #4a2424;
+        }
+
+        .bg-custom-darker {
+            background-color: #3b1c1c;
+        }
+
+        .bg-custom-hover:hover {
+            background-color: #5c2d2d;
+        }
+
+        .border-custom {
+            border-color: #7c3f3f;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #3b1c1c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7c3f3f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #994d4d;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-amber-600 selection:text-white">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="bg-[#4a2424] border-b border-[#7c3f3f] px-4 py-3 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-inner">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <h1 class="text-cream text-lg font-bold tracking-wide uppercase">Ôn Luyện Củng Cố Kiến Thức</h1>
+                    <p class="text-xs text-amber-200/80">Bài: HỒN THIÊNG ĐƯỜNG ĐƯỜNG (Trích tuồng Sơn Hậu) - Ngữ văn 10</p>
+                </div>
+            </div>
+
+            <!-- Mode Badge Status -->
+            <div id="top-badge" class="flex items-center space-x-2 bg-[#3b1c1c] px-3 py-1.5 rounded-full border border-[#7c3f3f] text-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block animate-pulse"></span>
+                <span id="top-badge-text" class="text-cream font-medium">Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-6">
+        
+        <!-- VIEW 1: MODE SELECTION SCREEN -->
+        <section id="screen-start" class="space-y-8 py-4">
+            <!-- Icon header -->
+            <div class="text-center space-y-3">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 mb-2">
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-cream tracking-tight uppercase">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-slate-200 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="text-amber-300 font-bold">20 câu hỏi</span> bám sát nội dung bài học <span class="italic font-semibold text-cream">Hồn thiêng đưa đường</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 Cognitive Level Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-custom-card border border-custom p-4 rounded-xl shadow-lg space-y-2 hover:border-amber-500/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-950/60 border border-amber-700/50 px-2.5 py-1 rounded-md inline-block">
+                        MỨC BIẾT (8 CÂU)
+                    </div>
+                    <p class="text-xs text-slate-200 leading-relaxed">
+                        Kiến thức lý thuyết, hoàn cảnh sáng tác, từ ngữ Hán Việt, các nhân vật và tình tiết chính trong văn bản.
+                    </p>
+                </div>
+
+                <div class="bg-custom-card border border-custom p-4 rounded-xl shadow-lg space-y-2 hover:border-emerald-500/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-emerald-300 bg-emerald-950/60 border border-emerald-700/50 px-2.5 py-1 rounded-md inline-block">
+                        MỨC HIỂU (7 CÂU)
+                    </div>
+                    <p class="text-xs text-slate-200 leading-relaxed">
+                        Giải thích ý nghĩa hành động, nghệ thuật xây dựng hình tượng, xung đột tuồng và phân biệt với tuồng dân gian.
+                    </p>
+                </div>
+
+                <div class="bg-custom-card border border-custom p-4 rounded-xl shadow-lg space-y-2 hover:border-sky-500/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-sky-300 bg-sky-950/60 border border-sky-700/50 px-2.5 py-1 rounded-md inline-block">
+                        VẬN DỤNG (3 CÂU)
+                    </div>
+                    <p class="text-xs text-slate-200 leading-relaxed">
+                        Phân tích mối quan hệ giữa nghĩa vua tôi và tình huynh đệ, tư tưởng trung trinh và bài học rèn luyện nhân cách.
+                    </p>
+                </div>
+
+                <div class="bg-custom-card border border-custom p-4 rounded-xl shadow-lg space-y-2 hover:border-purple-500/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-purple-300 bg-purple-950/60 border border-purple-700/50 px-2.5 py-1 rounded-md inline-block">
+                        VD CAO (2 CÂU)
+                    </div>
+                    <p class="text-xs text-slate-200 leading-relaxed">
+                        Đánh giá sự kết hợp ngôn ngữ tuồng bác học với khẩu ngữ, cùng giá trị nghệ thuật ước lệ trong tuồng cổ.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Section -->
+            <div class="pt-4">
+                <h3 class="text-center text-sm font-semibold tracking-widest text-amber-200 uppercase mb-6">
+                    VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Practice Mode Card -->
+                    <div onclick="startQuiz('practice')" class="group bg-custom-card hover:bg-[#582a2a] border border-custom hover:border-amber-400 p-6 rounded-2xl shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition">
+                                    1. Chế độ Luyện Tập
+                                </h4>
+                                <span class="bg-blue-900/60 text-blue-200 text-xs px-3 py-1 rounded-full border border-blue-700/50 font-medium">
+                                    Không giới hạn
+                                </span>
+                            </div>
+                            <p class="text-xs text-amber-200/70 font-medium">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="pt-2">
+                            <button class="w-full bg-amber-600 group-hover:bg-amber-500 text-white font-semibold py-2.5 px-4 rounded-xl shadow-md transition flex items-center justify-center space-x-2">
+                                <span>Bắt đầu Luyện Tập</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Timed Mode Card -->
+                    <div onclick="startQuiz('timed')" class="group bg-custom-card hover:bg-[#582a2a] border border-custom hover:border-amber-400 p-6 rounded-2xl shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-cream group-hover:text-amber-300 transition">
+                                    2. Chế độ Tính Giờ
+                                </h4>
+                                <span class="bg-amber-900/60 text-amber-200 text-xs px-3 py-1 rounded-full border border-amber-700/50 font-medium">
+                                    20 Phút
+                                </span>
+                            </div>
+                            <p class="text-xs text-amber-200/70 font-medium">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <div class="pt-2">
+                            <button class="w-full bg-red-700 group-hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-xl shadow-md transition flex items-center justify-center space-x-2">
+                                <span>Bắt đầu Tính Giờ</span>
+                                <i class="fa-solid fa-stopwatch text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: DOING TEST SCREEN -->
+        <section id="screen-doing" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Left Sidebar: Question Matrix (4 Cols on Mobile, 12 Grid on Desktop) -->
+            <div class="lg:col-span-4 bg-custom-card border border-custom rounded-2xl p-5 shadow-xl flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-custom pb-3">
+                        <h3 class="font-bold text-cream text-sm tracking-wide uppercase">DANH SÁCH CÂU HỎI</h3>
+                        <span id="answered-count-badge" class="bg-amber-950 text-amber-300 text-xs px-2.5 py-1 rounded-md border border-amber-700/50 font-bold">
+                            0 / 20 đã làm
+                        </span>
+                    </div>
+
+                    <!-- Countdown Timer display in Timed Mode -->
+                    <div id="timer-box" class="hidden bg-red-950/80 border border-red-700/60 rounded-xl p-3 flex items-center justify-between text-red-200">
+                        <span class="text-xs font-semibold flex items-center space-x-1.5">
+                            <i class="fa-solid fa-clock text-red-400"></i>
+                            <span>THỜI GIAN CÒN LẠI:</span>
+                        </span>
+                        <span id="timer-display" class="font-mono text-xl font-extrabold text-amber-300">20:00</span>
+                    </div>
+
+                    <!-- 1 - 20 Questions Buttons Matrix Grid -->
+                    <div id="question-matrix" class="grid grid-cols-5 gap-2.5 pt-2">
+                        <!-- JS generated 20 question buttons here -->
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="pt-4 border-t border-custom space-y-2 text-xs text-slate-300">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-4 h-4 rounded bg-[#3b1c1c] border border-custom inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-4 h-4 rounded bg-amber-600 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-4 h-4 rounded bg-blue-600 inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4 border-t border-custom">
+                    <button onclick="confirmSubmit()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Area: Question Content & Options -->
+            <div class="lg:col-span-8 bg-custom-card border border-custom rounded-2xl p-6 shadow-xl flex flex-col justify-between min-h-[500px]">
+                
+                <div class="space-y-6">
+                    <!-- Question Header & Level Tag -->
+                    <div class="flex items-center justify-between border-b border-custom pb-4">
+                        <div class="flex items-center space-x-3">
+                            <span id="q-header-title" class="text-xl sm:text-2xl font-black text-cream">Câu 1 / 20</span>
+                            <span id="q-level-badge" class="text-xs font-bold uppercase px-3 py-1 rounded-md bg-amber-900/60 text-amber-300 border border-amber-700/50">
+                                Mức Biết
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Question Body -->
+                    <div class="space-y-4">
+                        <div id="q-text" class="text-base sm:text-lg font-medium text-white leading-relaxed">
+                            <!-- Question text dynamically injected here -->
+                        </div>
+
+                        <!-- 4 Radio / Choice Cards -->
+                        <div id="options-container" class="space-y-3 pt-2">
+                            <!-- Options dynamically injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Controls Navigation -->
+                <div class="pt-6 border-t border-custom flex flex-wrap items-center justify-between gap-3">
+                    <button id="btn-prev" onclick="navigateQuestion(-1)" class="bg-[#3b1c1c] hover:bg-[#522727] disabled:opacity-40 disabled:cursor-not-allowed text-cream px-4 py-2.5 rounded-xl border border-custom text-sm font-semibold transition flex items-center space-x-2">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                        <span>Câu Trước</span>
+                    </button>
+
+                    <button onclick="clearSelection()" class="text-xs text-amber-200/70 hover:text-amber-200 underline">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="btn-next" onclick="navigateQuestion(1)" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-md transition flex items-center space-x-2">
+                        <span>Câu Tiếp</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VIEW 3: RESULTS & EXPLANATION SCREEN -->
+        <section id="screen-result" class="hidden space-y-8 py-4">
+            
+            <!-- Result Summary Card -->
+            <div class="bg-custom-card border border-custom rounded-2xl p-6 sm:p-8 shadow-2xl text-center space-y-6 max-w-4xl mx-auto">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/50 shadow-inner">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+
+                <div class="space-y-1">
+                    <h2 class="text-2xl sm:text-3xl font-black text-cream uppercase">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="res-mode-label" class="text-xs text-amber-200 uppercase tracking-widest font-semibold">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- 3 Score Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto pt-2">
+                    <div class="bg-[#3b1c1c] border border-custom p-4 rounded-xl text-center space-y-1">
+                        <p class="text-xs text-amber-200/70 font-medium">Điểm số</p>
+                        <p id="res-score" class="text-3xl font-black text-amber-400">0.0 <span class="text-xs text-slate-300 font-normal">/ 10.0</span></p>
+                    </div>
+                    <div class="bg-[#3b1c1c] border border-custom p-4 rounded-xl text-center space-y-1">
+                        <p class="text-xs text-amber-200/70 font-medium">Số câu đúng</p>
+                        <p id="res-correct" class="text-3xl font-black text-emerald-400">0 <span class="text-xs text-slate-300 font-normal">/ 20 câu</span></p>
+                    </div>
+                    <div class="bg-[#3b1c1c] border border-custom p-4 rounded-xl text-center space-y-1">
+                        <p class="text-xs text-amber-200/70 font-medium">Thời gian làm bài</p>
+                        <p id="res-time" class="text-2xl font-black text-cream">00:00</p>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-[#3b1c1c]/90 border border-amber-500/40 rounded-xl p-5 text-left space-y-2 max-w-3xl mx-auto shadow-inner">
+                    <div class="flex items-center space-x-2 text-amber-400 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="res-feedback" class="text-sm text-slate-200 leading-relaxed italic">
+                        Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững kiến thức tác phẩm Hồn thiêng đưa đường. Hãy xem kỹ lời giải từng câu và ôn lại bài học nhé!
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="restartQuiz()" class="bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <button onclick="scrollToSolutions()" class="bg-[#3b1c1c] hover:bg-[#542828] text-cream border border-custom font-bold py-3 px-6 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions List -->
+            <div id="solutions-section" class="max-w-4xl mx-auto space-y-6 pt-6">
+                <div class="flex items-center justify-between border-b border-custom pb-4">
+                    <h3 class="text-xl font-bold text-cream flex items-center space-x-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-amber-200/80">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutions-list" class="space-y-6">
+                    <!-- Detailed question breakdown cards generated here by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#3b1c1c] border-t border-[#7c3f3f] py-4 text-center text-xs text-amber-200/60 mt-8">
+        <p>© Hệ thống Ôn luyện Củng cố Kiến thức Văn học - Biên soạn theo chương trình GDPT SGK Ngữ văn 10</p>
+    </footer>
+
+    <script>
+        /**
+         * 20 QUESTIONS DATA strictly generated based on Baithuchanh5.pdf content
+         * 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao
+         */
+        const originalQuestions = [
+            // --- 8 CÂU MỨC BIẾT (Questions 1 - 8) ---
+            {
+                id: 1,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Nhan đề đoạn trích <i>\"Hồn thiêng đưa đường\"</i> trong SGK Ngữ văn 10 có nguồn gốc như thế nào?",
+                options: [
+                    "Do chính tác giả Đào Tấn đặt khi biên soạn tác phẩm.",
+                    "Do người biên soạn sách giáo khoa đặt cho đoạn trích tuồng Sơn Hậu.",
+                    "Do nhà nghiên cứu Mịch Quang đặt trong tác phẩm Tìm hiểu nghệ thuật tuồng.",
+                    "Đã có sẵn trong bản thảo tuồng Sơn Hậu cổ từ giữa thế kỷ XVIII."
+                ],
+                correct: 1,
+                explanation: "Theo chú thích (1) trong bài học (trang 152 SGK): <i>Nhan đề đoạn trích do người biên soạn sách giáo khoa đặt</i>."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Vở tuồng <i>Sơn Hậu</i> ra đời vào thời gian nào và có đặc điểm tác giả ra sao?",
+                options: [
+                    "Ra đời từ giữa thế kỷ XIX, do tác giả Đào Tấn độc quyền sáng tác.",
+                    "Ra đời khoảng giữa thế kỷ XVIII, chưa rõ tác giả, được Đào Tấn, Nguyễn Hiền Dĩnh tham gia chinh lí.",
+                    "Ra đời ở đầu thế kỷ XX, do soạn giả Nguyễn Hiền Dĩnh trực tiếp sáng tác.",
+                    "Ra đời từ thế kỷ XVII, do Hoàng Châu Ký sưu tầm và ghi chép lại."
+                ],
+                correct: 1,
+                explanation: "Tóm tắt tích truyện (trang 152 SGK) ghi rõ: <i>\"Sơn Hậu: vở tuồng cổ mẫu mực, ra đời từ khoảng giữa thế kỉ XVIII, chưa rõ tác giả, được nhiều nhà soạn tuồng nổi tiếng như Đào Tấn, Nguyễn Hiền Dĩnh tham gia chinh lí.\"</i>"
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Trong phần chú thích văn bản, cụm từ Hán Việt <b>\"Nhi long\"</b> được giải thích có nghĩa là gì?",
+                options: [
+                    "Ngọn đèn thần bí đưa đường trong đêm.",
+                    "Ngựa hay, ngựa chiến chạy nhanh của Kim Lân.",
+                    "Rồng nhỏ, dùng để chỉ hoàng tử.",
+                    "Tên gọi khác của Thái sư Tạ Thiên Lăng."
+                ],
+                correct: 2,
+                explanation: "Chú thích (5) trang 152 giải thích rõ: <i>\"Nhi long: rồng nhỏ, chỉ hoàng tử.\"</i>"
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Công trình nghiên cứu <i>\"Hề chèo\"</i> (NXB Trẻ, Thành phố Hồ Chí Minh, 2005) được giới thiệu trong bài là của tác giả nào?",
+                options: [
+                    "Bùi Đức Hạnh",
+                    "Trần Việt Ngữ",
+                    "Hà Văn Cầu",
+                    "Mịch Quang"
+                ],
+                correct: 2,
+                explanation: "Phần Củng cố, mở rộng (trang 151 SGK) ghi rõ: <i>\"Hà Văn Cầu, Hề chèo, NXB Trẻ, Thành phố Hồ Chí Minh, 2005.\"</i>"
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Trong tích truyện <i>Sơn Hậu</i>, nhân vật gian thần đứng đầu âm mưu cướp ngôi và tống giam Phàn thứ phi là ai?",
+                options: [
+                    "Tạ Ôn Đình",
+                    "Thái sư Tạ Thiên Lăng",
+                    "Đổng Kim Lân",
+                    "Tử Trình"
+                ],
+                correct: 1,
+                explanation: "Tóm tắt tích truyện trang 152 SGK ghi: <i>\"Vua Tề băng hà, lũ gian thần đứng đầu là Thái sư Tạ Thiên Lăng âm mưu cướp ngôi, tống giam Phàn thứ phi ngay lúc nàng đang mang thai.\"</i>"
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Ký hiệu chỉ dẫn kịch <b>\"(Ban)\"</b> xuất hiện trong kịch bản tuồng có ý nghĩa kỹ thuật biểu diễn nào?",
+                options: [
+                    "Nhắc diễn viên chủ ý chuyển điệu khi biểu diễn.",
+                    "Nhắc diễn viên đi ra sau cánh gà nghỉ ngơi.",
+                    "Nhắc người đánh trống tuồng tăng nhịp dồn dập.",
+                    "Nhắc diễn viên thực hiện các động tác múa kiếm."
+                ],
+                correct: 0,
+                explanation: "Chú thích (1) trang 154 giải thích: <i>\"Ban: từ dùng trong kịch bản tuồng, nhắc diễn viên chủ ý chuyển điệu khi biểu diễn.\"</i>"
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Câu Hán Việt <b>\"Mệnh dĩ vong\"</b> trong lời thoại của Hồn Linh Tá mang ý nghĩa gì?",
+                options: [
+                    "Tính mạng đã được cứu thoát.",
+                    "Mạng đã mất, người đã chết.",
+                    "Số mệnh sẽ được thay đổi.",
+                    "Mệnh lệnh của vua đã ban xuống."
+                ],
+                correct: 1,
+                explanation: "Chú thích (13) trang 153 giải thích: <i>\"Mệnh dĩ vong: mạng đã mất, cũng gần cách nói: người đã chết.\"</i>"
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelBadgeClass: "bg-amber-900/60 text-amber-300 border-amber-700/50",
+                question: "Tác giả của cuốn sách tham khảo <i>\"Tìm hiểu nghệ thuật tuồng\"</i> (NXB Quân đội nhân dân, 2017) là ai?",
+                options: [
+                    "Đào Tấn",
+                    "Hoàng Châu Ký",
+                    "Mịch Quang",
+                    "Bùi Đức Hạnh"
+                ],
+                correct: 2,
+                explanation: "Phần Củng cố, mở rộng (trang 151 SGK) ghi rõ: <i>\"Mịch Quang, Tìm hiểu nghệ thuật tuồng, NXB Quân đội nhân dân, Hà Nội, 2017.\"</i>"
+            },
+
+            // --- 7 CÂU MỨC HIỂU (Questions 9 - 15) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Điểm khác biệt căn bản về loại hình kịch giữa đoạn trích <i>Sơn Hậu</i> và đoạn trích <i>Nghêu, Sò, Ốc, Hến</i> đã học là gì?",
+                options: [
+                    "<i>Sơn Hậu</i> là tuồng dân gian, còn <i>Nghêu, Sò, Ốc, Hến</i> là tuồng cung đình.",
+                    "<i>Sơn Hậu</i> là tuồng cung đình (bác học, bi hùng), còn <i>Nghêu, Sò, Ốc, Hến</i> là tuồng dân gian (trào lăm, hài hước).",
+                    "Cả hai tác phẩm đều là tuồng cung đình nhưng <i>Sơn Hậu</i> sử dụng nhiều làn điệu chèo hơn.",
+                    "<i>Sơn Hậu</i> không dùng từ Hán Việt, còn <i>Nghêu, Sò, Ốc, Hến</i> chứa dày đặc điển tích Hán học."
+                ],
+                correct: 1,
+                explanation: "SGK lưu ý người đọc (trang 151): <i>Sự khác biệt về ngôn ngữ giữa đoạn trích tuồng Sơn Hậu (tuồng cung đình) với đoạn trích tuồng Nghêu, Sò, Ốc, Hến (tuồng dân gian) đã học trước đó.</i>"
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Động cơ chính khiến Hồn Linh Tá hiện về gặp Đổng Kim Lân trong đêm khuya là gì?",
+                options: [
+                    "Đòi Kim Lân lập tức tiêu diệt Tạ Ôn Đình để trả thù cho mình.",
+                    "Báo tin mình đã chết, nhắc lời thề cũ và cậy anh nỗ lực bảo vệ Hoàng tử, Phàn thứ phi khôi phục cơ nghiệp nhà Tề.",
+                    "Chỉ đường cho Kim Lân quay trở lại kinh thành nghênh chiến với phe Tạ Thiên Lăng.",
+                    "Yêu cầu Kim Lân phải dừng chuyến đi để mai táng thi hài cho mình ngay lập tức."
+                ],
+                correct: 1,
+                explanation: "Lời Hồn Linh Tá trong đoạn trích: <i>\"Xưa có lời đoạn thệ / Nay phải đến báo tin / Cậy anh phù Hoàng tử Thứ phi / Khá gắng sức nghiệp Tề đem lại.\"</i>"
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Ý nghĩa của hình ảnh điển tích <b>\"Sâm Thương\"</b> trong câu hát <i>\"Thuỳ tri nhất đán biệt Sâm Thương!\"</i> là gì?",
+                options: [
+                    "Sự chia rẽ giữa triều đình Tề và phe phản nghịch Tạ Thiên Lăng.",
+                    "Sự cách biệt âm dương vĩnh viễn giữa hai anh em kết nghĩa (Sâm ở phía tây, Thương ở phía đông không bao giờ gặp nhau).",
+                    "Khoảng cách địa lý giữa thành Sơn Hậu và kinh thành Tề.",
+                    "Sự chuyển giao vận mệnh đất nước từ bóng đêm sang ánh sáng."
+                ],
+                correct: 1,
+                explanation: "Chú thích (7) trang 154 giải thích: <i>Sâm, Thương là hai chòm sao ở phía tây và phía đông, không bao giờ xuất hiện cùng một lúc trên bầu trời, tượng trưng cho sự biệt ly cách trở không bao giờ gặp lại.</i>"
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Chi tiết Hồn Linh Tá hoá thành ngọn đèn hồng (hoả hào) dẫn đường cho Kim Lân qua đèo có ý nghĩa gì?",
+                options: [
+                    "Thể hiện sự phù hộ kỳ ảo xuất phát từ tình huynh đệ sắt son và lòng trung trinh bất diệt với triều Tề ngay cả khi đã hy sinh.",
+                    "Thể hiện phép thuật kỳ diệu của triều đình Tề giúp đánh bại quân giặc Tạ Ôn Đình.",
+                    "Biểu thị sự sợ hãi của Kim Lân khi đi trong chốn sơn trung cô quạnh.",
+                    "Thể hiện ước mơ trở thành tiên thần của các nhân vật tuồng cổ."
+                ],
+                correct: 0,
+                explanation: "Hồn Linh Tá chết nhưng tinh anh bất tử, hoá ngọn đèn hồng giúp bạn vượt nguy biến, thể hiện sự kết hợp giữa nghĩa vua tôi và tình huynh đệ thủy chung tuyệt đối."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Ý nghĩa của hai câu thoại <b>\"Gầm âu thiên đạo / Trợ ngã Tề triều\"</b> của Đổng Kim Lân là gì?",
+                options: [
+                    "Kim Lân lo lắng cho thời tiết dữ dội trên đường vượt đèo.",
+                    "Kim Lân suy ngẫm về đạo trung quân và tin tưởng trời xanh sẽ phù trợ cho triều Tề chính nghĩa.",
+                    "Kim Lân nghi ngờ về sự linh ứng của hồn Linh Tá.",
+                    "Kim Lân quyết định từ bỏ sự nghiệp khôi phục nhà Tề để ở lại sơn trung."
+                ],
+                correct: 1,
+                explanation: "Chú thích (3), (4) trang 155 giải thích: <i>Gầm âu thiên đạo (ưu tư về đạo trung quân - trung với vua), Trợ ngã Tề triều (giúp triều Tề của ta)</i>, bộc lộ niềm tin vào lẽ phải và đạo nghĩa chính thống."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Cặp câu tuồng <i>\"Kì ba linh lạc trường lưu thuỷ / Kinh phá như hà đắc đoàn viên\"</i> bộc lộ cảm xúc gì của nhân vật?",
+                options: [
+                    "Sự ngỡ ngàng trước cảnh thiên nhiên tươi đẹp nơi sơn trung.",
+                    "Sự xót xa trước cảnh kinh thành hỗn loạn, đất nước nổi trôi và nỗi lo trăn trở cho ngày sum họp.",
+                    "Niềm vui mừng khi đưa được Hoàng tử và Phàn thứ phi thoát khỏi vây hãm.",
+                    "Nỗi oán giận đối với quyết định trốn chạy của thứ phi."
+                ],
+                correct: 1,
+                explanation: "Các chú thích (2), (3) trang 154 giải thích: hoa lạ trôi miên man theo dòng nước và trăn trở kinh thành hỗn loạn biết đến khi nào mới được đoàn viên, phản ánh nỗi đau thời thế."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelBadgeClass: "bg-emerald-900/60 text-emerald-300 border-emerald-700/50",
+                question: "Yếu tố nghệ thuật nào tạo nên chất <b>\"bi hùng\"</b> đặc trưng cho đoạn trích <i>Hồn thiêng đưa đường</i>?",
+                options: [
+                    "Sự kết hợp giữa nỗi đau thương trước cái chết hy sinh bi thảm của Linh Tá và chí khí kiên cường xả thân vì đại nghĩa của Kim Lân.",
+                    "Sự xuất hiện của các tiếng cười trào lăm, châm biếm phe phản nghịch.",
+                    "Những giai điệu vui tươi, rộn rã của dàn xướng ca.",
+                    "Khung cảnh sinh hoạt mua bán nhộn nhịp nơi sơn trung."
+                ],
+                correct: 0,
+                explanation: "SGK nhấn mạnh: <i>Chất bi hùng của sự kiện và nghĩa vua tôi, tình huynh đệ được thể hiện trong đoạn trích – một trong những điều tạo nên sức hấp dẫn mê hoặc của tuồng đối với khán giả thời trước.</i>"
+            },
+
+            // --- 3 CÂU VẬN DỤNG (Questions 16 - 18) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelBadgeClass: "bg-sky-900/60 text-sky-300 border-sky-700/50",
+                question: "Tính thống nhất giữa <b>\"nghĩa vua tôi\"</b> và <b>\"tình huynh đệ\"</b> được thể hiện như thế nào qua hành động của hai nhân vật Kim Lân và Linh Tá?",
+                options: [
+                    "Linh Tá hy sinh thân mình ngăn giặc để cứu Hoàng tử, hiện hồn ủy thác việc nước cho bạn; Kim Lân gạt nước mắt quyết dốc sức khôi phục Tề triều để đền ơn bạn.",
+                    "Linh Tá yêu cầu Kim Lân bỏ qua việc bảo vệ thứ phi để tập trung tìm thi thể mình mai táng.",
+                    "Kim Lân quyết định dừng lại chốn sơn đầu để trả thù cho Linh Tá trước khi đưa Hoàng tử đi trốn.",
+                    "Cả hai cùng rút quân về thành Sơn Hậu để sống ẩn dật yên bình."
+                ],
+                correct: 0,
+                explanation: "Tình huynh đệ (thương tiếc bạn sa cơ, chia biệt Sâm Thương) hòa quyện chặt chẽ với nghĩa vua tôi (Vị quốc gia chỉ đại nghĩa / Hoài cơ nghiệp tận kì trung), tạo nên lý tưởng sống cao đẹp của người anh hùng tuồng."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelBadgeClass: "bg-sky-900/60 text-sky-300 border-sky-700/50",
+                question: "Phân tích vai trò của yếu tố kỳ ảo <i>\"Hồn Linh Tá hóa ngọn đèn hồng đưa đường\"</i> trong việc thể hiện chủ đề tác phẩm?",
+                options: [
+                    "Thay thế hoàn toàn sức lực con người trong cuộc đấu tranh vũ lực với quân Tạ Ôn Đình.",
+                    "Bất tử hóa sự hy sinh vì chính nghĩa, biến nỗi đau bi thương thành ánh sáng tinh thần soi đường cho người sống tiếp tục sứ mệnh.",
+                    "Minh chứng cho khả năng phù thủy và thuật phép của nhân vật Khương Linh Tá.",
+                    "Chỉ có tác dụng gây tò mò cho khán giả xem kịch chứ không có giá trị biểu tượng."
+                ],
+                correct: 1,
+                explanation: "Chi tiết thần kỳ này nâng tầm cái chết của Linh Tá từ bi kịch thương vong thành hình tượng bất tử; ngọn đèn hồng chính là sự tiếp sức tinh thần thiêng liêng giúp Kim Lân hoàn thành đại nghĩa."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelBadgeClass: "bg-sky-900/60 text-sky-300 border-sky-700/50",
+                question: "Qua hai câu hát nam <i>\"Sau dù đem lại Tề trào / Dốc đền ơn đó mới đành dạ đây\"</i>, thái độ và bài học rèn luyện nhân cách nổi bật ở Kim Lân là gì?",
+                options: [
+                    "Biến sự đau thương trần thế và ơn nghĩa cá nhân thành hành động thực tiễn dốc lòng phụng sự quốc gia.",
+                    "Xem lòng thù oán cá nhân là động lực duy nhất để chiến đấu.",
+                    "Bộc lộ sự kiêu ngạo về tài năng cưỡi tuấn mã và võ nghệ của bản thân.",
+                    "Trông chờ hoàn toàn vào sự giúp đỡ của thần linh rồi mới hành động."
+                ],
+                correct: 0,
+                explanation: "Kim Lân coi việc khôi phục Tề triều vừa là nghĩa vụ với đất nước, vừa là cách duy nhất để đền đáp sự hy sinh của bạn, thể hiện nhân cách trung trinh, nghĩa khí."
+            },
+
+            // --- 2 CÂU VẬN DỤNG CAO (Questions 19 - 20) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelBadgeClass: "bg-purple-900/60 text-purple-300 border-purple-700/50",
+                question: "Sự phối hợp giữa ngôn ngữ Hán Việt bác học \\( (\\text{can tràng đoạn đoạn} \\circ \\text{Sâm Thương}) \\) và ngôn ngữ khẩu ngữ \\( (\\text{yêng} \\circ \\text{mỗ} \\circ \\text{sở cậy}) \\) tạo ra hiệu quả nghệ thuật đặc sắc nào?",
+                options: [
+                    "Làm cho văn bản kịch trở nên khó hiểu và thiếu nhất quán về phong cách.",
+                    "Vừa giữ được không khí trang nghiêm, bi hùng của tuồng cung đình bác học, vừa diễn tả chân thực, tha thiết tình cảm ruột thịt mộc mạc giữa hai chiến hữu.",
+                    "Nhằm kéo dài thời lượng biểu diễn kịch bản trên sân khấu tuồng.",
+                    "Làm giảm đi tính bi kịch để biến tác phẩm thành một vở tuồng hài kịch."
+                ],
+                correct: 1,
+                explanation: "Hệ thống từ Hán Việt tạo nên tính chất trang trọng, bi hùng của tuồng cung đình; trong khi các từ như 'yêng' (anh), 'mỗ' (tôi) giúp lời thoại thấm đượm tình bằng hữu đời thường, gia tăng sức lay động cảm xúc."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelBadgeClass: "bg-purple-900/60 text-purple-300 border-purple-700/50",
+                question: "Nhận định nào đánh giá toàn diện nhất giá trị tư tưởng và nghệ thuật sân khấu tuồng truyền thống qua đoạn trích <i>Hồn thiêng đưa đường</i>?",
+                options: [
+                    "Đoạn trích thể hiện đỉnh cao của nghệ thuật tuồng cổ: dùng ước lệ kỳ ảo tôn vinh lòng trung trinh vì đại nghĩa và tình huynh đệ thủy chung, sáng ngời bản lĩnh anh hùng Việt Nam.",
+                    "Tác phẩm chỉ đơn thuần phản ánh cuộc tranh giành quyền lực tàn khốc chốn cung đình giữa các phe phái phong kiến.",
+                    "Đoạn trích chứng minh nghệ thuật tuồng hoàn toàn mô phỏng lại các tích kịch chèo cổ mà không có nét sáng tạo riêng.",
+                    "Tác phẩm nhấn mạnh sự bất lực của con người trước số phận bi kịch và sự sụp đổ không thể cứu vãn của triều Tề."
+                ],
+                correct: 0,
+                explanation: "Đoạn trích hội tụ đầy đủ giá trị nghệ thuật (ước lệ, ngôn ngữ bi hùng) và tư tưởng cao đẹp (trung quân, nghĩa khí huynh đệ), khắc họa thành công bức tượng đài anh hùng của văn học dân tộc."
+            }
+        ];
+
+        let questions = [];
+        let currentMode = null; // 'practice' or 'timed'
+        let currentQuestionIdx = 0;
+        let userAnswers = new Array(20).fill(null);
+        let timerInterval = null;
+        let timeRemaining = 20 * 60; // 20 minutes in seconds
+        let secondsSpent = 0;
+
+        // Utility: Shuffle Array (for Timed Mode)
+        function shuffleArray(array) {
+            let arr = JSON.parse(JSON.stringify(array));
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = new Array(20).fill(null);
+            currentQuestionIdx = 0;
+            secondsSpent = 0;
+
+            if (mode === 'timed') {
+                // Shuffle questions in timed mode for fair evaluation
+                questions = shuffleArray(originalQuestions);
+                // Also optionally shuffle options inside questions
+                questions.forEach(q => {
+                    let optWithIdx = q.options.map((opt, idx) => ({ text: opt, isCorrect: idx === q.correct }));
+                    let shuffledOpt = shuffleArray(optWithIdx);
+                    q.options = shuffledOpt.map(o => o.text);
+                    q.correct = shuffledOpt.findIndex(o => o.isCorrect);
+                });
+                
+                timeRemaining = 20 * 60;
+                document.getElementById('timer-box').classList.remove('hidden');
+                document.getElementById('top-badge-text').innerText = "Chế độ TÍNH GIỜ (20 Phút)";
+                document.getElementById('top-badge').classList.replace('border-[#7c3f3f]', 'border-red-500');
+                startTimer();
+            } else {
+                questions = JSON.parse(JSON.stringify(originalQuestions));
+                document.getElementById('timer-box').classList.add('hidden');
+                document.getElementById('top-badge-text').innerText = "Chế độ LUYỆN TẬP";
+                document.getElementById('top-badge').classList.replace('border-red-500', 'border-amber-500');
+                startPracticeTimer();
+            }
+
+            // Switch view screens
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-doing').classList.remove('hidden');
+
+            renderQuestionMatrix();
+            renderQuestionView();
+
+            // Trigger MathJax re-render
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Timers logic
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                secondsSpent++;
+                updateTimerDisplay();
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function startPracticeTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                secondsSpent++;
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeRemaining / 60);
+            const s = timeRemaining % 60;
+            document.getElementById('timer-display').innerText = 
+                `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        function renderQuestionMatrix() {
+            const matrixContainer = document.getElementById('question-matrix');
+            matrixContainer.innerHTML = '';
+
+            for (let i = 0; i < questions.length; i++) {
+                const btn = document.createElement('button');
+                btn.id = `matrix-btn-${i}`;
+                btn.innerText = i + 1;
+                btn.onclick = () => jumpToQuestion(i);
+                
+                // Styling based on state
+                let baseClasses = "h-10 font-bold rounded-lg text-sm border transition flex items-center justify-center ";
+                if (i === currentQuestionIdx) {
+                    baseClasses += "bg-blue-600 text-white border-blue-400 ring-2 ring-blue-300 shadow-md";
+                } else if (userAnswers[i] !== null) {
+                    baseClasses += "bg-amber-600 text-white border-amber-400";
+                } else {
+                    baseClasses += "bg-[#3b1c1c] text-slate-200 border-[#7c3f3f] hover:bg-[#542828]";
+                }
+
+                btn.className = baseClasses;
+                matrixContainer.appendChild(btn);
+            }
+
+            // Update answered count badge
+            const answeredCount = userAnswers.filter(a => a !== null).length;
+            document.getElementById('answered-count-badge').innerText = `${answeredCount} / 20 đã làm`;
+        }
+
+        function renderQuestionView() {
+            const q = questions[currentQuestionIdx];
+
+            document.getElementById('q-header-title').innerText = `Câu ${currentQuestionIdx + 1} / 20`;
+            
+            const levelBadge = document.getElementById('q-level-badge');
+            levelBadge.innerText = `Mức ${q.level}`;
+            levelBadge.className = `text-xs font-bold uppercase px-3 py-1 rounded-md border ${q.levelBadgeClass}`;
+
+            document.getElementById('q-text').innerHTML = q.question;
+
+            const optContainer = document.getElementById('options-container');
+            optContainer.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[currentQuestionIdx] === optIdx;
+
+                const optCard = document.createElement('div');
+                optCard.onclick = () => selectOption(optIdx);
+
+                let cardClasses = "p-4 rounded-xl border transition-all duration-200 cursor-pointer flex items-start space-x-3.5 ";
+                if (isSelected) {
+                    cardClasses += "bg-amber-950/80 border-amber-500 ring-1 ring-amber-400 text-cream";
+                } else {
+                    cardClasses += "bg-[#3b1c1c] border-[#7c3f3f] hover:bg-[#542828] text-slate-200";
+                }
+
+                optCard.className = cardClasses;
+                optCard.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg font-extrabold text-xs flex items-center justify-center flex-shrink-0 ${isSelected ? 'bg-amber-500 text-white' : 'bg-[#4a2424] text-amber-200 border border-[#7c3f3f]'}">
+                        ${prefixes[optIdx]}
+                    </div>
+                    <div class="text-sm leading-relaxed font-medium pt-0.5">${optText}</div>
+                `;
+
+                optContainer.appendChild(optCard);
+            });
+
+            // Navigation buttons state
+            document.getElementById('btn-prev').disabled = currentQuestionIdx === 0;
+            const nextBtn = document.getElementById('btn-next');
+            if (currentQuestionIdx === questions.length - 1) {
+                nextBtn.innerHTML = `<span>Xem lại</span> <i class="fa-solid fa-flag text-xs"></i>`;
+            } else {
+                nextBtn.innerHTML = `<span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right text-xs"></i>`;
+            }
+
+            renderQuestionMatrix();
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(optIdx) {
+            userAnswers[currentQuestionIdx] = optIdx;
+            renderQuestionView();
+        }
+
+        function clearSelection() {
+            userAnswers[currentQuestionIdx] = null;
+            renderQuestionView();
+        }
+
+        function jumpToQuestion(idx) {
+            currentQuestionIdx = idx;
+            renderQuestionView();
+        }
+
+        function navigateQuestion(direction) {
+            const targetIdx = currentQuestionIdx + direction;
+            if (targetIdx >= 0 && targetIdx < questions.length) {
+                currentQuestionIdx = targetIdx;
+                renderQuestionView();
+            }
+        }
+
+        function confirmSubmit() {
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let msg = "Bạn có chắc chắn muốn nộp bài và kết thúc lượt làm bài này không?";
+            if (unanswered > 0) {
+                msg = `Bạn còn ${unanswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay không?`;
+            }
+
+            // Custom UI confirmation modal box instead of native confirm
+            showModal("XÁC NHẬN NỘP BÀI", msg, () => {
+                submitQuiz();
+            });
+        }
+
+        // Custom Modal Box implementation (No alert/confirm)
+        function showModal(title, text, onConfirm) {
+            const modalBg = document.createElement('div');
+            modalBg.id = 'custom-modal';
+            modalBg.className = 'fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+            modalBg.innerHTML = `
+                <div class="bg-custom-card border border-custom rounded-2xl p-6 max-w-md w-full shadow-2xl space-y-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-cream">${title}</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed">${text}</p>
+                    <div class="flex justify-center space-x-3 pt-2">
+                        <button id="modal-cancel-btn" class="bg-[#3b1c1c] hover:bg-[#522727] text-slate-300 font-semibold px-4 py-2 rounded-xl border border-custom text-sm">
+                            Hủy làm tiếp
+                        </button>
+                        <button id="modal-confirm-btn" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2 rounded-xl text-sm shadow-md">
+                            Xác nhận Nộp
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modalBg);
+
+            document.getElementById('modal-cancel-btn').onclick = () => {
+                document.body.removeChild(modalBg);
+            };
+            document.getElementById('modal-confirm-btn').onclick = () => {
+                document.body.removeChild(modalBg);
+                onConfirm();
+            };
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            let correctCount = 0;
+            questions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = ((correctCount / questions.length) * 10).toFixed(1);
+
+            // Time calculation
+            const mins = Math.floor(secondsSpent / 60);
+            const secs = secondsSpent % 60;
+            const timeString = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+            // Update result UI elements
+            document.getElementById('res-score').innerText = `${score} / 10.0`;
+            document.getElementById('res-correct').innerText = `${correctCount} / 20 câu`;
+            document.getElementById('res-time').innerText = currentMode === 'timed' ? timeString : (timeString + " (Tự do)");
+            document.getElementById('res-mode-label').innerText = currentMode === 'timed' ? "Chế độ TÍNH GIỜ" : "Chế độ LUYỆN TẬP";
+
+            // Teacher feedback logic based on score
+            const feedbackEl = document.getElementById('res-feedback');
+            if (score >= 9.0) {
+                feedbackEl.innerHTML = `<b>Xuất sắc!</b> Em đã nắm vững toàn bộ kiến thức tác phẩm <i>Hồn thiêng đưa đường</i> (Tuồng Sơn Hậu), hiểu sâu sắc cả về giá trị nội dung bi hùng, tình huynh đệ lẫn nghệ thuật tuồng cung đình bác học. Hãy tiếp tục phát huy năng lực Ngữ văn này nhé!`;
+            } else if (score >= 7.0) {
+                feedbackEl.innerHTML = `<b>Kết quả Tốt!</b> Em đã nắm cơ bản và khá vững các câu hỏi Biết và Hiểu về vở tuồng <i>Sơn Hậu</i>. Hãy đọc kỹ phần Lời giải chi tiết ở các câu Vận dụng và Vận dụng cao để rèn luyện tư duy phân tích sâu sắc hơn!`;
+            } else if (score >= 5.0) {
+                feedbackEl.innerHTML = `<b>Đạt yêu cầu!</b> Em đã trả lời được các câu hỏi nhận biết cơ bản. Tuy nhiên, em cần xem kỹ lại các chú thích từ Hán Việt, hình tượng ngọn đèn hồng Linh Tá và sự khác biệt giữa tuồng cung đình với tuồng dân gian để nâng cao điểm số.`;
+            } else {
+                feedbackEl.innerHTML = `<b>Cần cố gắng nhiều hơn!</b> Kết quả cho thấy em chưa nắm vững lý thuyết và các chi tiết cốt lõi của bài học <i>Hồn thiêng đưa đường</i>. Hãy xem kỹ lời giải chi tiết bên dưới và ôn lại bài học SGK để làm lại nhé!`;
+            }
+
+            // Render solutions list
+            renderSolutionsList();
+
+            // Switch view
+            document.getElementById('screen-doing').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function renderSolutionsList() {
+            const container = document.getElementById('solutions-list');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            questions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+
+                const solCard = document.createElement('div');
+                solCard.className = "bg-custom-card border border-custom rounded-2xl p-5 sm:p-6 shadow-xl space-y-4 text-left";
+
+                let statusBadge = isCorrect 
+                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-700/60 text-xs px-3 py-1 rounded-md font-bold flex items-center space-x-1"><i class="fa-solid fa-check"></i> <span>Đúng</span></span>`
+                    : `<span class="bg-red-950 text-red-300 border border-red-700/60 text-xs px-3 py-1 rounded-md font-bold flex items-center space-x-1"><i class="fa-solid fa-xmark"></i> <span>Sai / Chưa chọn</span></span>`;
+
+                let optionsHTML = '';
+                q.options.forEach((optText, oIdx) => {
+                    let optStyle = "bg-[#3b1c1c] border-[#7c3f3f] text-slate-300";
+                    let iconTag = "";
+
+                    if (oIdx === q.correct) {
+                        optStyle = "bg-emerald-950/80 border-emerald-500 text-emerald-100 font-semibold ring-1 ring-emerald-400/50";
+                        iconTag = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    } else if (oIdx === userAns && !isCorrect) {
+                        optStyle = "bg-red-950/80 border-red-500 text-red-100 line-through opacity-80";
+                        iconTag = `<i class="fa-solid fa-circle-xmark text-red-400 ml-auto"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl border ${optStyle} flex items-center space-x-3 text-sm">
+                            <span class="w-6 h-6 rounded-md bg-[#4a2424] text-amber-200 border border-[#7c3f3f] font-bold text-xs flex items-center justify-center flex-shrink-0">
+                                ${prefixes[oIdx]}
+                            </span>
+                            <span class="leading-relaxed flex-grow">${optText}</span>
+                            ${iconTag}
+                        </div>
+                    `;
+                });
+
+                solCard.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-custom pb-3">
+                        <div class="flex items-center space-x-3">
+                            <span class="font-extrabold text-cream text-lg">Câu ${idx + 1}</span>
+                            <span class="text-xs font-bold uppercase px-2.5 py-0.5 rounded border ${q.levelBadgeClass}">Mức ${q.level}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <div class="text-base font-medium text-white leading-relaxed">
+                        ${q.question}
+                    </div>
+
+                    <div class="space-y-2 pt-1">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-[#3b1c1c]/90 border border-amber-500/30 rounded-xl p-4 text-xs sm:text-sm text-amber-100 space-y-1 mt-3">
+                        <div class="font-bold text-amber-300 flex items-center space-x-1.5">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <p class="leading-relaxed text-slate-200 pl-5">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(solCard);
+            });
+        }
+
+        // Restart Quiz
+        function restartQuiz() {
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            document.getElementById('top-badge-text').innerText = "Chưa chọn chế độ";
+            document.getElementById('top-badge').className = "flex items-center space-x-2 bg-[#3b1c1c] px-3 py-1.5 rounded-full border border-[#7c3f3f] text-xs";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSolutions() {
+            const el = document.getElementById('solutions-section');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

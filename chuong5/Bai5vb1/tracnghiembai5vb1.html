@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Xúy Vân giả dại</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for rendering math/text formatting standard \( ... \) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .text-kem {
+            color: #FFFDD0;
+        }
+
+        .bg-dark-card {
+            background-color: rgba(20, 10, 10, 0.45);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 253, 208, 0.12);
+        }
+
+        .bg-card-hover:hover {
+            background-color: rgba(35, 18, 18, 0.65);
+            border-color: rgba(255, 253, 208, 0.3);
+        }
+
+        .option-card {
+            transition: all 0.2s ease;
+            background-color: rgba(15, 8, 8, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .option-card:hover {
+            background-color: rgba(255, 253, 208, 0.08);
+            border-color: rgba(255, 253, 208, 0.4);
+        }
+
+        .option-card.selected {
+            background-color: rgba(217, 119, 6, 0.25);
+            border-color: #f59e0b;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 253, 208, 0.25);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 253, 208, 0.4);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Top Header Bar -->
+    <header class="bg-[#4d2626] border-b border-[#FFFDD0]/20 px-4 py-3 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-[#FFFDD0]/10 rounded-lg border border-[#FFFDD0]/20">
+                    <i class="fa-solid font-bold fa-book-open text-[#FFFDD0] text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-[#FFFDD0] font-bold text-lg md:text-xl tracking-wide uppercase">
+                        ÔN LUYỆN CỦNG CỐ KIẾN THỨC
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-300">
+                        Bài: <span class="text-[#FFFDD0] font-medium">XÚY VÂN GIẢ DẠI</span> (Trích chèo Kim Nham - Ngữ văn 10)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mode Badge / Timer Display -->
+            <div id="header-status-badge" class="flex items-center space-x-2 bg-black/30 border border-white/10 px-3 py-1.5 rounded-full text-xs md:text-sm">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                <span id="header-mode-text" class="text-gray-200">Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+        <!-- SCREEN 1: BẮT ĐẦU LÀM (MODE SELECTION) -->
+        <section id="screen-start" class="space-y-8 py-4">
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full border border-amber-500/40 shadow-inner">
+                    <i class="fa-solid fa-check text-2xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-[#FFFDD0] tracking-tight">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="text-[#FFFDD0] font-bold">20 câu hỏi</span> bám sát nội dung bài học <span class="italic">Xúy Vân giả dại</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 Mức độ tư duy Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-dark-card p-4 rounded-xl border border-white/10 hover:border-amber-400/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-gray-300">Kiến thức lý thuyết, sự kiện, tác phẩm, chi tiết nội dung và các điệu hát chèo.</p>
+                </div>
+                <div class="bg-dark-card p-4 rounded-xl border border-white/10 hover:border-amber-400/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-gray-300">Giải thích ý nghĩa điệu hát, tâm lý nhân vật, đặc trưng nghệ thuật sân khấu chèo.</p>
+                </div>
+                <div class="bg-dark-card p-4 rounded-xl border border-white/10 hover:border-amber-400/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-purple-400 mb-1">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-gray-300">Phân tích diễn biến nội tâm, nghệ thuật tổng hợp và năng lực cảm thụ văn học.</p>
+                </div>
+                <div class="bg-dark-card p-4 rounded-xl border border-white/10 hover:border-amber-400/50 transition">
+                    <div class="text-xs font-bold uppercase tracking-wider text-rose-400 mb-1">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-gray-300">Đánh giá giá trị nhân đạo, bi kịch nhân vật và góc nhìn văn hóa - xã hội hiện đại.</p>
+                </div>
+            </div>
+
+            <!-- Choose Mode Header -->
+            <div class="text-center pt-4">
+                <span class="text-xs font-bold tracking-widest text-[#FFFDD0]/80 uppercase bg-black/30 px-4 py-1.5 rounded-full border border-white/10">
+                    Vui lòng chọn hình thức kiểm tra:
+                </span>
+            </div>
+
+            <!-- Mode Selector Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Chế độ Luyện tập -->
+                <div onclick="startQuiz('practice')" class="bg-dark-card bg-card-hover p-6 rounded-2xl cursor-pointer border border-white/15 shadow-xl transition transform hover:-translate-y-1 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-[#FFFDD0] group-hover:text-amber-300 flex items-center gap-2">
+                            <span>1. Chế độ Luyện Tập</span>
+                        </h3>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full font-medium">
+                            Không giới hạn
+                        </span>
+                    </div>
+                    <p class="text-xs text-amber-200/80 mb-3 font-medium">Học tập & củng cố kiến thức không áp lực</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                        Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                    </p>
+                    <button class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-semibold rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <span>Bắt đầu Luyện tập</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Chế độ Tính giờ -->
+                <div onclick="startQuiz('timed')" class="bg-dark-card bg-card-hover p-6 rounded-2xl cursor-pointer border border-white/15 shadow-xl transition transform hover:-translate-y-1 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-[#FFFDD0] group-hover:text-amber-300 flex items-center gap-2">
+                            <span>2. Chế độ Tính Giờ</span>
+                        </h3>
+                        <span class="text-xs px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full font-medium">
+                            20 Phút
+                        </span>
+                    </div>
+                    <p class="text-xs text-amber-200/80 mb-3 font-medium">Thử thách & kiểm tra đánh giá năng lực</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                        Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                    </p>
+                    <button class="w-full py-3 bg-red-700 hover:bg-red-600 text-white font-semibold rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <span>Bắt đầu Tính giờ</span>
+                        <i class="fa-solid fa-stopwatch text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 2: ĐANG LÀM BÀI (EXAM SCREEN) -->
+        <section id="screen-quiz" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- LEFT SIDEBAR: QUESTION MATRIX -->
+            <div class="lg:col-span-4 bg-dark-card p-5 rounded-2xl border border-white/15 space-y-5">
+                <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                    <h3 class="font-bold text-[#FFFDD0] uppercase text-sm tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-th-large text-amber-400"></i>
+                        DANH SÁCH CÂU HỎI
+                    </h3>
+                    <span id="progress-text" class="text-xs px-2.5 py-1 bg-amber-500/20 text-amber-300 rounded-md font-semibold border border-amber-500/30">
+                        0 / 20 đã làm
+                    </span>
+                </div>
+
+                <!-- Grid Buttons 1-20 -->
+                <div id="question-grid" class="grid grid-cols-5 gap-2.5">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+
+                <!-- Legend -->
+                <div class="pt-3 border-t border-white/10 space-y-2 text-xs text-gray-300">
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 rounded bg-gray-800 border border-white/20 inline-block"></span>
+                        <span>Chưa trả lời</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 rounded bg-amber-600 inline-block"></span>
+                        <span>Đã chọn đáp án</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 rounded bg-blue-600 ring-2 ring-blue-300 inline-block"></span>
+                        <span>Đang làm (Hiện tại)</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="confirmSubmit()" class="w-full mt-4 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Nộp Bài & Kết Thúc</span>
+                </button>
+            </div>
+
+            <!-- RIGHT MAIN PANEL: ACTIVE QUESTION DISPLAY -->
+            <div class="lg:col-span-8 bg-dark-card p-6 rounded-2xl border border-white/15 space-y-6">
+                <!-- Question Header -->
+                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span id="question-number-title" class="text-xl md:text-2xl font-bold text-[#FFFDD0]">
+                            Câu 1 / 20
+                        </span>
+                        <span id="question-level-badge" class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/40">
+                            Mức Biết
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Question Text -->
+                <div id="question-text" class="text-base md:text-lg text-white font-medium leading-relaxed min-h-[80px]">
+                    <!-- Dynamic content -->
+                </div>
+
+                <!-- Options List -->
+                <div id="options-container" class="space-y-3 pt-2">
+                    <!-- Dynamic options A, B, C, D -->
+                </div>
+
+                <!-- Navigation Action Buttons -->
+                <div class="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-5">
+                    <button id="btn-prev" onclick="navigateQuestion(-1)" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl font-medium transition text-sm flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                        <span>Câu Trước</span>
+                    </button>
+
+                    <button onclick="clearCurrentSelection()" class="text-xs text-gray-400 hover:text-amber-300 underline transition">
+                        Xóa lựa chọn này
+                    </button>
+
+                    <button id="btn-next" onclick="navigateQuestion(1)" class="px-5 py-2.5 bg-amber-600 hover:bg-amber-500 text-white rounded-xl font-medium transition text-sm flex items-center gap-2">
+                        <span>Câu Tiếp</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 3: KẾT THÚC & KẾT QUẢ (RESULTS SCREEN) -->
+        <section id="screen-result" class="hidden space-y-8 py-4">
+            <!-- Score Banner -->
+            <div class="bg-dark-card p-6 md:p-8 rounded-2xl border border-white/15 text-center space-y-6 max-w-4xl mx-auto shadow-2xl">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-amber-500/20 text-amber-400 rounded-full border border-amber-500/40 shadow-inner">
+                    <i class="fa-solid fa-trophy text-3xl"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-[#FFFDD0]">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-subtitle" class="text-sm text-gray-300 mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Metric Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Điểm số</p>
+                        <p id="result-score" class="text-3xl font-extrabold text-amber-400 mt-1">0.0 / 10.0</p>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Số câu đúng</p>
+                        <p id="result-correct-count" class="text-3xl font-extrabold text-emerald-400 mt-1">0 / 20 câu</p>
+                    </div>
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Thời gian làm bài</p>
+                        <p id="result-time-spent" class="text-3xl font-extrabold text-blue-400 mt-1">00:00</p>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-amber-950/40 border border-amber-500/30 p-5 rounded-xl text-left space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots text-base"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="result-teacher-comment" class="text-sm text-gray-200 leading-relaxed italic">
+                        <!-- Dynamic comment based on performance -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="resetToStart()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#detailed-solutions" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-gray-200 font-bold rounded-xl border border-white/15 transition flex items-center gap-2">
+                        <i class="fa-solid fa-[#FFFDD0] fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Solution Section -->
+            <div id="detailed-solutions" class="max-w-4xl mx-auto space-y-6 pt-6">
+                <div class="flex items-center justify-between border-b border-white/15 pb-3">
+                    <h3 class="text-xl font-bold text-[#FFFDD0] flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i>
+                        ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span id="solution-total-count" class="text-xs text-gray-300">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutions-list" class="space-y-6">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // QUESTION DATASET (20 QUESTIONS: 8 Know, 7 Understand, 3 Apply, 2 High Apply)
+        // Explicitly strict to the attached PDF content "Xúy Vân giả dại" (trích chèo Kim Nham)
+        const ORIGINAL_QUESTIONS = [
+            // --- MỨC BIẾT (8 CÂU: Index 0 to 7) ---
+            {
+                id: 1,
+                level: "Biết",
+                question: "Nhân vật Kim Nham trong tích trò chèo cùng tên là một người có xuất thân và hoàn cảnh như thế nào?",
+                options: [
+                    "A. Một thương nhân giàu có ở vùng biển Nam Định",
+                    "B. Một nho sinh trọ học ở Tràng An, sau khi cưới Xúy Vân thì tiếp tục lên kinh đèn sách",
+                    "C. Một quan lại triều đình trở về quê hương tìm kiếm người vợ hiền",
+                    "D. Một người nông dân nghèo làm nghề chèo đò ngang trên sông"
+                ],
+                correct: 1,
+                explanation: "Theo tóm tắt tác phẩm trong văn bản: Kim Nham là một nho sinh trọ học ở Tràng An. Sau khi kết duyên với Xúy Vân, chàng tiếp tục lên kinh miệt mài đèn sách chờ khoa thi."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                question: "Điệu hát nào được Xúy Vân sử dụng khi muốn diễn tả nỗi niềm đắng cay, bực tức trong câu hát: \\(\\text{\"Con gà rừng ăn lẫn với công...\"}\\)?",
+                options: [
+                    "A. Điệu hát quá giang",
+                    "B. Điệu sa lệch",
+                    "C. Điệu con gà rừng",
+                    "D. Điệu sử rầu"
+                ],
+                correct: 2,
+                explanation: "Chú thích 1 trong văn bản chỉ rõ: Điệu con gà rừng là một điệu hát chèo, thường được dùng khi muốn diễn tả nỗi niềm đắng cay, bực tức của nhân vật."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                question: "Kẻ đã tán tỉnh, hứa hẹn ngon ngọt khiến Xúy Vân giả điên để tìm cách thoát khỏi Kim Nham là ai?",
+                options: [
+                    "A. Mãng Ông",
+                    "B. Trần Phương",
+                    "C. Tràng An",
+                    "D. Mẫu Đản"
+                ],
+                correct: 1,
+                explanation: "Văn bản nêu rõ: Ở quê, Xúy Vân bị gã Trần Phương tán tỉnh, hứa hẹn ngon ngọt. Nàng giả điên với hi vọng thoát khỏi Kim Nham để theo Trần Phương."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                question: "Trong nghệ thuật sân khấu chèo cổ, tiếng \"Đế\" (chẳng hạn câu: \\(\\text{\"Không xưng danh, ai biết là ai?\"}\\)) có vai trò gì?",
+                options: [
+                    "A. Lời chêm vào hoặc tiếng nói phụ họa từ khán giả hay người trong cánh gà sân khấu",
+                    "B. Lời thoại chính thức của nhân vật người dẫn chuyện trên sân khấu",
+                    "C. Tiếng hát của dàn hợp xướng đệm cho nhân vật múa",
+                    "D. Lời nhắc tuồng riêng dành cho diễn viên khi quên bài"
+                ],
+                correct: 0,
+                explanation: "Chú thích 6 ở trang 2 giải thích: \"Đế\" là nói lời chêm vào hoặc tiếng nói phụ họa với lời nói của diễn viên chèo đang diễn (xuất phát từ khán giả hoặc người đứng trong cánh gà)."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                question: "Sau khi hát xong điệu con gà rừng, nhân vật Xúy Vân đã thể hiện các động tác múa dân gian nào trên sân khấu?",
+                options: [
+                    "A. Múa quạt, múa lụa và múa hái hoa",
+                    "B. Múa bắt nhện, xe tơ, dệt cửi",
+                    "C. Múa chèo thuyền và múa chèo đò",
+                    "D. Múa đánh cờ và múa gặt lúa"
+                ],
+                correct: 1,
+                explanation: "Chỉ dẫn sân khấu trong văn bản nghiêng ghi rõ: \"(Tiếng trống nhịp nổi lên, Xúy Vân múa điệu bắt nhện, xe tơ, dệt cửi...)\"."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                question: "Điệu \"Hát ngược\" trong đoạn cuối lớp chèo Xúy Vân giả dại được khai thác chủ yếu từ loại hình văn học dân gian nào?",
+                options: [
+                    "A. Truyện cổ tích thần kỳ",
+                    "B. Truyện ngụ ngôn",
+                    "C. Ca dao nói ngược",
+                    "D. Hát vè dân gian"
+                ],
+                correct: 2,
+                explanation: "Chú thích 3 trang 4 ghi rõ: Hát ngược là một điệu hát chèo dùng khi diễn tả tâm trạng điên loạn của nhân vật, lời hát được khai thác từ loại ca dao nói ngược."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                question: "Trong câu hát: \\(\\text{\"Tôi không trăng gió lại gặp người gió trăng\"}\\), từ ngữ \"gió trăng\" mang ý nghĩa gì?",
+                options: [
+                    "A. Cảnh đẹp thiên nhiên mùa thu",
+                    "B. Thói lăng nhăng, thói trăng hoa không trung thủy",
+                    "C. Sự may mắn ngẫu nhiên trong cuộc sống",
+                    "D. Ước mơ về sự do tự tại"
+                ],
+                correct: 1,
+                explanation: "Trong bối cảnh bài hát chèo, \"gió trăng\" chỉ mối quan hệ yêu đương không đàng hoàng, thói lăng nhăng bướm hoa mà gã Trần Phương đã dùng để dụ dỗ Xúy Vân."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                question: "Thành ngữ/hình ảnh \\(\\text{\"Con cá rô nằm vùng chân trâu\"}\\) trong điệu hát sắp diễn tả hoàn cảnh gì của Xúy Vân?",
+                options: [
+                    "A. Cuộc sống sung túc, ấm êm ở chốn làng quê",
+                    "B. Tình cảnh tù túng, chật hẹp, bế tắc và bị dòm ngó, rình rập",
+                    "C. Niềm vui thích tự do thiên nhiên",
+                    "D. Sự mạo hiểm đi tìm tình yêu mới"
+                ],
+                correct: 1,
+                explanation: "Hình ảnh con cá rô nằm ở vết chân trâu chật hẹp, nông choẹt vừa tù túng vừa nguy hiểm vì có \"năm bảy cần câu châu vào\", phản ánh chính xác sự bế tắc, bị nhòm ngó của Xúy Vân."
+            },
+
+            // --- MỨC HIỂU (7 CÂU: Index 8 to 14) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                question: "Việc Xúy Vân sử dụng điệu \\(\\text{\"Hát quá giang\"}\\) (hát gọi đò) cùng câu hát \\(\\text{\"Nên tôi phải luy đò... Bởi ông trời tối phải luy cô bán hàng\"}\\) thể hiện tâm trạng gì?",
+                options: [
+                    "A. Niềm háo hức muốn bắt chuyến đò sang kinh đô thăm chồng",
+                    "B. Nỗi lỡ dở, hụt hẫng, phải hạ mình, nhún nhường nhẫn nại chịu phụ thuộc vì tình cảnh trớ trêu",
+                    "C. Sự tức giận vì gã lái đò không chịu chở khách sang sông",
+                    "D. Khát vọng làm nghề buôn bán chèo đò ở bến sông"
+                ],
+                correct: 1,
+                explanation: "Chú thích giải thích \"luy\" là nhún mình, tạm chiều theo ý người khác để được việc. Điệu hát quá giang thể hiện nỗi hụt hẫng, lỡ dở duyên kiếp và sự nhẫn nại phải luỵ người trong cảnh bế tắc."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                question: "Tại sao Xúy Vân lại chọn con đường \"giả dại\" (giả điên) để thoát khỏi Kim Nham?",
+                options: [
+                    "A. Vì nàng muốn thử tài chữa bệnh của các thầy lang trong vùng",
+                    "B. Vì tư tưởng lễ giáo phong kiến khắc nghiệt không cho phép người phụ nữ tự do ly hôn hay bỏ chồng",
+                    "C. Vì Kim Nham ép buộc nàng phải giả điên để giữ hòa khí gia đình",
+                    "D. Vì nàng theo lời xúi giục của bà Nguyệt để thử lòng Trần Phương"
+                ],
+                correct: 1,
+                explanation: "Trong xã hội phong kiến nam quyền, phụ nữ không có quyền chủ động ly hôn hay bỏ chồng. Cách duy nhất để Xúy Vân thoát khỏi cuộc hôn nhân sắp đặt với Kim Nham là trả lời bằng sự \"điên dại\" để Kim Nham phải trả tự do."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                question: "Hình ảnh ước mơ: \\(\\text{\"Chờ cho bông lúa chín vàng / Để anh đi gặt, để nàng mang cơm\"}\\) xuất hiện trong điệu hát con gà rừng bộc lộ điều gì về bản chất của Xúy Vân?",
+                options: [
+                    "A. Nàng là người phụ nữ lười biếng, chỉ thích hưởng thụ",
+                    "B. Ẩn sâu trong tâm hồn Xúy Vân vẫn là ước mơ bình dị về một hạnh phúc gia đình đầm ấm, vợ chồng quấn quýt lao động",
+                    "C. Nàng muốn Kim Nham từ bỏ việc học hành để về quê làm ruộng",
+                    "D. Nàng mỉa mai những người nông dân vất vả ngoài đồng ruộng"
+                ],
+                correct: 1,
+                explanation: "Hình ảnh ấm áp ấy thể hiện khát vọng chính đáng và nguyên thủy của Xúy Vân: ước mơ một mái ấm gia đình bình dị, có chồng có vợ cùng lao động và chăm sóc lẫn nhau."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                question: "Đoạn xưng danh của Xúy Vân: \\(\\text{\"Tuy dại dột, tài cao vô giá... Phụ Kim Nham, say đắm Trần Phương\"}\\) thể hiện tính chất đặc trưng nào của sân khấu chèo?",
+                options: [
+                    "A. Tính chất ảo tưởng, xa rời thực tế cuộc sống",
+                    "B. Tính ước lệ, công khai xưng danh trực tiếp với khán giả và sự tự ý thức về mâu thuẫn nội tâm của nhân vật",
+                    "C. Sự mâu thuẫn không thể giải quyết giữa diễn viên và đạo diễn",
+                    "D. Tính chất bi quan tuyệt vọng không có lối thoát của nhân vật"
+                ],
+                correct: 1,
+                explanation: "Nhân vật chèo khi bước ra sân khấu thường công khai xưng tên tuổi, hoàn cảnh (ước lệ sân khấu). Qua đó Xúy Vân tự nhận thức rõ ràng về hành vi vừa đáng thương vừa đáng trách của mình."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                question: "Trong câu hát điệu sử rầu: \\(\\text{\"Tôi thương nhân ngãi, tôi nhớ nhân tình / Đêm năm canh tôi thức cả vừa năm\"}\\), tâm trạng nhân vật hiện lên ra sao?",
+                options: [
+                    "A. Sự vui mừng khôn xiết khi sắp được gặp Trần Phương",
+                    "B. Trạng thái trằn trọc, thao thức cô đơn, đau đớn vì khao khát tình yêu nhưng rơi vào bi kịch",
+                    "C. Lời mỉa mai dành cho sự chờ đợi vô ích của Kim Nham",
+                    "D. Sự hối hận vì đã không nghe lời cha mẹ"
+                ],
+                correct: 1,
+                explanation: "Điệu sử rầu ngâm nga chậm rãi bộc lộ nỗi niềm cô đơn, trằn trọc suốt đêm thâu của một người phụ nữ khao khát tình yêu nhưng rơi vào hoàn cảnh trớ trêu, trăn trở dằn dặt."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                question: "Các câu hát ngược như: \\(\\text{\"Chuột đậu cành rào, muỗi ấp cánh dơi / Cái trứng gà mà tha con quạ...\"}\\) có tác dụng nghệ thuật gì trong việc biểu hiện tâm lý?",
+                options: [
+                    "A. Bộc lộ tài năng sáng tác thơ ca dân gian đỉnh cao của Xúy Vân",
+                    "B. Mô phỏng thế giới điên dại, đứt gãy nhận thức, thực giả lẫn lộn, đồng thời gián tiếp tố cáo một xã hội đầy những điều vô lý, đảo lộn",
+                    "C. Chế giễu sự ngây thơ của những người phụ nữ quê",
+                    "D. Tạo ra tiếng cười hài hước thuần túy để giảm bớt căng thẳng cho vở chèo"
+                ],
+                correct: 1,
+                explanation: "Nghệ thuật hát ngược với các hình ảnh vô lý, nghịch dị phản ánh sự chấn thương tâm lý, điên loạn thực sự của Xúy Vân, đồng thời thể hiện cái nhìn mỉa mai về một thế giới đảo lộn giá trị."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                question: "Thái độ của tác giả dân gian đối với nhân vật Xúy Vân qua toàn bộ lớp chèo là gì?",
+                options: [
+                    "A. Hoàn toàn lên án, coi Xúy Vân là kẻ dâm dật, hư hỏng cần phải trừng phạt",
+                    "B. Vừa phê phán sự nhẹ đốm, xốc nổi nhưng sâu sắc hơn cả là sự cảm thông, thương xót cho bi kịch người phụ nữ trong xã hội cũ",
+                    "C. Tôn vinh Xúy Vân như một anh hùng chống lại lễ giáo phong kiến",
+                    "D. Thờ ơ, chỉ ghi lại một câu chuyện dân gian có thật"
+                ],
+                correct: 1,
+                explanation: "Tác giả dân gian vừa nhìn nhận Xúy Vân có sai lầm khi phụ Kim Nham say đắm Trần Phương, nhưng trên hết là tấm lòng nhân đạo, thấu hiểu và xót xa cho nỗi khát khao hạnh phúc không thành của người phụ nữ."
+            },
+
+            // --- MỨC VẬN DỤNG (3 CÂU: Index 15 to 17) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                question: "Phân tích nguyên nhân cốt lõi khiến Xúy Vân từ chỗ \\(\\text{\"Giả dại\"}\\) đi đến kết cục \\(\\text{\"Hóa điên thật\"}\\)?",
+                options: [
+                    "A. Do nàng mắc phải căn bệnh hiểm nghèo không thể chữa trị",
+                    "B. Do sự dối lừa vô tình của gã họ Trần và áp lực đè nén từ ước mơ hạnh phúc không thành đến sự bần cùng gạt bỏ của xã hội",
+                    "C. Do Kim Nham dùng phép thuật trừng phạt nàng",
+                    "D. Do sự ghẻ lạnh của người dân trong làng xã"
+                ],
+                correct: 1,
+                explanation: "Xúy Vân đánh đổi cả danh dự, nhân phẩm giả dại để hi vọng đến với Trần Phương. Nhưng khi bị hắn trở mặt phủi tay, rơi vào thế 'đi mắc núi vỡ mắc sông', sự tuyệt vọng và bế tắc tận cùng đã đẩy nàng từ giả dại thành hóa điên thật."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                question: "Sự chuyển biến linh hoạt giữa các điệu hát (Nói lệch, Vĩa, Hát quá giang, Sa lệch, Sử rầu, Hát sắp, Hát ngược) mang đến hiệu quả nghệ thuật tổng hợp nào?",
+                options: [
+                    "A. Giúp cho vở chèo kéo dài thời gian diễn xuất trên sân khấu",
+                    "B. Khắc họa sống động thế giới nội tâm biến động dữ dội, đầy xáo trộn và đa tầng phức tạp của Xúy Vân",
+                    "C. Chứng tỏ diễn viên chèo phải biết hát tất cả các làn điệu",
+                    "D. Làm cho khán giả bớt nhàm chán khi nghe hát chèo"
+                ],
+                correct: 1,
+                explanation: "Mỗi điệu hát ứng với một cung bậc cảm xúc (từ bực tức, xót xa, hoài niệm đến điên dại). Sự thay đổi liên tục thể hiện trọn vẹn tâm trạng giằng xé, bất ổn nội tâm của nhân vật."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                question: "So sánh hình ảnh chiếc đò/con sông trong điệu \\(\\text{\"Hát quá giang\"}\\) của Xúy Vân với các hình ảnh biểu tượng đò - bến trong ca dao truyền thống, điểm sáng tạo xuất sắc ở đây là gì?",
+                options: [
+                    "A. Hình ảnh chiếc đò chỉ là cái cớ để Xúy Vân đi chơi hội",
+                    "B. Chiếc đò không chỉ là bến đậu tình duyên mà biến thành ẩn dụ cho sự lỡ chuyến đò đời, sự hạ mình thụ động lụy người đầy đắng cay",
+                    "C. Không có điểm gì khác biệt so với ca dao truyền thống",
+                    "D. Dùng chiếc đò để mô tả cảnh thiên nhiên sông nước Tràng An"
+                ],
+                correct: 1,
+                explanation: "Trong ca dao, đò - bến thường chỉ sự chờ đợi thủy chung. Ở đây, 'luy đò', 'kêu đò nọ không thưa' trở thành ẩn dụ sâu sắc cho sự lỡ dở, trớ trêu của số phận và việc phải hạ mình luỵ người để tìm lối thoát."
+            },
+
+            // --- MỨC VẬN DỤNG CAO (2 CÂU: Index 18 to 19) ---
+            {
+                id: 19,
+                level: "VD Cao",
+                question: "Từ nghệ thuật thể hiện bi kịch nội tâm Xúy Vân qua ngôn ngữ hành động múa và nói ngược, hãy đánh giá giá trị nhân đạo sâu sắc của đoạn trích đối với thời đại?",
+                options: [
+                    "A. Khuyên nhủ người phụ nữ nên chấp nhận số phận, không nên đòi hỏi quyền lợi cá nhân",
+                    "B. Khẳng định quyền sống, quyền đòi hỏi tình yêu và hạnh phúc cá nhân của người phụ nữ, cất lên tiếng nói tố cáo những định kiến phong kiến khắt khe",
+                    "C. Răn dạy phụ nữ không được tin lời người ngoài trong bất kỳ hoàn cảnh nào",
+                    "D. Tuyên truyền cho việc bèn luyện nghệ thuật múa chèo trong cộng đồng"
+                ],
+                correct: 1,
+                explanation: "Giá trị nhân đạo vượt thời đại của lớp chèo chính là sự thấu cảm với khát vọng hạnh phúc, tình yêu lứa đôi chính đáng của người phụ nữ, qua đó gián tiếp tố cáo tư tưởng hôn nhân gượng ép, nam quyền phong kiến."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                question: "Vì sao văn bản đọc chỉ mất khoảng 3 phút nhưng khi công diễn trên sân khấu chèo lại kéo dài tới gần 15 phút? Thực tế này gợi mở điều gì về đặc trưng nghệ thuật chèo cổ?",
+                options: [
+                    "A. Do tác giả cố tình kéo dài kịch bản để thu tiền vé",
+                    "B. Nghệ thuật chèo là nghệ thuật tổng hợp, nơi kịch bản chữ chỉ là phần khung, còn sức sống thực sự nằm ở tài năng diễn xuất, vũ điệu múa, nhịp trống và sự tương tác trực tiếp với khán giả",
+                    "C. Do diễn viên chèo hay quên lời nên phải di chuyển nhiều trên sân khấu",
+                    "D. Do có sự can thiệp quá nhiều của tiếng \"đế\" từ người xem"
+                ],
+                correct: 1,
+                explanation: "Chèo cổ là nghệ thuật diễn xướng tổng hợp (kết hợp kịch bản, làn điệu hát, múa, nhịp trống và diễn xuất). Kịch bản viết chỉ là 'xương sống', hành động sân khấu và cảm xúc của diễn viên mới tạo nên linh hồn tác phẩm."
+            }
+        ];
+
+        // GLOBAL QUIZ STATE
+        let quizState = {
+            mode: null, // 'practice' or 'timed'
+            questions: [],
+            userAnswers: {}, // questionIndex: optionIndex
+            currentIndex: 0,
+            timerInterval: null,
+            timeRemaining: 20 * 60, // 20 mins in seconds
+            timeSpentSeconds: 0,
+            isSubmitted: false
+        };
+
+
+        /**
+         * Utility: Shuffle array for Timed mode to prevent answer cheating
+         */
+        function shuffleArray(array) {
+            let arr = JSON.parse(JSON.stringify(array));
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        /**
+         * Start Quiz in chosen mode ('practice' or 'timed')
+         */
+        function startQuiz(mode) {
+            quizState.mode = mode;
+            quizState.userAnswers = {};
+            quizState.currentIndex = 0;
+            quizState.isSubmitted = false;
+            quizState.timeRemaining = 20 * 60;
+            quizState.timeSpentSeconds = 0;
+
+            if (mode === 'timed') {
+                // Shuffle question order & options for anti-cheat
+                let shuffled = shuffleArray(ORIGINAL_QUESTIONS);
+                shuffled.forEach(q => {
+                    let originalOptions = [...q.options];
+                    let correctText = originalOptions[q.correct];
+                    
+                    // Shuffle options
+                    let shuffledOpts = shuffleArray(originalOptions);
+                    // find new index of correct text
+                    let newCorrectIndex = shuffledOpts.findIndex(opt => opt === correctText);
+
+                    // Re-letter options A, B, C, D
+                    q.options = shuffledOpts.map((text, idx) => {
+                        let cleanText = text.replace(/^[A-D]\.\s*/, '');
+                        let prefix = String.fromCharCode(65 + idx) + ". ";
+                        return prefix + cleanText;
+                    });
+                    q.correct = newCorrectIndex;
+                });
+                quizState.questions = shuffled;
+            } else {
+                // Practice mode: Standard original order
+                quizState.questions = JSON.parse(JSON.stringify(ORIGINAL_QUESTIONS));
+            }
+
+            // Update UI Screens
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            // Header status update
+            const badge = document.getElementById('header-status-badge');
+            const modeText = document.getElementById('header-mode-text');
+
+            if (mode === 'practice') {
+                modeText.innerText = "Chế độ LUYỆN TẬP";
+                badge.className = "flex items-center space-x-2 bg-blue-900/40 border border-blue-400/30 px-3 py-1.5 rounded-full text-xs md:text-sm text-blue-200";
+            } else {
+                badge.className = "flex items-center space-x-2 bg-red-900/40 border border-red-400/30 px-3 py-1.5 rounded-full text-xs md:text-sm text-red-200 font-mono font-bold";
+                startTimer();
+            }
+
+            // Render Questions Matrix & Current Question
+            renderGrid();
+            renderCurrentQuestion();
+
+            // Trigger MathJax typeset
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        /**
+         * Countdown timer for Timed Mode
+         */
+        function startTimer() {
+            if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+            
+            updateTimerDisplay();
+            quizState.timerInterval = setInterval(() => {
+                quizState.timeRemaining--;
+                quizState.timeSpentSeconds++;
+
+                updateTimerDisplay();
+
+                if (quizState.timeRemaining <= 0) {
+                    clearInterval(quizState.timerInterval);
+                    alert("Thời gian làm bài 20 phút đã hết! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const modeText = document.getElementById('header-mode-text');
+            const mins = Math.floor(quizState.timeRemaining / 60);
+            const secs = quizState.timeRemaining % 60;
+            const formatted = `⏱️ ${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            modeText.innerText = formatted;
+        }
+
+        /**
+         * Render Sidebar Question Grid (1 - 20)
+         */
+        function renderGrid() {
+            const grid = document.getElementById('question-grid');
+            grid.innerHTML = '';
+
+            let answeredCount = Object.keys(quizState.userAnswers).length;
+            document.getElementById('progress-text').innerText = `${answeredCount} / 20 đã làm`;
+
+            quizState.questions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.innerText = idx + 1;
+                btn.onclick = () => selectQuestion(idx);
+
+                // Styling logic based on state
+                let baseStyle = "h-10 rounded-xl font-bold text-sm transition flex items-center justify-center border ";
+                
+                if (idx === quizState.currentIndex) {
+                    // Current question
+                    baseStyle += "bg-blue-600 text-white border-blue-300 ring-2 ring-blue-400/50 shadow-lg";
+                } else if (quizState.userAnswers.hasOwnProperty(idx)) {
+                    // Answered
+                    baseStyle += "bg-amber-600 text-white border-amber-400/50 hover:bg-amber-500";
+                } else {
+                    // Unanswered
+                    baseStyle += "bg-black/30 text-gray-300 border-white/10 hover:bg-white/10";
+                }
+
+                btn.className = baseStyle;
+                grid.appendChild(btn);
+            });
+        }
+
+        /**
+         * Render Active Question in Main Panel
+         */
+        function renderCurrentQuestion() {
+            const q = quizState.questions[quizState.currentIndex];
+            
+            // Question Title & Level Badge
+            document.getElementById('question-number-title').innerText = `Câu ${quizState.currentIndex + 1} / 20`;
+            
+            const badge = document.getElementById('question-level-badge');
+            badge.innerText = `Mức ${q.level}`;
+
+            // Color-code levels
+            if (q.level === 'Biết') {
+                badge.className = "px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/40";
+            } else if (q.level === 'Hiểu') {
+                badge.className = "px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+            } else if (q.level === 'Vận dụng') {
+                badge.className = "px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/40";
+            } else {
+                badge.className = "px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/40";
+            }
+
+            // Question Text
+            document.getElementById('question-text').innerText = q.question;
+
+            // Options List
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            const selectedOption = quizState.userAnswers[quizState.currentIndex];
+
+            q.options.forEach((optText, optIdx) => {
+                const optCard = document.createElement('div');
+                const isSelected = selectedOption === optIdx;
+
+                optCard.className = `option-card p-4 rounded-xl cursor-pointer flex items-center justify-between text-sm md:text-base ${isSelected ? 'selected' : ''}`;
+                optCard.onclick = () => selectOption(optIdx);
+
+                optCard.innerHTML = `
+                    <div class="flex items-center gap-3 w-full">
+                        <div class="w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0 ${isSelected ? 'bg-amber-500 border-amber-300 text-black' : 'border-white/30 text-gray-300'}">
+                            ${String.fromCharCode(65 + optIdx)}
+                        </div>
+                        <span class="text-gray-100 flex-grow">${optText.replace(/^[A-D]\.\s*/, '')}</span>
+                    </div>
+                `;
+
+                optionsContainer.appendChild(optCard);
+            });
+
+            // Navigation buttons states
+            document.getElementById('btn-prev').disabled = quizState.currentIndex === 0;
+            const nextBtn = document.getElementById('btn-next');
+            if (quizState.currentIndex === quizState.questions.length - 1) {
+                nextBtn.innerHTML = `<span>Hoàn tất</span> <i class="fa-solid fa-check text-xs"></i>`;
+            } else {
+                nextBtn.innerHTML = `<span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right text-xs"></i>`;
+            }
+
+            // Re-render MathJax formula if any
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        /**
+         * Handle option selection
+         */
+        function selectOption(optionIdx) {
+            quizState.userAnswers[quizState.currentIndex] = optionIdx;
+            renderGrid();
+            renderCurrentQuestion();
+        }
+
+        /**
+         * Clear option for current question
+         */
+        function clearCurrentSelection() {
+            delete quizState.userAnswers[quizState.currentIndex];
+            renderGrid();
+            renderCurrentQuestion();
+        }
+
+        /**
+         * Navigate between questions
+         */
+        function navigateQuestion(step) {
+            const newIdx = quizState.currentIndex + step;
+            if (newIdx >= 0 && newIdx < quizState.questions.length) {
+                quizState.currentIndex = newIdx;
+                renderGrid();
+                renderCurrentQuestion();
+            }
+        }
+
+        /**
+         * Jump directly to question
+         */
+        function selectQuestion(idx) {
+            quizState.currentIndex = idx;
+            renderGrid();
+            renderCurrentQuestion();
+        }
+
+        /**
+         * Confirm submission prompt
+         */
+        function confirmSubmit() {
+            const answeredCount = Object.keys(quizState.userAnswers).length;
+            const unanswered = 20 - answeredCount;
+
+            let msg = `Bạn đã hoàn thành ${answeredCount}/20 câu hỏi.`;
+            if (unanswered > 0) {
+                msg += ` Còn ${unanswered} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài không?`;
+            } else {
+                msg += ` Bạn có chắc chắn muốn kết thúc bài làm không?`;
+            }
+
+            if (window.confirm(msg)) {
+                submitQuiz();
+            }
+        }
+
+        /**
+         * Submit Quiz & Generate Evaluation
+         */
+        function submitQuiz() {
+            quizState.isSubmitted = true;
+
+            if (quizState.timerInterval) {
+                clearInterval(quizState.timerInterval);
+            }
+
+            // Calculate Score
+            let correctCount = 0;
+            quizState.questions.forEach((q, idx) => {
+                if (quizState.userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / 20) * 10;
+            const formattedScore = score.toFixed(1);
+
+            // Display Results
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            document.getElementById('result-score').innerText = `${formattedScore} / 10.0`;
+            document.getElementById('result-correct-count').innerText = `${correctCount} / 20 câu`;
+
+            // Time calculation
+            let timeStr = "Không giới hạn";
+            if (quizState.mode === 'timed') {
+                const totalSpent = quizState.timeSpentSeconds;
+                const m = Math.floor(totalSpent / 60);
+                const s = totalSpent % 60;
+                timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            }
+            document.getElementById('result-time-spent').innerText = timeStr;
+            document.getElementById('result-mode-subtitle').innerText = quizState.mode === 'timed' ? 'Chế độ TÍNH GIỜ (20 phút)' : 'Chế độ LUYỆN TẬP';
+
+            // Teacher Evaluation Comment Logic
+            const commentBox = document.getElementById('result-teacher-comment');
+            if (score >= 9.0) {
+                commentBox.innerHTML = `<strong>Xuất sắc!</strong> Em đã nắm vững toàn bộ kiến thức tác phẩm <em>Xúy Vân giả dại</em> (trích chèo Kim Nham), phân tích sâu sắc đặc trưng sân khấu chèo và bi kịch nhân vật. Hãy tiếp tục phát huy năng lực cảm thụ văn học đỉnh cao này nhé!`;
+            } else if (score >= 7.0) {
+                commentBox.innerHTML = `<strong>Khá - Giỏi!</strong> Em nắm chắc nội dung cốt truyện và các điệu hát chèo cơ bản. Tuy nhiên, cần chú ý đọc kỹ hơn các câu hỏi vận dụng sâu về đặc trưng nghệ thuật chèo cổ và bi kịch tâm lý nhân vật để đạt điểm tuyệt đối.`;
+            } else if (score >= 5.0) {
+                commentBox.innerHTML = `<strong>Đạt yêu cầu!</strong> Em đã nhớ được các chi tiết cơ bản của văn bản. Cần dành thêm thời gian ôn lại ý nghĩa các điệu hát (Nói lệch, Vĩa, Hát quá giang, Hát ngược...) và đọc kỹ lời giải chi tiết bên dưới để củng cố kiến thức nhé!`;
+            } else {
+                commentBox.innerHTML = `<strong>Cần cố gắng nhiều hơn!</strong> Kết quả cho thấy em chưa nắm vững kiến thức lý thuyết và nghệ thuật đoạn trích <em>Xúy Vân giả dại</em>. Hãy đọc kỹ lại văn bản trong SGK, xem chi tiết từng lời giải bên dưới và bấm nút <em>"Làm lại bài kiểm tra"</em> để luyện tập lại nhé!`;
+            }
+
+            // Render Detailed Solutions
+            renderDetailedSolutions();
+
+            // Refresh MathJax rendering
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        /**
+         * Render All 20 Questions with Detailed Solutions
+         */
+        function renderDetailedSolutions() {
+            const container = document.getElementById('solutions-list');
+            container.innerHTML = '';
+
+            quizState.questions.forEach((q, idx) => {
+                const userChoice = quizState.userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+
+                const solCard = document.createElement('div');
+                solCard.className = `bg-dark-card p-5 rounded-xl border ${isCorrect ? 'border-emerald-500/30' : 'border-rose-500/30'} space-y-4 shadow-lg`;
+
+                let optionsHtml = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optClass = "p-3 rounded-lg border text-xs md:text-sm flex items-center justify-between ";
+                    let iconHtml = "";
+
+                    if (optIdx === q.correct) {
+                        // Correct option
+                        optClass += "bg-emerald-950/60 border-emerald-500 text-emerald-200 font-semibold";
+                        iconHtml = `<i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>`;
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        // User wrong choice
+                        optClass += "bg-rose-950/60 border-rose-500 text-rose-200 line-through opacity-80";
+                        iconHtml = `<i class="fa-solid fa-circle-xmark text-rose-400 text-base"></i>`;
+                    } else {
+                        // Standard option
+                        optClass += "bg-black/20 border-white/10 text-gray-300";
+                    }
+
+                    optionsHtml += `
+                        <div class="${optClass}">
+                            <span>${optText}</span>
+                            ${iconHtml}
+                        </div>
+                    `;
+                });
+
+                solCard.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-[#FFFDD0] text-base">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/10 text-gray-300">Mức ${q.level}</span>
+                        </div>
+                        <span class="px-3 py-1 rounded-md text-xs font-bold ${isCorrect ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-rose-500/20 text-rose-300 border border-rose-500/40'}">
+                            ${isCorrect ? '✓ Đúng' : '✗ Sai'}
+                        </span>
+                    </div>
+
+                    <p class="text-sm md:text-base text-white font-medium">${q.question}</p>
+
+                    <div class="space-y-2">
+                        ${optionsHtml}
+                    </div>
+
+                    <!-- Teacher Explanation -->
+                    <div class="bg-amber-950/30 border-l-4 border-amber-500 p-3.5 rounded-r-lg space-y-1 text-xs md:text-sm">
+                        <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Lời giải chi tiết từ Giáo viên:</span>
+                        </div>
+                        <p class="text-gray-200 leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(solCard);
+            });
+        }
+
+        /**
+         * Reset test to initial state
+         */
+        function resetToStart() {
+            if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+
+            const badge = document.getElementById('header-status-badge');
+            badge.className = "flex items-center space-x-2 bg-black/30 border border-white/10 px-3 py-1.5 rounded-full text-xs md:text-sm";
+            document.getElementById('header-mode-text').innerText = "Chưa chọn chế độ";
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
