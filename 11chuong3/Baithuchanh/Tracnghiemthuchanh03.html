@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Tiếp Xúc Với Tác Phẩm</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- Custom CSS for Theme & Scrollbar -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .text-cream {
+            color: #FFFDD0;
+        }
+
+        .bg-card {
+            background-color: rgba(60, 25, 25, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 253, 208, 0.15);
+        }
+
+        .bg-card-hover:hover {
+            background-color: rgba(80, 35, 35, 0.85);
+        }
+
+        .bg-card-dark {
+            background-color: rgba(45, 18, 18, 0.85);
+            border: 1px solid rgba(255, 253, 208, 0.12);
+        }
+
+        .border-cream-light {
+            border-color: rgba(255, 253, 208, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #4a2424;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #804040;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #994d4d;
+        }
+
+        .mathjax-wrapper {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER BAR -->
+    <header class="w-full bg-[#4a2424] border-b border-[#804040] py-3 px-4 md:px-8 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="bg-[#FFFDD0] text-[#663333] p-2.5 rounded-xl shadow-md flex items-center justify-center">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg md:text-xl text-cream tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs md:text-sm text-gray-200">
+                        Bài: <span class="font-semibold text-cream">TIẾP XÚC VỚI TÁC PHẨM</span> <span class="text-gray-300">(Thái Bá Vân - Lý luận văn học & mỹ thuật)</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <!-- Mode indicator badge -->
+                <div id="modeHeaderBadge" class="bg-[#3b1c1c] border border-[#804040] text-cream px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                    <span id="modeHeaderLabel">Chưa chọn chế độ</span>
+                </div>
+                
+                <!-- Countdown Timer (Hidden by default) -->
+                <div id="timerContainer" class="hidden bg-red-950/80 border border-red-500/40 text-red-200 px-4 py-1.5 rounded-full font-mono text-sm font-bold flex items-center gap-2">
+                    <i class="fa-regular fa-clock text-red-400 animate-spin"></i>
+                    <span id="timerDisplay">20:00</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow w-full max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
+        
+        <!-- SCREEN 1: BẮT ĐẦU LÀM (WELCOME SCREEN) -->
+        <section id="screenStart" class="space-y-8 py-4">
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 shadow-inner mb-2">
+                    <i class="fa-solid fa-[#FFFDD0] fa-check-double text-2xl"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-cream tracking-tight">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-gray-200 text-sm md:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-bold text-cream">20 câu hỏi</span> bám sát nội dung bài đọc <span class="italic font-semibold text-cream">"Tiếp xúc với tác phẩm"</span> (Thái Bá Vân) với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục & Đào tạo.
+                </p>
+            </div>
+
+            <!-- 4 Level Overview Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-card p-5 rounded-2xl border-l-4 border-blue-500 shadow-lg space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-300">MỨC BIẾT</span>
+                        <span class="bg-blue-900/60 text-blue-200 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-blue-700">8 CÂU</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Kiểm tra kiến thức trực tiếp có trong bài học: Tác giả, hoàn cảnh, dẫn chứng tác phẩm, các chi tiết cụ thể.
+                    </p>
+                </div>
+
+                <div class="bg-card p-5 rounded-2xl border-l-4 border-emerald-500 shadow-lg space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-300">MỨC HIỂU</span>
+                        <span class="bg-emerald-900/60 text-emerald-200 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-emerald-700">7 CÂU</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Giải thích khái niệm đời sống vật thể, đời sống hình tượng, hiện thực hình tượng, vai trò người xem.
+                    </p>
+                </div>
+
+                <div class="bg-card p-5 rounded-2xl border-l-4 border-amber-500 shadow-lg space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-300">VẬN DỤNG</span>
+                        <span class="bg-amber-900/60 text-amber-200 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-amber-700">3 CÂU</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Dùng kiến thức lý luận để phân tích phương pháp tiếp nhận nghệ thuật chủ động và ứng xử thẩm mỹ.
+                    </p>
+                </div>
+
+                <div class="bg-card p-5 rounded-2xl border-l-4 border-purple-500 shadow-lg space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-300">VD CAO</span>
+                        <span class="bg-purple-900/60 text-purple-200 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-purple-700">2 CÂU</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Tư duy triết học mỹ học sâu sắc về sự phân hóa ý thức, đồng sáng tạo và sự trường tồn nghệ thuật.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Title -->
+            <div class="text-center pt-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 bg-[#4a2424] px-4 py-1.5 rounded-full border border-[#804040]">
+                    VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+                </span>
+            </div>
+
+            <!-- 2 Mode Options -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Mode 1: Practice -->
+                <div onclick="startQuiz('practice')" class="bg-card bg-card-hover p-6 rounded-2xl cursor-pointer transition-all duration-300 border border-[#804040] hover:border-amber-400 group shadow-xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-cream group-hover:text-amber-300 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+                                1. Chế độ Luyện Tập
+                            </h3>
+                            <span class="bg-blue-900/80 text-blue-200 text-xs font-medium px-3 py-1 rounded-full border border-blue-500/40">
+                                Không giới hạn
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300">Học tập & củng cố kiến thức không áp lực</p>
+                        <p class="text-sm text-gray-200 leading-relaxed">
+                            Làm bài không tính thời gian. Giúp học sinh bình tĩnh suy ngẫm, củng cố lý luận mỹ thuật. Xem điểm số và lời giải chi tiết ngay sau khi hoàn thành.
+                        </p>
+                    </div>
+                    <button class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group-hover:shadow-amber-600/30">
+                        <span>Bắt đầu Luyện Tập</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Mode 2: Timed -->
+                <div onclick="startQuiz('timed')" class="bg-card bg-card-hover p-6 rounded-2xl cursor-pointer transition-all duration-300 border border-[#804040] hover:border-red-400 group shadow-xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-cream group-hover:text-red-300 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-stopwatch text-red-400"></i>
+                                2. Chế độ Tính Giờ
+                            </h3>
+                            <span class="bg-red-900/80 text-red-200 text-xs font-medium px-3 py-1 rounded-full border border-red-500/40">
+                                20 Phút
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300">Thử thách & kiểm tra đánh giá năng lực thực tế</p>
+                        <p class="text-sm text-gray-200 leading-relaxed">
+                            Có đồng hồ đếm ngược <span class="text-cream font-bold">20 phút</span>. Thứ tự câu hỏi và đáp án được xáo trộn ngẫu nhiên giúp đánh giá chính xác thực lực, phòng tránh học vẹt.
+                        </p>
+                    </div>
+                    <button class="w-full py-3 bg-red-700 hover:bg-red-600 text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group-hover:shadow-red-600/30">
+                        <span>Bắt đầu Tính Giờ</span>
+                        <i class="fa-solid fa-bolt text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ĐANG LÀM BÀI (EXAM INTERFACE) -->
+        <section id="screenQuiz" class="hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                <!-- Left Sidebar: Question Navigation Grid -->
+                <div class="lg:col-span-4 bg-card p-5 rounded-2xl space-y-5 flex flex-col justify-between shadow-xl">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-[#804040] pb-3">
+                            <h3 class="font-bold text-cream text-base uppercase tracking-wide flex items-center gap-2">
+                                <i class="fa-solid fa-list-check text-amber-400"></i>
+                                DANH SÁCH CÂU HỎI
+                            </h3>
+                            <span class="bg-[#3b1c1c] text-cream text-xs px-2.5 py-1 rounded-full border border-[#804040] font-mono">
+                                <span id="answeredCount">0</span> / 20 đã làm
+                            </span>
+                        </div>
+
+                        <!-- Question Palette Grid -->
+                        <div id="questionGrid" class="grid grid-cols-5 gap-2.5 py-2">
+                            <!-- Injected dynamically via JS -->
+                        </div>
+
+                        <!-- Legend Status -->
+                        <div class="pt-2 border-t border-[#804040] space-y-2 text-xs text-gray-300">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-[#4a2424] border border-[#804040] inline-block"></span>
+                                <span>Chưa trả lời</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-amber-600 inline-block"></span>
+                                <span>Đã chọn đáp án</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded bg-blue-600 ring-2 ring-white inline-block"></span>
+                                <span>Đang làm (Hiện tại)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button onclick="submitQuizConfirm()" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Nộp Bài & Kết Thúc</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Area: Question Card & Options -->
+                <div class="lg:col-span-8 bg-card p-6 md:p-8 rounded-2xl space-y-6 flex flex-col justify-between shadow-xl min-h-[480px]">
+                    
+                    <div class="space-y-6">
+                        <!-- Question Header & Tag -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[#804040] pb-4">
+                            <div class="flex items-center gap-3">
+                                <span id="currentQuestionNum" class="text-xl md:text-2xl font-extrabold text-cream">Câu 1 / 20</span>
+                                <span id="currentQuestionLevel" class="text-xs font-semibold px-3 py-1 rounded-full text-white bg-blue-600 shadow-sm">
+                                    Mức Biết
+                                </span>
+                            </div>
+                            
+                            <div class="text-xs text-gray-300 italic">
+                                Chọn 1 đáp án đúng nhất
+                            </div>
+                        </div>
+
+                        <!-- Question Content -->
+                        <div class="space-y-4">
+                            <h3 id="questionText" class="text-lg md:text-xl font-medium text-white leading-relaxed">
+                                <!-- Question text injected via JS -->
+                            </h3>
+                        </div>
+
+                        <!-- 4 Choices -->
+                        <div id="optionsContainer" class="space-y-3 pt-2">
+                            <!-- Options injected dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation Footer Buttons -->
+                    <div class="flex items-center justify-between pt-6 border-t border-[#804040] gap-2">
+                        <button id="btnPrev" onclick="navigateQuestion(-1)" class="px-5 py-2.5 bg-[#4a2424] hover:bg-[#5c2e2e] text-cream font-medium text-sm rounded-xl transition-all border border-[#804040] flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                            <span>Câu Trước</span>
+                        </button>
+
+                        <button onclick="clearCurrentSelection()" class="text-xs text-gray-300 hover:text-red-300 underline transition-colors px-2 py-1">
+                            Xóa lựa chọn này
+                        </button>
+
+                        <button id="btnNext" onclick="navigateQuestion(1)" class="px-5 py-2.5 bg-amber-600 hover:bg-amber-500 text-white font-bold text-sm rounded-xl transition-all shadow-md flex items-center gap-2">
+                            <span>Câu Tiếp</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SCREEN 3: KẾT THÚC & XEM KẾT QUẢ (RESULTS SCREEN) -->
+        <section id="screenResults" class="hidden space-y-8 py-4">
+            
+            <!-- Result Banner Summary -->
+            <div class="bg-card p-6 md:p-8 rounded-3xl text-center space-y-6 shadow-2xl border border-[#804040] relative overflow-hidden">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/20 text-amber-300 border-2 border-amber-400 shadow-lg mb-1">
+                    <i class="fa-solid fa-trophy text-3xl"></i>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black text-cream tracking-tight">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeTitle" class="text-sm text-gray-300 mt-1">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Score Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-2">
+                    <div class="bg-card-dark p-4 rounded-2xl border border-[#804040]">
+                        <span class="text-xs text-gray-300 block mb-1">Điểm số</span>
+                        <span id="scoreDisplay" class="text-3xl font-black text-amber-400 font-mono">0.0</span>
+                        <span class="text-xs text-gray-400">/ 10.0</span>
+                    </div>
+
+                    <div class="bg-card-dark p-4 rounded-2xl border border-[#804040]">
+                        <span class="text-xs text-gray-300 block mb-1">Số câu đúng</span>
+                        <span id="correctCountDisplay" class="text-3xl font-black text-emerald-400 font-mono">0</span>
+                        <span class="text-xs text-gray-400">/ 20 câu</span>
+                    </div>
+
+                    <div class="bg-card-dark p-4 rounded-2xl border border-[#804040]">
+                        <span class="text-xs text-gray-300 block mb-1">Thời gian làm bài</span>
+                        <span id="timeSpentDisplay" class="text-2xl font-bold text-cream font-mono">--:--</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="max-w-3xl mx-auto bg-card-dark p-5 rounded-2xl border border-amber-500/30 text-left space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots text-base"></i>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedbackText" class="text-sm text-gray-100 leading-relaxed pl-6 italic">
+                        <!-- Dynamic comment -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                    <button onclick="resetToStart()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#detailedSolutions" class="px-6 py-3 bg-[#4a2424] hover:bg-[#5c2e2e] text-cream font-bold rounded-xl shadow-md border border-[#804040] transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Answer & Solutions Section -->
+            <div id="detailedSolutions" class="space-y-6 pt-4">
+                <div class="flex items-center justify-between border-b border-[#804040] pb-3">
+                    <h3 class="text-xl font-bold text-cream flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-amber-400"></i>
+                        ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-gray-300 font-mono">20/20 câu hỏi</span>
+                </div>
+
+                <!-- Dynamic container for 20 questions breakdown -->
+                <div id="solutionsListContainer" class="space-y-6">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#4a2424] border-t border-[#804040] py-4 text-center text-xs text-gray-300">
+        <p>© Trolysoantracnghiem - Bộ câu hỏi trắc nghiệm Ngữ văn & Lý luận nghệ thuật 4 Mức độ chuẩn Giáo dục</p>
+    </footer>
+
+    <script>
+        // 20 Questions strictly based on Thuchanh03.pdf (8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao)
+        const rawQuestionsData = [
+            // --- 8 CÂU MỨC BIẾT (1 - 8) ---
+            {
+                id: 1,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Theo văn bản, tác phẩm bức tranh sơn dầu nổi tiếng <em>Em Thúy</em> là sáng tác của họa sĩ nào và ra đời vào năm nào?",
+                options: [
+                    "A. Bùi Xuân Phái sáng tác năm \\(1920\\)",
+                    "B. Trần Văn Cẩn sáng tác năm \\(1943\\)",
+                    "C. Thái Bá Vân sáng tác năm \\(1998\\)",
+                    "D. Leonardo da Vinci sáng tác năm \\(1452\\)"
+                ],
+                correct: 1, // B
+                explanation: "Trong văn bản, tác giả nêu rõ: <em>'Em Thúy bức tranh sơn dầu sáng tác năm \\(1943\\) của danh họa Trần Văn Cẩn (\\(1910 - 1994\\))'</em>."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Trong tác phẩm <em>'Tiếp xúc với nghệ thuật'</em>, nhà nghiên cứu Thái Bá Vân khẳng định một tác phẩm nghệ thuật có mấy tồn tại (đời sống)?",
+                options: [
+                    "A. Một tồn tại duy nhất",
+                    "B. Hai tồn tại (đời sống vật thể và đời sống hình tượng)",
+                    "C. Ba tồn tại (vật thể, hình tượng và cảm xúc)",
+                    "D. Vô số tồn tại không thể xác định"
+                ],
+                correct: 1, // B
+                explanation: "Tác giả viết: <em>'Tuy nhiên tôi nói rằng nó có hai đời sống, hai tồn tại. Một, là sự tồn tại vật thể... Mặt khác, là sự tồn tại tinh thần như một hình tượng nghệ thuật'</em>."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Kích thước vật thể của bức tranh <em>Em Thúy</em> được tác giả đề cập trong văn bản là bao nhiêu?",
+                options: [
+                    "A. Khổ \\(30 \\times 45\\text{ cm}\\)",
+                    "B. Khổ \\(45 \\times 60\\text{ cm}\\)",
+                    "C. Khổ \\(60 \\times 80\\text{ cm}\\)",
+                    "D. Khổ \\(50 \\times 70\\text{ cm}\\)"
+                ],
+                correct: 1, // B
+                explanation: "Tác giả đề cập chi tiết: <em>'Chừng nào tôi chỉ bận tâm đo đếm, rằng đó là một tấm vải, khổ \\(45 \\times 60\\text{ cm}\\), rằng nó được vẽ bằng màu dầu...'</em>."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Bức tranh kiệt tác <em>Mona Lisa</em> (La Gioconda) của Leonardo da Vinci hiện đang được bảo tàng nào canh giữ?",
+                options: [
+                    "A. Bảo tàng Mỹ thuật Việt Nam",
+                    "B. Bảo tàng Lơ Lu-vrơ (Le Louvre) ở Pháp",
+                    "C. Bảo tàng Anh (British Museum)",
+                    "D. Bảo tàng Quốc gia Venice"
+                ],
+                correct: 1, // B
+                explanation: "Trong văn bản ghi rõ: <em>'Bà Mô-na Li-da (Mona Lisa) vật thể là của nước Pháp, bảo tàng Lơ Lu-vrơ (Le Louvre) canh giữ...'</em>."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Theo Thái Bá Vân, đời sống nào của tác phẩm nghệ thuật là bản chất hơn và chuyên chở giá trị thẩm mỹ thực sự?",
+                options: [
+                    "A. Đời sống vật thể đồ vật",
+                    "B. Đời sống nguyên vật liệu chất liệu",
+                    "C. Đời sống hình tượng (giá trị tinh thần)",
+                    "D. Đời sống kích thước thương mại"
+                ],
+                correct: 2, // C
+                explanation: "Tác giả khẳng định: <em>'Là tác phẩm nghệ thuật, Em Thúy còn, và buộc phải còn một đời sống khác, bản chất hơn. Đó là Em Thúy hình tượng'</em>."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Bức tranh <em>Em Thúy</em> của họa sĩ Trần Văn Cẩn đã được công nhận là Bảo vật quốc gia vào năm nào?",
+                options: [
+                    "A. Năm \\(1943\\)",
+                    "B. Năm \\(1998\\)",
+                    "C. Năm \\(2013\\)",
+                    "D. Năm \\(1999\\)"
+                ],
+                correct: 2, // C
+                explanation: "Theo chú thích trong văn bản: <em>'Em Thúy bức tranh sơn dầu sáng tác năm \\(1943\\)... được công nhận là Bảo vật quốc gia năm \\(2013\\)'</em>."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Danh họa nổi tiếng đặc biệt với những bức tranh vẽ chủ đề phố cổ Hà Nội được tác giả lấy làm ví dụ trong phần 3 là ai?",
+                options: [
+                    "A. Thái Bá Vân",
+                    "B. Bùi Xuân Phái",
+                    "C. Trần Văn Cẩn",
+                    "D. Nguyễn Trãi"
+                ],
+                correct: 1, // B
+                explanation: "Chú thích và văn bản nêu rõ: <em>'Bùi Xuân Phái (\\(1920 - 1988\\))... đặc biệt nổi tiếng với những bức tranh vẽ phố cổ Hà Nội'</em>."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelCode: "biet",
+                question: "Tác giả đã dùng hình ảnh đồ vật nào để so sánh với một bức tranh khi không có ánh nhìn tương tác của người xem?",
+                options: [
+                    "A. Cuốn sách đóng kín đặt trong tủ",
+                    "B. Cây đàn không người gảy",
+                    "C. Chiếc bật lửa có đủ ga và đá nằm nguội lạnh trên bàn",
+                    "D. Chiếc đồng hồ đã ngừng chạy"
+                ],
+                correct: 2, // C
+                explanation: "Văn bản viết: <em>'Tôi có cảm tưởng rằng một bức tranh, khi không có người xem giống như chiếc bật lửa có đủ ga và đá nằm nguội lạnh trên bàn'</em>."
+            },
+
+            // --- 7 CÂU MỨC HIỂU (9 - 15) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Tác giả Thái Bá Vân đã dùng phép so sánh nào để giúp người đọc hình dung về 2 đời sống của một tác phẩm nghệ thuật?",
+                options: [
+                    "A. So sánh với quá khứ và tương lai của lịch sử",
+                    "B. So sánh với thể xác và tâm hồn của con người",
+                    "C. So sánh với lý trí và cảm xúc trong tình yêu",
+                    "D. So sánh với hình thức bên ngoài và nhãn mác hàng hóa"
+                ],
+                correct: 1, // B
+                explanation: "Tác giả giải thích: <em>'Nếu tỉ dụ của tôi không quá khập khiễng, thì tôi coi nó giống như con người, có đời sống thể xác và đời sống tâm hồn'</em>. Thể xác tương ứng vật thể, tâm hồn tương ứng hình tượng tinh thần."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Vì sao tác giả nhận định <em>Mona Lisa</em> vật thể thuộc về nước Pháp nhưng <em>Mona Lisa</em> hình tượng lại là 'tài sản của mỗi tâm hồn chúng ta'?",
+                options: [
+                    "A. Vì bảo tàng Pháp lưu giữ tấm canvas thật, còn vẻ đẹp hình tượng tinh thần thì thuộc về sự rung động nội tâm của bất kỳ ai tiếp nhận",
+                    "B. Vì nước Pháp đã bán bản quyền hình ảnh bức tranh cho độc giả toàn thế giới",
+                    "C. Vì người xem có thể dễ dàng mua bức tranh chép về treo tại nhà mình",
+                    "D. Vì bức tranh vật thể có thể vận chuyển triển lãm khắp nơi trên thế giới"
+                ],
+                correct: 0, // A
+                explanation: "Tồn tại vật thể (tấm tranh) do bảo tàng Louvre giữ, nhưng giá trị thẩm mỹ và hình tượng nghệ thuật đi vào tâm trí và trở thành tài sản tinh thần chung của nhân loại."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Tại sao việc dừng lại ở việc đo đếm kích thước, chất liệu sơn dầu, khung gỗ hay vệt sơn bong nứt chưa được xem là thưởng thức nghệ thuật đúng nghĩa?",
+                options: [
+                    "A. Vì các yếu tố đó chỉ thuộc về đời sống vật thể đồ vật ('nguyên vật liệu'), chưa chạm đến đời sống hình tượng và giá trị thẩm mỹ",
+                    "B. Vì các số đo vật thể đó rất dễ xảy ra sai sót kỹ thuật",
+                    "C. Vì người nghệ sĩ sáng tác không hề quan tâm đến kích thước hay khung gỗ",
+                    "D. Vì màu sơn dầu có thể bị phai mờ theo dòng thời gian"
+                ],
+                correct: 0, // A
+                explanation: "Tác giả phân tích: <em>'Chừng nào tôi chỉ bận tâm đo đếm... thì chừng đó Em Thúy vẫn còn là đồ vật... mới chỉ là Em Thúy nguyên vật liệu'</em>."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Cụm từ <em>'hiện thực hình tượng'</em> trong bức tranh <em>Em Thúy</em> được tác giả cắt nghĩa là gì?",
+                options: [
+                    "A. Chi tiết chân thực về diện mạo ngoài đời của nhân vật bé Thúy",
+                    "B. Kỹ thuật pha màu và đường nét sơn dầu Châu Âu trên vải",
+                    "C. Thế giới nội tâm, con mắt nhìn đời và sự ứng xử thẩm mỹ của họa sĩ Trần Văn Cẩn trước thời cuộc Âu hóa",
+                    "D. Hoàn cảnh sinh sống khó khăn của tác giả vào những năm \\(1940\\)"
+                ],
+                correct: 2, // C
+                explanation: "Văn bản khẳng định: <em>'Hiện thực hình tượng ở Em Thúy là cái thế giới nội tâm của Trần Văn Cẩn, là con mắt nhìn đời của Trần Văn Cẩn vào những năm \\(40\\) thế kỷ này'</em>."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Mối quan hệ sự khác biệt giữa 'đời sống vật thể' và 'đời sống hình tượng' của tác phẩm nghệ thuật thể hiện như thế nào?",
+                options: [
+                    "A. Đời sống vật thể luôn biến đổi còn đời sống hình tượng cố định không thay đổi",
+                    "B. Đời sống vật thể là duy nhất, cố định; còn đời sống hình tượng di chuyển, sinh động và phát triển vô hạn trong tâm trí người xem",
+                    "C. Hai đời sống này hoàn toàn tách biệt và không có bất kỳ mối liên hệ nào",
+                    "D. Đời sống hình tượng chỉ tồn tại chừng nào tác giả bức tranh còn sống"
+                ],
+                correct: 1, // B
+                explanation: "Văn bản nêu: <em>'Đời sống vật thể của một tác phẩm dĩ nhiên phải đẹp nhưng không thay đổi, bao giờ cũng là một... Trong khi đó, đời sống tinh thần, thẩm mỹ của hình tượng lại không bao giờ đứng yên. Nó di chuyển, sinh động, phong phú...'</em>."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Chi tiết <em>'ngón tay bật vào bánh xe để ngọn lửa bùng lên'</em> mang ý nghĩa biểu tượng gì về vai trò của người thưởng thức nghệ thuật?",
+                options: [
+                    "A. Người xem là người bỏ tiền mua bức tranh vật chất",
+                    "B. Cái nhìn chạm vào bức tranh của người xem giúp hình tượng nghệ thuật được thức tỉnh, sống lại và sống thêm một mặt đời mới",
+                    "C. Người xem có quyền trực tiếp sửa đổi màu sắc trên mặt tranh",
+                    "D. Người xem có nhiệm vụ bảo quản bức tranh khỏi hư hỏng"
+                ],
+                correct: 1, // B
+                explanation: "Tác giả viết: <em>'Phải có một ngón tay bật vào bánh xe để ngọn lửa bùng lên, là giống như giây phút một cái nhìn chạm vào bức tranh, để hình tượng nghệ thuật trên đó được thức tỉnh, sống lại, và sống thêm một mặt đời mới'</em>."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelCode: "hieu",
+                question: "Tại sao tác giả cho rằng dù có đổi tên bức tranh <em>Em Thúy</em> thành 'Tuổi thơ' hay 'Học sinh tiên tiến' thì giá trị thẩm mỹ của tác phẩm vẫn không thay đổi?",
+                options: [
+                    "A. Vì tên gọi chỉ là vỏ bọc đề tài bề ngoài, bản chất hiện thực hình tượng và thế giới nghệ thuật bên trong tác phẩm mới là cốt lõi",
+                    "B. Vì các tên gọi đó đều mô tả chính xác cùng một cô bé",
+                    "C. Vì bức tranh đã được đăng ký bản quyền tên gọi quốc gia",
+                    "D. Vì người xem không mấy quan tâm đến tên gọi tác phẩm"
+                ],
+                correct: 0, // A
+                explanation: "Tác giả giải thích: <em>'dẫn lên, tôi hiểu rằng, bản chất hiện thực ở một tác phẩm không hề là cái kết cấu vật thể của đề tài... mà chính là cái hiện thực hình tượng'</em>."
+            },
+
+            // --- 3 CÂU MỨC VẬN DỤNG (16 - 18) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelCode: "vandung",
+                question: "Từ luận điểm <em>'Một tác phẩm hàm súc bao giờ cũng dành cho trí tưởng tượng của người xem một cánh cửa tự do hé mở'</em>, anh/chị rút ra bài học vận dụng nào khi tiếp cận văn bản nghệ thuật?",
+                options: [
+                    "A. Chủ động mở rộng liên tưởng, dùng tư chất và trải nghiệm cá nhân để đồng sáng tạo và bù đắp ý nghĩa cho tác phẩm",
+                    "B. Chỉ thụ động tiếp nhận một cách hiểu cố định duy nhất từ sách giáo khoa",
+                    "C. Tự do sáng tạo hoàn toàn mà không cần căn cứ vào chi tiết nào trong tác phẩm",
+                    "D. Tập trung phân tích số trang, kích thước khổ giấy và chất liệu in ấn"
+                ],
+                correct: 0, // A
+                explanation: "Luận điểm của tác giả khuyến khích người tiếp nhận không thụ động mà phải đưa trí tưởng tượng, sự bù đắp chủ quan vào để tác phẩm sinh nở vô hạn."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelCode: "vandung",
+                question: "Dựa vào quan điểm lý luận trong bài, yếu tố cốt lõi nào giúp một tác phẩm phản ánh chân thực hiện thực đời sống?",
+                options: [
+                    "A. Việc chép lại chính xác \\(100\\%\\) hình thù khách thể thực tế bên ngoài",
+                    "B. Sự bộc lộ thế giới nội tâm, thái độ ứng xử thẩm mỹ và góc nhìn đời sâu sắc của người nghệ sĩ trước thời cuộc",
+                    "C. Việc ứng dụng công nghệ kỹ thuật vẽ hiện đại nhất",
+                    "D. Số lượng người mua và giá trị tiền tệ của tác phẩm"
+                ],
+                correct: 1, // B
+                explanation: "Hiện thực trong nghệ thuật theo Thái Bá Vân không phải là sự mô phỏng máy móc mà là 'hiện thực hình tượng' - nơi kết tinh thái độ, nội tâm và ứng xử thẩm mỹ của nghệ sĩ."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelCode: "vandung",
+                question: "Thông điệp vận dụng thiết thực nhất mà tác giả muốn gửi gắm đến người đọc/người xem hiện đại thông qua bài viết là gì?",
+                options: [
+                    "A. Phải học thuộc mọi lý thuyết mỹ thuật phức tạp trước khi đi bảo tàng",
+                    "B. Hãy tiếp nhận nghệ thuật bằng sự tương tác chủ động và rung động từ trái tim chứ không nhìn ngắm bề ngoài đồ vật một cách nguội lạnh",
+                    "C. Nghệ thuật chỉ dành riêng cho các chuyên gia và nhà nghiên cứu",
+                    "D. Giá trị tác phẩm phụ thuộc hoàn toàn vào công tác bảo quản của các bảo tàng"
+                ],
+                correct: 1, // B
+                explanation: "Giống như chiếc bật lửa cần ngón tay bật vào bánh xe, người xem cần mang theo rung cảm tâm hồn để 'thức tỉnh' đời sống tinh thần của tác phẩm."
+            },
+
+            // --- 2 CÂU MỨC VẬN DỤNG CAO (19 - 20) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelCode: "vdcao",
+                question: "Nhận định: <em>'Hiện tượng phân hóa này không xảy ra trên bức tranh... Hiện tượng này xảy ra trong ý thức tôi, ở cái khả năng trừu tượng hóa của đầu óc con người'</em> phản ánh bản chất triết học - mỹ học nào trong tiếp nhận nghệ thuật?",
+                options: [
+                    "A. Tiếp nhận nghệ thuật là một hoạt động tâm lý - nhận thức mang tính chủ quan sáng tạo, nơi giá trị thẩm mỹ được kiến tạo trong mối tương tác giữa tác phẩm và chủ thể tiếp nhận",
+                    "B. Tác phẩm nghệ thuật là một thực thể vật chất hoàn toàn độc lập và không cần sự hiện diện của con người",
+                    "C. Ý thức của người xem có khả năng thay đổi trực tiếp cấu trúc vật thể của sơn dầu và vải vẽ",
+                    "D. Mọi khán giả ở mọi thời đại đều có sự diễn giải và cảm nhận hình tượng hoàn toàn giống hệt nhau"
+                ],
+                correct: 0, // A
+                explanation: "Đây là phát hiện mỹ học sâu sắc: Giá trị hình tượng nghệ thuật không nằm im lệm trên vật thể mà được sinh ra và trừu tượng hóa trong ý thức chủ quan của người thưởng thức."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelCode: "vdcao",
+                question: "Phân tích tư tưởng xuyên suốt của Thái Bá Vân: Quan điểm <em>'nội dung tác phẩm được người xem mở rộng'</em> có ý nghĩa quyết định như thế nào đối với sự trường tồn của các kiệt tác nghệ thuật?",
+                options: [
+                    "A. Giúp tác phẩm đóng băng giá trị ban đầu để không bị thay đổi bởi bất kỳ thế hệ nào",
+                    "B. Cho phép mỗi thế hệ và từng cá nhân đối thoại, bổ sung những tầng ý nghĩa thẩm mỹ mới, giúp đời sống tinh thần của tác phẩm liên tục được thức tỉnh và sống mãi với thời gian",
+                    "C. Tuyên bố làm giảm vai trò sáng tạo ban đầu của người họa sĩ tác giả",
+                    "D. Khẳng định độ bền vật thể mới là yếu tố duy nhất giúp tác phẩm trường tồn"
+                ],
+                correct: 1, // B
+                explanation: "Sự trường tồn của kiệt tác (như Nguyễn Trãi, Hồ Chí Minh, Mona Lisa, Em Thúy) không nằm ở vật thể hữu hạn mà nằm ở sự sinh nở vô hạn của đời sống hình tượng qua các thế hệ người xem bù đắp chủ quan."
+            }
+        ];
+
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let questions = []; // Array of active questions
+        let userAnswers = {}; // Map: question index -> selected choice index (0..3)
+        let currentQuestionIndex = 0;
+        let timerInterval = null;
+        let timeRemaining = 1200; // 20 minutes in seconds
+        let timeSpentSeconds = 0;
+
+        // Utility function to format seconds to MM:SS
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = seconds % 60;
+            return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        // Shuffle helper function for Timed Mode
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Start Quiz Entry Point
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentQuestionIndex = 0;
+            timeSpentSeconds = 0;
+
+            // Set Header Badges
+            const modeHeaderLabel = document.getElementById('modeHeaderLabel');
+            const timerContainer = document.getElementById('timerContainer');
+
+            if (mode === 'practice') {
+                modeHeaderLabel.innerText = 'Chế độ LUYỆN TẬP';
+                timerContainer.classList.add('hidden');
+                // Deep copy raw questions in standard order
+                questions = JSON.parse(JSON.stringify(rawQuestionsData));
+            } else {
+                modeHeaderLabel.innerText = 'Chế độ TÍNH GIỜ (20p)';
+                timerContainer.classList.remove('hidden');
+                
+                // Shuffle questions for authentic timed testing
+                questions = shuffleArray(JSON.parse(JSON.stringify(rawQuestionsData)));
+                
+                // Start Timer 20 mins
+                timeRemaining = 1200; // 20 mins
+                document.getElementById('timerDisplay').innerText = formatTime(timeRemaining);
+                
+                if (timerInterval) clearInterval(timerInterval);
+                timerInterval = setInterval(() => {
+                    timeRemaining--;
+                    timeSpentSeconds++;
+                    document.getElementById('timerDisplay').innerText = formatTime(timeRemaining);
+
+                    if (timeRemaining <= 0) {
+                        clearInterval(timerInterval);
+                        alertMessage("Đã hết thời gian 20 phút! Hệ thống sẽ tự động nộp bài kiểm tra của bạn.");
+                        finishQuiz();
+                    }
+                }, 1000);
+            }
+
+            // Switch Screen Views
+            document.getElementById('screenStart').classList.add('hidden');
+            document.getElementById('screenResults').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.remove('hidden');
+
+            // Render Palette and Question
+            renderQuestionPalette();
+            renderCurrentQuestion();
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Custom non-blocking message popup helper instead of alert()
+        function alertMessage(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-amber-500 text-stone-950 font-bold px-6 py-3 rounded-2xl shadow-2xl z-50 border border-amber-300 text-sm animate-bounce';
+            toast.innerText = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+
+        // Render Left Palette Grid (1..20)
+        function renderQuestionPalette() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.onclick = () => jumpToQuestion(idx);
+
+                const isCurrent = idx === currentQuestionIndex;
+                const isAnswered = userAnswers.hasOwnProperty(idx);
+
+                let bgClass = "bg-[#4a2424] text-cream border-[#804040] hover:bg-[#5c2e2e]";
+                if (isAnswered) {
+                    bgClass = "bg-amber-600 text-white border-amber-500 font-bold";
+                }
+                if (isCurrent) {
+                    bgClass += " ring-2 ring-white ring-offset-2 ring-offset-[#663333] font-black scale-105";
+                }
+
+                btn.className = `w-10 h-10 rounded-xl border text-sm flex items-center justify-center transition-all ${bgClass}`;
+                btn.innerText = idx + 1;
+                grid.appendChild(btn);
+            });
+
+            // Update answered counter
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answeredCount').innerText = count;
+        }
+
+        // Render Active Question
+        function renderCurrentQuestion() {
+            const q = questions[currentQuestionIndex];
+
+            // Question Header
+            document.getElementById('currentQuestionNum').innerText = `Câu ${currentQuestionIndex + 1} / 20`;
+            
+            // Level Badge Styling
+            const levelBadge = document.getElementById('currentQuestionLevel');
+            levelBadge.innerText = `Mức ${q.level}`;
+            
+            levelBadge.className = "text-xs font-bold px-3 py-1 rounded-full text-white shadow-sm ";
+            if (q.levelCode === 'biet') levelBadge.className += "bg-blue-600";
+            else if (q.levelCode === 'hieu') levelBadge.className += "bg-emerald-600";
+            else if (q.levelCode === 'vandung') levelBadge.className += "bg-amber-600";
+            else if (q.levelCode === 'vdcao') levelBadge.className += "bg-purple-600";
+
+            // Question Text
+            document.getElementById('questionText').innerHTML = q.question;
+
+            // Render 4 Options
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            const selectedOption = userAnswers[currentQuestionIndex];
+
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = selectedOption === optIdx;
+                
+                const optBtn = document.createElement('button');
+                optBtn.onclick = () => selectOption(optIdx);
+                
+                let optionStyle = "bg-[#4a2424] border-[#804040] text-gray-100 hover:bg-[#5c2e2e]";
+                if (isSelected) {
+                    optionStyle = "bg-amber-900/80 border-amber-400 text-cream font-semibold shadow-md ring-1 ring-amber-400";
+                }
+
+                optBtn.className = `w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3.5 group ${optionStyle}`;
+                
+                const letter = String.fromCharCode(65 + optIdx);
+                
+                optBtn.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg font-bold text-xs flex items-center justify-center shrink-0 transition-colors ${isSelected ? 'bg-amber-400 text-[#663333]' : 'bg-[#3b1c1c] text-cream border border-[#804040] group-hover:border-amber-400'}">
+                        ${letter}
+                    </div>
+                    <div class="text-sm md:text-base leading-relaxed pt-0.5 flex-grow">
+                        ${optText}
+                    </div>
+                `;
+
+                container.appendChild(optBtn);
+            });
+
+            // Update Prev/Next Buttons state
+            document.getElementById('btnPrev').disabled = currentQuestionIndex === 0;
+            const btnNext = document.getElementById('btnNext');
+            if (currentQuestionIndex === questions.length - 1) {
+                btnNext.innerHTML = `<span>Nộp Bài</span> <i class="fa-solid fa-check text-xs"></i>`;
+            } else {
+                btnNext.innerHTML = `<span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right text-xs"></i>`;
+            }
+
+            // Re-render MathJax formula
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        function selectOption(optIdx) {
+            userAnswers[currentQuestionIndex] = optIdx;
+            renderQuestionPalette();
+            renderCurrentQuestion();
+        }
+
+        function clearCurrentSelection() {
+            if (userAnswers.hasOwnProperty(currentQuestionIndex)) {
+                delete userAnswers[currentQuestionIndex];
+                renderQuestionPalette();
+                renderCurrentQuestion();
+            }
+        }
+
+        function jumpToQuestion(index) {
+            currentQuestionIndex = index;
+            renderQuestionPalette();
+            renderCurrentQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            const nextIdx = currentQuestionIndex + direction;
+            if (nextIdx >= 0 && nextIdx < questions.length) {
+                currentQuestionIndex = nextIdx;
+                renderQuestionPalette();
+                renderCurrentQuestion();
+            } else if (nextIdx >= questions.length) {
+                submitQuizConfirm();
+            }
+        }
+
+        function submitQuizConfirm() {
+            const totalAnswered = Object.keys(userAnswers).length;
+            if (totalAnswered < questions.length) {
+                const unAnsweredCount = questions.length - totalAnswered;
+                if (!confirm(`Bạn còn ${unAnsweredCount} câu chưa trả lời. Bạn có chắc chắn muốn nộp bài ngay không?`)) {
+                    return;
+                }
+            }
+            finishQuiz();
+        }
+
+        function finishQuiz() {
+            // Stop Timer
+            if (timerInterval) clearInterval(timerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            questions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = ((correctCount / questions.length) * 10).toFixed(1);
+
+            // Update UI Results Summary
+            document.getElementById('scoreDisplay').innerText = score;
+            document.getElementById('correctCountDisplay').innerText = correctCount;
+            
+            document.getElementById('resultModeTitle').innerText = currentMode === 'practice' 
+                ? 'Chế độ LUYỆN TẬP' 
+                : 'Chế độ TÍNH GIỜ (20 Phút)';
+
+            if (currentMode === 'practice') {
+                document.getElementById('timeSpentDisplay').innerText = 'Không giới hạn';
+            } else {
+                document.getElementById('timeSpentDisplay').innerText = formatTime(timeSpentSeconds);
+            }
+
+            // Teacher Feedback Generator
+            const feedbackEl = document.getElementById('teacherFeedbackText');
+            const scoreNum = parseFloat(score);
+            
+            if (scoreNum >= 9.0) {
+                feedbackEl.innerHTML = `<strong>Xuất sắc!</strong> Em đã nắm rất vững tư tưởng bài viết <em>"Tiếp xúc với tác phẩm"</em> của tác giả Thái Bá Vân. Khả năng phân tích lý luận mỹ thuật và tư duy vận dụng cao của em rất tuyệt vời! Hãy tiếp tục phát huy nhé.`;
+            } else if (scoreNum >= 7.0) {
+                feedbackEl.innerHTML = `<strong>Khá giỏi!</strong> Em hiểu rõ nội dung văn bản và phân biệt tốt giữa đời sống vật thể và hình tượng. Hãy đọc kỹ thêm lời giải chi tiết các câu vận dụng nâng cao để đạt điểm tối đa ở lần sau!`;
+            } else if (scoreNum >= 5.0) {
+                feedbackEl.innerHTML = `<strong>Đạt yêu cầu!</strong> Em đã nắm được các kiến thức cơ bản của bài đọc. Tuy nhiên cần chú ý phân tích sâu hơn về hiện thực hình tượng và vai trò đồng sáng tạo của người xem.`;
+            } else {
+                feedbackEl.innerHTML = `<strong>Cần cố gắng nhiều hơn!</strong> Kết quả cho thấy em chưa nắm vững kiến thức lý luận trong văn bản <em>"Tiếp xúc với tác phẩm"</em>. Hãy xem kỹ đáp án và lời giải chi tiết bên dưới, đồng thời ôn lại SGK để làm lại bài đạt kết quả tốt hơn nhé!`;
+            }
+
+            // Render Detailed Solutions List
+            renderDetailedSolutions();
+
+            // Switch Screen
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenResults').classList.remove('hidden');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Detailed Solutions Section
+        function renderDetailedSolutions() {
+            const container = document.getElementById('solutionsListContainer');
+            container.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+                const isAnswered = userChoice !== undefined;
+
+                const card = document.createElement('div');
+                card.className = `bg-card p-6 rounded-2xl border space-y-4 shadow-lg ${isCorrect ? 'border-emerald-500/50' : 'border-red-500/50'}`;
+
+                let statusBadge = '';
+                if (isCorrect) {
+                    statusBadge = `<span class="bg-emerald-900/80 text-emerald-200 border border-emerald-500 text-xs px-3 py-1 rounded-full font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> Đúng</span>`;
+                } else {
+                    statusBadge = `<span class="bg-red-900/80 text-red-200 border border-red-500 text-xs px-3 py-1 rounded-full font-bold flex items-center gap-1"><i class="fa-solid fa-xmark"></i> Sai</span>`;
+                }
+
+                let optionsHtml = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optStyle = "bg-[#3b1c1c] border-[#804040] text-gray-300";
+                    let icon = '';
+
+                    if (optIdx === q.correct) {
+                        optStyle = "bg-emerald-950/80 border-emerald-500 text-emerald-200 font-semibold ring-1 ring-emerald-500";
+                        icon = `<i class="fa-solid fa-circle-check text-emerald-400 text-base ml-auto"></i>`;
+                    } else if (userChoice === optIdx && !isCorrect) {
+                        optStyle = "bg-red-950/80 border-red-500 text-red-200 font-semibold ring-1 ring-red-500 line-through";
+                        icon = `<i class="fa-solid fa-circle-xmark text-red-400 text-base ml-auto"></i>`;
+                    }
+
+                    const letter = String.fromCharCode(65 + optIdx);
+
+                    optionsHtml += `
+                        <div class="p-3.5 rounded-xl border text-sm flex items-center gap-3 ${optStyle}">
+                            <span class="font-bold shrink-0">${letter}.</span>
+                            <span class="flex-grow">${optText}</span>
+                            ${icon}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#804040] pb-3">
+                        <div class="flex items-center gap-3">
+                            <span class="font-bold text-cream text-lg">Câu ${idx + 1}</span>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full text-white bg-blue-600">Mức ${q.level}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+
+                    <div class="text-base text-white font-medium">
+                        ${q.question}
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                        ${optionsHtml}
+                    </div>
+
+                    <div class="bg-card-dark p-4 rounded-xl border border-[#804040] space-y-1.5 text-xs md:text-sm">
+                        <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <div class="text-gray-200 leading-relaxed italic pl-5">
+                            ${q.explanation}
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            // Re-render MathJax
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Reset to Welcome Screen
+        function resetToStart() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('modeHeaderLabel').innerText = 'Chưa chọn chế độ';
+            document.getElementById('timerContainer').classList.add('hidden');
+            
+            document.getElementById('screenResults').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenStart').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

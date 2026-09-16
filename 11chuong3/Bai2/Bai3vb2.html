@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tôi Có Một Ước Mơ - Martin Luther King</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        /* Custom Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #e2e8f0;
+            font-weight: 600;
+        }
+        /* Color Palette Overrides */
+        .bg-color-1 { background-color: #1E3A8A; } /* Màu 1: Blue 900 */
+        .bg-color-2 { background-color: #0D9488; } /* Màu 2: Teal 600 */
+        .btn-accent { background-color: #33FF33; color: #000000; font-weight: 700; }
+        .btn-accent:hover { background-color: #2be02b; }
+        
+        /* Numbering Frames */
+        .square-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #1E3A8A;
+            background-color: #ebf8ff;
+            color: #1E3A8A;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .circle-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #0D9488;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+        
+        /* Quiz Game Show Styling */
+        .millionaire-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="py-8 px-2 sm:px-4">
+
+    <!-- Thẻ div chủ bao bọc nội dung -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- Header Block: 2 Khối màu 1 & màu 2 -->
+        <header class="rounded-[12px] overflow-hidden shadow-md text-white">
+            <!-- Khối trên: Tên chương (Màu 1) -->
+            <div class="bg-color-1 px-6 py-4 text-center sm:text-left border-b border-white/20">
+                <span class="text-xs uppercase tracking-widest text-emerald-300 font-bold block mb-1">Chương</span>
+                <h2 class="text-lg sm:text-xl font-bold tracking-wide">CẤU TRÚC CỦA VĂN BẢN NGHỊ LUẬN</h2>
+            </div>
+            <!-- Khối dưới: Tên bài (Màu 2) -->
+            <div class="bg-color-2 px-6 py-6 text-center">
+                <span class="text-xs uppercase tracking-widest text-teal-100 font-semibold block mb-1">Văn bản 2</span>
+                <h1 class="text-2xl sm:text-3xl font-black uppercase tracking-wider text-white">
+                    TÔI CÓ MỘT ƯỚC MƠ <span class="normal-case text-lg font-normal text-teal-100 block sm:inline sm:ml-2">(I Have a Dream)</span>
+                </h1>
+                <p class="text-sm font-medium mt-2 text-teal-100">— Mác-tin Lu-thơ Kinh (Martin Luther King Jr.) —</p>
+            </div>
+        </header>
+
+        <!-- Intro Box: Khung viền đen mỏng, nền trắng, câu hỏi dẫn nhập in nghiêng -->
+        <div class="bg-white border border-gray-900 rounded-[12px] p-5 shadow-md space-y-3">
+            <div class="flex items-start gap-3">
+                <i class="fa-solid fa-bookmark text-indigo-700 text-xl mt-1"></i>
+                <div class="space-y-2">
+                    <h3 class="font-bold text-gray-800 text-base uppercase">Sức mạnh của văn kiện nghị luận - chính trị</h3>
+                    <p class="italic text-gray-700 text-sm sm:text-base leading-relaxed">
+                        Trong lịch sử của mỗi dân tộc và nhân loại, có những văn kiện chính trị không chỉ mang giá trị pháp lý, thời sự mà còn trở thành những <strong class="text-indigo-900 font-semibold">áng văn chương giàu tính nghệ thuật, giàu cảm xúc và có sức lay động sâu sắc</strong> tâm hồn hàng triệu người qua nhiều thế hệ.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mục Hoạt Động Khởi Động (Hình Bàn Tay / Nêu Vấn Đề) -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md border-l-4 border-amber-500 space-y-4">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">✋</span>
+                <h3 class="font-bold text-lg text-amber-900">HOẠT ĐỘNG KHỞI ĐỘNG & NÊU VẤN ĐỀ</h3>
+            </div>
+            
+            <div class="space-y-3 text-gray-800">
+                <p class="font-medium">1. Trong lịch sử của dân tộc, có những trường hợp một văn kiện chính trị lại trở thành một áng văn chương có sức lay động lớn. Bạn hãy kể tên một vài tác phẩm như vậy.</p>
+                <p class="font-medium">2. Nhiều nhân vật lịch sử đã thể hiện niềm ước mơ về hạnh phúc cho nhân dân, bình yên cho đất nước trong những câu thơ, câu văn hoặc những lời phát biểu đầy tâm huyết. Bạn hãy nêu một ví dụ cụ thể để chứng minh ý kiến trên.</p>
+            </div>
+
+            <button onclick="toggleAnswer('act-start-ans')" class="btn-accent px-4 py-2 rounded-lg text-sm transition-all flex items-center gap-2 shadow-sm">
+                <i class="fa-solid fa-lightbulb"></i> Xem gợi ý giải quyết
+            </button>
+
+            <div id="act-start-ans" class="hidden bg-emerald-50 border border-emerald-300 rounded-lg p-4 text-sm text-emerald-950 space-y-2">
+                <p><strong>Gợi ý câu 1:</strong> Một số tác phẩm tiêu biểu trong văn học Việt Nam: <em>"Nam quốc sơn hà"</em> (Lý Thường Kiệt), <em>"Hịch tướng sĩ"</em> (Trần Quốc Tuấn), <em>"Bình Ngô đại cáo"</em> (Nguyễn Trãi), <em>"Tuyên ngôn Độc lập"</em> (Hồ Chí Minh)...</p>
+                <p><strong>Gợi ý câu 2:</strong> Ví dụ: Lời tâm nguyện của Chủ tịch Hồ Chí Minh: <em>"Tôi chỉ có một sự ham muốn, ham muốn tột bậc, là làm sao cho nước ta được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành."</em></p>
+            </div>
+        </div>
+
+        <!-- Khung Nội Dung Chính Bài Học -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            
+            <!-- Section Header I -->
+            <div class="border-b-4 border-indigo-900 pb-2">
+                <h2 class="text-xl sm:text-2xl font-bold text-indigo-950 flex items-center">
+                    <span class="square-num">I</span> TÌM HIỂU CHUNG
+                </h2>
+            </div>
+
+            <!-- Mục 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-teal-800 flex items-center">
+                    <span class="circle-num">1</span> Tác giả Mác-tin Lu-thơ Kinh (Martin Luther King Jr., 1929 – 1968)
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                    <div class="md:col-span-2 space-y-2 text-gray-700 leading-relaxed text-sm sm:text-base">
+                        <p>• Là nhà hoạt động dân quyền người Mỹ gốc Phi nổi tiếng thế giới, mục sư Dòng Báp-tít.</p>
+                        <p>• Lãnh đạo phong trào đấu tranh bất bạo động chống lại sự phân biệt chủng tộc đối với người da đen tại Mỹ.</p>
+                        <p>• Năm 1964, ông vinh dự nhận <strong>Giải Nobel Hòa bình</strong> cho những đóng góp to lớn vì bình đẳng xã hội và nhân quyền.</p>
+                        <p>• Được nhớ đến là một trong những nhà hùng biện kiệt xuất nhất trong lịch sử hiện đại.</p>
+                    </div>
+                    <!-- Khung hình minh họa h1.png -->
+                    <div class="bg-gray-100 border-2 border-dashed border-gray-400 rounded-lg p-3 text-center flex flex-col items-center justify-center min-h-[160px]">
+                        <img src="h1.png" alt="Chân dung Martin Luther King Jr." class="max-h-36 rounded shadow-sm mb-2" onerror="this.onerror=null; this.src='https://placehold.co/200x200/e2e8f0/1e293b?text=Hình+1:+Martin+Luther+King';">
+                        <span class="text-xs text-gray-500 italic">Hình 1: Tác giả Mác-tin Lu-thơ Kinh</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mục 2 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-teal-800 flex items-center">
+                    <span class="circle-num">2</span> Tác phẩm "Tôi có một ước mơ"
+                </h3>
+                
+                <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 space-y-2 text-sm sm:text-base">
+                    <p><strong>• Bối cảnh bài diễn văn:</strong> Được đọc vào ngày 28/8/1963 trong cuộc tuần hành lịch sử đòi việc làm và tự do tại thủ đô Oa-xinh-tơn (Washington D.C.) trước hơn 250.000 người tại Đài kỷ niệm Lin-côn (Lincoln Memorial).</p>
+                    <p><strong>• Thể loại:</strong> Diễn văn chính trị / Văn bản nghị luận xã hội.</p>
+                    <p><strong>• Xuất xứ:</strong> Trích từ cuốn <em>"Bước đến tự do, Câu chuyện Mon-ga-mơ-ri"</em> (Montgomery).</p>
+                    <p><strong>• Ý nghĩa tiêu đề:</strong> Biểu tượng cho khát vọng bình đẳng, công lý và tình huynh đệ giữa mọi chủng tộc trên đất nước Mỹ.</p>
+                </div>
+            </div>
+
+            <!-- Khung Lưu ý -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
+                <h4 class="font-bold text-amber-900 text-sm uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Lưu ý
+                </h4>
+                <p class="text-xs sm:text-sm text-amber-800 mt-1">
+                    Khi đọc hiểu bài diễn văn nghị luận trực tiếp, cần chú ý đến hoàn cảnh diễn xướng, tính chất giao tiếp hướng tới công chúng, sự kết hợp giữa lập luận logic sắc bén và các biện pháp tu từ hùng biện, giàu cảm xúc truyền cảm hứng.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- SECTION II: KHÁM PHÁ VĂN BẢN (ĐỌC HIỂU CHI TIẾT) -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            
+            <div class="border-b-4 border-indigo-900 pb-2">
+                <h2 class="text-xl sm:text-2xl font-bold text-indigo-950 flex items-center">
+                    <span class="square-num">II</span> ĐỌC HIỂU VĂN BẢN
+                </h2>
+            </div>
+
+            <!-- Đoạn 1 -->
+            <div class="space-y-3 border-b border-gray-200 pb-5">
+                <h3 class="text-lg font-bold text-teal-800 flex items-center">
+                    <span class="circle-num">1</span> Mục đích hướng tới và Thực trạng bất công chủng tộc
+                </h3>
+                
+                <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-4 text-gray-800 space-y-2">
+                    <p class="font-semibold text-indigo-900">📌 Bối cảnh lịch sử và thực trạng sau 100 năm Tuyên ngôn Giải phóng Nô lệ (1863 - 1963):</p>
+                    <p class="italic text-sm">"Một trăm năm sau, người da đen vẫn chưa được tự do... vẫn bị trói trong gông cùm xiềng xích của sự phân biệt chủng tộc... sống cô đơn trên hòn đảo nghèo đói giữa đại dương mênh mông thịnh vượng."</p>
+                </div>
+
+                <!-- Dấu ? Câu hỏi tương tác -->
+                <div class="space-y-3">
+                    <div class="bg-gray-100 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <p class="font-bold text-indigo-950 text-sm sm:text-base">❓ [Câu hỏi trong bài]: Xác định mục đích hướng tới của tác giả ở bài diễn văn này?</p>
+                        <button onclick="toggleAnswer('q1-ans')" class="btn-accent text-xs px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
+                            <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                        </button>
+                        <div id="q1-ans" class="hidden bg-emerald-100 text-emerald-950 p-3 rounded text-sm mt-2">
+                            <strong>Trả lời:</strong> Mục đích là kêu gọi và thúc đẩy cuộc đấu tranh đòi quyền tự do, bình đẳng dân quyền cho người da đen; thức tỉnh lương tri của toàn bộ xã hội Mỹ về sự bất công chủng tộc.
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <p class="font-bold text-indigo-950 text-sm sm:text-base">❓ [Câu hỏi trong bài]: Ý nghĩa của việc dẫn ra văn kiện lịch sử nổi tiếng (Tuyên ngôn Giải phóng Nô lệ)?</p>
+                        <button onclick="toggleAnswer('q2-ans')" class="btn-accent text-xs px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
+                            <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                        </button>
+                        <div id="q2-ans" class="hidden bg-emerald-100 text-emerald-950 p-3 rounded text-sm mt-2">
+                            <strong>Trả lời:</strong> Việc dẫn Tuyên ngôn Giải phóng Nô lệ (1863) tạo cơ sở pháp lý và lịch sử vững chắc, nhấn mạnh lời hứa chưa được thực thi của nước Mỹ, làm nổi bật tính nghịch lý và bất công mà người da đen phải chịu đựng suốt 100 năm qua.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đoạn 2 -->
+            <div class="space-y-3 border-b border-gray-200 pb-5">
+                <h3 class="text-lg font-bold text-teal-800 flex items-center">
+                    <span class="circle-num">2</span> Lời kêu gọi hành động "Ngay Bây Giờ" và Nguyên tắc đấu tranh
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl space-y-2">
+                        <h4 class="font-bold text-amber-900 text-sm">Tính cấp bách của thời khắc "Ngay Bây Giờ":</h4>
+                        <p class="text-xs sm:text-sm text-amber-800 italic">"Đây không còn là lúc để lẩn tránh trong sự xoa dịu xa xỉ... Đây là lúc hiện thực hoá công lý cho tất cả những người con của Tạo Hoá."</p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl space-y-2">
+                        <h4 class="font-bold text-blue-900 text-sm">Nguyên tắc đấu tranh Bất Bạo Động:</h4>
+                        <ul class="text-xs sm:text-sm text-blue-800 list-disc list-inside space-y-1">
+                            <li>Không tìm cách thỏa mãn cơn khát tự do bằng chén hận thù, cay đắng.</li>
+                            <li>Tranh đấu bằng kỷ luật và lòng tự trọng cao.</li>
+                            <li>Đoàn kết với những người anh em da trắng cùng chí hướng.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-indigo-950 text-sm sm:text-base">❓ [Theo dõi]: Cách tác giả nói về thời điểm cần thiết để đòi công lý và quan điểm đấu tranh?</p>
+                    <button onclick="toggleAnswer('q3-ans')" class="btn-accent text-xs px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                    </button>
+                    <div id="q3-ans" class="hidden bg-emerald-100 text-emerald-950 p-3 rounded text-sm mt-2">
+                        <strong>Trả lời:</strong> Thời điểm là ngay lập tức ("Ngay Bây Giờ"), không lùi bước hay trì hoãn. Quan điểm đấu tranh là hoà bình, bất bạo động, giữ gìn nhân phẩm và liên minh đoàn kết với người da trắng vì lợi ích chung.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đoạn 3 -->
+            <div class="space-y-3 border-b border-gray-200 pb-5">
+                <h3 class="text-lg font-bold text-teal-800 flex items-center">
+                    <span class="circle-num">3</span> Thái độ, cảm xúc và Lý do không thể hài lòng
+                </h3>
+
+                <div class="bg-red-50 border border-red-300 rounded-xl p-4 text-gray-800 space-y-2">
+                    <p class="font-bold text-red-900">Điệp từ "Chúng ta không thể hài lòng..." khi:</p>
+                    <ul class="text-xs sm:text-sm text-red-800 list-disc list-inside space-y-1">
+                        <li>Người da đen còn là nạn nhân của bạo lực cảnh sát.</li>
+                        <li>Chưa được tự do di chuyển, bị kì thị phòng nghỉ và khách sạn.</li>
+                        <li>Trẻ em bị tước đoạt nhân phẩm bởi tấm bảng "Chỉ dành cho người da trắng".</li>
+                        <li>Quyền bầu cử bị cản trở và vô hiệu hóa.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-indigo-950 text-sm sm:text-base">❓ [Nhận xét]: Qua cách diễn đạt và đưa bằng chứng, tác giả thể hiện thái độ và tình cảm như thế nào?</p>
+                    <button onclick="toggleAnswer('q4-ans')" class="btn-accent text-xs px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> Xem câu trả lời
+                    </button>
+                    <div id="q4-ans" class="hidden bg-emerald-100 text-emerald-950 p-3 rounded text-sm mt-2">
+                        <strong>Trả lời:</strong> Tác giả thể hiện thái độ kiên quyết, không thỏa hiệp trước bất công; đồng thời bộc lộ nỗi đau xót, sự thấu hiểu sâu sắc đối với những gian khổ mà đồng bào da đen đã và đang chịu đựng.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đoạn 4 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-teal-800 flex items-center">
+                    <span class="circle-num">4</span> Điệp khúc "Tôi có một ước mơ" & Âm hưởng tự do lan tỏa
+                </h3>
+
+                <!-- Bảng tổng hợp các điệp ngữ nghệ thuật -->
+                <p class="font-semibold text-gray-800 text-sm">Các điệp ngữ nghệ thuật định hình cấu trúc bài diễn văn:</p>
+                <div class="overflow-x-auto">
+                    <table class="text-sm">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Cấu trúc điệp từ / Điệp ngữ</th>
+                                <th>Nội dung gửi gắm</th>
+                                <th>Hiệu quả nghệ thuật</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><em>"Một trăm năm sau..."</em></td>
+                                <td>Thực trạng bất công bám rễ kéo dài.</td>
+                                <td>Tạo ấn tượng gián đoạn, hẫng hẫng về thời gian.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><em>"Đây là lúc..." / "Ngay Bây Giờ"</em></td>
+                                <td>Nhấn mạnh tính cấp thiết phải hành động.</td>
+                                <td>Thúc giục, tăng nhịp điệu dồn dập.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><em>"Chúng ta không thể hài lòng..."</em></td>
+                                <td>Khẳng định quyết tâm đấu tranh đến cùng.</td>
+                                <td>Tạo sức mạnh đanh thép, không gục ngã.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><em>"Tôi mơ rằng..." (I have a dream)</em></td>
+                                <td>Khát vọng về sự bình đẳng, tình anh em.</td>
+                                <td>Truyền cảm hứng, thắp sáng hy vọng.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><em>"Hãy để tự do ngân vang..."</em></td>
+                                <td>Tự do phủ sóng khắp mọi miền đất nước.</td>
+                                <td>Âm hưởng ngân vang, bay bổng, hùng vĩ.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Khung Hình Minh Họa h2.png -->
+                <div class="bg-gray-100 border-2 border-dashed border-gray-400 rounded-lg p-4 text-center my-4">
+                    <img src="h2.png" alt="Sơ đồ nghệ thuật bài diễn văn Tôi có một ước mơ" class="max-h-48 mx-auto rounded shadow-sm mb-2" onerror="this.onerror=null; this.src='https://placehold.co/600x200/e2e8f0/1e293b?text=Hình+2:+Sơ+đồ+cấu+trúc+nghệ+thuật+hùng+biện';">
+                    <span class="text-xs text-gray-500 italic">Hình 2: Sơ đồ nghệ thuật hùng biện và các điệp khúc truyền cảm hứng</span>
+                </div>
+
+                <!-- Mối liên hệ & Ấn tượng đoạn kết -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-100 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <p class="font-bold text-indigo-950 text-xs sm:text-sm">❓ [Nghệ thuật]: Biện pháp tu từ chính được tác giả sử dụng nhằm tác động mạnh đến người nghe?</p>
+                        <button onclick="toggleAnswer('q5-ans')" class="btn-accent text-xs px-2.5 py-1 rounded shadow-sm">Xem trả lời</button>
+                        <div id="q5-ans" class="hidden bg-emerald-100 text-emerald-950 p-3 rounded text-xs mt-2">
+                            <strong>Trả lời:</strong> Biện pháp điệp ngữ, điệp cấu trúc câu (Lặp lại <em>"Tôi có một ước mơ"</em>, <em>"Hãy để tự do ngân vang"</em>) tạo nên giai điệu như một bản hòa tấu hùng xướng tác động trực tiếp vào tâm trí người nghe.
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                        <p class="font-bold text-indigo-950 text-xs sm:text-sm">❓ [Đoạn kết]: Ấn tượng và cảm xúc về đoạn kết của bài diễn văn?</p>
+                        <button onclick="toggleAnswer('q6-ans')" class="btn-accent text-xs px-2.5 py-1 rounded shadow-sm">Xem trả lời</button>
+                        <div id="q6-ans" class="hidden bg-emerald-100 text-emerald-950 p-3 rounded text-xs mt-2">
+                            <strong>Trả lời:</strong> Đoạn kết mang âm hưởng sử thi tràn đầy niềm tin hân hoan, với hình ảnh khúc ca tự do vang lên khắp mọi địa danh địa lý, kết thúc bằng lời tạ ơn vinh quang đầy cảm động.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SECTION III: TỔNG KẾT & MỤC ĐẶC BIỆT -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            
+            <div class="border-b-4 border-indigo-900 pb-2">
+                <h2 class="text-xl sm:text-2xl font-bold text-indigo-950 flex items-center">
+                    <span class="square-num">III</span> TỔNG KẾT
+                </h2>
+            </div>
+
+            <!-- Khung Tổng kết giá trị -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-emerald-50 border border-emerald-300 rounded-xl p-4 space-y-2">
+                    <h3 class="font-bold text-emerald-900 text-base">🎨 Giá trị nghệ thuật</h3>
+                    <ul class="text-xs sm:text-sm text-emerald-800 list-disc list-inside space-y-1">
+                        <li>Cấu trúc lập luận chặt chẽ, mạch lạc, giàu tính thuyết phục.</li>
+                        <li>Sử dụng tài tình phép điệp từ, điệp cấu trúc và các hình ảnh so sánh, ẩn dụ sống động.</li>
+                        <li>Ngôn ngữ hùng biện giàu nhạc điệu, cảm xúc tha thiết và tràn đầy sức mạnh truyền cảm hứng.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-purple-50 border border-purple-300 rounded-xl p-4 space-y-2">
+                    <h3 class="font-bold text-purple-900 text-base">💡 Giá trị nội dung</h3>
+                    <ul class="text-xs sm:text-sm text-purple-800 list-disc list-inside space-y-1">
+                        <li>Thực trạng bất công chủng tộc mà người da đen phải gánh chịu tại Mỹ.</li>
+                        <li>Khát vọng chân chính về tự do, bình đẳng, tình huynh đệ giữa mọi sắc tộc.</li>
+                        <li>Khẳng định con đường đấu tranh chính nghĩa, hòa bình và bất bạo động.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mục "Em có biết" -->
+            <div class="bg-teal-50 border border-teal-300 rounded-xl p-4 space-y-2">
+                <h4 class="font-bold text-teal-900 text-sm uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info"></i> em có biết
+                </h4>
+                <p class="text-xs sm:text-sm text-teal-800 leading-relaxed">
+                    Bài diễn văn <em>"I Have a Dream"</em> không chỉ làm rung chuyển nước Mỹ năm 1963 mà còn được Thư viện Quốc hội Mỹ đưa vào Danh mục Ghi âm Quốc gia. Lời nói của Martin Luther King đã trở thành biểu tượng toàn cầu cho các phong trào đấu tranh vì nhân quyền và bình đẳng trên khắp thế giới. Ngày Thứ Hai thứ ba của tháng Một hằng năm được Mỹ công nhận là Ngày Martin Luther King Jr. - một ngày lễ quốc gia.
+                </p>
+            </div>
+
+            <!-- Mục "Em có thể" -->
+            <div class="bg-indigo-50 border border-indigo-300 rounded-xl p-4 space-y-2">
+                <h4 class="font-bold text-indigo-900 text-sm uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-star"></i> em có thể
+                </h4>
+                <p class="text-xs sm:text-sm text-indigo-800 leading-relaxed">
+                    Vận dụng nghệ thuật sử dụng điệp cấu trúc và giọng điệu truyền cảm hứng vào các bài phát biểu, bài văn nghị luận xã hội nhằm bày tỏ quan điểm, ước mơ và lý tưởng sống của bản thân trước tập thể.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- SECTION IV: CỦNG CỐ & BÀI TẬP (GAME SHOW "AI LÀ TRIỆU PHÚ" & TỰ LUẬN) -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-8">
+            
+            <div class="border-b-4 border-indigo-900 pb-2">
+                <h2 class="text-xl sm:text-2xl font-bold text-indigo-950 flex items-center">
+                    <span class="square-num">IV</span> CỦNG CỐ & BÀI TẬP
+                </h2>
+            </div>
+
+            <!-- PART A: GAME SHOW "AI LÀ TRIỆU PHÚ" (10 CÂU TRẮC NGHIỆM) -->
+            <div class="millionaire-card rounded-2xl p-6 shadow-xl space-y-6">
+                
+                <div class="text-center space-y-2 border-b border-gray-700 pb-4">
+                    <div class="inline-block bg-amber-400 text-black px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase">
+                        🎮 Gameshow Trắc Nghiệm
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-black text-amber-300 tracking-wide uppercase">AI LÀ TRIỆU PHÚ TRI THỨC</h3>
+                    <p class="text-xs text-gray-300">Trả lời 10 câu hỏi để làm chủ kiến thức bài học "Tôi có một ước mơ"!</p>
+                </div>
+
+                <form id="quizForm" class="space-y-6">
+                    
+                    <!-- Q1 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 1: Tác giả của bài diễn văn "Tôi có một ước mơ" là ai?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q1" value="A"> A. Abraham Lincoln
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q1" value="B"> B. Mác-tin Lu-thơ Kinh (Martin Luther King Jr.)
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q1" value="C"> C. Nelson Mandela
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q1" value="D"> D. Barack Obama
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 2: Bài diễn văn được đọc vào thời điểm lịch sử nào?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q2" value="A"> A. Năm 1863 khi Tuyên ngôn giải phóng nô lệ được ký
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q2" value="B"> B. Cuộc tuần hành năm 1963 đòi việc làm và tự do tại Washington
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q2" value="C"> C. Lễ nhận giải Nobel Hòa bình năm 1964
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q2" value="D"> D. Ngày Quốc khánh Mỹ năm 1776
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 3: Văn kiện lịch sử nào được tác giả dẫn ra ở phần mở đầu bài diễn văn?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q3" value="A"> A. Tuyên ngôn Độc lập Mỹ
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q3" value="B"> B. Tuyên ngôn Giải phóng Nô lệ (Emancipation Proclamation)
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q3" value="C"> C. Hiến pháp nước Mỹ
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q3" value="D"> D. Tuyên ngôn Nhân quyền Liên Hợp Quốc
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 4: Tác giả nhấn mạnh phương châm đấu tranh của phong trào dân quyền là gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q4" value="A"> A. Đấu tranh bằng bạo lực và thù hận
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q4" value="B"> B. Hòa bình, bất bạo động, tôn trọng kỷ luật và nhân phẩm
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q4" value="C"> C. Thỏa hiệp và chấp nhận thực tại
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q4" value="D"> D. Tách rời hoàn toàn khỏi cộng đồng người da trắng
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 5: Biện pháp tu từ nào tạo nên nhịp điệu hùng xướng mạnh mẽ nhất trong bài?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q5" value="A"> A. Điệp từ / điệp cấu trúc câu
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q5" value="B"> B. So sánh nhân hóa
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q5" value="C"> C. Nói giảm nói tránh
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q5" value="D"> D. Chơi chữ
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 6: Cụm từ "Tôi có một ước mơ" thể hiện khát vọng lớn nhất về điều gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q6" value="A"> A. Sự giàu có về vật chất cho riêng người da đen
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q6" value="B"> B. Sự bình đẳng, tự do và tình huynh đệ giữa mọi sắc tộc
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q6" value="C"> C. Sự trả thù đối với những kẻ đàn áp
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q6" value="D"> D. Quyền thống trị chính trị
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 7: Vì sao tác giả nhấn mạnh thời điểm đòi công lý là "Ngay Bây Giờ"?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q7" value="A"> A. Vì người da đen đã chờ đợi 100 năm mà sự bất công vẫn tồn tại
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q7" value="B"> B. Vì chính quyền đã đồng ý đáp ứng ngay
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q7" value="C"> C. Vì cuộc biểu tình chuẩn bị kết thúc
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q7" value="D"> D. Vì thời tiết mùa hè quá ngột ngạt
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 8: Thái độ của Martin Luther King đối với người da trắng đồng hành cùng phong trào là gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q8" value="A"> A. Nghi ngờ và từ chối hợp tác
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q8" value="B"> B. Trân trọng, coi họ là những người anh em gắn liền vận mệnh
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q8" value="C"> C. Yêu cầu họ phải chịu trách nhiệm tài chính
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q8" value="D"> D. Thờ ơ, không nhắc tới
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 9: Điệp ngữ "Hãy để tự do ngân vang..." ở đoạn kết có tác dụng gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q9" value="A"> A. Mở rộng không gian tự do ra khắp địa lý nước Mỹ
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q9" value="B"> B. Kết thúc bài diễn văn bằng âm hưởng hùng vĩ, tràn đầy hy vọng
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q9" value="C"> C. Bổ sung cảm xúc thẩm mỹ và tính âm nhạc cho lời nói
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q9" value="D"> D. Cả A, B và C đều đúng
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                        <p class="font-semibold text-amber-200 text-sm sm:text-base">Câu 10: Yếu tố nào làm nên sức lay động đặc biệt của một văn kiện chính trị - nghị luận?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q10" value="A"> A. Sự kết hợp giữa lý lẽ chính nghĩa sắc bén và tình cảm chân thành, nhiệt huyết
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q10" value="B"> B. Chỉ cần số liệu thống kê khô khan
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q10" value="C"> C. Sử dụng từ ngữ xa lạ, khó hiểu
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:bg-slate-700">
+                                <input type="radio" name="q10" value="D"> D. Chỉ chú trọng vào miêu tả cảnh vật
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Nút Nộp Bài -->
+                    <div class="text-center pt-4">
+                        <button type="button" onclick="checkQuiz()" class="btn-accent px-8 py-3 rounded-xl text-base uppercase font-extrabold tracking-wider shadow-lg hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> NỘP BÀI KIỂM TRA
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- Hiển thị kết quả kiểm tra trắc nghiệm -->
+                <div id="quizResult" class="hidden rounded-xl p-5 border text-sm sm:text-base space-y-4"></div>
+
+            </div>
+
+
+            <!-- PART B: 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN / PHÂN TÍCH -->
+            <div class="space-y-6 pt-4">
+                <h3 class="text-xl font-bold text-indigo-950 flex items-center gap-2 border-b-2 border-teal-600 pb-2">
+                    <i class="fa-solid fa-pen-to

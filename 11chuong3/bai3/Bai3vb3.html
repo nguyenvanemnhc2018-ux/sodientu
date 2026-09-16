@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc của văn bản nghị luận - Một thời đại trong thi ca</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax Library with Latex & Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        /* Custom styles for primary color #33FF33 accents */
+        .btn-primary-accent {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        .btn-primary-accent:hover {
+            background-color: #22cc22;
+        }
+        .square-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 0px;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        .circle-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        .section-title {
+            border-bottom: 4px solid #1e293b;
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK -->
+        <div class="rounded-xl overflow-hidden shadow-md">
+            <!-- Khối trên: Mã màu 1 (#1e3a8a) -->
+            <div class="bg-[#1e3a8a] text-white py-3 px-6 text-center font-bold text-lg md:text-xl uppercase tracking-wider">
+                CHƯƠNG: CẤU TRÚC CỦA VĂN BẢN NGHỊ LUẬN
+            </div>
+            <!-- Đường kẻ phân cách mảnh -->
+            <div class="border-t border-white/20"></div>
+            <!-- Khối dưới: Mã màu 2 (#0284c7) -->
+            <div class="bg-[#0284c7] text-white py-4 px-6 text-center font-extrabold text-xl md:text-3xl tracking-wide uppercase">
+                BÀI 3: MỘT THỜI ĐẠI TRONG THI CA
+                <span class="block text-sm md:text-base font-normal normal-case italic mt-1 text-cyan-100">(Trích "Thi nhân Việt Nam" – Hoài Thanh)</span>
+            </div>
+        </div>
+
+        <!-- INTRO BOX (LỜI DẪN) -->
+        <div class="bg-white border border-black rounded-xl p-5 shadow-sm space-y-3">
+            <div class="flex items-start space-x-3">
+                <span class="text-2xl">💡</span>
+                <div class="italic text-slate-700 leading-relaxed">
+                    <p class="mb-2">● Có bao giờ bạn băn khoăn khi phải phân biệt cái mới với cái cũ? Hãy chia sẻ trải nghiệm của mình.</p>
+                    <p>● Bạn hãy lựa chọn và so sánh một bài thơ thuộc phong trào Thơ mới với một bài thơ thuộc thời kì trung đại để tìm ra những điểm khác biệt.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN LESSON CONTENT -->
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8 space-y-8">
+
+            <!-- SECTION I -->
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900 section-title flex items-center">
+                    <span class="square-badge">I</span>
+                    TÌM HIỂU CHUNG VỀ TÁC GIẢ VÀ TÁC PHẨM
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6 my-4">
+                    <!-- KHUNG HÌNH MINH HỌA -->
+                    <div class="md:col-span-1 border-2 border-dashed border-slate-300 rounded-lg p-3 text-center bg-slate-50 flex flex-col items-center justify-center">
+                        <img src="hx.png" alt="Chân dung Hoài Thanh" class="max-h-56 object-cover rounded shadow-sm mb-2 border border-slate-200" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x250?text=Hình+hx.png+(Hoài+Thanh)'">
+                        <span class="text-xs text-slate-500 italic">Hình hx.png: Nhà phê bình văn học Hoài Thanh (1909–1982)</span>
+                    </div>
+
+                    <div class="md:col-span-2 space-y-4">
+                        <div class="p-4 bg-emerald-50 border-l-4 border-emerald-500 rounded-r-md">
+                            <h3 class="font-bold text-emerald-900 text-lg flex items-center mb-1">
+                                <span class="circle-badge">1</span> Tác giả Hoài Thanh
+                            </h3>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                <li><strong>Tên khai sinh:</strong> Nguyễn Đức Nguyên (1909–1982), quê ở xã Nghi Trung, huyện Nghi Lộc, tỉnh Nghệ An.</li>
+                                <li><strong>Sự nghiệp:</strong> Là nhà phê bình văn học xuất sắc nhất của văn học Việt Nam hiện đại. Phong cách phê bình tinh tế, giàu cảm xúc, tài hoa.</li>
+                                <li><strong>Tác phẩm chính:</strong> <em>Thi nhân Việt Nam</em> (1942), <em>Văn chương và hành động</em> (1936), <em>Phê bình và tiểu luận</em> (3 tập),...</li>
+                                <li>Năm 2000, ông được truy tặng Giải thưởng Hồ Chí Minh về Văn học nghệ thuật.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-md">
+                            <h3 class="font-bold text-blue-900 text-lg flex items-center mb-1">
+                                <span class="circle-badge">2</span> Tác phẩm "Một thời đại trong thi ca"
+                            </h3>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                <li><strong>Xuất xứ:</strong> Là bài tiểu luận mở đầu cho cuốn <em>Thi nhân Việt Nam (1932–1941)</em>.</li>
+                                <li><strong>Giá trị:</strong> Bản tổng kết khoa học, sâu sắc và đầy tính nghệ thuật về phong trào Thơ mới thời kì phát triển đỉnh cao.</li>
+                                <li><strong>Luận đề trung tâm:</strong> Đi tìm "Tinh thần Thơ mới" – sự thức tỉnh của cái "Tôi" cá nhân.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION II -->
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900 section-title flex items-center">
+                    <span class="square-badge">II</span>
+                    TÌM HIỂU CHI TIẾT VĂN BẢN (TIẾN TRÌNH LẬP LUẬN)
+                </h2>
+
+                <div class="space-y-6">
+
+                    <!-- MỤC 1 -->
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 text-lg flex items-center">
+                            <span class="circle-badge">1</span> Đặt vấn đề và Cái khó khi phân biệt Thơ mới – Thơ cũ
+                        </h3>
+
+                        <div class="p-4 bg-slate-100 border-l-4 border-slate-600 rounded-r-md space-y-2">
+                            <p class="font-semibold text-slate-800">📌 Nhận định cốt lõi:</p>
+                            <p class="text-slate-700">Ranh giới giữa thơ mới và thơ cũ không thể rạch ròi nếu chỉ dựa vào một vài câu thơ hay dở ngẫu nhiên. Muốn hiểu đúng tinh thần thơ, phải <strong>"sánh bài hay với bài hay"</strong> và nhìn vào <strong>đại thể</strong>.</p>
+                            <p class="text-slate-700"><em>"Hôm nay đã phôi thai từ hôm qua và trong cái mới vẫn còn rớt lại ít nhiều cái cũ."</em></p>
+                        </div>
+
+                        <!-- CÂU HỎI TRONG BÀI (DẤU ?) -->
+                        <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-md space-y-2">
+                            <p class="font-semibold text-blue-900 flex items-center">
+                                <span class="text-xl mr-2">❓</span> <strong>Câu hỏi đọc hiểu 1:</strong> Cái khó khi phân biệt rạch ròi giữa Thơ mới và Thơ cũ là gì?
+                            </p>
+                            <button onclick="toggleAnswer('qa1')" class="btn-primary-accent px-4 py-1.5 rounded text-sm transition shadow">
+                                View Solution / Xem đáp án
+                            </button>
+                            <div id="qa1" class="hidden mt-3 p-3 bg-emerald-100 text-emerald-900 rounded border border-emerald-300 text-sm leading-relaxed">
+                                <strong>Trả lời:</strong> Cái khó là thơ cũ hay thơ mới đều có những bài hay và bài tầm thường, lố lăng; các thời đại nối tiếp nhau nên trong cái mới vẫn còn vương vết cái cũ. Nếu chỉ lấy bài dở của thơ cũ so với bài hay của thơ mới thì không công bằng và không tìm ra bản chất.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MỤC 2 -->
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 text-lg flex items-center">
+                            <span class="circle-badge">2</span> Tiêu chí phân biệt và sự xuất hiện của cái "Tôi"
+                        </h3>
+
+                        <div class="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-md space-y-2">
+                            <p class="font-bold text-amber-900">💡 Định nghĩa tinh thần Thơ mới:</p>
+                            <p class="text-slate-800 font-medium text-center text-lg italic py-2 bg-white rounded border border-amber-200">
+                                "Tinh thần thời xưa – hay thơ cũ – và thời nay – hay thơ mới – có thể gồm lại trong hai chữ TA và TÔI."
+                            </p>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                <li><strong>Thơ cũ (Chữ TA):</strong> Gắn liền với quan niệm đoàn thể (quốc gia, gia đình). Cái bản sắc cá nhân bị chìm đắm như giọt nước trong biển cả. Thi nhân ẩn mình sau chữ "ta" để trốn cô đơn.</li>
+                                <li><strong>Thơ mới (Chữ TÔI):</strong> Gắn liền với quan niệm cá nhân tuyệt đối. Khi mới xuất hiện, nó bỡ ngỡ, lạc loài, bị nhìn với ánh mắt khó chịu, chướng mắt.</li>
+                            </ul>
+                        </div>
+
+                        <!-- CÂU HỎI TRONG BÀI (DẤU ?) -->
+                        <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-md space-y-2">
+                            <p class="font-semibold text-blue-900 flex items-center">
+                                <span class="text-xl mr-2">❓</span> <strong>Câu hỏi đọc hiểu 2:</strong> Tình trạng cái "Tôi" khi mới xuất hiện trên thi đàn Việt Nam được miêu tả ra sao?
+                            </p>
+                            <button onclick="toggleAnswer('qa2')" class="btn-primary-accent px-4 py-1.5 rounded text-sm transition shadow">
+                                View Solution / Xem đáp án
+                            </button>
+                            <div id="qa2" class="hidden mt-3 p-3 bg-emerald-100 text-emerald-900 rounded border border-emerald-300 text-sm leading-relaxed">
+                                <strong>Trả lời:</strong> Ngày đầu xuất hiện, chữ "Tôi" thực sự bỡ ngỡ, lạc loài nơi đất khách vì mang quan niệm cá nhân hoàn toàn mới lạ với xã hội Việt Nam truyền thống. Người ta nhìn nó một cách khó chịu, chướng mắt. Nhưng dần dần, nó được quen và được coi là đáng thương, tội nghiệp.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MỤC 3 -->
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 text-lg flex items-center">
+                            <span class="circle-badge">3</span> Biểu hiện đa dạng và Bi kịch của cái "Tôi" Thơ mới
+                        </h3>
+
+                        <div class="p-4 bg-rose-50 border-l-4 border-rose-500 rounded-r-md space-y-3">
+                            <p class="font-bold text-rose-900">🔥 Sự phân hóa nội tâm của cái "Tôi":</p>
+                            <p class="text-slate-700">Mất bề rộng (đoàn thể), cái "Tôi" đi tìm bề sâu tâm hồn. Nhưng càng đi sâu càng cảm thấy lạnh giá và bơ vơ:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <div class="bg-white p-2.5 rounded border border-rose-200">✨ <strong>Thế Lữ:</strong> Thoát lên tiên</div>
+                                <div class="bg-white p-2.5 rounded border border-rose-200">💌 <strong>Lưu Trọng Lư:</strong> Phiêu lưu trong trường tình</div>
+                                <div class="bg-white p-2.5 rounded border border-rose-200">🌀 <strong>Hàn Mặc Tử, Chế Lan Viên:</strong> Điên cuồng</div>
+                                <div class="bg-white p-2.5 rounded border border-rose-200">🔥 <strong>Xuân Diệu:</strong> Đắm say khao khát</div>
+                                <div class="bg-white p-2.5 rounded border border-rose-200 md:col-span-2">🌊 <strong>Huy Cận:</strong> Ngơ ngẩn buồn trở về hồn ta</div>
+                            </div>
+                            <p class="text-slate-800 font-semibold mt-2">=> Bi kịch lớn nhất:</p>
+                            <p class="text-slate-700 italic">"Thiếu một lòng tin đầy đủ" – Thiếu sự bình yên thời trước, nhìn vào tâm hồn mình chỉ thấy thiếu thốn, bàng hoàng, cô đơn.</p>
+                        </div>
+
+                        <!-- BÀN TAY HOẠT ĐỘNG / NÊU VẤN ĐỀ -->
+                        <div class="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-r-md space-y-2">
+                            <p class="font-bold text-yellow-900 flex items-center">
+                                <span class="text-xl mr-2">🖐️</span> <strong>Hoạt động / Nêu vấn đề:</strong> Làm thế nào các nhà thơ Mới giải thoát khỏi bi kịch bế tắc của cái "Tôi"?
+                            </p>
+                            <button onclick="toggleAnswer('act1')" class="btn-primary-accent px-4 py-1.5 rounded text-sm transition shadow">
+                                Xem hướng giải quyết
+                            </button>
+                            <div id="act1" class="hidden mt-3 p-3 bg-emerald-100 text-emerald-900 rounded border border-emerald-300 text-sm leading-relaxed">
+                                <strong>Hướng giải quyết:</strong> Các nhà thơ Mới đã gửi gắm toàn bộ bi kịch đó vào <strong>Tiếng Việt</strong>. Họ dồn tình yêu quê hương đất nước vào tình yêu tiếng mẹ đẻ, tìm sự bất diệt của nòi giống qua ngôn ngữ dân tộc để lấy lại niềm tin vào ngày mai.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MỤC 4 -->
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 text-lg flex items-center">
+                            <span class="circle-badge">4</span> Tình yêu tiếng Việt và Niềm tin vào tương lai
+                        </h3>
+
+                        <div class="p-4 bg-purple-50 border-l-4 border-purple-500 rounded-r-md space-y-2">
+                            <p class="font-bold text-purple-900">📜 Kết luận có tính khẳng định:</p>
+                            <p class="text-slate-700">● <em>"Tiếng Việt là tấm lụa đã hứng vong hồn những thế hệ qua."</em> Họ mượn tấm hồn bạch chung để gửi nỗi băn khoăn riêng.</p>
+                            <p class="text-slate-700">● Thấu hiểu và đồng cảm sâu sắc với câu nói: <strong class="text-purple-900">"Truyện Kiều còn, tiếng ta còn; tiếng ta còn, nước ta còn."</strong> (Phạm Quỳnh)</p>
+                            <p class="text-slate-700">● Từ trong thất vọng đã nảy mầm hi vọng: Tinh thần nòi giống và thi ca dân tộc chỉ biến thiên chứ không bao giờ tiêu diệt.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SECTION III: THỰC HÀNH TIẾNG VIỆT -->
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900 section-title flex items-center">
+                    <span class="square-badge">III</span>
+                    THỰC HÀNH TIẾNG VIỆT: NGÔN NGỮ NÓI VÀ NGÔN NGỮ VIẾT
+                </h2>
+
+                <div class="p-4 bg-slate-50 border border-slate-300 rounded-lg space-y-3">
+                    <h3 class="font-bold text-slate-800">Đặc điểm căn bản & Lưu ý sử dụng:</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white p-3 rounded border border-slate-200">
+                            <h4 class="font-bold text-blue-800 mb-1">🗣️ Ngôn ngữ nói</h4>
+                            <p class="text-xs text-slate-600">Phát ra bằng âm thanh, tiếp nhận bằng thính giác. Thường dùng từ ngữ khẩu ngữ, câu ngắt quãng, có sự trợ giúp của điệu bộ, ngữ điệu.</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border border-slate-200">
+                            <h4 class="font-bold text-indigo-800 mb-1">✍️ Ngôn ngữ viết</h4>
+                            <p class="text-xs text-slate-600">Thể hiện bằng chữ viết, tiếp nhận bằng thị giác. Được gọt giũa, chọn lọc, câu văn mạch lạc, đúng quy chuẩn ngữ pháp.</p>
+                        </div>
+                    </div>
+
+                    <!-- BẢNG SO SÁNH / BẢNG BIỂU -->
+                    <div class="overflow-x-auto mt-2">
+                        <table class="w-full text-sm border-collapse border border-[#cbd5e0] text-center">
+                            <thead>
+                                <tr class="bg-[#e2e8f0] text-slate-800 font-bold">
+                                    <th class="border border-[#cbd5e0] p-2">Tiêu chí</th>
+                                    <th class="border border-[#cbd5e0] p-2">Lỗi Lạc phong cách</th>
+                                    <th class="border border-[#cbd5e0] p-2">Cách sửa chuẩn mực</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-[#cbd5e0] p-2 font-semibold">Ví dụ 1</td>
+                                    <td class="border border-[#cbd5e0] p-2 text-red-600">"Chí Phèo là truyện ngắn <strong>đỉnh nhất</strong> của Nam Cao."</td>
+                                    <td class="border border-[#cbd5e0] p-2 text-emerald-700">"Chí Phèo là truyện ngắn <strong>xuất sắc nhất</strong> của Nam Cao."</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-[#cbd5e0] p-2 font-semibold">Ví dụ 2</td>
+                                    <td class="border border-[#cbd5e0] p-2 text-red-600">"Tác phẩm miêu tả <strong>quá ư</strong> chân thực..."</td>
+                                    <td class="border border-[#cbd5e0] p-2 text-emerald-700">"Tác phẩm miêu tả <strong>vô cùng</strong> chân thực..."</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPECIAL BOXES (EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý) -->
+            <div class="space-y-4 pt-2">
+
+                <!-- EM CÓ BIẾT -->
+                <div class="p-4 bg-teal-50 border-2 border-teal-400 rounded-xl space-y-1 shadow-sm">
+                    <h3 class="font-bold text-teal-900 text-lg flex items-center">
+                        <span class="mr-2">💡</span> em có biết
+                    </h3>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Cuốn sách <em>Thi nhân Việt Nam</em> được viết chung bởi hai anh em Hoài Thanh và Hoài Chân, hoàn thành vào tháng 11/1941 và xuất bản lần đầu năm 1942. Đây được xem là "cuốn sách gối đầu giường" của nhiều thế hệ yêu thơ, tuyển chọn 169 bài thơ của 46 nhà thơ Mới xuất sắc.
+                    </p>
+                </div>
+
+                <!-- EM CÓ THỂ -->
+                <div class="p-4 bg-sky-50 border-2 border-sky-400 rounded-xl space-y-1 shadow-sm">
+                    <h3 class="font-bold text-sky-900 text-lg flex items-center">
+                        <span class="mr-2">🚀</span> em có thể
+                    </h3>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Em có thể tự mình viết một đoạn văn ngắn (150 chữ) so sánh cái "Tôi" u buồn cô đơn trong bài thơ <em>Tràng giang</em> (Huy Cận) với cái "Tôi" đắm say, vội vàng trong <em>Vội vàng</em> (Xuân Diệu) để thấy rõ sự phong phú của cái "Tôi" trong Thơ mới.
+                    </p>
+                </div>
+
+                <!-- LƯU Ý -->
+                <div class="p-4 bg-amber-50 border-2 border-amber-400 rounded-xl space-y-1 shadow-sm">
+                    <h3 class="font-bold text-amber-900 text-lg flex items-center">
+                        <span class="mr-2">⚠️</span> lưu ý
+                    </h3>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Khi viết văn bản nghị luận văn học, tuyệt đối tránh sử dụng các từ ngữ khẩu ngữ, từ lóng của ngôn ngữ nói (như: <em>quá ư, đỉnh, chuẩn bài, hết nấc...</em>). Hãy đảm bảo tính nhất quán về phong cách ngôn ngữ viết gọt giũa và trang trọng.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CỦNG CỐ & BÀI TẬP (AI LÀ TRIỆU PHÚ + TỰ LUẬN) -->
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8 space-y-8">
+
+            <!-- GAMESHOW AI LÀ TRIỆU PHÚ -->
+            <div class="bg-slate-900 text-white p-6 rounded-xl space-y-6 border-4 border-yellow-500 shadow-xl">
+                <div class="text-center space-y-1">
+                    <span class="bg-yellow-500 text-slate-900 font-extrabold px-3 py-1 rounded-full text-xs uppercase tracking-widest">Gameshow Trắc Nghiệm</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-yellow-400 tracking-wide uppercase">AI LÀ TRIỆU PHÚ THƠ MỚI</h2>
+                    <p class="text-slate-300 text-xs md:text-sm">Hãy vượt qua 10 câu hỏi củng cố kiến thức để giành chiến thắng!</p>
+                </div>
+
+                <form id="quizForm" class="space-y-6 text-slate-100">
+
+                    <!-- Q1 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 1: Tác giả của tiểu luận phê bình "Một thời đại trong thi ca" là ai?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q1" value="A"> <span>A. Xuân Diệu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q1" value="B"> <span>B. Hoài Thanh</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q1" value="C"> <span>C. Huy Cận</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q1" value="D"> <span>D. Thế Lữ</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 2: Theo Hoài Thanh, cốt lõi tinh thần Thơ mới đúc kết trong từ nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q2" value="A"> <span>A. Chữ TA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q2" value="B"> <span>B. Chữ TÔI</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q2" value="C"> <span>C. Chữ ĐOÀN THỂ</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q2" value="D"> <span>D. Chữ NÒI GIỐNG</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 3: Để tìm hiểu đúng tinh thần thơ, Hoài Thanh cho rằng cần có nguyên tắc nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q3" value="A"> <span>A. So sánh bài dở thơ cũ với bài hay thơ mới</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q3" value="B"> <span>B. Sánh bài hay với bài hay</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q3" value="C"> <span>C. Lấy thơ đường luật làm chuẩn mực</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q3" value="D"> <span>D. Chỉ phân tích thơ của Xuân Diệu</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 4: Khi mới xuất hiện trên thi đàn Việt Nam, cái "Tôi" ở trong tình trạng như thế nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q4" value="A"> <span>A. Được chào đón nồng nhiệt ngay lập tức</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q4" value="B"> <span>B. Bỡ ngỡ, lạc loài, bị nhìn với ánh mắt khó chịu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q4" value="C"> <span>C. Hoàn toàn giống hệt với chữ "Ta" thời xưa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q4" value="D"> <span>D. Mang tinh thần kiêu hãnh thống trị</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 5: Nhà thơ nào được Hoài Thanh đại diện cho xu hướng "Thoát lên tiên"?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q5" value="A"> <span>A. Xuân Diệu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q5" value="B"> <span>B. Huy Cận</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q5" value="C"> <span>C. Thế Lữ</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q5" value="D"> <span>D. Lưu Trọng Lư</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 6: Bi kịch lớn nhất của thế hệ thanh niên và các nhà thơ Mới đương thời là gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q6" value="A"> <span>A. Thất học và nghèo đói</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q6" value="B"> <span>B. Thiếu một lòng tin đầy đủ</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q6" value="C"> <span>C. Không biết làm thơ tự do</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q6" value="D"> <span>D. Bị cấm đoán ngôn ngữ</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 7: Các nhà thơ Mới đã dồn tình yêu quê hương đất nước vào điều gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q7" value="A"> <span>A. Tình yêu Tiếng Việt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q7" value="B"> <span>B. Thơ dịch phương Tây</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q7" value="C"> <span>C. Khai thác thơ Đường</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q7" value="D"> <span>D. Các câu ca dao cổ</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 8: Câu nói nổi tiếng được dẫn lại cuối bài: "Truyện Kiều còn, tiếng ta còn..." là của ai?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q8" value="A"> <span>A. Nguyễn Du</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q8" value="B"> <span>B. Ông chủ báo Nam Phong (Phạm Quỳnh)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q8" value="C"> <span>C. Hoài Thanh</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q8" value="D"> <span>D. Cao Bá Nhạ</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 9: Đặc điểm nào sau đây KHÔNG thuộc về phong cách ngôn ngữ viết?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q9" value="A"> <span>A. Được gọt giũa và suy ngẫm kỹ</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q9" value="B"> <span>B. Dùng từ ngữ mang tính khẩu ngữ tự do</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q9" value="C"> <span>C. Cấu trúc câu đầy đủ, đúng ngữ pháp</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q9" value="D"> <span>D. Tiếp nhận bằng thị giác</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                        <p class="font-bold text-yellow-300 mb-2">Câu 10: Trường hợp nào mắc lỗi "lạc phong cách" ngôn ngữ nói trong bài viết nghị luận?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q10" value="A"> <span>A. "Hoài Thanh là nhà phê bình vô cùng xuất sắc."</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q10" value="B"> <span>B. "Bài thơ này đỉnh thật sự luôn ấy."</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q10" value="C"> <span>C. "Tác phẩm phản ánh hiện thực xã hội."</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-slate-700"><input type="radio" name="q10" value="D"> <span>D. "Nhà thơ gửi gắm tâm sự u buồn."</span></label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button type="button" onclick="checkQuiz()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-8 py-3 rounded-full text-lg shadow-lg tracking-wider transition">
+                            NỘP BÀI KẾT QUẢ
+                        </button>
+                    </div>
+                </form>
+
+                <!-- KẾT QUẢ QUIZ -->
+                <div id="quizResult" class="hidden p-4 rounded-lg text-center font-bold text-lg"></div>
+            </div>
+
+            <!-- BÀI TẬP TỰ LUẬN TÍNH TOÁN / TƯ DUY (3 BÀI TẬP) -->
+            <div class="space-y-6">
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2">
+                    📝 BÀI TẬP TỰ LUẬN PHÂN TÍCH & RỜI GIẢI CHI TIẾT
+                </h2>
+
+                <!-- ESSAY 1 -->
+                <div class="bg-slate-50 border border-slate-300 p-5 rounded-xl space-y-3">
+                    <p class="font-bold text-slate-800">Bài tập 1 (Phân tích sơ đồ lập luận):</p>
+                    <p class="text-slate-700 text-sm">Để làm sáng tỏ luận đề "Tinh thần Thơ mới", Hoài Thanh đã triển khai hệ thống luận điểm theo trình tự logic nào? Chỉ ra mối quan hệ giữa các luận điểm đó.</p>
+                    <button onclick="toggleAnswer('essay1')" class="btn-primary-accent px-4 py-2 rounded text-sm transition">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay1" class="hidden p-4 bg-white rounded border border-slate-300 text-sm leading-relaxed space-y-2">
+                        <p class="font-bold text-emerald-800">Lời giải chi tiết:</p>
+                        <ol class="list-decimal list-inside space-y-1 text-slate-700">
+                            <li><strong>Luận điểm 1:</strong> Nguyên tắc tiêu chí phân biệt Thơ cũ và Thơ mới (phải so sánh bài hay với bài hay, nhìn vào cái đại thể).</li>
+                            <li><strong>Luận điểm 2:</strong> Bản chất tinh thần Thơ mới thể hiện ở sự xuất hiện của cái "Tôi" cá nhân (đối lập với cái "Ta" đoàn thể của Thơ cũ).</li>
+                            <li><strong>Luận điểm 3:</strong> Hành trình bi kịch của cái "Tôi" (tìm vào bề sâu nhưng bế tắc, cô đơn, thiếu niềm tin).</li>
+                            <li><strong>Luận điểm 4:</strong> Nẻo đường giải thoát bi kịch: dồn tình yêu quê hương đất nước vào tình yêu Tiếng Việt và tin vào sự bất diệt của thi ca dân tộc.</li>
+                        </ol>
+                        <p class="text-slate-600 italic">Mối quan hệ: Các luận điểm đi từ nguyên tắc phương pháp luận -> nhận diện bản chất -> phân tích bi kịch thực tại -> hướng giải quyết mang tính nhân văn sâu sắc.</p>
+                    </div>
+                </div>
+
+                <!-- ESSAY 2 -->
+                <div class="bg-slate-50 border border-slate-300 p-5 rounded-xl space-y-3">
+                    <p class="font-bold text-slate-800">Bài tập 2 (Phân tích biện pháp tu từ nghệ thuật):</p>
+                    <p class="text-slate-700 text-sm">Phân tích nghệ thuật sử dụng cấu trúc điệp từ/câu và nhịp điệu trong đoạn văn: <em>"Ta thoát lên tiên cùng Thế Lữ, ta phiêu lưu trong trường tình cùng Lưu Trọng Lư, ta điên cuồng với Hàn Mặc Tử, Chế Lan Viên, ta đắm say cùng Xuân Diệu..."</em></p>
+                    <button onclick="toggleAnswer('essay2')" class="btn-primary-accent px-4 py-2 rounded text-sm transition">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay2" class="hidden p-4 bg-white rounded border border-slate-300 text-sm leading-relaxed space-y-2">
+                        <p class="font-bold text-emerald-800">Lời giải chi tiết:</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-700">
+                            <li><strong>Điệp từ "Ta" & cấu trúc điệp câu:</strong> Tạo nên nhịp điệu dồn dập, liên tục, thể hiện hành trình cuống quýt, hối hả tìm kiếm chỗ dựa cho tâm hồn của cái "Tôi".</li>
+                            <li><strong>Liệt kê sóng đôi:</strong> Mỗi nhà thơ gắn liền với một trạng thái cảm xúc cá nhân ngút ngàn (Thế Lữ - tiên, Lưu Trọng Lư - trường tình, Hàn Mặc Tử - điên cuồng, Xuân Diệu - đắm say).</li>
+                            <li><strong>Tác dụng:</strong> Khái quát trọn vẹn, sinh động thế giới nội tâm vô cùng phong phú nhưng cũng đầy hoang mang của cả một thế hệ thi nhân.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ESSAY 3 -->
+                <div class="bg-slate-50 border border-slate-300 p-5 rounded-xl space-y-3">
+                    <p class="font-bold text-slate-800">Bài tập 3 (Kết nối đọc - viết):</p>
+                    <p class="text-slate-700 text-sm">Hoài Thanh cho rằng: Các nhà thơ của phong trào Thơ mới đã <em>"dồn tình yêu quê hương trong tình yêu tiếng Việt"</em>. Viết đoạn văn (khoảng 150 chữ) trình bày suy nghĩ của bạn về ý kiến này.</p>
+                    <button onclick="toggleAnswer('essay3')" class="btn-primary-accent px-4 py-2 rounded text-sm transition">
+                        Xem lời giải chi tiết
+                    </button>
+                    <div id="essay3" class="hidden p-4 bg-white rounded border border-slate-300 text-sm leading-relaxed space-y-2">
+                        <p class="font-bold text-emerald-800">Đoạn văn tham khảo mẫu:</p>
+                        <p class="text-slate-700 italic border-l-2 border-emerald-500 pl-3">
+                            Ý kiến của Hoài Thanh đã đánh giá sâu sắc giá trị nhân văn và tinh thần yêu nước thầm kín của các nhà thơ Mới. Trong bối cảnh đất nước mất chủ quyền, nỗi đau mất nước được họ dồn nén vào trong tâm hồn. Không thể trực tiếp cất lời đấu tranh chính trị, họ chọn cách gửi gắm bi kịch và tình yêu quê hương vào tiếng Việt – thứ ngôn ngữ thiêng liêng mài giũa qua hàng ngàn năm lịch sử. Họ sáng tạo, làm giàu cho tiếng mẹ đẻ bằng những vần thơ tài hoa, tinh tế và đầy cảm xúc. Tình yêu tiếng Việt chính là tấm gương phản chiếu lòng yêu nước thầm lặng nhưng vô cùng bền chặt. Qua đó, họ khẳng định một niềm tin bất diệt: Tiếng Việt còn thì văn hóa và sức sống của dân tộc Việt Nam sẽ mãi mãi trường tồn.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-4 bg-slate-800 text-white text-xs md:text-sm font-medium rounded-lg shadow">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Toggle ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Kiểm tra đáp án Quiz Gameshow
+        function checkQuiz() {
+            const answers = {
+                q1: 'B',
+                q2: 'B',
+                q3: 'B',
+                q4: 'B',
+                q5: 'C',
+                q6: 'B',
+                q7: 'A',
+                q8: 'B',
+                q9: 'B',
+                q10: 'B'
+            };
+
+            let score = 0;
+            let total = 10;
+            let form = document.forms['quizForm'];
+            let details = [];
+
+            for (let i = 1; i <= total; i++) {
+                let qName = 'q' + i;
+                let userAns = form[qName].value;
+                if (userAns === answers[qName]) {
+                    score++;
+                } else {
+                    details.push(`Câu ${i} (Đúng: ${answers[qName]})`);
+                }
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            resultDiv.classList.remove('hidden');
+
+            if (score === total) {
+                resultDiv.className = "p-4 rounded-lg text-center font-bold text-lg bg-emerald-100 text-emerald-800 border-2 border-emerald-500 mt-4";
+                resultDiv.innerHTML = `🎉 XIN CHÚC MỪNG! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ THƠ MỚI! <br> Đạt điểm tuyệt đối: ${score}/${total} câu!`;
+            } else {
+                resultDiv.className = "p-4 rounded-lg text-center font-bold text-lg bg-rose-100 text-rose-800 border-2 border-rose-500 mt-4";
+                resultDiv.innerHTML = `❌ BẠN ĐÃ ĐẠT ${score}/${total} CÂU HỎI. <br> Các câu chưa chính xác: ${details.join(', ')}. Hãy rà soát lại bài học để hoàn thiện nhé!`;
+            }
+        }
+    </script>
+</body>
+</html>
