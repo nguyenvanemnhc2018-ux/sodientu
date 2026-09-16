@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học Ngữ Văn 11 - Thực Hành Đọc: Nàng Ờm Nhắn Nhủ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax with Chemistry support (No Polyfill) -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .main-accent {
+            background-color: #33FF33;
+        }
+        .text-accent {
+            color: #15803d;
+        }
+        .border-accent {
+            border-color: #33FF33;
+        }
+        .badge-square {
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1E3A8A;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .badge-circle {
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2563EB;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+        .section-header {
+            border-bottom: 4px solid #1E3A8A;
+            padding-bottom: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        /* Millionaire Game Styles */
+        .millionaire-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: white;
+        }
+        .option-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.2s;
+        }
+        .option-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #33FF33;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Container Chủ -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BANNER -->
+        <div class="rounded-[12px] overflow-hidden shadow-lg border border-gray-200">
+            <!-- Khối Tên Chương (Màu 1) -->
+            <div style="background-color: #1E3A8A;" class="p-4 text-white font-bold text-lg md:text-xl tracking-wide uppercase text-center md:text-left">
+                <i class="fa-solid font-book mr-2"></i>CHƯƠNG: TỰ SỰ TRONG TRUYỆN THƠ DÂN GIAN VÀ TRONG THƠ TRỨ TÌNH
+            </div>
+            <!-- Đường kẻ mảnh phân cách -->
+            <div class="h-[1px] bg-white opacity-30"></div>
+            <!-- Khối Tên Bài (Màu 2) -->
+            <div style="background-color: #2563EB;" class="p-6 text-white text-center font-extrabold text-2xl md:text-3xl uppercase tracking-wider">
+                THỰC HÀNH ĐỌC: NÀNG ỜM NHẮN NHỦ
+                <span class="block text-sm font-normal normal-case mt-1 opacity-90">(Trích Truyện thơ "Nàng Ờm - Chàng Bồng Hương" - Dân tộc Mường)</span>
+            </div>
+        </div>
+
+        <!-- INTRO BOX (LỜI DẪN) -->
+        <div class="bg-white border border-black rounded-[12px] p-5 shadow-sm">
+            <div class="flex items-start gap-3">
+                <i class="fa-solid fa-quote-left text-2xl text-gray-400 mt-1"></i>
+                <p class="italic text-gray-700 leading-relaxed">
+                    Nàng Ờm và chàng Bồng Hương quê ở đất Cành Nành, làng Ca Da, mường Kỳ Ống, là bạn bè từ thuở nhỏ, lớn lên, yêu nhau và mong được kết đôi vợ chồng. Nhưng do cha mẹ nàng Ờm ngăn trở, cấm đoán nghiệt ngã, họ đã tự kết liễu đời mình. Trở thành vợ chồng ở thế giới bên kia, linh hồn họ vẫn quẩn quanh trên núi Làn Ai để kể lại câu chuyện của mình cho những người còn sống rút ra bài học; mong các đôi lứa khác được sum vầy, hạnh phúc, không phải chịu số phận bất hạnh như họ.
+                </p>
+            </div>
+        </div>
+
+        <!-- MỤC I: CỦNG CỐ, MỞ RỘNG -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-header text-xl md:text-2xl text-slate-800 flex items-center">
+                <span class="badge-square">I</span> CỦNG CỐ, MỞ RỘNG
+            </h2>
+
+            <!-- Item 1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg flex items-center text-slate-800">
+                    <span class="badge-circle">1</span> So sánh Truyện thơ và Thơ trữ tình & Bài thơ giàu yếu tố tự sự
+                </h3>
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-md">
+                    <p class="font-medium">Chỉ ra các điểm tương đồng, khác biệt giữa truyện thơ và thơ trữ tình. Kể tên các bài thơ trữ tình giàu yếu tố tự sự mà bạn biết (ngoài các bài trong SGK Ngữ văn 11).</p>
+                    <button onclick="toggleAnswer('ans-i1')" class="mt-3 px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                    </button>
+                </div>
+                <div id="ans-i1" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded-md space-y-2 text-slate-700">
+                    <p><strong>a) Tương đồng:</strong> Đều sử dụng phương thức biểu đạt bằng thơ (có vần, nhịp, hình ảnh, ngôn ngữ giàu chất trữ tình) và bộc lộ cảm xúc, suy tư của tác giả/nhân vật.</p>
+                    <p><strong>b) Khác biệt:</strong></p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li><strong>Truyện thơ:</strong> Có cốt truyện, nhân vật, chuỗi sự kiện, thời gian và không gian tự sự; kết hợp giữa tự sự (kể chuyện) và trữ tình (bộc lộ cảm xúc).</li>
+                        <li><strong>Thơ trữ tình:</strong> Thường không có cốt truyện hoàn chỉnh, tập trung chủ yếu vào việc thể hiện tâm trạng, cảm xúc trực tiếp của chủ thể trữ tình trước một hiện tượng đời sống.</li>
+                    </ul>
+                    <p><strong>c) Một số bài thơ trữ tình giàu yếu tố tự sự:</strong> <em>Bếp lửa</em> (Bằng Việt), <em>Ánh trăng</em> (Nguyễn Duy), <em>Tiếng gà trưa</em> (Xuân Quỳnh), <em>Truyện cổ tích về loài người</em> (Xuân Quỳnh)...</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg flex items-center text-slate-800">
+                    <span class="badge-circle">2</span> Sưu tầm và tóm tắt Truyện thơ Dân gian
+                </h3>
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-md">
+                    <p class="font-medium">Tìm đọc thêm các truyện thơ dân gian nổi tiếng (ví dụ: Tổng tập văn học Việt Nam, tập 40 & 41). Ghi lại phần tóm tắt nội dung cùng một số câu/đoạn thơ đặc sắc.</p>
+                    <button onclick="toggleAnswer('ans-i2')" class="mt-3 px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                    </button>
+                </div>
+                <div id="ans-i2" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded-md space-y-2 text-slate-700">
+                    <p><strong>Ví dụ tác phẩm:</strong> <em>Tống Tiền - Cúc Hoa</em> (Truyện thơ dân gian người Kinh) hoặc <em>Tiễn dặn người yêu</em> (Sống chụ son sao - Dân tộc Thái).</p>
+                    <p><strong>Tóm tắt ngắn:</strong> Tác phẩm kể về tình yêu tha thiết nhưng gặp nhiều trắc trở, cấm đoán từ gia đình và định kiến xã hội phong kiến. Nhờ tình yêu thủy chung, hai nhân vật đã vượt qua nghịch cảnh để khẳng định giá trị của hạnh phúc chân chính.</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg flex items-center text-slate-800">
+                    <span class="badge-circle">3</span> Lập dàn ý bài văn nghị luận về một vấn đề xã hội
+                </h3>
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-md">
+                    <p class="font-medium">Lập dàn ý chi tiết cho bài văn nghị luận về đề tài: <em>Khát vọng tự do lựa chọn hạnh phúc của tuổi trẻ hiện nay</em>.</p>
+                    <button onclick="toggleAnswer('ans-i3')" class="mt-3 px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                    </button>
+                </div>
+                <div id="ans-i3" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded-md space-y-2 text-slate-700">
+                    <ol class="list-decimal pl-6 space-y-1">
+                        <li><strong>Mở bài:</strong> Dẫn dắt vấn đề tự do lựa chọn hạnh phúc lứa đôi từ quá khứ (truyện thơ) đến xã hội hiện đại.</li>
+                        <li><strong>Thân bài:</strong>
+                            <ul class="list-disc pl-5">
+                               <li>Giải thích "Tự do lựa chọn hạnh phúc" là gì.</li>
+                               <li>Phân tích thực trạng và tầm quan trọng của việc chủ động xây dựng cuộc sống.</li>
+                               <li>Bài học đối chiếu từ các bi kịch xưa (như Nàng Ờm, Xinh Nhã, Tiễn dặn...).</li>
+                               <li>Phản biện: Tự do cần đi liền với trách nhiệm và sự tôn trọng các giá trị đạo đức gia đình.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Kết bài:</strong> Khẳng định lại ý nghĩa của việc sống chủ động, biết trân trọng tình yêu chân chính.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg flex items-center text-slate-800">
+                    <span class="badge-circle">4</span> Kỹ năng điều hành thảo luận trên lớp
+                </h3>
+                <div class="bg-[#edf2f7] border-l-4 border-blue-700 p-4 rounded-r-md">
+                    <p class="font-medium">Nếu được giao nhiệm vụ điều hành cuộc thảo luận về một vấn đề đời sống, bạn cần nêu những yêu cầu gì đối với người tham gia?</p>
+                    <button onclick="toggleAnswer('ans-i4')" class="mt-3 px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                    </button>
+                </div>
+                <div id="ans-i4" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded-md space-y-2 text-slate-700">
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Tôn trọng lượt lời và ý kiến khác biệt của thành viên khác.</li>
+                        <li>Phát biểu đúng trọng tâm chủ đề, ngắn gọn, dựa trên lý lẽ và bằng chứng thuyết phục.</li>
+                        <li>Lắng nghe tích cực, phản biện trên tinh thần xây dựng và cầu thị.</li>
+                        <li>Tuân thủ sự điều phối thời gian của chủ tọa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC II: THỰC HÀNH ĐỌC VĂN BẢN NÀNG ỜM NHẮN NHỦ -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="section-header text-xl md:text-2xl text-slate-800 flex items-center">
+                <span class="badge-square">II</span> THỰC HÀNH ĐỌC VĂN BẢN "NÀNG ỜM NHẮN NHỦ"
+            </h2>
+
+            <!-- Khung hình minh họa -->
+            <div class="w-full my-4 text-center">
+                <div class="inline-block border-2 border-dashed border-gray-400 p-2 rounded-lg bg-gray-50">
+                    <img src="h1.png" alt="Minh họa Nàng Ờm nhắn nhủ trên núi Làn Ai" class="max-h-80 mx-auto rounded shadow-sm object-cover" onerror="this.src='https://via.placeholder.com/700x350?text=Hình+Minh+Họa+Nàng+Ờm+Nhắn+Nhủ+(h1.png)'">
+                    <p class="text-xs text-gray-500 mt-2 font-semibold">Hình 1: Khung cảnh núi Làn Ai - Nơi lưu giữ câu chuyện truyền thuyết Nàng Ờm và Bồng Hương (h1.png)</p>
+                </div>
+            </div>
+
+            <!-- Định nghĩa & Tóm tắt đóng khung -->
+            <div class="bg-amber-50 border border-amber-300 rounded-lg p-5 shadow-sm space-y-3">
+                <h4 class="font-bold text-amber-900 text-lg flex items-center">
+                    <i class="fa-solid fa-bookmark mr-2 text-amber-600"></i> BẢNG TÓM TẮT & Ý NGHĨA VĂN BẢN
+                </h4>
+                <div class="text-slate-800 space-y-2 text-sm md:text-base leading-relaxed">
+                    <p><strong>- Thể loại:</strong> Truyện thơ dân gian dân tộc Mường (Sưu tầm, biên dịch bởi Hoàng Anh Nhân).</p>
+                    <p><strong>- Người kể chuyện:</strong> Hồn ma nàng Ờm - xưng "em", cất lời nhắn gửi từ thế giới bên kia đến "các cố, các mẹ" (những người bề trên, người sống).</p>
+                    <p><strong>- Nội dung cốt lõi:</strong> Nàng Ờm và chàng Bồng Hương lao động chăm chỉ, yêu thương nhau tha thiết nhưng bị cấm đoán dẫn đến cái chết đau thương. Khi thành vợ chồng ở núi Làn Ai, họ không oán hận mà gửi lời nhắn nhủ nhân văn đến xóm bản, mong đời sau không còn ai phải chịu cảnh chia rẽ.</p>
+                </div>
+            </div>
+
+            <!-- 4 Mục hướng dẫn đọc -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Box 1 -->
+                <div class="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-blue-900 flex items-center">
+                        <span class="badge-circle">1</span> Tóm tắt nội dung văn bản
+                    </h4>
+                    <p class="text-sm text-slate-700">Lời cất lên từ núi Làn Ai kể về kiếp khổ, cuộc sống lao động hăng hái của hai vợ chồng và lời nguyện chúc cho dân bản sống trăm tuổi, giàu sang, hạnh phúc.</p>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-blue-900 flex items-center">
+                        <span class="badge-circle">2</span> Người kể chuyện & Ý nghĩa
+                    </h4>
+                    <p class="text-sm text-slate-700">Ngôi kể thứ nhất (Nàng Ờm). Việc cất lời từ cõi chết giúp câu chuyện tăng tính khách quan, chân thực, đậm màu sắc tâm linh thần thoại và gia tăng sức lay động.</p>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-blue-900 flex items-center">
+                        <span class="badge-circle">3</span> Khát vọng & Ứng xử nhân văn
+                    </h4>
+                    <p class="text-sm text-slate-700">Ước mong tình yêu tự do, sự thủy chung ("Nghĩa vợ như đêm trăng sáng"). Dù chịu đau khổ nhưng vẫn chúc phúc người sống, thể hiện lòng bao dung nhân ái.</p>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-2">
+                    <h4 class="font-bold text-blue-900 flex items-center">
+                        <span class="badge-circle">4</span> Liên hệ "Lời tiễn dặn"
+                    </h4>
+                    <p class="text-sm text-slate-700">Cùng phản ánh bi kịch tình yêu bị lễ giáo/hủ tục ngăn cản. Đều tôn vinh tình yêu sắt đá, vượt qua mọi ranh giới (kể cả ranh giới sinh - tử).</p>
+                </div>
+            </div>
+
+            <!-- TRÍCH ĐOẠN VĂN BẢN (KHUNG BÀI THƠ) -->
+            <div class="bg-stone-50 border border-stone-300 p-6 rounded-lg space-y-4">
+                <h4 class="text-center font-bold text-lg text-stone-800 uppercase tracking-wide border-b pb-2">
+                    Văn bản trích đoạn: NÀNG ỜM NHẮN NHỦ
+                </h4>
+                <div class="font-serif italic text-slate-800 leading-loose text-center md:text-left md:pl-12 space-y-3">
+                    <p>
+                        Các cố<sup>(1)</sup>, các mẹ ơi!<br>
+                        Hôm nay trăng sáng đẹp trời<br>
+                        Em kể lại kiếp khốn<sup>(2)</sup> cho các mẹ biết<br>
+                        Em kể lại kiếp khổ cho các mẹ hay<br>
+                        Cái chuyện con Ờm<br>
+                        Trên núi Làn Ai...
+                    </p>
+                    <p>
+                        Cửa nhà em bận lắm<br>
+                        Chàng Bồng Hương lắm việc nhiều công<br>
+                        Buổi sớm, đi đánh lưới sông cái<br>
+                        Buổi chiều, đi đánh chài sông con<br>
+                        Tối tăm săn hổ trên non một mình<br>
+                        Còn em, buổi sáng chăn con lợn, con gà<br>
+                        Buổi chiều, em đi cấy, đi hái...<br>
+                        Giờ nhà em lắm cá<br>
+                        Giờ nhà em nhiều cơm
+                    </p>
+                    <p>
+                        Tình chồng thắm thiết hơn<br>
+                        Nghĩa vợ như đêm trăng sáng<br>
+                        Đêm đã khuya, ngày đã rạng<br>
+                        Các mẹ ở lại sống lâu trăm năm<br>
+                        Các mẹ ở lại thêm trăm ngàn tuổi...<br>
+                        Núi Làn Ai nghèo tiền nghèo của<br>
+                        Nhưng Làn Ai giàu nghĩa giàu tình.
+                    </p>
+                </div>
+            </div>
+
+            <!-- MỤC HOẠT ĐỘNG (BÀN TAY) / NÊU VẤN ĐỀ -->
+            <div class="bg-indigo-50 border border-indigo-200 p-5 rounded-xl space-y-3">
+                <h3 class="font-bold text-indigo-900 text-lg flex items-center">
+                    <i class="fa-solid fa-hand-holding-point text-indigo-600 mr-2 text-xl"></i> HOẠT ĐỘNG KHÁM PHÁ & NÊU VẤN ĐỀ
+                </h3>
+                <p class="text-slate-700">Vì sao ở đoạn kết, Nàng Ờm lại khẳng định: <em>"Núi Làn Ai nghèo tiền nghèo của / Nhưng Làn Ai giàu nghĩa giàu tình"</em>?</p>
+                <button onclick="toggleAnswer('act-sol')" class="px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition" style="background-color: #33FF33;">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem hướng giải quyết
+                </button>
+                <div id="act-sol" class="hidden bg-white p-4 rounded-md border border-indigo-200 mt-2 text-slate-700">
+                    <p><strong>Hướng giải quyết:</strong> Câu nói thể hiện triết lý sống nhân văn của đồng bào Mường. Dù ở thế giới bên kia (núi Làn Ai) thiếu thiếu về vật chất ("nghèo tiền nghèo của"), nhưng con người ở đó đạt tới sự tự do tuyệt đối trong tâm hồn, đong đầy tình yêu thương thủy chung và sự gắn kết chân thành ("giàu nghĩa giàu tình"). Đó là lời khẳng định giá trị tinh thần vượt lên trên những toan tính vật chất tầm thường ở cõi trần.</p>
+                </div>
+            </div>
+
+            <!-- MỤC CÂU HỎI ? -->
+            <div class="bg-cyan-50 border border-cyan-200 p-5 rounded-xl space-y-3">
+                <h3 class="font-bold text-cyan-900 text-lg flex items-center">
+                    <i class="fa-solid fa-circle-question text-cyan-600 mr-2 text-xl"></i> CÂU HỎI THẮC MẮC ?
+                </h3>
+                <p class="text-slate-700">Điểm khác biệt về kết thúc giữa truyện thơ <em>Nàng Ờm - Chàng Bồng Hương</em> và truyện thơ <em>Tiễn dặn người yêu</em> là gì?</p>
+                <button onclick="toggleAnswer('q-sol')" class="px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition" style="background-color: #33FF33;">
+                    <i class="fa-solid fa-comments mr-1"></i> Xem giải đáp
+                </button>
+                <div id="q-sol" class="hidden bg-white p-4 rounded-md border border-cyan-200 mt-2 text-slate-700">
+                    <p><strong>Giải đáp:</strong> Trong <em>Tiễn dặn người yêu</em>, hai nhân vật chính trải qua nhiều sóng gió nhưng cuối cùng vẫn đoàn tụ, sống hạnh phúc ở cõi thực (kết thúc có hậu ở trần thế). Ngược lại, trong <em>Nàng Ờm - Chàng Bồng Hương</em>, họ phải tìm đến cái chết để giải thoát và chỉ thực sự đoàn tụ ở thế giới bên kia (kết thúc bi kịch ở trần thế nhưng giải thoát ở cõi tâm linh).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- THÀNH PHẦN ĐẶC BIỆT: EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- EM CÓ BIẾT -->
+            <div class="bg-teal-50 border-2 border-teal-400 p-4 rounded-[12px] shadow-sm space-y-2">
+                <h3 class="font-bold text-teal-800 text-lg flex items-center">
+                    <i class="fa-solid fa-graduation-cap mr-2"></i> em có biết
+                </h3>
+                <p class="text-sm text-teal-950 leading-relaxed">
+                    Nàng Ờm - Chàng Bồng Hương được coi là "Tristan và Isolde" hay "Romeo và Juliet" của văn học dân gian Mường. Ngọn núi Làn Ai (thuộc huyện Bá Thước, Thanh Hóa ngày nay) vẫn được người dân địa phương coi là biểu tượng của tình yêu bất tử.
+                </p>
+            </div>
+
+            <!-- EM CÓ THỂ -->
+            <div class="bg-purple-50 border-2 border-purple-400 p-4 rounded-[12px] shadow-sm space-y-2">
+                <h3 class="font-bold text-purple-800 text-lg flex items-center">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> em có thể
+                </h3>
+                <p class="text-sm text-purple-950 leading-relaxed">
+                    Chuyển thể kịch bản ngắn hoặc viết lời tâm sự đóng vai nhân vật Nàng Ờm để trình diễn trong hoạt động sân khấu hóa tác phẩm văn học dân gian tại trường học.
+                </p>
+            </div>
+
+            <!-- LƯU Ý -->
+            <div class="bg-rose-50 border-2 border-rose-400 p-4 rounded-[12px] shadow-sm space-y-2">
+                <h3 class="font-bold text-rose-800 text-lg flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> lưu ý
+                </h3>
+                <p class="text-sm text-rose-950 leading-relaxed">
+                    Khi phân tích truyện thơ dân gian dân tộc thiểu số, cần tôn trọng không gian văn hóa, các từ ngữ địa phương (như <em>cố, vóng cái, ha...</em>) và tư tưởng tín ngưỡng vạn vật hữu linh của đồng bào.
+                </p>
+            </div>
+        </div>
+
+        <!-- PHẦN 6: TRẮC NGHIỆM AI LÀ TRIỆU PHÚ & TỰ LUẬN TÍNH TOÁN -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-8">
+            
+            <!-- TRẮC NGHIỆM AI LÀ TRIỆU PHÚ -->
+            <div class="space-y-4">
+                <div class="flex items-center justify-between border-b pb-3">
+                    <h2 class="text-2xl font-bold text-slate-800 flex items-center">
+                        <i class="fa-solid fa-gamepad text-amber-500 mr-2"></i> GAMESHOW "AI LÀ TRIỆU PHÚ" (10 CÂU TRẮC NGHIỆM)
+                    </h2>
+                    <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-3 py-1 rounded-full">Kiểm tra kiến thức</span>
+                </div>
+
+                <form id="quizForm" class="space-y-6">
+                    <!-- 10 Questions Grid/List -->
+                    <div id="quizContainer" class="space-y-4">
+                        <!-- Questions will be standard HTML cards -->
+                        
+                        <!-- Q1 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-1">
+                            <p class="font-semibold text-slate-800">Câu 1: Văn bản "Nàng Ờm nhắn nhủ" thuộc thể loại nào?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="A"> A. Truyền thuyết lịch sử</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="B"> B. Truyện thơ dân gian</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="C"> C. Thơ trữ tình hiện đại</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="D"> D. Sử thi anh hùng</label>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-2">
+                            <p class="font-semibold text-slate-800">Câu 2: Tác phẩm "Nàng Ờm - Chàng Bồng Hương" là truyện thơ của dân tộc nào?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="A"> A. Dân tộc Thái</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="B"> B. Dân tộc H'Mông</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="C"> C. Dân tộc Mường</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="D"> D. Dân tộc Tày</label>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-3">
+                            <p class="font-semibold text-slate-800">Câu 3: Bối cảnh núi Làn Ai xuất hiện trong bài thơ gắn liền với điều gì?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="A"> A. Nơi hai người gặp nhau lần đầu</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="B"> B. Nơi hai người tự kết liễu đời mình và sinh sống ở thế giới bên kia</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="C"> C. Nơi diễn ra lễ cưới truyền thống</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="D"> D. Nơi chàng Bồng Hương đi săn hổ</label>
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-4">
+                            <p class="font-semibold text-slate-800">Câu 4: Ngôi kể được sử dụng trong văn bản "Nàng Ờm nhắn nhủ" là gì?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="A"> A. Ngôi thứ ba toàn năng</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="B"> B. Ngôi thứ nhất (Nàng Ờm xưng "em")</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="C"> C. Ngôi thứ nhất (Chàng Bồng Hương xưng "anh")</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="D"> D. Ngôi thứ hai</label>
+                            </div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-5">
+                            <p class="font-semibold text-slate-800">Câu 5: Trong đoạn thơ, từ "cố" dùng để chỉ ai?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="A"> A. Người trẻ tuổi trong bản</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="B"> B. Người già cả với hàm ý tôn kính (như cụ)</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="C"> C. Tên một vị thần núi</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="D"> D. Bạn bè đồng lứa</label>
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-6">
+                            <p class="font-semibold text-slate-800">Câu 6: Cuộc sống của Nàng Ờm và Bồng Hương ở cõi bên kia được miêu tả như thế nào?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="A"> A. Đau khổ, u buồn và đầy oán hận</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="B"> B. Lao động hăng hái, hòa thuận, ấm no và thắm thiết</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="C"> C. Lười nhung, không làm gì cả</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="D"> D. Giàu có về tiền bạc vượt trội trần thế</label>
+                            </div>
+                        </div>
+
+                        <!-- Q7 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-7">
+                            <p class="font-semibold text-slate-800">Câu 7: Dụng cụ "vóng cái", "vóng ngoài" được nhắc đến trong bài thơ dùng để làm gì?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="A"> A. Săn bắt thú rừng</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="B"> B. Đánh bắt cá ở suối, khe</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="C"> C. Dệt vải may mặc</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="D"> D. Làm ruộng rẫy</label>
+                            </div>
+                        </div>
+
+                        <!-- Q8 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-8">
+                            <p class="font-semibold text-slate-800">Câu 8: Thái độ của Nàng Ờm đối với "các mẹ" và xóm bản trần thế là gì?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="A"> A. Oán trách, nguyền rủa</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="B"> B. Chúc mừng giàu sang, chúc sống lâu trăm tuổi và bao dung</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="C"> C. Lạnh nhạt, thờ ơ</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="D"> D. Đòi lại tài sản cũ</label>
+                            </div>
+                        </div>
+
+                        <!-- Q9 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-9">
+                            <p class="font-semibold text-slate-800">Câu 9: Điểm tương đồng nổi bật nhất giữa Truyện thơ và Thơ trữ tình là gì?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="A"> A. Đều có hệ thống nhân vật phức tạp</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="B"> B. Đều bộc lộ tình cảm, cảm xúc qua ngôn ngữ giàu chất thơ</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="C"> C. Đều được viết theo thể thơ tự do 8 chữ</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="D"> D. Đều có tóm tắt cốt truyện ở đầu bài</label>
+                            </div>
+                        </div>
+
+                        <!-- Q10 -->
+                        <div class="p-4 rounded-lg border border-gray-200 bg-slate-50 space-y-2" id="q-block-10">
+                            <p class="font-semibold text-slate-800">Câu 10: Hai dòng thơ kết thúc bài "Núi Làn Ai nghèo tiền nghèo của / Nhưng Làn Ai giàu nghĩa giàu tình" nhấn mạnh giá trị gì?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="A"> A. Giá trị vật chất vượt trội</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="B"> B. Sức mạnh của tình nghĩa và tình yêu cao đẹp hơn của cải</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="C"> C. Sự nghèo khổ đáng thương của người dân miền núi</label>
+                                <label class="p-2 bg-white rounded border cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="D"> D. Khuyên mọi người nên lên núi sinh sống</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button Nộp Bài -->
+                    <div class="text-center pt-2">
+                        <button type="button" onclick="checkQuiz()" class="px-8 py-3 bg-slate-900 text-white font-bold text-lg rounded-lg shadow-lg hover:bg-slate-800 transition">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> NỘP BÀI KẾT QUẢ
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Kết quả Quiz -->
+                <div id="quizResult" class="hidden p-5 rounded-lg border text-center text-lg font-bold"></div>
+                <div id="quizExplain" class="hidden space-y-3 p-4 bg-slate-100 rounded-lg text-sm text-slate-700"></div>
+            </div>
+
+            <!-- 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN / VẬN DỤNG -->
+            <div class="space-y-6 border-t pt-6">
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center">
+                    <i class="fa-solid fa-pen-ruler text-blue-600 mr-2"></i> BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH
+                </h2>
+
+                <!-- Essay 1 -->
+                <div class="space-y-3 bg-gray-50 p-4 rounded-lg border">
+                    <p class="font-semibold text-slate-800">Bài 1 (Tính toán nhịp điệu & Tỷ lệ cấu trúc):</p>
+                    <p class="text-sm text-slate-700">Giả sử một đoạn thơ trong truyện thơ gồm 24 dòng. Trong đó có 16 dòng dành để miêu tả cảnh sinh hoạt công việc hằng ngày và 8 dòng thể hiện tình cảm bộc lộ triết lý. Hãy tính tỷ lệ phần trăm giữa yếu tố tự sự (miêu tả công việc) và yếu tố trữ tình (triết lý tình cảm) trong đoạn thơ đó.</p>
+                    <button onclick="toggleAnswer('essay-1')" class="px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition text-sm" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-calculator mr-1"></i> Xem đáp án & Lời giải
+                    </button>
+                    <div id="essay-1" class="hidden bg-emerald-50 p-4 rounded border border-emerald-200 text-sm space-y-2">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>Tổ chức công thức tính tỷ lệ:</p>
+                        <p>Tỷ lệ yếu tố tự sự: \( P_{tu\_su} = \left( \frac{16}{24} \right) \times 100\% = 66.67\% \)</p>
+                        <p>Tỷ lệ yếu tố trữ tình: \( P_{tru\_tinh} = \left( \frac{8}{24} \right) \times 100\% = 33.33\% \)</p>
+                        <p><em>Nhận xét:</em> Yếu tố tự sự chiếm đa số (\( \approx 2/3 \)), đóng vai trò tạo nền tảng cốt truyện để từ đó bộc lộ cảm xúc trữ tình.</p>
+                    </div>
+                </div>
+
+                <!-- Essay 2 -->
+                <div class="space-y-3 bg-gray-50 p-4 rounded-lg border">
+                    <p class="font-semibold text-slate-800">Bài 2 (Phân tích nghệ thuật đối lập):</p>
+                    <p class="text-sm text-slate-700">Phân tích tác dụng nghệ thuật của phép đối lập trong 2 câu thơ cuối: <em>"Núi Làn Ai nghèo tiền nghèo của / Nhưng Làn Ai giàu nghĩa giàu tình"</em>.</p>
+                    <button onclick="toggleAnswer('essay-2')" class="px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition text-sm" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-eye mr-1"></i> Xem lời giải chi tiết
+                    </button>
+                    <div id="essay-2" class="hidden bg-emerald-50 p-4 rounded border border-emerald-200 text-sm space-y-2">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>Phép đối:</strong> "nghèo tiền nghèo của" \(\xrightleftharpoons{\text{đối lập}}\) "giàu nghĩa giàu tình".</li>
+                            <li><strong>Tác dụng:</strong> Tạo ra sự tương phản mạnh mẽ giữa giá trị vật chất hữu hạn và giá trị tinh thần vô hạn. Khẳng định tình yêu chân chính, lòng thủy chung không đo đếm bằng của cải mà bằng tình nghĩa sâu nặng.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Essay 3 -->
+                <div class="space-y-3 bg-gray-50 p-4 rounded-lg border">
+                    <p class="font-semibold text-slate-800">Bài 3 (Vận dụng liên hệ văn hóa):</p>
+                    <p class="text-sm text-slate-700">Trình bày cảm nhận của em về cách ứng xử của Nàng Ờm đối với những người đã từng gián tiếp gây ra bi kịch cho mình (khoảng 5-7 dòng).</p>
+                    <button onclick="toggleAnswer('essay-3')" class="px-4 py-2 text-black font-semibold rounded-md shadow hover:brightness-105 transition text-sm" style="background-color: #33FF33;">
+                        <i class="fa-solid fa-eye mr-1"></i> Xem lời giải chi tiết
+                    </button>
+                    <div id="essay-3" class="hidden bg-emerald-50 p-4 rounded border border-emerald-200 text-sm space-y-2">
+                        <p><strong>Lời giải chi tiết:</strong></p>
+                        <p>Nàng Ờm không hề tỏ thái độ oán hận hay nguyền rủa. Trái lại, nàng gửi lời chúc "các mẹ sống lâu trăm năm", mừng dân bản giàu sang. Cách ứng xử ấy thể hiện tâm hồn vị tha, bao dung cao đẹp của người phụ nữ Mường. Nàng cất tiếng kể chuyện không phải để trả thù mà để cảnh tỉnh, giúp người đời sau rút ra bài học kinh nghiệm để không còn bi kịch lứa đôi nào xảy ra nữa.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="bg-slate-800 text-white text-center py-4 rounded-[12px] text-sm font-medium tracking-wide">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Hàm Toggle Lời Giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Đáp án Quiz
+        const correctAnswers = {
+            q1: 'B',
+            q2: 'C',
+            q3: 'B',
+            q4: 'B',
+            q5: 'B',
+            q6: 'B',
+            q7: 'B',
+            q8: 'B',
+            q9: 'B',
+            q10: 'B'
+        };
+
+        const quizExplanations = {
+            q1: "Câu 1: B - Văn bản thuộc thể loại Truyện thơ dân gian của dân tộc Mường.",
+            q2: "Câu 2: C - Tác phẩm là truyện thơ nổi tiếng của dân tộc Mường.",
+            q3: "Câu 3: B - Núi Làn Ai là nơi hai nhân vật tự kết liễu và tiếp tục sống hạnh phúc ở cõi âm.",
+            q4: "Câu 4: B - Ngôi kể thứ nhất, xưng 'em' (Nàng Ờm kể lại câu chuyện).",
+            q5: "Câu 5: B - 'Cố' là từ hô đáp xưng hô thể hiện sự tôn kính người già cả.",
+            q6: "Câu 6: B - Họ sống chan hòa, siêng năng lao động và thắm thiết nghĩa vợ chồng.",
+            q7: "Câu 7: B - Vóng cái, vóng ngoài là dụng cụ đánh bắt cá truyền thống.",
+            q8: "Câu 8: B - Nàng Ờm thể hiện sự bao dung, chúc phúc cho xóm bản.",
+            q9: "Câu 9: B - Cả hai đều biểu đạt cảm xúc, tình cảm bằng ngôn ngữ thơ giàu chất trữ tình.",
+            q10: "Câu 10: B - Nhấn mạnh giá trị tình nghĩa tinh thần cao đẹp hơn của cải vật chất."
+        };
+
+        // Hàm Check Quiz
+        function checkQuiz() {
+            let score = 0;
+            const total = 10;
+            let resultHtml = "";
+            let explainHtml = "<h4 class='font-bold border-b pb-2 text-slate-800'>HƯỚNG DẪN GIẢI CHI TIẾT TỪNG CÂU:</h4>";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const qBlock = document.getElementById(`q-block-${i}`);
+
+                if (selected && selected.value === correctAnswers[qName]) {
+                    score++;
+                    if(qBlock) qBlock.className = "p-4 rounded-lg border-2 border-green-500 bg-green-50 space-y-2";
+                } else {
+                    if(qBlock) qBlock.className = "p-4 rounded-lg border-2 border-red-400 bg-red-50 space-y-2";
+                }
+
+                explainHtml += `<p>${quizExplanations[qName]} ${selected && selected.value === correctAnswers[qName] ? '<span class="text-green-600 font-bold">(Đúng)</span>' : '<span class="text-red-500 font-bold">(Sai/Chưa chọn)</span>'}</p>`;
+            }
+
+            const quizResultEl = document.getElementById('quizResult');
+            const quizExplainEl = document.getElementById('quizExplain');
+
+            if (score === total) {
+                resultHtml = `<span class="text-green-600"><i class="fa-solid fa-trophy text-amber-500 mr-2"></i>XUẤT SẮC! BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ KHIẾN BẠN ĐẠT ĐIỂM TỐI ĐA: ${score}/${total} CÂU!</span>`;
+                quizResultEl.className = "p-5 rounded-lg border border-green-300 bg-green-100 text-center text-lg font-bold block";
+            } else {
+                resultHtml = `<span class="text-red-600"><i class="fa-solid fa-circle-xmark mr-2"></i>BẠN ĐẠT ${score}/${total} CÂU HỎI. HÃY XEM HƯỚNG DẪN GIẢI DƯỚI ĐÂY ĐỂ CỦNG CỐ KIẾN THỨC!</span>`;
+                quizResultEl.className = "p-5 rounded-lg border border-red-300 bg-red-100 text-center text-lg font-bold block";
+            }
+
+            quizResultEl.innerHTML = resultHtml;
+            quizExplainEl.innerHTML = explainHtml;
+            quizExplainEl.classList.remove('hidden');
+
+            // Re-render MathJax if needed
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+    </script>
+</body>
+</html>

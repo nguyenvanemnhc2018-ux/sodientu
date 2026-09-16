@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức - Nàng Ờm nhắn nhủ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for TeX render -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background-color: #663333;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+        }
+        .title-cream {
+            color: #FFFDD0;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .card-dark {
+            background-color: rgba(20, 10, 10, 0.45);
+            border: 1px solid rgba(255, 253, 208, 0.15);
+            backdrop-filter: blur(8px);
+        }
+        .card-inner {
+            background-color: rgba(15, 8, 8, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .btn-option {
+            background-color: rgba(30, 15, 15, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.2s ease;
+        }
+        .btn-option:hover {
+            background-color: rgba(80, 40, 40, 0.6);
+            border-color: rgba(255, 253, 208, 0.4);
+        }
+        .btn-option.selected {
+            background-color: rgba(180, 83, 9, 0.4);
+            border-color: #f59e0b;
+        }
+        .btn-option.correct-answer {
+            background-color: rgba(16, 185, 129, 0.25) !important;
+            border-color: #10b981 !important;
+        }
+        .btn-option.wrong-answer {
+            background-color: rgba(239, 68, 68, 0.25) !important;
+            border-color: #ef4444 !important;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER BAR -->
+    <header class="w-full bg-black/40 border-b border-yellow-100/10 py-3 px-4 md:px-8 flex flex-wrap items-center justify-between gap-4 sticky top-0 z-50 backdrop-blur-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-amber-600/30 p-2.5 rounded-lg border border-amber-500/40 text-amber-300">
+                <i class="fa-solid fa-book-open text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-lg md:text-xl font-bold uppercase tracking-wider title-cream">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                <p class="text-xs text-amber-200/80">Bài: NÀNG ỜM NHẮN NHỦ <span class="text-white/40">|(Trích Nàng Ờm - Chàng Bồng Hương - Ngữ Văn 11)|</span></p>
+            </div>
+        </div>
+
+        <div id="header-status-badge" class="flex items-center gap-2 bg-amber-950/60 border border-amber-500/30 text-amber-200 text-xs px-3 py-1.5 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span id="header-mode-text">Chưa chọn chế độ</span>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow container mx-auto px-4 py-6 max-w-6xl">
+
+        <!-- SCREEN 1: START / MODE SELECTION -->
+        <section id="screen-start" class="space-y-8 animate-fade-in">
+            <div class="text-center space-y-3 my-4">
+                <div class="inline-flex items-center justify-center p-3 bg-amber-500/20 text-amber-300 rounded-full mb-1 border border-amber-500/30">
+                    <i class="fa-solid fa-circle-check text-2xl"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight title-cream">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                <p class="text-amber-100/80 max-w-2xl mx-auto text-sm md:text-base">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-semibold text-amber-300">20 câu hỏi</span> bám sát nội dung văn bản <span class="italic">"Nàng Ờm nhắn nhủ"</span> với 4 mức độ tư duy theo ma trận Ngữ Văn 11.
+                </p>
+            </div>
+
+            <!-- LEVEL OVERVIEW CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-dark p-5 rounded-xl space-y-2 border-l-4 border-l-blue-500">
+                    <div class="text-xs font-bold uppercase tracking-wider text-blue-400">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-amber-100/70">Kiểm tra kiến thức trực tiếp về tác phẩm, nhân vật, địa danh, hoàn cảnh và chi tiết thơ.</p>
+                </div>
+                <div class="card-dark p-5 rounded-xl space-y-2 border-l-4 border-l-emerald-500">
+                    <div class="text-xs font-bold uppercase tracking-wider text-emerald-400">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-amber-100/70">Giải thích hiện tượng, ý nghĩa từ ngữ, tâm trạng nhân vật và đặc trưng truyện thơ dân gian.</p>
+                </div>
+                <div class="card-dark p-5 rounded-xl space-y-2 border-l-4 border-l-amber-500">
+                    <div class="text-xs font-bold uppercase tracking-wider text-amber-400">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-amber-100/70">Phối hợp kiến thức so sánh văn bản, phân tích nghệ thuật trần thuật và ứng xử nhân văn.</p>
+                </div>
+                <div class="card-dark p-5 rounded-xl space-y-2 border-l-4 border-l-purple-500">
+                    <div class="text-xs font-bold uppercase tracking-wider text-purple-400">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-amber-100/70">Đánh giá giá trị nhân đạo sâu sắc, khát vọng tự do và tư duy văn hóa của dân tộc thiểu số.</p>
+                </div>
+            </div>
+
+            <!-- MODE SELECTION CARDS -->
+            <div class="space-y-4 pt-4">
+                <h3 class="text-center text-xs font-semibold tracking-widest text-amber-200 uppercase">Vui lòng chọn hình thức kiểm tra:</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Practice Mode -->
+                    <div class="card-dark p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/50 transition duration-300">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-white flex items-center gap-2">
+                                    <span class="text-amber-400">1.</span> Chế độ Luyện Tập
+                                </h4>
+                                <span class="bg-blue-500/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-500/30">Không giới hạn</span>
+                            </div>
+                            <p class="text-xs text-amber-100/75 leading-relaxed">
+                                Học tập & củng cố kiến thức không áp lực. Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <button onclick="startQuiz('practice')" class="w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Bắt Đầu Luyện Tập
+                        </button>
+                    </div>
+
+                    <!-- Timed Mode -->
+                    <div class="card-dark p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/50 transition duration-300">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-white flex items-center gap-2">
+                                    <span class="text-amber-400">2.</span> Chế độ Tính Giờ
+                                </h4>
+                                <span class="bg-amber-500/20 text-amber-300 text-xs px-3 py-1 rounded-full border border-amber-500/30">20 Phút</span>
+                            </div>
+                            <p class="text-xs text-amber-100/75 leading-relaxed">
+                                Thử thách & kiểm tra đánh giá năng lực. Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <button onclick="startQuiz('timed')" class="w-full py-3 bg-gradient-to-r from-rose-700 to-amber-700 hover:from-rose-600 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-stopwatch"></i> Bắt Đầu Tính Giờ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: DOING TEST -->
+        <section id="screen-test" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Sidebar: Question Navigation Grid -->
+            <div class="lg:col-span-4 space-y-4">
+                <div class="card-dark p-5 rounded-2xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-200">DANH SÁCH CÂU HỎI</span>
+                        <span id="answered-count-badge" class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs px-2.5 py-0.5 rounded-full font-mono">0 / 20 đã làm</span>
+                    </div>
+
+                    <!-- Timer block if active -->
+                    <div id="timer-box" class="hidden bg-red-950/50 border border-red-500/40 p-3 rounded-xl flex items-center justify-between">
+                        <span class="text-xs text-red-200 font-medium"><i class="fa-solid fa-clock mr-1"></i> THỜI GIAN NHANH:</span>
+                        <span id="timer-display" class="font-mono text-xl font-bold text-yellow-300">20:00</span>
+                    </div>
+
+                    <!-- Question Grid 1 - 20 -->
+                    <div id="question-grid" class="grid grid-cols-5 gap-2.5">
+                        <!-- JS generated buttons -->
+                    </div>
+
+                    <!-- Grid Legend -->
+                    <div class="pt-2 border-t border-white/10 space-y-1.5 text-xs text-amber-100/70">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-black/40 border border-white/20"></span> Chưa trả lời
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-amber-600"></span> Đã chọn đáp án
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-blue-600"></span> Đang làm (Hiện tại)
+                        </div>
+                    </div>
+
+                    <button onclick="confirmSubmit()" class="w-full py-3 mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Nộp Bài & Kết Thúc
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Main Area: Current Question Content -->
+            <div class="lg:col-span-8 space-y-4">
+                <div class="card-dark p-6 md:p-8 rounded-2xl space-y-6 flex flex-col justify-between min-h-[480px]">
+                    <div>
+                        <!-- Header of question -->
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <h3 id="question-title-num" class="text-xl font-bold title-cream">Câu 1 / 20</h3>
+                                <span id="question-level-badge" class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40">Mức Biết</span>
+                            </div>
+                        </div>
+
+                        <!-- Question Prompt Text -->
+                        <div id="question-text" class="text-base md:text-lg font-medium leading-relaxed text-white mb-6">
+                            <!-- Question text content inserted via JS -->
+                        </div>
+
+                        <!-- Options List -->
+                        <div id="options-container" class="space-y-3">
+                            <!-- Option buttons inserted via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation Footer -->
+                    <div class="flex flex-wrap items-center justify-between gap-3 pt-6 border-t border-white/10">
+                        <button id="btn-prev" onclick="navigateQuestion(-1)" class="px-5 py-2.5 bg-black/40 hover:bg-black/60 text-white font-medium rounded-xl text-sm transition disabled:opacity-40 disabled:cursor-not-allowed">
+                            <i class="fa-solid fa-chevron-left mr-1"></i> Câu Trước
+                        </button>
+                        
+                        <button onclick="clearCurrentSelection()" class="text-xs text-amber-200/60 hover:text-amber-200 underline">
+                            Xóa lựa chọn câu này
+                        </button>
+
+                        <button id="btn-next" onclick="navigateQuestion(1)" class="px-5 py-2.5 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl text-sm transition shadow">
+                            Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULT & EVALUATION -->
+        <section id="screen-result" class="hidden space-y-8 animate-fade-in">
+            <!-- Summary Banner -->
+            <div class="card-dark p-6 md:p-8 rounded-3xl text-center space-y-6 max-w-4xl mx-auto border border-amber-500/30">
+                <div class="inline-flex items-center justify-center p-4 bg-amber-500/20 rounded-full border border-amber-500/40 text-amber-300">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+                <div class="space-y-1">
+                    <h2 class="text-3xl font-extrabold title-cream">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-subtitle" class="text-sm text-amber-200/70">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- Score statistics -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto py-2">
+                    <div class="card-inner p-4 rounded-2xl">
+                        <span class="text-xs text-amber-200/60 block">Điểm số</span>
+                        <span id="res-score" class="text-3xl font-black text-amber-400">0.0 <span class="text-xs font-normal text-white/50">/ 10.0</span></span>
+                    </div>
+                    <div class="card-inner p-4 rounded-2xl">
+                        <span class="text-xs text-amber-200/60 block">Số câu đúng</span>
+                        <span id="res-correct-ratio" class="text-3xl font-black text-emerald-400">0 <span class="text-xs font-normal text-white/50">/ 20 câu</span></span>
+                    </div>
+                    <div class="card-inner p-4 rounded-2xl">
+                        <span class="text-xs text-amber-200/60 block">Thời gian làm bài</span>
+                        <span id="res-time-spent" class="text-2xl font-bold text-blue-300 font-mono">00:00</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="card-inner p-5 rounded-2xl text-left border-l-4 border-l-amber-500 space-y-2">
+                    <h4 class="text-sm font-bold text-amber-300 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots"></i> Đánh giá & Nhận xét từ Giáo viên:
+                    </h4>
+                    <p id="res-teacher-comment" class="text-sm text-amber-100/90 leading-relaxed italic">
+                        --
+                    </p>
+                </div>
+
+                <!-- Action buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="resetToStart()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow transition">
+                        <i class="fa-solid fa-rotate-right mr-1"></i> Làm lại bài kiểm tra
+                    </button>
+                    <a href="#detailed-solutions" class="px-6 py-3 bg-black/40 hover:bg-black/60 text-amber-200 font-bold rounded-xl border border-white/10 transition">
+                        <i class="fa-solid fa-list-check mr-1"></i> Xem đáp án & Lời giải
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions List -->
+            <div id="detailed-solutions" class="space-y-6 max-w-4xl mx-auto pt-6">
+                <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                    <h3 class="text-xl font-bold title-cream flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-amber-200/60">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutions-container" class="space-y-6">
+                    <!-- Solution cards generated via JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-black/40 border-t border-white/5 py-4 px-4 text-center text-xs text-amber-200/40 mt-12">
+        <p>© Hệ thống Trắc nghiệm Ngữ Văn 11 - Bộ sách Kết Nối Tri Thức Với Cuộc Sống - Bài "Nàng Ờm nhắn nhủ"</p>
+    </footer>
+
+    <script>
+        // QUESTION BANK DATA (20 Questions: 8 Biết, 7 Hiểu, 3 Vận dụng, 2 Vận dụng cao)
+        const ORIGINAL_QUESTIONS = [
+            // LEVEL: BIẾT (8 CÂU)
+            {
+                id: 1,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Văn bản \\(\\text{Nàng Ờm nhắn nhủ}\\) thuộc thể loại nào và của dân tộc nào?",
+                options: [
+                    "Truyện thơ dân gian của dân tộc Mường",
+                    "Truyện thơ dân gian của dân tộc Thái",
+                    "Thơ trữ tình của dân tộc H'Mông",
+                    "Sử thi thần thoại của dân tộc Tây Nguyên"
+                ],
+                answer: 0,
+                explanation: "Văn bản 'Nàng Ờm nhắn nhủ' là đoạn trích trong truyện thơ dân gian 'Nàng Ờm - chàng Bồng Hương' của đồng bào dân tộc Mường (Thanh Hóa)."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Người kể chuyện trong đoạn trích \\(\\text{Nàng Ờm nhắn nhủ}\\) là ai?",
+                options: [
+                    "Người kể chuyện ngôi thứ ba ẩn danh",
+                    "Chàng Bồng Hương",
+                    "Nàng Ờm (xưng \\(\\text{em}\\))",
+                    "Các bà mẹ trong mường"
+                ],
+                answer: 2,
+                explanation: "Lời trần thuật trong đoạn trích là lời cất lên từ linh hồn của Nàng Ờm (xưng 'em') cất tiếng nhắn nhủ tới 'các cố, các mẹ'."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Quê nhà của Nàng Ờm và Chàng Bồng Hương được nhắc tới ở những địa danh nào?",
+                options: [
+                    "Đất Cành Nành, làng Ca Da, mường Kỳ Ông",
+                    "Núi Bản Mường, làng Tây Bắc, sông Mã",
+                    "Mường Thanh, núi Làn Ai, làng Chài",
+                    "Đất Cành Nành, làng Ca Da, mường Tây Bắc"
+                ],
+                answer: 0,
+                explanation: "Văn bản ghi rõ: \\(\\text{Quê nhà Ờm ở đất Cành Nành / Làng Ca Da, mường Kỳ Ống}\\)."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Nguyên nhân trực tiếp nào dẫn đến cái chết bi thương của Nàng Ờm và Chàng Bồng Hương?",
+                options: [
+                    "Do chiến tranh giữa các mường",
+                    "Do bệnh tật hiểm nghèo",
+                    "Do sự ngăn trở, cấm đoán nghiệt ngã của cha mẹ",
+                    "Do tai nạn khi đi săn bắn trên núi Làn Ai"
+                ],
+                answer: 2,
+                explanation: "Tóm tắt tác phẩm ghi rõ: 'Do cha mẹ nàng Ờm ngăn trở, cấm đoán nghiệt ngã, họ đã tự kết liễu đời mình'."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Địa danh núi nào là nơi linh hồn của Nàng Ờm và Chàng Bồng Hương quẩn quanh trú ngụ?",
+                options: [
+                    "Núi Kỳ Ống",
+                    "Núi Làn Ai",
+                    "Núi Ca Da",
+                    "Núi Cành Nành"
+                ],
+                answer: 1,
+                explanation: "Linh hồn hai người quẩn quanh trên núi Làn Ai để kể lại câu chuyện của mình cho người đời."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Trong đoạn trích, từ \\(\\text{cố}\\) dùng để chỉ ai?",
+                options: [
+                    "Người trẻ tuổi trong bản",
+                    "Người đã khuất",
+                    "Người già cả với hàm ý tôn kính (như từ cụ)",
+                    "Người đứng đầu mường"
+                ],
+                answer: 2,
+                explanation: "Chú thích 1 trong văn bản nêu rõ: \\(\\text{Cố: từ dùng để gọi người già cả với hàm ý tôn kính, nghĩa như từ cụ}\\)."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Các công cụ đánh bắt cá được nhắc tới trong đoạn thơ (vóng cái, vóng ngoài) là của đồng bào vùng nào?",
+                options: [
+                    "Đồng bào miền núi tỉnh Thanh Hóa",
+                    "Đồng bào vùng đồng bằng Bắc Bộ",
+                    "Đồng bào vùng Tây Nguyên",
+                    "Đồng bào Nam Bộ"
+                ],
+                answer: 0,
+                explanation: "Chú thích 3, 4 nêu rõ vóng cái, vóng ngoài là các dụng cụ đánh bắt cá ở suối, khe của đồng bào miền núi Thanh Hóa."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Đoạn trích \\(\\text{Nàng Ờm nhắn nhủ}\\) được sưu tầm và biên dịch bởi tác giả nào?",
+                options: [
+                    "Đặng Văn Lung",
+                    "Hoàng Anh Nhân",
+                    "Phan Đăng Nhật",
+                    "Nông Quốc Chấn"
+                ],
+                answer: 1,
+                explanation: "Văn bản ghi rõ nguồn sưu tầm, biên dịch là của tác giả Hoàng Anh Nhân (in trong Tổng tập văn học Việt Nam, tập 41)."
+            },
+
+            // LEVEL: HIỂU (7 CÂU)
+            {
+                id: 9,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Mục đích chính của linh hồn Nàng Ờm khi kể lại câu chuyện cuộc đời mình cho 'các cố, các mẹ' nghe là gì?",
+                options: [
+                    "Oán trách cha mẹ và nguyền rủa dân làng",
+                    "Mong người đời suy nghĩ lại, thương kiếp người, không cấm đoán tình yêu để các đôi lứa được sum vầy hạnh phúc",
+                    "Khoe khoang cuộc sống giàu có, thong dong ở thế giới bên kia",
+                    "Đòi hỏi dân làng phải lập đền thờ cho hai người trên núi Làn Ai"
+                ],
+                answer: 1,
+                explanation: "Nàng Ờm nhắn nhủ với mục đích vị tha: 'Để các mẹ suy đi nghĩ lại / Mà thương cho cái kiếp con người', khuyên cha mẹ không cấm đoán để các lứa đôi khác không rơi vào bi kịch."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Câu thơ \\(\\text{Các mẹ sống trên đời / Đừng chê người ăn ngón}\\) ẩn chứa lời khuyên gì?",
+                options: [
+                    "Khuyên không nên phung phí thức ăn trong gia đình",
+                    "Khuyên cha mẹ đừng khinh nghèo ghét khó, đừng ngăn cản tình yêu đôi lứa chân thành",
+                    "Khuyên mọi người phải chăm chỉ làm ăn, tích lũy của cải",
+                    "Khuyên nên coi trọng của cải vật chất hơn tình cảm"
+                ],
+                answer: 1,
+                explanation: "'Đừng chê người ăn ngón' là cách nói dân gian khuyên cha mẹ chớ nên coi thường người nghèo khổ, chớ chia rẽ tình yêu lứa đôi vì định kiến phân biệt giàu nghèo."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Bức tranh sinh hoạt của vợ chồng Nàng Ờm ở thế giới bên kia hiện lên qua các chi tiết lao động có đặc điểm gì?",
+                options: [
+                    "Nhàn nhã, không phải làm bất cứ công việc gì",
+                    "Cần mẫn, bận rộn nhưng ấm êm, hòa thuận và tràn đầy sức sống lao động",
+                    "Cực khổ, bị đày ải và thiếu tốn mọi bề",
+                    "Hiến tế và thực hiện các nghi lễ tâm linh"
+                ],
+                answer: 1,
+                explanation: "Dù ở thế giới bên kia, họ vẫn giữ nếp sống lao động mương rẫy cần cù (chàng đi đánh lưới, săn hổ; nàng chăn lợn, cấy hái, may vá). Cuộc sống bận rộn nhưng gắn bó, no đủ tình nghĩa."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Câu thơ \\(\\text{Núi Làn Ai nghèo tiền nghèo của / Nhưng Làn Ai giàu nghĩa giàu tình}\\) khẳng định giá trị sống nào?",
+                options: [
+                    "Vật chất là quyết định tất cả mọi hạnh phúc",
+                    "Tình nghĩa và tình yêu chân thành cao quý hơn mọi của cải vật chất",
+                    "Sự thiếu thốn về của cải làm cho con người đau khổ",
+                    "Sự giàu có về của cải sẽ đem lại tình yêu thắm thiết"
+                ],
+                answer: 1,
+                explanation: "Câu thơ đối lập giữa 'nghèo tiền nghèo của' với 'giàu nghĩa giàu tình' để khẳng định giá trị tinh thần, tình yêu chân chính là phẩm chất cao quý nhất."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Trong đoạn trích, hình ảnh so sánh \\(\\text{Nghĩa vợ như đêm trăng sáng}\\) mang ý nghĩa nghệ thuật gì?",
+                options: [
+                    "Tình nghĩa vợ chồng lạnh lẽo như đêm tối",
+                    "Tình nghĩa vợ chồng trong sáng, đẹp đẽ, thủy chung và soi sáng cho cuộc đời",
+                    "Tình nghĩa vợ chồng ngắn ngủi chỉ tồn tại trong một đêm",
+                    "Tình nghĩa vợ chồng luôn thay đổi theo chu kỳ tròn khuyết của trăng"
+                ],
+                answer: 1,
+                explanation: "Hình ảnh 'đêm trăng sáng' tượng trưng cho sự trong sạch, tỏa sáng, viên mãn và cao đẹp của nghĩa tình vợ chồng."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Việc tác giả dân gian để nhân vật Nàng Ờm sau khi chết vẫn quay về nhắn nhủ người sống phản ánh quan niệm gì?",
+                options: [
+                    "Quan niệm vạn vật hữu linh, sự kết nối giữa người sống và người chết cùng tấm lòng bao dung nhân ái",
+                    "Nỗi sợ hãi của người dân trước các linh hồn ma quái",
+                    "Ước mơ về sự trả thù trừng phạt những người đã ngăn cấm họ",
+                    "Mê tín dị đoan lạc hậu của đồng bào vùng cao"
+                ],
+                answer: 0,
+                explanation: "Sự trở về của linh hồn không mang màu sắc trả thù hay rùng rợn mà tràn đầy tinh thần nhân văn: khuyên nhủ, cầu mong cho người sống được hạnh phúc."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Thái độ của Nàng Ờm đối với 'các cố, các mẹ' trong đoạn trích là thái độ như thế nào?",
+                options: [
+                    "Oán giận, trách móc nặng nề",
+                    "Kính trọng, lễ phép, bao dung và tràn đầy tình thương",
+                    "Thờ ơ, lạnh nhạt, không quan tâm",
+                    "Thách thức và kiêu ngạo"
+                ],
+                answer: 1,
+                explanation: "Lời xưng hô 'Các cố, các mẹ ơi!', lời chúc 'ở lại sống lâu trăm năm' thể hiện rõ thái độ thành kính, lễ phép và lòng bao dung của nàng Ờm."
+            },
+
+            // LEVEL: VẬN DỤNG (3 CÂU)
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelCode: "vận dụng",
+                question: "So sánh với truyện thơ \\(\\text{Lời tiễn dặn}\\) (dân tộc Thái), điểm giống nhau nổi bật về đề tài và khát vọng giữa hai tác phẩm là gì?",
+                options: [
+                    "Cùng ca ngợi vẻ đẹp thiên nhiên núi rừng Tây Bắc",
+                    "Cùng phản ánh bi kịch tình yêu đôi lứa bị cấm đoán và thể hiện khát vọng tình yêu tự do, thủy chung",
+                    "Cùng miêu tả các cuộc chiến tranh bảo vệ bản mường",
+                    "Cùng phê phán việc trai gái tự do yêu thương không qua mai móc"
+                ],
+                answer: 1,
+                explanation: "Cả hai truyện thơ đều thể hiện bi kịch tình yêu bị lễ giáo/cha mẹ ngăn cấm, qua đó cất lên tiếng nói khát khao tự do yêu đương và nghĩa tình thủy chung."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelCode: "vận dụng",
+                question: "Nghệ thuật trần thuật ở ngôi thứ nhất (Nàng Ờm tự kể câu chuyện của mình) tạo ra hiệu quả thẩm mỹ nào cho văn bản?",
+                options: [
+                    "Tạo góc nhìn khách quan, trung lập tuyệt đối",
+                    "Tạo sự chân thực, xúc động sâu sắc, giúp nhân vật bộc lộ trực tiếp nỗi niềm, tâm sự và bài học cảm thông",
+                    "Làm cho câu chuyện mang tính hoang đường, khó tin",
+                    "Tạo cảm giác ly kỳ, rùng rợn cho tác phẩm"
+                ],
+                answer: 1,
+                explanation: "Lời kể ngôi thứ nhất từ chính người trong cuộc mang đến tính trữ tình sâu sắc, tăng độ tin cậy, lay động tâm hồn người đọc người nghe."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelCode: "vận dụng",
+                question: "Từ bài học ứng xử của nhân vật Nàng Ờm, anh/chị rút ra bài học gì về cách ứng xử trước những bất hạnh, đau khổ trong cuộc sống?",
+                options: [
+                    "Nên giữ hận thù và tìm cách trả thù những người làm tổn thương mình",
+                    "Biết chuyển hóa đau thương thành lòng bao dung, nhân ái, hướng tới xây dựng những giá trị tốt đẹp cho người khác",
+                    "Im lặng chịu đựng và buông xuôi trước mọi nghịch cảnh",
+                    "Trách móc số phận và đổ lỗi cho hoàn cảnh xung quanh"
+                ],
+                answer: 1,
+                explanation: "Nàng Ờm không oán thù mà gửi lời nhắn nhủ chân thành để các thế hệ sau không phải lặp lại bi kịch. Đó là bài học về lòng bao dung và lối ứng xử nhân văn."
+            },
+
+            // LEVEL: VẬN DỤNG CAO (2 CÂU)
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelCode: "vận dụng cao",
+                question: "Nhận định nào sau đây đánh giá đúng nhất về giá trị nhân đạo sâu sắc của đoạn trích \\(\\text{Nàng Ờm nhắn nhủ}\\)?",
+                options: [
+                    "Tác phẩm dừng lại ở việc khóc thương cho số phận nghiệt ngã của những đôi lứa yêu nhau",
+                    "Tác phẩm không chỉ cảm thương cho bi kịch mà còn vượt lên sự hận thù để khẳng định sức sống bất tử của tình yêu, đề cao triết lý nhân văn 'giàu nghĩa giàu tình'",
+                    "Tác phẩm khẳng định cái chết là con đường duy nhất để giải quyết mọi mâu thuẫn gia đình",
+                    "Tác phẩm tập trung đả phá triệt để các phong tục tập quán của đồng bào dân tộc thiểu số"
+                ],
+                answer: 1,
+                explanation: "Giá trị nhân đạo cao nhất của tác phẩm không dừng ở nỗi đau cái chết, mà ở thái độ tha thứ, khát vọng hạnh phúc chung cho cộng đồng và lời khẳng định vẻ đẹp tâm hồn 'giàu nghĩa giàu tình'."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelCode: "vận dụng cao",
+                question: "Từ việc tiếp nhận các truyện thơ dân gian như \\(\\text{Nàng Ờm - chàng Bồng Hương}\\), \\(\\text{Lời tiễn dặn}\\), chúng ta cần có thái độ như thế nào đối với di sản văn hóa tinh thần của các cộng đồng dân tộc thiểu số Việt Nam?",
+                options: [
+                    "Cần trân trọng, bảo tồn và phát huy những giá trị nhân văn, tinh thần yêu thương tự do và triết lý sống cao đẹp của đồng bào",
+                    "Coi đó là những câu chuyện cổ xưa không còn phù hợp với xã hội hiện đại",
+                    "Chỉ nghiên cứu trên phương diện ngôn ngữ học chứ không cần tiếp nhận giá trị nội dung",
+                    "Đồng nhất toàn bộ các hủ tục cổ xưa với giá trị văn hóa nghệ thuật của truyện thơ"
+                ],
+                answer: 0,
+                explanation: "Tiếp nhận truyện thơ các dân tộc thiểu số giúp chúng ta thấu hiểu tâm hồn, trân trọng khát vọng nhân văn và tinh hoa văn hóa phong phú của cộng đồng các dân tộc Việt Nam."
+            }
+        ];
+
+        // GLOBAL APP STATE
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let currentQuestions = [];
+        let userAnswers = {}; // { questionId: selectedOptionIndex }
+        let currentQuestionIdx = 0;
+        let timerInterval = null;
+        let timeLeft = 20 * 60; // 20 mins in seconds
+        let startTimeStamp = null;
+        let endTimeStamp = null;
+
+        // INITIALIZATION
+        window.onload = function() {
+            renderMath();
+        };
+
+        function renderMath() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            startTimeStamp = new Date();
+
+            // Setup Header Badge
+            const headerBadge = document.getElementById('header-mode-text');
+            if (mode === 'practice') {
+                headerBadge.textContent = 'Chế độ LUYỆN TẬP';
+                document.getElementById('timer-box').classList.add('hidden');
+                // Standard order
+                currentQuestions = JSON.parse(JSON.stringify(ORIGINAL_QUESTIONS));
+            } else {
+                headerBadge.textContent = 'Chế độ TÍNH GIỜ (20 Phút)';
+                document.getElementById('timer-box').classList.remove('hidden');
+                // Shuffle questions & options for Timed mode to prevent cheat
+                currentQuestions = shuffleQuestions(JSON.parse(JSON.stringify(ORIGINAL_QUESTIONS)));
+                startTimer(20 * 60);
+            }
+
+            // UI Screen Switching
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-test').classList.remove('hidden');
+
+            renderQuestionGrid();
+            loadQuestion(0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // SHUFFLE ALGORITHM FOR TIMED MODE
+        function shuffleQuestions(questionsArr) {
+            let shuffled = [...questionsArr];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            // Shuffle options for each question
+            shuffled.forEach(q => {
+                const correctAnswerText = q.options[q.answer];
+                for (let i = q.options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+                }
+                q.answer = q.options.indexOf(correctAnswerText);
+            });
+            return shuffled;
+        }
+
+        // TIMER FUNCTIONALITY
+        function startTimer(seconds) {
+            clearInterval(timerInterval);
+            timeLeft = seconds;
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Thời gian làm bài đã hết! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeLeft / 60);
+            const s = timeLeft % 60;
+            const formatted = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+            document.getElementById('timer-display').textContent = formatted;
+        }
+
+        // RENDER QUESTION SIDEBAR GRID
+        function renderQuestionGrid() {
+            const grid = document.getElementById('question-grid');
+            grid.innerHTML = '';
+
+            currentQuestions.forEach((q, index) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${index}`;
+                btn.className = getGridBtnClass(index);
+                btn.textContent = index + 1;
+                btn.onclick = () => loadQuestion(index);
+                grid.appendChild(btn);
+            });
+
+            updateAnsweredCount();
+        }
+
+        function getGridBtnClass(index) {
+            const isCurrent = index === currentQuestionIdx;
+            const qId = currentQuestions[index].id;
+            const isAnswered = userAnswers.hasOwnProperty(qId);
+
+            let base = "w-full aspect-square rounded-lg text-sm font-bold flex items-center justify-center transition ";
+            
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white border-2 border-blue-300 shadow-md ring-2 ring-blue-400/50";
+            } else if (isAnswered) {
+                return base + "bg-amber-600 text-white border border-amber-400/40";
+            } else {
+                return base + "bg-black/40 text-amber-100/70 border border-white/10 hover:bg-black/60";
+            }
+        }
+
+        function updateGridStyles() {
+            currentQuestions.forEach((q, index) => {
+                const btn = document.getElementById(`grid-btn-${index}`);
+                if (btn) {
+                    btn.className = getGridBtnClass(index);
+                }
+            });
+            updateAnsweredCount();
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answered-count-badge').textContent = `${count} / ${currentQuestions.length} đã làm`;
+        }
+
+        // LOAD CURRENT QUESTION TO MAIN AREA
+        function loadQuestion(index) {
+            currentQuestionIdx = index;
+            const q = currentQuestions[index];
+
+            // Update Header info
+            document.getElementById('question-title-num').textContent = `Câu ${index + 1} / ${currentQuestions.length}`;
+            
+            const badge = document.getElementById('question-level-badge');
+            badge.textContent = `Mức ${q.level}`;
+            
+            // Badge color styling
+            badge.className = "px-3 py-1 text-xs font-semibold rounded-full border ";
+            if (q.levelCode === 'biết') {
+                badge.className += "bg-blue-500/20 text-blue-300 border-blue-500/40";
+            } else if (q.levelCode === 'hiểu') {
+                badge.className += "bg-emerald-500/20 text-emerald-300 border-emerald-500/40";
+            } else if (q.levelCode === 'vận dụng') {
+                badge.className += "bg-amber-500/20 text-amber-300 border-amber-500/40";
+            } else {
+                badge.className += "bg-purple-500/20 text-purple-300 border-purple-500/40";
+            }
+
+            // Render Question Text
+            document.getElementById('question-text').innerHTML = q.question;
+
+            // Render Options
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[q.id] === optIdx;
+                
+                const optBtn = document.createElement('button');
+                optBtn.className = `w-full text-left p-4 rounded-xl btn-option flex items-start gap-3 ${isSelected ? 'selected' : ''}`;
+                optBtn.onclick = () => selectOption(q.id, optIdx);
+
+                optBtn.innerHTML = `
+                    <span class="w-7 h-7 rounded-lg bg-black/40 border border-white/20 flex items-center justify-center text-xs font-bold text-amber-300 flex-shrink-0 mt-0.5">
+                        ${prefixes[optIdx]}
+                    </span>
+                    <span class="text-sm md:text-base leading-relaxed text-white/90 pt-0.5">${optText}</span>
+                `;
+                container.appendChild(optBtn);
+            });
+
+            // Navigation Buttons State
+            document.getElementById('btn-prev').disabled = (index === 0);
+            const btnNext = document.getElementById('btn-next');
+            if (index === currentQuestions.length - 1) {
+                btnNext.innerHTML = `Nộp Bài <i class="fa-solid fa-paper-plane ml-1"></i>`;
+                btnNext.onclick = confirmSubmit;
+            } else {
+                btnNext.innerHTML = `Câu Tiếp <i class="fa-solid fa-chevron-right ml-1"></i>`;
+                btnNext.onclick = () => navigateQuestion(1);
+            }
+
+            updateGridStyles();
+            renderMath();
+        }
+
+        // OPTION SELECTION
+        function selectOption(questionId, optionIndex) {
+            userAnswers[questionId] = optionIndex;
+            loadQuestion(currentQuestionIdx);
+        }
+
+        function clearCurrentSelection() {
+            const qId = currentQuestions[currentQuestionIdx].id;
+            delete userAnswers[qId];
+            loadQuestion(currentQuestionIdx);
+        }
+
+        function navigateQuestion(direction) {
+            const newIdx = currentQuestionIdx + direction;
+            if (newIdx >= 0 && newIdx < currentQuestions.length) {
+                loadQuestion(newIdx);
+            }
+        }
+
+        // CONFIRM SUBMIT
+        function confirmSubmit() {
+            const answered = Object.keys(userAnswers).length;
+            const total = currentQuestions.length;
+            
+            if (answered < total) {
+                const confirmChoice = window.confirm(`Bạn mới hoàn thành ${answered}/${total} câu hỏi. Bạn có chắc chắn muốn nộp bài sớm không?`);
+                if (!confirmChoice) return;
+            }
+            submitQuiz();
+        }
+
+        // SUBMIT AND CALCULATE RESULTS
+        function submitQuiz() {
+            clearInterval(timerInterval);
+            endTimeStamp = new Date();
+
+            let correctCount = 0;
+            currentQuestions.forEach(q => {
+                if (userAnswers[q.id] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const score = ((correctCount / currentQuestions.length) * 10).toFixed(1);
+
+            // Time calculation
+            const durationSec = Math.floor((endTimeStamp - startTimeStamp) / 1000);
+            const mins = Math.floor(durationSec / 60);
+            const secs = durationSec % 60;
+            const timeStr = currentMode === 'practice' 
+                ? `${mins} phút ${secs} giây` 
+                : `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+
+            // Update UI elements in Result screen
+            document.getElementById('res-score').innerHTML = `${score} <span class="text-xs font-normal text-white/50">/ 10.0</span>`;
+            document.getElementById('res-correct-ratio').innerHTML = `${correctCount} <span class="text-xs font-normal text-white/50">/ ${currentQuestions.length} câu</span>`;
+            document.getElementById('res-time-spent').textContent = currentMode === 'practice' ? 'Không giới hạn' : timeStr;
+            document.getElementById('result-mode-subtitle').textContent = currentMode === 'practice' ? 'Chế độ LUYỆN TẬP' : 'Chế độ TÍNH GIỜ (20 Phút)';
+
+            // Generate Teacher Feedback
+            const commentBox = document.getElementById('res-teacher-comment');
+            commentBox.textContent = getTeacherFeedback(parseFloat(score), correctCount);
+
+            // Render Detailed Solutions
+            renderDetailedSolutions();
+
+            // Switch Screen
+            document.getElementById('screen-test').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // TEACHER EVALUATION GENERATOR
+        function getTeacherFeedback(score, correctCount) {
+            if (score === 10) {
+                return "Xuất sắc! Em đã nắm vững toàn bộ kiến thức tác phẩm 'Nàng Ờm nhắn nhủ', từ chi tiết văn bản đến tinh thần nhân văn sâu sắc của thể loại truyện thơ dân gian Mường. Hãy tiếp tục phát huy tinh thần học tập xuất sắc này nhé!";
+            } else if (score >= 8.0) {
+                return "Rất tốt! Em đã hiểu rõ bài học và vận dụng linh hoạt kiến thức trần thuật, ý nghĩa hình tượng nhân vật Nàng Ờm. Chỉ cần rà soát lại một vài câu phân tích nâng cao để đạt điểm tuyệt đối!";
+            } else if (score >= 6.5) {
+                return "Khá tốt! Em đã nắm được các nội dung cơ bản mức độ Biết và Hiểu. Tuy nhiên, em cần chú ý đọc kỹ hơn các câu hỏi Vận dụng và Vận dụng cao liên hệ nghệ thuật trần thuật và bài học nhân văn.";
+            } else if (score >= 5.0) {
+                return "Đạt yêu cầu! Em đã nhớ được một số chi tiết chính của bài học. Hãy đọc lại kỹ hơn đoạn trích 'Nàng Ờm nhắn nhủ' và chú thích SGK để củng cố các câu hỏi tái hiện kiến thức nhé.";
+            } else {
+                return "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết bài học 'Nàng Ờm nhắn nhủ'. Hãy xem kỹ đáp án và lời giải chi tiết bên dưới, đồng thời đọc lại bài học trong SGK Ngữ Văn 11 để ôn tập lại nhé!";
+            }
+        }
+
+        // RENDER DETAILED SOLUTIONS
+        function renderDetailedSolutions() {
+            const container = document.getElementById('solutions-container');
+            container.innerHTML = '';
+
+            const prefixes = ['A', 'B', 'C', 'D'];
+
+            currentQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[q.id];
+                const isCorrect = (userAns === q.answer);
+                const isUnanswered = (userAns === undefined);
+
+                const card = document.createElement('div');
+                card.className = `card-dark p-6 rounded-2xl space-y-4 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}`;
+
+                let optionsHTML = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optStyle = "btn-option";
+                    let badgeHTML = '';
+
+                    if (optIdx === q.answer) {
+                        optStyle += " correct-answer";
+                        badgeHTML = `<span class="ml-auto text-xs font-bold text-emerald-400 flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> Đáp án đúng</span>`;
+                    } else if (optIdx === userAns && !isCorrect) {
+                        optStyle += " wrong-answer";
+                        badgeHTML = `<span class="ml-auto text-xs font-bold text-rose-400 flex items-center gap-1"><i class="fa-solid fa-circle-xmark"></i> Lựa chọn của bạn</span>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl ${optStyle} flex items-center gap-3">
+                            <span class="w-6 h-6 rounded bg-black/40 border border-white/20 flex items-center justify-center text-xs font-bold text-amber-300 flex-shrink-0">
+                                ${prefixes[optIdx]}
+                            </span>
+                            <span class="text-sm text-white/90">${optText}</span>
+                            ${badgeHTML}
+                        </div>
+                    `;
+                });
+
+                let statusBadge = isCorrect 
+                    ? `<span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs px-3 py-1 rounded-full"><i class="fa-solid fa-check mr-1"></i> Đúng</span>`
+                    : (isUnanswered 
+                        ? `<span class="bg-gray-500/20 text-gray-300 border border-gray-500/40 text-xs px-3 py-1 rounded-full"><i class="fa-solid fa-minus mr-1"></i> Bỏ trống</span>`
+                        : `<span class="bg-rose-500/20 text-rose-300 border border-rose-500/40 text-xs px-3 py-1 rounded-full"><i class="fa-solid fa-xmark mr-1"></i> Sai</span>`);
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-amber-300">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/10 text-amber-100/70 border border-white/10">Mức ${q.level}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <div class="text-base font-medium text-white leading-relaxed">
+                        ${q.question}
+                    </div>
+
+                    <div class="space-y-2 pt-1">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="card-inner p-4 rounded-xl text-xs text-amber-100/80 space-y-1 border border-amber-500/20">
+                        <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb"></i> Lời giải chi tiết:
+                        </div>
+                        <p class="leading-relaxed text-amber-100/90 pl-5">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            renderMath();
+        }
+
+        // RESET TO START SCREEN
+        function resetToStart() {
+            clearInterval(timerInterval);
+            userAnswers = {};
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-test').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            document.getElementById('header-mode-text').textContent = 'Chưa chọn chế độ';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
