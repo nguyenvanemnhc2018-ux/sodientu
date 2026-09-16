@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Chosen Palette: Custom Palette (#1e3a8a, #0284C7, #33FF33, #f4f7f9) -->
+    <!-- Application Structure Plan: Designed a structured interactive lesson layout for textbook content. It features a dual-colored header block, structured section content with square/circle numbered badges, interactive answer toggles for in-text questions and activities, highlighted concept boxes for formulas and key statements, special callout boxes (em có biết, em có thể, lưu ý), an interactive 'Ai là triệu phú' 10-question quiz with score & detailed explanations, and 3 calculation/analytical practice exercises. -->
+    <!-- Visualization & Content Choices: Uses HTML/CSS styled elements, canvas-free interactive widgets, and MathJax with Chemistry support for mathematical/chemical formulas (e.g. CFC decomposition reactions). NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương: Thế giới đa dạng của thông tin - Phục hồi tầng ozone</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        .section-header {
+            border-bottom: 3px solid #1e3a8a;
+        }
+        .badge-square {
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 0.25rem;
+        }
+        .badge-circle {
+            width: 1.8rem;
+            height: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0284C7;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 9999px;
+        }
+        .btn-action {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 0.4rem 1rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid #16a34a;
+        }
+        .btn-action:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #e2e8f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="py-8 px-4">
+
+    <!-- Thẻ div chủ bao bọc toàn bộ nội dung -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER BLOCK (Gồm 2 khối màu 1 và màu 2, đóng cùng 1 khung bo tròn 4 góc) -->
+        <div class="rounded-xl overflow-hidden shadow-md border border-slate-200">
+            <!-- Khối trên: Tên Chương (Màu 1: #1e3a8a) -->
+            <div style="background-color: #1e3a8a;" class="p-4 text-white text-center font-bold text-base md:text-lg tracking-wide uppercase">
+                CHƯƠNG: THẾ GIỚI ĐA DẠNG CỦA THÔNG TIN
+            </div>
+            <!-- Đường kẻ mảnh phân cách -->
+            <div class="border-t border-blue-300/40"></div>
+            <!-- Khối dưới: Tên Bài (Màu 2: #0284C7) -->
+            <div style="background-color: #0284C7;" class="p-6 text-white text-center">
+                <h1 class="text-xl md:text-3xl font-extrabold uppercase tracking-wider mb-2">
+                    VĂN BẢN 3: PHỤC HỒI TẦNG OZONE: THÀNH CÔNG HIẾM HOI CỦA NỔ LỰC TOÀN CẦU
+                </h1>
+                <p class="text-blue-100 italic text-sm md:text-base">— Tác giả: Lê My —</p>
+            </div>
+        </div>
+
+        <!-- INTRO BOX (LỜI DẪN - Khung viền đen mỏng, nền trắng, chứa câu hỏi dẫn nhập in nghiêng) -->
+        <div class="border border-black bg-white rounded-xl p-5 shadow-sm">
+            <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2 text-base md:text-lg">
+                <span class="text-xl">📖</span> Lời dẫn (Khởi động trước khi đọc):
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 italic text-sm md:text-base">
+                <li>Bạn có hay theo dõi tin tức không? Bạn thường theo dõi tin tức trên những kênh truyền thông nào và quan tâm đến những gì khi tiếp nhận tin tức?</li>
+                <li>Bạn biết gì về tầng ozone và đã bao giờ nghe về việc tầng ozone bị thủng?</li>
+            </ul>
+        </div>
+
+        <!-- SA-PÔ CỦA VĂN BẢN (KHUNG TÓM TẮT THÔNG ĐIỆP) -->
+        <div class="bg-blue-50 border-l-4 border-blue-800 p-4 rounded-r-lg italic text-gray-800 shadow-sm">
+            <p class="font-medium text-sm md:text-base">
+                "Nếu đã lâu rồi bạn không nghe thấy tin tức gì về tầng ozone, đó là vì tình hình đang khá sáng sủa. Câu chuyện phục hồi và bảo vệ tầng ozone đã chứng tỏ rằng khi khoa học và quyết tâm chính trị hợp lực, thế giới có thể thay đổi vận mệnh của mình."
+            </p>
+        </div>
+
+        <!-- MỤC I -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold uppercase text-slate-900 pb-2 flex items-center gap-3">
+                <span class="badge-square">I</span>
+                KHOA HỌC VÀO VAI THÁM TỬ
+            </h2>
+
+            <!-- Mục I.1 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-slate-800 flex items-center gap-2">
+                    <span class="badge-circle">1</span>
+                    Khái niệm và Vai trò của Tầng Ozone
+                </h3>
+                
+                <!-- Định nghĩa / Phát biểu đóng khung màu nền -->
+                <div class="bg-sky-50 border border-sky-200 rounded-lg p-4 text-gray-800 space-y-2">
+                    <p class="font-semibold text-sky-900">📍 Vị trí & Định nghĩa:</p>
+                    <p>Tầng ozone nằm ở độ cao khoảng \(15 - 40\text{ km}\) so với bề mặt Trái Đất, thuộc <strong>tầng bình lưu</strong> (stratosphere).</p>
+                    <p class="font-semibold text-sky-900 pt-2">🛡️ Vai trò tự nhiên:</p>
+                    <p>Đóng vai trò như một lớp <em>"kem chống nắng"</em> khổng lồ che chắn cho hành tinh khỏi các bức xạ cực tím (\(\text{UV}\)) có hại từ Mặt Trời. Nếu không có lá chắn này, ánh nắng mặt trời sẽ trở nên cực kỳ nguy hiểm với con người và sinh vật, đặc biệt là tia \(\text{UV-B}\) gây cháy nắng và ung thư da.</p>
+                </div>
+            </div>
+
+            <!-- Mục I.2 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-lg text-slate-800 flex items-center gap-2">
+                    <span class="badge-circle">2</span>
+                    Phát Hiện "Nghi Phạm" Gây Suy Giảm Tầng Ozone
+                </h3>
+                
+                <p class="text-gray-700 leading-relaxed">
+                    Vào những năm 1970, hai nhà nghiên cứu <strong>Ma-ri-ô Mo-li-nơ (Mario Molina)</strong> và <strong>Se-ri Rao-lăn (Sherry Rowland)</strong> đã xác định "nghi phạm" chính làm suy giảm tầng ozone là nhóm hợp chất nhân tạo <strong>chlorofluorocarbon (CFC)</strong>.
+                </p>
+
+                <!-- Tính chất / Công thức đóng khung màu nền -->
+                <div class="bg-amber-50 border border-amber-300 rounded-lg p-4 space-y-2">
+                    <h4 class="font-bold text-amber-900">🧪 Cơ chế phân hủy Ozone của CFC:</h4>
+                    <p class="text-sm text-gray-800">
+                        1. Chất \(\text{CFC}\) rất trơ ở tầng thấp nhưng khi bay lên tầng bình lưu, dưới tác dụng của tia cực tím (\(\text{UV}\)), chúng phân hủy giải phóng nguyên tử Chlorine (\(\text{Cl}\)):
+                    </p>
+                    <div class="text-center font-mono py-1.5 bg-white rounded border border-amber-200 text-sm md:text-base">
+                        \( \text{CFC} \xrightarrow{\text{UV}} \text{Cl}^\bullet \)
+                    </div>
+                    <p class="text-sm text-gray-800">
+                        2. Nguyên tử \(\text{Cl}\) hoạt động như một chất xúc tác, "cướp" mất nguyên tử \(\text{O}\) từ ozone (\(\text{O}_3\)) biến thành oxy thông thường (\(\text{O}_2\)):
+                    </p>
+                    <div class="text-center font-mono py-1.5 bg-white rounded border border-amber-200 text-sm md:text-base">
+                        \( \text{Cl}^\bullet + \text{O}_3 \rightarrow \text{ClO}^\bullet + \text{O}_2 \)
+                    </div>
+                    <div class="text-center font-mono py-1.5 bg-white rounded border border-amber-200 text-sm md:text-base">
+                        \( \text{ClO}^\bullet + \text{O} \rightarrow \text{Cl}^\bullet + \text{O}_2 \)
+                    </div>
+                    <p class="text-sm text-gray-800 font-medium">
+                        👉 <strong>Kết luận:</strong> Một nguyên tử \(\text{Cl}\) có thể phá hủy hàng trăm nghìn phân tử ozone (\(\text{O}_3\)) trong suốt thời gian tồn tại ở tầng bình lưu!
+                    </p>
+                </div>
+            </div>
+
+            <!-- MỤC CÓ BIỂU TƯỢNG DẤU ? -->
+            <div class="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-r-md space-y-2">
+                <div class="font-bold text-slate-800 flex items-center gap-2">
+                    <span class="text-xl">❓</span> Thẻ Theo Dõi Thông Tin:
+                </div>
+                <p class="text-gray-700 font-medium text-sm">
+                    Hai nhà khoa học Mo-li-nơ và Rao-lăn đã phát hiện sự thật gì về chất CFC và nguy cơ của nó đối với tầng ozone?
+                </p>
+                <button onclick="toggleAnswer('qa-1')" class="btn-action text-xs md:text-sm">
+                    Xem câu trả lời
+                </button>
+                <div id="qa-1" class="hidden mt-3 p-3 bg-green-50 border border-green-300 rounded text-gray-800 text-sm">
+                    <strong>Trả lời:</strong> Họ phát hiện ra rằng hóa chất CFC (dùng phổ biến trong tủ lạnh, điều hòa, bình xịt) tưởng chừng an toàn nhưng khi bay lên tầng bình lưu sẽ bị ánh sáng mặt trời phân hủy tạo ra nguyên tử Chlorine. Một nguyên tử Cl này có thể làm tan biến hàng trăm nghìn phân tử ozone, đe dọa trực tiếp đến tấm lá chắn bảo vệ sự sống Trái Đất.
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC II -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold uppercase text-slate-900 pb-2 flex items-center gap-3">
+                <span class="badge-square">II</span>
+                ĐỒNG LÒNG (NỖ LỰC TOÀN CẦU VÀ KẾT QUẢ)
+            </h2>
+
+            <!-- Mục II.1 -->
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg text-slate-800 flex items-center gap-2">
+                    <span class="badge-circle">1</span>
+                    Hành Động Quốc Tế & Nghị Định Thư Montreal
+                </h3>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Năm 1985, phát hiện thực tế về lỗ thủng tầng ozone ở Nam Cực của Joseph Farman đã khiến thế giới giật mình. Ngày <strong>16/9/1987</strong>, <strong>Nghị định thư Mon-tre-an (Montreal)</strong> ra đời, đánh dấu cam kết lịch sử của các quốc gia trong việc cắt giảm và cấm hoàn toàn CFC.
+                </p>
+
+                <!-- KHUNG HÌNH MINH HỌA (Sẵn sàng đường dẫn src="h1.png") -->
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center bg-gray-50 my-4">
+                    <img src="h1.png" alt="Mô phỏng lỗ thủng tầng ozone ở Nam Cực giai đoạn 1979 - 2019" class="mx-auto rounded border shadow max-h-72 object-contain mb-2" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x300?text=Khung+Hinh+Minh+Hoa+h1.png';">
+                    <p class="text-xs text-gray-600 italic font-semibold">
+                        Hình 1: Mô phỏng lỗ thủng tầng ozone ở Nam Cực giai đoạn 1979 – 2019 (Nguồn: NASA / Vox)
+                    </p>
+                </div>
+
+                <!-- Phát biểu kết quả / Thành tựu đóng khung màu nền -->
+                <div class="bg-emerald-50 border border-emerald-300 rounded-lg p-4">
+                    <h4 class="font-bold text-emerald-900 mb-2">🌟 Những thành tựu lịch sử nổi bật:</h4>
+                    <ul class="list-disc list-inside text-gray-800 space-y-1 text-sm">
+                        <li>Khoảng <strong>99%</strong> các chất làm suy giảm tầng ozone đã được "khai tử".</li>
+                        <li>Dự kiến lỗ thủng tầng ozone ở Nam Cực sẽ khép lại hoàn toàn vào khoảng <strong>năm 2060</strong>.</li>
+                        <li>Ước tính giúp khoảng <strong>2 triệu người</strong> tránh khỏi bệnh ung thư da mỗi năm đến năm 2030.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MỤC HOẠT ĐỘNG (Hình bàn tay / Nêu vấn đề) -->
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-md space-y-2">
+                <div class="font-bold text-amber-900 flex items-center gap-2">
+                    <span>🖐️</span> Hoạt Động Bàn Luận / Nêu Vấn Đề:
+                </div>
+                <p class="text-gray-800 text-sm">
+                    Những nhân tố chính nào đã làm nên thành công của cuộc chiến phục hồi tầng ozone toàn cầu? Bài học này gợi mở điều gì cho việc giải quyết các khủng hoảng môi trường khác như biến đổi khí hậu?
+                </p>
+                <button onclick="toggleAnswer('act-1')" class="btn-action text-xs md:text-sm">
+                    Xem hướng giải quyết
+                </button>
+                <div id="act-1" class="hidden mt-3 p-3 bg-white border border-amber-300 rounded text-gray-800 text-sm space-y-1">
+                    <p><strong>Hướng giải quyết:</strong></p>
+                    <p>1. <em>Đồng thuận khoa học:</em> Sự phát hiện chính xác, minh bạch của các nhà khoa học (Molina, Rowland, Farman, Solomon...).</p>
+                    <p>2. <em>Quyết tâm chính trị & Hợp tác quốc tế:</em> Nghị định thư Montreal được tất cả các quốc gia phê chuẩn và thực thi nghiêm túc.</p>
+                    <p>3. <em>Giải pháp công nghệ thay thế:</em> Các doanh nghiệp và ngành công nghiệp chủ động tìm môi chất làm lạnh mới thân thiện môi trường.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC III: BÀI TẬP VÀ CÂU HỎI TRONG BÀI (TRANG 5 SGK) -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-4">
+            <h2 class="section-header text-xl md:text-2xl font-bold uppercase text-slate-900 pb-2 flex items-center gap-3">
+                <span class="badge-square">III</span>
+                CÂU HỎI VÀ BÀI TẬP TRONG BÀI HỌC (SGK TRANG 5)
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Câu 1 -->
+                <div class="bg-slate-50 border-l-4 border-blue-900 p-4 rounded-r-md">
+                    <p class="font-semibold text-slate-900 text-sm md:text-base">Câu 1: Thông tin chính của văn bản là gì? Đó là thông tin khoa học hay thông tin thời sự chính trị? Vì sao?</p>
+                    <button onclick="toggleAnswer('sgk-1')" class="btn-action text-xs mt-2">Xem lời giải</button>
+                    <div id="sgk-1" class="hidden mt-2 p-3 bg-green-50 border border-green-200 rounded text-sm text-gray-800">
+                        <strong>Lời giải:</strong> Thông tin chính là hành trình khoa học tìm ra nguyên nhân suy giảm tầng ozone và sự hợp lực toàn cầu nhằm khắc phục cuộc khủng hoảng này. Đây là thông tin tổng hợp kết hợp giữa tri thức khoa học khí quyển và các quyết định thời sự chính trị ngoại giao mang tính toàn cầu.
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="bg-slate-50 border-l-4 border-blue-900 p-4 rounded-r-md">
+                    <p class="font-semibold text-slate-900 text-sm md:text-base">Câu 2: Hãy nhận xét về cách đặt nhan đề và cách triển khai nội dung của văn bản.</p>
+                    <button onclick="toggleAnswer('sgk-2')" class="btn-action text-xs mt-2">Xem lời giải</button>
+                    <div id="sgk-2" class="hidden mt-2 p-3 bg-green-50 border border-green-200 rounded text-sm text-gray-800">
+                        <strong>Lời giải:</strong> Nhan đề nêu rõ chủ đề và thái độ tích cực ("Thành công hiếm hoi"). Nội dung triển khai theo mạch trật tự nguyên nhân - kết quả và diễn tiến thời gian (từ nguy cơ phát hiện ra CFC đến giải pháp hợp tác quốc tế).
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="bg-slate-50 border-l-4 border-blue-900 p-4 rounded-r-md">
+                    <p class="font-semibold text-slate-900 text-sm md:text-base">Câu 3: Ngôn ngữ của văn bản đã đáp ứng yêu cầu nào của một bản tin? Bạn có đồng tình khi tác giả gọi nhà nghiên cứu là "thám tử", "tuyên phong thủ"?</p>
+                    <button onclick="toggleAnswer('sgk-3')" class="btn-action text-xs mt-2">Xem lời giải</button>
+                    <div id="sgk-3" class="hidden mt-2 p-3 bg-green-50 border border-green-200 rounded text-sm text-gray-800">
+                        <strong>Lời giải:</strong> Ngôn ngữ chính xác, khách quan, giàu số liệu thực chứng. Việc dùng các hình ảnh ẩn dụ như "thám tử", "tuyên phong thủ" giúp bài viết khoa học trở nên sinh động, lôi cuốn và dễ tiếp cận hơn với độc giả đại chúng.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC ĐẶC BIỆT: EM CÓ BIẾT, EM CÓ THỂ, LƯU Ý (Đóng khung nền khác nhau, giữ nguyên tiêu đề) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- EM CÓ BIẾT -->
+            <div class="bg-purple-50 border border-purple-300 rounded-xl p-4 shadow-sm">
+                <h3 class="font-bold text-purple-900 text-base mb-2 flex items-center gap-1">
+                    💡 em có biết
+                </h3>
+                <p class="text-xs text-purple-900 leading-relaxed">
+                    Năm 1995, ba nhà khoa học Mario Molina, Sherry Rowland và Paul Crutzen đã được trao giải <strong>Nobel Hóa học</strong> nhờ những phát hiện tiên phong về hóa học khí quyển, đặc biệt là sự hình thành và phân hủy tầng ozone!
+                </p>
+            </div>
+
+            <!-- EM CÓ THỂ -->
+            <div class="bg-teal-50 border border-teal-300 rounded-xl p-4 shadow-sm">
+                <h3 class="font-bold text-teal-900 text-base mb-2 flex items-center gap-1">
+                    🌱 em có thể
+                </h3>
+                <p class="text-xs text-teal-900 leading-relaxed">
+                    • Ưu tiên chọn mua thiết bị làm lạnh (tủ lạnh, máy lạnh) công nghệ mới sử dụng môi chất thân thiện môi trường.<br>
+                    • Tích cực tham gia các hoạt động tuyên truyền bảo vệ môi trường và giảm thiểu chất thải nhựa xung quanh.
+                </p>
+            </div>
+
+            <!-- LƯU Ý -->
+            <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 shadow-sm">
+                <h3 class="font-bold text-amber-900 text-base mb-2 flex items-center gap-1">
+                    ⚠️ lưu ý
+                </h3>
+                <p class="text-xs text-amber-900 leading-relaxed">
+                    Khi đọc hiểu văn bản thông tin khoa học: Cần chú ý đến tính chính xác của dữ liệu, các phương tiện giao tiếp phi ngôn ngữ (hình ảnh, sơ đồ) và mối quan hệ nguyên nhân - kết quả giữa các sự kiện.
+                </p>
+            </div>
+        </div>
+
+        <!-- TRẮC NGHIỆM GAMESHOW "AI LÀ TRIỆU PHÚ" (10 CÂU) -->
+        <div class="bg-slate-900 text-white rounded-xl shadow-xl p-6 space-y-6">
+            <div class="text-center bg-gradient-to-r from-blue-900 to-indigo-900 p-4 rounded-lg border border-yellow-400">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-yellow-400 tracking-wider">
+                    🏆 GAMESHOW: AI LÀ TRIỆU PHÚ 🏆
+                </h2>
+                <p class="text-xs md:text-sm text-blue-200 mt-1">10 Câu hỏi trắc nghiệm củng cố kiến thức (Mức độ Biết - Hiểu - Vận dụng thấp)</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6 text-slate-800">
+
+                <!-- Câu 1 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 1 (Biết): Tầng ozone nằm ở lớp khí quyển nào của Trái Đất?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q1" value="A"> <span>A. Tầng đối lưu</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q1" value="B"> <span>B. Tầng bình lưu</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q1" value="C"> <span>C. Tầng trung lưu</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q1" value="D"> <span>D. Tầng nhiệt</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 2 (Biết): Tác giả của văn bản "Phục hồi tầng ozone: Thành công hiếm hoi của nỗ lực toàn cầu" là ai?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q2" value="A"> <span>A. Trịnh Xuân Thuận</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q2" value="B"> <span>B. Lê My</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q2" value="C"> <span>C. Mario Molina</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q2" value="D"> <span>D. Stephen Andersen</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 3 (Biết): Hóa chất nhân tạo nào được xác định là nguyên nhân chính gây tổn hại tầng ozone?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q3" value="A"> <span>A. \(\text{CO}_2\)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q3" value="B"> <span>B. \(\text{CH}_4\)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q3" value="C"> <span>C. \(\text{CFC}\) (Chlorofluorocarbon)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q3" value="D"> <span>D. \(\text{SO}_2\)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 4 (Biết): Nghị định thư quan trọng nào về bảo vệ tầng ozone được ký kết vào năm 1987?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q4" value="A"> <span>A. Nghị định thư Kyoto</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q4" value="B"> <span>B. Hiệp định Paris</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q4" value="C"> <span>C. Nghị định thư Montreal</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q4" value="D"> <span>D. Công ước Glasgow</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 5 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 5 (Hiểu): Vai trò quan trọng nhất của tầng ozone đối với sự sống trên Trái Đất là gì?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q5" value="A"> <span>A. Giữ ấm cho khí quyển ban đêm</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q5" value="B"> <span>B. Ngăn chặn các bức xạ cực tím (\(\text{UV}\)) có hại từ Mặt Trời</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q5" value="C"> <span>C. Cung cấp khí Oxi cho sinh vật thở</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q5" value="D"> <span>D. Hấp thụ khí thải công nghiệp</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 6 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 6 (Hiểu): Vì sao nguyên tử Chlorine (\(\text{Cl}\)) lại có khả năng phá hủy tầng ozone khủng khiếp đến vậy?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q6" value="A"> <span>A. Vì nó tạo ra phản ứng cháy ở nhiệt độ cao</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q6" value="B"> <span>B. Vì nó hoạt động như chất xúc tác, tiếp tục được tái tạo để phá hủy hàng trăm nghìn phân tử \(\text{O}_3\)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q6" value="C"> <span>C. Vì nó phản ứng với nước tạo mưa axit</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q6" value="D"> <span>D. Vì nó cản trở sự quang hợp của cây xanh</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 7 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 7 (Hiểu): Dự kiến lỗ thủng tầng ozone ở Nam Cực sẽ khép lại hoàn toàn vào khoảng thời gian nào?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q7" value="A"> <span>A. Năm 2030</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q7" value="B"> <span>B. Năm 2060</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q7" value="C"> <span>C. Năm 2100</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q7" value="D"> <span>D. Năm 2025</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 8 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 8 (Vận dụng thấp): Việc đưa phương tiện phi ngôn ngữ (như hình ảnh mô phỏng lỗ thủng ozone) vào bài viết có tác dụng gì?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q8" value="A"> <span>A. Thay thế hoàn toàn cho văn bản chữ viết</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q8" value="B"> <span>B. Trực quan hóa dữ liệu và mức độ biến đổi qua các năm, giúp người đọc dễ hình dung</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q8" value="C"> <span>C. Giúp văn bản kéo dài trang hơn</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q8" value="D"> <span>D. Đáp ứng yêu cầu trình bày báo chí tối thiểu</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 9 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 9 (Vận dụng thấp): Việc gọi các nhà khoa học là "thám tử" thể hiện nét đặc sắc gì trong nghệ thuật viết văn bản thông tin?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q9" value="A"> <span>A. Sử dụng ẩn dụ giúp chủ đề khoa học trở nên kịch tính, hấp dẫn như quá trình phá án</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q9" value="B"> <span>B. Biến bài viết thành một tác phẩm trinh thám hư cấu</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q9" value="C"> <span>C. Làm giảm đi tính chính xác của dữ liệu khoa học</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q9" value="D"> <span>D. Bày tỏ thái độ nghi ngờ công trình nghiên cứu</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Câu 10 -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold text-blue-950 mb-2 text-sm md:text-base">Câu 10 (Vận dụng thấp): Thông điệp quan trọng nhất mà văn bản truyền tải tới cộng đồng là gì?</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q10" value="A"> <span>A. Cấm sử dụng toàn bộ máy điều hòa trên thế giới</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q10" value="B"> <span>B. Khi khoa học và quyết tâm chính trị hợp lực, con người có thể khắc phục được các khủng hoảng môi trường</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q10" value="C"> <span>C. Trái Đất sẽ tự điều hòa mà không cần sự can thiệp của con người</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer p-1 rounded hover:bg-gray-100">
+                            <input type="radio" name="q10" value="D"> <span>D. Tầng ozone bị tổn hại là do các hiện tượng tự nhiên</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- NÚT NỘP BÀI MÀU XANH ĐEN -->
+                <div class="text-center pt-2">
+                    <button type="button" onclick="checkQuiz()" class="bg-slate-900 text-white font-extrabold text-base md:text-lg px-8 py-3 rounded-lg hover:bg-slate-800 border-2 border-yellow-400 shadow-lg transition transform hover:scale-105">
+                        NỘP BÀI
+                    </button>
+                </div>
+            </form>
+
+            <!-- KẾT QUẢ TRẮC NGHIỆM -->
+            <div id="quizResult" class="hidden p-5 rounded-lg bg-white text-slate-900 border-2 space-y-4"></div>
+        </div>
+
+        <!-- BÀI TẬP TỰ LUẬN TÍNH TOÁN VÀ PHÂN TÍCH (3 CÂU) -->
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+            <h2 class="section-header text-xl md:text-2xl font-bold uppercase text-slate-900 pb-2 flex items-center gap-3">
+                <span class="badge-square">IV</span>
+                BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH
+            </h2>
+
+            <!-- Bài 1 -->
+            <div class="border border-slate-200 rounded-lg p-4 bg-slate-50 space-y-2">
+                <h3 class="font-bold text-slate-800 text-base">Bài tập 1 (Tính toán Hóa học Khí quyển):</h3>
+                <p class="text-sm text-gray-700">
+                    Giả sử một thiết bị làm lạnh xả ra khí quyển chứa \(0.1\text{ mol}\) chất \(\text{CFC-11}\) (\(\text{CFCl}_3\)). Nếu toàn bộ lượng \(\text{CFC-11}\) này bị phân hủy hoàn toàn giải phóng các nguyên tử \(\text{Cl}\), và trung bình mỗi nguyên tử \(\text{Cl}\) có thể phá hủy khoảng \(100,000\) phân tử \(\text{O}_3\). Hãy tính số phân tử ozone tối đa có thể bị phá hủy? (Cho hằng số Avogadro \(N_A \approx 6.022 \times 10^{23}\text{ mol}^{-1}\)).
+                </p>
+                <button onclick="toggleAnswer('tl-1')" class="btn-action text-xs md:text-sm">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="tl-1" class="hidden p-4 bg-green-50 border border-green-300 rounded text-sm text-gray-800 space-y-2 mt-2">
+                    <p class="font-bold text-green-900">Lời giải chi tiết:</p>
+                    <p>1. Trong mỗi phân tử \(\text{CFCl}_3\) có chứa 3 nguyên tử \(\text{Cl}\).</p>
+                    <p>Số mol nguyên tử \(\text{Cl}\) giải phóng là: \(n_{\text{Cl}} = 3 \times 0.1 = 0.3\text{ mol}\).</p>
+                    <p>2. Số nguyên tử \(\text{Cl}\) thu được là:</p>
+                    <div class="font-mono bg-white p-2 rounded border inline-block">
+                        \(N_{\text{Cl}} = n_{\text{Cl}} \times N_A = 0.3 \times 6.022 \times 10^{23} = 1.8066 \times 10^{23}\text{ nguyên tử}\)
+                    </div>
+                    <p>3. Tổng số phân tử Ozone (\(\text{O}_3\)) tối đa bị phá hủy là:</p>
+                    <div class="font-mono bg-white p-2 rounded border inline-block">
+                        \(N_{\text{O}_3} = N_{\text{Cl}} \times 100,000 = 1.8066 \times 10^{23} \times 10^5 = 1.8066 \times 10^{28}\text{ phân tử}\)
+                    </div>
+                    <p class="font-semibold text-blue-900">👉 ĐS: Khoảng \(1.81 \times 10^{28}\) phân tử ozone.</p>
+                </div>
+            </div>
+
+            <!-- Bài 2 -->
+            <div class="border border-slate-200 rounded-lg p-4 bg-slate-50 space-y-2">
+                <h3 class="font-bold text-slate-800 text-base">Bài tập 2 (Phân tích cấu trúc văn bản thông tin):</h3>
+                <p class="text-sm text-gray-700">
+                    Phân tích mối quan hệ giữa phần sa-pô và nội dung chi tiết trong các mục I và II của văn bản.
+                </p>
+                <button onclick="toggleAnswer('tl-2')" class="btn-action text-xs md:text-sm">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="tl-2" class="hidden p-4 bg-green-50 border border-green-300 rounded text-sm text-gray-800 space-y-2 mt-2">
+                    <p class="font-bold text-green-900">Lời giải chi tiết:</p>
+                    <p>• <strong>Phần Sa-pô:</strong> Tóm tắt kết quả tích cực ("tình hình đang khá sáng sủa") và nêu ra nguyên nhân mang tính đúc kết ("khoa học và quyết tâm chính trị hợp lực").</p>
+                    <p>• <strong>Mục I (Khoa học vào vai thám tử):</strong> Minh chứng cho vế thứ nhất của sa-pô: Vai trò của các nhà khoa học trong việc phát hiện ra thủ phạm CFC.</p>
+                    <p>• <strong>Mục II (Đồng lòng):</strong> Minh chứng cho vế thứ hai của sa-pô: Quyết tâm chính trị toàn cầu qua Nghị định thư Montreal và những thành tựu đạt được.</p>
+                </div>
+            </div>
+
+            <!-- Bài 3 -->
+            <div class="border border-slate-200 rounded-lg p-4 bg-slate-50 space-y-2">
+                <h3 class="font-bold text-slate-800 text-base">Bài tập 3 (Kết nối tri thức - Viết ngắn):</h3>
+                <p class="text-sm text-gray-700">
+                    Viết đoạn văn ngắn khoảng 150 chữ đề xuất các hành động thực tế của học sinh để hưởng ứng tinh thần bảo vệ môi trường toàn cầu.
+                </p>
+                <button onclick="toggleAnswer('tl-3')" class="btn-action text-xs md:text-sm">
+                    Xem lời giải chi tiết
+                </button>
+                <div id="tl-3" class="hidden p-4 bg-green-50 border border-green-300 rounded text-sm text-gray-800 space-y-2 mt-2">
+                    <p class="font-bold text-green-900">Đoạn văn tham khảo:</p>
+                    <p class="italic text-gray-800">
+                        "Thành công của Nghị định thư Montreal đã chứng minh rằng mọi hành động có trách nhiệm của con người đều góp phần thay đổi vận mệnh Trái Đất. Là một học sinh, em có thể đóng góp bằng những việc làm thiết thực hàng ngày. Trước hết, em chủ động ưu tiên lựa chọn các sản phẩm gia dụng thân thiện với môi trường, hạn chế tối đa việc sử dụng túi nilon và đồ nhựa dùng một lần. Bên cạnh đó, em thực hiện tiết kiệm điện năng tại gia đình và trường học để giảm áp lực lên hệ thống sản xuất năng lượng. Cuối cùng, em tích cực lan tỏa thông điệp sống xanh đến bạn bè và gia đình, bởi bảo vệ môi trường không phải là công việc của riêng ai mà là hành trình hợp lực của tất cả chúng ta."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER (LUÔN GHI: Chương trình GDPT 2018 - Bộ sách thống nhất) -->
+        <div class="text-center text-xs text-gray-600 py-6 border-t border-slate-300">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hàm Toggle Lời Giải / Câu Trả Lời
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            }
+        }
+
+        // Đáp án trắc nghiệm đúng
+        const correctAnswers = {
+            q1: "B",
+            q2: "B",
+            q3: "C",
+            q4: "C",
+            q5: "B",
+            q6: "B",
+            q7: "B",
+            q8: "B",
+            q9: "A",
+            q10: "B"
+        };
+
+        // Hướng dẫn giải chi tiết từng câu trắc nghiệm
+        const explanations = {
+            q1: "Tầng ozone nằm ở tầng bình lưu (Stratosphere) ở độ cao khoảng 15 - 40 km.",
+            q2: "Tác giả văn bản là Lê My (đăng trên tạp chí Tuổi trẻ cuối tuần).",
+            q3: "Nhóm hợp chất CFC (chlorofluorocarbon) là nguyên nhân nhân tạo chính phá hủy tầng ozone.",
+            q4: "Nghị định thư Montreal ký ngày 16/9/1987 cam kết loại bỏ các chất làm suy giảm tầng ozone.",
+            q5: "Tầng ozone ngăn chặn các tia bức xạ cực tím UV-B có hại, bảo vệ sự sống Trái Đất.",
+            q6: "Nguyên tử Cl đóng vai trò là chất xúc tác, không bị mất đi mà liên tục tái tạo để phá hủy hàng trăm nghìn phân tử O3.",
+            q7: "Các nhà khoa học dự kiến lỗ thủng ozone Nam Cực sẽ khép lại hoàn toàn vào khoảng năm 2060.",
+            q8: "Hình ảnh mô phỏng trực quan hóa quy mô biến đổi lỗ thủng ozone qua các mốc lịch sử.",
+            q9: "Sử dụng ẩn dụ 'thám tử' giúp quá trình nghiên cứu khoa học trở nên kịch tính, hấp dẫn người đọc.",
+            q10: "Thông điệp cốt lõi: Khi khoa học và quyết tâm chính trị hợp lực, con người có thể khắc phục các khủng hoảng toàn cầu."
+        };
+
+        // Hàm kiểm tra bài làm trắc nghiệm
+        function checkQuiz() {
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+            let score = 0;
+            let total = 10;
+            let resultHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = form.elements[qName].value;
+                const correct = correctAnswers[qName];
+
+                if (selected === correct) {
+                    score++;
+                }
+            }
+
+            const isPerfect = (score === total);
+            const statusClass = isPerfect ? "text-green-600 border-green-500" : "text-red-600 border-red-500";
+
+            resultHTML += `<div class="text-center pb-3 border-b">
+                <h3 class="text-xl font-bold ${statusClass}">
+                    ${isPerfect ? "🎉 XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA!" : "⚠️ BẠN ĐÃ HOÀN THÀNH BÀI KIỂM TRA!"}
+                </h3>
+                <p class="text-lg font-bold text-slate-800 mt-1">Kết quả: <span class="${isPerfect ? 'text-green-600' : 'text-red-600'}">${score}/${total}</span> câu đúng (${(score/total)*100}%)</p>
+            </div>`;
+
+            resultHTML += `<div class="space-y-3 pt-2">
+                <h4 class="font-bold text-slate-800 text-sm uppercase">Hướng dẫn giải chi tiết từng câu:</h4>`;
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = form.elements[qName].value;
+                const correct = correctAnswers[qName];
+                const isCorrect = (selected === correct);
+
+                resultHTML += `<div class="p-3 rounded text-xs md:text-sm border ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}">
+                    <p class="font-bold ${isCorrect ? 'text-green-800' : 'text-red-800'}">Câu ${i}: ${isCorrect ? '✅ Đúng' : '❌ Sai'} (Đáp án đúng: ${correct})</p>
+                    <p class="text-gray-700 mt-1"><em>Giải thích:</em> ${explanations[qName]}</p>
+                </div>`;
+            }
+
+            resultHTML += `</div>`;
+
+            resultDiv.innerHTML = resultHTML;
+            resultDiv.classList.remove('hidden');
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

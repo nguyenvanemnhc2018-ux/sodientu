@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Luyện Củng Cố Kiến Thức Văn Học - Nghệ Thuật Truyền Thống Của Người Việt</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Custom Palette Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- MathJax for Mathematical & Symbol Rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .text-cream {
+            color: #FFFDD0;
+        }
+        .bg-cream {
+            background-color: #FFFDD0;
+        }
+        .border-cream {
+            border-color: #FFFDD0;
+        }
+        .bg-dark-card {
+            background-color: rgba(30, 15, 15, 0.65);
+            backdrop-filter: blur(8px);
+        }
+        .bg-dark-card-lighter {
+            background-color: rgba(50, 25, 25, 0.75);
+        }
+        .border-dark-card {
+            border-color: rgba(255, 253, 208, 0.2);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(40, 20, 20, 0.5);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8b4545;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a65252;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between selection:bg-amber-500 selection:text-white">
+
+    <!-- Top Header Bar -->
+    <header class="bg-black/40 border-b border-amber-900/40 sticky top-0 z-40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500/20 p-2.5 rounded-xl border border-amber-500/30 text-amber-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-cream tracking-wide uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC VĂN HỌC</h1>
+                    <p class="text-xs text-amber-200/80">Văn bản 2: NGHỆ THUẬT TRUYỀN THỐNG CỦA NGƯỜI VIỆT \( \text{(Trích Văn minh Việt Nam - Nguyễn Văn Huyên)} \)</p>
+                </div>
+            </div>
+            <div id="headerModeBadge" class="flex items-center gap-2 bg-black/40 px-3.5 py-1.5 rounded-full text-xs font-semibold text-amber-200 border border-amber-500/20">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                <span>Chưa chọn chế độ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- SCREEN 1: LANDING / START SCREEN -->
+        <section id="screenLanding" class="space-y-8 animate-fadeIn">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <div class="inline-flex items-center justify-center p-3 bg-amber-500/10 rounded-full text-amber-300 border border-amber-500/30 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-cream tracking-tight uppercase">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-base text-stone-200 leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="font-bold text-amber-300">20 câu hỏi</span> bám sát nội dung bài học <span class="font-semibold text-cream">Nghệ thuật truyền thống của người Việt</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 Difficulty Levels Summary Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-dark-card border border-dark-card p-5 rounded-2xl hover:border-amber-500/40 transition-all">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">MỨC BIẾT</span>
+                        <span class="text-xs font-semibold text-stone-300">8 CÂU</span>
+                    </div>
+                    <p class="text-xs text-stone-300 leading-relaxed">Kiểm tra các kiến thức trực tiếp có trong bài học: tác giả, xuất xứ, ý nghĩa thuật ngữ, chi tiết văn bản.</p>
+                </div>
+
+                <div class="bg-dark-card border border-dark-card p-5 rounded-2xl hover:border-amber-500/40 transition-all">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">MỨC HIỂU</span>
+                        <span class="text-xs font-semibold text-stone-300">7 CÂU</span>
+                    </div>
+                    <p class="text-xs text-stone-300 leading-relaxed">Giải đáp các vấn đề liên quan đến hiện thực nội dung, đặc trưng nghệ thuật, thị hiếu thẩm mỹ người Việt.</p>
+                </div>
+
+                <div class="bg-dark-card border border-dark-card p-5 rounded-2xl hover:border-amber-500/40 transition-all">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">VẬN DỤNG</span>
+                        <span class="text-xs font-semibold text-stone-300">3 CÂU</span>
+                    </div>
+                    <p class="text-xs text-stone-300 leading-relaxed">Dùng kiến thức nhiều phần, phối hợp phân tích tác phẩm, rèn luyện khả năng tư duy và tổng hợp.</p>
+                </div>
+
+                <div class="bg-dark-card border border-dark-card p-5 rounded-2xl hover:border-amber-500/40 transition-all">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">VD CAO</span>
+                        <span class="text-xs font-semibold text-stone-300">2 CÂU</span>
+                    </div>
+                    <p class="text-xs text-stone-300 leading-relaxed">Kiến thức lồng ghép, đánh giá chiều sâu yếu tố nghệ thuật phức tạp và tư duy văn hóa tác giả.</p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Section -->
+            <div class="max-w-3xl mx-auto pt-4">
+                <h3 class="text-center text-xs font-bold tracking-widest text-amber-200/80 uppercase mb-6">
+                    VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Practice Mode Card -->
+                    <div class="bg-dark-card border border-amber-500/30 rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-200 shadow-xl">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <h4 class="text-xl font-bold text-cream">1. Chế độ Luyện Tập</h4>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">Không giới hạn</span>
+                            </div>
+                            <p class="text-sm text-stone-300 mb-6 leading-relaxed">
+                                Học tập & củng cố kiến thức không áp lực thời gian. Làm bài thong thả, xem điểm và lời giải chi tiết ngay sau khi nhấn kết thúc.
+                            </p>
+                        </div>
+                        <button onclick="startQuiz('practice')" class="w-full py-3.5 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span>Bắt đầu Luyện tập</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
+
+                    <!-- Timed Mode Card -->
+                    <div class="bg-dark-card border border-amber-500/30 rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-200 shadow-xl">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <h4 class="text-xl font-bold text-cream">2. Chế độ Tính Giờ</h4>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">20 Phút</span>
+                            </div>
+                            <p class="text-sm text-stone-300 mb-6 leading-relaxed">
+                                Thử thách & kiểm tra đánh giá năng lực. Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi ngẫu nhiên giúp đánh giá chính xác thực lực.
+                            </p>
+                        </div>
+                        <button onclick="startQuiz('timed')" class="w-full py-3.5 px-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span>Bắt đầu Tính giờ</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ACTIVE QUIZ SCREEN -->
+        <section id="screenQuiz" class="hidden grid-cols-1 lg:grid-cols-12 gap-6 items-start animate-fadeIn">
+            <!-- Left Sidebar Navigation -->
+            <aside class="lg:col-span-4 bg-dark-card border border-dark-card rounded-2xl p-5 space-y-5 sticky top-24">
+                <div class="flex items-center justify-between border-b border-amber-900/40 pb-4">
+                    <div>
+                        <h3 class="font-bold text-cream text-base uppercase">DANH SÁCH CÂU HỎI</h3>
+                        <p id="answeredProgress" class="text-xs text-amber-300/80 font-medium">0 / 20 đã làm</p>
+                    </div>
+                    <!-- Countdown Timer Container (Hidden in Practice Mode) -->
+                    <div id="timerContainer" class="hidden flex items-center gap-2 bg-black/50 px-3 py-1.5 rounded-xl border border-amber-500/30">
+                        <svg class="w-4 h-4 text-amber-400 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span id="timerDisplay" class="font-mono font-bold text-amber-300 text-sm">20:00</span>
+                    </div>
+                </div>
+
+                <!-- 20 Question Grid Buttons -->
+                <div id="questionGrid" class="grid grid-cols-5 gap-2.5">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+
+                <!-- Status Legend -->
+                <div class="pt-3 border-t border-amber-900/40 space-y-2 text-xs text-stone-300">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded bg-black/40 border border-stone-600 inline-block"></span>
+                        <span>Chưa trả lời</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded bg-amber-600 inline-block"></span>
+                        <span>Đã chọn đáp án</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded bg-blue-600 inline-block"></span>
+                        <span>Đang làm (Hiện tại)</span>
+                    </div>
+                </div>
+
+                <!-- Finish Test Button -->
+                <div class="pt-2">
+                    <button onclick="confirmSubmitQuiz()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Nộp Bài & Kết Thúc</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Question Container -->
+            <div class="lg:col-span-8 bg-dark-card border border-dark-card rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
+                <!-- Question Header -->
+                <div class="flex flex-wrap items-center justify-between gap-3 border-b border-amber-900/40 pb-4">
+                    <span id="questionNumberHeader" class="text-xl font-black text-cream">Câu 1 / 20</span>
+                    <span id="questionLevelBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                        Mức Biết
+                    </span>
+                </div>
+
+                <!-- Question Text -->
+                <div id="questionText" class="text-lg sm:text-xl font-medium text-white leading-relaxed">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Options List -->
+                <div id="optionsContainer" class="space-y-3.5 pt-2">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Bottom Question Navigation Buttons -->
+                <div class="flex flex-wrap items-center justify-between gap-4 border-t border-amber-900/40 pt-6">
+                    <button id="btnPrev" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-xl bg-black/40 hover:bg-black/60 text-stone-300 border border-stone-600/40 font-semibold text-sm transition-all flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span>Câu Trước</span>
+                    </button>
+
+                    <button onclick="clearCurrentSelection()" class="text-xs text-stone-400 hover:text-amber-300 underline font-medium transition-colors">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="btnNext" onclick="navigateQuestion(1)" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-sm shadow-md transition-all flex items-center gap-2">
+                        <span>Câu Tiếp</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULT SCREEN -->
+        <section id="screenResult" class="hidden space-y-8 animate-fadeIn max-w-4xl mx-auto">
+            <!-- Score Overview Card -->
+            <div class="bg-dark-card border border-amber-500/30 rounded-3xl p-6 sm:p-10 text-center space-y-6 shadow-2xl relative overflow-hidden">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 shadow-inner">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-black text-cream tracking-wide uppercase mb-1">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeTitle" class="text-sm font-semibold text-amber-200">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- 3 Stat Box Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                    <div class="bg-black/40 border border-amber-900/40 p-4 rounded-2xl">
+                        <span class="text-xs text-stone-400 font-semibold block mb-1 uppercase">Điểm số</span>
+                        <span id="resScore" class="text-3xl font-black text-amber-300">0.0 / 10.0</span>
+                    </div>
+                    <div class="bg-black/40 border border-amber-900/40 p-4 rounded-2xl">
+                        <span class="text-xs text-stone-400 font-semibold block mb-1 uppercase">Số câu đúng</span>
+                        <span id="resCorrect" class="text-3xl font-black text-emerald-400">0 / 20 câu</span>
+                    </div>
+                    <div class="bg-black/40 border border-amber-900/40 p-4 rounded-2xl">
+                        <span class="text-xs text-stone-400 font-semibold block mb-1 uppercase">Thời gian làm bài</span>
+                        <span id="resTime" class="text-3xl font-black text-blue-300">--:--</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-amber-950/40 border border-amber-500/30 p-5 rounded-2xl text-left space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedback" class="text-sm text-stone-200 leading-relaxed italic">
+                        <!-- Dynamic content -->
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="restartQuiz()" class="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg transition-all flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#detailedKey" class="px-6 py-3 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-600 font-bold rounded-xl transition-all flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Answer Key & Explanations -->
+            <div id="detailedKey" class="space-y-6 pt-6">
+                <div class="flex justify-between items-center border-b border-amber-900/40 pb-4">
+                    <h3 class="text-2xl font-black text-cream uppercase">ĐÁP ÁN & LỜI GIẢI CHI TIẾT</h3>
+                    <span class="text-xs font-semibold text-stone-300">20/20 câu hỏi</span>
+                </div>
+
+                <div id="answersList" class="space-y-6">
+                    <!-- Generated via JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Dialog for Submission Confirmation -->
+    <div id="confirmModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-dark-card-lighter border border-amber-500/40 rounded-2xl max-w-md w-full p-6 space-y-5 shadow-2xl animate-scaleUp">
+            <h4 class="text-xl font-bold text-cream flex items-center gap-2">
+                <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Xác nhận nộp bài
+            </h4>
+            <p id="confirmModalText" class="text-sm text-stone-200 leading-relaxed">
+                Bạn đã hoàn thành <span id="modalAnsweredCount" class="font-bold text-amber-300">0</span>/20 câu hỏi. Bạn có chắc chắn muốn nộp bài và xem kết quả ngay không?
+            </p>
+            <div class="flex justify-end gap-3 pt-2">
+                <button onclick="closeModal()" class="px-4 py-2.5 rounded-xl bg-black/40 hover:bg-black/60 text-stone-300 border border-stone-600/40 font-semibold text-sm">
+                    Làm tiếp
+                </button>
+                <button onclick="submitQuizFinal()" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md">
+                    Đồng ý Nộp bài
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-amber-900/40 py-6 text-center text-xs text-stone-400 mt-12">
+        <p>© Hệ thống Luyện tập & Kiểm tra Trắc nghiệm Ngữ Văn Online - Trường THPT Chuyên sâu</p>
+    </footer>
+
+    <script>
+        /*
+         * Question Database derived EXCLUSIVELY from Bai8vb2.pdf ("Nghệ thuật truyền thống của người Việt" - Nguyễn Văn Huyên)
+         * 20 Questions Breakdown:
+         * - 8 Biết (1-8)
+         * - 7 Hiểu (9-15)
+         * - 3 Vận dụng (16-18)
+         * - 2 Vận dụng cao (19-20)
+         */
+        const rawQuestions = [
+            // --- 8 CÂU MỨC BIẾT ---
+            {
+                id: 1,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Theo tác giả Nguyễn Văn Huyên, trong các môn nghệ thuật Việt Nam, môn nào đóng vai trò chính, còn các môn khác chỉ đóng vai trò phụ trợ?",
+                options: [
+                    "Điêu khắc",
+                    "Hội họa",
+                    "Kiến trúc",
+                    "Đúc đồng"
+                ],
+                correct: 2,
+                explanation: "Văn bản nêu rõ: \"Có thể nói, nghệ thuật Việt Nam tiêu biểu nhất vẫn là kiến trúc. Hội sĩ và nhà điêu khắc chỉ là người phụ trợ của kiến trúc sư.\""
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Vật liệu nào được sử dụng phong phú và rộng rãi nhất trong nghệ thuật điêu khắc truyền thống của người Việt cổ?",
+                options: [
+                    "Đất nung",
+                    "Kim loại (đồng, kẽm)",
+                    "Đá cẩm thạch",
+                    "Gỗ"
+                ],
+                correct: 3,
+                explanation: "Văn bản chỉ rõ: \"Môn nghệ thuật mà người Việt Nam thành công nhất là điêu khắc gỗ.\""
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Theo văn bản, do đặc điểm đá hiếm hơi ở Việt Nam nên vật liệu đá chủ yếu được dùng để làm các vật dụng nào?",
+                options: [
+                    "Tạc các pho tượng thần Phật khổng lồ",
+                    "Làm bia, bậc đi và tay vịn cầu thang ở đền chùa",
+                    "Xây dựng toàn bộ khung nhà đền, chùa và phủ",
+                    "Chế tác nữ trang và đồ thờ cúng cá nhân"
+                ],
+                correct: 1,
+                explanation: "Văn bản ghi rõ: \"Đá, vì hiếm hơi ở Việt Nam, nên rất ít được người làm tượng sử dụng... Đá chủ yếu được dùng làm bia, bậc đi và tay vịn cầu thang ở các đền, chùa hay đình thụ lớn.\""
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Sự pha trộn của ba học thuyết tôn giáo nào (gọi là \"tam giáo\") là nguồn gốc của hầu hết các mô-tip trang trí truyền thống?",
+                options: [
+                    "Phật giáo, Đạo giáo (Lão giáo), Nho giáo",
+                    "Phật giáo, Ấn Độ giáo, Nho giáo",
+                    "Đạo giáo, Kitô giáo, Phật giáo",
+                    "Nho giáo, Đạo Khổng, Đạo Mẫu"
+                ],
+                correct: 0,
+                explanation: "Văn bản đề cập: \"Sự pha trộn của ba học thuyết tôn giáo, gọi là tam giáo, được kiểm soát bởi các khoa thi do nhà nước tổ chức, đã là nguồn gốc của hầu hết các mô tip trang trí.\""
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Trong hệ thống biểu tượng nghệ thuật truyền thống Việt Nam được nhắc đến ở văn bản, cây tre tượng trưng cho phẩm chất gì?",
+                options: [
+                    "Tuổi thọ",
+                    "Hạnh phúc",
+                    "Đạo đức",
+                    "Sức mạnh tinh thần và thể chất"
+                ],
+                correct: 2,
+                explanation: "Văn bản nêu ví dụ tượng trưng: \"con hạc và con nai thể hiện tuổi thọ, cây tre là đạo đức, cây mận là sức mạnh tinh thần và thể chất, cây cúc thể hiện hạnh phúc v.v.\""
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Nguyễn Văn Huyên đã khai thác nhiều tư liệu quý từ tập san nào của Linh mục Cadière để viết tác phẩm của mình?",
+                options: [
+                    "Tạp chí Nghiên cứu Lịch sử",
+                    "Tập san Đô thành Hiếu cổ",
+                    "Tạp chí Văn hóa Dân gian",
+                    "Tập san Đông Dương Học"
+                ],
+                correct: 1,
+                explanation: "Chú thích chú giải: \"Linh mục Ca-đi-e-rơ... đồng tác giả của tập san Đô thành hiếu cổ – một trong số những tài liệu mà Nguyễn Văn Huyên đã khai thác để viết cuốn Văn minh Việt Nam.\""
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Cuốn sách \"Văn minh Việt Nam\" của tác giả Nguyễn Văn Huyên nguyên bản được viết bằng ngôn ngữ nào và hoàn thành vào năm nào?",
+                options: [
+                    "Tiếng Việt – hoàn thành năm 1945",
+                    "Tiếng Pháp – hoàn thành năm 1939",
+                    "Tiếng Pháp – hoàn thành năm 1944",
+                    "Tiếng Hán – hoàn thành năm 1934"
+                ],
+                correct: 1,
+                explanation: "Văn bản giới thiệu: \"Văn minh Việt Nam là cuốn chuyên khảo viết bằng tiếng Pháp, hoàn thành từ năm 1939 nhưng phải đến năm 1944 mới được xuất bản tại Hà Nội.\""
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelCode: "biết",
+                question: "Theo chú thích trong văn bản, thuật ngữ \"xoi lộng\" trong kỹ thuật chế tác đồ gỗ có nghĩa là gì?",
+                options: [
+                    "Kỹ thuật đúc khuôn kim loại để gắn lên bề mặt gỗ",
+                    "Kỹ thuật dùng bào nhỏ hoặc đục tạo đường rãnh hay làm thủng nền gỗ nhằm làm nổi bật hình khắc trang trí",
+                    "Kỹ thuật mạ vàng và phủ sơn mài bóng lên các dầm nhà",
+                    "Kỹ thuật ghép nhiều mảnh gỗ nhỏ thành hoa văn trang trí"
+                ],
+                correct: 1,
+                explanation: "Chú thích ghi rõ: \"Xoi lộng: một kỹ thuật chế tác đồ gỗ, dùng bào nhỏ hoặc đục để tạo đường rãnh trên mặt gỗ hay làm thủng nền gỗ nhằm làm nổi bật những hình khắc trang trí.\""
+            },
+
+            // --- 7 CÂU MỨC HIỂU ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Những nguyên nhân khách quan và chủ quan nào đã làm ảnh hưởng lớn đến việc bảo tồn các di sản nghệ thuật truyền thống của Việt Nam?",
+                options: [
+                    "Nghệ nhân Việt Nam thiếu kỹ thuật chế tác bền chắc",
+                    "Khí hậu nhiệt đới ẩm, mối mọt, hỏa hoạn, biến động chính trị và chiến tranh",
+                    "Sự cấm đoán và thu hẹp nghệ thuật từ các triều đại phong kiến",
+                    "Thiếu nguồn nguyên liệu gỗ và kim loại trong tự nhiên"
+                ],
+                correct: 1,
+                explanation: "Văn bản phân tích: \"các vật liệu sử dụng: gỗ, tre, đất nung, đều không bền do khí hậu nhiệt đới tàn hại và do mối mọt. Các thứ kim loại... cũng không sống sót nổi sau các cơn hoả hoạn, bất ổn chính trị và chiến tranh.\""
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Thiên hướng sáng tạo nổi bật nhất của người nghệ sĩ Việt Nam được tác giả Nguyễn Văn Huyên nhận diện là gì?",
+                options: [
+                    "Tái hiện chính xác, chi tiết và đầy đủ các yếu tố hiện thực đời sống nhục dục",
+                    "Loại bỏ tính chất nhục dục, tìm cách làm toát ra và biểu hiện cái tinh thần vô hình của mọi vật",
+                    "Mô phỏng hoàn toàn các trường phái nghệ thuật hiện đại phương Tây",
+                    "Tập trung vào kích thước khổng lồ để áp đảo tinh thần con người"
+                ],
+                correct: 1,
+                explanation: "Văn bản khẳng định: \"Người nghệ sĩ không có xu hướng tái hiện chính xác và đầy đủ hiện thực. Họ loại bỏ tính chất nhục dục khỏi các tác phẩm của mình... Họ tìm cách làm toát ra và biểu hiện trong mọi tác phẩm cái tinh thần vô hình của mọi vật.\""
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Trong kiến trúc đền chùa Việt Nam, vì sao người ta lại làm mái hạ thấp lè tè và uốn cong nhẹ ở các góc?",
+                options: [
+                    "Để làm cho công trình có quy mô khổng lồ lấn áp xung quanh",
+                    "Để tiết kiệm gỗ và gạch trong quá trình xây dựng",
+                    "Đề phòng gió mạnh, mưa trút, tạo khối chắc khỏe và cảm giác vững chắc, thoải mái",
+                    "Để ngụy trang, tránh sự chú ý của kẻ thù trong thời chiến"
+                ],
+                correct: 2,
+                explanation: "Văn bản giải thích: \"để phòng những trận gió mạnh cũng như cơn mưa trút nước, người ta làm những mái hạ thấp lè tè thành một khối chắc khỏe... Những mái đó chỉ được làm thanh nhẹ bớt ở các góc uốn cong, tạo ra cảm tưởng về sự vững chắc, khoẻ khoắn và thoải mái.\""
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Ý nghĩa thẩm mỹ sâu sắc của câu văn \"Gỗ và gạch tự 'phi vật chất hoá'\" trong bài viết là gì?",
+                options: [
+                    "Vật liệu gỗ và gạch theo thời gian bị tiêu hủy biến mất hoàn toàn",
+                    "Bàn tay tài hoa của người nghệ sĩ đã biến vật liệu vô sinh, thô cứng thành các biểu tượng tinh thần, linh vật có hồn và sống động",
+                    "Công trình kiến trúc được tháo dỡ linh hoạt để di chuyển",
+                    "Sử dụng vật liệu nhẹ đến mức cảm tưởng không có trọng lượng"
+                ],
+                correct: 1,
+                explanation: "Văn bản mô tả: \"Trong những đền, chùa này, gỗ và gạch tự 'phi vật chất hoá'. Tất cả đều được linh thần hoá. Từ trong đó, những bàn tay nghệ sĩ đã làm nảy ra... những mô tip nhiên về cây cối và động vật tượng trưng.\""
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Việc xây dựng nhiều ngôi nhà song song trong cùng một quần thể đền chùa phản ánh điều gì trong tư tưởng tâm linh người Việt?",
+                options: [
+                    "Sự lãng phí nguồn tài chính của các triều đại phong kiến",
+                    "Nhu cầu đặt cạnh nhau những tín ngưỡng khác nhau của cộng đồng người dân",
+                    "Quy định khắt khe bắt buộc của triều đình phong kiến",
+                    "Mục đích mở rộng không gian để quân lính trú đóng"
+                ],
+                correct: 1,
+                explanation: "Văn bản chỉ ra: \"để đáp ứng nhu cầu cần đặt cạnh nhau những tín ngưỡng khác nhau, người kiến trúc sư thường xây nhiều nhà song song.\""
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Theo tác giả, mặc dù bị gông cồng bởi các mô-tip cổ truyền ước lệ, người nghệ sĩ Việt Nam tài năng vẫn thể hiện bản lĩnh sáng tạo như thế nào?",
+                options: [
+                    "Chấp nhận rập khuôn xơ cứng theo các quy chuẩn tôn giáo",
+                    "Phá bỏ hoàn toàn các mô-tip cổ truyền để tạo nên lối vẽ hiện đại",
+                    "Tạo cho các mô-tip cổ truyền một sức mạnh bên trong và một chiều sâu độc đáo",
+                    "Chỉ tập trung vào việc sơn mài và dát vàng để che lấp khuyết điểm"
+                ],
+                correct: 2,
+                explanation: "Văn bản viết: \"Nhưng những nghệ sĩ có tài đã biết cách, trong những giới hạn đó, tạo cho các mô tip cổ truyền một sức mạnh bên trong và một chiều sâu làm cho tác phẩm của họ trở thành độc đáo.\""
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelCode: "hiểu",
+                question: "Đoạn trích dẫn nhận xét của linh mục Cadière ở trang đầu tiên của văn bản nhằm trực tiếp làm nổi bật nhận định nào?",
+                options: [
+                    "Người Việt chỉ trang trí nhà cửa theo phong cách kiến trúc phương Tây",
+                    "Thị hiếu thẩm mỹ của người Việt rất tinh tế, vững vàng và hiện diện trong mọi chi tiết sinh hoạt hàng ngày",
+                    "Nghệ thuật Việt Nam hoàn toàn phụ thuộc vào quy mô ngôi chùa",
+                    "Nữ trang là mặt hàng xuất khẩu chính của người Việt cổ"
+                ],
+                correct: 1,
+                explanation: "Tác giả dẫn Cadière để minh chứng cho câu chủ đề trước đó: \"biết biểu lộ một thị hiếu vững vàng và không phải là không sâu sắc về phương diện nghệ thuật. Linh mục Cadière viết rằng: các ngôi chùa nhỏ bé... đều được trang trí cẩn thận...\""
+            },
+
+            // --- 3 CÂU VẬN DỤNG ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelCode: "vận dụng",
+                question: "Nhận định nào sau đây tổng hợp đúng đắn sự phối hợp hài hòa giữa các ngành nghệ thuật trong kiến trúc truyền thống Việt Nam?",
+                options: [
+                    "Kiến trúc, hội họa và điêu khắc tồn tại tách biệt hoàn toàn, không liên quan đến nhau",
+                    "Điêu khắc và hội họa đóng vai trò chủ đạo quyết định cấu trúc ngôi nhà",
+                    "Hội họa và điêu khắc đóng vai trò phụ trợ, hòa quyện vào tổng thể kiến trúc để phục vụ mục đích tôn giáo và không gian tâm linh",
+                    "Nghệ thuật đúc đồng hoàn toàn thay thế điêu khắc gỗ trong trang trí"
+                ],
+                correct: 2,
+                explanation: "Từ toàn văn bản, kiến trúc đóng vai trò trung tâm; các pho tượng điêu khắc và bức tranh trang trí (hội họa) được lồng ghép tinh tế vào gian thờ, dầm nhà, vì kèo nhằm làm nổi bật tính chất tôn giáo và tâm linh."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelCode: "vận dụng",
+                question: "Từ các phân tích về đặc trưng kiến trúc Việt Nam: \"hình khối và thể nằm ngang, xu hướng vĩ đại, sự ẩn văn, không tách rời tính đối xứng\", ta rút ra kết luận gì về triết lý sống của người Việt xưa?",
+                options: [
+                    "Người Việt thích phô trương quyền lực, muốn vươn cao chinh phục thiên nhiên",
+                    "Người Việt coi trọng sự hòa hợp kín đáo với thiên nhiên, hướng tới sự cân bằng tâm linh hơn là đè nén không gian",
+                    "Kiến trúc người Việt hoàn toàn sao chép rập khuôn từ phương Tây",
+                    "Người Việt coi trọng sự nguy nga đồ sộ hơn tính dụng công chi tiết"
+                ],
+                correct: 1,
+                explanation: "Đặc trưng thể nằm ngang, ẩn văn, hòa nhập với phong cảnh xung quanh thể hiện triết lý sống hòa hợp với thiên nhiên, khiêm nhường nhưng ẩn chứa chiều sâu tâm linh."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelCode: "vận dụng",
+                question: "Tác dụng của việc tác giả đưa ra hàng loạt dẫn chứng cụ thể về các di tích (chùa Phật Tích, Bút Tháp, Tây Phương, tượng Trấn Vũ, bia Lam Sơn...) trong văn bản là gì?",
+                options: [
+                    "Để khoe khoang sự hiểu biết cá nhân về danh lam thắng cảnh",
+                    "Tạo căn cứ thực tế khách quan, giàu sức thuyết phục để khẳng định đỉnh cao kĩ thuật và thẩm mỹ nghệ thuật truyền thống",
+                    "Bổ sung dung lượng bài viết theo yêu cầu của nhà xuất bản",
+                    "Thay thế hoàn toàn cho các lập luận lý thuyết"
+                ],
+                correct: 1,
+                explanation: "Việc liệt kê các di tích lịch sử - nghệ thuật nổi tiếng kéo dài từ Bắc vào Nam là phương pháp lập luận chứng minh thực chứng, làm vững chắc cho nhận định về đỉnh cao kĩ thuật của nghệ sĩ Việt."
+            },
+
+            // --- 2 CÂU VẬN DỤNG CAO ---
+            {
+                id: 19,
+                level: "VD Cao",
+                levelCode: "vd cao",
+                question: "Phân tích mối quan hệ giữa yếu tố chất liệu (gỗ, tre, đất nung...) và nhân tố lịch sử - tự nhiên đối với diện mạo di sản nghệ thuật, nhận định nào dưới đây thể hiện sự tổng hợp tư duy sâu sắc nhất?",
+                options: [
+                    "Sự hao mòn di sản hoàn toàn do sự kém cỏi trong tay nghề thợ thủ công",
+                    "Chất liệu tự nhiên dễ phân hủy cùng khí hậu nhiệt đới và chiến tranh tuy làm di sản có tính \"vô thường/ngắn hạn\", nhưng lại thúc đẩy tinh thần sáng tạo không ngừng của các thế hệ nghệ sĩ Việt",
+                    "Nghệ thuật Việt Nam không có giá trị vì sử dụng vật liệu rẻ tiền",
+                    "Chiến tranh chỉ tàn phá đồ kim loại chứ không ảnh hưởng tới kiến trúc gỗ"
+                ],
+                correct: 1,
+                explanation: "Sự kết hợp giữa chất liệu mộc mạc sẵn có trong tự nhiên với hoàn cảnh khắc nghiệt tạo nên tính chất ngắn hạn của di vật, song chính sự thay thế, tôn tạo liên tục đã nuôi dưỡng mạch chảy nghệ thuật dân tộc bền bỉ."
+            },
+            {
+                id: 20,
+                level: "VD Cao",
+                levelCode: "vd cao",
+                question: "Đánh giá phong cách nghiên cứu của Nguyễn Văn Huyên qua đoạn trích, sự kết hợp giữa tri thức khoa học và góc nhìn văn hóa được thể hiện đặc sắc như thế nào?",
+                options: [
+                    "Tác giả chỉ liệt kê số liệu khô khan theo phương pháp thống kê thuần túy",
+                    "Tác giả kết hợp phương pháp nghiên cứu khoa học khách quan, chuẩn xác của phương Tây với sự thấu cảm sâu sắc, tự hào của một trí thức Việt Nam về cội nguồn văn hóa",
+                    "Bài viết mang tính hư cấu sáng tạo của tác phẩm văn học lãng mạn",
+                    "Tác giả chủ yếu phê phán tính chất lạc hậu của nghệ thuật tôn giáo cổ"
+                ],
+                correct: 1,
+                explanation: "Nguyễn Văn Huyên (nhà dân tộc học đào tạo tại Pháp) vừa có cái nhìn phân tích khoa học, hệ thống, vừa mang tấm lòng trân trọng, thấu hiểu tinh tế đối với giá trị văn hóa truyền thống của dân tộc."
+            }
+        ];
+
+        // State Variables
+        let quizMode = 'practice'; // 'practice' or 'timed'
+        let currentQuestions = [];
+        let userAnswers = new Array(20).fill(null);
+        let currentQuestionIdx = 0;
+        let timerSeconds = 1200; // 20 mins
+        let timerInterval = null;
+        let quizStartTime = null;
+        let quizEndTime = null;
+
+        // On DOM Loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            renderHeaderBadge();
+        });
+
+        function renderHeaderBadge() {
+            const badge = document.getElementById('headerModeBadge');
+            if (quizMode === 'practice') {
+                badge.innerHTML = `<span class="inline-block w-2.5 h-2.5 rounded-full bg-blue-400"></span><span>Chế độ LUYỆN TẬP</span>`;
+            } else if (quizMode === 'timed') {
+                badge.innerHTML = `<span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span><span>Chế độ TÍNH GIỜ</span>`;
+            } else {
+                badge.innerHTML = `<span class="inline-block w-2.5 h-2.5 rounded-full bg-stone-400"></span><span>Chưa chọn chế độ</span>`;
+            }
+        }
+
+        // Start Quiz Logic
+        function startQuiz(mode) {
+            quizMode = mode;
+            renderHeaderBadge();
+            userAnswers = new Array(20).fill(null);
+            currentQuestionIdx = 0;
+            quizStartTime = new Date();
+
+            if (mode === 'timed') {
+                // Shuffle questions for timed mode to prevent copying
+                currentQuestions = shuffleArray([...rawQuestions]);
+                timerSeconds = 1200; // 20 mins
+                document.getElementById('timerContainer').classList.remove('hidden');
+                startTimer();
+            } else {
+                currentQuestions = [...rawQuestions];
+                document.getElementById('timerContainer').classList.add('hidden');
+                clearInterval(timerInterval);
+            }
+
+            // Screen Switching
+            document.getElementById('screenLanding').classList.add('hidden');
+            document.getElementById('screenResult').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.remove('hidden');
+            document.getElementById('screenQuiz').classList.add('grid');
+
+            renderQuestionGrid();
+            renderCurrentQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fisher-Yates Shuffle
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Timer Logic
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timerSeconds--;
+                updateTimerDisplay();
+                if (timerSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuizFinal();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timerSeconds / 60);
+            const s = timerSeconds % 60;
+            const formatted = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').innerText = formatted;
+        }
+
+        // Render Left Grid Buttons
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('questionGrid');
+            gridContainer.innerHTML = '';
+
+            let answeredCount = 0;
+
+            currentQuestions.forEach((q, index) => {
+                const isSelected = userAnswers[index] !== null;
+                const isCurrent = index === currentQuestionIdx;
+
+                if (isSelected) answeredCount++;
+
+                let bgClass = "bg-black/40 text-stone-300 border-stone-700 hover:border-amber-500/50";
+                if (isSelected) {
+                    bgClass = "bg-amber-600 text-white font-bold border-amber-500 shadow";
+                }
+                if (isCurrent) {
+                    bgClass += " ring-2 ring-blue-400 border-blue-400 font-extrabold scale-105";
+                }
+
+                const btn = document.createElement('button');
+                btn.className = `h-10 rounded-xl text-sm border flex items-center justify-center transition-all ${bgClass}`;
+                btn.innerText = index + 1;
+                btn.onclick = () => jumpToQuestion(index);
+                gridContainer.appendChild(btn);
+            });
+
+            document.getElementById('answeredProgress').innerText = `${answeredCount} / 20 đã làm`;
+        }
+
+        // Render Active Question
+        function renderCurrentQuestion() {
+            const q = currentQuestions[currentQuestionIdx];
+
+            // Header
+            document.getElementById('questionNumberHeader').innerText = `Câu ${currentQuestionIdx + 1} / 20`;
+
+            // Level Badge Color
+            const badge = document.getElementById('questionLevelBadge');
+            badge.innerText = `Mức ${q.level}`;
+            if (q.levelCode === 'biết') {
+                badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30";
+            } else if (q.levelCode === 'hiểu') {
+                badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+            } else if (q.levelCode === 'vận dụng') {
+                badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30";
+            } else {
+                badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30";
+            }
+
+            // Question Text
+            document.getElementById('questionText').innerHTML = q.question;
+
+            // Options
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            const optionLetters = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, optIdx) => {
+                const isChecked = userAnswers[currentQuestionIdx] === optIdx;
+
+                const optBox = document.createElement('div');
+                optBox.onclick = () => selectOption(optIdx);
+
+                let boxStyles = "bg-black/30 border-dark-card hover:bg-black/50 hover:border-amber-500/40 text-stone-200";
+                let badgeStyles = "bg-stone-800 text-stone-300 border-stone-600";
+
+                if (isChecked) {
+                    boxStyles = "bg-amber-950/60 border-amber-500 text-amber-100 ring-1 ring-amber-500 shadow-md";
+                    badgeStyles = "bg-amber-500 text-white border-amber-400 font-bold";
+                }
+
+                optBox.className = `p-4 rounded-xl border cursor-pointer transition-all flex items-start gap-3.5 ${boxStyles}`;
+                optBox.innerHTML = `
+                    <span class="w-7 h-7 rounded-lg border text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 transition-colors ${badgeStyles}">
+                        ${optionLetters[optIdx]}
+                    </span>
+                    <span class="text-base leading-relaxed pt-0.5">${optText}</span>
+                `;
+                container.appendChild(optBox);
+            });
+
+            // Update Nav Buttons
+            document.getElementById('btnPrev').disabled = currentQuestionIdx === 0;
+            document.getElementById('btnPrev').style.opacity = currentQuestionIdx === 0 ? "0.4" : "1";
+
+            document.getElementById('btnNext').disabled = currentQuestionIdx === currentQuestions.length - 1;
+            document.getElementById('btnNext').style.opacity = currentQuestionIdx === currentQuestions.length - 1 ? "0.4" : "1";
+
+            renderQuestionGrid();
+
+            // Re-render MathJax formula if present
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // Option Selection Event
+        function selectOption(optIdx) {
+            userAnswers[currentQuestionIdx] = optIdx;
+            renderCurrentQuestion();
+        }
+
+        // Clear Selection
+        function clearCurrentSelection() {
+            userAnswers[currentQuestionIdx] = null;
+            renderCurrentQuestion();
+        }
+
+        // Navigation
+        function navigateQuestion(direction) {
+            const targetIdx = currentQuestionIdx + direction;
+            if (targetIdx >= 0 && targetIdx < currentQuestions.length) {
+                currentQuestionIdx = targetIdx;
+                renderCurrentQuestion();
+            }
+        }
+
+        function jumpToQuestion(index) {
+            currentQuestionIdx = index;
+            renderCurrentQuestion();
+        }
+
+        // Submit Dialog Modal
+        function confirmSubmitQuiz() {
+            const answeredCount = userAnswers.filter(a => a !== null).length;
+            document.getElementById('modalAnsweredCount').innerText = answeredCount;
+            document.getElementById('confirmModal').classList.remove('hidden');
+            document.getElementById('confirmModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('confirmModal').classList.add('hidden');
+            document.getElementById('confirmModal').classList.remove('flex');
+        }
+
+        // Final Submission Logic
+        function submitQuizFinal() {
+            closeModal();
+            clearInterval(timerInterval);
+            quizEndTime = new Date();
+
+            // Compute Score
+            let correctCount = 0;
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = ((correctCount / 20) * 10).toFixed(1);
+
+            // Screen Switch
+            document.getElementById('screenQuiz').classList.add('hidden');
+            document.getElementById('screenQuiz').classList.remove('grid');
+            document.getElementById('screenResult').classList.remove('hidden');
+
+            // Populate Overview
+            document.getElementById('resultModeTitle').innerText = quizMode === 'practice' ? 'Chế độ LUYỆN TẬP' : 'Chế độ TÍNH GIỜ';
+            document.getElementById('resScore').innerText = `${score} / 10.0`;
+            document.getElementById('resCorrect').innerText = `${correctCount} / 20 câu`;
+
+            // Calculate Time Spent
+            const timeDiffSeconds = Math.round((quizEndTime - quizStartTime) / 1000);
+            const m = Math.floor(timeDiffSeconds / 60);
+            const s = timeDiffSeconds % 60;
+            document.getElementById('resTime').innerText = `${m} phút ${s} giây`;
+
+            // Dynamic Teacher Feedback
+            const feedbackElem = document.getElementById('teacherFeedback');
+            if (score >= 9.0) {
+                feedbackElem.innerHTML = `"Xuất sắc! Em đã nắm vững toàn bộ kiến thức chuyên sâu về bài học <strong>Nghệ thuật truyền thống của người Việt</strong>. Khả năng tư duy phân tích và cảm thụ nghệ thuật văn hóa của em rất cao!"`;
+            } else if (score >= 7.0) {
+                feedbackElem.innerHTML = `"Kết quả Tốt! Em đã hiểu rõ các nội dung kiến thức cơ bản và khả năng vận dụng tốt. Hãy xem lại kỹ lời giải các câu vận dụng cao để đạt điểm tối đa ở bài thi sắp tới nhé!"`;
+            } else if (score >= 5.0) {
+                feedbackElem.innerHTML = `"Đạt yêu cầu. Em đã nắm được các câu ở mức độ Biết và Hiểu, tuy nhiên các câu Vận dụng phân tích chưa thực sự chính xác. Hãy ôn luyện kĩ lại văn bản trong SGK để củng cố kiến thức!"`;
+            } else {
+                feedbackElem.innerHTML = `"Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết bài học Nghệ thuật truyền thống của người Việt. Hãy đọc lại kỹ văn bản và xem chi tiết đáp án lời giải phía dưới nhé!"`;
+            }
+
+            // Render Detailed Answer List
+            renderDetailedAnswers();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Answer Key & Explanations
+        function renderDetailedAnswers() {
+            const container = document.getElementById('answersList');
+            container.innerHTML = '';
+
+            const optionLetters = ['A', 'B', 'C', 'D'];
+
+            currentQuestions.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+
+                const card = document.createElement('div');
+                card.className = "bg-dark-card border border-dark-card rounded-2xl p-6 space-y-4 shadow-md";
+
+                let statusBadge = isCorrect
+                    ? `<span class="px-3 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">✓ Đúng</span>`
+                    : `<span class="px-3 py-1 rounded-md text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">✗ Sai</span>`;
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-amber-900/30 pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-cream text-lg">Câu ${idx + 1}</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-stone-800 text-stone-300">Mức ${q.level}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+
+                    <p class="text-stone-100 font-medium text-base">${q.question}</p>
+
+                    <div class="space-y-2 pt-1">
+                        ${q.options.map((opt, oIdx) => {
+                            let optStyle = "bg-black/30 border-stone-800 text-stone-300";
+                            let icon = "";
+
+                            if (oIdx === q.correct) {
+                                optStyle = "bg-emerald-950/60 border-emerald-500 text-emerald-100 font-semibold";
+                                icon = `<span class="ml-auto text-emerald-400 text-sm font-bold">✓ Đáp án đúng</span>`;
+                            } else if (oIdx === userChoice && !isCorrect) {
+                                optStyle = "bg-rose-950/60 border-rose-500 text-rose-200 line-through";
+                                icon = `<span class="ml-auto text-rose-400 text-sm font-bold">✗ Đã chọn</span>`;
+                            }
+
+                            return `
+                                <div class="p-3 rounded-xl border text-sm flex items-center gap-3 ${optStyle}">
+                                    <span class="font-bold shrink-0">${optionLetters[oIdx]}.</span>
+                                    <span>${opt}</span>
+                                    ${icon}
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <div class="bg-amber-950/30 border border-amber-500/20 p-4 rounded-xl space-y-1 text-sm mt-3">
+                        <span class="font-bold text-amber-300 block">💡 Lời giải chi tiết:</span>
+                        <p class="text-stone-300 leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // Restart Quiz
+        function restartQuiz() {
+            document.getElementById('screenResult').classList.add('hidden');
+            document.getElementById('screenLanding').classList.remove('hidden');
+            quizMode = 'landing';
+            renderHeaderBadge();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
