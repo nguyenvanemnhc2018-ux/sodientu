@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Người Cầm Quyền Khôi Phục Uy Quyền</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax library with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        
+        /* Custom Roman & Arabic numeral indicators */
+        .roman-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-right: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .arabic-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #037857;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Accent green for main buttons/headers as requested */
+        .btn-primary-green {
+            background-color: #33FF33;
+            color: #052e16;
+            font-weight: 700;
+        }
+
+        .btn-primary-green:hover {
+            background-color: #28e028;
+        }
+
+        /* Millionaire Game Styles */
+        .millionaire-box {
+            background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
+            border: 3px solid #f59e0b;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .option-btn {
+            background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+            border: 2px solid #64748b;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover {
+            background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 100%);
+            border-color: #60a5fa;
+            color: #ffffff;
+        }
+
+        .option-btn.selected {
+            background: linear-gradient(90deg, #d97706 0%, #f59e0b 100%);
+            border-color: #fef08a;
+            color: #ffffff;
+        }
+
+        .option-btn.correct {
+            background: linear-gradient(90deg, #15803d 0%, #22c55e 100%) !important;
+            border-color: #86efac !important;
+            color: #ffffff !important;
+        }
+
+        .option-btn.wrong {
+            background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%) !important;
+            border-color: #fca5a5 !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Main wrapper div -->
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- Header Block with combined Color 1 and Color 2 -->
+        <header class="rounded-[12px] overflow-hidden shadow-lg border border-gray-300">
+            <!-- Top Box: Chapter Title with Color 1 (#3e3a8a) -->
+            <div style="background-color: #3e3a8a;" class="p-5 text-white text-center">
+                <span class="text-xs uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full font-semibold">Chương</span>
+                <h1 class="text-2xl md:text-3xl font-extrabold mt-1">QUYỀN NĂNG CỦA NGƯỜI KỂ CHUYỆN</h1>
+            </div>
+            
+            <!-- Thin divider line -->
+            <div class="h-[2px] bg-amber-400"></div>
+
+            <!-- Bottom Box: Lesson Title with Color 2 (#037857) -->
+            <div style="background-color: #037857;" class="p-6 text-white text-center">
+                <span class="text-xs uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full font-semibold">Bài 7 - Văn Bản 1</span>
+                <h2 class="text-xl md:text-2xl font-black mt-2 uppercase tracking-wide">
+                    NGƯỜI CẦM QUYỀN KHÔI PHỤC UY QUYỀN
+                </h2>
+                <p class="text-sm italic text-emerald-100 mt-1">(Trích <em>Những người khốn khổ</em> - Vích-to Huy-gô / Victor Hugo)</p>
+            </div>
+        </header>
+
+        <!-- Intro Box -->
+        <div class="bg-white border border-black p-6 rounded-[12px] shadow-sm">
+            <div class="flex items-start gap-3">
+                <i class="fa-solid fa-quote-left text-2xl text-gray-400 mt-1"></i>
+                <div class="italic text-gray-800 space-y-2">
+                    <p class="font-medium">
+                        • <em>Bạn hình dung như thế nào về một người có uy quyền?</em>
+                    </p>
+                    <p class="font-medium">
+                        • <em>Bạn đã từng đọc cuốn sách hay xem bộ phim nào mà trong đó có nhân vật thực sự là một người uy quyền? Bạn hãy chia sẻ ấn tượng của mình về nhân vật ấy.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Section I -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100">
+            <h2 class="text-2xl font-bold uppercase text-slate-900 border-b-4 border-slate-800 pb-2 mb-6 flex items-center">
+                <span class="roman-num">I</span> TIỂU DẪN - TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <!-- Item 1: Tác giả -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">1</span> Tác giả Vích-to Huy-gô (Victor Hugo: 1802 – 1885)
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center my-4">
+                    <!-- Image placeholder h1.png -->
+                    <div class="md:col-span-1 flex flex-col items-center justify-center p-3 bg-gray-50 border border-dashed border-gray-300 rounded-lg">
+                        <img src="h1.png" alt="Chân dung Vích-to Huy-gô" class="max-h-60 rounded object-cover shadow-sm mb-2" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x260?text=Hình+h1.png';">
+                        <span class="text-xs text-gray-500 font-semibold italic">Hình 1: Vích-to Huy-gô (1802 - 1885)</span>
+                    </div>
+
+                    <!-- Highlight Box -->
+                    <div class="md:col-span-2 bg-slate-50 border-l-4 border-emerald-600 p-4 rounded-r-lg space-y-2">
+                        <p><strong>• Vị trí:</strong> Là nhà thơ, nhà tiểu thuyết, nhà viết kịch đại tài của nước Pháp, ông trùm của chủ nghĩa lãng mạn Pháp thế kỉ XIX.</p>
+                        <p><strong>• Tác phẩm tiêu biểu:</strong> <em>Nhà thờ Đức Bà Pa-ri (1831), Những người khốn khổ (1862), Lao động biển cả (1866), Thằng cười (1869), Chín mươi ba (1874)...</em></p>
+                        <p><strong>• Tưởng nhân đạo sâu sắc:</strong> Các tác phẩm chan chứa tình yêu thương con người lao động nghèo khổ, thể hiện niềm tin mãnh liệt vào bản chất thiện lương và khát vọng công lý.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Tác phẩm -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">2</span> Tác phẩm "Những người khốn khổ" (Les Misérables)
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg space-y-2 text-sm md:text-base">
+                    <p>• <strong>Bối cảnh:</strong> Nước Pháp những năm đầu thế kỉ XIX. Cuộc sống khổ cực của nhân dân lao động dưới ách áp bức và sự tàn nhẫn của luật pháp vô tình.</p>
+                    <p>• <strong>Nhân vật trung tâm:</strong> Giăng Van-giăng (Jean Valjean) - người tù khổ sai 19 năm vì ăn cắp một ổ bánh mì nuôi đàn cháu đói, sau khi ra tù đã chuộc lại lỗi lầm bằng tình thương và sự hy sinh.</p>
+                    <p>• <strong>Giá trị nghệ thuật & tư tưởng:</strong> Kết hợp tài tình giữa thực xót xa và lãng mạn bay bổng, tôn vinh các giá trị nhân đạo, lên án xã hội tư sản bất công.</p>
+                </div>
+            </div>
+
+            <!-- Item 3: Đoạn trích -->
+            <div>
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">3</span> Đoạn trích "Người cầm quyền khôi phục uy quyền"
+                </h3>
+                <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-lg text-sm md:text-base">
+                    <p>Đoạn trích thuộc <strong>Chương 4, Quyển 8, Phần thứ nhất</strong> của tiểu thuyết. Đoạn trích thể hiện đỉnh điểm của xung đột giữa Giăng Van-giăng (dưới tên giả Ma-đơ-len - Thị trưởng) và thanh tra Gia-ve, đồng thời bộc lộ vẻ đẹp nhân đạo ngời sáng của Giăng Van-giăng trước cái chết của Phăng-tin.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section II -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100">
+            <h2 class="text-2xl font-bold uppercase text-slate-900 border-b-4 border-slate-800 pb-2 mb-6 flex items-center">
+                <span class="roman-num">II</span> ĐỌC - HIỂU VĂN BẢN (NỘI DUNG CHI TIẾT)
+            </h2>
+
+            <!-- 1. Tình huống -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">1</span> Tình huống kịch tính của đoạn trích
+                </h3>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg space-y-2">
+                    <p>• <strong>Bối cảnh không gian:</strong> Tại bệnh xá, nơi Phăng-tin - một nữ công nhân tội nghiệp đang nằm trên giường bệnh chờ đợi con gái Cô-đét (Cosette) trở về.</p>
+                    <p>• <strong>Cuộc chạm trán bất ngờ:</strong> Giăng Van-giăng (Thị trưởng Ma-đơ-len) đã tự thú tại tòa án để cứu một người vô tội. Thanh tra Gia-ve ập đến bắt Giăng Van-giăng ngay trước mặt Phăng-tin, tạo nên một tình huống căng thẳng, kịch tính tột độ.</p>
+                </div>
+            </div>
+
+            <!-- 2. Nhân vật Gia-ve -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">2</span> Nhân vật Gia-ve (Javert) - Biểu tượng tàn nhẫn của cường quyền
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg">
+                        <h4 class="font-bold text-red-700 mb-2"><i class="fa-solid fa-mask-skull mr-2"></i>Bộ dạng & Giọng nói</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                            <li>Bộ mặt gớm ghiếc, nhìn chằm chằm như "cắm móc mỏ vào người".</li>
+                            <li>Giọng nói gầm lên man rợ, điên cuồng như "tiếng ác thú gầm".</li>
+                            <li>Ngôn từ hách dịch, coi con người như súc vật: <em>"Mau lên!", "Ta bảo mày nói to lên cơ mà!"</em>.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg">
+                        <h4 class="font-bold text-red-700 mb-2"><i class="fa-solid fa-gavel mr-2"></i>Hành động & Bản chất</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                            <li>Túm lấy cổ áo Giăng Van-giăng, quát mắng giận dữ.</li>
+                            <li>Phát ngôn phũ phàng làm vỡ tan hy vọng của Phăng-tin, khiến chị sốc đến mức qua đời.</li>
+                            <li>Là hiện thân của công lý tàn nhẫn, vô cảm, thiếu tình người.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Nhân vật Giăng Van-giăng -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">3</span> Nhân vật Giăng Van-giăng (Jean Valjean) - Uy quyền của tình thương
+                </h3>
+                <div class="bg-emerald-50 border border-emerald-300 p-5 rounded-lg space-y-3">
+                    <p>• <strong>Thái độ với Gia-ve:</strong> Nhẫn nhịn, điềm tĩnh, nhún nhường cầu xin 3 ngày để đi tìm con cho Phăng-tin. Sẵn sàng chịu tù giam chứ không hề hoảng sợ.</p>
+                    <p>• <strong>Thái độ với Phăng-tin:</strong> Ân cần, dịu dàng, an ủi chị, hứa bảo vệ chị. Khi Phăng-tin trút hơi thở cuối cùng, ông ghé sát tai chị thì thầm những lời thiêng liêng.</p>
+                    <p>• <strong>Uy quyền khôi phục:</strong> Khi Gia-ve hoạnh đọe, Giăng Van-giăng rút thanh sắt lỏng giường cầm chắc trong tay, đứng thẳng lên. Sức mạnh chính nghĩa và tình thương vĩ đại khiến tên mật thám bạo ngược Gia-ve phải run sợ lùi bước.</p>
+                </div>
+            </div>
+
+            <!-- 4. Nhân vật Phăng-tin -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">4</span> Hình ảnh Phăng-tin - Nạn nhân tội nghiệp
+                </h3>
+                <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-lg text-sm md:text-base space-y-2">
+                    <p>• Cuộc đời đầy bi kịch, hy sinh vì con gái Cô-đét.</p>
+                    <p>• Khi nghe tiếng gầm của Gia-ve và sự thật phũ phàng rằng ông Ma-đơ-len chỉ là kẻ tù khổ sai, thế giới của chị hoàn toàn tan biến.</p>
+                    <p>• Chị tắt thở trong đớn đau, nhưng nhờ nụ cười thiêng liêng từ lời thì thầm của Giăng Van-giăng, gương mặt chị "rạng rỡ lên một cách lạ thường".</p>
+                </div>
+            </div>
+
+            <!-- 5. Bảng so sánh hai nhân vật -->
+            <div>
+                <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
+                    <span class="arabic-num">5</span> Bảng so sánh nhân vật Gia-ve và Giăng Van-giăng
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-[#cbd5e0] text-center text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-[#e2e8f0]">
+                                <th class="border border-[#cbd5e0] p-3 font-bold">Tiêu chí</th>
+                                <th class="border border-[#cbd5e0] p-3 font-bold text-red-800">Gia-ve (Javert)</th>
+                                <th class="border border-[#cbd5e0] p-3 font-bold text-emerald-800">Giăng Van-giăng (Jean Valjean)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50">Địa vị / Vai trò</td>
+                                <td class="border border-[#cbd5e0] p-3">Mật thám, thanh tra cảnh sát (Đại diện pháp luật)</td>
+                                <td class="border border-[#cbd5e0] p-3">Tù khổ sai Ma-đơ-len / Thị trưởng (Đại diện nhân dân)</td>
+                            </tr>
+                            <tr class="bg-gray-50/50">
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50">Động cơ hành động</td>
+                                <td class="border border-[#cbd5e0] p-3">Bắt bớ, thi hành luật pháp tàn nhẫn, hiếu sát</td>
+                                <td class="border border-[#cbd5e0] p-3">Cứu giúp Phăng-tin, thực hiện lời hứa tìm đứa trẻ</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#cbd5e0] p-3 font-semibold bg-gray-50">Sức mạnh / Uy quyền</td>
+                                <td class="border border-[#cbd5e0] p-3">Cường quyền tàn bạo, gieo rắc sợ hãi</td>
+                                <td class="border border-[#cbd5e0] p-3">Uy quyền đạo đức, lòng bác ái và tình thương vĩ đại</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question / Answer Boxes section (Mục dấu ?) -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-4">
+            <h2 class="text-xl font-bold uppercase text-slate-800 flex items-center mb-4">
+                <i class="fa-solid fa-circle-question text-blue-600 mr-2 text-2xl"></i> MỤC CÂU HỎI TRONG TIẾN TRÌNH ĐỌC (DẤU ?)
+            </h2>
+
+            <!-- Q1 -->
+            <div class="space-y-2">
+                <div class="bg-[#edf2f7] border-l-4 border-blue-600 p-4 rounded-r-lg font-medium">
+                    <span class="text-blue-700 font-bold">1. [Trang 1]</span> Hoàn cảnh và tình trạng của Phăng-tin được miêu tả như thế nào?
+                </div>
+                <button onclick="toggleAnswer('qa1')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                </button>
+                <div id="qa1" class="hidden bg-[#e6fffa] border border-emerald-300 p-4 rounded-lg text-gray-800 text-sm">
+                    <strong>Lời giải:</strong> Phăng-tin đang trong tình trạng ốm yếu nặng, nằm trên giường bệnh ở bệnh xá, cơn sốt mê sang hãi hùng. Chị luôn trong phập phồng lo sợ bị bắt và gánh chịu nỗi đau đáu chờ đợi đứa con gái Cô-đét.
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="space-y-2">
+                <div class="bg-[#edf2f7] border-l-4 border-blue-600 p-4 rounded-r-lg font-medium">
+                    <span class="text-blue-700 font-bold">2. [Trang 1]</span> Vì sao người kể chuyện lại lưu ý "từ giờ chúng ta cứ cái tên này mà gọi"?
+                </div>
+                <button onclick="toggleAnswer('qa2')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                </button>
+                <div id="qa2" class="hidden bg-[#e6fffa] border border-emerald-300 p-4 rounded-lg text-gray-800 text-sm">
+                    <strong>Lời giải:</strong> Người kể chuyện lưu ý điều này vì thân phận thực sự của Thị trưởng Ma-đơ-len đã bị công khai trước tòa án. Ông đã cởi bỏ chiếc vỏ bọc thị trưởng để trở lại đúng với danh tính thật: Giăng Van-giăng, một người tù khổ sai trung thực.
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="space-y-2">
+                <div class="bg-[#edf2f7] border-l-4 border-blue-600 p-4 rounded-r-lg font-medium">
+                    <span class="text-blue-700 font-bold">3. [Trang 2]</span> Chú ý cách miêu tả giọng nói của Gia-ve?
+                </div>
+                <button onclick="toggleAnswer('qa3')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                </button>
+                <div id="qa3" class="hidden bg-[#e6fffa] border border-emerald-300 p-4 rounded-lg text-gray-800 text-sm">
+                    <strong>Lời giải:</strong> Giọng nói của Gia-ve được miêu tả như tiếng ác thú gầm, man rợ, điên cuồng, không còn là giọng nói của người bình thường, thể hiện sự tàn nhẫn, hung hãn đến tột cùng.
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="space-y-2">
+                <div class="bg-[#edf2f7] border-l-4 border-blue-600 p-4 rounded-r-lg font-medium">
+                    <span class="text-blue-700 font-bold">4. [Trang 2]</span> Tại sao Phăng-tin cảm thấy "cả thế giới đang tan biến"?
+                </div>
+                <button onclick="toggleAnswer('qa4')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                </button>
+                <div id="qa4" class="hidden bg-[#e6fffa] border border-emerald-300 p-4 rounded-lg text-gray-800 text-sm">
+                    <strong>Lời giải:</strong> Vì Phăng-tin nhận ra vị cứu tinh duy nhất của mình (ông thị trưởng Ma-đơ-len) bị Gia-ve hạch sách, bắt bớ. Điểm tựa cuối cùng để chị hy vọng nhìn thấy con gái bị sụp đổ hoàn toàn.
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="space-y-2">
+                <div class="bg-[#edf2f7] border-l-4 border-blue-600 p-4 rounded-r-lg font-medium">
+                    <span class="text-blue-700 font-bold">5. [Trang 4]</span> Tại sao Gia-ve lại thấy run sợ trước Giăng Van-giăng?
+                </div>
+                <button onclick="toggleAnswer('qa5')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem lời giải
+                </button>
+                <div id="qa5" class="hidden bg-[#e6fffa] border border-emerald-300 p-4 rounded-lg text-gray-800 text-sm">
+                    <strong>Lời giải:</strong> Gia-ve run sợ không phải vì vũ lực thể xác, mà vì bản lĩnh kiên cường, sức mạnh tâm hồn và uy quyền đạo đức áp đảo của Giăng Van-giăng khi ông nhặt thanh sắt cầm chắc trong tay để bảo vệ thi thể Phăng-tin.
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Section (Hình bàn tay) -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-4">
+            <h2 class="text-xl font-bold uppercase text-slate-800 flex items-center mb-4">
+                <i class="fa-regular fa-hand-point-right text-emerald-600 mr-2 text-2xl"></i> MỤC HOẠT ĐỘNG & CÂU HỎI CUỐI BÀI
+            </h2>
+
+            <!-- Activity 1 -->
+            <div class="border border-gray-200 p-4 rounded-lg space-y-2">
+                <p class="font-bold text-gray-800">Câu 1: Có thể chia đoạn trích làm mấy phần? Hãy xác định mối liên hệ giữa các phần ấy.</p>
+                <button onclick="toggleAnswer('act1')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem hướng giải quyết
+                </button>
+                <div id="act1" class="hidden bg-emerald-50 p-4 rounded text-sm text-gray-800 space-y-2">
+                    <p><strong>Hướng dẫn:</strong> Chia làm 2 phần chính:</p>
+                    <p>• <em>Phần 1:</em> Từ đầu đến "Phăng-tin đã tắt thở" -> Gia-ve hạch sách, thể hiện sự tàn nhẫn khiến Phăng-tin sốc chết.</p>
+                    <p>• <em>Phần 2:</em> Đoạn còn lại -> Giăng Van-giăng khôi phục uy quyền, thực hiện nghĩa cử cao đẹp với Phăng-tin và khuất phục Gia-ve.</p>
+                </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="border border-gray-200 p-4 rounded-lg space-y-2">
+                <p class="font-bold text-gray-800">Câu 3: Qua lời của người kể chuyện, nhân vật Gia-ve hiện lên như thế nào? Hãy nhận xét thái độ của người kể chuyện đối với nhân vật này.</p>
+                <button onclick="toggleAnswer('act2')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem hướng giải quyết
+                </button>
+                <div id="act2" class="hidden bg-emerald-50 p-4 rounded text-sm text-gray-800 space-y-2">
+                    <p><strong>Hướng dẫn:</strong> Người kể chuyện miêu tả Gia-ve bằng các từ ngữ tượng hình, so sánh với ác thú (gầm lên, cắm móc mỏ). Thái độ của tác giả là căm phẫn, lên án và ghê tởm bản chất tàn bạo của bộ máy công lý vô cảm.</p>
+                </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="border border-gray-200 p-4 rounded-lg space-y-2">
+                <p class="font-bold text-gray-800">Câu 7: Trong đoạn trích này, theo bạn, điều gì mới làm nên uy quyền của một con người?</p>
+                <button onclick="toggleAnswer('act3')" class="btn-primary-green px-4 py-2 rounded shadow text-sm transition">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem hướng giải quyết
+                </button>
+                <div id="act3" class="hidden bg-emerald-50 p-4 rounded text-sm text-gray-800 space-y-2">
+                    <p><strong>Hướng dẫn:</strong> Uy quyền chân chính không đến từ quyền lực, địa vị hay sự đe dọa tàn bạo (như Gia-ve), mà xuất phát từ <strong>tình yêu thương, lòng nhân ái, sự hy sinh và bản lĩnh đạo đức cao cả</strong> (như Giăng Van-giăng).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Boxes: Em có biết, Em có thể, Lưu ý -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Em có biết -->
+            <div class="bg-indigo-50 border-2 border-indigo-200 rounded-[12px] p-5 shadow-sm">
+                <h3 class="text-indigo-900 font-bold text-lg mb-2 flex items-center">
+                    <i class="fa-solid fa-book-open mr-2"></i> EM CÓ BIẾT
+                </h3>
+                <p class="text-sm text-indigo-950 leading-relaxed">
+                    Bộ tiểu thuyết <em>Những người khốn khổ</em> được Huy-gô ấp ủ và viết trong suốt gần 30 năm (từ 1845 đến 1862). Ngay khi xuất bản, cuốn sách đã tạo nên một cơn sốt văn học toàn cầu và được dịch ra hàng chục ngôn ngữ khác nhau.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-amber-50 border-2 border-amber-200 rounded-[12px] p-5 shadow-sm">
+                <h3 class="text-amber-900 font-bold text-lg mb-2 flex items-center">
+                    <i class="fa-solid fa-star mr-2"></i> EM CÓ THỂ
+                </h3>
+                <p class="text-sm text-amber-950 leading-relaxed">
+                    Sưu tầm và tìm xem trọn bộ phim điện ảnh hoặc nhạc kịch <em>Les Misérables</em> để cảm nhận sâu sắc hơn vẻ đẹp âm nhạc và hình ảnh của tác phẩm kinh điển này.
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border-2 border-rose-200 rounded-[12px] p-5 shadow-sm">
+                <h3 class="text-rose-900 font-bold text-lg mb-2 flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> LƯU Ý
+                </h3>
+                <p class="text-sm text-rose-950 leading-relaxed">
+                    Khi phân tích nhân vật trong tác phẩm lãng mạn, cần chú ý nghệ thuật tương phản đối lập: sự đối lập gay gắt giữa thiện và ác, giữa tình thương cao cả và sự tàn bạo vô cảm.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section III: Summary -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100">
+            <h2 class="text-2xl font-bold uppercase text-slate-900 border-b-4 border-slate-800 pb-2 mb-6 flex items-center">
+                <span class="roman-num">III</span> TỔNG KẾT BÀI HỌC
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-emerald-50 border border-emerald-300 p-5 rounded-lg">
+                    <h3 class="text-emerald-900 font-bold text-lg mb-2"><i class="fa-solid fa-heart mr-2"></i>1. Nội dung</h3>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        Đoạn trích ca ngợi uy quyền của lòng bác ái, tình thương yêu con người và sự hy sinh cao cả của Giăng Van-giăng. Đồng thời tố cáo thực trạng tàn nhẫn, vô cảm của xã hội bất công thời bấy giờ.
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-300 p-5 rounded-lg">
+                    <h3 class="text-blue-900 font-bold text-lg mb-2"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i>2. Nghệ thuật</h3>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        Thủ pháp tương phản đối lập sắc nét, xây dựng tình huống kịch tính, khắc họa tâm lý nhân vật tinh tế và giọng văn lãng mạn chan chứa tinh thần nhân đạo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MILLIONAIRE GAMESHOW SECTION (10 QUESTIONS) -->
+        <section class="millionaire-box p-6 md:p-8 text-white relative overflow-hidden">
+            <div class="text-center mb-6">
+                <span class="bg-amber-500 text-slate-950 text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-wider">
+                    Gameshow Củng Cố Kiến Thức
+                </span>
+                <h2 class="text-2xl md:text-3xl font-black text-amber-400 mt-2 tracking-wide flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-trophy text-amber-400"></i> AI LÀ TRIỆU PHÚ
+                </h2>
+                <p class="text-xs text-slate-300 mt-1">Chinh phục 10 câu hỏi để trở thành Triệu Phú Tri Thức!</p>
+            </div>
+
+            <!-- Quiz Status Bar -->
+            <div class="flex justify-between items-center bg-slate-900/80 p-3 rounded-lg border border-slate-700 mb-6 text-sm">
+                <div>Câu hỏi: <span id="current-q-num" class="text-amber-400 font-bold">1</span> / 10</div>
+                <div>Điểm số: <span id="current-score" class="text-emerald-400 font-bold">0</span> đ</div>
+            </div>
+
+            <!-- Question Box -->
+            <div class="bg-slate-900/90 border-2 border-amber-500/50 p-6 rounded-xl mb-6 shadow-inner text-center">
+                <p id="question-text" class="text-lg md:text-xl font-bold text-amber-100">
+                    Đang tải câu hỏi...
+                </p>
+            </div>
+
+            <!-- Options Grid -->
+            <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <!-- Options inserted by JS -->
+            </div>
+
+            <!-- Millionaire Action Bar -->
+            <div class="flex flex-wrap justify-between items-center gap-4">
+                <button id="next-btn" onclick="nextQuestion()" class="hidden btn-primary-green px-6 py-2.5 rounded-lg shadow font-bold text-sm">
+                    Câu Tiếp Theo <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+                <button onclick="resetGame()" class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded text-xs text-slate-200">
+                    <i class="fa-solid fa-rotate-right mr-1"></i> Chơi lại từ đầu
+                </button>
+            </div>
+
+            <!-- Result Overlay/Box -->
+            <div id="quiz-final-result" class="hidden mt-6 p-6 bg-slate-900/95 border-2 border-emerald-400 rounded-xl text-center space-y-4">
+                <h3 class="text-2xl font-bold text-amber-400">KẾT QUẢ CUỐI CÙNG</h3>
+                <p id="final-score-text" class="text-lg text-white font-semibold"></p>
+                <div id="detailed-explanations" class="text-left bg-slate-800 p-4 rounded border border-slate-700 text-xs space-y-2 max-h-60 overflow-y-auto">
+                    <!-- Detailed explanations for each question -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 Essay/Analytical Exercises -->
+        <section class="bg-white rounded-[12px] shadow-md p-6 border border-gray-100 space-y-6">
+            <h2 class="text-2xl font-bold uppercase text-slate-900 border-b-4 border-slate-800 pb-2 mb-4 flex items-center">
+                <span class="roman-num">IV</span> BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH
+            </h2>
+
+            <!-- Essay Question 1 -->
+            <div class="border border-gray-200 p-5 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-800 text-base">
+                   
+            <!-- Essay Question 2 -->
+            <div class="border border-gray-200 p-5 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-800 text-base">
+                    Bài 1: Tính toán tỉ lệ tương phản nghệ thuật giữa Gia-ve và Giăng Van-giăng
+                </h3>
+                <p class="text-sm text-gray-700">
+                    Trong tác phẩm, nếu thời lượng xuất hiện của Gia-ve là 40 phút và Giăng Van-giăng là 80 phút. Hãy viết tỉ lệ giản đơn giữa hai thời lượng dưới dạng phân số và tính phần trăm thời lượng của Giăng Van-giăng.
+                </p>
+                <button onclick="toggleAnswer('essay2')" class="btn-primary-green px-4 py-2 rounded shadow text-sm">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem chi tiết lời giải
+                </button>
+                <div id="essay2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• Tỉ lệ thời lượng Gia-ve / Giăng Van-giăng = \( \frac{40}{80} = \frac{1}{2} \)</p>
+                    <p>• Tổng thời lượng = \( 40 + 80 = 120 \) phút.</p>
+                    <p>• Tỉ lệ phần trăm của Giăng Van-giăng = \( \frac{80}{120} \times 100\% \approx 66.67\% \)</p>
+                    <p><em>Ý nghĩa:</em> Thời lượng xuất hiện gấp đôi thể hiện tư tưởng chủ đạo của Huy-gô: ánh sáng nhân đạo luôn chiếm ưu thế vượt trội so với sự tàn bạo.</p>
+                </div>
+            </div>
+
+            <!-- Essay Question 3 -->
+            <div class="border border-gray-200 p-5 rounded-lg space-y-3">
+                <h3 class="font-bold text-slate-800 text-base">
+                    Bài 2: Phân tích đoạn kết bài học và giá trị tư tưởng của tác phẩm
+                </h3>
+                <p class="text-sm text-gray-700">
+                    Hãy viết một đoạn văn ngắn (từ 10 - 12 câu) phân tích câu nói cuối cùng của Giăng Van-giăng với Gia-ve: <em>"Giờ anh muốn làm gì thì làm."</em>
+                </p>
+                <button onclick="toggleAnswer('essay3')" class="btn-primary-green px-4 py-2 rounded shadow text-sm">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem chi tiết lời giải
+                </button>
+                <div id="essay3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded text-sm space-y-2">
+                    <p><strong>Dàn ý & Lời giải chi tiết:</strong></p>
+                    <p>1. Câu nói thể hiện sự thanh thản tuyệt đối của Giăng Van-giăng sau khi đã hoàn thành trách nhiệm đạo đức với người đã khuất (Phăng-tin).</p>
+                    <p>2. Ông không còn bận tâm đến sự đe dọa hay tù ngục của Gia-ve nữa, vì tâm hồn ông hoàn toàn tự do và trong sạch.</p>
+                    <p>3. Đó là câu nói khẳng định sự chiến thắng của uy quyền tình thương đối với luật pháp tàn nhẫn vô cảm.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mandatory Footer -->
+        <footer class="text-center py-6 border-t border-gray-300 text-gray-600 font-semibold text-sm">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Toggle answer visibility
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('hidden');
+            }
+        }
+
+        // Questions Data for Ai La Trieu Phu Gameshow
+        const questions = [
+            {
+                q: "Tác giả Vích-to Huy-gô là nhà văn nổi tiếng của quốc gia nào?",
+                options: ["A. Anh", "B. Pháp", "C. Đức", "D. Nga"],
+                correct: 1,
+                explain: "Vích-to Huy-gô (1802 - 1885) là đại biểu xuất sắc nhất của chủ nghĩa lãng mạn Pháp."
+            },
+            {
+                q: "Tác phẩm 'Những người khốn khổ' thuộc thể loại văn học nào?",
+                options: ["A. Kịch bản", "B. Truyện ngắn", "C. Tiểu thuyết", "D. Sử thi"],
+                correct: 2,
+                explain: "'Những người khốn khổ' là bộ tiểu thuyết đồ sộ gồm 5 phần nổi tiếng thế giới."
+            },
+            {
+                q: "Nhân vật Gia-ve đại diện cho lực lượng nào trong xã hội đương thời?",
+                options: ["A. Nhân dân lao động", "B. Công lý vô cảm, cường quyền", "C. Quý tộc từ thiện", "D. Tầng lớp tri thức"],
+                correct: 1,
+                explain: "Gia-ve là tên thanh tra mật thám đại diện cho bộ máy tư pháp tàn nhẫn và vô cảm."
+            },
+            {
+                q: "Trước khi bị lộ diện, Giăng Van-giăng sống dưới tên giả nào?",
+                options: ["A. Ma-đơ-len", "B. Cô-đét", "C. Phăng-tin", "D. Mông-tơ-rơi"],
+                correct: 0,
+                explain: "Giăng Van-giăng đổi tên thành Ma-đơ-len và trở thành Thị trưởng thị trấn Mông-tơ-rơi."
+            },
+            {
+                q: "Vì sao Phăng-tin đột ngột qua đời ngay tại bệnh xá?",
+                options: ["A. Do bệnh quá nặng", "B. Bị Gia-ve đánh đập", "C. Quá sốc trước sự tàn nhẫn của Gia-ve", "D. Uống nhầm thuốc"],
+                correct: 2,
+                explain: "Phăng-tin tuyệt vọng và sốc nặng khi biết tin ông Ma-đơ-len bị bắt và không thể đi đón con."
+            },
+            {
+                q: "Vũ khí Giăng Van-giăng cầm trên tay làm Gia-ve phải run sợ lùi bước là gì?",
+                options: ["A. Khẩu súng ngắn", "B. Thanh sắt lỏng giường", "C. Con dao nhọn", "D. Gậy gỗ"],
+                correct: 1,
+                explain: "Giăng Van-giăng giật gãy thanh sắt ở giường bệnh cầm chắc trong tay để bảo vệ Phăng-tin."
+            },
+            {
+                q: "Yếu tố nào làm nên 'uy quyền' thực sự của Giăng Van-giăng?",
+                options: ["A. Địa vị thị trưởng", "B. Tiền bạc và của cải", "C. Tình thương và bản lĩnh đạo đức", "D. Sự uy đe dọa"],
+                correct: 2,
+                explain: "Uy quyền chân chính xuất phát từ trái tim bác ái, tình thương sâu sắc và sự hy sinh."
+            },
+            {
+                q: "Biện pháp nghệ thuật nổi bật nhất trong đoạn trích là gì?",
+                options: ["A. Ẩn dụ chuyển đổi cảm giác", "B. Tương phản đối lập", "C. So sánh hoán dụ", "D. Điệp từ điệp ngữ"],
+                correct: 1,
+                explain: "Huy-gô sử dụng triệt để thủ pháp tương phản giữa Thiện - Ác, Tình thương - Tàn bạo."
+            },
+            {
+                q: "Chi tiết nụ cười của Phăng-tin khi qua đời thể hiện điều gì?",
+                options: ["A. Sự giải thoát đau đớn", "B. Niềm tin vào lời hứa của Giăng Van-giăng", "C. Sự đùa giỡn", "D. Sự hoảng sợ"],
+                correct: 1,
+                explain: "Nụ cười rạng rỡ của Phăng-tin thể hiện sự an lòng tuyệt đối trước tình thương của Giăng Van-giăng."
+            },
+            {
+                q: "Đoạn trích thuộc phần nào của tác phẩm 'Những người khốn khổ'?",
+                options: ["A. Phần thứ nhất", "B. Phần thứ hai", "C. Phần thứ ba", "D. Phần thứ năm"],
+                correct: 0,
+                explain: "Đoạn trích nằm ở Chương 4, Quyển 8, Phần thứ nhất của tiểu thuyết."
+            }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        function renderQuestion() {
+            const q = questions[currentQ];
+            document.getElementById('current-q-num').innerText = currentQ + 1;
+            document.getElementById('current-score').innerText = score;
+            document.getElementById('question-text').innerText = (currentQ + 1) + ". " + q.q;
+
+            const optsContainer = document.getElementById('options-container');
+            optsContainer.innerHTML = '';
+
+            q.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn p-4 rounded-xl text-left font-semibold text-sm md:text-base cursor-pointer';
+                btn.innerText = opt;
+                btn.onclick = () => selectOption(index);
+                optsContainer.appendChild(btn);
+            });
+
+            document.getElementById('next-btn').classList.add('hidden');
+        }
+
+        function selectOption(index) {
+            const q = questions[currentQ];
+            const buttons = document.querySelectorAll('#options-container button');
+
+            // Disable all buttons after choice
+            buttons.forEach(b => b.disabled = true);
+
+            userAnswers.push({
+                question: q.q,
+                chosen: index,
+                correct: q.correct,
+                explain: q.explain
+            });
+
+            if (index === q.correct) {
+                buttons[index].classList.add('correct');
+                score += 10;
+                document.getElementById('current-score').innerText = score;
+            } else {
+                buttons[index].classList.add('wrong');
+                buttons[q.correct].classList.add('correct');
+            }
+
+            if (currentQ < questions.length - 1) {
+                document.getElementById('next-btn').classList.remove('hidden');
+            } else {
+                showFinalResult();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQ < questions.length - 1) {
+                currentQ++;
+                renderQuestion();
+            }
+        }
+
+        function showFinalResult() {
+            const resultBox = document.getElementById('quiz-final-result');
+            resultBox.classList.remove('hidden');
+
+            const finalScoreText = document.getElementById('final-score-text');
+            finalScoreText.innerText = `Bạn đạt tổng cộng: ${score} / 100 điểm!`;
+
+            const expContainer = document.getElementById('detailed-explanations');
+            expContainer.innerHTML = '<h4 class="font-bold text-amber-300 text-sm mb-2">HƯỚNG DẪN GIẢI CHI TIẾT TỪNG CÂU:</h4>';
+
+            userAnswers.forEach((ans, idx) => {
+                const item = document.createElement('div');
+                item.className = 'border-b border-slate-700 pb-2 mb-2';
+                const isRight = ans.chosen === ans.correct;
+                item.innerHTML = `
+                    <p class="font-bold ${isRight ? 'text-emerald-400' : 'text-red-400'}">
+                        Câu ${idx + 1}: ${ans.question} - ${isRight ? 'ĐÚNG (+10đ)' : 'SAI'}
+                    </p>
+                    <p class="text-slate-300 text-xs">Giải thích: ${ans.explain}</p>
+                `;
+                expContainer.appendChild(item);
+            });
+        }
+
+        function resetGame() {
+            currentQ = 0;
+            score = 0;
+            userAnswers = [];
+            document.getElementById('quiz-final-result').classList.add('hidden');
+            renderQuestion();
+        }
+
+        // Initialize quiz on load
+        window.onload = function() {
+            renderQuestion();
+        };
+    </script>
+</body>
+</html>
