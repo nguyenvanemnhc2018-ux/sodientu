@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức Văn học - Con đường mùa đông</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f6ff',
+                            100: '#e0edff',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#0b132b',
+                        },
+                        amberAccent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$','$']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1120;
+            color: #f1f5f9;
+            min-height: 100vh;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s ease-in-out;
+        }
+        .glass-card:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-2px);
+            background: rgba(30, 41, 59, 0.75);
+        }
+        .option-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s ease;
+        }
+        .option-card:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+        .option-card.selected {
+            background: rgba(245, 158, 11, 0.12);
+            border-color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-900">
+
+    <!-- HEADER BAR -->
+    <header class="bg-[#0b1329] border-b border-slate-800/80 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500/10 p-2 rounded-lg text-amber-400 border border-amber-500/20">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-amber-100 font-bold text-lg sm:text-xl tracking-tight flex items-center gap-2">
+                        ÔN LUYỆN CỦNG CỐ KIẾN THỨC
+                    </h1>
+                    <div class="flex items-center gap-2 text-xs text-slate-400 font-medium">
+                        <span id="headerLessonName">Bài: CON ĐƯỜNG MÙA ĐÔNG (A. Pu-skin)</span>
+                        <span>•</span>
+                        <span>Thời gian: 20 phút</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson Selector & Mode Status -->
+            <div class="flex items-center gap-3">
+                <select id="lessonSelect" onchange="changeLesson(this.value)" class="bg-slate-900 text-amber-200 text-xs sm:text-sm font-semibold py-2 px-3 rounded-xl border border-slate-700/80 focus:outline-none focus:border-amber-500 cursor-pointer shadow-sm">
+                    <option value="conduongmuadong">Văn bản: Con đường mùa đông (A. Pu-skin)</option>
+                    <option value="tranggiang">Văn bản: Tràng giang (Huy Cận)</option>
+                    <option value="nhodong">Văn bản: Nhớ đồng (Tố Hữu)</option>
+                </select>
+
+                <div id="modeStatusBadge" class="bg-slate-900 border border-slate-700/80 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-inner">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                    <span id="modeStatusText">Chưa chọn chế độ</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+
+        <!-- VIEW 1: START SCREEN -->
+        <section id="startScreen" class="block space-y-8 my-auto max-w-5xl mx-auto w-full py-4">
+            <div class="text-center space-y-3">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/10 text-amber-400 mb-2 border border-amber-500/20 shadow-lg">
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-wide uppercase text-white">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p id="startSubtitle" class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-normal">
+                    Bộ câu hỏi chuẩn hóa gồm <strong class="text-amber-400">20 câu hỏi</strong> bám sát nội dung bài học <span id="startLessonTitle" class="text-amber-300 font-semibold underline decoration-amber-500/50 underline-offset-4">Con đường mùa đông (A. Pu-skin)</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- LEVEL DISTRIBUTION CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-2xl space-y-1.5 border-t-2 border-t-blue-500 shadow-md">
+                    <div class="text-xs font-extrabold uppercase tracking-wider text-blue-400">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Kiến thức lý thuyết, hoàn cảnh sáng tác, nhân vật, hình tượng chính của bài thơ.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl space-y-1.5 border-t-2 border-t-emerald-500 shadow-md">
+                    <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-400">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Giải thích ý nghĩa biểu tượng, sự tương phản nội tâm - ngoại cảnh và cảm xúc.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl space-y-1.5 border-t-2 border-t-amber-500 shadow-md">
+                    <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Phối hợp phân tích cấu tứ, liên hệ hoàn cảnh thời đại và giọng điệu thơ.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl space-y-1.5 border-t-2 border-t-rose-500 shadow-md">
+                    <div class="text-xs font-extrabold uppercase tracking-wider text-rose-400">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Triết lý nhân sinh, giá trị tượng trưng sâu sắc và bài học ứng xử cuộc sống.</p>
+                </div>
+            </div>
+
+            <!-- MODE SELECTION SECTION -->
+            <div class="space-y-4 pt-4">
+                <h3 class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">
+                    VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- PRACTICE MODE CARD -->
+                    <div onclick="startQuiz('practice')" class="glass-card p-6 rounded-2xl cursor-pointer hover:border-amber-500/60 group relative overflow-hidden flex flex-col justify-between shadow-lg">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
+                                    1. Chế độ Luyện Tập
+                                </h4>
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                                    Không giới hạn
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-medium">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-end text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
+                            Bắt đầu Luyện tập <i class="fa-solid fa-chevron-right ml-1.5"></i>
+                        </div>
+                    </div>
+
+                    <!-- TIMED MODE CARD -->
+                    <div onclick="startQuiz('timed')" class="glass-card p-6 rounded-2xl cursor-pointer hover:border-amber-500/60 group relative overflow-hidden flex flex-col justify-between shadow-lg">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
+                                    2. Chế độ Tính Giờ
+                                </h4>
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                                    20 Phút
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-medium">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-end text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
+                            Bắt đầu Tính giờ <i class="fa-solid fa-stopwatch ml-1.5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: QUIZ SCREEN -->
+        <section id="quizScreen" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start my-auto">
+
+            <!-- LEFT SIDEBAR: Question Grid & Control -->
+            <div class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+                <div class="glass-panel p-5 rounded-2xl space-y-4 shadow-2xl">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <h3 class="font-bold text-xs text-slate-300 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h3>
+                        <span id="answeredCountBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-amber-400 border border-slate-700">
+                            0 / 20 đã làm
+                        </span>
+                    </div>
+
+                    <!-- Timer Bar (Visible in Timed mode) -->
+                    <div id="timerContainer" class="hidden bg-amber-950/30 p-3 rounded-xl border border-amber-500/30 flex items-center justify-between">
+                        <span class="text-xs font-medium text-amber-200"><i class="fa-solid fa-clock mr-1.5"></i> Thời gian còn lại:</span>
+                        <span id="timerText" class="text-lg font-black text-amber-400 tracking-wider">20:00</span>
+                    </div>
+
+                    <!-- Question Buttons Grid -->
+                    <div id="questionGrid" class="grid grid-cols-5 gap-2 pt-1">
+                        <!-- JS generated 1 - 20 -->
+                    </div>
+
+                    <!-- Grid Legend -->
+                    <div class="space-y-2 pt-3 border-t border-slate-800 text-xs text-slate-400">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-3.5 h-3.5 rounded bg-slate-800 border border-slate-700 inline-block"></span>
+                            <span>Chưa trả lời</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-3.5 h-3.5 rounded bg-amber-600 inline-block"></span>
+                            <span>Đã chọn đáp án</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-3.5 h-3.5 rounded bg-blue-600 border border-blue-400 inline-block"></span>
+                            <span>Đang làm (Hiện tại)</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button onclick="submitQuizConfirm()" class="w-full mt-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 active:scale-95 text-sm">
+                        <i class="fa-solid fa-paper-plane"></i> Nộp Bài & Kết Thúc
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT MAIN PANEL: Active Question -->
+            <div class="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-2xl shadow-2xl flex flex-col justify-between min-h-[480px]">
+                <div class="space-y-6">
+                    <!-- Question Header -->
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <h2 class="text-lg sm:text-xl font-bold text-white">
+                                Câu <span id="currentQNum" class="text-amber-400">1</span> / 20
+                            </h2>
+                            <span id="currentQLevel" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                                Mức Biết
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Question Content -->
+                    <div id="questionText" class="text-base sm:text-lg font-medium text-slate-100 leading-relaxed">
+                        <!-- Question content -->
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div id="optionsContainer" class="space-y-3 pt-2">
+                        <!-- Options A, B, C, D -->
+                    </div>
+                </div>
+
+                <!-- Bottom Navigation Buttons -->
+                <div class="flex items-center justify-between border-t border-slate-800 pt-6 mt-8">
+                    <button id="prevBtn" onclick="prevQuestion()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold py-2.5 px-5 rounded-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2 text-xs sm:text-sm">
+                        <i class="fa-solid fa-chevron-left"></i> Câu Trước
+                    </button>
+
+                    <button onclick="clearCurrentSelection()" class="text-xs text-slate-400 hover:text-amber-400 transition-colors underline">
+                        Xóa lựa chọn câu này
+                    </button>
+
+                    <button id="nextBtn" onclick="nextQuestion()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-6 rounded-xl transition-all flex items-center gap-2 shadow-lg text-xs sm:text-sm">
+                        <span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: RESULT SCREEN -->
+        <section id="resultScreen" class="hidden space-y-8 my-auto max-w-4xl mx-auto w-full py-4">
+
+            <!-- RESULT BANNER -->
+            <div class="glass-panel p-6 sm:p-8 rounded-3xl text-center space-y-6 shadow-2xl relative overflow-hidden">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 shadow-inner">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-wide text-white">
+                        KẾT QUẢ BÀI KIỂM TRA
+                    </h2>
+                    <p id="resultModeLabel" class="text-xs text-amber-400/90 uppercase font-semibold tracking-widest mt-1">
+                        Chế độ LUYỆN TẬP
+                    </p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto pt-2">
+                    <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
+                        <div class="text-xs text-slate-400 font-medium">Điểm số</div>
+                        <div id="resScoreText" class="text-3xl font-black text-amber-400 mt-1">0.0 <span class="text-xs font-normal text-slate-400">/ 10.0</span></div>
+                    </div>
+                    <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
+                        <div class="text-xs text-slate-400 font-medium">Số câu đúng</div>
+                        <div id="resCorrectText" class="text-3xl font-black text-emerald-400 mt-1">0 <span class="text-xs font-normal text-slate-400">/ 20 câu</span></div>
+                    </div>
+                    <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
+                        <div class="text-xs text-slate-400 font-medium">Thời gian làm bài</div>
+                        <div id="resTimeText" class="text-2xl sm:text-3xl font-extrabold text-cyan-400 mt-1">--:--</div>
+                    </div>
+                </div>
+
+                <!-- Teacher Evaluation Box -->
+                <div class="bg-slate-900/90 p-5 rounded-2xl border border-amber-500/20 text-left space-y-2 max-w-2xl mx-auto">
+                    <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+                        <i class="fa-solid fa-comment-dots"></i> Đánh giá & Nhận xét từ Giáo viên:
+                    </div>
+                    <p id="teacherFeedback" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                        Chờ chấm điểm...
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="restartTest()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-xl shadow-lg transition-all flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-rotate-right"></i> Làm lại bài kiểm tra
+                    </button>
+                    <a href="#explanationsSection" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-xl transition-all flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-list-check"></i> Xem đáp án & Lời giải
+                    </a>
+                </div>
+            </div>
+
+            <!-- DETAILED EXPLANATION LIST -->
+            <div id="explanationsSection" class="space-y-6 pt-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical text-amber-400"></i> ĐÁP ÁN & LỜI GIẢI CHI TIẾT
+                    </h3>
+                    <span class="text-xs text-slate-400">20/20 câu hỏi</span>
+                </div>
+
+                <div id="explanationsList" class="space-y-6">
+                    <!-- JS generated detailed question explanation cards -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        /* QUESTION DATASETS */
+        const QUESTION_BANK = {
+            conduongmuadong: [
+                // 8 MỨC BIẾT
+                {
+                    id: 1,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Tác giả của bài thơ \\(\\text{\"Con đường mùa đông\"}\\) là đại biểu kiệt xuất nào của nền văn học Nga?",
+                    options: {
+                        A: "A-lếch-xan-đrơ Xéc-ghê-ê-vích Pu-skin (Aleksandr Sergeyevich Pushkin).",
+                        B: "Mô-đi-xi-ơ Phê-đo Đốt-xtôi-ép-xki (Fedor Dostoievsky).",
+                        C: "Lép Tô-lơ-stôi (Leo Tolstoy).",
+                        D: "Mô-ri-xơ Mác-xinh Gô-rơ-ki (Maxim Gorky)."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ \\(\\text{\"Con đường mùa đông\"}\\) do \"Mặt trời của thi ca Nga\" A.S. Pu-skin sáng tác năm 1826."
+                },
+                {
+                    id: 2,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Bài thơ \\(\\text{\"Con đường mùa đông\"}\\) được Pu-skin sáng tác vào khoảng thời gian nào trong cuộc đời ông?",
+                    options: {
+                        A: "Mùa đông năm 1826, sau khi cuộc khởi nghĩa Tháng Chạp bị dập tắt và ông vừa thụ hạn đi đày.",
+                        B: "Năm 1820, khi nhà thơ bắt đầu bị chính quyền Nga hoàng đày xuống Phương Nam.",
+                        C: "Năm 1837, ngay trước khi nhà thơ qua đời sau cuộc đấu súng danh dự.",
+                        D: "Năm 1815, khi Pu-skin còn học tại trường Trung học Hoàng gia."
+                    },
+                    correct: "A",
+                    explanation: "Cuối năm 1826, sau khi cuộc khởi nghĩa Tháng Chạp thất bại, Pu-skin đã sáng tác bài thơ thể hiện nỗi buồn riêng hòa vào nỗi buồn chung của thời đại."
+                },
+                {
+                    id: 3,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Trong bài thơ, phương tiện giao thông đặc trưng nào được xem là biểu tượng văn hóa cho nước Nga?",
+                    options: {
+                        A: "Xe tam mã (xe ba ngựa kéo).",
+                        B: "Tàu hỏa chạy bằng hơi nước.",
+                        C: "Thuyền gỗ xuôi dòng sông Vôn-ga.",
+                        D: "Xe trượt tuyết do chó kéo."
+                    },
+                    correct: "A",
+                    explanation: "Chú thích SGK nêu rõ: Xe tam mã (xe ba ngựa kéo) là thiết kế độc đáo và được nhìn nhận là biểu tượng cho nước Nga."
+                },
+                {
+                    id: 4,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Âm thanh đơn điệu, gõ nhịp mệt mỏi xuyên suốt con đường mùa đông được miêu tả qua hình ảnh nào?",
+                    options: {
+                        A: "Tiếng lục lạc (nhạc ngựa) đơn điệu rung lên.",
+                        B: "Tiếng gió hú qua rừng thông bạt ngàn.",
+                        C: "Tiếng chim hót lạc lỏng giữa bầu trời đêm.",
+                        D: "Tiếng xích sắt va vào nhau trên con đường tuyết."
+                    },
+                    correct: "A",
+                    explanation: "Âm thanh \"Lục lạc đơn điệu / Mệt mỏi rung lên\" (bản dịch thơ: \"Nhạc ngựa đều đều buồn tẻ / Đều đều khắc khoải lòng quê\") vang vọng qua không gian mùa đông tẻ ngắt."
+                },
+                {
+                    id: 5,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Nhân vật trữ tình trong bài thơ gửi gắm lời tâm sự và niềm mong ước đoàn tụ hướng tới ai?",
+                    options: {
+                        A: "Nhi-na (Nhina) - người em yêu thương.",
+                        B: "Người mẹ già nơi trang trại hẻo lánh.",
+                        C: "Những người bạn chiến đấu trong nhà tù.",
+                        D: "Người xà ích lặng yên thiu thiu ngủ."
+                    },
+                    correct: "A",
+                    explanation: "Khổ 5 và khổ 6 trực tiếp gọi tên: \"Ngày mai, Nhi-na (Nhina) / Ngày mai, về với em yêu thương...\"."
+                },
+                {
+                    id: 6,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Người đồng hành thực tế duy nhất cùng nhân vật trữ tình trên chuyến xe tam mã là ai?",
+                    options: {
+                        A: "Bác xà ích (người đánh xe).",
+                        B: "Một người lính gác biên thùy.",
+                        C: "Một người du khách lạ mặt.",
+                        D: "Người bạn thơ tri kỷ."
+                    },
+                    correct: "A",
+                    explanation: "Người đồng hành trực tiếp cùng tác giả trên xe là bác xà ích với những khúc ca ngân dài mênh mang."
+                },
+                {
+                    id: 7,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Chi tiết vật thể nhân tạo duy nhất xuất hiện giữa tuyết trắng và rừng bao la ngược chiều xe chạy là gì?",
+                    options: {
+                        A: "Những cột sọc chỉ đường (cột cây số).",
+                        B: "Những ngôi nhà gỗ sưởi ấm bên đường.",
+                        C: "Những quán trọ dừng chân cất tiếng hát.",
+                        D: "Những ngọn đèn đường lung linh."
+                    },
+                    correct: "A",
+                    explanation: "Tác giả miêu tả: \"Không một mái lều, ánh lửa... Tuyết trắng và rừng bao la... Chỉ những cột dài cây số / Bên đường sừng sững chào ta\"."
+                },
+                {
+                    id: 8,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Nhà văn Phê-đo Đốt-xtôi-ép-xki đã nhận định Pu-skin là duy nhất mang tiếng nói gì trong văn học Nga thế kỷ XIX?",
+                    options: {
+                        A: "Tiếng nói \"toàn nhân loại\".",
+                        B: "Tiếng nói \"đấu tranh giai cấp\".",
+                        C: "Tiếng nói \"thơ ca triết học\".",
+                        D: "Tiếng nói \"quý tộc lãng mạn\"."
+                    },
+                    correct: "A",
+                    explanation: "Theo tiểu dẫn SGK, Đốt-xtôi-ép-xki tôn vinh Pu-skin là người duy nhất nói tiếng nói mới - tiếng nói \"toàn nhân loại\" trong văn học Nga."
+                },
+
+                // 7 MỨC HIỂU
+                {
+                    id: 9,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Tác dụng nghệ thuật của bài ca người xà ích (\\(\\text{\"Lúc là trẩy hội tưng bừng / Lúc là nỗi buồn tâm tình...\"}\\)) đối với nhân vật trữ tình là gì?",
+                    options: {
+                        A: "Phản chiếu hai mặt cảm xúc của tâm hồn Nga (vừa vui tươi rộn rã vừa sầu thương man mác), đồng thời chia sẻ nỗi cô đơn với người du khách.",
+                        B: "Làm cho nhân vật trữ tình giật mình tỉnh giấc giữa đêm đông.",
+                        C: "Khẳng định tài năng ca hát kiệt xuất của những người nông dân lao động Nga.",
+                        D: "Giúp người đánh xe quên đi cơn buồn ngủ trên chặng đường xa."
+                    },
+                    correct: "A",
+                    explanation: "Khúc ca xà ích vừa gợi sự thân thuộc, vừa phản ánh hai cực tâm trạng của tâm hồn Nga giàu tình cảm, xua đi vẻ lạnh giá của ngoại cảnh."
+                },
+                {
+                    id: 10,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Sự tương phản giữa ngoại cảnh thiên nhiên và hình ảnh trong tâm tưởng ở khổ 5-6 thể hiện như thế nào?",
+                    options: {
+                        A: "Ngoại cảnh lạnh giá, vắng vẻ, u buồn đối lập hoàn toàn với tâm tưởng ấm áp bên lò sưởi, đắm say hạnh phúc bên người yêu Nhi-na.",
+                        B: "Ngoại cảnh rực rỡ nắng ấm đối lập với tâm tưởng u uất, đau khổ trong lòng tác giả.",
+                        C: "Ngoại cảnh ồn ào tưng bừng đối lập với tâm tưởng tĩnh lặng, cô đơn.",
+                        D: "Ngoại cảnh mờ sương đối lập với hình ảnh ngọn núi cao bạt ngàn."
+                    },
+                    correct: "A",
+                    explanation: "Giữa con đường tuyết trắng lạnh lẽo, tâm tưởng nhà thơ lại vượt qua không gian để hướng tới căn phòng ấm áp bên lò sưởi và ánh mắt của Nhi-na."
+                },
+                {
+                    id: 11,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Hình ảnh \\(\\text{\"Kim đồng hồ kêu tích tắc / Xoay đủ những vòng nhịp nhàng\"}\\) mang ý nghĩa nghệ thuật gì?",
+                    options: {
+                        A: "Đo đếm thời gian trôi qua, thể hiện niềm tin và sự chủ động chờ đón khoảnh khắc đoàn tụ nhịp nhàng sắp tới.",
+                        B: "Diễn tả sự vội vã, cuống cuồng của nhân vật trữ tình trước thời gian.",
+                        C: "Mô tả sự hư hỏng của chiếc đồng hồ trong đêm đông.",
+                        D: "Nhấn mạnh sự bế tắc, bất lực của con người trước quy luật tự nhiên."
+                    },
+                    correct: "A",
+                    explanation: "Tiếng kim đồng hồ quay nhịp nhàng là nhịp điệu của sự bình yên, hứa hẹn khoảnh khắc đới lứa sum vầy, xua đi lũ người tẻ ngắt."
+                },
+                {
+                    id: 12,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Sự xuất hiện của cụm từ \\(\\text{\"xua lũ người tẻ ngắt / Để ta bên nhau trong đêm\"}\\) bộc lộ mong ước gì của nhân vật trữ tình?",
+                    options: {
+                        A: "Mong ước có một không gian riêng tư tuyệt đối cho tình yêu, thoát khỏi những phiền toái và thị phi của thế giới xung quanh.",
+                        B: "Thái độ căm thù gay gắt đối với những người lính gác đêm.",
+                        C: "Mong muốn tổ chức một buổi tiệc đông người tại nhà Nhi-na.",
+                        D: "Khát khao trở thành một người sống ẩn dật hoàn toàn."
+                    },
+                    correct: "A",
+                    explanation: "Nhà thơ khao khao một thế giới tình yêu đích thực, trong sạch, xua đi những yếu tố tẻ ngắt của xã hội trần thế."
+                },
+                {
+                    id: 13,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Hình ảnh \\(\\text{\"lò sưởi / bên lò lửa đỏ\"}\\) mang ý nghĩa biểu tượng gì trong hành trình tâm tưởng?",
+                    options: {
+                        A: "Biểu tượng cho sự ấm áp, gia đình, hạnh phúc đoàn tụ và là chỗ dựa tinh thần xua tan băng giá cuộc đời.",
+                        B: "Chỉ đơn thuần là công cụ sưởi ấm vật lý trong mùa đông nước Nga.",
+                        C: "Tượng trưng cho ngọn lửa cách mạng bùng cháy.",
+                        D: "Biểu tượng cho sự nguy hiểm của hỏa hoạn trong đêm."
+                    },
+                    correct: "A",
+                    explanation: "Lò sưởi ấm áp là điểm tựa tinh thần đối lập với cái lạnh giá vô tận của \"con đường mùa đông\", giúp nhân vật trữ tình lấy lại cân bằng."
+                },
+                {
+                    id: 14,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Việc lặp lại các hình tượng ở khổ cuối (\\(\\text{\"đường xa vắng\", \"bác xà ích\", \"nhạc ngựa\", \"trăng nghiêng\"}\\)) có tác dụng gì đối với mạch cảm xúc?",
+                    options: {
+                        A: "Đưa nhân vật trở lại hiện thực chuyến đi, nhưng tâm thế đã bình thản, lắng đọng và cân bằng hơn sau khi gửi gắm tâm tưởng vào tương lai.",
+                        B: "Cho thấy nhân vật trữ tình hoàn toàn tuyệt vọng và quay lại trạng thái đau khổ ban đầu.",
+                        C: "Chứng tỏ bài thơ bị lặp từ và thiếu ý tưởng sáng tạo.",
+                        D: "Nhấn mạnh chuyến đi này sẽ không bao giờ có hồi kết."
+                    },
+                    correct: "A",
+                    explanation: "Khổ cuối khép lại vòng quay cấu tứ: quay về với hiện thực nhưng bằng một tâm thế bình thản, đón nhận cái buồn một cách nhẹ nhàng hơn."
+                },
+                {
+                    id: 15,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Sắc thái nỗi buồn trong thơ Pu-skin qua bài thơ này có đặc điểm nổi bật nào?",
+                    options: {
+                        A: "Nỗi buồn trong sáng, cao cả, không rơi vào tuyệt vọng hay ủy mị mà luôn chứa đựng sức sống và khát vọng hướng tới ánh sáng.",
+                        B: "Nỗi buồn thảm kịch, bế tắc và dẫn đến tư tưởng hư vô.",
+                        C: "Nỗi buồn hoài cổ, tiếc nuối những giá trị phong kiến đã qua.",
+                        D: "Nỗi buồn giả tạo chỉ mang tính chất trình diễn kỹ thuật thơ."
+                    },
+                    correct: "A",
+                    explanation: "Thơ Pu-skin luôn đạt tới sự cân bằng kỳ lạ: nỗi buồn không dồn con người vào bế tắc mà nâng đỡ tâm hồn hướng tới niềm tin và tình yêu."
+                },
+
+                // 3 VẬN DỤNG
+                {
+                    id: 16,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Nhận xét nào đánh giá đúng nhất về cấu tứ của bài thơ \\(\\text{\"Con đường mùa đông\"}\\)?",
+                    options: {
+                        A: "Cấu tứ dựa trên sự vận động: từ ngoại cảnh u buồn lạnh giá $\\rightarrow$ vượt thoát bằng thế giới tâm tưởng ấm áp hạnh phúc $\\rightarrow$ trở lại hiện thực với tâm thế cân bằng, chủ động.",
+                        B: "Cấu tứ tuyến tính miêu tả phong cảnh mùa đông từ sáng đến đêm muộn.",
+                        C: "Cấu tứ đối lập hoàn toàn giữa hai nhân vật Pu-skin và bác xà ích.",
+                        D: "Cấu tứ vòng tròn lặp lại cùng một tâm trạng tuyệt vọng từ đầu đến cuối."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ vận động qua 3 chặng: chìm trong cảnh thực cô đơn $\\rightarrow$ hóa giải bằng thế giới tâm tưởng bên Nhi-na $\\rightarrow$ trở về cảnh thực với cảm xúc cân bằng."
+                },
+
+                {
+                    id: 17,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Mối liên hệ giữa nỗi buồn riêng của nhà thơ và nỗi buồn chung của thời đại trong bài thơ được thể hiện như thế nào?",
+                    options: {
+                        A: "Nỗi buồn cô đơn trên đường đày ải cá nhân hòa quyện với nỗi buồn trầm lắng của nhân dân và trí thức Nga sau thất bại của cuộc khởi nghĩa năm 1826.",
+                        B: "Bài thơ chỉ thuần túy là câu chuyện tình yêu cá nhân không liên quan tới thời đại.",
+                        C: "Nhà thơ lên án gay gắt sự yếu kém của lực lượng khởi nghĩa.",
+                        D: "Nỗi buồn của tác giả hoàn toàn do ảnh hưởng của thời tiết mùa đông khắc nghiệt."
+                    },
+                    correct: "A",
+                    explanation: "Nỗi buồn cá nhân cô đơn trên hành trình mùa đông chứa đựng nhịp đập của thời đại: sự trầm lắng, đau thương sau khi cuộc khởi nghĩa Tháng Chạp bị dập tắt."
+                },
+                {
+                    id: 18,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Nghệ thuật sử dụng ngôn từ và hình ảnh trong bài thơ thể hiện đặc trưng phong cách thơ Pu-skin ở điểm nào?",
+                    options: {
+                        A: "Chính xác, giản dị, trong sáng, hàm súc; hình ảnh ngoại cảnh chuyên chở sự vận động ý thức tinh tế của nhân vật trữ tình.",
+                        B: "Cầu kỳ, hoa mỹ, sử dụng nhiều từ ngữ cổ đại khó hiểu.",
+                        C: "Sử dụng nhiều cấu trúc triết học phức tạp và trừu tượng.",
+                        D: "Mô phỏng hoàn toàn các quy tắc thơ cổ điển phương Đông."
+                    },
+                    correct: "A",
+                    explanation: "Phong cách Pu-skin nổi tiếng với sự giản dị, chính xác nhưng hàm súc, biến những hình ảnh đời thường thành phương tiện bộc lộ tâm hồn."
+                },
+
+                // 2 VẬN DỤNG CAO
+                {
+                    id: 19,
+                    level: "Vận dụng cao",
+                    levelCode: "high_apply",
+                    question: "Ý nghĩa tượng trưng sâu sắc nhất của hình tượng \\(\\text{\"Con đường mùa đông\"}\\) trong bài thơ là gì?",
+                    options: {
+                        A: "Biểu tượng cho hành trình gian khổ, lạnh giá và đầy thử thách của cuộc đời con người cũng như của lịch sử dân tộc Nga, qua đó khẳng định bản lĩnh vượt qua nghịch cảnh.",
+                        B: "Biểu tượng cho vẻ đẹp tuyệt mĩ của thiên nhiên xứ sở bạch dương.",
+                        C: "Biểu tượng cho sự cô lập vĩnh viễn không thể chữa lành của người nghệ sĩ.",
+                        D: "Biểu tượng cho sự tàn phá của thời tiết đối với cuộc sống người nông dân."
+                    },
+                    correct: "A",
+                    explanation: "Con đường mùa đông không chỉ là quãng đường địa lý mà là tượng trưng cho chặng đường chông gai của số phận và lịch sử, đòi hỏi bản lĩnh vượt qua."
+                },
+                {
+                    id: 20,
+                    level: "Vận dụng cao",
+                    levelCode: "high_apply",
+                    question: "Bài học triết lý nhân sinh mà Pu-skin gửi gắm qua bài thơ về cách lấy lại sự bình yên trên những \"con đường mùa đông\" của cuộc đời là gì?",
+                    options: {
+                        A: "Giữ vững niềm tin vào tương lai, nuôi dưỡng ngọn lửa ấm áp của tình yêu và chỗ dựa tinh thần để vượt qua sự lạnh giá, cô đơn của hoàn cảnh.",
+                        B: "Nên tìm cách trốn tránh thực tại và phủ nhận những khó khăn đang diễn ra.",
+                        C: "Chờ đợi sự giúp đỡ thụ động từ người khác mà không cần nỗ lực bản thân.",
+                        D: "Chấp nhận đầu hàng trước số phận và buông xôi mọi khát vọng."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ nhắn gửi thông điệp nhân văn: chính ngọn lửa tình yêu, niềm tin vào ngày mai sẽ giúp con người giữ vững sự bình yên và đi qua những mùa đông cuộc đời."
+                }
+            ],
+            tranggiang: [
+                // 8 MỨC BIẾT
+                {
+                    id: 1,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Bài thơ \\(\\text{\"Tràng giang\"}\\) của Huy Cận được rút từ tập thơ nào dưới đây?",
+                    options: {
+                        A: "\\(\\text{\"Lửa thiêng\"} \\ (1940)\\)",
+                        B: "\\(\\text{\"Trời mỗi ngày lại sáng\"} \\ (1958)\\)",
+                        C: "\\(\\text{\"Đất nở hoa\"} \\ (1960)\\)",
+                        D: "\\(\\text{\"Bài thơ cuộc đời\"} \\ (1963)\\)"
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ Tràng giang in trong tập Lửa thiêng (1940), tập thơ đầu tay tiêu biểu cho phong cách thơ Huy Cận trước Cách mạng."
+                },
+                {
+                    id: 2,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Lời đề từ của bài thơ \\(\\text{\"Tràng giang\"}\\) là câu thơ nào?",
+                    options: {
+                        A: "\\(\\text{\"Bâng khuâng trời rộng nhớ sông dài.\"}\\)",
+                        B: "\\(\\text{\"Sóng gợn tràng giang buồn điệp điệp.\"}\\)",
+                        C: "\\(\\text{\"Lòng quê dợn dợn với con nước.\"}\\)",
+                        D: "\\(\\text{\"Không khói hoàng hôn cũng nhớ nhà.\"}\\)"
+                    },
+                    correct: "A",
+                    explanation: "Lời đề từ do chính Huy Cận viết: Bâng khuâng trời rộng nhớ sông dài thâu tóm cảm hứng tác phẩm."
+                },
+                {
+                    id: 3,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Cảm hứng sáng tác bài thơ \\(\\text{\"Tràng giang\"}\\) được khơi dậy từ không gian địa lý nào?",
+                    options: {
+                        A: "Ngắm cảnh sông Hương tại xứ Huế mộng mơ.",
+                        B: "Ngắm cảnh mênh mang của sông Hồng ở vùng Chèm – Vẽ vào mùa thu năm 1939.",
+                        C: "Ngắm dải sông Mã cuồn cuộn cuộn dòng ở miền Tây Bắc.",
+                        D: "Ngắm dòng sông Thu Bồn trong những chiều nhạt nắng."
+                    },
+                    correct: "B",
+                    explanation: "Cảm hứng sáng tác khơi dậy khi tác giả tới ngắm cảnh mênh mang của sông Hồng ở Chèm - Vẽ mùa thu năm 1939."
+                },
+                {
+                    id: 4,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Tên gọi nguyên thủy ban đầu khi còn là bài thơ lục bát của \\(\\text{\"Tràng giang\"}\\) là gì?",
+                    options: {
+                        A: "\\(\\text{\"Chiều trên sông\"}\\)",
+                        B: "\\(\\text{\"Bến cô liêu\"}\\)",
+                        C: "\\(\\text{\"Nắng chiều sa\"}\\)",
+                        D: "\\(\\text{\"Lòng quê\"}\\)"
+                    },
+                    correct: "A",
+                    explanation: "Huy Cận cho biết Tràng giang lúc sơ khai là bài lục bát tên nguyên thủy là Chiều trên sông."
+                },
+                {
+                    id: 5,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Trong khổ thơ thứ hai, âm thanh duy nhất nào được tác giả nhắc tới qua câu thơ \\(\\text{\"Đâu tiếng làng xa vẫn chợ chiều\"}\\)?",
+                    options: {
+                        A: "Tiếng chim hót ríu rít.",
+                        B: "Tiếng sóng vỗ mạn thuyền.",
+                        C: "Tiếng chợ chiều đã vắng, mơ hồ ở làng xa.",
+                        D: "Tiếng cuốc kêu khắc khoải."
+                    },
+                    correct: "C",
+                    explanation: "Câu thơ gợi âm thanh mơ hồ, tàn vắng của buổi chợ chiều từ làng xa xăm làm tăng sự quạnh vắng."
+                },
+                {
+                    id: 6,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Nhà thơ Huy Cận sinh ra ở quê hương nào?",
+                    options: {
+                        A: "Xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên Huế.",
+                        B: "Xã Ân Phú, huyện Vũ Quang, tỉnh Hà Tĩnh.",
+                        C: "Huyện Kim Bảng, tỉnh Hà Nam.",
+                        D: "Huyện Nam Sách, tỉnh Hải Dương."
+                    },
+                    correct: "B",
+                    explanation: "Huy Cận (1919 – 2005) tên thật là Cù Huy Cận, quê ở Ân Phú, Vũ Quang, Hà Tĩnh."
+                },
+                {
+                    id: 7,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Hình ảnh nào xuất hiện ở cuối khổ 1 biểu tượng cho kiếp người nhỏ bé, trôi dạt giữa dòng đời?",
+                    options: {
+                        A: "Con thuyền xuôi mái.",
+                        B: "Bèo dạt hàng nối hàng.",
+                        C: "Củi một cành khô lạc mấy dòng.",
+                        D: "Bóng chiều sa."
+                    },
+                    correct: "C",
+                    explanation: "Hình ảnh củi một cành khô lạc mấy dòng biểu tượng cho thân phận nhỏ bé, vô định."
+                },
+                {
+                    id: 8,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Câu thơ \\(\\text{\"Không khói hoàng hôn cũng nhớ nhà\"}\\) ở cuối bài thơ gợi liên tưởng đến bài thơ cổ điển nổi tiếng nào?",
+                    options: {
+                        A: "\\(\\text{\"Hoàng Hạc lâu\"}\\) của Thôi Hiệu.",
+                        B: "\\(\\text{\"Tĩnh dạ tứ\"}\\) của Lý Bạch.",
+                        C: "\\(\\text{\"Thu hứng\"}\\) của Đỗ Phủ.",
+                        D: "\\(\\text{\"Phong Kiều dạ bô\"}\\) của Trương Kế."
+                    },
+                    correct: "A",
+                    explanation: "Câu thơ phát triển từ ý thơ bài Hoàng Hạc lâu của Thôi Hiệu (Yên ba giang thượng sử nhân sầu)."
+                },
+
+                // 7 MỨC HIỂU
+                {
+                    id: 9,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Nhan đề \\(\\text{\"Tràng giang\"}\\) mang lại hiệu quả nghệ thuật như thế nào so với từ \\(\\text{\"Sông dài\"}\\)?",
+                    options: {
+                        A: "Sử dụng từ Hán Việt với hai âm vần \"ang\" mở rộng gợi độ rộng lớn, mênh mang và không khí cổ kính, trang nghiêm.",
+                        B: "Chỉ đơn thuần miêu tả độ dài địa lý của dải sông Hồng.",
+                        C: "Tạo sự tò mò cho người đọc về một địa danh chưa từng có.",
+                        D: "Bản chất hai từ này hoàn toàn giống nhau về mặt sắc thái biểu cảm."
+                    },
+                    correct: "A",
+                    explanation: "Từ Hán Việt Tràng giang cùng hiệp vần ang tạo nên âm hưởng mênh mang, trầm hùng cổ kính."
+                },
+                {
+                    id: 10,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Tác dụng nghệ thuật của sự đối lập trong câu thơ \\(\\text{\"Nắng xuống, trời lên sâu chót vót\"}\\) là gì?",
+                    options: {
+                        A: "Gợi không gian chuyển động đa chiều: nắng hạ xuống, trời bốc cao lên, tạo ra chiều cao thăm thẳm và độ sâu rợn ngợp của vũ trụ.",
+                        B: "Nhấn mạnh cái nóng bức của buổi trưa hè trên dòng sông.",
+                        C: "Mô tả hiện tượng nhật thực diễn ra giữa lòng sông.",
+                        D: "Khẳng định sự chiến thắng của con người trước quy luật thiên nhiên."
+                    },
+                    correct: "A",
+                    explanation: "Cụm từ sâu chót vót mở rộng không gian theo cả chiều dọc, khiến vũ trụ thêm mênh mông cô đơn."
+                },
+                {
+                    id: 11,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Từ láy \\(\\text{\"dợn dợn\"}\\) trong câu \\(\\text{\"Lòng quê dợn dợn với con nước\"}\\) mang nét đặc sắc như thế nào?",
+                    options: {
+                        A: "Gợi những làn sóng nhẹ miên man trên mặt nước đồng thời là sự đợn dâng của nỗi nhớ quê hương sâu lắng.",
+                        B: "Diễn tả sự sợ hãi của nhân vật trữ tình trước cơn dông tố.",
+                        C: "Mô tả tiếng nước chảy siết qua khúc sông hẹp.",
+                        D: "Chỉ phản ứng vật lý của đôi chân khi chạm vào nước lạnh."
+                    },
+                    correct: "A",
+                    explanation: "Từ dợn dợn vừa gợi sóng nhẹ mặt sông vừa gợi nỗi nhớ nhà trào dâng rạo rực."
+                },
+                {
+                    id: 12,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Hình ảnh \\(\\text{\"Thuyền về nước lại, sầu trăm ngả\"}\\) thể hiện mối quan hệ thế nào giữa con người và cảnh vật?",
+                    options: {
+                        A: "Thuyền và nước chia rẽ, ngược dòng, gợi sự tan tác, chia ngả và nỗi sầu vô tận.",
+                        B: "Thuyền và nước gắn bó khăng khít cùng tiến về một hướng.",
+                        C: "Thuyền bị sóng nước nhấn chìm giữa lòng sông rộng.",
+                        D: "Con người làm chủ thiên nhiên, điều khiển con thuyền."
+                    },
+                    correct: "A",
+                    explanation: "Thuyền về nước lại gợi sự chia ly ngược ngả, khơi dậy nỗi sầu phân tán."
+                },
+                {
+                    id: 13,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Sự xuất hiện của các hình ảnh \\(\\text{\"không một chuyến đò ngang\"}\\), \\(\\text{\"không cầu\"}\\) ở khổ 3 mang ý nghĩa gì?",
+                    options: {
+                        A: "Nhấn mạnh sự tuyệt đối không có phương tiện kết nối đôi bờ, gợi sự cô lập, đứt gãy tình người và cô đơn rợn ngợp.",
+                        B: "Khẳng định sự thiếu thốn về cơ sở hạ tầng giao thông.",
+                        C: "Thể hiện ước mơ xây dựng những cây cầu hiện đại.",
+                        D: "Mô tả cảnh đẹp nguyên sơ chưa có bàn tay con người."
+                    },
+                    correct: "A",
+                    explanation: "Điệp từ không nhấn mạnh sự trống vắng, đứt gãy sự giao nối tình người."
+                },
+                {
+                    id: 14,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Điểm khác biệt giữa tâm trạng nhớ nhà của Huy Cận và Thôi Hiệu ở hai câu thơ cuối là gì?",
+                    options: {
+                        A: "Thôi Hiệu nhìn thấy khói sóng hoàng hôn mới nhớ nhà, còn Huy Cận không cần khói hoàng hôn vẫn dội trào nỗi nhớ nhà.",
+                        B: "Huy Cận nhớ nhà khi đang ở xa, Thôi Hiệu nhớ nhà khi ở quê.",
+                        C: "Thôi Hiệu không hề có nỗi nhớ quê hương.",
+                        D: "Huy Cận bị khói hoàng hôn làm cay mắt nên mới nhớ quê."
+                    },
+                    correct: "A",
+                    explanation: "Huy Cận bộc lộ lòng quê luôn thường trực, không cần cớ ngoại cảnh khói hoàng hôn."
+                },
+                {
+                    id: 15,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Hai câu thơ \\(\\text{\"Lớp lớp mây cao đùn núi bạc / Chim nghiêng cánh nhỏ: bóng chiều sa\"}\\) tạo nên sự đối lập nào?",
+                    options: {
+                        A: "Đối lập giữa sự hùng vĩ bao la của thiên nhiên và sự nhỏ bé cô đơn của cánh chim nghiêng bóng chiều.",
+                        B: "Đối lập giữa màu trắng của mây và màu xám của bóng chiều.",
+                        C: "Đối lập giữa âm thanh của chim và sự im lặng của mây.",
+                        D: "Đối lập giữa buổi sáng bình minh và buổi tối mịt mù."
+                    },
+                    correct: "A",
+                    explanation: "Sự đối lập giữa cái vô hạn hoành tráng của thiên nhiên với cái hữu hạn nhỏ bé của sinh thể."
+                },
+
+                // 3 VẬN DỤNG
+                {
+                    id: 16,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Sự kết hợp giữa chất cổ điển và hiện đại trong bài thơ \\(\\text{\"Tràng giang\"}\\) thể hiện ở điểm nào?",
+                    options: {
+                        A: "Sử dụng thi liệu Đường thi kết hợp với cái tôi lãng mạn hiện đại đầy cảm giác cô đơn, bơ vơ.",
+                        B: "Sử dụng thể thơ tự do hoàn toàn kết hợp từ ngữ cổ xưa.",
+                        C: "Đưa các phương tiện hiện đại vào phong cảnh cổ kính.",
+                        D: "Chỉ thuần túy bắt chước thi liệu cổ."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ mang vẻ đẹp cổ điển Đường thi kết hợp với cái tôi lãng mạn hiện đại."
+                },
+                {
+                    id: 17,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Nỗi buồn trong bài thơ \\(\\text{\"Tràng giang\"}\\) ẩn chứa bản chất tình cảm nào của thanh niên thời bấy giờ?",
+                    options: {
+                        A: "Lòng yêu quê hương đất nước tha thiết ẩn đằng sau nỗi sầu nhân thế và sự bơ vơ của kiếp người.",
+                        B: "Nỗi buồn gắn liền với sự căm hờn giặc.",
+                        C: "Nỗi chán nản Muốn xa rời thực tế.",
+                        D: "Sự tuyệt vọng bế tắc dẫn đến hư vô."
+                    },
+                    correct: "A",
+                    explanation: "Nỗi buồn cô đơn là cái cớ bộc lộ tình yêu quê hương đất nước tha thiết thầm kín."
+                },
+                {
+                    id: 18,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Cấu tứ bài thơ \\(\\text{\"Tràng giang\"}\\) phát triển theo nguyên tắc tâm trạng nào?",
+                    options: {
+                        A: "Từ nhìn bao quát sông rộng đến tìm kiếm dấu vết sự sống thất bại, dẫn đến dội trào nỗi nhớ nhà.",
+                        B: "Từ tâm trạng vui tươi chuyển sang nỗi buồn thảm kịch.",
+                        C: "Từ nhớ gia đình mở rộng ra tình yêu thiên nhiên.",
+                        D: "Theo trình tự từ đêm khuya đến sáng sớm."
+                    },
+                    correct: "A",
+                    explanation: "Cấu tứ mở rộng không gian và nỗi cô đơn dẫn tới dội trào lòng quê."
+                },
+
+                // 2 VẬN DỤNG CAO
+                {
+                    id: 19,
+                    level: "Vận dụng cao",
+                    levelCode: "high_apply",
+                    question: "Yếu tố tượng trưng trong bài thơ \\(\\text{\"Tràng giang\"}\\) thể hiện sâu sắc nhất qua chi tiết nào?",
+                    options: {
+                        A: "Hình ảnh cành củi khô trôi nổi và cánh chim nghiêng biểu tượng cho số phận kiếp người bơ vơ lạc lỏng.",
+                        B: "Hình ảnh bãi cát vàng kéo dài.",
+                        C: "Hình ảnh tiếng chợ chiều tan vắng.",
+                        D: "Hình ảnh mây trắng bay rải rác."
+                    },
+                    correct: "A",
+                    explanation: "Cành củi khô và cánh chim nhỏ trở thành tượng trưng cho cái tôi cá nhân nhỏ bé bơ vơ."
+                },
+                {
+                    id: 20,
+                    level: "Vận dụng cao",
+                    levelCode: "high_apply",
+                    question: "Nhận định nào đánh giá chính xác nhất giá trị tư tưởng triết lý nhân sinh của \\(\\text{\"Tràng giang\"}\\)?",
+                    options: {
+                        A: "Phản ánh sự đối lập triết học giữa sự hữu hạn của con người với sự vô hạn của vũ trụ, qua đó thức tỉnh tình yêu quê hương.",
+                        B: "Khuyên con người nên về sống ẩn dật với thiên nhiên.",
+                        C: "Khẳng định sự bất lực của thơ ca trước thiên nhiên.",
+                        D: "Sao chép nguyên mẫu thơ Đường không tạo giá trị mới."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ thể hiện chiều sâu suy tưởng triết lý về kiếp người và ký thác bài ca yêu nước."
+                }
+            ],
+            nhodong: [
+                // 8 MỨC BIẾT
+                {
+                    id: 1,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Bài thơ \\(\\text{\"Nhớ đồng\"}\\) của Tố Hữu được sáng tác trong hoàn cảnh nào?",
+                    options: {
+                        A: "Khi tác giả bị thực dân Pháp bắt giam ở nhà lao Thừa Phủ (Thừa Thiên Huế).",
+                        B: "Khi tác giả đang hoạt động bí mật tại chiến khu Việt Bắc.",
+                        C: "Sau khi Cách mạng tháng Tám thành công tại Hà Nội.",
+                        D: "Trong chuyến đi công tác thực tế tại vùng đồng bằng Bắc Bộ."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ được viết khi tác giả bị giam ở nhà lao Thừa Phủ tháng 7/1939."
+                },
+                {
+                    id: 2,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Bài thơ \\(\\text{\"Nhớ đồng\"}\\) có đề tặng người bạn chiến đấu nào của Tố Hữu?",
+                    options: {
+                        A: "Tặng Vịnh (tức Nguyễn Vịnh - Đại tướng Nguyễn Chí Thanh).",
+                        B: "Tặng Đồng chí Trường Chinh.",
+                        C: "Tặng Nhà thơ Xuân Diệu.",
+                        D: "Tặng Nhà văn Nguyễn Tuân."
+                    },
+                    correct: "A",
+                    explanation: "Lời tặng Vịnh tức Đại tướng Nguyễn Chí Thanh, bạn chiến đấu của Tố Hữu."
+                },
+                {
+                    id: 3,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Sau Cách mạng tháng Tám thành công, bài thơ được đưa vào tập thơ nào của Tố Hữu?",
+                    options: {
+                        A: "Tập thơ \\(\\text{\"Từ ấy\"}\\) (ban đầu mang nhan đề \\(\\text{\"Thơ\"}\\) - 1946).",
+                        B: "Tập thơ \\(\\text{\"Việt Bắc\"}\\) (1954).",
+                        C: "Tập thơ \\(\\text{\"Gió lộng\"}\\) (1961).",
+                        D: "Tập thơ \\(\\text{\"Ra trận\"}\\) (1972)."
+                    },
+                    correct: "A",
+                    explanation: "Bài thơ thuộc tập Thơ (1946), sau đổi tên thành Từ ấy."
+                },
+                {
+                    id: 4,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Âm thanh nào khơi nguồn trực tiếp cho niềm thương nhớ đồng quê của người tù?",
+                    options: {
+                        A: "Tiếng hò hiu quạnh vang lên trong tiếng xe lùa nước.",
+                        B: "Tiếng chim sơn ca hót ríu rít.",
+                        C: "Tiếng mưa rơi trên mái nhà tù.",
+                        D: "Tiếng bước chân của người lính gác."
+                    },
+                    correct: "A",
+                    explanation: "Âm thanh tiếng hò hiu quạnh giữa trưa khơi gợi kỷ niệm đồng quê."
+                },
+                {
+                    id: 5,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Từ nào được lặp lại nhiều lần nhất trong cấu tử bài thơ để diễn tả sự tìm kiếm khắc khoải?",
+                    options: {
+                        A: "Từ \\(\\text{\"Đâu\"}\\)",
+                        B: "Từ \\(\\text{\"Sao\"}\\)",
+                        C: "Từ \\(\\text{\"Khi\"}\\)",
+                        D: "Từ \\(\\text{\"Ai\"}\\)"
+                    },
+                    correct: "A",
+                    explanation: "Điệp từ Đâu lặp lại liên tục thể hiện sự khắc khoải tìm kiếm."
+                },
+                {
+                    id: 6,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Tố Hữu được tôn vinh với danh hiệu nghệ thuật nào trong nền thơ ca Việt Nam?",
+                    options: {
+                        A: "\"Lá cờ đầu\" của nền thơ cách mạng Việt Nam nửa sau thế kỷ XX.",
+                        B: "Nhà thơ lãng mạn nhất trong phong trào Thơ mới.",
+                        C: "Ông hoàng của thơ tình yêu Việt Nam.",
+                        D: "Nhà thơ của quê hương đồng ruộng miền Nam."
+                    },
+                    correct: "A",
+                    explanation: "Tố Hữu là lá cờ đầu của nền thơ cách mạng Việt Nam."
+                },
+                {
+                    id: 7,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Hình ảnh người nông dân được miêu tả qua chi tiết vẻ đẹp lao động nào?",
+                    options: {
+                        A: "\\(\\text{\"Lưng cong xuống luống cày\"}\\) và bàn tay \\(\\text{\"vãi giống tung trời\"}\\).",
+                        B: "Gánh lúa nặng trĩu trên đường làng.",
+                        C: "Chèo thuyền vớt bèo trên sông.",
+                        D: "Dệt vải bên khung cửi."
+                    },
+                    correct: "A",
+                    explanation: "Vẻ đẹp cần tụy: Lưng cong xuống luống cày... Vãi giống tung trời những sớm mai."
+                },
+                {
+                    id: 8,
+                    level: "Mức Biết",
+                    levelCode: "know",
+                    question: "Trong bài thơ, loài chim nào tượng trưng cho tinh thần tự do say mê ca hát?",
+                    options: {
+                        A: "Chim cà lơi (chim chiền chiện / sơn ca).",
+                        B: "Chim hải âu.",
+                        C: "Chim hốt chao.",
+                        D: "Chim én."
+                    },
+                    correct: "A",
+                    explanation: "Chim cà lơi xuất hiện với hình ảnh say đồng hương nắng vui ca hát."
+                },
+
+                // 7 MỨC HIỂU
+                {
+                    id: 9,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Nghĩa của từ \\(\\text{\"đồng\"}\\) trong nhan đề \\(\\text{\"Nhớ đồng\"}\\) nên được hiểu thế nào?",
+                    options: {
+                        A: "Không chỉ là đồng ruộng quê hương mà còn là đồng bào, đồng chí và cuộc sống tự do.",
+                        B: "Chỉ đơn thuần là những thửa ruộng trồng khoai sắn.",
+                        C: "Chỉ là đồng tiền tích lũy của người dân.",
+                        D: "Chỉ là đồng bãi hoang vu."
+                    },
+                    correct: "A",
+                    explanation: "Đồng vừa là đồng ruộng vừa là đồng bào, đồng chí."
+                },
+                {
+                    id: 10,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Các khổ thơ 1, 4, 7, 13 có nét đặc biệt gì về cấu trúc câu thơ điệp khúc?",
+                    options: {
+                        A: "Lặp lại câu hỏi cảm thán \\(\\text{\"Gì sâu bằng những trưa thương nhớ / Hiu quạnh bên trong một tiếng hò!\"}\\).",
+                        B: "Thay đổi hoàn toàn nội dung từ ngữ.",
+                        C: "Không sử dụng từ trùng lặp.",
+                        D: "Sử dụng toàn câu kể miêu tả."
+                    },
+                    correct: "A",
+                    explanation: "Các khổ điệp khúc kiến tạo nhịp điệu dồn dập nhấn mạnh nỗi hiu quạnh."
+                },
+                {
+                    id: 11,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Tác dụng của việc luân phiên các câu hỏi, câu cảm và câu kể trong bài thơ là gì?",
+                    options: {
+                        A: "Diễn tả trọn vẹn các cung bậc cảm xúc từ băn khoăn đến xót xa và bùng nổ khát vọng tự do.",
+                        B: "Làm bài thơ kéo dài ra.",
+                        C: "Gây rối rắm cho người đọc.",
+                        D: "Chỉ để tuân thủ quy tắc gieo vần."
+                    },
+                    correct: "A",
+                    explanation: "Sự đan cài linh hoạt bộc lộ tâm trạng dội trào mãnh liệt."
+                },
+                {
+                    id: 12,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Hình ảnh người mẹ già trong câu thơ \\(\\text{\"Ôi mẹ già xa đơn chiếc ơi!\"}\\) gợi cảm xúc gì?",
+                    options: {
+                        A: "Sự xót xa, thương cảm trước hình bóng người mẹ quê cô đơn, chất phác, dãi nắng dầm mưa.",
+                        B: "Trách móc mẹ không vào thăm.",
+                        C: "Kiêu hãnh vì mẹ có con làm cách mạng.",
+                        D: "Sợ hãi trước tuổi già."
+                    },
+                    correct: "A",
+                    explanation: "Gợi tình thương yêu mẹ già nghèo khó cô đơn sâu sắc."
+                },
+                {
+                    id: 13,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Sự phát triển cái tôi trữ tình từ \\(\\text{\"băn khoăn đi kiếm lẽ yêu đời\"}\\) đến khi gặp lý tưởng có ý nghĩa gì?",
+                    options: {
+                        A: "Đánh dấu bước ngoặt thức tỉnh lý tưởng, giúp người thanh niên thoát khỏi sự quẩn quanh bế tắc.",
+                        B: "Cho thấy ngày càng rơi vào tuyệt vọng.",
+                        C: "Thể hiện ý định từ bỏ cách mạng.",
+                        D: "Mô tả sự trưởng thành thể chất."
+                    },
+                    correct: "A",
+                    explanation: "Sự biến chuyển sang cái tôi bắt gặp ánh sáng lý tưởng cách mạng."
+                },
+                {
+                    id: 14,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Cụm từ \\(\\text{\"bùn hi vọng nức hương ngây\"}\\) chứa đựng nét nghệ thuật độc đáo nào?",
+                    options: {
+                        A: "Biến bùn đất lầy lội thành biểu tượng cho mầm sống, niềm tin và hi vọng tương lai.",
+                        B: "Mô tả mùi hương hoa sen.",
+                        C: "Chê bai sự bẩn thỉu của đồng ruộng.",
+                        D: "Nói giảm nói tránh."
+                    },
+                    correct: "A",
+                    explanation: "Bùn hi vọng là ẩn dụ lãng mạn cách mạng nẩy nở niềm tin."
+                },
+                {
+                    id: 15,
+                    level: "Mức Hiểu",
+                    levelCode: "understand",
+                    question: "Thế giới cảm xúc trong bài thơ được liên kết bởi trục tâm trạng chủ đạo nào?",
+                    options: {
+                        A: "Từ nhớ cảnh sắc $\\rightarrow$ nhớ người lao động $\\rightarrow$ nhớ thời tìm đường $\\rightarrow$ khát vọng tự do.",
+                        B: "Từ niềm vui chiến thắng sang nỗi buồn bại trận.",
+                        C: "Từ tình yêu lứa đôi sang tình gia đình.",
+                        D: "Từ căm thù giặc sang yêu thiên nhiên."
+                    },
+                    correct: "A",
+                    explanation: "Mạch cảm xúc phát triển nhất quán từ hiện thực tù đày tới khát vọng tự do."
+                },
+
+                // 3 VẬN DỤNG
+                {
+                    id: 16,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Nét đặc sắc phong cách thơ Tố Hữu qua bài thơ \\(\\text{\"Nhớ đồng\"}\\) là gì?",
+                    options: {
+                        A: "Sự kết hợp nhuần nhị giữa nhạc điệu dân tộc ngọt ngào với tinh thần chiến sĩ cách mạng lãng mạn.",
+                        B: "Sử dụng nhiều từ ngữ Âu hóa.",
+                        C: "Giọng thơ châm biếm đả kích.",
+                        D: "Bút pháp tả thực lạnh lùng."
+                    },
+                    correct: "A",
+                    explanation: "Thơ Tố Hữu đậm đà tính dân tộc kết hợp nhiệt huyết cách mạng."
+                },
+                {
+                    id: 17,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Sự đối lập giữa \\(\\text{\"nhà lao chật hẹp\"}\\) và \\(\\text{\"chín tầng cao bát ngát trời\"}\\) thể hiện điều gì?",
+                    options: {
+                        A: "Khát vọng tự do mãnh liệt và tinh thần không chịu khuất phục của người chiến sĩ.",
+                        B: "Ước mơ làm nhà thiên văn học.",
+                        C: "Nuối tiếc chuyến du lịch.",
+                        D: "Lẩn tránh thực tại đấu tranh."
+                    },
+                    correct: "A",
+                    explanation: "Bật nổi ý chí khát khao phá tan xiềng xích trở về với nhân dân."
+                },
+                {
+                    id: 18,
+                    level: "Vận dụng",
+                    levelCode: "apply",
+                    question: "Bài học về lẽ sống cho thế hệ trẻ qua bài thơ \\(\\text{\"Nhớ đồng\"}\\) là gì?",
+                    options: {
+                        A: "Sống có lý tưởng, biết yêu quê hương và sẵn sàng dấn thân vì mục tiêu cao đẹp.",
+                        B: "Chỉ tập trung lợi ích cá nhân.",
+                        C: "Thờ ơ trước khó khăn đất nước.",
+                        D: "Tìm cách sống an nhàn."
+                    },
+                    correct: "A",
+                    explanation: "Tấm gương về tinh thần dấn thân vì lý tưởng cao đẹp."
+                },
+
+                // 2 VẬN DỤNG CAO
+                {
+                    id: 19,
+                    level: "Vận dụng cao",
+                    levelCode: "high_apply",
+                    question: "Hình ảnh \\(\\text{\"cánh chim buồn nhớ gió mây\"}\\) ở cuối bài thơ mang tính tượng trưng như thế nào?",
+                    options: {
+                        A: "Tượng trưng cho tâm trạng bị giam cầm ngột ngạt, luôn hướng về môi trường tự do và phong trào đấu tranh.",
+                        B: "Tượng trưng cho sự kiệt sức của loài chim di cư.",
+                        C: "Biểu tượng cho nỗi sợ bão lớn.",
+                        D: "Tượng trưng chia ly vĩnh viễn."
+                    },
+                    correct: "A",
+                    explanation: "Cánh chim nhớ gió mây tượng trưng cho người chiến sĩ luôn hướng về tự do."
+                },
+                {
+                    id: 20,
+                    level: "Vận dụng cao",
+                    levelCode: "high_apply",
+                    question: "Mối liên hệ giữa tình cảm quê hương và lý tưởng cách mạng trong bài thơ được đánh giá thế nào?",
+                    options: {
+                        A: "Tình yêu quê hương nuôi dưỡng lý tưởng cách mạng, và lý tưởng soi sáng nâng cao tình yêu quê hương thành hành động đấu tranh.",
+                        B: "Mâu thuẫn triệt tiêu lẫn nhau.",
+                        C: "Lý tưởng làm quên đi quê hương.",
+                        D: "Tình cảm quê hương chỉ là cớ giải trí."
+                    },
+                    correct: "A",
+                    explanation: "Tình yêu đồng ruộng nhân dân gắn liền hữu cơ với lý tưởng cách mạng."
+                }
+            ]
+        };
+
+        /* APP STATE */
+        let currentLessonKey = "conduongmuadong";
+        let activeQuestions = [];
+        let currentMode = "practice"; // 'practice' or 'timed'
+        let currentQuestionIdx = 0;
+        let userAnswers = {}; // { qIndex: 'A'|'B'|'C'|'D' }
+        let timerInterval = null;
+        let timeRemainingSeconds = 20 * 60; // 20 mins
+        let timeSpentSeconds = 0;
+
+        /* INITIALIZATION */
+        window.addEventListener('DOMContentLoaded', () => {
+            initApp();
+        });
+
+        function initApp() {
+            document.getElementById('lessonSelect').value = currentLessonKey;
+            updateLessonTitleUI();
+        }
+
+        function changeLesson(newLessonKey) {
+            currentLessonKey = newLessonKey;
+            updateLessonTitleUI();
+            showView('startScreen');
+            resetQuizState();
+        }
+
+        function updateLessonTitleUI() {
+            let lessonName = "CON ĐƯỜNG MÙA ĐÔNG (A. Pu-skin)";
+            if (currentLessonKey === "tranggiang") lessonName = "TRÀNG GIANG (Huy Cận)";
+            if (currentLessonKey === "nhodong") lessonName = "NHỚ ĐỒNG (Tố Hữu)";
+
+            document.getElementById('headerLessonName').textContent = `Bài: ${lessonName}`;
+            document.getElementById('startLessonTitle').textContent = `${lessonName}`;
+        }
+
+        function showView(viewId) {
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+
+            document.getElementById(viewId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* START QUIZ */
+        function startQuiz(mode) {
+            currentMode = mode;
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            timeSpentSeconds = 0;
+
+            let rawQuestions = JSON.parse(JSON.stringify(QUESTION_BANK[currentLessonKey]));
+
+            if (mode === 'timed') {
+                activeQuestions = shuffleArray(rawQuestions);
+                activeQuestions.forEach(q => {
+                    q.options = shuffleOptions(q.options, q);
+                });
+                timeRemainingSeconds = 20 * 60; // 20 mins
+                startTimer();
+                document.getElementById('timerContainer').classList.remove('hidden');
+                document.getElementById('modeStatusBadge').className = "bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-inner";
+                document.getElementById('modeStatusText').textContent = "Chế độ TÍNH GIỜ";
+            } else {
+                activeQuestions = rawQuestions;
+                stopTimer();
+                document.getElementById('timerContainer').classList.add('hidden');
+                document.getElementById('modeStatusBadge').className = "bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-inner";
+                document.getElementById('modeStatusText').textContent = "Chế độ LUYỆN TẬP";
+            }
+
+            renderQuestionGrid();
+            renderQuestion(0);
+            showView('quizScreen');
+            reprocessMathJax();
+        }
+
+        function shuffleArray(arr) {
+            let array = [...arr];
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function shuffleOptions(optionsObj, qObj) {
+            const keys = ['A', 'B', 'C', 'D'];
+            const correctKey = qObj.correct;
+            const correctText = optionsObj[correctKey];
+
+            const texts = keys.map(k => optionsObj[k]);
+            const shuffledTexts = shuffleArray(texts);
+
+            const newOptions = {};
+            let newCorrectKey = 'A';
+
+            keys.forEach((key, idx) => {
+                newOptions[key] = shuffledTexts[idx];
+                if (shuffledTexts[idx] === correctText) {
+                    newCorrectKey = key;
+                }
+            });
+
+            qObj.correct = newCorrectKey;
+            return newOptions;
+        }
+
+        /* RENDER QUESTION GRID SIDEBAR */
+        function renderQuestionGrid() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+
+            for (let i = 0; i < activeQuestions.length; i++) {
+                const btn = document.createElement('button');
+                btn.id = `qGridBtn_${i}`;
+                btn.onclick = () => jumpToQuestion(i);
+                btn.className = getGridBtnClass(i);
+                btn.innerText = i + 1;
+                grid.appendChild(btn);
+            }
+            updateAnsweredBadge();
+        }
+
+        function getGridBtnClass(idx) {
+            const isCurrent = idx === currentQuestionIdx;
+            const isAnswered = userAnswers[idx] !== undefined;
+
+            let base = "w-full aspect-square rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center transition-all ";
+
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white border-2 border-blue-400 ring-2 ring-blue-500/40 shadow-lg scale-105";
+            } else if (isAnswered) {
+                return base + "bg-amber-600 hover:bg-amber-500 text-white shadow";
+            } else {
+                return base + "bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-800";
+            }
+        }
+
+        function updateQuestionGridUI() {
+            for (let i = 0; i < activeQuestions.length; i++) {
+                const btn = document.getElementById(`qGridBtn_${i}`);
+                if (btn) btn.className = getGridBtnClass(i);
+            }
+            updateAnsweredBadge();
+        }
+
+        function updateAnsweredBadge() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answeredCountBadge').textContent = `${count} / 20 đã làm`;
+        }
+
+        /* RENDER ACTIVE QUESTION */
+        function renderQuestion(idx) {
+            currentQuestionIdx = idx;
+            const q = activeQuestions[idx];
+
+            document.getElementById('currentQNum').textContent = idx + 1;
+            document.getElementById('currentQLevel').textContent = q.level;
+
+            const levelBadge = document.getElementById('currentQLevel');
+            if (q.levelCode === 'know') {
+                levelBadge.className = "text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20";
+            } else if (q.levelCode === 'understand') {
+                levelBadge.className = "text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
+            } else if (q.levelCode === 'apply') {
+                levelBadge.className = "text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20";
+            } else {
+                levelBadge.className = "text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20";
+            }
+
+            document.getElementById('questionText').innerHTML = q.question;
+
+            // Options
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            const keys = ['A', 'B', 'C', 'D'];
+            const userSelected = userAnswers[idx];
+
+            keys.forEach(key => {
+                const optCard = document.createElement('div');
+                const isSelected = userSelected === key;
+
+                optCard.className = `option-card p-4 rounded-xl cursor-pointer flex items-center gap-3.5 ${isSelected ? 'selected' : ''}`;
+                optCard.onclick = () => selectOption(idx, key);
+
+                optCard.innerHTML = `
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs ${isSelected ? 'bg-amber-500 text-slate-950 font-black' : 'bg-slate-800/90 text-slate-300 border border-slate-700'}">
+                        ${key}
+                    </div>
+                    <div class="flex-1 text-xs sm:text-sm font-normal text-slate-200 leading-relaxed">
+                        ${q.options[key]}
+                    </div>
+                `;
+                container.appendChild(optCard);
+            });
+
+            // Nav buttons
+            document.getElementById('prevBtn').disabled = (idx === 0);
+
+            const nextBtn = document.getElementById('nextBtn');
+            if (idx === activeQuestions.length - 1) {
+                nextBtn.innerHTML = `<span>Nộp Bài</span> <i class="fa-solid fa-check-double ml-1"></i>`;
+                nextBtn.onclick = submitQuizConfirm;
+            } else {
+                nextBtn.innerHTML = `<span>Câu Tiếp</span> <i class="fa-solid fa-chevron-right ml-1"></i>`;
+                nextBtn.onclick = nextQuestion;
+            }
+
+            updateQuestionGridUI();
+            reprocessMathJax();
+        }
+
+        function selectOption(qIdx, optionKey) {
+            userAnswers[qIdx] = optionKey;
+            renderQuestion(qIdx);
+        }
+
+        function clearCurrentSelection() {
+            delete userAnswers[currentQuestionIdx];
+            renderQuestion(currentQuestionIdx);
+        }
+
+        function jumpToQuestion(idx) {
+            renderQuestion(idx);
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIdx < activeQuestions.length - 1) {
+                renderQuestion(currentQuestionIdx + 1);
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIdx > 0) {
+                renderQuestion(currentQuestionIdx - 1);
+            }
+        }
+
+        /* TIMER LOGIC */
+        function startTimer() {
+            stopTimer();
+            timerInterval = setInterval(() => {
+                timeRemainingSeconds--;
+                timeSpentSeconds++;
+
+                if (timeRemainingSeconds <= 0) {
+                    stopTimer();
+                    alert("Đã hết thời gian làm bài 20 phút! Hệ thống sẽ tự động nộp bài.");
+                    finishQuiz();
+                } else {
+                    updateTimerDisplay();
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeRemainingSeconds / 60);
+            const s = timeRemainingSeconds % 60;
+            const formatted = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            document.getElementById('timerText').textContent = formatted;
+        }
+
+        /* SUBMIT & SCORE COMPUTATION */
+        function submitQuizConfirm() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const total = activeQuestions.length;
+
+            if (answeredCount < total) {
+                const confirmSubmit = window.confirm(`Bạn mới trả lời ${answeredCount}/${total} câu hỏi. Bạn có chắc chắn muốn nộp bài không?`);
+                if (!confirmSubmit) return;
+            }
+            finishQuiz();
+        }
+
+        function finishQuiz() {
+            stopTimer();
+
+            let correctCount = 0;
+            activeQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = ((correctCount / activeQuestions.length) * 10).toFixed(1);
+
+            document.getElementById('resScoreText').innerHTML = `${score} <span class="text-xs font-normal text-slate-400">/ 10.0</span>`;
+            document.getElementById('resCorrectText').innerHTML = `${correctCount} <span class="text-xs font-normal text-slate-400">/ ${activeQuestions.length} câu</span>`;
+
+            if (currentMode === 'timed') {
+                const m = Math.floor(timeSpentSeconds / 60);
+                const s = timeSpentSeconds % 60;
+                document.getElementById('resTimeText').textContent = `${m}p ${s}s`;
+                document.getElementById('resultModeLabel').textContent = "Chế độ TÍNH GIỜ (20 phút)";
+            } else {
+                document.getElementById('resTimeText').textContent = "Không giới hạn";
+                document.getElementById('resultModeLabel').textContent = "Chế độ LUYỆN TẬP";
+            }
+
+            const feedbackText = getTeacherFeedback(parseFloat(score));
+            document.getElementById('teacherFeedback').textContent = feedbackText;
+
+            renderExplanationsList();
+
+            showView('resultScreen');
+            reprocessMathJax();
+        }
+
+        function getTeacherFeedback(score) {
+            let lessonTitle = "Con đường mùa đông";
+            if (currentLessonKey === "tranggiang") lessonTitle = "Tràng giang";
+            if (currentLessonKey === "nhodong") lessonTitle = "Nhớ đồng";
+
+            if (score >= 9.0) {
+                return `Xuất sắc! Em đã nắm rất vững toàn bộ kiến thức lý thuyết, nội dung tư tưởng và các yếu tố nghệ thuật đặc sắc của bài học ${lessonTitle}. Hãy tiếp tục phát huy năng lực phân tích văn học này nhé!`;
+            } else if (score >= 7.0) {
+                return `Kết quả rất tốt! Em đã hiểu sâu bài học ${lessonTitle} và xử lý tốt các câu hỏi Vận dụng. Hãy xem kỹ lời giải ở những câu làm sai để hoàn thiện kiến thức hơn nữa.`;
+            } else if (score >= 5.0) {
+                return `Đạt yêu cầu! Em đã nắm được các kiến thức cơ bản của bài ${lessonTitle}, tuy nhiên còn nhầm lẫn ở các câu Vận dụng và Vận dụng cao. Cần ôn luyện thêm phần nghệ thuật tượng trưng.`;
+            } else {
+                return `Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và các chi tiết quan trọng của bài học ${lessonTitle}. Hãy đọc lại văn bản SGK và xem kỹ lời giải chi tiết bên dưới nhé!`;
+            }
+        }
+
+        function renderExplanationsList() {
+            const container = document.getElementById('explanationsList');
+            container.innerHTML = '';
+
+            activeQuestions.forEach((q, idx) => {
+                const userChoice = userAnswers[idx];
+                const isCorrect = userChoice === q.correct;
+
+                const card = document.createElement('div');
+                card.className = "glass-panel p-5 sm:p-6 rounded-2xl space-y-4 shadow-lg";
+
+                let statusBadge = isCorrect
+                    ? `<span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"><i class="fa-solid fa-check mr-1"></i> Chính xác</span>`
+                    : `<span class="text-xs font-bold px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20"><i class="fa-solid fa-xmark mr-1"></i> Chưa đúng</span>`;
+
+                let optionsHTML = '';
+                const keys = ['A', 'B', 'C', 'D'];
+
+                keys.forEach(key => {
+                    let optStyle = "bg-slate-900/60 border-slate-800 text-slate-300";
+                    let iconHTML = '';
+
+                    if (key === q.correct) {
+                        optStyle = "bg-emerald-950/40 border-emerald-500/40 text-emerald-200 font-semibold";
+                        iconHTML = `<i class="fa-solid fa-circle-check text-emerald-400 ml-auto"></i>`;
+                    }
+                    if (userChoice === key && !isCorrect) {
+                        optStyle = "bg-rose-950/40 border-rose-500/40 text-rose-300 line-through opacity-80";
+                        iconHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 ml-auto"></i>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3 rounded-xl border text-xs sm:text-sm flex items-center gap-2.5 ${optStyle}">
+                            <span class="font-bold">${key}.</span>
+                            <span class="flex-1">${q.options[key]}</span>
+                            ${iconHTML}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-amber-400 text-sm sm:text-base">Câu ${idx + 1}</span>
+                            <span class="text-xs text-slate-400">(${q.level})</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+
+                    <div class="text-sm font-medium text-slate-100">
+                        ${q.question}
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-500/20 text-xs sm:text-sm text-slate-300 space-y-1.5 mt-2">
+                        <div class="font-bold text-amber-400 flex items-center gap-1.5">
+                            <i class="fa-regular fa-lightbulb"></i> Lời giải chi tiết:
+                        </div>
+                        <p class="leading-relaxed font-normal">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function restartTest() {
+            showView('startScreen');
+            document.getElementById('modeStatusBadge').className = "bg-slate-900 border border-slate-700/80 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-inner";
+            document.getElementById('modeStatusText').textContent = "Chưa chọn chế độ";
+        }
+
+        function resetQuizState() {
+            stopTimer();
+            userAnswers = {};
+            currentQuestionIdx = 0;
+            document.getElementById('modeStatusBadge').className = "bg-slate-900 border border-slate-700/80 text-slate-300 text-xs font-medium px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-inner";
+            document.getElementById('modeStatusText').textContent = "Chưa chọn chế độ";
+        }
+
+        function reprocessMathJax() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+            }
+        }
+    </script>
+</body>
+</html>

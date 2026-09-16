@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Học: Thời Gian - Văn Cao</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax with Chemistry support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+
+        /* Standardized borders & boxes */
+        .roman-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: #1E3A8A;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .number-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #2563EB;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .section-header-line {
+            border-bottom: 4px solid #1E3A8A;
+        }
+
+        /* Quiz Millionaire Style */
+        .quiz-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+        }
+        .option-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid #3b82f6;
+            transition: all 0.2s ease;
+        }
+        .option-btn:hover {
+            background: #2563EB;
+            border-color: #60a5fa;
+        }
+
+        /* Image Placeholder Frame */
+        .img-placeholder {
+            border: 2px dashed #cbd5e0;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER SECTION (2 Blocks inside 1 Frame) -->
+        <div class="rounded-[12px] overflow-hidden shadow-lg border border-gray-200">
+            <!-- Block 1: Chapter Name -->
+            <div style="background-color: #1E3A8A;" class="p-4 text-white font-bold text-center text-lg md:text-xl tracking-wide uppercase">
+                CHƯƠNG: CẤU TỨ VÀ HÌNH ẢNH TRONG THƠ TRỨ TÌNH
+            </div>
+            <!-- Thin Divider -->
+            <div class="h-[1px] bg-blue-300 opacity-40"></div>
+            <!-- Block 2: Lesson Name -->
+            <div style="background-color: #2563EB;" class="p-5 text-white font-extrabold text-center text-xl md:text-3xl tracking-wider uppercase">
+                THỰC HÀNH ĐỌC: THỜI GIAN (VĂN CAO)
+            </div>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="bg-white border border-black rounded-[12px] p-5 shadow-sm italic text-gray-700 leading-relaxed">
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid font-bold text-xl text-blue-900 fa-quote-left mt-1"></i>
+                <div>
+                    <p class="font-medium text-gray-800">
+                        "Thời gian qua kẽ tay - Làm khô những chiếc lá..." Thời gian có sức mạnh hủy hoại vạn vật, hay nghệ thuật và tình yêu chân thành sẽ chiến thắng sự tàn khốc ấy? Bài học này giúp chúng ta khám phá cấu tứ độc đáo cùng hệ thống hình ảnh tượng trưng đầy suy ngẫm trong bài thơ của nghệ sĩ tài hoa Văn Cao.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION I: TÁC GIẢ VÀ TÁC PHẨM -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-5">
+            <h2 class="text-xl md:text-2xl font-bold uppercase text-blue-900 pb-2 section-header-line flex items-center">
+                <span class="roman-box">I</span> GIỚI THIỆU TÁC GIẢ VÀ TÁC PHẨM
+            </h2>
+
+            <!-- Item 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="number-circle">1</span> Tác giả Văn Cao (1923 - 1995)
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                    <div class="md:col-span-2 space-y-2 text-gray-700 leading-relaxed">
+                        <p class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-600">
+                            <strong>Tên khai sinh:</strong> Nguyễn Văn Cao, quê ở Nam Định, sinh ra và lớn lên tại Hải Phòng.
+                        </p>
+                        <p class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-600">
+                            <strong>Sự nghiệp đa tài:</strong> Ông là nhạc sĩ, họa sĩ, nhà thơ - một trong những gương mặt lớn tiêu biểu nhất của nền văn nghệ Việt Nam hiện đại.
+                        </p>
+                        <p class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-600">
+                            <strong>Đóng góp lịch sử:</strong> Tác phẩm <em>"Tiến quân ca"</em> của ông được chọn làm Quốc ca của nước Cộng hòa xã hội chủ nghĩa Việt Nam. Các tập thơ chính: <em>Lá (1988)</em>, <em>Tuyển tập Văn Cao - Thơ (1994)</em>.
+                        </p>
+                    </div>
+
+                    <!-- Image Placeholder h1.png -->
+                    <div class="img-placeholder rounded-[12px] p-4 text-center space-y-2">
+                        <img src="h1.png" alt="Chân dung nhà thơ Văn Cao" class="max-h-48 mx-auto rounded shadow-sm" onerror="this.onerror=null; this.src='https://placehold.co/300x200/1E3A8A/ffffff?text=Hình+1:+Chân+dung+Văn+Cao';">
+                        <span class="text-xs text-gray-500 italic block">Hình 1: Chân dung cố nghệ sĩ Văn Cao (h1.png)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="space-y-3 pt-4 border-t border-gray-100">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="number-circle">2</span> Văn bản bài thơ "Thời gian"
+                </h3>
+                
+                <div class="bg-emerald-50 border border-emerald-200 rounded-[12px] p-6 text-center space-y-3">
+                    <h4 class="font-bold text-xl text-emerald-900 tracking-wide">THỜI GIAN</h4>
+                    <p class="text-sm font-semibold text-emerald-700 mb-4">Văn Cao</p>
+
+                    <div class="font-serif text-lg leading-relaxed text-gray-800 space-y-2 inline-block text-left italic">
+                        <p>Thời gian qua kẽ tay</p>
+                        <p>Làm khô những chiếc lá</p>
+                        <p>Kỉ niệm trong tôi</p>
+                        <p class="pl-6 font-bold text-blue-900">Rơi</p>
+                        <p class="pl-8">như tiếng sỏi</p>
+                        <p class="pl-8">trong lòng giếng cạn</p>
+                        <p class="pt-2 font-semibold">Riêng những câu thơ</p>
+                        <p class="font-semibold">Riêng những bài hát</p>
+                        <p class="font-bold text-emerald-700 pl-4">còn xanh</p>
+                        <p class="pt-2">Và đôi mắt em</p>
+                        <p class="pl-4">như hai giếng nước.</p>
+                    </div>
+
+                    <p class="text-xs text-gray-500 pt-3 italic">Sáng tác: Xuân Đinh Mão, 2/1987 (Rút từ Tuyển tập Văn Cao - Thơ, NXB Văn học, 1994)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION II: CẤU TỨ VÀ TÍNH CHẤT TƯỢNG TRƯNG -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold uppercase text-blue-900 pb-2 section-header-line flex items-center">
+                <span class="roman-box">II</span> CẤU TỨ VÀ HÌNH ẢNH TRONG BÀI THƠ
+            </h2>
+
+            <!-- Sub 1 -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="number-circle">1</span> Đặc điểm thể loại và cấu tứ của bài thơ
+                </h3>
+                
+                <div class="bg-slate-50 border-l-4 border-indigo-600 p-4 rounded-r-lg space-y-2">
+                    <p class="font-bold text-indigo-900">Khái niệm trọng tâm:</p>
+                    <p class="text-gray-700">
+                        Cấu tứ của bài thơ <em>"Thời gian"</em> được xây dựng trên **phép đối lập tương phản sâu sắc** giữa sự vô tình, hủy hoại của thời gian vật lý và sự vĩnh cửu của những giá trị nghệ thuật, tình yêu con người.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div class="bg-red-50 p-4 rounded-[12px] border border-red-200">
+                        <h4 class="font-bold text-red-800 mb-2 flex items-center">
+                            <i class="fa-solid fa-hourglass-end mr-2"></i> Mạch 1: Quy luật tàn phá của thời gian
+                        </h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>Thời gian trôi chảy âm thầm nhưng hữu hình <em>("qua kẽ tay")</em>.</li>
+                            <li>Tàn phá vạn vật thiên nhiên <em>("làm khô những chiếc lá")</em>.</li>
+                            <li>Tác động lên đời sống tâm hồn: kỉ niệm rơi khô khốc <em>("tiếng sỏi trong lòng giếng cạn")</em>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-emerald-50 p-4 rounded-[12px] border border-emerald-200">
+                        <h4 class="font-bold text-emerald-800 mb-2 flex items-center">
+                            <i class="fa-solid fa-leaf mr-2"></i> Mạch 2: Sức sống vĩnh hằng của Nghệ thuật & Tình yêu
+                        </h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>Từ khóa khẳng định: <strong>"Riêng những..."</strong> lặp lại đầy bản lĩnh.</li>
+                            <li>Thơ ca, âm nhạc: <em>"còn xanh"</em> - trường tồn cùng năm tháng.</li>
+                            <li>Tình yêu: <em>"đôi mắt em như hai giếng nước"</em> - nguồn sống tươi mát vô tận.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub 2 -->
+            <div class="space-y-3 pt-4 border-t border-gray-100">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                    <span class="number-circle">2</span> Tính chất tượng trưng của các hình ảnh thơ
+                </h3>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300 text-center text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-gray-200 text-gray-800 font-bold">
+                                <th class="border border-gray-300 p-3 w-1/3">Hình ảnh thơ</th>
+                                <th class="border border-gray-300 p-3 w-2/3">Ý nghĩa tượng trưng & Suy ngẫm nghệ thuật</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-3 font-semibold text-blue-900">"Thời gian qua kẽ tay"</td>
+                                <td class="border border-gray-300 p-3 text-left">Thời gian trôi đi nhanh chóng, không thể níu giữ; vừa vô hình vừa mang tính hữu hình cụ thể.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-3 font-semibold text-blue-900">"Rơi như tiếng sỏi trong lòng giếng cạn"</td>
+                                <td class="border border-gray-300 p-3 text-left">Sự vỡ tan, khô khốc của kỉ niệm khi bị thời gian làm lãng quên; âm thanh cô độc, xót xa.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-3 font-semibold text-emerald-700">"Câu thơ", "Bài hát" - "Còn xanh"</td>
+                                <td class="border border-gray-300 p-3 text-left">Tượng trưng cho giá trị tinh thần bất tử. Nghệ thuật chân chính chiến thắng mọi quy luật hủy hoại.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 p-3 font-semibold text-emerald-700">"Đôi mắt em như hai giếng nước"</td>
+                                <td class="border border-gray-300 p-3 text-left">Tượng trưng cho vẻ đẹp tình yêu trong trong sáng, ngọt ngào, đong đầy dưỡng chất cho tâm hồn.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Image Placeholder h2.png -->
+                <div class="img-placeholder rounded-[12px] p-4 text-center space-y-2 mt-4">
+                    <img src="h2.png" alt="Sơ đồ cấu tứ bài thơ Thời gian" class="max-h-52 mx-auto rounded shadow-sm" onerror="this.onerror=null; this.src='https://placehold.co/500x200/2563EB/ffffff?text=Hình+2:+Sơ+đồ+cấu+tứ+bài+thơ+Thời+gian';">
+                    <span class="text-xs text-gray-500 italic block">Hình 2: Sơ đồ tư duy liên kết cấu tứ và hình ảnh tượng trưng (h2.png)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III: VÍ DỤ, HỎI ĐÁP VÀ HOẠT ĐỘNG -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold uppercase text-blue-900 pb-2 section-header-line flex items-center">
+                <span class="roman-box">III</span> THỰC HÀNH HỎI ĐÁP & HOẠT ĐỘNG
+            </h2>
+
+            <!-- Ví dụ / Bài tập đọc hiểu -->
+            <div class="bg-gray-50 p-4 rounded-[12px] border-l-4 border-blue-800 space-y-3">
+                <div class="font-bold text-gray-800 flex items-center text-lg">
+                    <i class="fa-solid fa-pen-to-square text-blue-800 mr-2"></i> Ví dụ phân tích nghệ thuật:
+                </div>
+                <p class="text-gray-700">
+                    Phân tích hiệu quả nghệ thuật của biện pháp tu từ so sánh trong câu thơ: <em>"Kỉ niệm trong tôi / Rơi / như tiếng sỏi / trong lòng giếng cạn"</em>.
+                </p>
+                <button onclick="toggleAnswer('ex1')" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition shadow">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem chi tiết lời giải
+                </button>
+                <div id="ex1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 text-sm leading-relaxed space-y-2">
+                    <p><strong>Hướng dẫn chi tiết:</strong></p>
+                    <p>• Phép so sánh cụ thể hóa cái vô hình (kỉ niệm rơi/quên đi) bằng cái hữu hình (tiếng sỏi rơi vào giếng cạn).</p>
+                    <p>• Từ "Rơi" đứng riêng 1 dòng thơ tạo nhịp ngắt hẫng hụt, diễn tả cảm giác trống trải, tiếc nuối trước sự phôi phai của thời gian.</p>
+                </div>
+            </div>
+
+            <!-- Mục Dấu ? (Hỏi đáp nhanh) -->
+            <div class="bg-gray-50 p-4 rounded-[12px] border-l-4 border-indigo-600 space-y-3">
+                <div class="font-bold text-gray-800 flex items-center text-lg">
+                    <i class="fa-solid fa-circle-question text-indigo-600 mr-2 text-xl"></i> Câu hỏi suy ngẫm (?):
+                </div>
+                <p class="text-gray-700">
+                    Tại sao tác giả lại chọn màu <strong>"xanh"</strong> cho những câu thơ và bài hát?
+                </p>
+                <button onclick="toggleAnswer('q_mark1')" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition shadow">
+                    <i class="fa-solid fa-comment-dots mr-1"></i> Xem câu trả lời
+                </button>
+                <div id="q_mark1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 text-sm leading-relaxed">
+                    Màu "xanh" là biểu tượng của sức sống, sự tươi trẻ, không bị héo hắt hay tàn phai theo thời gian. Qua đó, Văn Cao khẳng định giá trị nghệ thuật chân chính luôn tràn đầy sức sống bất tử.
+                </div>
+            </div>
+
+            <!-- Mục Hoạt động (Hình bàn tay) -->
+            <div class="bg-gray-50 p-4 rounded-[12px] border-l-4 border-amber-500 space-y-3">
+                <div class="font-bold text-gray-800 flex items-center text-lg">
+                    <i class="fa-solid fa-hand-back-fist text-amber-600 mr-2"></i> Hoạt động trải nghiệm:
+                </div>
+                <p class="text-gray-700">
+                    Hãy liên hệ bài thơ <em>"Thời gian"</em> với một tác phẩm văn học hoặc nghệ thuật khác mà bạn biết bàn về sự trường tồn của cái đẹp vượt qua thời gian.
+                </p>
+                <button onclick="toggleAnswer('act1')" class="bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition shadow">
+                    <i class="fa-solid fa-lightbulb mr-1"></i> Xem hướng giải quyết
+                </button>
+                <div id="act1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-900 text-sm leading-relaxed space-y-1">
+                    <p><strong>Gợi ý hướng giải quyết:</strong></p>
+                    <p>- Học sinh có thể liên hệ với bài thơ <em>"Truyện Kiều"</em> của Nguyễn Du (giá trị nhân đạo sống mãi qua hàng thế kỷ).</p>
+                    <p>- Hoặc bức tranh <em>"Mona Lisa"</em> của Leonardo da Vinci (nụ cười thách thức thời gian).</p>
+                    <p>- Rút ra điểm tương đồng: Nghệ thuật kết tinh từ tâm huyết và cái tâm chân thành của nghệ sĩ sẽ thắng được sự tàn phá của thời gian.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION IV: EM CÓ BIẾT - EM CÓ THỂ - LƯU Ý -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Em có biết -->
+            <div class="bg-purple-50 border border-purple-200 rounded-[12px] p-5 space-y-2 shadow-sm">
+                <h3 class="font-bold text-purple-900 text-lg flex items-center">
+                    <i class="fa-solid fa-graduation-cap mr-2"></i> Em có biết
+                </h3>
+                <p class="text-xs text-purple-950 leading-relaxed">
+                    Bài thơ <em>"Thời gian"</em> được sáng tác vào mùa xuân năm Đinh Mão (1987), thời điểm đất nước đang bước vào giai đoạn Đổi mới. Bài thơ chỉ gồm 42 chữ nhưng cô đọng triết lý nhân sinh cả một đời sáng tạo nghệ thuật của Văn Cao.
+                </p>
+            </div>
+
+            <!-- Em có thể -->
+            <div class="bg-teal-50 border border-teal-200 rounded-[12px] p-5 space-y-2 shadow-sm">
+                <h3 class="font-bold text-teal-900 text-lg flex items-center">
+                    <i class="fa-solid fa-compass mr-2"></i> Em có thể
+                </h3>
+                <p class="text-xs text-teal-950 leading-relaxed">
+                    Tự vẽ một sơ đồ tư duy phân tích mối tương quan giữa 3 yếu tố: <strong>Thời gian - Nghệ thuật - Tình yêu</strong> dựa trên công thức xác suất tác động \( P_{tđ} = \frac{N_{hữu\_hình}}{N_{vĩnh\_cửu}} \xrightleftharpoons 0 \) để ghi nhớ bài học dễ dàng hơn!
+                </p>
+            </div>
+
+            <!-- Lưu ý -->
+            <div class="bg-rose-50 border border-rose-200 rounded-[12px] p-5 space-y-2 shadow-sm">
+                <h3 class="font-bold text-rose-900 text-lg flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> Lưu ý
+                </h3>
+                <p class="text-xs text-rose-950 leading-relaxed">
+                    Khi phân tích thơ tự do hiện đại, cần chú ý đến nhịp điệu ngắt khúc đặc biệt, cách xuống dòng đột ngột (như từ <em>"Rơi"</em>) và tính tượng trưng đa nghĩa của hình ảnh thay vì chỉ hiểu theo nghĩa đen bề mặt.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION V: GAMESHOW AI LÀ TRIỆU PHÚ (10 CÂU TRẮC NGHIỆM) -->
+        <div class="quiz-card rounded-[12px] p-6 shadow-2xl space-y-6">
+            <div class="text-center space-y-2">
+                <span class="bg-yellow-500 text-gray-900 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Gameshow Trắc Nghiệm</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-yellow-400 tracking-wider">AI LÀ TRIỆU PHÚ KHIẾN THỜI GIAN NGƯNG LẠI</h2>
+                <p class="text-sm text-gray-300">Hãy trả lời 10 câu hỏi để củng cố kiến thức bài học!</p>
+            </div>
+
+            <form id="quizForm" class="space-y-6 text-gray-100">
+
+                <!-- Question 1 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 1: Tác giả của bài thơ "Thời gian" là ai?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="A"> <span>A. Xuân Diệu</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="B"> <span>B. Văn Cao</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="C"> <span>C. Huy Cận</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="D"> <span>D. Nguyễn Đình Thi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 2: Hình ảnh "Thời gian qua kẽ tay" gợi cảm giác gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="A"> <span>A. Sự trôi đi nhanh chóng, âm thầm của thời gian</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="B"> <span>B. Niềm vui sướng đón nhận tương lai</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="C"> <span>C. Sự ngưng trệ của vạn vật</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="D"> <span>D. Thời gian có hình khối cố định</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 3: Từ nào được sử dụng để nhấn mạnh sự khác biệt của thơ ca và bài hát trước thời gian?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="A"> <span>A. Tuy nhiên</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="B"> <span>B. Riêng</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="C"> <span>C. Ngoại trừ</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="D"> <span>D. Nhưng</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 4: Biện pháp nghệ thuật nổi bật ở câu "Và đôi mắt em như hai giếng nước" là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="A"> <span>A. Nhân hóa</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="B"> <span>B. So sánh</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="C"> <span>C. Ẩn dụ chuyển đổi cảm giác</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="D"> <span>D. Nói giảm nói tránh</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 5: Trong bài thơ, tác phẩm nào của Văn Cao được nhắc tới như di sản âm nhạc quốc gia?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="A"> <span>A. Trường ca Sông Lô</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="B"> <span>B. Tiến quân ca</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="C"> <span>C. Thiên Thai</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="D"> <span>D. Trương Chi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 6: Cấu tứ của bài thơ "Thời gian" dựa trên nguyên tắc nào?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q6" value="A"> <span>A. Tương phản đối lập giữa tàn phai và trường tồn</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q6" value="B"> <span>B. Tương đồng giữa các mùa trong năm</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q6" value="C"> <span>C. Tuyến tính thời gian từ quá khứ tới tương lai</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q6" value="D"> <span>D. Nhân quả vật lý</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 7: Tác dụng của việc đặt từ "Rơi" thành một dòng thơ riêng biệt là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q7" value="A"> <span>A. Tạo nhịp điệu nhanh nhộn nhịp</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q7" value="B"> <span>B. Nhấn mạnh sự hẫng hụt, tiếc nuối và cô độc</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q7" value="C"> <span>C. Thể hiện sự vui sướng khi kỉ niệm trở lại</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q7" value="D"> <span>D. Bắt buộc theo luật thơ lục bát</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 8: Cụm từ "còn xanh" tượng trưng cho điều gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q8" value="A"> <span>A. Sự chưa chín chắn của tác giả</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q8" value="B"> <span>B. Màu sắc tự nhiên của chiếc lá</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q8" value="C"> <span>C. Sức sống vĩnh cửu của giá trị nghệ thuật</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q8" value="D"> <span>D. Niềm hy vọng mong mong</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 9: Tập thơ nào dưới đây chứa bài thơ "Thời gian" của Văn Cao?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q9" value="A"> <span>A. Tuyển tập Văn Cao - Thơ (1994)</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q9" value="B"> <span>B. Lửa thiêng</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q9" value="C"> <span>C. Nhật ký trong tù</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q9" value="D"> <span>D. Vội vàng</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 space-y-3">
+                    <p class="font-semibold text-yellow-300">Câu 10: Thông điệp nhân sinh sâu sắc nhất của bài thơ là gì?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q10" value="A"> <span>A. Mọi thứ sẽ bị thời gian xóa bỏ hoàn toàn</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q10" value="B"> <span>B. Nghệ thuật chân chính và Tình yêu chân thành chiến thắng thời gian</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q10" value="C"> <span>C. Con người không nên tiếc nuối quá khứ</span>
+                        </label>
+                        <label class="option-btn p-3 rounded-lg flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q10" value="D"> <span>D. Hãy sống vội vã để tận hưởng cuộc sống</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="bg-blue-900 hover:bg-blue-950 text-white font-extrabold text-lg px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105 border border-blue-400">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> NỘP BÀI VÀ XEM KẾT QUẢ
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Display -->
+            <div id="quizResult" class="hidden bg-slate-900 border-2 border-yellow-400 p-5 rounded-xl space-y-4">
+                <div id="scoreText" class="text-xl font-bold text-center"></div>
+                <div id="explainText" class="text-sm space-y-2 text-gray-300 border-t border-slate-700 pt-3"></div>
+            </div>
+        </div>
+
+        <!-- SECTION VI: 3 BÀI TẬP TỰ LUẬN TÍNH TOÁN & PHÂN TÍCH -->
+        <div class="bg-white rounded-[12px] p-6 shadow-md space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold uppercase text-blue-900 pb-2 section-header-line flex items-center">
+                <span class="roman-box">VI</span> BÀI TẬP TỰ LUẬN & TÍNH TOÁN CỦNG CỐ
+            </h2>
+
+            <!-- Essay Question 1 -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-gray-200 space-y-3">
+                <h3 class="font-bold text-gray-800 text-base">
+                    Bài 1: Phân tích ý nghĩa hình tượng "đôi mắt em như hai giếng nước" ở cuối bài thơ.
+                </h3>
+                <button onclick="toggleAnswer('essay1')" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition shadow">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem đáp án chi tiết
+                </button>
+                <div id="essay1" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• Hình ảnh "giếng nước" gợi sự trong trẻo, sâu lắng, tươi mát và là nguồn sống không bao giờ vơi cạn.</p>
+                    <p>• So sánh "đôi mắt em" với "giếng nước" tượng trưng cho tình yêu chân thành, ngọt ngào - nguồn năng lượng giúp tâm hồn con người vượt qua sự khô tàn của thời gian.</p>
+                </div>
+            </div>
+
+            <!-- Essay Question 2 (Calculative/Statistical MathJax) -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-gray-200 space-y-3">
+                <h3 class="font-bold text-gray-800 text-base">
+                    Bài 2: Tính tỷ lệ từ ngữ biểu thị sự "Trường tồn" so với từ ngữ "Tàn phai" trong bài thơ.
+                </h3>
+                <p class="text-sm text-gray-600 italic">
+                    (Áp dụng công thức thống kê tần suất ngôn ngữ: \( T = \frac{n_{ttrung}}{n_{tàn\_phai}} \xrightleftharpoons K \))
+                </p>
+                <button onclick="toggleAnswer('essay2')" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition shadow">
+                    <i class="fa-solid fa-calculator mr-1"></i> Xem giải thích tính toán
+                </button>
+                <div id="essay2" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• Số lượng hình ảnh tàn phai \( n_{tàn\_phai} \): qua kẽ tay, khô chiếc lá, rơi, tiếng sỏi giếng cạn (4 hình ảnh).</p>
+                    <p>• Số lượng hình ảnh trường tồn \( n_{ttrung} \): câu thơ, bài hát, còn xanh, đôi mắt em, giếng nước (5 hình ảnh).</p>
+                    <p>• Tỷ số thống kê: \( T = \frac{5}{4} = 1.25 \xrightleftharpoons T > 1 \).</p>
+                    <p>• Kết luận: Tỷ lệ nhóm từ vựng khẳng định sự trường tồn áp đảo nhóm từ tàn phai, khẳng định niềm tin mãnh liệt của Văn Cao vào cái đẹp bất tử.</p>
+                </div>
+            </div>
+
+            <!-- Essay Question 3 -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-gray-200 space-y-3">
+                <h3 class="font-bold text-gray-800 text-base">
+                    Bài 3: Đặt trong mạch cảm xúc bài thơ, hãy trình bày ngắn gọn cảm nhận về hai chữ "còn xanh".
+                </h3>
+                <button onclick="toggleAnswer('essay3')" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition shadow">
+                    <i class="fa-solid fa-eye mr-1"></i> Xem đáp án chi tiết
+                </button>
+                <div id="essay3" class="hidden bg-emerald-50 border border-emerald-300 p-4 rounded-lg text-emerald-950 text-sm space-y-2">
+                    <p><strong>Lời giải chi tiết:</strong></p>
+                    <p>• "Còn xanh" nhịp 2 tiếng đứng riêng trên dòng thơ như một chiếc lá mãi mãi xanh tươi.</p>
+                    <p>• Đó là lời khẳng định đanh thép: Thời gian có thể làm khô lá cây tự nhiên, nhưng nghệ thuật (thơ, nhạc) thì mãi mãi giữ nguyên sức sống tràn trề.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER SECTION -->
+        <footer class="text-center py-6 text-gray-600 font-semibold border-t border-gray-300 mt-8 text-sm">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle Answer Function
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+
+        // Check Quiz Function
+        function checkQuiz() {
+            const correctAnswers = {
+                q1: 'B',
+                q2: 'A',
+                q3: 'B',
+                q4: 'B',
+                q5: 'B',
+                q6: 'A',
+                q7: 'B',
+                q8: 'C',
+                q9: 'A',
+                q10: 'B'
+            };
+
+            const explanations = {
+                q1: "Câu 1: Đáp án B - Tác giả bài thơ Thời gian là nhà thơ, nhạc sĩ Văn Cao.",
+                q2: "Câu 2: Đáp án A - 'Thời gian qua kẽ tay' thể hiện sự trôi đi vô hình nhưng rất nhanh chóng.",
+                q3: "Câu 3: Đáp án B - Từ 'Riêng' lặp lại 2 lần nhấn mạnh sự đặc biệt vượt lên trên quy luật tàn phai.",
+                q4: "Câu 4: Đáp án B - So sánh 'đôi mắt em' với 'hai giếng nước'.",
+                q5: "Câu 5: Đáp án B - Văn Cao là tác giả bài 'Tiến quân ca' (Quốc ca Việt Nam).",
+                q6: "Câu 6: Đáp án A - Cấu tứ đối lập tương phản giữa thời gian tàn phá và nghệ thuật vĩnh cửu.",
+                q7: "Câu 7: Đáp án B - Từ 'Rơi' tách dòng tạo nhịp hẫng hụt xót xa.",
+                q8: "Câu 8: Đáp án C - 'còn xanh' biểu tượng cho sức sống bất tử của nghệ thuật.",
+                q9: "Câu 9: Đáp án A - Rút từ Tuyển tập Văn Cao - Thơ (NXB Văn học, 1994).",
+                q10: "Câu 10: Đáp án B - Tình yêu và nghệ thuật chân chính chiến thắng sự tàn phá của thời gian."
+            };
+
+            let score = 0;
+            let total = 10;
+            let resultHTML = '';
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                if (selected && selected.value === correctAnswers[qName]) {
+                    score++;
+                    resultHTML += `<p class="text-green-400 font-semibold"><i class="fa-solid fa-check mr-2"></i>${explanations[qName]}</p>`;
+                } else {
+                    const userVal = selected ? selected.value : "Chưa chọn";
+                    resultHTML += `<p class="text-red-400 font-semibold"><i class="fa-solid fa-xmark mr-2"></i>${explanations[qName]} (Bạn chọn: ${userVal})</p>`;
+                }
+            }
+
+            const quizResultDiv = document.getElementById('quizResult');
+            const scoreTextDiv = document.getElementById('scoreText');
+            const explainTextDiv = document.getElementById('explainText');
+
+            quizResultDiv.classList.remove('hidden');
+
+            if (score === total) {
+                scoreTextDiv.className = "text-xl font-bold text-center text-emerald-400";
+                scoreTextDiv.innerHTML = `<i class="fa-solid fa-trophy text-yellow-400 text-2xl mr-2"></i> XUẤT SẮC! BẠN ĐẠT ĐIỂM TỐI ĐA ${score}/${total} ĐIỂM! BẠN LÀ TRIỆU PHÚ KHIẾN THỜI GIAN NGƯNG LẠI!`;
+            } else {
+                scoreTextDiv.className = "text-xl font-bold text-center text-amber-400";
+                scoreTextDiv.innerHTML = `<i class="fa-solid fa-star text-yellow-400 text-2xl mr-2"></i> KẾT QUẢ: BẠN ĐẠT ${score}/${total} ĐIỂM. HÃY XEM HƯỚNG DẪN BÊN DƯỚI ĐỂ CỦNG CỐ NHÉ!`;
+            }
+
+            explainTextDiv.innerHTML = resultHTML;
+
+            // Scroll gently to result
+            quizResultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

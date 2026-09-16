@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện củng cố kiến thức - Bài thơ Thời gian (Văn Cao)</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDD0',
+                        navyBg: '#0b1120',
+                        cardDark: '#162032',
+                        cardBorder: '#233248',
+                        accentGold: '#f59e0b',
+                        accentGreen: '#10b981',
+                        accentRed: '#ef4444',
+                        accentBlue: '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for formula rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1120;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="bg-[#0f172a] border-b border-slate-800 px-4 py-3 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-cream text-lg md:text-xl font-bold tracking-tight uppercase">ÔN LUYỆN CỦNG CỐ KIẾN THỨC</h1>
+                    <p class="text-xs text-slate-400">Bài: THỰC HÀNH ĐỌC - THỜI GIAN (Văn Cao) - Ngữ văn 11</p>
+                </div>
+            </div>
+            
+            <!-- Mode Status Badge -->
+            <div id="topHeaderStatus" class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
+                    <span class="w-2 h-2 rounded-full bg-slate-400 mr-2"></span>
+                    <span id="statusText">Chưa chọn chế độ</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+        <!-- 1. START / HOME SCREEN -->
+        <section id="homeScreen" class="space-y-8 py-4">
+            <!-- Hero Title Card -->
+            <div class="text-center space-y-4 max-w-3xl mx-auto pt-4">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 shadow-lg shadow-amber-500/10 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-white tracking-wide uppercase">
+                    BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN
+                </h2>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Bộ câu hỏi chuẩn hóa gồm <span class="text-amber-400 font-semibold">20 câu hỏi</span> bám sát nội dung bài học <span class="text-white font-medium">Thực hành đọc: Bài thơ Thời gian (Văn Cao)</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                </p>
+            </div>
+
+            <!-- 4 Question Levels Breakdown -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-cardDark border border-cardBorder rounded-xl p-4 transition-all hover:border-slate-600">
+                    <div class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">MỨC BIẾT (8 CÂU)</div>
+                    <p class="text-xs text-slate-300">Kiến thức lý thuyết tác giả Văn Cao, xuất xứ bài thơ, hoàn cảnh sáng tác, từ ngữ, chi tiết nghệ thuật.</p>
+                </div>
+
+                <div class="bg-cardDark border border-cardBorder rounded-xl p-4 transition-all hover:border-slate-600">
+                    <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">MỨC HIỂU (7 CÂU)</div>
+                    <p class="text-xs text-slate-300">Giải thích ý nghĩa hình ảnh tượng trưng, cấu tứ thơ, nhịp điệu và suy ngẫm về thời gian & nghệ thuật.</p>
+                </div>
+
+                <div class="bg-cardDark border border-cardBorder rounded-xl p-4 transition-all hover:border-slate-600">
+                    <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">VẬN DỤNG (3 CÂU)</div>
+                    <p class="text-xs text-slate-300">Phối hợp kiến thức thơ, nhạc, họa để phân tích tư duy nghệ thuật và rút ra bài học nhận thức thực tế.</p>
+                </div>
+
+                <div class="bg-cardDark border border-cardBorder rounded-xl p-4 transition-all hover:border-slate-600">
+                    <div class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">VD CAO (2 CÂU)</div>
+                    <p class="text-xs text-slate-300">Đánh giá chiều sâu triết lý nhân sinh, giá trị trường tồn của Cái Đẹp, Tình Yêu & phong cách thơ hiện đại.</p>
+                </div>
+            </div>
+
+            <!-- Mode Selection Section -->
+            <div class="pt-6 space-y-4">
+                <div class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">
+                    VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Option 1: Practice Mode -->
+                    <div onclick="startQuiz('practice')" class="group cursor-pointer bg-cardDark hover:bg-[#1a263c] border border-cardBorder hover:border-amber-500/50 rounded-2xl p-6 transition-all duration-200 shadow-xl relative overflow-hidden flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                                    1. Chế độ Luyện Tập
+                                </h3>
+                                <span class="bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs px-2.5 py-1 rounded-full font-semibold">
+                                    Không giới hạn
+                                </span>
+                            </div>
+                            <p class="text-xs font-medium text-slate-400">Học tập & củng cố kiến thức không áp lực</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Làm bài không tính giờ. Giúp học sinh bình tĩnh suy ngẫm, củng cố kiến thức. Xem điểm và lời giải chi tiết ngay sau khi hoàn thành.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center text-amber-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                            <span>Bắt đầu Luyện tập</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Timed Mode -->
+                    <div onclick="startQuiz('timed')" class="group cursor-pointer bg-cardDark hover:bg-[#1a263c] border border-cardBorder hover:border-amber-500/50 rounded-2xl p-6 transition-all duration-200 shadow-xl relative overflow-hidden flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                                    2. Chế độ Tính Giờ
+                                </h3>
+                                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs px-2.5 py-1 rounded-full font-semibold">
+                                    20 Phút
+                                </span>
+                            </div>
+                            <p class="text-xs font-medium text-slate-400">Thử thách & kiểm tra đánh giá năng lực</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi và đáp án ngẫu nhiên giúp đánh giá chính xác thực lực, chống học vẹt hay chép đáp án.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center text-amber-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                            <span>Bắt đầu Tính giờ</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 2. QUIZ INTERFACE SCREEN -->
+        <section id="quizScreen" class="hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Left Column: Navigation Matrix Sidebar -->
+                <div class="lg:col-span-4 xl:col-span-3 space-y-4">
+                    <div class="bg-cardDark border border-cardBorder rounded-2xl p-5 shadow-xl space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h3>
+                            <span id="answeredCounterBadge" class="text-xs bg-slate-800 text-amber-400 font-bold px-2.5 py-1 rounded-md border border-slate-700">
+                                0 / 20 đã làm
+                            </span>
+                        </div>
+
+                        <!-- 20 Question Grid -->
+                        <div id="questionGrid" class="grid grid-cols-5 gap-2.5">
+                            <!-- Rendered dynamically by JS -->
+                        </div>
+
+                        <!-- Legend -->
+                        <div class="pt-3 border-t border-slate-800 space-y-2 text-xs text-slate-400">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3.5 h-3.5 rounded bg-slate-800 border border-slate-700"></span>
+                                <span>Chưa trả lời</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3.5 h-3.5 rounded bg-amber-500/20 border border-amber-500"></span>
+                                <span>Đã chọn đáp án</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3.5 h-3.5 rounded bg-blue-600 border border-blue-400"></span>
+                                <span>Đang làm (Hiện tại)</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button onclick="confirmSubmitQuiz()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                            <span>Nộp Bài & Kết Thúc</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Question Display Card -->
+                <div class="lg:col-span-8 xl:col-span-9">
+                    <div class="bg-cardDark border border-cardBorder rounded-2xl p-6 md:p-8 shadow-xl min-h-[500px] flex flex-col justify-between">
+                        
+                        <!-- Question Header -->
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between flex-wrap gap-2 pb-4 border-b border-slate-800">
+                                <div class="flex items-center space-x-3">
+                                    <span id="currentQNumber" class="text-xl md:text-2xl font-black text-white">Câu 1 / 20</span>
+                                    <span id="currentQLevelBadge" class="text-xs px-3 py-1 rounded-full font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                                        Mức Biết
+                                    </span>
+                                </div>
+
+                                <!-- Timer Display (Visible in Timed mode) -->
+                                <div id="timerContainer" class="hidden items-center space-x-2 text-amber-400 font-mono font-bold text-lg bg-amber-500/10 px-3 py-1 rounded-lg border border-amber-500/30">
+                                    <svg class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span id="timeRemaining">20:00</span>
+                                </div>
+                            </div>
+
+                            <!-- Question Text -->
+                            <div id="questionText" class="text-base md:text-lg text-slate-100 font-semibold leading-relaxed pt-2">
+                                <!-- Question text injected here -->
+                            </div>
+                        </div>
+
+                        <!-- Options List -->
+                        <div id="optionsContainer" class="space-y-3 my-6">
+                            <!-- Options injected here -->
+                        </div>
+
+                        <!-- Navigation Footer -->
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800 flex-wrap gap-3">
+                            <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-xl border border-slate-700 hover:border-slate-500 bg-slate-800/60 hover:bg-slate-800 text-slate-300 font-semibold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                                &lt; Câu Trước
+                            </button>
+
+                            <button onclick="clearCurrentSelection()" class="text-xs text-slate-400 hover:text-slate-200 underline">
+                                Xóa lựa chọn câu này
+                            </button>
+
+                            <button id="nextBtn" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-500/20">
+                                Câu Tiếp &gt;
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 3. RESULT & EXPLANATION SCREEN -->
+        <section id="resultScreen" class="hidden space-y-8 py-4">
+            <!-- Score Summary Card -->
+            <div class="bg-cardDark border border-cardBorder rounded-3xl p-6 md:p-10 shadow-2xl max-w-4xl mx-auto space-y-8 relative overflow-hidden">
+                <div class="text-center space-y-3">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 shadow-xl shadow-amber-500/10 mb-2">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="resultModeSubtitle" class="text-slate-400 text-sm font-medium">Chế độ LUYỆN TẬP</p>
+                </div>
+
+                <!-- 3 Metric Boxes -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 text-center space-y-1">
+                        <span class="text-xs text-slate-400 uppercase font-semibold">Điểm số</span>
+                        <div class="text-3xl md:text-4xl font-black text-amber-400" id="finalScoreText">0.0 / 10.0</div>
+                    </div>
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 text-center space-y-1">
+                        <span class="text-xs text-slate-400 uppercase font-semibold">Số câu đúng</span>
+                        <div class="text-3xl md:text-4xl font-black text-emerald-400" id="correctCountText">0 / 20 câu</div>
+                    </div>
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 text-center space-y-1">
+                        <span class="text-xs text-slate-400 uppercase font-semibold">Thời gian làm bài</span>
+                        <div class="text-3xl md:text-4xl font-black text-blue-400" id="timeTakenText">Không giới hạn</div>
+                    </div>
+                </div>
+
+                <!-- Teacher Feedback Box -->
+                <div class="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 md:p-6 space-y-2">
+                    <div class="flex items-center space-x-2 text-amber-400 font-bold text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                        <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                    </div>
+                    <p id="teacherFeedbackText" class="text-sm md:text-base text-slate-200 leading-relaxed font-medium">
+                        <!-- Dynamic feedback -->
+                    </p>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button onclick="retakeQuiz()" class="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-500/20 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                        <span>Làm lại bài kiểm tra</span>
+                    </button>
+                    <a href="#detailedSolutions" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all border border-slate-700 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span>Xem đáp án & Lời giải</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions Section -->
+            <div id="detailedSolutions" class="max-w-4xl mx-auto space-y-6 pt-6">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                    <h3 class="text-xl font-bold text-white flex items-center space-x-2">
+                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                        <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                    </h3>
+                    <span class="text-xs text-slate-400 font-medium">20/20 câu hỏi</span>
+                </div>
+
+                <div id="solutionsListContainer" class="space-y-6">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0f172a] border-t border-slate-800 py-4 px-4 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto">
+            <p>© Bộ câu hỏi chuẩn hóa Trắc nghiệm Văn học - Bài thơ <span class="text-slate-400 font-semibold">"Thời gian" (Văn Cao)</span>.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // QUESTION DATASET (Strictly based on attached Thuchanh02.pdf)
+        const RAW_QUESTIONS = [
+            // MỨC BIẾT (8 CÂU)
+            {
+                id: 1,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Tác giả của bài thơ được đưa vào văn bản thực hành đọc \\(\\text{\"Thời gian\"}\\) là ai?",
+                options: ["Nguyễn Đình Thi", "Văn Cao", "Huy Cận", "Xuân Diệu"],
+                correct: 1,
+                explanation: "Theo thông tin trong SGK, bài thơ \\(\\text{\"Thời gian\"}\\) là sáng tác của nhà thơ, nhạc sĩ, họa sĩ Văn Cao (1923 - 1995)."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Bài thơ \\(\\text{\"Thời gian\"}\\) của Văn Cao được sáng tác vào thời điểm nào?",
+                options: ["Mùa thu năm 1945", "Mùa đông năm 1954", "Xuân Đinh Mão, tháng 2/1987", "Mùa hè năm 1994"],
+                correct: 2,
+                explanation: "Dưới chân bài thơ có ghi rõ thời gian sáng tác: \\(\\text{\"Xuân Đinh Mão, 2/1987\"}\\)."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Văn bản bài thơ \\(\\text{\"Thời gian\"}\\) trong bài học được trích từ ấn phẩm nào?",
+                options: ["Tập thơ \\(\\text{\"Lá\"}\\) (1988)", "Tập thơ \\(\\text{\"Bắc Sơn\"}\\) (1953)", "\\(\\text{\"Tuyển tập Văn Cao - Thơ\"}\\) (NXB Văn học, 1994)", "Tạp chí Văn nghệ Quân đội (1987)"],
+                correct: 2,
+                explanation: "Theo chú thích trong văn bản thực hành đọc, bài thơ được trích từ \\(\\text{\"Tuyển tập Văn Cao - Thơ\"}\\), NXB Văn học, Hà Nội, 1994, trang 106."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Tác phẩm âm nhạc nổi tiếng nào của Văn Cao được chọn làm Quốc ca của nước Việt Nam?",
+                options: ["Trường ca Sông Lô", "Tiến quân ca", "Làng tôi", "Ngày mùa"],
+                correct: 1,
+                explanation: "Theo phần ghi chú tiểu sử tác giả: Tác phẩm \\(\\text{\"Tiến quân ca\"}\\) do Văn Cao sáng tác được chọn làm Quốc ca của nước Việt Nam."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Theo phần chú thích tiểu sử trong văn bản, nhà thơ Văn Cao sinh ra và lớn lên ở đâu?",
+                options: ["Thành phố Hải Phòng", "Tỉnh Nam Định", "Thủ đô Hà Nội", "Tỉnh Thừa Thiên Huế"],
+                correct: 0,
+                explanation: "Chú thích nêu rõ: Văn Cao quê ở tỉnh Nam Định nhưng sinh ra, lớn lên tại thành phố Hải Phòng và khởi đầu sự nghiệp sáng tác ở đây."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Trong bài thơ, hình ảnh kỉ niệm rơi được tác giả so sánh với hình ảnh nào?",
+                options: ["Như chiếc lá khô bay trong gió", "Như hạt mưa ngâu mùa hạ", "Như tiếng sỏi trong lòng giếng cạn", "Như dòng sông trôi về biển cả"],
+                correct: 2,
+                explanation: "Trong bài thơ có viết: \\(\\text{\"Kỉ niệm trong tôi / Rơi / như tiếng sỏi / trong lòng giếng cạn\"}\\)."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Trong bài thơ \\(\\text{\"Thời gian\"}\\), những yếu tố nào được tác giả khẳng định là \\(\\text{\"còn xanh\"}\\)?",
+                options: ["Những chiếc lá và kỉ niệm", "Những câu thơ và những bài hát", "Đôi mắt em và kỉ niệm", "Tiếng sỏi và giếng nước"],
+                correct: 1,
+                explanation: "Văn bản viết: \\(\\text{\"Riêng những câu thơ / còn xanh / Riêng những bài hát / còn xanh\"}\\)."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelName: "Mức Biết",
+                question: "Hình ảnh đôi mắt em ở hai dòng thơ cuối bài được so sánh trực tiếp với điều gì?",
+                options: ["Như hai giếng nước", "Như hai ngôi sao đêm", "Như hồ nước thu trong", "Như giọt sương mai"],
+                correct: 0,
+                explanation: "Hai câu cuối của bài thơ viết: \\(\\text{\"Và đôi mắt em / như hai giếng nước\"}\\)."
+            },
+
+            // MỨC HIỂU (7 CÂU)
+            {
+                id: 9,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Hình ảnh \\(\\text{\"Thời gian qua kẽ tay / Làm khô những chiếc lá\"}\\) thể hiện cảm nhận gì của tác giả về quy luật thời gian?",
+                options: [
+                    "Thời gian trôi chậm chãi và mang lại sức sống tươi mới cho thiên nhiên",
+                    "Thời gian trôi qua nhanh chóng, vô tình và làm tàn phái, làm già cỗi mọi vật thể tự nhiên",
+                    "Thời gian là tĩnh lặng, không có ảnh hưởng gì tới đời sống con người",
+                    "Thời gian đong đếm được bằng lượng nước chảy qua kẽ tay"
+                ],
+                correct: 1,
+                explanation: "Hình ảnh thời gian trôi tuột qua kẽ tay khiến lá khô tàn tượng trưng cho quy luật nghiệt dã của thời gian vật lý: vô tình, nhanh chóng và làm phai nhạt mọi vạn vật vật chất."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Biện pháp tu từ nào nổi bật trong hai khổ thơ: \\(\\text{\"Riêng những câu thơ / còn xanh / Riêng những bài hát / còn xanh\"}\\)?",
+                options: [
+                    "Điệp từ \\(\\text{\"Riêng\"}\\), điệp cấu trúc và ẩn dụ \\(\\text{\"còn xanh\"}\\)",
+                    "So sánh ngang bằng kết hợp hoán dụ",
+                    "Nói giảm nói tránh và nhân hóa",
+                    "Liệt kê kết hợp câu hỏi tu từ"
+                ],
+                correct: 0,
+                explanation: "Việc lặp lại từ \\(\\text{\"Riêng\"}\\) và cụm \\(\\text{\"còn xanh\"}\\) vừa nhấn mạnh sự khác biệt, ngoại lệ của nghệ thuật so với quy luật tàn phá của thời gian, vừa ẩn dụ cho sức sống bất tử, tươi trẻ."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Nghệ thuật ngắt dòng và đứng độc lập của từ \\(\\text{\"Rơi\"}\\) mang lại hiệu quả biểu đạt nào?",
+                options: [
+                    "Tạo nên nhịp thơ nhanh, hối hả và vui tươi",
+                    "Nhấn mạnh sự thảng thốt, cảm giác chới với và sự mất mát của kỉ niệm khi rơi vào quên lãng",
+                    "Thể hiện sự kéo dài vĩnh cửu của kỉ niệm theo thời gian",
+                    "Bổ sung thông tin cho câu thơ phía trước về chiếc lá"
+                ],
+                correct: 1,
+                explanation: "Từ \\(\\text{\"Rơi\"}\\) đứng tách riêng biệt ở một dòng thơ như một điểm lặng, gợi tả hành động rơi thảng thốt, trôi đi bất lực của kỉ niệm vào lòng quá khứ sâu thẳm."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Hình ảnh \\(\\text{\"tiếng sỏi trong lòng giếng cạn\"}\\) mang ý nghĩa tượng trưng gì?",
+                options: [
+                    "Âm thanh rộn rã, sinh động của cuộc sống nông thôn",
+                    "Sự khô cạn, cô đơn và âm thanh dội lại thảng thốt của kỉ niệm rơi vào khoảng không vô vọng",
+                    "Sự trù phú và đong đầy của tâm hồn nhà thơ",
+                    "Tình yêu quê hương sâu sắc qua hình ảnh giếng làng"
+                ],
+                correct: 1,
+                explanation: "\\(\\text{\"Giếng cạn\"}\\) gợi sự trơ trọi, khô cạn. \\(\\text{\"Tiếng sỏi\"}\\) rơi vào giếng cạn gợi ra âm thanh khô khốc, dội lại sự cô đơn, tiễn biệt kỉ niệm đã trở thành quá khứ."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Mối tương quan đối lập giữa \\(\\text{\"những chiếc lá khô\"}\\) và \\(\\text{\"những câu thơ, bài hát còn xanh\"}\\) thể hiện tư tưởng gì?",
+                options: [
+                    "Thiên nhiên luôn có sức sống vĩnh cữu hơn tác phẩm nghệ thuật",
+                    "Sự thất bại của nghệ thuật trước sự tàn phá của thiên nhiên",
+                    "Sự đối lập giữa cái hữu hạn, bị tàn phá của vật thể tự nhiên và sự trường tồn bền vững của nghệ thuật chân chính",
+                    "Thơ ca và âm nhạc chỉ tồn tại trong thời gian ngắn rồi phai nhạt"
+                ],
+                correct: 2,
+                explanation: "Tác giả đặt sự đối lập giữa những gì thuộc về tự nhiên, vật chất (lá khô) với những giá trị tinh thần sáng tạo (câu thơ, bài hát còn xanh) để khẳng định nghệ thuật thắng vượt thời gian."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Trong bài thơ, hình ảnh \\(\\text{\"đôi mắt em như hai giếng nước\"}\\) tượng trưng cho điều gì?",
+                options: [
+                    "Nguồn sống trong trẻo, tình yêu đong đầy và sự tươi mát chiến thắng sự khô cạn của thời gian",
+                    "Nỗi buồn thảm, ủ dột của người phụ nữ khi thời gian trôi qua",
+                    "Vẻ đẹp ngoại hình quyến rũ của dòng họ nhà thơ",
+                    "Sự bí ẩn, khó hiểu của nội tâm con người"
+                ],
+                correct: 0,
+                explanation: "Đối lập với \\(\\text{\"giếng cạn\"}\\) ở phần trên, \\(\\text{\"giếng nước\"}\\) trong mắt em là nguồn nước đong đầy, mát lành, tượng trưng cho tình yêu và sức sống mãnh liệt đánh tan sự cằn cỗi của thời gian."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelName: "Mức Hiểu",
+                question: "Cấu tứ của bài thơ \\(\\text{\"Thời gian\"}\\) chuyển biến theo mạch cảm xúc như thế nào?",
+                options: [
+                    "Từ niềm vui rộn rã đầu xuân chuyển sang nỗi buồn tiếc nuối khi mùa thu tới",
+                    "Từ sự trôi chảy nghiệt dã, tàn phá của thời gian chuyển sang sự khẳng định vĩnh cửu của nghệ thuật và tình yêu",
+                    "Từ hình ảnh người phụ nữ chuyển sang miêu tả khung cảnh thiên nhiên tươi đẹp",
+                    "Từ khát vọng sáng tác âm nhạc chuyển sang khát vọng vẽ tranh"
+                ],
+                correct: 1,
+                explanation: "Bài thơ mở đầu bằng nhận thức xót xa về sự tàn phá của thời gian lên vạn vật (lá khô, kỉ niệm rơi), nhưng sau đó vút lên sự khẳng định chắc chắn về những giá trị \"còn xanh\" (thơ, nhạc, đôi mắt em)."
+            },
+
+            // MỨC VẬN DỤNG (3 CÂU)
+            {
+                id: 16,
+                level: "VănDung",
+                levelName: "Vận Dụng",
+                question: "Sự kết hợp giữa tư duy của một nhạc sĩ, họa sĩ và nhà thơ đã tác động như thế nào đến phong cách thể hiện bài thơ \\(\\text{\"Thời gian\"}\\)?",
+                options: [
+                    "Tạo nên các hình ảnh thơ giàu tính tạo hình (hội họa) kết hợp nhịp điệu ngắt khúc ngưng đọng (âm nhạc) và suy tưởng triết lý (thi ca)",
+                    "Làm cho bài thơ trở nên rườm rà, phức tạp và khó thuộc",
+                    "khiến bài thơ chuyển hẳn thành một kịch bản sân khấu",
+                    "Làm mất đi tính trữ tình truyền thống của thơ ca Việt Nam"
+                ],
+                correct: 0,
+                explanation: "Với tư chất đa tài (nhạc sĩ, họa sĩ, nhà thơ), Văn Cao tạo ra những hình ảnh vừa có màu sắc tạo hình (lá khô, cồn xanh, giếng nước), vừa có khoảng lặng âm thanh (tiếng sỏi rơi), cô đọng trong tư duy triết học."
+            },
+            {
+                id: 17,
+                level: "VănDung",
+                levelName: "Vận Dụng",
+                question: "Việc đặt hai câu thơ \\(\\text{\"Và đôi mắt em / như hai giếng nước\"}\\) ở vị trí kết thúc bài thơ thể hiện tư duy nghệ thuật gì của tác giả?",
+                options: [
+                    "Khẳng định tình yêu cùng với nghệ thuật là hai trụ cột giá trị tinh thần cứu rỗi con người và thắng vượt thời gian",
+                    "Gợi ý rằng tác giả muốn ngừng viết thơ để chuyển sang viết về chủ đề tình yêu lứa đôi đơn thuần",
+                    "Tạo ra một kết thúc bất ngờ không liên quan tới chủ đề thời gian đã đặt ra ở đầu bài",
+                    "Cho thấy sự bế tắc của nhà thơ khi không tìm thêm được hình ảnh so sánh nào khác"
+                ],
+                correct: 0,
+                explanation: "Khép lại bài thơ bằng đôi mắt em đong đầy nước không chỉ hoàn chỉnh hình tượng đối lập với 'giếng cạn' mà còn nâng tầm Tình yêu song hành cùng Nghệ thuật như cứu rỗi vĩnh hằng cho kiếp người."
+            },
+            {
+                id: 18,
+                level: "VănDung",
+                levelName: "Vận Dụng",
+                question: "Từ bài thơ \\(\\text{\"Thời gian\"}\\), bài học mang giá trị thực tiễn đối với con người trong cuộc sống hiện đại là gì?",
+                options: [
+                    "Cần tìm cách ngưng trệ thời gian bằng mọi giá để giữ lại tuổi trẻ vật lý",
+                    "Trân trọng, sáng tạo và vun đắp cho những giá trị tinh thần, nghệ thuật chân chính và tình yêu thương vì đó là những điều không bị thời gian bào mòn",
+                    "Không nên hoài niệm về quá khứ vì kỉ niệm luôn mang lại sự sỏi đá khô cạn",
+                    "Chỉ nên tập trung vào công việc cá nhân thay vì dành thời gian cho thơ ca hay âm nhạc"
+                ],
+                correct: 1,
+                explanation: "Thời gian sinh học/vật lý trôi qua làm vạn vật già nua, nhưng những gì chứa đựng tâm hồn, nghệ thuật đích thực và tình yêu chân thành sẽ trường tồn, tiếp thêm nguồn sống cho con người."
+            },
+
+            // MỨC VẬN DỤNG CAO (2 CÂU)
+            {
+                id: 19,
+                level: "VD_Cao",
+                levelName: "VD Cao",
+                question: "Hãy đánh giá chiều sâu triết lý nhân sinh trong bài thơ \\(\\text{\"Thời gian\"}\\) qua mối tương quan giữa cái hữu hạn của đời người và cái vô hạn của cái Đẹp:",
+                options: [
+                    "Bài thơ thể hiện thái độ bi quan, tuyệt vọng hoàn toàn của Văn Cao trước sự tàn phá dã dời của thời gian tới kiếp người",
+                    "Nhà thơ vượt qua nỗi đau kiếp người hữu hạn bằng niềm tin mãnh liệt vào sức mạnh siêu việt của Cái Đẹp nghệ thuật và Tình Yêu – những giá trị tinh thần bất tử kháng lại hư vô",
+                    "Bài thơ chứng minh rằng mọi giá trị trên đời đều sẽ biến mất như tiếng sỏi rơi xuống giếng cạn",
+                    "Nhà thơ đề cao giá trị vật chất hơn giá trị tinh thần trong việc chống lại sự tàn phá của thời gian"
+                ],
+                correct: 1,
+                explanation: "Triết lý nhân sinh của Văn Cao mang tầm vóc hiện đại: thừa nhận quy luật nghiệt dã của thời gian nhưng không đầu hàng, mà tìm thấy điểm tựa trường tồn ở Nghệ thuật ('câu thơ, bài hát còn xanh') và Tình yêu ('đôi mắt em')."
+            },
+            {
+                id: 20,
+                level: "VD_Cao",
+                levelName: "VD Cao",
+                question: "Nhận xét nào phản ánh đúng nhất nét tân kỳ, hiện đại trong cấu tứ và tính chất tượng trưng của bài thơ \\(\\text{\"Thời gian\"}\\)?",
+                options: [
+                    "Sử dụng thể thơ tự do nén chặt, nhịp điệu ngắt quãng bất ngờ, các hình ảnh ẩn dụ tượng trưng siêu thực tạo độ nhòe về ngữ nghĩa để mở ra không gian suy tưởng triết học sâu lắng",
+                    "Sử dụng thể thơ lục bát truyền thống với vần điệu êm ả, hình ảnh quen thuộc mang tính ước lệ cổ điển",
+                    "Kết hợp giữa diễn xướng dân gian và lối nói vè miêu tả sinh hoạt đời thường",
+                    "Lối viết dài dòng, miêu tả chi tiết diễn biến thời gian theo trình tự bốn mùa xuân hạ thu đông"
+                ],
+                correct: 0,
+                explanation: "Thơ Văn Cao giai đoạn này đặc trưng bởi tính hiện đại: cấu tứ cô đọng, dồn nén, bứt phá khỏi khuôn mẫu thể loại, hình ảnh giàu tính tượng trưng (kẽ tay, tiếng sỏi giếng cạn, câu thơ còn xanh, giếng nước), mở ra các tầng không gian triết lý."
+            }
+        ];
+
+        // APP STATE VARIABLES
+        let currentQuizMode = 'practice'; // 'practice' | 'timed'
+        let currentQuestions = [];
+        let userAnswers = {}; // { questionIndex: selectedOptionIndex }
+        let currentQuestionIndex = 0;
+        let timerInterval = null;
+        let secondsRemaining = 1200; // 20 mins = 1200s
+        let startTime = null;
+        let elapsedTimeInSeconds = 0;
+
+        // Helper: Shuffle Array (Fisher-Yates)
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Trigger MathJax typeset after DOM updates
+        function reRenderMathJax() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+            }
+        }
+
+        // START QUIZ
+        function startQuiz(mode) {
+            currentQuizMode = mode;
+            userAnswers = {};
+            currentQuestionIndex = 0;
+            startTime = new Date();
+
+            // Setup questions (shuffle if timed mode)
+            if (mode === 'timed') {
+                currentQuestions = shuffleArray(RAW_QUESTIONS);
+                // Also shuffle options for each question to avoid copycat answers
+                currentQuestions = currentQuestions.map(q => {
+                    const indexedOptions = q.options.map((opt, idx) => ({ text: opt, isCorrect: idx === q.correct }));
+                    const shuffledOpts = shuffleArray(indexedOptions);
+                    const newCorrectIdx = shuffledOpts.findIndex(o => o.isCorrect);
+                    return {
+                        ...q,
+                        options: shuffledOpts.map(o => o.text),
+                        correct: newCorrectIdx
+                    };
+                });
+            } else {
+                currentQuestions = JSON.parse(JSON.stringify(RAW_QUESTIONS));
+            }
+
+            // Update UI Screen Visibility
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            // Update Header Status
+            const statusText = document.getElementById('statusText');
+            const timerContainer = document.getElementById('timerContainer');
+
+            if (mode === 'timed') {
+                statusText.innerText = 'Chế độ TÍNH GIỜ';
+                timerContainer.classList.remove('hidden');
+                timerContainer.classList.add('flex');
+                startTimer();
+            } else {
+                statusText.innerText = 'Chế độ LUYỆN TẬP';
+                timerContainer.classList.add('hidden');
+                timerContainer.classList.remove('flex');
+                clearInterval(timerInterval);
+            }
+
+            // Render navigation matrix & active question
+            renderQuestionGrid();
+            displayQuestion(0);
+        }
+
+        // TIMER LOGIC
+        function startTimer() {
+            clearInterval(timerInterval);
+            secondsRemaining = 1200; // 20 minutes
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                secondsRemaining--;
+                updateTimerDisplay();
+
+                if (secondsRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Đã hết thời gian 20 phút làm bài! Hệ thống sẽ tự động nộp bài.");
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(secondsRemaining / 60);
+            const secs = secondsRemaining % 60;
+            const formatted = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            document.getElementById('timeRemaining').innerText = formatted;
+        }
+
+        // RENDER QUESTION GRID (LEFT SIDEBAR)
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('questionGrid');
+            gridContainer.innerHTML = '';
+
+            currentQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `grid-btn-${idx}`;
+                btn.onclick = () => displayQuestion(idx);
+                btn.innerText = idx + 1;
+                btn.className = getGridBtnClass(idx);
+                gridContainer.appendChild(btn);
+            });
+
+            updateAnsweredCount();
+        }
+
+        function getGridBtnClass(idx) {
+            const base = "w-full aspect-square rounded-xl font-bold text-xs flex items-center justify-center transition-all border ";
+            const isCurrent = idx === currentQuestionIndex;
+            const isAnswered = userAnswers.hasOwnProperty(idx);
+
+            if (isCurrent) {
+                return base + "bg-blue-600 text-white border-blue-400 shadow-md ring-2 ring-blue-500/50 scale-105 z-10";
+            } else if (isAnswered) {
+                return base + "bg-amber-500/20 text-amber-300 border-amber-500/60 hover:bg-amber-500/30";
+            } else {
+                return base + "bg-slate-800/80 text-slate-400 border-slate-700/80 hover:border-slate-500 hover:text-slate-200";
+            }
+        }
+
+        function updateAnsweredCount() {
+            const count = Object.keys(userAnswers).length;
+            document.getElementById('answeredCounterBadge').innerText = `${count} / 20 đã làm`;
+        }
+
+        // DISPLAY QUESTION AT INDEX
+        function displayQuestion(index) {
+            currentQuestionIndex = index;
+            const q = currentQuestions[index];
+
+            // Update Q Header
+            document.getElementById('currentQNumber').innerText = `Câu ${index + 1} / 20`;
+            
+            // Level Badge Colors
+            const levelBadge = document.getElementById('currentQLevelBadge');
+            levelBadge.innerText = q.levelName;
+            if (q.level === "Biết") {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30";
+            } else if (q.level === "Hiểu") {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
+            } else if (q.level === "VănDung") {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30";
+            } else {
+                levelBadge.className = "text-xs px-3 py-1 rounded-full font-bold bg-purple-500/20 text-purple-400 border border-purple-500/30";
+            }
+
+            // Question Text
+            document.getElementById('questionText').innerHTML = q.question;
+
+            // Render Options Cards
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+            const selectedIdx = userAnswers[index];
+
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = selectedIdx === optIdx;
+
+                const card = document.createElement('div');
+                card.onclick = () => selectOption(index, optIdx);
+
+                let cardClasses = "group cursor-pointer p-4 rounded-xl border transition-all duration-150 flex items-start space-x-3.5 ";
+                if (isSelected) {
+                    cardClasses += "bg-amber-500/15 border-amber-500 text-white shadow-lg shadow-amber-500/5 ring-1 ring-amber-500";
+                } else {
+                    cardClasses += "bg-slate-900/60 border-slate-800 hover:border-slate-600 text-slate-200 hover:bg-slate-900";
+                }
+                card.className = cardClasses;
+
+                let badgeClasses = "w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 transition-colors ";
+                if (isSelected) {
+                    badgeClasses += "bg-amber-500 text-slate-950 font-black";
+                } else {
+                    badgeClasses += "bg-slate-800 text-slate-400 group-hover:bg-slate-700 group-hover:text-slate-200";
+                }
+
+                card.innerHTML = `
+                    <div class="${badgeClasses}">${optionLabels[optIdx]}</div>
+                    <div class="text-sm md:text-base leading-snug pt-0.5">${optText}</div>
+                `;
+
+                optionsContainer.appendChild(card);
+            });
+
+            // Navigation Buttons State
+            document.getElementById('prevBtn').disabled = (index === 0);
+            const nextBtn = document.getElementById('nextBtn');
+            if (index === currentQuestions.length - 1) {
+                nextBtn.innerText = "Hoàn thành >";
+            } else {
+                nextBtn.innerText = "Câu Tiếp >";
+            }
+
+            // Refresh Grid Buttons
+            renderQuestionGrid();
+
+            // Re-render MathJax formula if any
+            reRenderMathJax();
+        }
+
+        // SELECT OPTION
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            displayQuestion(qIdx);
+        }
+
+        // CLEAR SELECTION
+        function clearCurrentSelection() {
+            if (userAnswers.hasOwnProperty(currentQuestionIndex)) {
+                delete userAnswers[currentQuestionIndex];
+                displayQuestion(currentQuestionIndex);
+            }
+        }
+
+        // NAVIGATE QUESTION
+        function navigateQuestion(step) {
+            const targetIdx = currentQuestionIndex + step;
+            if (targetIdx >= 0 && targetIdx < currentQuestions.length) {
+                displayQuestion(targetIdx);
+            } else if (targetIdx >= currentQuestions.length) {
+                confirmSubmitQuiz();
+            }
+        }
+
+        // CONFIRM & SUBMIT QUIZ
+        function confirmSubmitQuiz() {
+            const unanswered = currentQuestions.length - Object.keys(userAnswers).length;
+            if (unanswered > 0) {
+                const confirmMsg = `Bạn còn ${unanswered} câu hỏi chưa trả lời. Bạn có chắc chắn muốn nộp bài không?`;
+                if (window.confirm(confirmMsg)) {
+                    submitQuiz();
+                }
+            } else {
+                submitQuiz();
+            }
+        }
+
+        // SUBMIT QUIZ & SHOW RESULTS
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            // Calculate score
+            let correctCount = 0;
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = ((correctCount / currentQuestions.length) * 10).toFixed(1);
+
+            // Time Spent
+            const endTime = new Date();
+            elapsedTimeInSeconds = Math.round((endTime - startTime) / 1000);
+            const mins = Math.floor(elapsedTimeInSeconds / 60);
+            const secs = elapsedTimeInSeconds % 60;
+            const timeString = currentQuizMode === 'timed' 
+                ? `${mins} phút ${secs} giây` 
+                : 'Không giới hạn';
+
+            // UI Update Result Screen
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+
+            document.getElementById('resultModeSubtitle').innerText = currentQuizMode === 'timed' ? 'Chế độ TÍNH GIỜ' : 'Chế độ LUYỆN TẬP';
+            document.getElementById('finalScoreText').innerText = `${score} / 10.0`;
+            document.getElementById('correctCountText').innerText = `${correctCount} / ${currentQuestions.length} câu`;
+            document.getElementById('timeTakenText').innerText = timeString;
+
+            // Teacher Feedback
+            const feedbackText = getTeacherFeedback(parseFloat(score));
+            document.getElementById('teacherFeedbackText').innerText = feedbackText;
+
+            // Render Detailed Solutions
+            renderDetailedSolutions();
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // DYNAMIC TEACHER FEEDBACK
+        function getTeacherFeedback(score) {
+            if (score >= 9.0) {
+                return "Xuất sắc! Em đã nắm rất vững kiến thức bài Thực hành đọc: Bài thơ Thời gian (Văn Cao), thấu hiểu sâu sắc các giá trị tượng trưng và chiều sâu triết lý nhân sinh của tác phẩm!";
+            } else if (score >= 7.0) {
+                return "Kết quả rất tốt! Em đã hiểu rõ bài học và vận dụng tốt các kỹ năng đọc hiểu bài thơ. Hãy rèn luyện thêm ở các câu hỏi Vận dụng cao để đạt điểm tối đa nhé!";
+            } else if (score >= 5.0) {
+                return "Khá tốt! Em đã nắm được kiến thức cơ bản của bài thơ. Tuy nhiên cần chú ý đọc kỹ hơn các chi tiết tượng trưng và suy ngẫm triết lý của tác giả.";
+            } else {
+                return "Cần cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết bài Thực hành đọc: Bài thơ Thời gian (Văn Cao). Hãy xem kỹ lời giải từng câu và ôn lại bài học SGK để làm lại nhé!";
+            }
+        }
+
+        // RENDER DETAILED SOLUTIONS
+        function renderDetailedSolutions() {
+            const container = document.getElementById('solutionsListContainer');
+            container.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+
+            currentQuestions.forEach((q, idx) => {
+                const userSelected = userAnswers[idx];
+                const isCorrect = userSelected === q.correct;
+                const isSkipped = userSelected === undefined;
+
+                const card = document.createElement('div');
+                card.className = "bg-cardDark border border-cardBorder rounded-2xl p-6 shadow-xl space-y-4";
+
+                // Header status
+                let statusBadgeHTML = '';
+                if (isCorrect) {
+                    statusBadgeHTML = `<span class="px-3 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center space-x-1"><span>✓</span><span>Đúng</span></span>`;
+                } else if (isSkipped) {
+                    statusBadgeHTML = `<span class="px-3 py-1 rounded-md text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">Chưa làm</span>`;
+                } else {
+                    statusBadgeHTML = `<span class="px-3 py-1 rounded-md text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/30 flex items-center space-x-1"><span>✕</span><span>Sai</span></span>`;
+                }
+
+                // Level Badge
+                let levelBadgeClass = "text-xs px-2.5 py-0.5 rounded-full font-bold bg-blue-500/20 text-blue-400";
+                if (q.level === "Hiểu") levelBadgeClass = "text-xs px-2.5 py-0.5 rounded-full font-bold bg-emerald-500/20 text-emerald-400";
+                if (q.level === "VănDung") levelBadgeClass = "text-xs px-2.5 py-0.5 rounded-full font-bold bg-amber-500/20 text-amber-400";
+                if (q.level === "VD_Cao") levelBadgeClass = "text-xs px-2.5 py-0.5 rounded-full font-bold bg-purple-500/20 text-purple-400";
+
+                let optionsHTML = '';
+                q.options.forEach((opt, optIdx) => {
+                    const isThisCorrect = optIdx === q.correct;
+                    const isThisUserSelected = optIdx === userSelected;
+
+                    let optStyle = "bg-slate-900/50 border-slate-800 text-slate-300";
+                    let iconHTML = '';
+
+                    if (isThisCorrect) {
+                        optStyle = "bg-emerald-500/15 border-emerald-500/80 text-emerald-200 font-semibold";
+                        iconHTML = `<span class="text-emerald-400 font-bold ml-auto">✓ Đáp án đúng</span>`;
+                    } else if (isThisUserSelected && !isCorrect) {
+                        optStyle = "bg-red-500/15 border-red-500/80 text-red-200 line-through";
+                        iconHTML = `<span class="text-red-400 font-bold ml-auto">✕ Bạn đã chọn</span>`;
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl border text-sm flex items-center space-x-3 ${optStyle}">
+                            <div class="w-6 h-6 rounded-md bg-slate-800 font-bold text-xs flex items-center justify-center shrink-0">
+                                ${optionLabels[optIdx]}
+                            </div>
+                            <span>${opt}</span>
+                            ${iconHTML}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="font-black text-white text-base md:text-lg">Câu ${idx + 1}</span>
+                            <span class="${levelBadgeClass}">${q.levelName}</span>
+                        </div>
+                        ${statusBadgeHTML}
+                    </div>
+
+                    <div class="text-slate-100 font-medium text-base">${q.question}</div>
+
+                    <div class="space-y-2 pt-2">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-xs md:text-sm space-y-1 mt-3">
+                        <div class="font-bold text-amber-400 flex items-center space-x-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            reRenderMathJax();
+        }
+
+        // RETAKE QUIZ
+        function retakeQuiz() {
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+            document.getElementById('statusText').innerText = 'Chưa chọn chế độ';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
