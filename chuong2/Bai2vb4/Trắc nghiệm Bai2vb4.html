@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn luyện Củng cố Kiến thức Văn học</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax for mathematical expressions and formatting -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <!-- Font Inter & Custom Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #663333;
+            color: #ffffff;
+        }
+        /* Custom scrollbars and styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #522929;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7a3d3d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8f4747;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col selection:bg-amber-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="bg-[#522929] border-b border-[#7a3d3d] px-6 py-4 flex items-center justify-between shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-amber-500/20 p-2 rounded-lg text-amber-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold text-[#FFFDD0] tracking-wide">ÔN LUYỆN CỦNG CỐ KIẾN THỨC VĂN HỌC</h1>
+                <p class="text-xs text-amber-200/80">Bài: Bản hoà âm ngôn từ trong Tiếng thu (Ngữ văn 11 - Kết nối tri thức)</p>
+            </div>
+        </div>
+        <div id="header-mode-badge" class="hidden px-3 py-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 rounded-full text-xs font-semibold flex items-center space-x-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span id="badge-text">Chế độ Luyện Tập</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 flex flex-col overflow-hidden">
+
+        <!-- SCREEN 1: START SCREEN (giống hình h1.jpg) -->
+        <div id="screen-start" class="flex-1 flex flex-col items-center justify-center p-6 overflow-y-auto">
+            <div class="max-w-4xl w-full text-center space-y-8 my-auto">
+                <!-- Icon Emblem -->
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 mb-2 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#FFFDD0] tracking-tight">BÀI KIỂM TRA TRẮC NGHIỆM KHÁCH QUAN</h2>
+                    <p class="text-sm md:text-base text-gray-200 max-w-2xl mx-auto leading-relaxed">
+                        Bộ câu hỏi chuẩn hóa gồm <span class="text-amber-300 font-bold">20 câu hỏi</span> bám sát nội dung bài học <span class="text-amber-300 font-semibold">Bản hoà âm ngôn từ trong Tiếng thu</span> với 4 mức độ tư duy chuẩn cấu trúc Bộ Giáo dục.
+                    </p>
+                </div>
+
+                <!-- Mức độ breakdown cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <div class="bg-[#522929]/80 border border-[#7a3d3d] p-4 rounded-xl shadow">
+                        <div class="text-xs text-amber-300 font-bold mb-1">MỨC BIẾT (8 CÂU)</div>
+                        <div class="text-xs text-gray-300">Kiến thức lí thuyết, tác giả, thể thơ, thông tin ngữ liệu SGK.</div>
+                    </div>
+                    <div class="bg-[#522929]/80 border border-[#7a3d3d] p-4 rounded-xl shadow">
+                        <div class="text-xs text-amber-300 font-bold mb-1">MỨC HIỂU (7 CÂU)</div>
+                        <div class="text-xs text-gray-300">Giải thích ý nghĩa từ ngữ, hình ảnh, cấu trúc vần nhịp, thao tác lập luận.</div>
+                    </div>
+                    <div class="bg-[#522929]/80 border border-[#7a3d3d] p-4 rounded-xl shadow">
+                        <div class="text-xs text-amber-300 font-bold mb-1">VẬN DỤNG (3 CÂU)</div>
+                        <div class="text-xs text-gray-300">Phối hợp phân tích nghệ thuật, tư duy đánh giá cấu trúc bài văn nghị luận.</div>
+                    </div>
+                    <div class="bg-[#522929]/80 border border-[#7a3d3d] p-4 rounded-xl shadow">
+                        <div class="text-xs text-amber-300 font-bold mb-1">VD CAO (2 CÂU)</div>
+                        <div class="text-xs text-gray-300">Lồng ghép kiến thức văn học so sánh, cảm thụ nghệ thuật phức tạp chiều sâu.</div>
+                    </div>
+                </div>
+
+                <!-- Mode selection section -->
+                <div class="pt-4">
+                    <p class="text-sm font-semibold text-amber-200 mb-4 uppercase tracking-wider">VUI LÒNG CHỌN HÌNH THỨC KIỂM TRA:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                        <!-- Practice Mode Card -->
+                        <button onclick="startQuiz('practice')" class="group text-left bg-[#522929] hover:bg-[#5e3030] border-2 border-[#7a3d3d] hover:border-amber-400/60 p-6 rounded-2xl shadow-xl transition-all duration-300 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs px-2.5 py-1 rounded-full font-medium">Không giới hạn</div>
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-500 text-[#663333] flex items-center font-bold justify-center">1</div>
+                                <h3 class="text-lg font-bold text-[#FFFDD0] group-hover:text-amber-300 transition-colors">Chế độ Luyện Tập</h3>
+                            </div>
+                            <p class="text-xs text-gray-300 mb-4 leading-relaxed">Học tập & củng cố kiến thức không áp lực. Làm bài không tính giờ, xem điểm và lời giải chi tiết ngay khi hoàn thành.</p>
+                            <span class="text-xs font-semibold text-amber-300 group-hover:translate-x-1 inline-flex items-center transition-transform">Bắt đầu luyện tập &rarr;</span>
+                        </button>
+
+                        <!-- Timed Mode Card -->
+                        <button onclick="startQuiz('timed')" class="group text-left bg-[#522929] hover:bg-[#5e3030] border-2 border-[#7a3d3d] hover:border-amber-400/60 p-6 rounded-2xl shadow-xl transition-all duration-300 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-red-500/20 text-red-300 border border-red-500/30 text-xs px-2.5 py-1 rounded-full font-medium">20 Phút</div>
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-8 h-8 rounded-lg bg-red-500 text-white flex items-center font-bold justify-center">2</div>
+                                <h3 class="text-lg font-bold text-[#FFFDD0] group-hover:text-amber-300 transition-colors">Chế độ Tính Giờ</h3>
+                            </div>
+                            <p class="text-xs text-gray-300 mb-4 leading-relaxed">Thử thách & kiểm tra đánh giá năng lực. Có đồng hồ đếm ngược 20 phút. Trật tự câu hỏi ngẫu nhiên giúp đánh giá đúng thực lực.</p>
+                            <span class="text-xs font-semibold text-amber-300 group-hover:translate-x-1 inline-flex items-center transition-transform">Bắt đầu tính giờ &rarr;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: QUIZ WORKSPACE -->
+        <div id="screen-quiz" class="hidden flex-1 flex flex-col md:flex-row overflow-hidden">
+            <!-- Left Sidebar: Question Navigation Grid -->
+            <aside class="w-full md:w-80 bg-[#522929] border-r border-[#7a3d3d] flex flex-col p-4 shrink-0">
+                <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#7a3d3d]/60">
+                    <span class="text-xs font-bold text-gray-300 uppercase tracking-wider">DANH SÁCH CÂU HỎI</span>
+                    <span id="answered-counter" class="text-xs bg-amber-500/20 border border-amber-500/40 text-amber-300 px-2 py-0.5 rounded-md font-medium">0 / 20 đã làm</span>
+                </div>
+
+                <!-- Timer display for timed mode -->
+                <div id="timer-box" class="hidden mb-4 p-3 bg-red-950/60 border border-red-500/40 rounded-xl text-center">
+                    <div class="text-[10px] text-red-300 uppercase font-semibold">Thời gian còn lại</div>
+                    <div id="timer-display" class="text-2xl font-mono font-bold text-red-400 mt-0.5">20:00</div>
+                </div>
+
+                <!-- Question buttons grid (20 questions) -->
+                <div id="question-grid" class="grid grid-cols-5 gap-2.5 overflow-y-auto flex-1 pr-1 mb-4">
+                    <!-- Generated via JS -->
+                </div>
+
+                <!-- Legend / Status indicator -->
+                <div class="space-y-2 pt-3 border-t border-[#7a3d3d]/60 text-[11px] text-gray-300">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded bg-[#5e3030] border border-gray-500"></div>
+                        <span>Chưa trả lời</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded bg-amber-500 text-[#663333] font-bold flex items-center justify-center text-[9px]">✓</div>
+                        <span>Đã chọn đáp án</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded bg-blue-600 border border-blue-400"></div>
+                        <span>Đang làm (Hiện tại)</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button in Sidebar -->
+                <button onclick="confirmSubmitQuiz()" class="mt-4 w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white text-sm font-semibold py-3 px-4 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Nộp Bài & Kết Thúc</span>
+                </button>
+            </aside>
+
+            <!-- Main Question Area -->
+            <section class="flex-1 flex flex-col overflow-y-auto p-6 md:p-8 bg-[#663333]">
+                <div class="max-w-3xl w-full mx-auto flex-1 flex flex-col justify-between">
+                    <!-- Question Top Header -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-3">
+                            <span id="current-q-num" class="text-xl md:text-2xl font-bold text-[#FFFDD0]">Câu 1 / 20</span>
+                            <span id="current-q-level" class="text-xs px-2.5 py-1 bg-blue-500/20 border border-blue-500/40 text-blue-300 rounded-md font-semibold">Mức Biết</span>
+                        </div>
+                        <button onclick="clearCurrentSelection()" class="text-xs text-gray-300 hover:text-amber-300 underline transition-colors">
+                            Xóa lựa chọn câu này
+                        </button>
+                    </div>
+
+                    <!-- Question Prompt / Text -->
+                    <div class="bg-[#522929] border border-[#7a3d3d] p-6 rounded-2xl shadow-xl mb-6">
+                        <h3 id="current-q-text" class="text-base md:text-lg font-medium text-white leading-relaxed">
+                            Đang tải nội dung câu hỏi...
+                        </h3>
+                    </div>
+
+                    <!-- Options List -->
+                    <div id="options-container" class="space-y-3 mb-8">
+                        <!-- Options generated via JS -->
+                    </div>
+
+                    <!-- Navigation Footer Controls -->
+                    <div class="flex items-center justify-between pt-4 border-t border-[#7a3d3d]/60">
+                        <button onclick="prevQuestion()" id="btn-prev" class="px-5 py-2.5 rounded-xl bg-[#522929] hover:bg-[#5e3030] border border-[#7a3d3d] text-sm font-semibold text-gray-200 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center space-x-1">
+                            <span>&lang; Câu Trước</span>
+                        </button>
+                        <span id="progress-indicator-text" class="text-xs text-gray-300 font-medium">Đã làm 0/20 câu</span>
+                        <button onclick="nextQuestion()" id="btn-next" class="px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-[#663333] text-sm font-bold shadow-lg transition-all flex items-center space-x-1">
+                            <span>Câu Tiếp &rang;</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SCREEN 3: RESULT & REVIEW SCREEN -->
+        <div id="screen-result" class="hidden flex-1 flex flex-col overflow-y-auto p-6 md:p-10 bg-[#663333]">
+            <div class="max-w-4xl w-full mx-auto space-y-8">
+                <!-- Trophy Header Card -->
+                <div class="bg-[#522929] border border-[#7a3d3d] p-8 rounded-3xl shadow-2xl text-center relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl"></div>
+                    
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 mb-4 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-[#FFFDD0] mb-1">KẾT QUẢ BÀI KIỂM TRA</h2>
+                    <p id="result-mode-subtitle" class="text-xs text-amber-200/80 mb-6 uppercase tracking-wider">Chế độ Luyện Tập</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+                        <div class="bg-[#663333] border border-[#7a3d3d] p-4 rounded-2xl shadow">
+                            <div class="text-xs text-gray-300 font-medium mb-1">Điểm số</div>
+                            <div id="res-score" class="text-3xl font-black text-amber-400">0.0<span class="text-sm font-normal text-gray-300"> / 10.0</span></div>
+                        </div>
+                        <div class="bg-[#663333] border border-[#7a3d3d] p-4 rounded-2xl shadow">
+                            <div class="text-xs text-gray-300 font-medium mb-1">Số câu đúng</div>
+                            <div id="res-correct-count" class="text-3xl font-black text-emerald-400">0<span class="text-sm font-normal text-gray-300"> / 20 câu</span></div>
+                        </div>
+                        <div class="bg-[#663333] border border-[#7a3d3d] p-4 rounded-2xl shadow">
+                            <div class="text-xs text-gray-300 font-medium mb-1">Thời gian làm bài</div>
+                            <div id="res-time-taken" class="text-lg font-bold text-gray-200 mt-1">Không giới hạn</div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Feedback Box -->
+                    <div class="bg-[#663333]/90 border border-amber-500/40 p-5 rounded-2xl text-left shadow-inner mb-6">
+                        <div class="flex items-center space-x-2 mb-2 text-amber-300 font-bold text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                            </svg>
+                            <span>Đánh giá & Nhận xét từ Giáo viên:</span>
+                        </div>
+                        <p id="teacher-feedback-text" class="text-sm text-gray-200 leading-relaxed italic">
+                            Đang tổng hợp nhận xét...
+                        </p>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button onclick="restartQuiz()" class="bg-amber-600 hover:bg-amber-500 text-[#663333] font-bold px-6 py-3 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                            <span>Làm lại bài kiểm tra</span>
+                        </button>
+                        <button onclick="scrollToReview()" class="bg-[#663333] hover:bg-[#5e3030] border border-[#7a3d3d] text-gray-200 font-semibold px-6 py-3 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            <span>Xem đáp án & Lời giải</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Detailed Answer & Explanation Section (giống hình h3.jpg phần dưới) -->
+                <div id="review-section" class="space-y-6 pt-4">
+                    <div class="flex items-center justify-between border-b border-[#7a3d3d] pb-3">
+                        <h3 class="text-xl font-bold text-[#FFFDD0] flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <span>ĐÁP ÁN & LỜI GIẢI CHI TIẾT</span>
+                        </h3>
+                        <span class="text-xs text-gray-300 font-medium">20/20 câu</span>
+                    </div>
+
+                    <div id="detailed-review-list" class="space-y-6">
+                        <!-- Generated via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Question Bank: 20 questions based strictly on "Bản hoà âm ngôn từ trong Tiếng thu" (Chu Văn Sơn)
+        // Levels: 8 Knowing (Biết), 7 Understanding (Hiểu), 3 Applying (Vận dụng), 2 High Applying (Vận dụng cao)
+        const questionsData = [
+            // --- MỨC BIẾT (8 câu) ---
+            {
+                id: 1,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Tác giả của văn bản <i>'Bản hoà âm ngôn từ trong Tiếng thu'</i> là ai?",
+                options: [
+                    "A. Lưu Trọng Lư",
+                    "B. Chu Văn Sơn",
+                    "C. Hoài Thanh",
+                    "D. Nguyễn Đăng Mạnh"
+                ],
+                correct: 1,
+                explanation: "Văn bản 'Bản hoà âm ngôn từ trong Tiếng thu' là tác phẩm phê bình, nghiên cứu nổi tiếng của nhà nghiên cứu văn học hiện đại Chu Văn Sơn (trích từ 'Thơ – điệu hồn và cấu trúc', 2007)."
+            },
+            {
+                id: 2,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Thi sĩ Lưu Trọng Lư (1911 – 1991) được xem là một trong những thi sĩ đầu tiên khởi xướng và tích cực cổ vũ cho phong trào nào?",
+                options: [
+                    "A. Phong trào Thơ mới",
+                    "B. Phong trào Thơ ca kháng chiến",
+                    "C. Thơ ca hiện đại miền Nam",
+                    "D. Thơ ca lãng mạn trung đại"
+                ],
+                correct: 0,
+                explanation: "Theo phần chú thích SGK, Lưu Trọng Lư sinh tại Bố Trạch, Quảng Bình, được xem là một trong những thi sĩ đầu tiên khởi xướng và tích cực cổ vũ cho phong trào Thơ mới."
+            },
+            {
+                id: 3,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Bài thơ <i>'Tiếng thu'</i> của Lưu Trọng Lư được sáng tác và in trong tập thơ nào, xuất bản năm nào?",
+                options: [
+                    "A. Tập <i>'Người sơn nhân'</i> (1933)",
+                    "B. Tập <i>'Tiếng thu'</i> (1939)",
+                    "C. Tập <i>'Khói lam chiều'</i> (1941)",
+                    "D. Tập <i>'Tỏa sáng đôi bờ'</i> (1959)"
+                ],
+                correct: 1,
+                explanation: "Bài thơ 'Tiếng thu' nổi tiếng của Lưu Trọng Lư in trong tập thơ cùng tên xuất bản năm 1939."
+            },
+            {
+                id: 4,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Theo tác giả Chu Văn Sơn, âm hưởng đặc trưng nhất vang lên từ đáy hồn của Thơ mới là gì?",
+                options: [
+                    "A. Tiếng u hoài",
+                    "B. Tiếng xôn xao",
+                    "C. Tiếng bi thương",
+                    "D. Tiếng hoài niệm"
+                ],
+                correct: 1,
+                explanation: "Trong văn bản, tác giả khẳng định: 'Nếu như gom toàn bộ Thơ mới lại để mà lắng nghe, thì cái âm hưởng đặc trưng nhất vang lên từ đáy hồn Thơ mới chính là tiếng XÔN XAO'."
+            },
+            {
+                id: 5,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Bài thơ <i>'Tiếng thu'</i> được viết theo thể thơ nào?",
+                options: [
+                    "A. Thể thơ tự do",
+                    "B. Thể thơ bảy chữ (thất ngôn)",
+                    "C. Thể thơ ngũ ngôn (năm chữ)",
+                    "D. Thể thơ tám chữ"
+                ],
+                correct: 2,
+                explanation: "Văn bản nêu rõ: 'Bài thơ thuộc thể ngũ ngôn, gồm chín câu, mỗi câu năm chữ, tạo ra bước nhịp lớn đều đặn, êm đềm suốt toàn bài'."
+            },
+            {
+                id: 6,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Nhà nghiên cứu Chu Văn Sơn chỉ ra cấu trúc ngôn từ tự nhiên đã chia bài thơ <i>'Tiếng thu'</i> thành mấy phần nội dung, tương ứng với mấy câu hỏi?",
+                options: [
+                    "A. 2 phần, tương ứng 2 câu hỏi",
+                    "B. 3 phần, tương ứng 3 câu hỏi",
+                    "C. 4 phần, tương ứng 4 câu hỏi",
+                    "D. 5 phần, tương ứng 5 câu hỏi"
+                ],
+                correct: 1,
+                explanation: "Đoạn 6 của văn bản khẳng định: 'Cấu trúc ngôn từ tự nhiên đã chia bài thơ thành ba phần nội dung, tương ứng với ba câu hỏi'."
+            },
+            {
+                id: 7,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Trong bài thơ <i>'Tiếng thu'</i>, từ tượng thanh duy nhất xuất hiện là từ nào?",
+                options: [
+                    "A. Thổn thức",
+                    "B. Rạo rực",
+                    "C. Ngơ ngác",
+                    "D. Xào xạc"
+                ],
+                correct: 3,
+                explanation: "Tác giả Chu Văn Sơn chỉ rõ: 'Những tiếng ấy hiện hữu mà mơ hồ. Toàn bài chỉ có duy nhất một từ tượng thanh: xào xạc'."
+            },
+            {
+                id: 8,
+                level: "Biết",
+                levelClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                question: "Nhà nghiên cứu Chu Văn Sơn (1962 – 2019) ngoài tác phẩm <i>'Thơ – điệu hồn và cấu trúc'</i> còn có tác phẩm nổi tiếng nào sau đây?",
+                options: [
+                    "A. <i>'Thi nhân Việt Nam'</i>",
+                    "B. <i>'Ba đỉnh cao Thơ mới: Xuân Diệu, Nguyễn Bính, Hàn Mặc Tử'</i>",
+                    "C. <i>'Nhà văn hiện đại'</i>",
+                    "D. <i>'Thi ca Việt Nam'</i>"
+                ],
+                correct: 1,
+                explanation: "Theo tiểu sử chú thích SGK, các tác phẩm chính đã xuất bản của Chu Văn Sơn gồm: 'Ba đỉnh cao Thơ mới: Xuân Diệu, Nguyễn Bính, Hàn Mặc Tử' (2005), 'Thơ – điệu hồn và cấu trúc' (2007), 'Tự tình cùng cái Đẹp' (2019)."
+            },
+
+            // --- MỨC HIỂU (7 câu) ---
+            {
+                id: 9,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                question: "Theo tác giả Chu Văn Sơn, sự khác biệt lớn nhất trong cách miêu tả thiên nhiên của Thơ mới so với thơ cổ điển là gì?",
+                options: [
+                    "A. Thơ cổ điển xem tĩnh là gốc và miêu tả thiên nhiên tĩnh lặng miên viễn; Thơ mới khám phá sự sống tiềm tàng, xôn xao đầy biến thái tinh vi bên trong lòng tạo vật.",
+                    "B. Thơ cổ điển miêu tả thiên nhiên hoang sơ, Thơ mới miêu tả thiên nhiên thành thị.",
+                    "C. Thơ cổ điển chỉ dùng âm bằng, Thơ mới chỉ dùng âm trắc.",
+                    "D. Thơ cổ điển coi trọng vần điệu, Thơ mới hoàn toàn tự do không quy luật."
+                ],
+                correct: 0,
+                explanation: "Tác giả phân tích: Thơ cổ điển xem 'tĩnh là gốc', thiên nhiên tĩnh lặng an nhiên minh triết; trong khi Thơ mới tìm dò sự sống tiềm tàng chất chứa bên trong tạo vật, khám phá ra sự sống xôn xao huyền diệu."
+            },
+            {
+                id: 10,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                question: "Theo tác giả Chu Văn Sơn, ba khổ thơ của bài <i>'Tiếng thu'</i> mở đầu bằng cụm từ <i>'Em không nghe'</i> có cấu trúc phát triển như thế nào?",
+                options: [
+                    "A. Cả ba khổ đều có số dòng bằng nhau (3 dòng).",
+                    "B. Khổ một: 2 dòng, khổ hai: 3 dòng, khổ ba: 4 dòng. Sự gia tăng tương ứng với từng mảng nội dung và bước đẩy cảm xúc lên cao trào.",
+                    "C. Khổ một: 4 dòng, khổ hai: 3 dòng, khổ ba: 2 dòng.",
+                    "D. Số dòng ngẫu nhiên không theo quy luật."
+                ],
+                correct: 1,
+                explanation: "Văn bản phân tích: 'Khúc thức không chỉ lặp lại mà còn phát triển. Ba khổ thì khổ một: 2 dòng, khổ hai: 3 dòng, và khổ ba: 4 dòng. Sự gia tăng tương ứng với từng mảng nội dung, từng bước đẩy cảm xúc lên cao trào'."
+            },
+            {
+                id: 11,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-blue-500/40 text-amber-300 border-amber-500/40",
+                question: "Trong cách hiệp vần của bài thơ <i>'Tiếng thu'</i>, tác giả Chu Văn Sơn chỉ ra bài thơ kết hợp cả hai hệ thống vần nào?",
+                options: [
+                    "A. Chỉ hiệp vần bằng duy nhất",
+                    "B. Chỉ hiệp vần trắc duy nhất",
+                    "C. Hiệp vần bằng (mùa thu, trăng mờ, chinh phu...) và vần trắc (thổn thức, rạo rực, xào xạc...)",
+                    "D. Không hiệp vần mà chỉ dùng nhịp điệu tự do"
+                ],
+                correct: 2,
+                explanation: "Tác giả chỉ rõ: 'Tiếng thu hiệp vần bằng cả hai hệ thống: vần bằng và vần trắc... Sự quyện hoà của hai chuỗi vần bằng và vần trắc tạo nên sức quyện rũ lớn'."
+            },
+            {
+                id: 12,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                question: "Theo phân tích của Chu Văn Sơn, trong ba 'tiếng' của mùa thu (thổn thức, rạo rực, xào xạc), hai tiếng đầu (thổn thức, rạo rực) và tiếng sau (xào xạc) có mối quan hệ tương quan như thế nào?",
+                options: [
+                    "A. Thổn thức và rạo rực là âm nền, còn xào xạc là âm nổi (sự phát lộ ra bên ngoài của nỗi xôn xao ngấm ngầm).",
+                    "B. Xào xạc là âm nền, thổn thức và rạo rực là âm nổi.",
+                    "C. Ba tiếng hoàn toàn độc lập, không có sự liên quan.",
+                    "D. Cả ba tiếng đều là từ tượng thanh mô tả tiếng động vật."
+                ],
+                correct: 0,
+                explanation: "Tác giả lập luận: 'Thổn thức và rạo rực là những âm nền còn xào xạc là âm nổi: Phải chăng nỗi thổn thức của tạo vật, nỗi rạo rực của lòng người đã cộng hưởng thành nỗi xôn xao... còn tiếng xào xạc kia chỉ là sự phát lộ ra bên ngoài'."
+            },
+            {
+                id: 13,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                question: "Việc tác giả Chu Văn Sơn so sánh từ <i>'xào xạc'</i> trong bài thơ của Lưu Trọng Lư với từ <i>'xao xác'</i> trong thơ Nguyễn Đình Thi nhằm mục đích gì?",
+                options: [
+                    "A. Chỉ trích Nguyễn Đình Thi đạo ý thơ của Lưu Trọng Lư.",
+                    "B. Làm nổi bật sự khác biệt tinh tế giữa hai sắc thái âm thanh (xao xác đanh và cao gợi hơi thu phố phường, xào xạc trầm đục gợi vẻ âm u huyền bí rừng già).",
+                    "C. Chứng minh hai từ hoàn toàn đồng nghĩa và có thể thay thế cho nhau trong mọi hoàn cảnh.",
+                    "D. Khẳng định thơ ca kháng chiến hay hơn Thơ mới."
+                ],
+                correct: 1,
+                explanation: "Tác giả phân tích: 'Xao xác và xào xạc thực chỉ là một âm thôi, khác nào như một nốt nhạc chơi ở hai cung khác nhau... Xao xác đanh và cao gợi hơi thu phố phường, còn xào xạc lại trầm và đục, gợi vẻ âm u huyền bí của rừng già'."
+            },
+            {
+                id: 14,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                question: "Trong phần phân tích âm hưởng và tiết tấu, tác giả Chu Văn Sơn cho biết âm hưởng chung của bài thơ <i>'Tiếng thu'</i> nghiêng hẳn về điều gì?",
+                options: [
+                    "A. Nghiêng hẳn về âm trắc để tạo sự dồn dập, căng thẳng.",
+                    "B. Nghiêng hẳn về âm bằng (chiếm ưu thế với 33/45 âm), tạo điệu êm đềm, thanh thoát, tiêu tao, mơ màng.",
+                    "C. Cân bằng tuyệt đối giữa âm bằng và âm trắc.",
+                    "D. Không sử dụng âm bằng."
+                ],
+                correct: 1,
+                explanation: "Văn bản chỉ rõ: 'Toàn bài có 45 âm thì có tới 33 âm bằng... Vậy là âm hưởng chung đã nghiêng hẳn về bằng. Bởi thế chúng ta thấy Tiếng thu có một điệu êm đềm, thanh thoát mà tiêu tao'."
+            },
+            {
+                id: 15,
+                level: "Hiểu",
+                levelClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                question: "Hình ảnh <i>'chú nai vàng ngơ ngác'</i> đạp trên lá vàng khô trong bài thơ qua góc nhìn nghị luận của Chu Văn Sơn được ví với ai?",
+                options: [
+                    "A. Được ví chính với nhà thơ Lưu Trọng Lư qua cái nghiêng tai ngơ ngác trước vương quốc thu huyền bí.",
+                    "B. Được ví với người cô phụ trong lòng.",
+                    "C. Được ví với cảnh sắc phố phường mùa thu.",
+                    "D. Được ví với người đọc thơ hiện đại."
+                ],
+                correct: 0,
+                explanation: "Đoạn 13 kết luận: 'Tôi cứ nghĩ, Lưu Trọng Lư chính là chú nai kia, bởi cái nghiêng tai ngơ ngác thi sĩ của nó... vị sứ giả của cái vương - quốc - thu huyền bí'."
+            },
+
+            // --- VẬN DỤNG (3 câu) ---
+            {
+                id: 16,
+                level: "Vận dụng",
+                levelClass: "bg-purple-500/20 text-purple-300 border-purple-500/40",
+                question: "Từ cách tiếp cận và phân tích nghệ thuật của nhà nghiên cứu Chu Văn Sơn trong văn bản, yếu tố nào được xem là chìa khóa cốt yếu nhất để cảm nhận một bài thơ trữ tình?",
+                options: [
+                    "A. Chỉ cần nhớ hoàn cảnh sáng tác và tiểu sử tác giả.",
+                    "B. Cảm nhận nhạc tính trong sự hòa điệu giữa tiếng thơ và tiếng lòng, thấu hiểu âm điệu như là sự hiển hiện của hồn thơ.",
+                    "C. Học thuộc lòng toàn bộ từ ngữ trong văn bản.",
+                    "D. Phân tích ngữ pháp và các lỗi dùng từ."
+                ],
+                correct: 1,
+                explanation: "Tác giả nhấn mạnh: 'Nghe được âm điệu riêng thì xem như đã cảm nhập được cái hồn, cái thần của thơ rồi vậy... Điều cốt yếu là cảm nhận nhạc tính trong sự hoà điệu giữa TIẾNG THU và TIẾNG THƠ'."
+            },
+            {
+                id: 17,
+                level: "Vận dụng",
+                levelClass: "bg-purple-500/20 text-purple-300 border-purple-500/40",
+                question: "Trong nghệ thuật lập luận phân tích thơ, việc Chu Văn Sơn kết hợp linh hoạt giữa phân tích cấu trúc vần nhịp, từ láy (âm trắc) với phân tích tầng nghĩa hình ảnh (chú nai vàng, cô phụ, rừng thu) mang lại ý nghĩa phương pháp luận gì?",
+                options: [
+                    "A. Giúp chứng minh văn học chỉ là trò chơi hình thức ngôn từ.",
+                    "B. Rèn luyện tư duy phân tích toàn diện, thấy được sự thống nhất biện chứng giữa hình thức nghệ thuật (thể thơ, vần, nhạc) và hồn thơ sâu thẳm bên trong.",
+                    "C. Cho thấy thơ ca không cần cảm xúc mà chỉ cần quy luật toán học.",
+                    "D. Tách rời hoàn toàn phần âm thanh và phần ý nghĩa của bài thơ."
+                ],
+                correct: 1,
+                explanation: "Vận dụng phương pháp nghiên cứu của Chu Văn Sơn, việc kết hợp chặt chẽ giữa hình thức ngôn từ (nhạc tính, vần, nhịp) và nội dung (hồn thơ, cảm xúc) giúp rèn tư duy phân tích tác phẩm sâu sắc, thấy rõ nghệ thuật cấu trúc tinh tế."
+            },
+            {
+                id: 18,
+                level: "Vận dụng",
+                levelClass: "bg-purple-500/20 text-purple-300 border-purple-500/40",
+                question: "Nhận xét nào sau đây đánh giá chính xác nhất về tính hợp lí trong cách tổ chức và triển khai ý tưởng của bài viết <i>'Bản hoà âm ngôn từ trong Tiếng thu'</i>?",
+                options: [
+                    "A. Triển khai lộn xộn, rời rạc, không có luận điểm rõ ràng.",
+                    "B. Triển khai mạch lạc từ tổng thể (khám phá tiếng thu, điệu huyền) đến chi tiết cấu trúc ngôn từ (âm điệu, vần, nhịp, từ láy) rồi nâng lên tầm cao cảm thụ thẩm mĩ.",
+                    "C. Chỉ tập trung kể chuyện đời tư tác giả Lưu Trọng Lư mà không phân tích thơ.",
+                    "D. Chỉ nói về ngữ pháp tiếng Việt."
+                ],
+                correct: 1,
+                explanation: "Bài nghị luận văn học của Chu Văn Sơn có kết cấu vô cùng chặt chẽ, đi từ việc giải mã tiếng thu (bản hòa âm huyền diệu) đến phân tích chi tiết cấu trúc ngôn từ mang tính nhạc (khổ thơ, vần, nhịp, âm hưởng bằng trắc) rất logic và thuyết phục."
+            },
+
+            // --- VẬN DỤNG CAO (2 câu) ---
+            {
+                id: 19,
+                level: "Vận dụng cao",
+                levelClass: "bg-red-500/20 text-red-300 border-red-500/40",
+                question: "Phân tích chiều sâu nghệ thuật lồng ghép trong văn bản của Chu Văn Sơn khi bàn về sự tương phản giữa <i>'phần bằng'</i> (âm nền thanh tĩnh mơ màng) và <i>'phần trắc'</i> (chuỗi từ láy ngân luyến vang vọng), ta thấy nhà nghiên cứu đã khám phá ra quy luật thẩm mĩ nào của thơ ca đích thực?",
+                options: [
+                    "A. Sự đối lập tuyệt đối triệt tiêu lẫn nhau giữa tĩnh và động.",
+                    "B. Sự hài thanh tinh tế: trên cái nền bằng thanh tĩnh, thanh thoát chợt ngân lên những tiếng thu vang động, tạo nên một bản hòa âm ngôn từ vừa mơ hồ vừa hiển hiện.",
+                    "C. Thơ ca hay phải hoàn toàn dùng âm trắc để gây ấn tượng mạnh.",
+                    "D. Âm điệu không có vai trò gì trong việc truyền tải cảm xúc."
+                ],
+                correct: 1,
+                explanation: "Vận dụng cao: Chu Văn Sơn đã tinh tế chỉ ra quy luật hài thanh: 'Khác nào trên cái nền bằng thanh tĩnh mơ màng của đất trời chợt ngân lên những Tiếng thu... Sự tương phản bằng trắc ấy lại chính là sự hài hoà, sự hài thanh để cho Tiếng thu thành một bản hoà âm'."
+            },
+            {
+                id: 20,
+                level: "Vận dụng cao",
+                levelClass: "bg-red-500/20 text-red-300 border-red-500/40",
+                question: "Từ luận điểm của Chu Văn Sơn về việc Lưu Trọng Lư khám phá <i>'sự sống bí mật đầy xôn xao trong lòng tạo vật'</i> của Thơ mới, nếu đặt vào bối cảnh văn học trung đại (vốn xem tĩnh là gốc), yếu tố nghệ thuật phức tạp nào đã đánh dấu cuộc cách mạng vĩ đại trong tâm cảm thẩm mĩ của Thơ mới?",
+                options: [
+                    "A. Sự dịch chuyển từ cái nhìn chiêm nghiệm, miên viễn, an nhiên sang cái nhìn hướng vào nội cảm, giao cảm tương ứng vi diệu giữa tâm hồn cá nhân với những biến thái tinh vi, vi mô của tạo vật.",
+                    "B. Sự từ bỏ hoàn toàn các thể thơ truyền thống để viết văn xuôi.",
+                    "C. Việc chỉ miêu tả các sự vật lớn lao vĩ đại như núi cao biển rộng.",
+                    "D. Sự loại bỏ hoàn toàn các yếu tố nhạc tính ra khỏi thơ ca."
+                ],
+                correct: 0,
+                explanation: "Vận dụng cao: Cuộc cách mạng của Thơ mới so với thơ cổ điển nằm ở chỗ chuyển từ tư duy mĩ học tĩnh lặng miên viễn sang tư duy giao cảm hướng nội, khám phá sự sống tiềm tàng, biến thái vi mô (cựa mình nụ hoa, tiếng thở dài của lá, nỗi rạo rực nhụy phấn) qua mối liên hệ tương ứng vi diệu giữa tâm hồn thi nhân và tạo vật."
+            }
+        ];
+
+        // State variables
+        let currentMode = 'practice'; // 'practice' or 'timed'
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // { questionId: selectedOptionIndex }
+        let timerInterval = null;
+        let timeLeft = 20 * 60; // 20 minutes in seconds
+        let isSubmitted = false;
+        let activeQuestions = []; // Array of question objects (shuffled for timed mode if needed)
+
+        // Initialize quiz when starting
+        function startQuiz(mode) {
+            currentMode = mode;
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            isSubmitted = false;
+            
+            // Clone and prepare questions
+            activeQuestions = JSON.parse(JSON.stringify(questionsData));
+            if (mode === 'timed') {
+                // Shuffle questions for timed mode to prevent cheating
+                activeQuestions = shuffleArray(activeQuestions);
+                timeLeft = 20 * 60;
+                startTimer();
+                document.getElementById('timer-box').classList.remove('hidden');
+                document.getElementById('header-mode-badge').classList.remove('hidden');
+                document.getElementById('badge-text').innerText = 'Chế độ Tính Giờ (20 Phút)';
+            } else {
+                document.getElementById('timer-box').classList.add('hidden');
+                document.getElementById('header-mode-badge').classList.remove('hidden');
+                document.getElementById('badge-text').innerText = 'Chế độ Luyện Tập (Không giới hạn)';
+            }
+
+            // Switch screens
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            renderQuestionGrid();
+            loadQuestion(0);
+        }
+
+        // Fisher-Yates shuffle array
+        function shuffleArray(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        // Timer function
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                document.getElementById('timer-display').innerText = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    autoSubmitQuizDueToTimeout();
+                }
+            }, 1000);
+        }
+
+        // Render question grid in sidebar
+        function renderQuestionGrid() {
+            const gridContainer = document.getElementById('question-grid');
+            gridContainer.innerHTML = '';
+
+            activeQuestions.forEach((q, idx) => {
+                const isAnswered = userAnswers[q.id] !== undefined;
+                const isCurrent = idx === currentQuestionIndex;
+
+                let btnClass = "w-10 h-10 rounded-xl font-bold text-xs flex items-center justify-center transition-all ";
+                if (isCurrent) {
+                    btnClass += "bg-blue-600 text-white border-2 border-blue-300 shadow-lg scale-105";
+                } else if (isAnswered) {
+                    btnClass += "bg-amber-500 text-[#663333] hover:bg-amber-400 font-extrabold shadow";
+                } else {
+                    btnClass += "bg-[#5e3030] text-gray-300 hover:bg-[#6e3838] border border-[#7a3d3d]";
+                }
+
+                const btn = document.createElement('button');
+                btn.className = btnClass;
+                btn.innerText = idx + 1;
+                btn.onclick = () => goToQuestion(idx);
+                gridContainer.appendChild(btn);
+            });
+
+            // Update answered counter
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('answered-counter').innerText = `${answeredCount} / 20 đã làm`;
+            document.getElementById('progress-indicator-text').innerText = `Đã làm ${answeredCount}/20 câu`;
+        }
+
+        // Navigate to specific question index
+        function goToQuestion(index) {
+            if (index < 0 || index >= activeQuestions.length) return;
+            currentQuestionIndex = index;
+            loadQuestion(index);
+            renderQuestionGrid();
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                goToQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < activeQuestions.length - 1) {
+                goToQuestion(currentQuestionIndex + 1);
+            }
+        }
+
+        // Load question details into view
+        function loadQuestion(index) {
+            const q = activeQuestions[index];
+            document.getElementById('current-q-num').innerText = `Câu ${index + 1} / 20`;
+            
+            const levelBadge = document.getElementById('current-q-level');
+            levelBadge.className = `text-xs px-2.5 py-1 border rounded-md font-semibold ${q.levelClass}`;
+            levelBadge.innerText = `Mức ${q.level}`;
+
+            document.getElementById('current-q-text').innerHTML = q.question;
+
+            // Render options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach((optText, optIdx) => {
+                const isSelected = userAnswers[q.id] === optIdx;
+                
+                let optCardClass = "w-full text-left p-4 rounded-xl border transition-all flex items-start space-x-3 cursor-pointer ";
+                if (isSelected) {
+                    optCardClass += "bg-amber-500/20 border-amber-400 text-white shadow-md";
+                } else {
+                    optCardClass += "bg-[#522929] hover:bg-[#5e3030] border-[#7a3d3d] text-gray-200";
+                }
+
+                const optButton = document.createElement('button');
+                optButton.className = optCardClass;
+                optButton.onclick = () => selectOption(q.id, optIdx);
+
+                const radioCircle = document.createElement('div');
+                radioCircle.className = `w-5 h-5 rounded-full border flex items-center justify-center shrink-0 mt-0.5 ${isSelected ? 'border-amber-400 bg-amber-400 text-[#663333]' : 'border-gray-400'}`;
+                if (isSelected) {
+                    radioCircle.innerHTML = `<svg class="w-3 h-3 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>`;
+                }
+
+                const textSpan = document.createElement('div');
+                textSpan.className = "text-sm md:text-base leading-relaxed flex-1";
+                textSpan.innerHTML = optText;
+
+                optButton.appendChild(radioCircle);
+                optButton.appendChild(textSpan);
+                optionsContainer.appendChild(optButton);
+            });
+
+            // Update prev/next button states
+            document.getElementById('btn-prev').disabled = index === 0;
+            const nextBtn = document.getElementById('btn-next');
+            if (index === activeQuestions.length - 1) {
+                nextBtn.innerHTML = `<span>Hoàn thành &rarr;</span>`;
+                nextBtn.onclick = confirmSubmitQuiz;
+            } else {
+                nextBtn.innerHTML = `<span>Câu Tiếp &rang;</span>`;
+                nextBtn.onclick = nextQuestion;
+            }
+
+            // Trigger MathJax typesetting if available
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // Select an option for a question
+        function selectOption(questionId, optionIndex) {
+            userAnswers[questionId] = optionIndex;
+            renderQuestionGrid();
+            loadQuestion(currentQuestionIndex);
+        }
+
+        // Clear selection for current question
+        function clearCurrentSelection() {
+            const q = activeQuestions[currentQuestionIndex];
+            if (userAnswers[q.id] !== undefined) {
+                delete userAnswers[q.id];
+                renderQuestionGrid();
+                loadQuestion(currentQuestionIndex);
+            }
+        }
+
+        function confirmSubmitQuiz() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount < 20) {
+                if (!confirm(`Bạn mới trả lời ${answeredCount}/20 câu. Bạn có chắc chắn muốn nộp bài không?`)) {
+                    return;
+                }
+            } else {
+                if (!confirm("Bạn đã hoàn thành tất cả 20 câu. Bạn có muốn nộp bài và xem kết quả không?")) {
+                    return;
+                }
+            }
+            submitQuiz();
+        }
+
+        function autoSubmitQuizDueToTimeout() {
+            alert("Hết thời gian làm bài! Hệ thống sẽ tự động nộp bài của bạn.");
+            submitQuiz();
+        }
+
+        // Calculate score and show result screen
+        function submitQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+            isSubmitted = true;
+
+            let correctCount = 0;
+            questionsData.forEach(q => {
+                if (userAnswers[q.id] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = (correctCount / 20) * 10;
+
+            // Switch to result screen
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+
+            document.getElementById('result-mode-subtitle').innerText = currentMode === 'timed' ? 'Chế độ Tính Giờ' : 'Chế độ Luyện Tập';
+            document.getElementById('res-score').innerHTML = `${score.toFixed(1)}<span class="text-sm font-normal text-gray-300"> / 10.0</span>`;
+            document.getElementById('res-correct-count').innerHTML = `${correctCount}<span class="text-sm font-normal text-gray-300"> / 20 câu</span>`;
+            
+            if (currentMode === 'timed') {
+                let timeSpentSecs = (20 * 60) - timeLeft;
+                let mins = Math.floor(timeSpentSecs / 60);
+                let secs = timeSpentSecs % 60;
+                document.getElementById('res-time-taken').innerText = `${mins} phút ${secs} giây`;
+            } else {
+                document.getElementById('res-time-taken').innerText = 'Không giới hạn';
+            }
+
+            // Generate Teacher Feedback based on score
+            let feedback = "";
+            if (score >= 9.0) {
+                feedback = `Xuất sắc! Em đã nắm rất vững kiến thức lý thuyết, cấu trúc nghệ thuật, âm điệu, vần nhịp cũng như tư duy phân tích sâu sắc trong văn bản 'Bản hoà âm ngôn từ trong Tiếng thu' của Chu Văn Sơn. Hãy tiếp tục phát huy tinh thần học tập tuyệt vời này!`;
+            } else if (score >= 7.0) {
+                feedback = `Khá tốt! Em đã hiểu khá rõ các nội dung cơ bản và kỹ năng phân tích thơ của nhà nghiên cứu Chu Văn Sơn. Tuy nhiên, em cần ôn lại một số câu hỏi ở mức độ Vận dụng cao liên quan đến sự tương phản âm hưởng bằng trắc và tư duy mĩ học so sánh để đạt điểm tuyệt đối nhé.`;
+            } else if (score >= 5.0) {
+                feedback = `Đạt yêu cầu! Em đã nắm được cơ bản thông tin tác giả, tác phẩm và các ý chính. Tuy nhiên, kết quả cho thấy em còn mơ hồ ở các phần phân tích cấu trúc ngôn từ và thao tác lập luận. Hãy đọc lại kỹ văn bản trong SGK và xem kỹ phần lời giải chi tiết bên dưới.`;
+            } else {
+                feedback = `Cố gắng nhiều hơn! Kết quả cho thấy em chưa nắm vững lý thuyết và kỹ năng phân tích văn bản 'Bản hoà âm ngôn từ trong Tiếng thu'. Hãy đọc lại kỹ SGK Kết nối tri thức, chú ý các phần phân tích nhạc tính, vần nhịp và làm lại bài kiểm tra để cải thiện nhé!`;
+            }
+            document.getElementById('teacher-feedback-text').innerText = feedback;
+
+            // Render detailed review list
+            renderDetailedReview();
+
+            // Scroll to top of result
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        // Render detailed answer review list
+        function renderDetailedReview() {
+            const listContainer = document.getElementById('detailed-review-list');
+            listContainer.innerHTML = '';
+
+            questionsData.forEach((q, idx) => {
+                const userChoice = userAnswers[q.id];
+                const isCorrect = userChoice === q.correct;
+
+                let statusBadge = isCorrect 
+                    ? `<span class="px-2.5 py-1 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold rounded-md">✓ Đúng</span>`
+                    : `<span class="px-2.5 py-1 bg-red-500/20 border border-red-500/40 text-red-300 text-xs font-bold rounded-md">✕ Sai</span>`;
+
+                if (userChoice === undefined) {
+                    statusBadge = `<span class="px-2.5 py-1 bg-gray-500/20 border border-gray-500/40 text-gray-300 text-xs font-bold rounded-md">Chưa trả lời</span>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = "bg-[#522929] border border-[#7a3d3d] p-6 rounded-2xl shadow-xl space-y-4";
+
+                let optionsHtml = '';
+                q.options.forEach((optText, optIdx) => {
+                    let optStyle = "p-3 rounded-xl border text-sm flex items-center space-x-3 ";
+                    if (optIdx === q.correct) {
+                        optStyle += "bg-emerald-950/50 border-emerald-500/60 text-emerald-200 font-semibold";
+                    } else if (optIdx === userChoice && !isCorrect) {
+                        optStyle += "bg-red-950/50 border-red-500/60 text-red-200";
+                    } else {
+                        optStyle += "bg-[#663333]/50 border-[#7a3d3d] text-gray-300 opacity-80";
+                    }
+
+                    optionsHtml += `
+                        <div class="${optStyle}">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${optIdx === q.correct ? 'bg-emerald-500 text-white' : (optIdx === userChoice ? 'bg-red-500 text-white' : 'bg-[#522929] border border-gray-500 text-gray-300')}">
+                                ${optIdx === q.correct ? '✓' : (optIdx === userChoice ? '✕' : optIdx + 1)}
+                            </div>
+                            <div class="flex-1">${optText}</div>
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#7a3d3d]">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-base font-bold text-[#FFFDD0]">Câu ${idx + 1}</span>
+                            <span class="text-xs px-2.5 py-1 border rounded-md font-semibold ${q.levelClass}">Mức ${q.level}</span>
+                        </div>
+                        <div>${statusBadge}</div>
+                    </div>
+                    <div class="text-white font-medium text-base leading-relaxed">
+                        ${q.question}
+                    </div>
+                    <div class="space-y-2">
+                        ${optionsHtml}
+                    </div>
+                    <div class="bg-[#663333] border border-amber-500/30 p-4 rounded-xl text-xs md:text-sm text-amber-200/90 leading-relaxed space-y-1">
+                        <div class="font-bold text-amber-300 uppercase tracking-wider text-xs mb-1 flex items-center space-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span>Lời giải chi tiết:</span>
+                        </div>
+                        <p>${q.explanation}</p>
+                    </div>
+                `;
+
+                listContainer.appendChild(card);
+            });
+        }
+
+        function scrollToReview() {
+            const reviewEl = document.getElementById('review-section');
+            if (reviewEl) {
+                reviewEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function restartQuiz() {
+            if (timerInterval) clearInterval(timerInterval);
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            document.getElementById('header-mode-badge').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
