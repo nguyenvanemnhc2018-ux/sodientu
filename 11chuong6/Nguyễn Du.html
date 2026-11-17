@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn bản 2: Trao duyên - Nguyễn Du</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                packages: {'[+]': ['mhchem']}
+            },
+            loader: {load: ['[tex]/mhchem']}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1a202c;
+            line-height: 1.6;
+        }
+        .main-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.75rem;
+        }
+        .section-header {
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #0f172a;
+            border-bottom: 4px solid #0f172a;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.25rem;
+        }
+        .roman-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 800;
+            border: 2px solid #0f172a;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .circle-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            border: 2px solid #0f172a;
+            border-radius: 9999px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .qa-question {
+            background-color: #edf2f7;
+            border-left: 5px solid #1e40af;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 0.5rem;
+        }
+        .qa-answer {
+            background-color: #dcfce7;
+            border-left: 5px solid #15803d;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .btn-primary-green {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 0.45rem 1rem;
+            border-radius: 6px;
+            border: 1px solid #0f172a;
+            transition: all 0.2s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+        }
+        .btn-primary-green:hover {
+            filter: brightness(0.92);
+            transform: translateY(-1px);
+        }
+        .knowledge-box {
+            background-color: #eff6ff;
+            border: 1px solid #93c5fd;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+        }
+        table.custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table.custom-table th, table.custom-table td {
+            border: 1px solid #cbd5e0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table.custom-table th {
+            background-color: #e2e8f0;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .poem-box {
+            background-color: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        /* Millionaire Quiz Styling */
+        .millionaire-container {
+            background: linear-gradient(135deg, #090d26 0%, #172554 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 2px solid #3b82f6;
+        }
+        .quiz-item {
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(147, 197, 253, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background-color: rgba(15, 23, 42, 0.7);
+        }
+        .option-label:hover {
+            border-color: #33FF33;
+            background-color: rgba(51, 255, 51, 0.15);
+        }
+        .prize-badge {
+            background-color: #f59e0b;
+            color: #0f172a;
+            font-weight: 800;
+            padding: 0.15rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body class="py-6 px-4">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER: 2 khối màu đóng cùng 1 khung, bo tròn 4 góc, giữa có đường kẻ mảnh -->
+        <header class="rounded-[12px] overflow-hidden shadow-md border border-slate-300">
+            <div style="background-color: #1E3A8A;" class="px-6 py-4 text-white text-center font-bold text-lg tracking-wide">
+                CHƯƠNG 6: NGUYỄN DU – "NHỮNG ĐIỀU TRÔNG THẤY MÀ ĐAU ĐỚN LÒNG"
+            </div>
+            <div class="h-[1px] bg-white/60 w-full"></div>
+            <div style="background-color: #2563EB;" class="px-6 py-6 text-white text-center">
+                <p class="text-sm uppercase tracking-widest opacity-90 mb-1">VĂN BẢN 2</p>
+                <h1 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wider">
+                    TRAO DUYÊN
+                </h1>
+                <p class="text-sm italic mt-1 opacity-95">(Trích <em>Truyện Kiều</em> – Nguyễn Du)</p>
+            </div>
+        </header>
+
+        <!-- INTRO BOX: Khung viền đen mỏng, nền trắng, câu hỏi dẫn nhập in nghiêng -->
+        <div class="bg-white border border-black rounded-[12px] p-5 shadow-md">
+            <p class="italic text-slate-800 text-base">
+                <strong>Khởi động / Dẫn nhập:</strong> Mối tình Kim – Kiều được Nguyễn Du miêu tả như một “thiên tình sử tuyệt đẹp”. Bạn hãy đọc một đoạn thơ trong <em>Truyện Kiều</em> hoặc một bài thơ của tác giả khác nói về tình yêu của họ.
+            </p>
+        </div>
+
+        <!-- MỤC I: ĐỌC VĂN BẢN & CHÚ THÍCH BỐI CẢNH -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">I</span>
+                <span>TÌM HIỂU CHUNG & ĐỌC VĂN BẢN</span>
+            </h2>
+
+            <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                    <span class="circle-badge mt-0.5">1</span>
+                    <div class="w-full">
+                        <h3 class="font-bold text-lg text-slate-900">Vị trí đoạn trích & Hoàn cảnh nảy sinh</h3>
+                        <div class="knowledge-box">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                                <li><strong>Vị trí:</strong> Từ câu 711 đến câu 758 trong <em>Truyện Kiều</em> (nằm ở phần <em>Chia li</em>).</li>
+                                <li><strong>Hoàn cảnh:</strong> Gặp nhau lần đầu trong tiết Thanh minh, Kim Trọng và Thuý Kiều đã thề nguyền đồng tâm gắn bó. Khi Kim Trọng phải về Liêu Dương hộ tang chú, gia đình Kiều bất ngờ mắc án oan. Để có tiền cứu cha và em thoát khỏi tù tội, Thuý Kiều quyết định bán mình cho Mã Giám Sinh. Trước ngày theo Mã Giám Sinh về quê người, suốt đêm Kiều thao thức, đau đớn vì mặc cảm phụ bạc lời thề cùng Kim Trọng và quyết định nhờ cậy Thuý Vân thay mình trả nghĩa chàng Kim.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="circle-badge mt-0.5">2</span>
+                    <div class="w-full">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Văn bản: Trao duyên (Câu 711 – 758)</h3>
+                        
+                        <!-- Khung hình minh hoạ -->
+                        <div class="my-4 p-4 border-2 border-dashed border-slate-400 rounded-lg bg-slate-50 text-center">
+                            <img src="h1.png" alt="Minh hoạ cảnh Thuý Kiều trao duyên cho Thuý Vân dưới ánh đèn đêm khuya" class="mx-auto max-h-64 rounded shadow-sm mb-2">
+                            <p class="text-xs text-slate-500 italic">Hình 1: Cảnh Thuý Kiều trao duyên cho Thuý Vân dưới ánh đèn đêm khuya (Tệp ảnh: h1.png)</p>
+                        </div>
+
+                        <div class="poem-box grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-900">
+                            <div>
+                                <p class="font-sans text-xs font-bold uppercase text-amber-800 mb-2 border-b border-amber-300 pb-1">Phần 1 (Câu 711 – 734)</p>
+                                <p>
+                                    711. Nỗi riêng riêng những bàn hoàn,<br>
+                                    Dầu chong trắng đĩa lệ tràn thấm khăn.<br>
+                                    Thuý Vân chợt tỉnh giấc xuân,<br>
+                                    Dưới đèn ghé đến ân cần hỏi han:<br>
+                                    715. “Cơ trời dâu bể đa đoan,<br>
+                                    Một nhà để chị riêng oan một mình.<br>
+                                    Cớ chi ngồi nhẫn tàn canh,<br>
+                                    Nỗi riêng còn mắc mối tình chi đây?”<br>
+                                    Rằng: “Lòng đương thổn thức đầy,<br>
+                                    720. Tơ duyên còn vướng mối này chưa xong.<br>
+                                    Hở môi ra cũng thẹn thùng,<br>
+                                    Để lòng thì phụ tấm lòng với ai!<br>
+                                    Cậy em em có chịu lời,<br>
+                                    Ngồi lên cho chị lạy rồi sẽ thưa.<br>
+                                    725. Giữa đường đứt gánh tương tư,<br>
+                                    Keo loan chắp mối tơ thừa mặc em.<br>
+                                    Kể từ khi gặp chàng Kim,<br>
+                                    Khi ngày quạt ước khi đêm chén thề.<br>
+                                    Sự đâu sóng gió bất kì,<br>
+                                    730. Hiếu tình khôn lẽ hai bề vẹn hai.<br>
+                                    Ngày xuân em hãy còn dài,<br>
+                                    Xót tình máu mủ thay lời nước non.<br>
+                                    Chị dù thịt nát xương mòn,<br>
+                                    Ngậm cười chín suối hãy còn thơm lây.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-sans text-xs font-bold uppercase text-amber-800 mb-2 border-b border-amber-300 pb-1">Phần 2 (Câu 735 – 758)</p>
+                                <p>
+                                    735. Chiếc vành với bức tờ mây,<br>
+                                    Duyên này thì giữ vật này của chung.<br>
+                                    Dù em nên vợ nên chồng,<br>
+                                    Xót người bạc mệnh ắt lòng chẳng quên.<br>
+                                    Mất người còn chút của tin,<br>
+                                    740. Phím đàn với mảnh hương nguyền ngày xưa.<br>
+                                    Mai sau dù có bao giờ,<br>
+                                    Đốt lò hương ấy so tơ phím này.<br>
+                                    Trông ra ngọn cỏ lá cây,<br>
+                                    Thấy hiu hiu gió thì hay chị về.<br>
+                                    745. Hồn còn mang nặng lời thề,<br>
+                                    Nát thân bồ liễu đền nghì trúc mai.<br>
+                                    Dạ đài cách mặt khuất lời,<br>
+                                    Rưới xin giọt lệ cho người thác oan.<br>
+                                    Bây giờ trâm gãy hương tan,<br>
+                                    750. Kể làm sao xiết muôn vàn ái ân!<br>
+                                    Trăm nghìn gửi lạy tình quân,<br>
+                                    Tơ duyên ngắn ngủi có ngần ấy thôi.<br>
+                                    Phận sao phận bạc như vôi,<br>
+                                    Đã đành nước chảy hoa trôi lỡ làng.<br>
+                                    755. Ôi Kim lang! Hỡi Kim lang!<br>
+                                    Thôi thôi thiếp đã phụ chàng từ đây!”<br>
+                                    Cạn lời hồn dứt máu say,<br>
+                                    Một hơi lặng ngắt đôi tay giá đồng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC II: THẺ ĐỌC HIỂU TRONG KHI ĐỌC -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">II</span>
+                <span>GỢI Ý TRONG KHI ĐỌC (THẺ ĐỌC)</span>
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Thẻ đọc 1 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-semibold text-slate-900">
+                            <span class="circle-badge mr-2">1</span> Hình dung bối cảnh của cuộc trao duyên (thời gian, không gian, hoàn cảnh của nhân vật). Chú ý nội dung lời “hỏi han” của Thuý Vân.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('td1')">👁️ Xem gợi ý trả lời</button>
+                    <div id="td1" class="qa-answer">
+                        <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                            <li><strong>Thời gian & Không gian:</strong> Đêm khuya thanh vắng (<em>"nhẫn tàn canh"</em>), trong khuê phòng dưới ánh đèn dầu đã cạn trắng đĩa, Thuý Kiều thức trắng đêm rơi lệ.</li>
+                            <li><strong>Hoàn cảnh nhân vật:</strong> Kiều vừa bán mình chuộc cha, sáng mai phải theo Mã Giám Sinh, mang nỗi day dứt khôn nguôi vì phụ lời thề với Kim Trọng.</li>
+                            <li><strong>Lời hỏi han của Thuý Vân:</strong> Rất chân thành, ân cần, thấu hiểu sự hi sinh của chị (<em>"Một nhà để chị riêng oan một mình"</em>) và tinh tế nhận ra nỗi trăn trở sâu kín trong lòng chị (<em>"Nỗi riêng còn mắc mối tình chi đây?"</em>).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Thẻ đọc 2 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-semibold text-slate-900">
+                            <span class="circle-badge mr-2">2</span> Theo dõi cảm xúc, suy nghĩ của Thuý Kiều: Khi nói lời nhờ cậy Thuý Vân; Khi trao kỉ vật cho Thuý Vân.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('td2')">👁️ Xem gợi ý trả lời</button>
+                    <div id="td2" class="qa-answer">
+                        <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                            <li><strong>Khi nhờ cậy Thuý Vân:</strong> Ngượng ngùng, e thẹn (<em>"Hở môi ra cũng thẹn thùng"</em>) nhưng đầy khẩn thiết, trân trọng, hạ mình lạy em trước khi thưa để đẩy em vào thế khó chối từ.</li>
+                            <li><strong>Khi trao kỉ vật:</strong> Đau đớn, giằng xé tột độ giữa lí trí (trao duyên cho em) và tình cảm (tiếc nuối, không nỡ dứt bỏ kỉ vật thiêng liêng của tình yêu đầu đời).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Thẻ đọc 3 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-semibold text-slate-900">
+                            <span class="circle-badge mr-2">3</span> Chú ý lời Thuý Kiều dặn dò Thuý Vân khi trao kỉ vật.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('td3')">👁️ Xem gợi ý trả lời</button>
+                    <div id="td3" class="qa-answer">
+                        <p class="text-slate-800">
+                            Thuý Kiều dặn em giữ lấy <em>"duyên này"</em> nhưng kỉ vật (chiếc vành, bức tờ mây, phím đàn, mảnh hương nguyền) thì coi là <em>"của chung"</em>. Nàng dặn em mai sau khi đốt hương, gảy đàn, nếu thấy gió thổi hiu hiu thì hãy nhớ linh hồn chị đã chết oan tìm về, xin em hãy rưới giọt lệ thương xót cho người bạc mệnh.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Thẻ đọc 4 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-semibold text-slate-900">
+                            <span class="circle-badge mr-2">4</span> Mười dòng thơ cuối là lời Thuý Kiều nói với ai?
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('td4')">👁️ Xem gợi ý trả lời</button>
+                    <div id="td4" class="qa-answer">
+                        <p class="text-slate-800">
+                            Từ chỗ đối thoại với Thuý Vân, ở mười dòng thơ cuối (câu 749 – 758), Thuý Kiều hoàn toàn quên mất sự hiện diện của em để chuyển sang <strong>độc thoại nội tâm</strong> (than thân trách phận) và <strong>đối thoại tưởng tượng với người yêu phương xa là Kim Trọng</strong> (<em>"Trăm nghìn gửi lạy tình quân..."</em>, <em>"Ôi Kim lang! Hỡi Kim lang!"</em>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC III: KHÁM PHÁ VĂN BẢN (CÂU HỎI SAU KHI ĐỌC) -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">III</span>
+                <span>KHÁM PHÁ VĂN BẢN (TRẢ LỜI CÂU HỎI SAU KHI ĐỌC)</span>
+            </h2>
+
+            <div class="space-y-5">
+                <!-- Câu 1 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">1</span> Nêu bố cục của đoạn trích và chỉ ra đâu là lời người kể chuyện, đâu là lời đối thoại, lời độc thoại của các nhân vật.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('ans1')">💡 Xem lời giải chi tiết</button>
+                    <div id="ans1" class="qa-answer space-y-3">
+                        <p class="font-bold text-green-900">a. Bố cục đoạn trích (4 phần):</p>
+                        <table class="custom-table bg-white text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Phần</th>
+                                    <th>Phạm vi câu thơ</th>
+                                    <th>Nội dung chính</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Phần 1</strong></td>
+                                    <td>Câu 711 – 718</td>
+                                    <td>Bối cảnh cuộc trao duyên và lời hỏi han ân cần của Thuý Vân.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phần 2</strong></td>
+                                    <td>Câu 719 – 734</td>
+                                    <td>Thuý Kiều nhờ cậy và thuyết phục Thuý Vân nhận lời trao duyên.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phần 3</strong></td>
+                                    <td>Câu 735 – 748</td>
+                                    <td>Thuý Kiều trao kỉ vật và dặn dò Thuý Vân.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phần 4</strong></td>
+                                    <td>Câu 749 – 758</td>
+                                    <td>Nỗi đau đớn tuyệt vọng của Thuý Kiều khi hướng về Kim Trọng.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="font-bold text-green-900">b. Phân biệt lời người kể chuyện, lời đối thoại và độc thoại:</p>
+                        <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                            <li><strong>Lời người kể chuyện:</strong> Câu 711 – 714 (giới thiệu cảnh Kiều thao thức, Vân tỉnh giấc) và câu 757 – 758 (miêu tả trạng thái Kiều ngất đi sau khi cạn lời).</li>
+                            <li><strong>Lời đối thoại:</strong> Câu 715 – 718 (lời Thuý Vân hỏi chị) và câu 719 – 748 (lời Thuý Kiều giãi bày, nhờ cậy và trao kỉ vật cho Thuý Vân).</li>
+                            <li><strong>Lời độc thoại (và đối thoại tưởng tượng):</strong> Câu 749 – 756 (Thuý Kiều tự than cho thân phận bạc bẽo và hướng về Kim Trọng ở phương xa để tạ lỗi).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">2</span> Thuý Kiều nảy sinh ý định trao duyên cho Thuý Vân trong thời điểm nào?
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('ans2')">💡 Xem lời giải chi tiết</button>
+                    <div id="ans2" class="qa-answer">
+                        <p class="text-slate-800">
+                            Thuý Kiều nảy sinh ý định trao duyên vào <strong>đêm cuối cùng trước ngày nàng phải theo Mã Giám Sinh</strong> về quê người. Sau khi quyết định bán mình chuộc cha và em (trọn chữ Hiếu), nàng chong đèn suốt đêm, dầu cạn trắng đĩa, nước mắt thấm đẫm khăn vì day dứt món nợ tình sâu nặng với Kim Trọng. Khi Thuý Vân chợt tỉnh giấc và ân cần hỏi thăm, Kiều đã nắm lấy cơ hội ấy để mở lời nhờ em thay mình trả nghĩa chàng Kim.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">3</span> Đọc đoạn thơ (từ câu 719 đến 748) và trả lời các câu hỏi sau:
+                        </p>
+                        <ul class="list-[lower-alpha] pl-8 mt-2 space-y-1 text-slate-800">
+                            <li>Lời nhờ cậy Thuý Vân được Thuý Kiều bày tỏ với thái độ như thế nào? Tìm hiểu giá trị của những từ ngữ được dùng để thể hiện thái độ đó.</li>
+                            <li>Thuý Kiều đã dựa vào điều gì để thuyết phục Thuý Vân nhận lời trao duyên?</li>
+                            <li>Khi trao kỉ vật cho Thuý Vân, Thuý Kiều đã dặn dò những gì? Lời dặn dò ấy có nhất quán với lời nàng nhờ cậy và thuyết phục Thuý Vân trước đó hay không? Chỉ ra những từ ngữ, chi tiết thể hiện sự nhất quán hoặc không nhất quán ấy.</li>
+                            <li>Nêu diễn biến tâm lí của Thuý Kiều khi nói lời trao duyên và khi trao kỉ vật cho Thuý Vân. Hãy phân tích, lí giải quá trình diễn biến tâm lí đó.</li>
+                        </ul>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('ans3')">💡 Xem lời giải chi tiết</button>
+                    <div id="ans3" class="qa-answer space-y-3">
+                        <div>
+                            <p class="font-bold text-green-900">a. Thái độ và giá trị từ ngữ khi nhờ cậy Thuý Vân:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                                <li><strong>Thái độ:</strong> Vừa ngượng ngùng, e thẹn, vừa khẩn thiết, trân trọng và hạ mình tha thiết van nài.</li>
+                                <li><strong>Giá trị từ ngữ đắt giá:</strong>
+                                    <br>- Từ <em>"cậy"</em> (thay vì "nhờ"): Mang thanh trắc nặng nề, gợi sự tin tưởng tuyệt đối, gửi gắm cả sinh mệnh và niềm hi vọng duy nhất vào em.
+                                    <br>- Từ <em>"chịu lời"</em> (thay vì "nhận lời"): Nhấn mạnh sự nài ép, đặt em vào tình thế buộc phải nhận lời dù có thể thiệt thòi, miễn cưỡng.
+                                    <br>- Hành động <em>"ngồi lên – lạy – thưa"</em>: Đảo ngược trật tự gia đình (chị lạy em), biến việc riêng của chị thành ân nghĩa thiêng liêng khiến Vân không thể chối từ.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-bold text-green-900">b. Cơ sở Thuý Kiều dùng để thuyết phục Thuý Vân:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                                <li><strong>Lí lẽ về hoàn cảnh bi đát:</strong> Tình yêu đẹp đẽ (<em>quạt ước, chén thề</em>) bỗng gặp <em>"sóng gió bất kì"</em>, buộc nàng phải hi sinh chữ Tình để trọn chữ Hiếu (<em>"Hiếu tình khôn lẽ hai bề vẹn hai"</em>).</li>
+                                <li><strong>Lí lẽ về tuổi trẻ và tình ruột thịt:</strong> Vân còn trẻ trung (<em>"Ngày xuân em hãy còn dài"</em>), hãy <em>"xót tình máu mủ"</em> mà giúp chị đền đáp <em>"lời nước non"</em>.</li>
+                                <li><strong>Lời đánh đổi thiêng liêng:</strong> Kiều tự coi mình như người đã chết (<em>"thịt nát xương mòn"</em>) và khẳng định nếu được em giúp, nàng sẽ <em>"ngậm cười chín suối hãy còn thơm lây"</em>.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-bold text-green-900">c. Lời dặn dò khi trao kỉ vật và tính nhất quán / mâu thuẫn:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                                <li><strong>Lời dặn dò:</strong> Kiều trao các kỉ vật (chiếc vành, bức tờ mây, phím đàn, mảnh hương nguyền), dặn em nếu nên vợ nên chồng thì đừng quên người chị bạc mệnh; mai sau khi đốt hương, gảy đàn thấy gió hiu hiu thì biết hồn chị tìm về, xin giọt lệ khóc thương cho người thác oan.</li>
+                                <li><strong>Sự không nhất quán (mâu thuẫn nội tâm sâu sắc):</strong>
+                                    <br>- Trước đó Kiều nói: <em>"Keo loan chắp mối tơ thừa mặc em"</em> (trao trọn vẹn duyên tình cho em).
+                                    <br>- Nhưng khi trao kỉ vật lại nói: <em>"Duyên này thì giữ vật này của chung"</em>. Nàng trao <em>duyên</em> nhưng lại giữ lại <em>tình</em> (coi kỉ vật là "của chung" của ba người, khẳng định linh hồn chết đi vẫn <em>"mang nặng lời thề"</em>).
+                                    <br>- <strong>Ý nghĩa:</strong> Sự mâu thuẫn ấy hoàn toàn hợp quy luật tâm lí, chứng tỏ tình yêu Kiều dành cho Kim Trọng quá sâu nặng, không thể dứt bỏ bằng lí trí.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-bold text-green-900">d. Diễn biến tâm lí của Thuý Kiều:</p>
+                            <p class="text-slate-800">
+                                Tâm lí Kiều đi từ <strong>tỉnh táo, sắc sảo, chủ động</strong> (khi sắp xếp lí lẽ thuyết phục em) chuyển dần sang <strong>bàng hoàng, tiếc nuối, giằng xé</strong> (khi cầm kỉ vật trong tay, từng kỉ niệm sống dậy khiến nàng không nỡ rời xa) và cuối cùng rơi vào <strong>bi kịch tưởng tượng về cái chết</strong> (tự coi mình là oan hồn nơi dạ đài). Quá trình này cho thấy sự xung đột gay gắt giữa lí trí tỉnh táo và trái tim yêu thương tha thiết.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">4</span> Phân tích diễn biến tâm trạng của Thuý Kiều trong mười dòng thơ cuối (chú ý sự thay đổi đối tượng tâm tình và giọng điệu).
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('ans4')">💡 Xem lời giải chi tiết</button>
+                    <div id="ans4" class="qa-answer">
+                        <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                            <li><strong>Sự chuyển đổi đối tượng tâm tình:</strong> Kiều từ đối thoại với Thuý Vân chuyển sang <em>độc thoại nội tâm</em> (đối diện với thực tại phũ phàng: <em>"Bây giờ trâm gãy hương tan"</em>) và <em>hướng về Kim Trọng ở phương xa</em>.</li>
+                            <li><strong>Sự thay đổi giọng điệu:</strong> Từ giọng thuyết phục, dặn dò chuyển sang giọng <strong>ai oán, nức nở, xé lòng</strong> với hàng loạt từ ngữ chỉ sự tan vỡ (<em>trâm gãy hương tan, phận bạc như vôi, nước chảy hoa trôi</em>), câu cảm thán dồn dập (<em>"Ôi Kim lang! Hỡi Kim lang!"</em>) và điệp từ nghẹn ngào (<em>"Thôi thôi thiếp đã phụ chàng từ đây!"</em>).</li>
+                            <li><strong>Đỉnh điểm bi kịch:</strong> Nàng tự nhận lỗi phụ bạc về mình dù bản thân là nạn nhân cao cả nhất. Nỗi đau vượt quá sức chịu đựng khiến nàng kiệt sức, ngất lịm (<em>"Cạn lời hồn dứt máu say / Một hơi lặng ngắt đôi tay giá đồng"</em>).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Câu 5 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">5</span> Nhận xét về nghệ thuật sử dụng từ ngữ của Nguyễn Du trong đoạn trích. Hãy minh hoạ bằng một ví dụ mà bạn thấy tâm đắc.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('ans5')">💡 Xem lời giải chi tiết</button>
+                    <div id="ans5" class="qa-answer">
+                        <ul class="list-disc pl-5 space-y-1 text-slate-800">
+                            <li><strong>Nhận xét chung:</strong> Nguyễn Du sử dụng ngôn ngữ điêu luyện, kết hợp hài hoà giữa từ ngữ trang trọng, ước lệ (<em>keo loan, quạt ước, chén thề, bồ liễu, trúc mai, dạ đài</em>) với ngôn ngữ đời sống giàu sức biểu cảm, từ láy tinh tế (<em>bàn hoàn, thổn thức, thẹn thùng, hiu hiu</em>) và các thành ngữ dân gian (<em>phận bạc như vôi, nước chảy hoa trôi, thịt nát xương mòn</em>).</li>
+                            <li><strong>Ví dụ tâm đắc:</strong> Cặp từ <em>"cậy"</em> và <em>"chịu lời"</em> trong câu <em>"Cậy em em có chịu lời"</em>. Từ <em>"cậy"</em> vừa mang sắc thái cầu khẩn tha thiết vừa gửi gắm niềm tin tuyệt đối; từ <em>"chịu"</em> thể hiện sự nài ép tế nhị khiến người nghe không thể từ chối. Chỉ hai từ ngữ ngắn gọn đã lột tả trọn vẹn tâm thế khó xử và sự sắc sảo của Thuý Kiều.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC IV: KẾT NỐI ĐỌC - VIẾT -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">IV</span>
+                <span>KẾT NỐI ĐỌC – VIẾT</span>
+            </h2>
+
+            <div class="qa-question">
+                <p class="font-bold text-slate-900">
+                    Đề bài: <em>Truyện Kiều</em> là tiếng nói hiểu đời, thương đời của Nguyễn Du. Viết đoạn văn (khoảng 150 chữ) chỉ ra biểu hiện của sự “hiểu” và “thương” ấy trong đoạn trích <em>Trao duyên</em>.
+                </p>
+            </div>
+            <button class="btn-primary-green" onclick="toggleAnswer('kn_viet')">✍️ Xem đoạn văn tham khảo</button>
+            <div id="kn_viet" class="qa-answer">
+                <div class="bg-white p-4 rounded border border-green-300 text-slate-800 italic">
+                    Đoạn trích <em>Trao duyên</em> là minh chứng sâu sắc cho tấm lòng “hiểu đời, thương đời” của đại thi hào Nguyễn Du. Sự “hiểu đời” trước hết thể hiện ở khả năng thấu suốt những ngóc ngách tinh vi nhất trong tâm lí con người. Nguyễn Du hiểu rằng khi phải hi sinh tình yêu để giữ trọn chữ hiếu, con người luôn giằng xé dữ dội giữa lí trí và tình cảm: Thuý Kiều tỉnh táo dùng lí lẽ thuyết phục Thuý Vân nhận duyên, nhưng lại mâu thuẫn khi níu giữ kỉ vật làm “của chung”, không nỡ dứt bỏ mối tình đầu. Từ sự thấu hiểu sâu sắc ấy, nhà thơ cất lên tiếng nói “thương đời” đầy xót xa. Ông đồng cảm với bi kịch của người phụ nữ tài sắc mà bạc mệnh, nâng niu tấm lòng vị tha cao cả của Kiều khi nàng quên đi nỗi đau bản thân để lo cho hạnh phúc người yêu và nhận hết lỗi phụ bạc về mình. Tiếng kêu <em>“Ôi Kim lang! Hỡi Kim lang!”</em> cũng chính là tiếng khóc thương thiết tha của Nguyễn Du dành cho kiếp người tài hoa bị vùi dập.
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC V: GHI NHỚ / TỔNG KẾT -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">V</span>
+                <span>TỔNG KẾT KIẾN THỨC TRỌNG TÂM</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-amber-50 border border-amber-300 rounded-lg p-4">
+                    <h3 class="font-bold text-amber-900 mb-2">📌 Lưu ý về nội dung</h3>
+                    <p class="text-sm text-slate-800">
+                        Đoạn trích khắc hoạ bi kịch tình yêu tan vỡ và vẻ đẹp nhân cách cao cả, vị tha của Thuý Kiều: sẵn sàng hi sinh hạnh phúc cá nhân vì chữ Hiếu và luôn day dứt, thuỷ chung với tình yêu đầu đời.
+                    </p>
+                </div>
+                <div class="bg-purple-50 border border-purple-300 rounded-lg p-4">
+                    <h3 class="font-bold text-purple-900 mb-2">💡 Em có biết?</h3>
+                    <p class="text-sm text-slate-800">
+                        <em>Trao duyên</em> được giới nghiên cứu văn học đánh giá là một trong những đoạn thơ miêu tả diễn biến tâm lí nhân vật bậc thầy nhất trong văn học trung đại Việt Nam, nơi ngôn ngữ độc thoại nội tâm đạt đến đỉnh cao nghệ thuật.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC VI: GAMESHOW AI LÀ TRIỆU PHÚ (10 CÂU TRẮC NGHIỆM) -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">VI</span>
+                <span>GAMESHOW "AI LÀ TRIỆU PHÚ" – CỦNG CỐ KIẾN THỨC</span>
+            </h2>
+
+            <div class="millionaire-container">
+                <div class="flex flex-wrap justify-between items-center border-b border-blue-400/40 pb-3 mb-4 gap-2">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-yellow-400 tracking-wide">🏆 CHINH PHỤC ĐỈNH CAO VĂN HỌC</h3>
+                        <p class="text-xs text-blue-200">Hoàn thành 10 câu hỏi (Biết – Hiểu – Vận dụng thấp) để nhận giải thưởng 150.000.000 VNĐ ảo!</p>
+                    </div>
+                    <div id="live-prize" class="bg-blue-900/90 border border-yellow-400 px-4 py-1.5 rounded-full text-yellow-300 font-bold text-sm">
+                        Mức thưởng hiện tại: 0 VNĐ
+                    </div>
+                </div>
+
+                <form id="quiz-form" class="space-y-4">
+                    <!-- Câu 1 -->
+                    <div class="quiz-item" id="q-box-1">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 1 (Mức độ Biết): Đoạn trích <em>Trao duyên</em> nằm ở phần nào của tác phẩm <em>Truyện Kiều</em>?</span>
+                            <span class="prize-badge">200.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q1" value="A"> A. Gặp gỡ và đính ước</label>
+                            <label class="option-label"><input type="radio" name="q1" value="B"> B. Gia biến và lưu lạc (phần Chia li)</label>
+                            <label class="option-label"><input type="radio" name="q1" value="C"> C. Đoàn tụ</label>
+                            <label class="option-label"><input type="radio" name="q1" value="D"> D. Thanh minh du xuân</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 2 -->
+                    <div class="quiz-item" id="q-box-2">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 2 (Mức độ Biết): Cuộc trao duyên giữa Thuý Kiều và Thuý Vân diễn ra vào thời điểm nào?</span>
+                            <span class="prize-badge">400.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q2" value="A"> A. Buổi sáng trong tiết Thanh minh</label>
+                            <label class="option-label"><input type="radio" name="q2" value="B"> B. Đêm khuya trước ngày Kiều theo Mã Giám Sinh</label>
+                            <label class="option-label"><input type="radio" name="q2" value="C"> C. Khi Kim Trọng vừa từ Liêu Dương trở về</label>
+                            <label class="option-label"><input type="radio" name="q2" value="D"> D. Chiều tà bên bờ suối</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 3 -->
+                    <div class="quiz-item" id="q-box-3">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 3 (Mức độ Biết): Những kỉ vật nào được Thuý Kiều nhắc đến khi trao lại cho Thuý Vân?</span>
+                            <span class="prize-badge">600.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q3" value="A"> A. Chiếc vành, bức tờ mây, phím đàn, mảnh hương nguyền</label>
+                            <label class="option-label"><input type="radio" name="q3" value="B"> B. Cây trâm cài, chiếc khăn tay, túi gấm, chén ngọc</label>
+                            <label class="option-label"><input type="radio" name="q3" value="C"> C. Cành kim thoa, bức tranh tố nữ, cây sáo trúc</label>
+                            <label class="option-label"><input type="radio" name="q3" value="D"> D. Chiếc quạt giấy, nén bạc, bức thư tình</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 4 -->
+                    <div class="quiz-item" id="q-box-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 4 (Mức độ Biết): Hình ảnh <em>"Dầu chong trắng đĩa lệ tràn thấm khăn"</em> gợi tả điều gì?</span>
+                            <span class="prize-badge">1.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q4" value="A"> A. Sự nghèo túng thiếu thốn của gia đình họ Vương</label>
+                            <label class="option-label"><input type="radio" name="q4" value="B"> B. Kiều thức trắng suốt đêm trong nỗi đau khổ, khóc thương duyên phận</label>
+                            <label class="option-label"><input type="radio" name="q4" value="C"> C. Kiều đang miệt mài viết thư gửi cho Kim Trọng</label>
+                            <label class="option-label"><input type="radio" name="q4" value="D"> D. Niềm vui mừng khi gia đình vừa được giải oan</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 5 -->
+                    <div class="quiz-item" id="q-box-5">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 5 (Mức độ Hiểu): Vì sao trong câu <em>"Cậy em em có chịu lời"</em>, Nguyễn Du dùng từ <em>"cậy"</em> và <em>"chịu"</em> thay cho <em>"nhờ"</em> và <em>"nhận"</em>?</span>
+                            <span class="prize-badge">2.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q5" value="A"> A. Để tạo vần điệu vui tươi, nhẹ nhàng cho câu thơ</label>
+                            <label class="option-label"><input type="radio" name="q5" value="B"> B. Thể hiện sự tin cậy tuyệt đối và sự nài ép tế nhị khiến em khó chối từ</label>
+                            <label class="option-label"><input type="radio" name="q5" value="C"> C. Thể hiện thái độ ra lệnh, bề trên của người chị cả</label>
+                            <label class="option-label"><input type="radio" name="q5" value="D"> D. Vì Thuý Vân không muốn giúp đỡ chị mình</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 6 -->
+                    <div class="quiz-item" id="q-box-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 6 (Mức độ Hiểu): Điển cố <em>"Keo loan chắp mối tơ thừa mặc em"</em> có ý nghĩa gì?</span>
+                            <span class="prize-badge">6.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q6" value="A"> A. Nhờ em nối lại mối tình duyên dang dở của chị với Kim Trọng</label>
+                            <label class="option-label"><input type="radio" name="q6" value="B"> B. Nhờ em sửa lại cây đàn bị đứt dây trong đêm thề nguyền</label>
+                            <label class="option-label"><input type="radio" name="q6" value="C"> C. Khuyên em nên đi tìm một mối nhân duyên mới tốt đẹp hơn</label>
+                            <label class="option-label"><input type="radio" name="q6" value="D"> D. Mong em chăm sóc cha mẹ thay chị khi chị đi xa</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 7 -->
+                    <div class="quiz-item" id="q-box-7">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 7 (Mức độ Hiểu): Câu thơ <em>"Duyên này thì giữ vật này của chung"</em> bộc lộ nét tâm lí nào của Thuý Kiều?</span>
+                            <span class="prize-badge">14.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q7" value="A"> A. Sự tính toán vật chất chi li của Thuý Kiều</label>
+                            <label class="option-label"><input type="radio" name="q7" value="B"> B. Sự giằng xé giữa lí trí (trao duyên) và tình cảm (không nỡ dứt bỏ tình yêu)</label>
+                            <label class="option-label"><input type="radio" name="q7" value="C"> C. Kiều hoàn toàn thanh thản, nhẹ nhõm sau khi trao duyên xong</label>
+                            <label class="option-label"><input type="radio" name="q7" value="D"> D. Kiều muốn đòi lại kỉ vật sau khi chuộc cha xong</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 8 -->
+                    <div class="quiz-item" id="q-box-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 8 (Mức độ Hiểu): Trong 10 dòng thơ cuối, đối tượng giao tiếp của Thuý Kiều có sự thay đổi như thế nào?</span>
+                            <span class="prize-badge">30.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q8" value="A"> A. Từ nói với cha mẹ chuyển sang nói với Thuý Vân</label>
+                            <label class="option-label"><input type="radio" name="q8" value="B"> B. Từ đối thoại với Thuý Vân chuyển sang độc thoại và hướng về Kim Trọng</label>
+                            <label class="option-label"><input type="radio" name="q8" value="C"> C. Từ nói với Kim Trọng chuyển sang nói với Mã Giám Sinh</label>
+                            <label class="option-label"><input type="radio" name="q8" value="D"> D. Giữ nguyên cuộc đối thoại trực tiếp với Thuý Vân đến hết bài</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 9 -->
+                    <div class="quiz-item" id="q-box-9">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 9 (Mức độ Vận dụng thấp): Nghệ thuật nổi bật nhất làm nên sức lay động của đoạn trích <em>Trao duyên</em> là gì?</span>
+                            <span class="prize-badge">85.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q9" value="A"> A. Nghệ thuật miêu tả thiên nhiên hùng vĩ, tráng lệ</label>
+                            <label class="option-label"><input type="radio" name="q9" value="B"> B. Nghệ thuật miêu tả diễn biến tâm lí nhân vật tinh tế, ngôn ngữ độc thoại nội tâm sắc sảo</label>
+                            <label class="option-label"><input type="radio" name="q9" value="C"> C. Nghệ thuật trào phúng, châm biếm sâu cay thói đời</label>
+                            <label class="option-label"><input type="radio" name="q9" value="D"> D. Nghệ thuật xây dựng tình huống truyện trinh thám li kì</label>
+                        </div>
+                    </div>
+
+                    <!-- Câu 10 -->
+                    <div class="quiz-item" id="q-box-10">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-yellow-300">Câu 10 (Mức độ Vận dụng thấp): Qua hành động trao duyên, vẻ đẹp nhân cách nào của Thuý Kiều được ngời sáng?</span>
+                            <span class="prize-badge">150.000.000đ</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <label class="option-label"><input type="radio" name="q10" value="A"> A. Khí phách anh hùng ngang tàng, coi thường lễ giáo</label>
+                            <label class="option-label"><input type="radio" name="q10" value="B"> B. Đức hi sinh cao cả, lòng vị tha và tình yêu thuỷ chung sâu nặng</label>
+                            <label class="option-label"><input type="radio" name="q10" value="C"> C. Sự cam chịu nhẫn nhục, không dám đấu tranh cho bản thân</label>
+                            <label class="option-label"><input type="radio" name="q10" value="D"> D. Tài năng cầm kì thi hoạ xuất chúng hơn người</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button type="button" onclick="checkQuiz()" class="bg-[#0f172a] hover:bg-slate-800 text-white font-extrabold px-8 py-3 rounded-lg border-2 border-[#33FF33] shadow-lg transition cursor-pointer tracking-wider">
+                            NỘP BÀI
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Kết quả tổng kết Quiz -->
+                <div id="quiz-result" class="mt-5 hidden bg-white text-slate-900 rounded-lg p-5 border-2 border-slate-300"></div>
+            </div>
+        </section>
+
+        <!-- MỤC VII: 3 BÀI TẬP TỰ LUẬN VẬN DỤNG & PHÂN TÍCH ĐỊNH LƯỢNG THI PHÁP -->
+        <section class="main-card">
+            <h2 class="section-header">
+                <span class="roman-badge">VII</span>
+                <span>BÀI TẬP TỰ LUẬN VẬN DỤNG & PHÂN TÍCH</span>
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Bài tập 1 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">1</span> <strong>Bài tập thống kê thi pháp & cấu trúc:</strong> Đoạn trích <em>Trao duyên</em> gồm \(48\) câu thơ lục bát (từ câu \(711\) đến câu \(758\)), trong đó lời người kể chuyện chiếm \(6\) câu, lời đối thoại của Thuý Vân chiếm \(4\) câu, lời Thuý Kiều nói với em chiếm \(30\) câu và lời độc thoại hướng về Kim Trọng chiếm \(8\) câu. Hãy tính tỉ lệ phần trăm (%) dung lượng từng loại lời văn trong đoạn trích và nhận xét ý nghĩa nghệ thuật của tỉ lệ đó.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('tl1')">📝 Xem lời giải chi tiết</button>
+                    <div id="tl1" class="qa-answer space-y-2">
+                        <p class="font-bold text-green-900">1. Tính toán tỉ lệ dung lượng các loại lời văn:</p>
+                        <ul class="list-disc pl-5 text-slate-800 space-y-1">
+                            <li>Tổng số câu thơ trong đoạn trích: \(N = 758 - 711 + 1 = 48\text{ (câu)}\).</li>
+                            <li>Tỉ lệ lời người kể chuyện: \(P_1 = \dfrac{6}{48} \times 100\% = 12,5\%\).</li>
+                            <li>Tỉ lệ lời đối thoại của Thuý Vân: \(P_2 = \dfrac{4}{48} \times 100\% \approx 8,33\%\).</li>
+                            <li>Tỉ lệ lời đối thoại của Thuý Kiều với em: \(P_3 = \dfrac{30}{48} \times 100\% = 62,5\%\).</li>
+                            <li>Tỉ lệ lời độc thoại nội tâm của Thuý Kiều: \(P_4 = \dfrac{8}{48} \times 100\% \approx 16,67\%\).</li>
+                        </ul>
+                        <p class="font-bold text-green-900">2. Nhận xét ý nghĩa nghệ thuật:</p>
+                        <p class="text-slate-800">
+                            Lời của nhân vật Thuý Kiều chiếm tới \(62,5\% + 16,67\% = 79,17\%\) tổng dung lượng đoạn trích. Việc giảm tối đa lời người kể chuyện (\(12,5\%\)) để nhường không gian cho tiếng nói trực tiếp và độc thoại nội tâm giúp người đọc cảm nhận chân thực nhất từng đợt sóng tâm lí giằng xé của nhân vật.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bài tập 2 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">2</span> <strong>Bài tập phân tích trường từ vựng:</strong> Trong đoạn trích có \(4\) câu thơ tập trung dày đặc các hình ảnh tan vỡ, chia lìa (câu \(749, 752, 753, 754\)). Hãy liệt kê các hình ảnh ẩn dụ, thành ngữ chỉ sự chia lìa trong \(4\) câu thơ này, xác định mật độ xuất hiện trung bình trên mỗi câu và phân tích giá trị biểu cảm của chúng.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('tl2')">📝 Xem lời giải chi tiết</button>
+                    <div id="tl2" class="qa-answer space-y-2">
+                        <p class="font-bold text-green-900">1. Liệt kê và tính mật độ hình ảnh:</p>
+                        <ul class="list-disc pl-5 text-slate-800 space-y-1">
+                            <li>Các hình ảnh/thành ngữ xuất hiện trong \(4\) câu thơ gồm \(6\) đơn vị hình ảnh tiêu biểu: <em>trâm gãy</em>, <em>hương tan</em> (câu 749), <em>tơ duyên ngắn ngủi</em> (câu 752), <em>phận bạc như vôi</em> (câu 753), <em>nước chảy</em>, <em>hoa trôi</em> (câu 754).</li>
+                            <li>Mật độ xuất hiện trung bình: \(M = \dfrac{6}{4} = 1,5\text{ (hình ảnh/câu)}\).</li>
+                        </ul>
+                        <p class="font-bold text-green-900">2. Giá trị biểu cảm:</p>
+                        <p class="text-slate-800">
+                            Mật độ hình ảnh ước lệ và thành ngữ dân gian dày đặc (\(1,5\text{ hình ảnh/câu}\)) tạo nên nhịp điệu dồn dập, nhấn mạnh sự sụp đổ hoàn toàn của hạnh phúc lứa đôi và thân phận bèo bọt, vô định của người phụ nữ trong xã hội phong kiến.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bài tập 3 -->
+                <div>
+                    <div class="qa-question">
+                        <p class="font-bold text-slate-900">
+                            <span class="circle-badge mr-2">3</span> <strong>Bài tập kết nối giá trị nhân đạo:</strong> Giả sử coi giá trị nhân đạo của đoạn trích <em>Trao duyên</em> là sự tổng hoà của \(3\) yếu tố: <em>Thấu hiểu tâm lí</em> (\(A\)), <em>Ngợi ca đức hi sinh</em> (\(B\)) và <em>Xót thương bi kịch</em> (\(C\)). Hãy lập luận và chứng minh sự kết hợp hài hoà của \(3\) yếu tố này qua các dẫn chứng tiêu biểu trong văn bản.
+                        </p>
+                    </div>
+                    <button class="btn-primary-green" onclick="toggleAnswer('tl3')">📝 Xem lời giải chi tiết</button>
+                    <div id="tl3" class="qa-answer space-y-2">
+                        <p class="text-slate-800">
+                            Giá trị nhân đạo của đoạn trích được biểu diễn qua mối quan hệ gắn kết \(\text{Nhân đạo} = A \cup B \cup C\):
+                        </p>
+                        <ul class="list-disc pl-5 text-slate-800 space-y-1">
+                            <li><strong>Yếu tố \(A\) (Thấu hiểu tâm lí):</strong> Nguyễn Du lí giải trọn vẹn sự mâu thuẫn hợp quy luật của trái tim đang yêu qua chi tiết <em>"Duyên này thì giữ vật này của chung"</em>.</li>
+                            <li><strong>Yếu tố \(B\) (Ngợi ca đức hi sinh):</strong> Nhà thơ trân trọng vẻ đẹp vị tha của Thuý Kiều khi nàng đặt chữ Hiếu lên trên chữ Tình (<em>"Hiếu tình khôn lẽ hai bề vẹn hai"</em>) và lo lắng chu toàn cho hạnh phúc của Kim Trọng – Thuý Vân.</li>
+                            <li><strong>Yếu tố \(C\) (Xót thương bi kịch):</strong> Tiếng khóc ai oán <em>"Ôi Kim lang! Hỡi Kim lang!"</em> cùng cái ngất lịm cuối đoạn trích là tiếng lòng đau đớn của tác giả trước bi kịch tình yêu bị vùi dập bởi thế lực đồng tiền và bất công xã hội.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-4 text-slate-700 font-semibold text-sm border-t border-slate-300">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <script>
+        // Hàm ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        }
+
+        // Hàm kiểm tra trắc nghiệm Ai là triệu phú
+        function checkQuiz() {
+            const answers = {
+                q1: { correct: "B", explain: "Đoạn trích nằm từ câu 711 đến 758, thuộc phần Gia biến và lưu lạc (cụ thể là phần Chia li)." },
+                q2: { correct: "B", explain: "Cuộc trao duyên diễn ra vào đêm khuya ('nhẫn tàn canh') trước ngày Kiều phải theo Mã Giám Sinh." },
+                q3: { correct: "A", explain: "Bốn kỉ vật được nhắc đến là: chiếc vành, bức tờ mây, phím đàn và mảnh hương nguyền." },
+                q4: { correct: "B", explain: "Dầu trong đĩa cạn sạch, nước mắt thấm đẫm khăn diễn tả nỗi đau đớn thức trắng đêm của Thuý Kiều." },
+                q5: { correct: "B", explain: "'Cậy' mang sắc thái tin tưởng tuyệt đối, 'chịu' mang tính nài ép tế nhị khiến Thuý Vân khó lòng từ chối." },
+                q6: { correct: "A", explain: "'Keo loan' là thứ keo nối dây đàn rất bền, ẩn dụ cho việc nhờ em nối tiếp mối tình duyên dang dở." },
+                q7: { correct: "B", explain: "Kiều trao 'duyên' cho em nhưng giữ 'vật' làm của chung, bộc lộ sự giằng xé sâu sắc giữa lí trí và tình cảm." },
+                q8: { correct: "B", explain: "Ở 10 dòng cuối, Kiều quên mất sự có mặt của Vân, chuyển sang độc thoại nội tâm và hướng về Kim Trọng." },
+                q9: { correct: "B", explain: "Đoạn trích là đỉnh cao của nghệ thuật miêu tả diễn biến tâm lí nhân vật và ngôn ngữ độc thoại nội tâm." },
+                q10: { correct: "B", explain: "Hành động trao duyên ngời sáng đức hi sinh cao cả vì chữ Hiếu và tình yêu thuỷ chung sâu nặng dành cho Kim Trọng." }
+            };
+
+            const prizes = [
+                "0 VNĐ", "200.000 VNĐ", "400.000 VNĐ", "600.000 VNĐ", "1.000.000 VNĐ",
+                "2.000.000 VNĐ", "6.000.000 VNĐ", "14.000.000 VNĐ", "30.000.000 VNĐ",
+                "85.000.000 VNĐ", "150.000.000 VNĐ"
+            ];
+
+            let score = 0;
+            let detailsHtml = "<div class='space-y-2 mt-3 text-sm'>";
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = "q" + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userVal = selected ? selected.value : null;
+                const correctVal = answers[qName].correct;
+                const qBox = document.getElementById("q-box-" + i);
+
+                if (userVal === correctVal) {
+                    score++;
+                    qBox.style.borderColor = "#22c55e";
+                    detailsHtml += `<p class="text-green-700"><strong>Câu ${i}: Đúng (Đáp án ${correctVal})</strong> – ${answers[qName].explain}</p>`;
+                } else {
+                    qBox.style.borderColor = "#ef4444";
+                    const userText = userVal ? `Bạn chọn ${userVal}` : "Chưa chọn đáp án";
+                    detailsHtml += `<p class="text-red-600"><strong>Câu ${i}: Sai (${userText}, Đáp án đúng: ${correctVal})</strong> – ${answers[qName].explain}</p>`;
+                }
+            }
+            detailsHtml += "</div>";
+
+            const currentPrize = prizes[score];
+            document.getElementById("live-prize").innerText = "Mức thưởng hiện tại: " + currentPrize;
+
+            const resultBox = document.getElementById("quiz-result");
+            resultBox.classList.remove("hidden");
+
+            const summaryColor = (score === 10) ? "text-green-700" : "text-red-600";
+            resultBox.innerHTML = `
+                <h4 class="text-lg font-extrabold ${summaryColor}">
+                    KẾT QUẢ: BẠN TRẢ LỜI ĐÚNG ${score}/10 CÂU — MỨC THƯỞNG: ${currentPrize}
+                </h4>
+                ${detailsHtml}
+            `;
+            resultBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+    </script>
+</body>
+</html>
