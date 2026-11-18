@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Lời tiễn dặn - Ngữ văn 11</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                packages: {'[+]': ['mhchem']}
+            },
+            loader: {
+                load: ['[tex]/mhchem']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .rounded-12px {
+            border-radius: 12px;
+        }
+        .roman-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .number-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+            font-size: 0.95rem;
+        }
+        .section-header {
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #0f172a;
+            border-bottom: 4px solid #1e3a8a;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+        }
+        .btn-primary {
+            background-color: #33FF33;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border: 1px solid #22c55e;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-primary:hover {
+            background-color: #28e028;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+        .question-box {
+            background-color: #edf2f7;
+            border-left: 5px solid #1d4ed8;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 12px;
+        }
+        .answer-box {
+            background-color: #dcfce7;
+            border: 1px solid #86efac;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        table.custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        table.custom-table th, table.custom-table td {
+            border: 1px solid #cbd5e0;
+            padding: 12px;
+            text-align: center;
+        }
+        table.custom-table th {
+            background-color: #e2e8f0;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        .poem-box {
+            background: #fffbeb;
+            border-left: 4px solid #d97706;
+            padding: 16px 20px;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            color: #451a03;
+        }
+        /* Millionaire Quiz Styling */
+        .millionaire-container {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #f8fafc;
+            border-radius: 12px;
+            padding: 24px;
+            border: 2px solid #38bdf8;
+        }
+        .quiz-item {
+            background: rgba(30, 41, 59, 0.85);
+            border: 1px solid #475569;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            margin: 6px 0;
+            background: #1e293b;
+            border: 1px solid #64748b;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            background: #334155;
+            border-color: #38bdf8;
+        }
+        .quiz-option input[type="radio"] {
+            margin-right: 12px;
+            accent-color: #33FF33;
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+<body class="py-8 px-4">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- HEADER: Chương & Tên bài -->
+        <header class="rounded-12px overflow-hidden shadow-lg border border-slate-300">
+            <div style="background-color: #1E3A8A;" class="py-4 px-6 text-white text-center font-semibold text-lg tracking-wide">
+                CHƯƠNG (BÀI 4): TỰ SỰ TRONG TRUYỆN THƠ DÂN GIAN VÀ TRONG THƠ TRỮ TÌNH
+            </div>
+            <hr class="border-t border-white/40 m-0">
+            <div style="background-color: #2563EB;" class="py-6 px-6 text-white text-center font-extrabold text-2xl md:text-3xl uppercase tracking-wider">
+                VĂN BẢN 1: LỜI TIỄN DẶN <br>
+                <span class="text-base font-normal normal-case opacity-90">(Trích <em>Tiễn dặn người yêu</em> – Truyện thơ dân tộc Thái)</span>
+            </div>
+        </header>
+
+        <!-- INTRO BOX: Lời dẫn & Yêu cầu cần đạt -->
+        <section class="bg-white rounded-12px p-6 shadow-md border border-black">
+            <div class="mb-4">
+                <h3 class="font-bold text-slate-800 uppercase text-sm tracking-wider mb-2 flex items-center gap-2">
+                    <span>🎯</span> Yêu cầu cần đạt của bài học:
+                </h3>
+                <ul class="list-disc list-inside text-slate-700 space-y-1 text-sm md:text-base">
+                    <li>Nhận biết và phân tích được một số yếu tố của truyện thơ dân gian như: cốt truyện, nhân vật, người kể chuyện, bút pháp miêu tả.</li>
+                    <li>Nhận biết và phân tích được ý nghĩa, tác dụng của yếu tố tự sự trong thơ trữ tình.</li>
+                    <li>Phân tích được ý nghĩa hay tác động của văn bản văn học trong việc làm thay đổi suy nghĩ, tình cảm, cách nhìn và cách thưởng thức, đánh giá của cá nhân đối với văn học và cuộc sống.</li>
+                    <li>Biết đồng cảm, yêu thương con người; biết trân trọng vẻ đẹp thuỷ chung trong tình yêu.</li>
+                </ul>
+            </div>
+            <div class="border-t border-slate-300 pt-4 mt-4">
+                <p class="italic text-slate-800 font-medium text-base md:text-lg">
+                    “Tình yêu đôi lứa từ muôn đời vẫn luôn là bản tình ca đẹp đẽ nhưng cũng lắm éo le. Khi hoàn cảnh nghiệt ngã chia cắt đôi uyên ương, tiếng lòng của người ở lại đưa tiễn người yêu về làm dâu nhà khác sẽ vang lên da diết, xé lòng đến nhường nào? Hãy cùng bước vào không gian văn hoá núi rừng Tây Bắc để lắng nghe khúc ca thuỷ chung bất diệt qua đoạn trích <strong>Lời tiễn dặn</strong>.”
+                </p>
+            </div>
+        </section>
+
+        <!-- HOẠT ĐỘNG KHỞI ĐỘNG (Biểu tượng bàn tay / Nêu vấn đề) -->
+        <section class="bg-white rounded-12px p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="roman-badge">I</span> KHỞI ĐỘNG & KẾT NỐI TRI THỨC NỀN
+            </h2>
+            
+            <div class="question-box">
+                <p class="font-bold text-blue-900 mb-2">🖐️ Hoạt động thảo luận & Khám phá ban đầu:</p>
+                <ol class="list-decimal list-inside space-y-2 text-slate-800">
+                    <li>Hãy chia sẻ đôi điều về một truyện thơ bạn từng biết hay từng đọc (nhan đề, tác giả, nội dung tác phẩm,...).</li>
+                    <li>Hãy nhớ lại một tác phẩm (thuộc bất kì thể loại nào) có kể một câu chuyện tình yêu đã thực sự gây ấn tượng với bạn. Theo bạn, điều gì khiến tình yêu trở thành đề tài bất tận của văn học?</li>
+                </ol>
+                <div class="mt-4">
+                    <button class="btn-primary" onclick="toggleAnswer('ans-khoidong')">
+                        <span>💡</span> Xem hướng giải quyết
+                    </button>
+                </div>
+                <div id="ans-khoidong" class="answer-box">
+                    <p class="font-semibold text-green-900 mb-1">Gợi ý hướng dẫn:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-800">
+                        <li><strong>Gợi ý 1:</strong> Có thể kể đến <em>Truyện Kiều</em> (Nguyễn Du), <em>Lục Vân Tiên</em> (Nguyễn Đình Chiểu) ở dòng truyện thơ Nôm bác học; hoặc <em>Tiễn dặn người yêu</em> (dân tộc Thái), <em>Tiếng hát làm dâu</em> (dân tộc Mông) ở dòng truyện thơ dân gian.</li>
+                        <li><strong>Gợi ý 2:</strong> Tình yêu trở thành đề tài bất tận của văn học vì đây là tình cảm nhân bản, thiêng liêng và mãnh liệt nhất của con người. Tình yêu luôn gắn liền với khát vọng hạnh phúc, tự do, đồng thời cũng dễ nảy sinh xung đột với định kiến xã hội, tạo nên chiều sâu nhân văn cho tác phẩm.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC II: TRI THỨC NGỮ VĂN -->
+        <section class="bg-white rounded-12px p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="roman-badge">II</span> TRI THỨC NGỮ VĂN
+            </h2>
+
+            <!-- Mục 1 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold text-blue-900 mb-3 flex items-center">
+                    <span class="number-badge">1</span> Truyện thơ và truyện thơ dân gian
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-3 text-slate-800">
+                    <p><strong>• Khái niệm truyện thơ:</strong> Thuộc loại hình <strong>tự sự</strong>, có cốt truyện, câu chuyện, nhân vật, lời kể,... nhưng được thể hiện dưới <strong>hình thức thơ</strong>. Với dung lượng tương đối lớn, truyện thơ bao quát nhiều sự kiện, con người, chi tiết sinh động của đời sống thường nhật. Cảm hứng thế sự nổi trội hơn cảm hứng lịch sử.</p>
+                    <p><strong>• Đặc điểm truyện thơ dân gian:</strong></p>
+                    <ul class="list-disc list-inside pl-4 space-y-1">
+                        <li><strong>Tác giả & lưu hành:</strong> Do tầng lớp bình dân hoặc trí thức gần gũi với nhân dân sáng tác; lưu hành chủ yếu bằng truyền miệng (có khi qua văn bản viết).</li>
+                        <li><strong>Đề tài & nội dung:</strong> Khai thác từ truyền thuyết, cổ tích, sự tích tôn giáo hoặc chuyện đời thường. Kết hợp hài hoà yếu tố tự sự và trữ tình, phản ánh hiện thực và khát vọng của người lao động nghèo.</li>
+                        <li><strong>Ngôn ngữ:</strong> Giản dị, chất phác, giàu hình ảnh, gắn với tư duy hình ảnh của người sống hoà đồng với thiên nhiên, núi rừng.</li>
+                    </ul>
+                </div>
+
+                <!-- Bảng tổng hợp các truyện thơ dân gian tiêu biểu -->
+                <div class="mt-4">
+                    <p class="font-semibold text-slate-700 mb-2">Bảng thống kê một số truyện thơ dân gian tiêu biểu của các dân tộc thiểu số Việt Nam:</p>
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Dân tộc</th>
+                                <th>Các tác phẩm truyện thơ dân gian tiêu biểu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold">Tày, Nùng</td>
+                                <td><em>Nam Kim – Thị Đan; Trần Chân; Quảng Tân – Ngọc Lương; Kim Quế; Chuyện chim sáo; Vượt biển;...</em></td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Thái</td>
+                                <td><em>Tiễn dặn người yêu; Chàng Lú – nàng Ủa; Khăm Panh;...</em></td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Mường</td>
+                                <td><em>Út Lót – Hồ Liêu; Nàng Nga – Hai Mối; Nàng Ờm – chàng Bồng Hương;...</em></td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Mông</td>
+                                <td><em>Tiếng hát làm dâu; Nhàng Dợ – Chà Tăng;...</em></td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Chăm</td>
+                                <td><em>Hoàng tử Um Rup và cô gái chăn dê; Têva Mưnô;...</em></td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Khơ-me</td>
+                                <td><em>Si Thạch; Tum Tiêu;...</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Mục 2 -->
+            <div>
+                <h3 class="text-lg font-bold text-blue-900 mb-3 flex items-center">
+                    <span class="number-badge">2</span> Yếu tố tự sự trong thơ trữ tình
+                </h3>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4 text-slate-800 space-y-2">
+                    <p><strong>• Đặc trưng thơ trữ tình:</strong> Ưu tiên hàng đầu cho việc thể hiện cảm xúc, tâm trạng của nhân vật trữ tình.</p>
+                    <p><strong>• Vai trò của yếu tố tự sự:</strong> Trong bài thơ trữ tình có yếu tố tự sự, bóng dáng của câu chuyện, sự kiện giữ vai trò <strong>làm nền cho tiếng nói trữ tình</strong> và chịu sự chi phối của mạch cảm xúc. Câu chuyện được “kể” ở mức độ vừa đủ để cảm xúc của tác giả bộc lộ trọn vẹn nhất.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC III: ĐỌC HIỂU VĂN BẢN LỜI TIỄN DẶN -->
+        <section class="bg-white rounded-12px p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="roman-badge">III</span> ĐỌC HIỂU VĂN BẢN: LỜI TIỄN DẶN
+            </h2>
+
+            <!-- Bối cảnh & Minh họa hình ảnh -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mb-6 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                <div class="md:col-span-2 space-y-2">
+                    <h3 class="font-bold text-blue-900 text-lg">Tóm tắt bối cảnh đoạn trích:</h3>
+                    <p class="text-slate-700">
+                        Chàng trai và cô gái người Thái yêu nhau tha thiết từ thuở nhỏ nhưng vì cha mẹ cô gái chê chàng trai nghèo nên ép gả con cho một gia đình giàu có nhưng tàn nhẫn. Ngày cô gái cất bước về làm dâu nhà khác, chàng trai quyết định đi theo trong vai người đưa tiễn để được ở bên, an ủi và nói lời thề nguyện sắt son.
+                    </p>
+                    <p class="text-sm text-slate-500 italic">
+                        (Bản dịch của Mạc Phi, in trong <em>Tiễn dặn người yêu – Xống chụ xon xao</em>, NXB Văn học, Hà Nội, 1973).
+                    </p>
+                </div>
+                <div class="flex flex-col items-center justify-center border-2 border-dashed border-slate-400 rounded-lg p-3 bg-white">
+                    <img src="h1.png" alt="Minh họa cảnh tiễn dặn người yêu của đồng bào dân tộc Thái" class="max-h-48 object-contain rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none;" class="text-center py-6 px-2 text-slate-500 text-sm">
+                        <p class="font-bold text-slate-700">[Khung hình minh hoạ: h1.png]</p>
+                        <p class="text-xs mt-1">Đặt file ảnh tên <code>h1.png</code> cùng thư mục để hiển thị minh họa cảnh tiễn dặn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẦN 1 CỦA VĂN BẢN -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-blue-900 mb-3 flex items-center">
+                    <span class="number-badge">1</span> Phần 1: Tâm trạng đau đớn trên đường đưa tiễn và lời dặn dò thuỷ chung
+                </h3>
+
+                <div class="poem-box">
+                    <p>“Quẩy gánh qua đồng rộng,<br>
+                    Người đẹp anh yêu cất bước theo chồng.<br>
+                    Vừa đi vừa ngoảnh lại,<br>
+                    Vừa đi vừa ngoái trông,<br>
+                    Chân bước xa lòng càng đau nhớ.<br>
+                    Em tới rừng ớt ngắt lá ớt ngồi chờ,<br>
+                    Tới rừng cà ngắt lá cà ngồi đợi,<br>
+                    Tới rừng lá ngón ngóng trông...<br>
+                    ...<br>
+                    Con nhỏ hãy đưa anh ẵm,<br>
+                    Bé xinh hãy đưa anh bồng,<br>
+                    Cho anh bế con dòng đừng ngượng,<br>
+                    Nựng con rồng, con phượng đừng buồn.<br>
+                    ...<br>
+                    Không lấy được nhau mùa hạ, ta sẽ lấy nhau mùa đông,<br>
+                    Không lấy được nhau thời trẻ, ta sẽ lấy nhau khi goá bụa về già.”</p>
+                </div>
+
+                <!-- Các câu hỏi thẻ đọc bên lề Phần 1 -->
+                <div class="space-y-4 mt-4">
+                    <div class="question-box">
+                        <p class="font-bold text-blue-900">❓ Câu hỏi đọc hiểu 1 (Thẻ đọc trang 103):</p>
+                        <p class="text-slate-800">Hình dung về bối cảnh câu chuyện và chú ý cách diễn tả đầy hình ảnh về tâm trạng của cô gái trên đường về nhà chồng qua các chi tiết: <em>“vừa đi vừa ngoảnh lại”</em>, <em>“ngắt lá ớt, lá cà, lá ngón”</em>.</p>
+                        <button class="btn-primary mt-3" onclick="toggleAnswer('ans-doc1')">
+                            <span>🔍</span> Xem câu trả lời
+                        </button>
+                        <div id="ans-doc1" class="answer-box">
+                            <p><strong>Trả lời:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-800">
+                                <li><strong>Bối cảnh:</strong> Không gian mênh mông, hoang vắng của đồng rộng, rừng núi Tây Bắc trên bước đường cô gái theo chồng về nhà người ta, có chàng trai lặng lẽ đi theo đưa tiễn.</li>
+                                <li><strong>Tâm trạng cô gái:</strong> Hành động lặp lại <em>“ngoảnh lại”, “ngoái trông”</em> cùng sự đối lập giữa bước chân xa dần với nỗi lòng đau nhớ thể hiện sự dùng dằng, lưu luyến tột độ. Việc ngắt <em>lá ớt, lá cà, lá ngón</em> (những loại lá cay đắng, độc hại) gợi cảm giác xót xa, đắng cay, thậm chí tuyệt vọng như muốn tìm đến cái chết khi mãi chưa thấy người yêu tới kịp.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="question-box">
+                        <p class="font-bold text-blue-900">❓ Câu hỏi đọc hiểu 2 (Thẻ đọc trang 103):</p>
+                        <p class="text-slate-800">Chú ý cách cư xử khác thường nhưng hoàn toàn hợp lí của chàng trai khi dặn dò người yêu (xin được kề vóc mảnh, ẵm bồng con của người yêu).</p>
+                        <button class="btn-primary mt-3" onclick="toggleAnswer('ans-doc2')">
+                            <span>🔍</span> Xem câu trả lời
+                        </button>
+                        <div id="ans-doc2" class="answer-box">
+                            <p><strong>Trả lời:</strong></p>
+                            <p class="text-slate-800">Cách cư xử của chàng trai tưởng như khác thường (đòi kề vai, bế ẵm đứa con riêng của người yêu với chồng mới, gọi đứa bé là <em>“con dòng”, “con rồng, con phượng”</em>) nhưng lại hoàn toàn hợp lí vì xuất phát từ <strong>tình yêu thương bao dung, vị tha và trân trọng tuyệt đối</strong>. Trong mắt chàng, tất cả những gì thuộc về người mình yêu đều cao quý, đẹp đẽ. Chàng không hề ghen tuông, trách móc mà chỉ muốn san sẻ nỗi tủi hờn, ngượng ngùng với người yêu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Khung kiến thức trọng tâm Phần 1 -->
+                <div class="mt-4 bg-amber-50 border border-amber-300 rounded-lg p-4">
+                    <h4 class="font-bold text-amber-900 mb-1">📌 Kiến thức trọng tâm Phần 1:</h4>
+                    <p class="text-slate-800">Đoạn thơ khắc hoạ sâu sắc nỗi đau đớn, dùng dằng của đôi lứa trong cuộc chia li ngang trái. Lời thề hẹn <em>“Không lấy được nhau mùa hạ, ta sẽ lấy nhau mùa đông / Không lấy được nhau thời trẻ, ta sẽ lấy nhau khi goá bụa về già”</em> khẳng định khát vọng đoàn tụ bền bỉ, vượt qua mọi giới hạn của thời gian và tuổi tác.</p>
+                </div>
+            </div>
+
+            <!-- PHẦN 2 CỦA VĂN BẢN -->
+            <div>
+                <h3 class="text-lg font-bold text-blue-900 mb-3 flex items-center">
+                    <span class="number-badge">2</span> Phần 2: Niềm thương xót khi chứng kiến cảnh ngộ người yêu và lời thề nguyện bất tử
+                </h3>
+
+                <div class="poem-box">
+                    <p>“Dậy đi em, dậy đi em ơi!<br>
+                    Dậy rũ áo kẻo bọ,<br>
+                    Dậy phủi áo kẻo lấm!<br>
+                    Đầu bù anh chải cho,<br>
+                    Tóc rối đưa anh búi hộ!”<br>
+                    Anh chặt tre về đốt gióng đầu,<br>
+                    Chặt tre dày, anh hun gióng giữa,<br>
+                    Lam ống thuốc này em uống khỏi đau.<br>
+                    ...<br>
+                    Chết ba năm hình còn treo đó;<br>
+                    Chết thành sông, vục nước uống mát lòng,<br>
+                    Chết thành đất, mọc dây trầu xanh thắm,<br>
+                    Chết thành bèo, ta trôi nổi ao chung,<br>
+                    Chết thành muôi, ta múc xuống cùng bát,<br>
+                    Chết thành hồn, chung một mái, song song.<br>
+                    ...<br>
+                    Yêu nhau, yêu trọn đời gỗ cứng,<br>
+                    Yêu nhau, yêu trọn kiếp đến già,<br>
+                    Ta yêu nhau tàn đời gió, không rung không chuyển,<br>
+                    Người xiểm xui không ngoảnh, không nghe.”</p>
+                </div>
+
+                <!-- Các câu hỏi thẻ đọc bên lề Phần 2 -->
+                <div class="space-y-4 mt-4">
+                    <div class="question-box">
+                        <p class="font-bold text-blue-900">❓ Câu hỏi đọc hiểu 3 (Thẻ đọc trang 104):</p>
+                        <p class="text-slate-800">Cảm nhận niềm thương xót của chàng trai khi chứng kiến tình cảnh của người yêu ở nhà chồng.</p>
+                        <button class="btn-primary mt-3" onclick="toggleAnswer('ans-doc3')">
+                            <span>🔍</span> Xem câu trả lời
+                        </button>
+                        <div id="ans-doc3" class="answer-box">
+                            <p><strong>Trả lời:</strong></p>
+                            <p class="text-slate-800">Khi chứng kiến cô gái bị nhà chồng đánh đập tàn nhẫn đến ngất đi, quần áo lấm lem, đầu bù tóc rối, tiếng gọi <em>“Dậy đi em, dậy đi em ơi!”</em> vang lên đầy hốt hoảng, đau đớn. Chàng trai ân cần chăm sóc từng li từng tí (chải tóc, búi tóc, chặt tre lam ống thuốc chữa đau) và mong muốn <em>“gỡ tơ rối”, “quay lại guồng gỗ tốt”</em> để đưa nàng về với cuộc sống hạnh phúc thuở ban đầu.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-box">
+                        <p class="font-bold text-blue-900">❓ Câu hỏi đọc hiểu 4 (Thẻ đọc trang 105):</p>
+                        <p class="text-slate-800">Lời thề nguyền thuỷ chung của chàng trai được diễn tả như thế nào qua các hình ảnh thiên nhiên và sự vật gần gũi?</p>
+                        <button class="btn-primary mt-3" onclick="toggleAnswer('ans-doc4')">
+                            <span>🔍</span> Xem câu trả lời
+                        </button>
+                        <div id="ans-doc4" class="answer-box">
+                            <p><strong>Trả lời:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-800">
+                                <li><strong>Biện pháp điệp cấu trúc:</strong> <em>“Chết thành sông...”, “Chết thành đất...”, “Chết thành bèo...”, “Chết thành muôi...”, “Chết thành hồn...”</em> diễn tả sự hoá thân vĩnh hằng. Dù cái chết có chia lìa thể xác, linh hồn và tình yêu của họ vẫn hoà quyện, gắn bó không rời trong mọi hình hài của sự sống.</li>
+                                <li><strong>Hình ảnh so sánh, ẩn dụ mang đậm bản sắc núi rừng:</strong> Bền chắc <em>“như vàng, như đá”</em>, <em>“trọn đời gỗ cứng”</em>, <em>“tàn đời gió không rung không chuyển”</em>. Điều đó khẳng định sức mạnh tình yêu bất diệt, vượt lên trên mọi lễ giáo hà khắc và sự đe doạ của cái chết.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Khung kiến thức trọng tâm Phần 2 -->
+                <div class="mt-4 bg-emerald-50 border border-emerald-300 rounded-lg p-4">
+                    <h4 class="font-bold text-emerald-900 mb-1">📌 Kiến thức trọng tâm Phần 2 & Giá trị nghệ thuật:</h4>
+                    <p class="text-slate-800">Đoạn thơ là đỉnh cao của tiếng nói trữ tình hoà quyện trong mạch tự sự. Với ngôn ngữ giàu hình ảnh, lối ví von mộc mạc đậm tư duy người Thái và nhịp điệu dồn dập, thiết tha, đoạn trích ngợi ca vẻ đẹp của tình yêu thuỷ chung, khát vọng giải phóng con người khỏi những hủ tục phong kiến lạc hậu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC IV: EM CÓ BIẾT / EM CÓ THỂ / LƯU Ý -->
+        <section class="bg-white rounded-12px p-6 shadow-md space-y-4">
+            <h2 class="section-header">
+                <span class="roman-badge">IV</span> MỞ RỘNG & LƯU Ý KIẾN THỨC
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Khung Em có biết -->
+                <div class="bg-sky-50 border-2 border-sky-300 rounded-xl p-4 shadow-sm">
+                    <h3 class="font-extrabold text-sky-900 text-lg mb-2 flex items-center gap-2">
+                        <span>🌟</span> Em có biết
+                    </h3>
+                    <p class="text-sm text-slate-800">
+                        <em>Tiễn dặn người yêu</em> (tiếng Thái là <strong>Xống chụ xon xao</strong>) gồm 1.846 câu thơ, là kiệt tác truyện thơ dân gian của dân tộc Thái. Tác phẩm được đồng bào Thái vô cùng yêu quý, thường được hát lên trong các buổi sinh hoạt văn hoá cộng đồng, trở thành tiếng nói phản kháng mạnh mẽ chế độ hôn nhân gả bán xưa.
+                    </p>
+                </div>
+
+                <!-- Khung Em có thể -->
+                <div class="bg-purple-50 border-2 border-purple-300 rounded-xl p-4 shadow-sm">
+                    <h3 class="font-extrabold text-purple-900 text-lg mb-2 flex items-center gap-2">
+                        <span>🚀</span> Em có thể
+                    </h3>
+                    <p class="text-sm text-slate-800">
+                        Vận dụng kiến thức về sự kết hợp giữa yếu tố tự sự và trữ tình để phân tích một đoạn trích truyện thơ dân gian khác (như <em>Tiếng hát làm dâu</em> hoặc <em>Chàng Lú – nàng Ủa</em>), từ đó viết đoạn văn bày tỏ suy nghĩ về giá trị của lòng thuỷ chung trong tình yêu.
+                    </p>
+                </div>
+
+                <!-- Khung Lưu ý -->
+                <div class="bg-rose-50 border-2 border-rose-300 rounded-xl p-4 shadow-sm">
+                    <h3 class="font-extrabold text-rose-900 text-lg mb-2 flex items-center gap-2">
+                        <span>⚠️</span> Lưu ý
+                    </h3>
+                    <p class="text-sm text-slate-800">
+                        Khi phân tích truyện thơ dân gian, cần chú ý mạch kể chuyện (người đưa tiễn – người được tiễn) chỉ đóng vai trò làm điểm tựa để bộc lộ dòng tâm trạng dạt dào của nhân vật. Không nên tách rời nội dung tự sự khỏi giọng điệu trữ tình da diết của tác phẩm.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MỤC V: GAMESHOW "AI LÀ TRIỆU PHÚ" (10 CÂU TRẮC NGHIỆM) -->
+        <section class="millionaire-container shadow-xl">
+            <div class="text-center mb-6 border-b border-sky-400/40 pb-4">
+                <span class="inline-block bg-amber-400 text-slate-900 font-extrabold px-4 py-1 rounded-full text-sm uppercase tracking-widest mb-2">
+                    🏆 Gameshow Trí Tuệ Văn Học
+                </span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-sky-300 uppercase tracking-wide">
+                    AI LÀ TRIỆU PHÚ - CHINH PHỤC "LỜI TIỄN DẶN"
+                </h2>
+                <p class="text-slate-300 text-sm mt-1">
+                    Trả lời chính xác 10 câu hỏi trắc nghiệm (mức độ Biết – Hiểu – Vận dụng thấp) để giành giải thưởng 150.000.000 VNĐ!
+                </p>
+            </div>
+
+            <form id="quiz-form" class="space-y-4">
+                <!-- Câu 1 -->
+                <div class="quiz-item" id="q-box-1">
+                    <p class="font-bold text-amber-300 mb-2">Câu 1 (Mốc 200.000đ - Nhận biết): Đoạn trích <em>Lời tiễn dặn</em> thuộc tác phẩm truyện thơ nổi tiếng của dân tộc nào?</p>
+                    <label class="quiz-option"><input type="radio" name="q1" value="A"> A. Dân tộc Mường</label>
+                    <label class="quiz-option"><input type="radio" name="q1" value="B"> B. Dân tộc Thái</label>
+                    <label class="quiz-option"><input type="radio" name="q1" value="C"> C. Dân tộc Mông</label>
+                    <label class="quiz-option"><input type="radio" name="q1" value="D"> D. Dân tộc Tày, Nùng</label>
+                    <div id="exp-1" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 2 -->
+                <div class="quiz-item" id="q-box-2">
+                    <p class="font-bold text-amber-300 mb-2">Câu 2 (Mốc 400.000đ - Nhận biết): Tên gọi bằng tiếng dân tộc của tác phẩm <em>Tiễn dặn người yêu</em> là gì?</p>
+                    <label class="quiz-option"><input type="radio" name="q2" value="A"> A. Đẻ đất đẻ nước</label>
+                    <label class="quiz-option"><input type="radio" name="q2" value="B"> B. Đăm Săn</label>
+                    <label class="quiz-option"><input type="radio" name="q2" value="C"> C. Xống chụ xon xao</label>
+                    <label class="quiz-option"><input type="radio" name="q2" value="D"> D. Khăm Panh</label>
+                    <div id="exp-2" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 3 -->
+                <div class="quiz-item" id="q-box-3">
+                    <p class="font-bold text-amber-300 mb-2">Câu 3 (Mốc 600.000đ - Nhận biết): Truyện thơ dân gian thuộc loại hình văn học nào và được thể hiện dưới hình thức nào?</p>
+                    <label class="quiz-option"><input type="radio" name="q3" value="A"> A. Loại hình tự sự, thể hiện dưới hình thức thơ</label>
+                    <label class="quiz-option"><input type="radio" name="q3" value="B"> B. Loại hình kịch, thể hiện dưới hình thức văn xuôi</label>
+                    <label class="quiz-option"><input type="radio" name="q3" value="C"> C. Loại hình trữ tình, thể hiện dưới hình thức vè</label>
+                    <label class="quiz-option"><input type="radio" name="q3" value="D"> D. Loại hình nghị luận, thể hiện dưới hình thức phú</label>
+                    <div id="exp-3" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 4 -->
+                <div class="quiz-item" id="q-box-4">
+                    <p class="font-bold text-amber-300 mb-2">Câu 4 (Mốc 1.000.000đ - Nhận biết): Trên đường về nhà chồng, cô gái đã dừng lại ngắt những loại lá nào để ngồi chờ người yêu?</p>
+                    <label class="quiz-option"><input type="radio" name="q4" value="A"> A. Lá trầu, lá cau, lá lốt</label>
+                    <label class="quiz-option"><input type="radio" name="q4" value="B"> B. Lá ớt, lá cà, lá ngón</label>
+                    <label class="quiz-option"><input type="radio" name="q4" value="C"> C. Lá chuối, lá dong, lá tre</label>
+                    <label class="quiz-option"><input type="radio" name="q4" value="D"> D. Lá quế, lá hồi, lá chè</label>
+                    <div id="exp-4" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 5 -->
+                <div class="quiz-item" id="q-box-5">
+                    <p class="font-bold text-amber-300 mb-2">Câu 5 (Mốc 2.000.000đ - Thông hiểu): Chi tiết cô gái <em>“Vừa đi vừa ngoảnh lại / Vừa đi vừa ngoái trông”</em> diễn tả tâm trạng gì?</p>
+                    <label class="quiz-option"><input type="radio" name="q5" value="A"> A. Sự háo hức, mong chờ được đến nhà chồng mới</label>
+                    <label class="quiz-option"><input type="radio" name="q5" value="B"> B. Sự sợ hãi vì đường rừng núi hiểm trở, vắng vẻ</label>
+                    <label class="quiz-option"><input type="radio" name="q5" value="C"> C. Nỗi lưu luyến, dùng dằng, đau đớn và ngóng đợi người yêu</label>
+                    <label class="quiz-option"><input type="radio" name="q5" value="D"> D. Sự tức giận, oán trách cha mẹ đã ép gả mình</label>
+                    <div id="exp-5" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 6 -->
+                <div class="quiz-item" id="q-box-6">
+                    <p class="font-bold text-amber-300 mb-2">Câu 6 (Mốc 6.000.000đ - Thông hiểu): Việc chàng trai xin được bế ẵm đứa con của người yêu và gọi đứa bé là <em>“con dòng”, “con rồng, con phượng”</em> thể hiện phẩm chất gì ở chàng?</p>
+                    <label class="quiz-option"><input type="radio" name="q6" value="A"> A. Sự cam chịu, yếu đuối trước số phận nghiệt ngã</label>
+                    <label class="quiz-option"><input type="radio" name="q6" value="B"> B. Tình yêu thương sâu sắc, lòng vị tha và sự trân trọng tuyệt đối dành cho người yêu</label>
+                    <label class="quiz-option"><input type="radio" name="q6" value="C"> C. Mong muốn làm thân với gia đình nhà chồng của cô gái</label>
+                    <label class="quiz-option"><input type="radio" name="q6" value="D"> D. Sự dửng dưng, không còn lưu luyến tình cảm xưa cũ</label>
+                    <div id="exp-6" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 7 -->
+                <div class="quiz-item" id="q-box-7">
+                    <p class="font-bold text-amber-300 mb-2">Câu 7 (Mốc 14.000.000đ - Thông hiểu): Trong thơ trữ tình, yếu tố tự sự có vai trò chính là gì?</p>
+                    <label class="quiz-option"><input type="radio" name="q7" value="A"> A. Kể lại đầy đủ, chi tiết toàn bộ cuộc đời của nhân vật từ lúc sinh ra đến lúc mất</label>
+                    <label class="quiz-option"><input type="radio" name="q7" value="B"> B. Làm nền cho tiếng nói trữ tình và giúp cảm xúc của tác giả được bộc lộ trọn vẹn</label>
+                    <label class="quiz-option"><input type="radio" name="q7" value="C"> C. Thay thế hoàn toàn vai trò của cảm xúc và tâm trạng nhân vật trữ tình</label>
+                    <label class="quiz-option"><input type="radio" name="q7" value="D"> D. Cung cấp các số liệu lịch sử chính xác cho người đọc tham khảo</label>
+                    <div id="exp-7" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 8 -->
+                <div class="quiz-item" id="q-box-8">
+                    <p class="font-bold text-amber-300 mb-2">Câu 8 (Mốc 30.000.000đ - Thông hiểu): Câu thơ <em>“Lam ống thuốc này em uống khỏi đau”</em> sử dụng từ ngữ địa phương “Lam” có nghĩa là gì?</p>
+                    <label class="quiz-option"><input type="radio" name="q8" value="A"> A. Giã nát lá thuốc bằng cối đá</label>
+                    <label class="quiz-option"><input type="radio" name="q8" value="B"> B. Phơi khô thuốc dưới ánh nắng mặt trời</label>
+                    <label class="quiz-option"><input type="radio" name="q8" value="C"> C. Nấu thức ăn hay sắc thuốc trong ống tre, ống nứa tươi</label>
+                    <label class="quiz-option"><input type="radio" name="q8" value="D"> D. Đắp trực tiếp lá thuốc lên vết thương</label>
+                    <div id="exp-8" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 9 -->
+                <div class="quiz-item" id="q-box-9">
+                    <p class="font-bold text-amber-300 mb-2">Câu 9 (Mốc 60.000.000đ - Vận dụng thấp): Biện pháp tu từ nổi bật trong đoạn thơ <em>“Chết thành sông, vục nước uống mát lòng / Chết thành đất, mọc dây trầu xanh thắm / Chết thành bèo, ta trôi nổi ao chung...”</em> là gì?</p>
+                    <label class="quiz-option"><input type="radio" name="q9" value="A"> A. Điệp cấu trúc kết hợp ẩn dụ hoá thân</label>
+                    <label class="quiz-option"><input type="radio" name="q9" value="B"> B. Nói giảm nói tránh kết hợp chơi chữ</label>
+                    <label class="quiz-option"><input type="radio" name="q9" value="C"> C. Đảo ngữ kết hợp câu hỏi tu từ</label>
+                    <label class="quiz-option"><input type="radio" name="q9" value="D"> D. Chêm xen kết hợp nói quá</label>
+                    <div id="exp-9" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <!-- Câu 10 -->
+                <div class="quiz-item" id="q-box-10">
+                    <p class="font-bold text-amber-300 mb-2">Câu 10 (Mốc 150.000.000đ - Vận dụng thấp): Thông điệp nhân văn sâu sắc nhất mà đoạn trích <em>Lời tiễn dặn</em> gửi gắm đến người đọc là gì?</p>
+                    <label class="quiz-option"><input type="radio" name="q10" value="A"> A. Khuyên con người nên chấp nhận số phận an bài để giữ gìn hoà khí gia đình</label>
+                    <label class="quiz-option"><input type="radio" name="q10" value="B"> B. Ngợi ca sức mạnh của tình yêu thuỷ chung, khát vọng tự do và quyền được sống hạnh phúc của con người</label>
+                    <label class="quiz-option"><input type="radio" name="q10" value="C"> C. Đề cao vai trò của của cải vật chất trong hôn nhân truyền thống</label>
+                    <label class="quiz-option"><input type="radio" name="q10" value="D"> D. Ca ngợi vẻ đẹp hùng vĩ của thiên nhiên núi rừng Tây Bắc</label>
+                    <div id="exp-10" class="hidden mt-2 text-sm p-2 rounded bg-slate-900/90 border border-slate-600"></div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button type="button" onclick="checkQuiz()" class="bg-[#0f172a] hover:bg-slate-800 text-white font-extrabold py-3 px-8 rounded-xl border-2 border-[#33FF33] shadow-lg text-lg tracking-wider transition transform hover:scale-105 cursor-pointer">
+                        NỘP BÀI
+                    </button>
+                </div>
+            </form>
+
+            <!-- Kết quả tổng kết Quiz -->
+            <div id="quiz-result" class="hidden mt-6 p-5 rounded-xl bg-white text-slate-900 border-2 border-slate-300 shadow-inner"></div>
+        </section>
+
+        <!-- MỤC VI: 3 BÀI TẬP PHÂN TÍCH (TỰ LUẬN) CÓ LỜI GIẢI CHI TIẾT -->
+        <section class="bg-white rounded-12px p-6 shadow-md">
+            <h2 class="section-header">
+                <span class="roman-badge">VI</span> LUYỆN TẬP PHÂN TÍCH VĂN BẢN (TỰ LUẬN)
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Bài tập phân tích 1 -->
+                <div class="question-box">
+                    <p class="font-bold text-blue-900 text-lg mb-2">📝 Bài tập phân tích 1:</p>
+                    <p class="text-slate-800">
+                        Phân tích tâm trạng và hành động của nhân vật cô gái trên đường về nhà chồng trong phần 1 của đoạn trích <em>Lời tiễn dặn</em>. Qua đó, em cảm nhận được điều gì về bi kịch của người phụ nữ trong xã hội xưa?
+                    </p>
+                    <button class="btn-primary mt-3" onclick="toggleAnswer('ans-pt1')">
+                        <span>📖</span> Xem lời giải chi tiết
+                    </button>
+                    <div id="ans-pt1" class="answer-box">
+                        <h4 class="font-bold text-green-900 mb-2">Hướng dẫn giải chi tiết:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-800">
+                            <li><strong>1. Tâm trạng lưu luyến, đau đớn tột cùng:</strong>
+                                <br>- Hành động <em>“vừa đi vừa ngoảnh lại / vừa đi vừa ngoái trông”</em> diễn tả bước chân miễn cưỡng, sự giằng xé nội tâm sâu sắc: thể xác buộc phải bước theo chồng nhưng tâm hồn vẫn hướng về người yêu cũ.
+                                <br>- Sự đối lập <em>“Chân bước xa lòng càng đau nhớ”</em> tô đậm khoảng cách địa lí càng nới rộng thì nỗi đau tinh thần càng chất chồng.
+                            </li>
+                            <li><strong>2. Hành động tuyệt vọng nhưng đầy thuỷ chung:</strong>
+                                <br>- Cô gái cố tình nán lại qua từng chặng rừng (rừng ớt, rừng cà, rừng lá ngón) để ngóng chờ chàng trai. Việc ngắt <em>lá ớt, lá cà, lá ngón</em> gợi vị cay đắng của số phận và ẩn chứa ý định quyên sinh nếu không được gặp người yêu lần cuối.
+                            </li>
+                            <li><strong>3. Ý nghĩa nhân đạo:</strong> Tố cáo hủ tục hôn nhân gả bán, ép duyên tàn nhẫn đã chà đạp lên quyền tự do yêu đương và hạnh phúc của người phụ nữ miền núi xưa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bài tập phân tích 2 -->
+                <div class="question-box">
+                    <p class="font-bold text-blue-900 text-lg mb-2">📝 Bài tập phân tích 2:</p>
+                    <p class="text-slate-800">
+                        Phân tích vẻ đẹp tâm hồn của nhân vật chàng trai qua những lời tiễn dặn và thề nguyện trong đoạn trích.
+                    </p>
+                    <button class="btn-primary mt-3" onclick="toggleAnswer('ans-pt2')">
+                        <span>📖</span> Xem lời giải chi tiết
+                    </button>
+                    <div id="ans-pt2" class="answer-box">
+                        <h4 class="font-bold text-green-900 mb-2">Hướng dẫn giải chi tiết:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-800">
+                            <li><strong>1. Tình yêu vị tha, bao dung và tinh tế:</strong>
+                                <br>- Không oán trách người yêu phụ bạc, chàng trai thấu hiểu nỗi khổ của nàng. Chàng xin được <em>“kề vóc mảnh”</em> để lưu giữ hương người, xin được ẵm bồng đứa con riêng của nàng với lòng trân trọng (gọi là <em>“con rồng, con phượng”</em>).
+                            </li>
+                            <li><strong>2. Sự ân cần, che chở trong hoạn nạn:</strong>
+                                <br>- Khi thấy nàng bị nhà chồng hành hạ, chàng vội vã gọi dậy, chải đầu, búi tóc, chặt tre lam ống thuốc chữa đau cho nàng. Những cử chỉ mộc mạc ấy chứa đựng tình thương yêu sâu nặng như tình ruột thịt.
+                            </li>
+                            <li><strong>3. Ý chí thuỷ chung sắt son, bất diệt:</strong>
+                                <br>- Khẳng định lời thề hẹn vượt qua thời gian (từ mùa hạ sang mùa đông, từ thời trẻ đến khi về già) và vượt qua cả cái chết (hoá thân thành sông, đất, bèo, muôi, hồn để mãi ở bên nhau).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bài tập phân tích 3 -->
+                <div class="question-box">
+                    <p class="font-bold text-blue-900 text-lg mb-2">📝 Bài tập phân tích 3:</p>
+                    <p class="text-slate-800">
+                        Làm rõ sự kết hợp hài hoà giữa yếu tố tự sự và yếu tố trữ tình trong đoạn trích <em>Lời tiễn dặn</em>. Sự kết hợp ấy mang lại hiệu quả nghệ thuật như thế nào?
+                    </p>
+                    <button class="btn-primary mt-3" onclick="toggleAnswer('ans-pt3')">
+                        <span>📖</span> Xem lời giải chi tiết
+                    </button>
+                    <div id="ans-pt3" class="answer-box">
+                        <h4 class="font-bold text-green-900 mb-2">Hướng dẫn giải chi tiết:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-800">
+                            <li><strong>1. Biểu hiện của yếu tố tự sự:</strong>
+                                <br>- Đoạn trích có cốt truyện, nhân vật (chàng trai, cô gái, đứa con nhỏ) và các sự kiện rõ ràng: cuộc tiễn đưa trên đường về nhà chồng (Phần 1) và cảnh chàng trai chăm sóc cô gái bị nhà chồng đánh đập (Phần 2).
+                            </li>
+                            <li><strong>2. Biểu hiện của yếu tố trữ tình:</strong>
+                                <br>- Toàn bộ câu chuyện được kể qua lời bộc bạch trực tiếp, tha thiết của nhân vật trữ tình (chàng trai). Cảm xúc thương xót, đau đớn, khát khao đoàn tụ chi phối nhịp điệu thơ, hệ thống hình ảnh so sánh, ẩn dụ và các điệp ngữ dồn dập.
+                            </li>
+                            <li><strong>3. Hiệu quả nghệ thuật:</strong>
+                                <br>- Yếu tố tự sự tạo dựng hoàn cảnh éo le làm điểm tựa cho cảm xúc thăng hoa; ngược lại, yếu tố trữ tình giúp câu chuyện không khô khan mà thấm đẫm chất thơ, dễ dàng lay động trái tim người đọc qua nhiều thế hệ.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-6 text-slate-600 font-semibold border-t border-slate-300 mt-8">
+            Chương trình GDPT 2018 - Bộ sách thống nhất
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hàm ẩn/hiện lời giải
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (el.style.display === 'block') {
+                el.style.display = 'none';
+            } else {
+                el.style.display = 'block';
+            }
+        }
+
+        // Dữ liệu đáp án và giải thích chi tiết cho 10 câu trắc nghiệm
+        const quizData = {
+            q1: {
+                ans: 'B',
+                prize: '200.000đ',
+                explain: 'Đáp án đúng là B. <em>Lời tiễn dặn</em> được trích từ truyện thơ <em>Tiễn dặn người yêu</em> của dân tộc Thái.'
+            },
+            q2: {
+                ans: 'C',
+                prize: '400.000đ',
+                explain: 'Đáp án đúng là C. Tên gốc bằng tiếng Thái của tác phẩm là <em>Xống chụ xon xao</em>.'
+            },
+            q3: {
+                ans: 'A',
+                prize: '600.000đ',
+                explain: 'Đáp án đúng là A. Truyện thơ dân gian thuộc loại hình tự sự (có cốt truyện, nhân vật, sự kiện) nhưng được viết dưới hình thức thơ.'
+            },
+            q4: {
+                ans: 'B',
+                prize: '1.000.000đ',
+                explain: 'Đáp án đúng là B. Cô gái lần lượt ngắt lá ớt, lá cà, lá ngón – những loại lá cay đắng, độc hại biểu tượng cho nỗi đau tuyệt vọng.'
+            },
+            q5: {
+                ans: 'C',
+                prize: '2.000.000đ',
+                explain: 'Đáp án đúng là C. Hành động ngoảnh lại, ngoái trông lặp đi lặp lại thể hiện sự dùng dằng, lưu luyến không nỡ rời xa người yêu.'
+            },
+            q6: {
+                ans: 'B',
+                prize: '6.000.000đ',
+                explain: 'Đáp án đúng là B. Với chàng trai, mọi thứ thuộc về người mình yêu đều cao quý, đẹp đẽ, thể hiện tấm lòng bao dung, vị tha sâu sắc.'
+            },
+            q7: {
+                ans: 'B',
+                prize: '14.000.000đ',
+                explain: 'Đáp án đúng là B. Trong thơ trữ tình, câu chuyện/sự kiện chỉ được kể ở mức độ vừa đủ để làm nền cho mạch cảm xúc bộc lộ trọn vẹn.'
+            },
+            q8: {
+                ans: 'C',
+                prize: '30.000.000đ',
+                explain: 'Đáp án đúng là C. Theo chú thích SGK, "lam" là cách nấu thức ăn hay sắc thuốc trong ống tre, ống nứa tươi.'
+            },
+            q9: {
+                ans: 'A',
+                prize: '60.000.000đ',
+                explain: 'Đáp án đúng là A. Cấu trúc "Chết thành..." được điệp lại liên tiếp kết hợp hình ảnh ẩn dụ hoá thân vào thiên nhiên, vật dụng gắn bó.'
+            },
+            q10: {
+                ans: 'B',
+                prize: '150.000.000đ',
+                explain: 'Đáp án đúng là B. Tác phẩm ca ngợi vẻ đẹp tình yêu thuỷ chung bất diệt và khát vọng tự do, hạnh phúc chính đáng của con người.'
+            }
+        };
+
+        const prizeLadder = [
+            "0đ", "200.000đ", "400.000đ", "600.000đ", "1.000.000đ",
+            "2.000.000đ", "6.000.000đ", "14.000.000đ", "30.000.000đ",
+            "60.000.000đ", "150.000.000đ"
+        ];
+
+        // Hàm kiểm tra kết quả Quiz
+        function checkQuiz() {
+            let score = 0;
+            const total = 10;
+
+            for (let i = 1; i <= total; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const expBox = document.getElementById(`exp-${i}`);
+                const correctAns = quizData[qName].ans;
+
+                expBox.classList.remove('hidden');
+
+                if (selected && selected.value === correctAns) {
+                    score++;
+                    expBox.innerHTML = `<span class="text-green-400 font-bold">✔ Chính xác!</span> <span class="text-slate-200">${quizData[qName].explain}</span>`;
+                } else {
+                    const userChoice = selected ? `Bạn chọn ${selected.value}` : 'Bạn chưa chọn đáp án';
+                    expBox.innerHTML = `<span class="text-rose-400 font-bold">✘ Chưa đúng (${userChoice}).</span> <span class="text-slate-200">${quizData[qName].explain}</span>`;
+                }
+            }
+
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.classList.remove('hidden');
+
+            const earnedMoney = prizeLadder[score];
+
+            if (score === total) {
+                resultBox.innerHTML = `
+                    <div class="text-green-600 font-extrabold text-xl mb-1">
+                        🎉 XUẤT SẮC! BẠN ĐÃ TRẢ LỜI ĐÚNG ${score}/${total} CÂU (ĐIỂM: 10/10)!
+                    </div>
+                    <p class="text-green-700 font-bold text-lg">
+                        🏆 Chúc mừng bạn trở thành TRIỆU PHÚ VĂN HỌC với giải thưởng cao nhất: ${earnedMoney}!
+                    </p>
+                    <p class="text-slate-700 text-sm mt-1">Xem chi tiết giải thích từng câu ở phía trên.</p>
+                `;
+            } else {
+                resultBox.innerHTML = `
+                    <div class="text-red-600 font-extrabold text-xl mb-1">
+                        📊 KẾT QUẢ CỦA BẠN: ĐÚNG ${score}/${total} CÂU (ĐIỂM: ${score}/10)
+                    </div>
+                    <p class="text-red-700 font-bold text-lg">
+                        💰 Mức tiền thưởng đạt được: ${earnedMoney}.
+                    </p>
+                    <p class="text-slate-700 text-sm mt-1">Hãy xem lại hướng dẫn giải chi tiết màu đỏ ở từng câu bên trên để củng cố kiến thức nhé!</p>
+                `;
+            }
+
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
